@@ -114,7 +114,8 @@ function parseMatchesData(json) {
           const [year, month, day] = datePart.split("-");
           const time = (timePart || "").slice(0, 5); // HH:MM
 
-          const status = game.Time || "Pendiente";
+          // Obtener status del partido
+          const status = game.Time === "00:00" ? "Pendiente" : game.Time;
 
           matches.push({
             starttime: starttimeRaw,
