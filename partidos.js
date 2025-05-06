@@ -99,68 +99,43 @@ async function loadMatchesFromRepo() {
 function parseMatchesData(json) {
   console.log("JSON recibido:", json);
   const matches = [];
-  // Si hay un array GAMES, son varios partidos
-  if (json.GAMES && Array.isArray(json.GAMES)) {
-    json.GAMES.forEach(game => {
-      const starttime = game.HEADER.StartTime || "00-00-0000 - 00:00";
-      const status = game.HEADER.time || "Pendiente";
-      const competition = game.HEADER.competition || "";
-      const parts = starttime.split(" - ");
-      const datePart = parts[0]; // "DD-MM-YYYY"
-      const timePart = parts[1] || "";
-      const [day, month, year] = datePart.split("-");
-      // La puntuación final está en HEADER.TEAM
-      const teamA = game.HEADER.TEAM[0];
-      const teamB = game.HEADER.TEAM[1];
-      const teamAPts = parseInt(teamA.pts, 10) || 0;
-      const teamBPts = parseInt(teamB.pts, 10) || 0;
+  
+  if (
+    json.OVERVIEW &&
+    Array.isArray(json.OVERVIEW.COMPETITIONS)
+  ) {
+    json.OVERVIEW.COMPETITIONS.forEach(competition => {
+      const compName = competition.name || "Competición";
 
-      matches.push({
-        starttime,
-        day,
-        month,
-        year,
-        time: timePart,
-        competition,
-        status,
-        teamAName: teamA.name || "Equipo A",
-        teamALogo: teamA.logo || "https://via.placeholder.com/50",
-        teamAPts: teamAPts,
-        teamBName: teamB.name || "Equipo B",
-        teamBLogo: teamB.logo || "https://via.placeholder.com/50",
-        teamBPts: teamBPts
-      });
-    });
-  } else {
-    // Un solo partido
-    const starttime = json.HEADER.starttime || "00-00-0000 - 00:00";
-    const status = json.HEADER.time || "Pendiente";
-    const competition = json.HEADER.competition || "";
-    const parts = starttime.split(" - ");
-    const datePart = parts[0];
-    const timePart = parts[1] || "";
-    const [day, month, year] = datePart.split("-");
-    const teamA = json.HEADER.TEAM[0];
-    const teamB = json.HEADER.TEAM[1];
-    const teamAPts = parseInt(teamA.pts, 10) || 0;
-    const teamBPts = parseInt(teamB.pts, 10) || 0;
+      if (Array.isArray(competition.GAMES)) {
+        competition.GAMES.forEach(game => {
+          const starttimeRaw = game.StartTime || "0000-00-00T00:00:00";
+          const [datePart, timePart] = starttimeRaw.split("T");
+          const [year, month, day] = datePart.split("-");
+          const time = (timePart || "").slice(0, 5); // HH:MM
 
-    matches.push({
-      starttime,
-      day,
-      month,
-      year,
-      time: timePart,
-      competition,
-      status,
-      teamAName: teamA.name || "Equipo A",
-      teamALogo: teamA.logo || "https://via.placeholder.com/50",
-      teamAPts: teamAPts,
-      teamBName: teamB.name || "Equipo B",
-      teamBLogo: teamB.logo || "https://via.placeholder.com/50",
-      teamBPts: teamBPts
+          const status = game.Time || "Pendiente";
+
+          matches.push({
+            starttime: starttimeRaw,
+            day,
+            month,
+            year,
+            time,
+            competition: compName,
+            status,
+            teamAName: game.TeamA || "Equipo A",
+            teamALogo: game.LogoA || "https://via.placeholder.com/50",
+            teamAPts: parseInt(game.ScoreA, 10) || 0,
+            teamBName: game.TeamB || "Equipo B",
+            teamBLogo: game.LogoB || "https://via.placeholder.com/50",
+            teamBPts: parseInt(game.ScoreB, 10) || 0
+          });
+        });
+      }
     });
   }
+
   return matches;
 }
 
