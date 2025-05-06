@@ -102,7 +102,7 @@ function parseMatchesData(json) {
   // Si hay un array GAMES, son varios partidos
   if (json.GAMES && Array.isArray(json.GAMES)) {
     json.GAMES.forEach(game => {
-      const starttime = game.HEADER.starttime || "00-00-0000 - 00:00";
+      const starttime = game.HEADER.StartTime || "00-00-0000 - 00:00";
       const status = game.HEADER.time || "Pendiente";
       const competition = game.HEADER.competition || "";
       const parts = starttime.split(" - ");
