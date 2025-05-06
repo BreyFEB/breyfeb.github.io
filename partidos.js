@@ -96,10 +96,10 @@ async function loadMatchesFromRepo() {
 /*********************************
  * 3) PARSEAR LOS DATOS DE UN ARCHIVO JSON
  *********************************/
-function parseMatchesData(json) {
+function parseMatchesData(json, targetCompetitionName = "Liga Femenina Endesa") {
   console.log("JSON recibido:", json);
   const matches = [];
-  
+
   if (
     json.OVERVIEW &&
     Array.isArray(json.OVERVIEW.COMPETITIONS)
@@ -107,32 +107,34 @@ function parseMatchesData(json) {
     json.OVERVIEW.COMPETITIONS.forEach(competition => {
       const compName = competition.name || "Competición";
 
-      if (Array.isArray(competition.GAMES)) {
-        competition.GAMES.forEach(game => {
-          const starttimeRaw = game.StartTime || "0000-00-00T00:00:00";
-          const [datePart, timePart] = starttimeRaw.split("T");
-          const [year, month, day] = datePart.split("-");
-          const time = (timePart || "").slice(0, 5); // HH:MM
+      // ✅ Only parse if no filter OR it matches the target
+      if (compName === targetCompetitionName) {
+        if (Array.isArray(competition.GAMES)) {
+          competition.GAMES.forEach(game => {
+            const starttimeRaw = game.StartTime || "0000-00-00T00:00:00";
+            const [datePart, timePart] = starttimeRaw.split("T");
+            const [year, month, day] = datePart.split("-");
+            const time = (timePart || "").slice(0, 5); // HH:MM
 
-          // Obtener status del partido
-          const status = game.Time === "00:00" ? "Pendiente" : game.Time;
+            const status = game.Time === "00:00" ? "Pendiente" : game.Time;
 
-          matches.push({
-            starttime: starttimeRaw,
-            day,
-            month,
-            year,
-            time,
-            competition: compName,
-            status,
-            teamAName: game.TeamA || "Equipo A",
-            teamALogo: game.LogoA || "https://via.placeholder.com/50",
-            teamAPts: parseInt(game.ScoreA, 10) || 0,
-            teamBName: game.TeamB || "Equipo B",
-            teamBLogo: game.LogoB || "https://via.placeholder.com/50",
-            teamBPts: parseInt(game.ScoreB, 10) || 0
+            matches.push({
+              starttime: starttimeRaw,
+              day,
+              month,
+              year,
+              time,
+              competition: compName,
+              status,
+              teamAName: game.TeamA || "Equipo A",
+              teamALogo: game.LogoA || "https://via.placeholder.com/50",
+              teamAPts: parseInt(game.ScoreA, 10) || 0,
+              teamBName: game.TeamB || "Equipo B",
+              teamBLogo: game.LogoB || "https://via.placeholder.com/50",
+              teamBPts: parseInt(game.ScoreB, 10) || 0
+            });
           });
-        });
+        }
       }
     });
   }
