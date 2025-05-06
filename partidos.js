@@ -149,6 +149,15 @@ function createMatchCard(match) {
   card.setAttribute("data-match-date", dateStr);
   card.setAttribute("data-competition", match.competition);
 
+  // Formato de la fecha
+  const formattedDate = new Date(match.starttime).toLocaleString('es-ES', {
+    weekday: 'long',
+    day: 'numeric',
+    month: 'long',
+    hour: '2-digit',
+    minute: '2-digit'
+  });
+
   // Cambiar el nombre de la competición SOLO para la cabecera de la tarjeta
   let competitionName = match.competition;
   if (competitionName === 'C ESP CLUBES JR FEM') {
@@ -159,7 +168,7 @@ function createMatchCard(match) {
   }
   const headerDiv = document.createElement("div");
   headerDiv.className = "match-header";
-  headerDiv.textContent = `${match.starttime} | ${competitionName}`;
+  headerDiv.textContent = `${formattedDate} | ${competitionName}`;
 
   // Equipos
   const teamsDiv = document.createElement("div");
