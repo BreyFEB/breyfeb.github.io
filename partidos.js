@@ -96,7 +96,7 @@ async function loadMatchesFromRepo() {
 /*********************************
  * 3) PARSEAR LOS DATOS DE UN ARCHIVO JSON
  *********************************/
-function parseMatchesData(json, targetCompetitionName = "L.F.-2") {
+function parseMatchesData(json, targetCompetitionName = "PRIMERA FEB") {
   console.log("JSON recibido:", json);
   const matches = [];
 
