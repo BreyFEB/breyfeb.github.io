@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
       buildPlayerNamesDictionary(data);
 
       // Inicializar las secciones principales
-      updateHeroFromJSON(data);
+      // updateHeroFromJSON(data);
       setupMiniHeader(data);
       fillBoxScore(data);
 
@@ -191,6 +191,7 @@ function buildPlayerNamesDictionary(data) {
 /***********************************************
  * HERO, MINI-HEADER, BOX SCORE
  ***********************************************/
+/*
 function updateHeroFromJSON(data) {
   const heroDiv = document.querySelector(".hero-content");
   if (!heroDiv) return;
@@ -229,6 +230,7 @@ function updateHeroFromJSON(data) {
     </div>
   `;
 }
+*/
 
 function setupMiniHeader(data) {
   const miniHeader = document.getElementById("miniHeader");
