@@ -757,6 +757,13 @@ closeFiltersBtn.addEventListener("click", () => {
 /*********************************
  * 16) GENERAR FILTRO DE PABELLÓN
  *********************************/
+// Función para convertir a formato Título
+function toTitleCase(str) {
+  return str
+    .toLowerCase()
+    .replace(/([\p{L}\p{M}'])([\p{L}\p{M}']*)/gu, (match, first, rest) => first.toUpperCase() + rest);
+}
+
 function generateVenueFilter(venues) {
   const venueFilter = document.getElementById("venueFilter");
   venueFilter.innerHTML = '<option value="">Todos</option>';
@@ -765,7 +772,7 @@ function generateVenueFilter(venues) {
     if (venue && venue.trim() !== "") {
       const opt = document.createElement("option");
       opt.value = venue;
-      opt.textContent = venue;
+      opt.textContent = toTitleCase(venue);
       venueFilter.appendChild(opt);
     }
   });
