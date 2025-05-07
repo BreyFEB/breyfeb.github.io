@@ -1082,6 +1082,12 @@ function initCharts(data) {
  ***********************************************/
 function fillQuarterSummary(data) {
   if (!data.HEADER || !data.HEADER.QUARTERS || !data.HEADER.QUARTERS.QUARTER) return;
+  // Rellenar cabeceras de tabla (th tags)
+  const header_team_a = document.getElementById("quarterTable-header-team-a");
+  header_team_a.textContent = tA.name;
+  const header_team_b = document.getElementById("quarterTable-header-team-b");
+  header_team_a.textContent = tB.name;
+  
   const tbody = document.querySelector("#quarterTable tbody");
   tbody.innerHTML = "";
   let totalA = 0, totalB = 0;
