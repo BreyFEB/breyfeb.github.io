@@ -200,10 +200,6 @@ function updateHeroFromJSON(data) {
   const matchDateTime = header.starttime || "01-01-2025 - 20:00";
   heroDiv.innerHTML = `
     <div class="hero-left">
-      <div class="hero-pavilion-info">
-        ${category} |<br>
-        <a href="#" style="color:#FFD700; text-decoration:underline;">${place}, ${field}</a>
-      </div>
       <div class="hero-top-logos">
         <div class="hero-team-box">
           <img src="${tA.logo}" alt="${tA.name}" class="hero-team-logo">
