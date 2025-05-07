@@ -1084,10 +1084,10 @@ function fillQuarterSummary(data) {
   if (!data.HEADER || !data.HEADER.QUARTERS || !data.HEADER.QUARTERS.QUARTER) return;
   // Rellenar cabeceras de tabla (th tags)
   const header_team_a = document.getElementById("quarterTable-header-team-a");
-  header_team_a.textContent = tA.name;
+  header_team_a.textContent = data.HEADER.TEAM[0].name;
   
   const header_team_b = document.getElementById("quarterTable-header-team-b");
-  header_team_b.textContent = tB.name;
+  header_team_b.textContent = data.HEADER.TEAM[1].name;
   
   const tbody = document.querySelector("#quarterTable tbody");
   tbody.innerHTML = "";
