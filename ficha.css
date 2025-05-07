@@ -92,9 +92,6 @@ header {
   .icon:hover {
     filter: brightness(1.2) invert(1);
   }
-  header .match-header{
-    display: block;
-  }
 
 /***********************************************
  * MINI-HEADER STICKY
