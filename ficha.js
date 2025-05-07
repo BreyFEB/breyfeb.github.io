@@ -1085,8 +1085,9 @@ function fillQuarterSummary(data) {
   // Rellenar cabeceras de tabla (th tags)
   const header_team_a = document.getElementById("quarterTable-header-team-a");
   header_team_a.textContent = tA.name;
+  
   const header_team_b = document.getElementById("quarterTable-header-team-b");
-  header_team_a.textContent = tB.name;
+  header_team_b.textContent = tB.name;
   
   const tbody = document.querySelector("#quarterTable tbody");
   tbody.innerHTML = "";
