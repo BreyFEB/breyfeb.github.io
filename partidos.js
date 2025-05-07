@@ -628,6 +628,19 @@ function applyAllFilters() {
   });
   // Actualizar los puntitos del calendario según los partidos visibles
   markDatesWithMatches();
+  // Mostrar mensaje si no hay partidos visibles
+  const visibleCards = Array.from(document.querySelectorAll('.match-card')).filter(card => card.style.display !== 'none');
+  const noMatchesMsg = document.getElementById('noMatchesMsg');
+  if (visibleCards.length === 0) {
+    let msg = "Este día no hay partidos";
+    if (selectedCompetition && selectedCompetition !== "") {
+      msg += ` en \"${selectedCompetition}\"`;
+    }
+    noMatchesMsg.textContent = msg;
+    noMatchesMsg.style.display = '';
+  } else {
+    noMatchesMsg.style.display = 'none';
+  }
 }
 
 /*********************************
@@ -700,4 +713,4 @@ openFiltersBtn.addEventListener("click", () => {
 });
 closeFiltersBtn.addEventListener("click", () => {
   filtersOverlay.classList.remove("open");
-}); 
+});
