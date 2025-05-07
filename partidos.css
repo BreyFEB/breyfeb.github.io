@@ -720,3 +720,17 @@
       display: flex;
     }
   }
+
+  .venue-search, .venue-filter {
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #53565A;
+    margin-bottom: 8px;
+    font-size: 1em;
+    background: #fff;
+    color: #111C4E;
+  }
+  .venue-filter {
+    margin-bottom: 0;
+  }

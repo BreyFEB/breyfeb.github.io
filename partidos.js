@@ -4,6 +4,7 @@
 let selectedDate = null;
 let selectedCompetition = null;
 let selectedGender = "todos";
+let selectedVenue = "";
 
 /*********************************
  * Set para almacenar fechas con partidos
@@ -14,6 +15,11 @@ let matchDatesSet = new Set();
  * Set para almacenar competiciones detectadas
  *********************************/
 let competitionSet = new Set();
+
+/*********************************
+ * Set para almacenar pabellones únicos
+ *********************************/
+let venueSet = new Set();
 
 /*********************************
  * 1) OBTENER LA LISTA DE ARCHIVOS JSON DESDE GITHUB
@@ -51,14 +57,15 @@ async function loadMatchesFromRepo() {
       const resp = await fetch(url);
       const data = await resp.json();
       const matchesArray = parseMatchesData(data);
-      // Agregamos los partidos al array global
       allMatches.push(...matchesArray);
-      // Cada partido añade su competición al set
       matchesArray.forEach(match => {
         if (match.competition) competitionSet.add(match.competition);
-        // Añadimos la fecha (DD-MM-YYYY) al set de fechas con partidos
         const dateStr = `${match.day}-${match.month}-${match.year}`;
         matchDatesSet.add(dateStr);
+        // Añadir pabellón al set
+        if (match.venuePlace) venueSet.add(match.venuePlace);
+        else if (match.venueAddress) venueSet.add(match.venueAddress);
+        else if (match.venue) venueSet.add(match.venue);
       });
     } catch (err) {
       console.error("Error al cargar", url, err);
@@ -91,6 +98,8 @@ async function loadMatchesFromRepo() {
   
   // Aplicar el filtro inicial para mostrar solo los partidos del día actual
   applyAllFilters();
+
+  generateVenueFilter(Array.from(venueSet));
 }
 
 /*********************************
@@ -176,6 +185,14 @@ function createMatchCard(match) {
   // Añadir el atributo data-gender para el filtrado
   if (match.gender) {
     card.setAttribute("data-gender", match.gender);
+  }
+  // Añadir data-venue para el filtrado
+  if (match.venuePlace) {
+    card.setAttribute("data-venue", match.venuePlace);
+  } else if (match.venueAddress) {
+    card.setAttribute("data-venue", match.venueAddress);
+  } else if (match.venue) {
+    card.setAttribute("data-venue", match.venue);
   }
 
   // Formato de la fecha
@@ -545,6 +562,7 @@ function generateCompetitionFilters(competitions) {
       compFiltersList.querySelectorAll('.competition-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       selectedCompetition = btn.dataset.competition;
+      updateVenueFilterOptions();
       applyAllFilters();
     });
   });
@@ -578,6 +596,10 @@ clearFiltersBtn.addEventListener("click", () => {
   document.querySelectorAll('.gender-btn').forEach(b => b.classList.remove('active'));
   generateCompetitionFilters(getFilteredCompetitions());
   applyAllFilters();
+  selectedVenue = "";
+  if (venueFilter) venueFilter.value = "";
+  if (venueSearch) venueSearch.value = "";
+  generateVenueFilter(Array.from(venueSet));
 });
 
 // Al aplicar filtros, actualizar competiciones
@@ -624,6 +646,14 @@ function applyAllFilters() {
       }
     }
 
+    // 4) Filtro por pabellón
+    if (selectedVenue && selectedVenue !== "") {
+      const venue = card.getAttribute("data-venue") || "";
+      if (venue !== selectedVenue) {
+        show = false;
+      }
+    }
+
     card.style.display = show ? "flex" : "none";
   });
   // Actualizar los puntitos del calendario según los partidos visibles
@@ -635,6 +665,9 @@ function applyAllFilters() {
     let msg = "Este día no hay partidos";
     if (selectedCompetition && selectedCompetition !== "") {
       msg += ` en \"${selectedCompetition}\"`;
+    }
+    if (selectedVenue && selectedVenue !== "") {
+      msg += ` en \"${selectedVenue}\"`;
     }
     noMatchesMsg.textContent = msg;
     noMatchesMsg.style.display = '';
@@ -653,7 +686,7 @@ function markDatesWithMatches() {
     const indicator = li.querySelector(".match-indicator");
     if (indicator) indicator.remove();
   });
-  // Filtrar tarjetas solo por género y competición (no fecha)
+  // Filtrar tarjetas por TODOS los filtros excepto la fecha
   const allCards = Array.from(document.querySelectorAll('.match-card'));
   const filtered = allCards.filter(card => {
     // Filtro por competición
@@ -665,6 +698,11 @@ function markDatesWithMatches() {
     if (selectedGender && selectedGender !== "todos") {
       const gen = card.getAttribute('data-gender') || '';
       if (gen !== selectedGender) return false;
+    }
+    // Filtro por pabellón
+    if (selectedVenue && selectedVenue !== "") {
+      const venue = card.getAttribute('data-venue') || '';
+      if (venue !== selectedVenue) return false;
     }
     return true;
   });
@@ -702,6 +740,7 @@ genderFilters.addEventListener("click", (e) => {
   selectedGender = gender;
   // Actualizar competiciones disponibles según el género seleccionado
   generateCompetitionFilters(getFilteredCompetitions());
+  updateVenueFilterOptions();
   applyAllFilters();
 });
 
@@ -714,3 +753,91 @@ openFiltersBtn.addEventListener("click", () => {
 closeFiltersBtn.addEventListener("click", () => {
   filtersOverlay.classList.remove("open");
 });
+
+/*********************************
+ * 16) GENERAR FILTRO DE PABELLÓN
+ *********************************/
+function generateVenueFilter(venues) {
+  const venueFilter = document.getElementById("venueFilter");
+  venueFilter.innerHTML = '<option value="">Todos</option>';
+  venues.sort((a, b) => a.localeCompare(b, 'es', {sensitivity: 'base'}));
+  venues.forEach(venue => {
+    if (venue && venue.trim() !== "") {
+      const opt = document.createElement("option");
+      opt.value = venue;
+      opt.textContent = venue;
+      venueFilter.appendChild(opt);
+    }
+  });
+}
+
+/*********************************
+ * 17) FILTRAR OPCIONES DEL SELECT AL ESCRIBIR EN EL INPUT
+ *********************************/
+const venueSearch = document.getElementById("venueSearch");
+const venueFilter = document.getElementById("venueFilter");
+if (venueSearch && venueFilter) {
+  venueSearch.addEventListener("input", function() {
+    const search = this.value.toLowerCase();
+    Array.from(venueFilter.options).forEach(opt => {
+      if (opt.value === "") {
+        opt.style.display = "";
+        return;
+      }
+      opt.style.display = opt.value.toLowerCase().includes(search) ? "" : "none";
+    });
+    // Si hay coincidencia, selecciona la primera visible
+    const firstVisible = Array.from(venueFilter.options).find(opt => opt.style.display !== "none" && opt.value !== "");
+    if (firstVisible) {
+      venueFilter.value = firstVisible.value;
+    } else {
+      venueFilter.value = "";
+    }
+  });
+}
+
+/*********************************
+ * 18) AL CAMBIAR EL SELECT, ACTUALIZAR EL FILTRO
+ *********************************/
+if (venueFilter) {
+  venueFilter.addEventListener("change", function() {
+    selectedVenue = this.value;
+    applyAllFilters();
+  });
+}
+
+// 1. Modifica getFilteredVenues para devolver solo los pabellones de los partidos visibles por género y competición
+function getFilteredVenues() {
+  const allCards = Array.from(document.querySelectorAll('.match-card'));
+  const filtered = allCards.filter(card => {
+    // Filtro por género
+    if (selectedGender && selectedGender !== "todos") {
+      const gen = card.getAttribute('data-gender') || '';
+      if (selectedGender !== gen) return false;
+    }
+    // Filtro por competición
+    if (selectedCompetition && selectedCompetition !== "") {
+      const comp = card.getAttribute('data-competition') || '';
+      if (selectedCompetition !== comp) return false;
+    }
+    return true;
+  });
+  const venues = new Set();
+  filtered.forEach(card => {
+    const venue = card.getAttribute('data-venue');
+    if (venue) venues.add(venue);
+  });
+  return Array.from(venues);
+}
+
+// 2. Al cambiar género o competición, actualiza el select de pabellón
+function updateVenueFilterOptions() {
+  const venues = getFilteredVenues();
+  generateVenueFilter(venues);
+  // Si el valor seleccionado ya no está, resetea
+  if (!venues.includes(selectedVenue)) {
+    selectedVenue = "";
+    if (venueFilter) venueFilter.value = "";
+    if (venueSearch) venueSearch.value = "";
+  }
+}
