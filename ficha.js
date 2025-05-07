@@ -40,9 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const lastSpan = breadcrumbDiv.querySelector('span:last-child');
       
       // Modify the content of the last <span> with variables
-      const teamA = tA;
-      const teamB = tB;
-      lastSpan.textContent = `${teamA} vs ${teamB}`;
+      lastSpan.textContent = `${tA} vs ${tB}`;
 
       // Actualizar hero-phase
       const herophaseDiv = document.querySelector('.hero-phase');
