@@ -282,8 +282,10 @@
     flex-direction: column;
     gap: 10px;
     transition: transform 0.2s ease, background-color 0.2s ease;
-    min-height: 180px;
-    width: 100%;
+    width: 370px;
+    height: 220px;
+    min-height: unset;
+    max-width: 100%;
     margin: 0 auto;
   }
   .match-card:hover {
@@ -586,3 +588,5952 @@
     text-decoration: underline;
   }
   
+  /* Nuevo estilo para el enlace del pabellón */
+  .venue-link {
+    color: #FF9E1B;
+    font-size: 0.9em;
+    margin-left: 10px;
+    text-decoration: underline;
+    transition: color 0.2s;
+  }
+  .venue-link:hover {
+    color: #fff;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .competition-btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .competition-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .competition-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .competition-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section { margin-bottom: 18px; }
+  .filter-section h4 { color: #FFD700; margin-bottom: 8px; font-size: 1em; }
+  .filter-section ul { list-style: none; padding: 0; }
+  .filter-section li { margin-bottom: 6px; }
+  .filter-section label { color: #fff; cursor: pointer; }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-section li {
+    margin-bottom: 6px;
+  }
+  .filter-section label {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .gender-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .gender-btn {
+    background-color: #1D296F;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 20px;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.95em;
+    transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+  }
+  .gender-btn:hover {
+    background-color: #FF9E1B;
+    color: #111C4E;
+  }
+  .gender-btn.active {
+    background-color: #FF9E1B;
+    color: #111C4E;
+    font-weight: bold;
+  }
+  
+  .filter-section {
+    margin-bottom: 18px;
+  }
+  .filter-section h4 {
+    color: #FFD700;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  .filter-section ul {
+    list

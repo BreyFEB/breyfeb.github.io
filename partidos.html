@@ -131,21 +131,18 @@
     </div>
     <div class="filters-content">
       <div class="filter-section">
-        <h4>🏆 Competición</h4>
-        <ul id="competitionFilters">
-          <li><label><input type="radio" name="competition" value=""> Todas</label></li>
-          <li><label><input type="radio" name="competition" value="C ESP CLUBES JR MASC"> C ESP CLUBES JR MASC</label></li>
-          <li><label><input type="radio" name="competition" value="C ESP CLUBES JR FEM"> C ESP CLUBES JR FEM</label></li>
-        </ul>
+        <h4>👦 Género</h4>
+        <div id="genderFilters" class="gender-btn-group">
+          <button type="button" class="gender-btn" data-gender="todos">Todos</button>
+          <button type="button" class="gender-btn" data-gender="masculino">Masculino</button>
+          <button type="button" class="gender-btn" data-gender="femenino">Femenino</button>
+        </div>
       </div>
       <div class="filter-section">
-        <h4>👦 Género</h4>
-        <ul id="genderFilters">
-          <li><label><input type="checkbox" name="gender" value="hombres"> Hombres</label></li>
-          <li><label><input type="checkbox" name="gender" value="mujeres"> Mujeres</label></li>
-          <li><label><input type="checkbox" name="gender" value="chicos"> Chicos</label></li>
-          <li><label><input type="checkbox" name="gender" value="chicas"> Chicas</label></li>
-        </ul>
+        <h4>🏆 Competición</h4>
+        <div id="competitionFilters" class="competition-btn-group">
+          <!-- Los botones de competición se generarán dinámicamente con JS -->
+        </div>
       </div>
       <div class="filter-section">
         <h4>📅 Fecha</h4>

@@ -3,7 +3,7 @@
  *********************************/
 let selectedDate = null;
 let selectedCompetition = null;
-let selectedGender = null;
+let selectedGender = "todos";
 
 /*********************************
  * Set para almacenar fechas con partidos
@@ -119,6 +119,23 @@ function parseMatchesData(json, targetCompetitionName = "PRIMERA FEB") {
 
             const status = game.Time === "00:00" ? "Pendiente" : game.Time;
 
+            // Inferir género por el nombre exacto de la competición o por MASC/FEM
+            let gender = "";
+            if (
+              compName === "Primera FEB" ||
+              compName === "Segunda FEB" ||
+              compName === "Tercera FEB" ||
+              compName.toUpperCase().includes("MASC")
+            ) {
+              gender = "masculino";
+            } else if (
+              compName === "Liga Femenina Endesa" ||
+              compName === "Liga Femenina Challenge" ||
+              compName === "L.F.-2" ||
+              compName.toUpperCase().includes("FEM")
+            ) {
+              gender = "femenino";
+            }
             matches.push({
               starttime: starttimeRaw,
               day,
@@ -132,7 +149,11 @@ function parseMatchesData(json, targetCompetitionName = "PRIMERA FEB") {
               teamAPts: parseInt(game.ScoreA, 10) || 0,
               teamBName: game.TeamB || "Equipo B",
               teamBLogo: game.LogoB || "https://via.placeholder.com/50",
-              teamBPts: parseInt(game.ScoreB, 10) || 0
+              teamBPts: parseInt(game.ScoreB, 10) || 0,
+              venue: game.field || "",
+              venueAddress: game.place || "",
+              venuePlace: game.Place || "",
+              gender: gender
             });
           });
         }
@@ -152,6 +173,10 @@ function createMatchCard(match) {
   const dateStr = `${match.day}-${match.month}-${match.year}`;
   card.setAttribute("data-match-date", dateStr);
   card.setAttribute("data-competition", match.competition);
+  // Añadir el atributo data-gender para el filtrado
+  if (match.gender) {
+    card.setAttribute("data-gender", match.gender);
+  }
 
   // Formato de la fecha
   const formattedDate = new Date(match.starttime).toLocaleString('es-ES', {
@@ -242,6 +267,27 @@ function createMatchCard(match) {
   const statusDiv = document.createElement("div");
   statusDiv.className = "match-status";
   statusDiv.textContent = match.status;
+
+  // Enlace al pabellón
+  if (match.venuePlace) {
+    const venueQuery = match.venuePlace;
+    const venueLink = document.createElement("a");
+    venueLink.href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(venueQuery)}`;
+    venueLink.target = "_blank";
+    venueLink.rel = "noopener noreferrer";
+    venueLink.className = "venue-link";
+    venueLink.innerHTML = `<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" fill=\"#FF9E1B\" viewBox=\"0 0 24 24\"><path d=\"M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z\"/></svg>`;
+    footerDiv.appendChild(venueLink);
+  } else if (match.venueAddress || match.venue) {
+    const venueQuery = match.venueAddress || match.venue;
+    const venueLink = document.createElement("a");
+    venueLink.href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(venueQuery)}`;
+    venueLink.target = "_blank";
+    venueLink.rel = "noopener noreferrer";
+    venueLink.className = "venue-link";
+    venueLink.innerHTML = `<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" fill=\"#FF9E1B\" viewBox=\"0 0 24 24\"><path d=\"M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z\"/></svg>`;
+    footerDiv.appendChild(venueLink);
+  }
 
   const moreBtn = document.createElement("button");
   moreBtn.className = "btn-more";
@@ -463,56 +509,89 @@ function generateCompetitionTabs(competitions) {
 function generateCompetitionFilters(competitions) {
   const compFiltersList = document.getElementById("competitionFilters");
   compFiltersList.innerHTML = "";
-  const allItem = document.createElement("li");
-  allItem.dataset.competition = "";
-  allItem.textContent = "TODAS";
-  compFiltersList.appendChild(allItem);
+  // Ordenar según la lógica deseada
+  const order = [
+    "Liga Femenina Endesa",
+    "Liga Femenina Challenge",
+    "L.F.-2",
+    "Primera FEB",
+    "Segunda FEB",
+    "Tercera FEB"
+  ];
+  const ordered = [
+    ...order.filter(c => competitions.includes(c)),
+    ...competitions.filter(c => !order.includes(c)).sort()
+  ];
+  // Botón 'TODAS'
+  const allBtn = document.createElement("button");
+  allBtn.type = "button";
+  allBtn.className = "competition-btn" + (selectedCompetition ? "" : " active");
+  allBtn.dataset.competition = "";
+  allBtn.textContent = "TODAS";
+  compFiltersList.appendChild(allBtn);
 
-  competitions.forEach(comp => {
-    const li = document.createElement("li");
-    li.dataset.competition = comp;
-    li.textContent = comp;
-    compFiltersList.appendChild(li);
+  ordered.forEach(comp => {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "competition-btn" + (selectedCompetition === comp ? " active" : "");
+    btn.dataset.competition = comp;
+    btn.textContent = comp;
+    compFiltersList.appendChild(btn);
+  });
+
+  // Evento: solo uno activo, filtra inmediatamente
+  compFiltersList.querySelectorAll('.competition-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      compFiltersList.querySelectorAll('.competition-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      selectedCompetition = btn.dataset.competition;
+      applyAllFilters();
+    });
   });
 }
 
-// Al hacer clic en "FILTROS" abrimos overlay
-const openFiltersBtn = document.getElementById("openFiltersBtn");
-const closeFiltersBtn = document.getElementById("closeFiltersBtn");
-const filtersOverlay = document.getElementById("filtersOverlay");
-openFiltersBtn.addEventListener("click", () => {
-  filtersOverlay.classList.add("open");
-});
-closeFiltersBtn.addEventListener("click", () => {
-  filtersOverlay.classList.remove("open");
-});
+// Al filtrar por género, actualizar el listado de competiciones
+function getFilteredCompetitions() {
+  // Devuelve solo las competiciones de los partidos visibles por género
+  const allCards = Array.from(document.querySelectorAll('.match-card'));
+  const filtered = allCards.filter(card => {
+    if (selectedGender && selectedGender !== "todos") {
+      const gen = card.getAttribute('data-gender') || '';
+      return selectedGender === gen;
+    }
+    return true;
+  });
+  const comps = new Set();
+  filtered.forEach(card => {
+    const comp = card.getAttribute('data-competition');
+    if (comp) comps.add(comp);
+  });
+  return Array.from(comps);
+}
 
+// Al limpiar filtros, limpiar también los botones de género y competición
 const clearFiltersBtn = document.getElementById("clearFiltersBtn");
-const applyFiltersBtn = document.getElementById("applyFiltersBtn");
-
-// Capturar clics en la lista de competiciones o géneros
-document.querySelector(".filters-content").addEventListener("click", (e) => {
-  const li = e.target.closest("li");
-  if (!li) return;
-  if (li.dataset.competition !== undefined) {
-    selectedCompetition = li.dataset.competition;
-  }
-  if (li.dataset.gender !== undefined) {
-    selectedGender = li.dataset.gender;
-  }
-});
-
 clearFiltersBtn.addEventListener("click", () => {
   selectedCompetition = null;
-  selectedGender = null;
+  selectedGender = "todos";
   filtersOverlay.classList.remove("open");
+  document.querySelectorAll('.gender-btn').forEach(b => b.classList.remove('active'));
+  generateCompetitionFilters(getFilteredCompetitions());
   applyAllFilters();
 });
 
+// Al aplicar filtros, actualizar competiciones
+const applyFiltersBtn = document.getElementById("applyFiltersBtn");
 applyFiltersBtn.addEventListener("click", () => {
   filtersOverlay.classList.remove("open");
+  generateCompetitionFilters(getFilteredCompetitions());
   applyAllFilters();
 });
+
+// Al cargar, generar los filtros de competición iniciales tras cargar partidos
+setTimeout(() => {
+  generateCompetitionFilters(getFilteredCompetitions());
+}, 1000);
 
 /*********************************
  * 13) APLICAR TODOS LOS FILTROS (DÍA, COMPETICIÓN, GÉNERO)
@@ -538,15 +617,17 @@ function applyAllFilters() {
     }
 
     // 3) Filtro por género
-    if (selectedGender) {
+    if (selectedGender && selectedGender !== "todos") {
       const gen = card.getAttribute("data-gender") || "";
-      if (selectedGender !== "" && gen !== selectedGender) {
+      if (gen !== selectedGender) {
         show = false;
       }
     }
 
     card.style.display = show ? "flex" : "none";
   });
+  // Actualizar los puntitos del calendario según los partidos visibles
+  markDatesWithMatches();
 }
 
 /*********************************
@@ -554,9 +635,30 @@ function applyAllFilters() {
  *********************************/
 function markDatesWithMatches() {
   const dateItems = document.querySelectorAll(".date-item");
+  // Primero, quitar todos los indicadores
   dateItems.forEach(li => {
-    if (matchDatesSet.has(li.dataset.date)) {
-      // Añadir indicador si no existe ya
+    const indicator = li.querySelector(".match-indicator");
+    if (indicator) indicator.remove();
+  });
+  // Filtrar tarjetas solo por género y competición (no fecha)
+  const allCards = Array.from(document.querySelectorAll('.match-card'));
+  const filtered = allCards.filter(card => {
+    // Filtro por competición
+    if (selectedCompetition && selectedCompetition !== "") {
+      const comp = card.getAttribute('data-competition') || '';
+      if (comp !== selectedCompetition) return false;
+    }
+    // Filtro por género
+    if (selectedGender && selectedGender !== "todos") {
+      const gen = card.getAttribute('data-gender') || '';
+      if (gen !== selectedGender) return false;
+    }
+    return true;
+  });
+  // Obtener los días con partidos filtrados
+  const datesWithMatches = new Set(filtered.map(card => card.getAttribute('data-match-date')));
+  dateItems.forEach(li => {
+    if (datesWithMatches.has(li.dataset.date)) {
       if (!li.querySelector(".match-indicator")) {
         const indicator = document.createElement("span");
         indicator.className = "match-indicator";
@@ -572,4 +674,30 @@ function markDatesWithMatches() {
 const matchesList = document.getElementById("matchesList");
 loadMatchesFromRepo();
 
-console.log("Si subes nuevos JSON al repositorio, se cargarán automáticamente al recargar la página."); 
+console.log("Si subes nuevos JSON al repositorio, se cargarán automáticamente al recargar la página.");
+
+// Evento para los botones de género tipo toggle
+const genderFilters = document.getElementById("genderFilters");
+genderFilters.addEventListener("click", (e) => {
+  const btn = e.target.closest(".gender-btn");
+  if (!btn) return;
+  const gender = btn.getAttribute("data-gender");
+  if (!gender) return;
+  // Desactivar todos y activar solo el pulsado
+  Array.from(genderFilters.children).forEach(b => b.classList.remove("active"));
+  btn.classList.add("active");
+  selectedGender = gender;
+  // Actualizar competiciones disponibles según el género seleccionado
+  generateCompetitionFilters(getFilteredCompetitions());
+  applyAllFilters();
+});
+
+const openFiltersBtn = document.getElementById("openFiltersBtn");
+const closeFiltersBtn = document.getElementById("closeFiltersBtn");
+const filtersOverlay = document.getElementById("filtersOverlay");
+openFiltersBtn.addEventListener("click", () => {
+  filtersOverlay.classList.add("open");
+});
+closeFiltersBtn.addEventListener("click", () => {
+  filtersOverlay.classList.remove("open");
+}); 
