@@ -50,10 +50,12 @@ document.addEventListener("DOMContentLoaded", () => {
       herophaseDiv.textContent =  `${fase} • ${competicion} • ${pabellon}`;
 
       // Meter resumen de ChatGPT
-      fetch("https://raw.githubusercontent.com/emebullon/cadete2025/refs/heads/main/JSONs%20fichas/FullMatch_2469167_2025-05-03T13_cronica_chatgpt.html")
+      fetch("https://raw.githubusercontent.com/emebullon/cadete2025/main/JSONs%20fichas/FullMatch_2469167_2025-05-03T13_cronica_chatgpt.html")
         .then(res => res.text())
         .then(html => {
-          document.querySelector(".cronicatext").innerHTML = html;
+          const target = document.querySelector(".cronicatext");
+          if (target) target.innerHTML = html;
+          else console.warn("Element '.cronicatext' not found.");
         })
         .catch(err => console.error("Error loading crónica:", err));
       
