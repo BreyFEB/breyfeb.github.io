@@ -31,6 +31,25 @@ document.addEventListener("DOMContentLoaded", () => {
         const videoIframe = document.querySelector('.hero-video iframe');
         videoIframe.src = header.videoUrl;
       }
+
+      // Actualizar hero phase
+      // Get the div with class "hero-breadcrumb"
+      const breadcrumbDiv = document.querySelector('.hero-breadcrumb');
+      
+      // Get the last <span> inside the div
+      const lastSpan = breadcrumbDiv.querySelector('span:last-child');
+      
+      // Modify the content of the last <span> with variables
+      const teamA = tA;
+      const teamB = tB;
+      lastSpan.textContent = `${teamA} vs ${teamB}`;
+
+      // Actualizar hero-phase
+      const herophaseDiv = document.querySelector('.hero-phase');
+      const fase = header.round.trim()
+      const competicion = header.competition
+      const pabellon = header.field
+      herophaseDiv.textContent =  `${fase} • ${competicion} • ${pabellon}`;
       
       // Construir diccionarios: fotos, nombres de jugadores y equipos
       buildPlayerPhotoDictionary(data);
