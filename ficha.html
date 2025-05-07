@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Partido - FEB (UI Moderna)</title>
+  <!-- Carga de Chart.js si lo usas -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER PRINCIPAL (top-nav) -->
+  <header class="top-nav">
+    <div class="header-left">
+      <!-- Logotipo FEB -->
+      <img 
+        src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/logofeb.svg" 
+        alt="Logo FEB" 
+        class="logo"
+      >
+      <!-- Menú principal con iconos -->
+      <nav>
+        <ul>
+          <li class="nav-item">
+            <a href="#">
+              <img src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/home-outline.svg" alt="Icono Inicio">
+              <span>Inicio</span>
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a href="#">
+              <img src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/basketball-outline.svg" alt="Icono Partidos">
+              <span>Partidos</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#">
+              <img src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/newspaper-outline.svg" alt="Icono Noticias">
+              <span>Noticias</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#">
+              <img src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/calendar-outline.svg" alt="Icono Calendario">
+              <span>Calendario</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#">
+              <img src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/stats-chart-outline.svg" alt="Icono Rankings">
+              <span>Rankings</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#">
+              <img src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/add.svg" alt="Icono Más">
+              <span>Más</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header-right">
+      <a href="#">
+        <img 
+          src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/log-in.svg" 
+          alt="Icono Usuario" 
+          class="icon"
+        >
+      </a>
+      <a href="#">
+        <img 
+          src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/search.svg" 
+          alt="Icono Búsqueda" 
+          class="icon"
+        >
+      </a>
+    </div>
+  </header>
+
+  <!-- MINI-HEADER STICKY -->
+  <div class="sticky-mini-header" id="miniHeader">
+    <div class="mini-score">
+      <!-- Se rellenará dinámicamente -->
+    </div>
+  </div>
+
+  <!-- SECCIÓN HERO DEL PARTIDO -->
+  <header class="match-header">
+    <div class="hero-breadcrumb">
+      <a href="#">Inicio</a>
+      <span>/</span>
+      <a href="#">Partidos</a>
+      <span>/</span>
+      <span>Catalunya vs Comunidad de Madrid</span>
+    </div>
+    <div class="hero-phase">
+      Final CESA Cadete Masculino • Huelva, Carolina Marin
+    </div>
+    <div class="hero-content">
+      <div class="scoreboard">
+        <div class="team-row">
+          <div class="team-box">
+            <img
+              src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/logofeb.png"
+              alt="Catalunya"
+              class="team-logo"
+            >
+            <div class="team-name">CATALUNYA</div>
+          </div>
+
+          <div>
+            <div class="score-value">84 - 83</div>
+            <div class="score-status">FINAL</div>
+            <div class="match-datetime">07-01-2025 - 10:00</div>
+          </div>
+
+          <div class="team-box">
+            <img
+              src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/logofeb.png"
+              alt="Comunidad de Madrid"
+              class="team-logo"
+            >
+            <div class="team-name">COMUNIDAD DE MADRID</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-video">
+        <iframe
+          src="https://progressive.enetres.net/mp4Streamer.php?u=BD98BFE22A5946A8BB316B18D8F43054&f=dvr-ae42034e-070125-105812-LIVEMADRIDCADFEM.mp4&c=0"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAV SECUNDARIA (tabs) -->
+  <nav class="match-tabs" id="matchTabs">
+    <ul>
+      <li><a href="#overview" class="tab-link active">Resumen</a></li>
+      <li><a href="#stats" class="tab-link">Estadísticas</a></li>
+      <li><a href="#playbyplay" class="tab-link">Play by Play</a></li>
+      <li><a href="#quarter-summary" class="tab-link">Cuadro Resumen</a></li>
+      <li><a href="#comparisons" class="tab-link">Comparativas</a></li>
+      <li><a href="#photos" class="tab-link">Fotos</a></li>
+      <li><a href="#videos" class="tab-link">Videos</a></li>
+      <li><a href="#news" class="tab-link">Noticias</a></li>
+    </ul>
+  </nav>
+
+  <!-- Sección: Resumen (Crónica) -->
+  <section id="overview" class="match-section">
+    <h2>Crónica de la Final del Campeonato de España Cadete Masculino 2025</h2>
+    <p class="cronicadate">Huelva, 7 de enero de 2025</p>
+
+    <article class="cronicatext">
+      <p>
+        El <strong>Palacio de Deportes Carolina Marín</strong> vibró con una final que será recordada por su intensidad y desenlace en la prórroga. 
+        <strong>Catalunya</strong> se impuso a la <strong>Comunidad de Madrid</strong> por un ajustado <strong>84-83</strong>, tras un partido lleno de 
+        alternativas y protagonizado por un sinfín de jugadas brillantes que hicieron las delicias de todos los presentes.
+      </p>
+
+      <figure class="img-right-larger">
+        <img 
+          src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/54251471222_a423621da7_c.jpg" 
+          alt="Jugadores de Catalunya recibiendo el trofeo de campeones."
+        >
+        <figcaption>Jugadores de Catalunya recibiendo el trofeo.</figcaption>
+      </figure>
+
+      <h3>Un inicio con equilibrio absoluto (23-23)</h3>
+      <p>
+        El primer cuarto se desarrolló con máxima igualdad. Ambos equipos salieron muy metidos en el partido, intercambiando canastas casi sin descanso. 
+        En la Comunidad de Madrid, la referencia ofensiva fue <strong>A. ONA EMBO</strong>, que arrancó con varios ataques directos al aro. Catalunya, 
+        por su parte, respondía con la versatilidad de <strong>B. BOUTJE BOUTJE</strong> y el acierto exterior de <strong>N. POZA CERVANTES</strong>, 
+        manteniendo el pulso hasta el 23-23 que cerró el primer parcial.
+      </p>
+
+      <h3>Segundo cuarto: Catalunya toma ventaja (20-9)</h3>
+      <p>
+        En el segundo periodo, los catalanes intensificaron su defensa, provocando pérdidas clave y despegándose en el marcador hasta un 
+        <strong>43-32</strong> al descanso. Jugadores como <strong>M. MASEDA PONTE</strong> y <strong>F. CORTA SÁNCHEZ</strong> sumaron en momentos 
+        oportunos, mientras que <strong>G. DE BONROSTRO GALLEGO</strong>, por parte de Madrid, trataba de reactivar a su equipo con canastas al 
+        contraataque. Aun así, el acierto de Catalunya desde el perímetro y su dominio en el rebote ofensivo resultaron determinantes para abrir brecha.
+      </p>
+
+      <figure class="img-left-larger">
+        <img 
+          src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/54251994941_db2eafc7d7_c.jpg" 
+          alt="Salto inicial del partido"
+        >
+        <figcaption>Salto inicial del partido, pura emoción.</figcaption>
+      </figure>
+
+      <h3>Tercer cuarto: reacción madrileña (19-25)</h3>
+      <p>
+        Tras el paso por vestuarios, la Comunidad de Madrid saltó a la pista con una energía renovada. El parcial de <strong>19-25</strong> les permitió 
+        acercarse en el marcador, reduciendo la diferencia a <strong>62-57</strong>. Aquí destacaron los buenos minutos de <strong>B. MANEL</strong>, 
+        que aportó anotación y una gran dirección de juego, y de <strong>R. ARREDONDO ROBLES</strong>, muy activo en la captura de rebotes. Catalunya, 
+        pese a la embestida rival, se sostuvo gracias a la determinación de <strong>N. POZA CERVANTES</strong> y el temple de <strong>M. MASEDA PONTE</strong> 
+        para anotar en momentos delicados.
+      </p>
+
+      <h3>Último cuarto: emoción hasta el final (15-20, 77-77)</h3>
+      <p>
+        El cuarto periodo fue un constante intercambio de golpes. <strong>F. CORTA SÁNCHEZ</strong> brilló en la pintura para los catalanes, mientras 
+        que en Madrid, <strong>G. DE BONROSTRO GALLEGO</strong> y <strong>A. ONA EMBO</strong> seguían sumando puntos decisivos. Un triple de 
+        <strong>B. MANEL</strong> en los últimos instantes empató el encuentro a <strong>77-77</strong>, forzando la prórroga y desatando la locura 
+        en la grada.
+      </p>
+
+      <figure class="img-right-larger">
+        <img 
+          src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/54252003916_4778a6a1be_c.jpg"
+          alt="Acción ofensiva de la Comunidad de Madrid"
+        >
+        <figcaption>Acción ofensiva de la Comunidad de Madrid.</figcaption>
+      </figure>
+
+      <h3>Prórroga decisiva (7-6)</h3>
+      <p>
+        En el tiempo extra, la tensión fue todavía mayor. Cada posesión parecía definitiva. <strong>B. BOUTJE BOUTJE</strong> se hizo gigante en la 
+        zona para Catalunya, respondiendo a las penetraciones de <strong>A. ONA EMBO</strong>, que seguía siendo el estilete madrileño. Con el marcador 
+        apretadísimo, un par de acciones defensivas cruciales de los catalanes y un par de tiros libres anotados en el último suspiro inclinaron la 
+        balanza para sellar el <strong>84-83</strong> final.
+      </p>
+
+      <h3>Jugadores destacados</h3>
+      <p>
+        <strong>Catalunya</strong>:
+      </p>
+      <ul>
+        <li><strong>B. BOUTJE BOUTJE</strong> (19 puntos, 8 rebotes, 31 de valoración), sostén en los momentos críticos y autor de canastas fundamentales.</li>
+        <li><strong>N. POZA CERVANTES</strong> aportó canastas decisivas, especialmente en el segundo cuarto para abrir diferencias, y tuvo una labor notable en defensa.</li>
+        <li><strong>M. MASEDA PONTE</strong> y <strong>F. CORTA SÁNCHEZ</strong> sumaron puntos en momentos clave y se vaciaron en tareas defensivas.</li>
+      </ul>
+
+      <p>
+        <strong>Comunidad de Madrid</strong>:
+      </p>
+      <ul>
+        <li><strong>A. ONA EMBO</strong> (23 puntos, 28 de valoración) fue el gran referente ofensivo de su equipo y mantuvo vivo al conjunto madrileño hasta el último segundo.</li>
+        <li><strong>B. MANEL</strong> (14 puntos) dirigió con criterio y protagonizó canastas vitales para forzar la prórroga.</li>
+        <li><strong>G. DE BONROSTRO GALLEGO</strong> y <strong>R. ARREDONDO ROBLES</strong> pelearon cada rebote y cada balón suelto, aportando intensidad y garra.</li>
+      </ul>
+
+      <figure class="img-left-larger">
+        <img 
+          src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/54252025276_43976101a4_c.jpg"
+          alt="Lucha intensa en la pintura"
+        >
+        <figcaption>Lucha intensa en la pintura.</figcaption>
+      </figure>
+
+      <h3>MVP: B. BOUTJE BOUTJE</h3>
+      <p>
+        Mención especial para <strong>B. BOUTJE BOUTJE</strong>, elegido MVP de la final por su aportación en ambos lados de la cancha. Sus números hablan por sí solos:
+      </p>
+      <ul>
+        <li>19 puntos, con un gran porcentaje de acierto cerca del aro.</li>
+        <li>8 rebotes (varios de ellos ofensivos, cruciales para segundas oportunidades).</li>
+        <li>31 de valoración, la más alta del encuentro.</li>
+      </ul>
+      <p>
+        Además de sus estadísticas, destacó por su liderazgo, su presencia defensiva y su frialdad para decidir en la prórroga con los tiros libres que 
+        sentenciaron el choque. Su actuación ejemplifica el espíritu combativo y ganador de este joven equipo de Catalunya.
+      </p>
+
+      <figure class="img-right-larger">
+        <img 
+          src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/54252274989_6cd8158f55_c.jpg"
+          alt="Celebración tras la victoria final."
+        >
+        <figcaption>Celebración tras la victoria final.</figcaption>
+      </figure>
+
+      <h3>Un título muy disputado</h3>
+      <p>
+        El <strong>Campeonato de España Cadete Masculino</strong> finaliza con un partidazo que hizo justicia al gran nivel de ambos conjuntos durante toda la competición. 
+        Catalunya, con un juego coral y la determinación de sus figuras, se lleva un título que, visto lo visto en la pista, no pudo ser más merecido. Mientras tanto, la 
+        Comunidad de Madrid demostró un espíritu de lucha encomiable, quedándose a un solo punto de la gloria en una final de infarto que necesitó un tiempo extra para definirse.
+      </p>
+      <p>
+        El público de Huelva disfrutó de un duelo épico, con nombres propios que seguramente darán mucho que hablar en el futuro del baloncesto nacional. El trofeo se queda 
+        en manos de los catalanes, pero el aplauso es unánime para todos los participantes de una final tan espectacular como emocionante.
+      </p>
+    </article>
+  </section>
+
+  <!-- Sección: Estadísticas (Box Score) -->
+  <section id="stats" class="match-section">
+    <h2>Estadísticas</h2>
+    <div class="box-score-container">
+      <!-- BOX SCORE EQUIPO A -->
+      <div class="team-box-score">
+        <h2 id="team-a-name"></h2>
+        <table id="team-a-table">
+          <thead>
+            <tr>
+              <th data-sort="number">#</th>
+              <th data-sort="string">Jugador</th>
+              <th data-sort="string">Min</th>
+              <th data-sort="number">PTS</th>
+              <th data-sort="number">T2I</th>
+              <th data-sort="number">T2C</th>
+              <th data-sort="string">%T2</th>
+              <th data-sort="number">T3I</th>
+              <th data-sort="number">T3C</th>
+              <th data-sort="string">%T3</th>
+              <th data-sort="number">TLC</th>
+              <th data-sort="number">TLI</th>
+              <th data-sort="string">%TL</th>
+              <th data-sort="number">RO</th>
+              <th data-sort="number">RD</th>
+              <th data-sort="number">RT</th>
+              <th data-sort="number">AS</th>
+              <th data-sort="number">BR</th>
+              <th data-sort="number">BP</th>
+              <th data-sort="number">TP</th>
+              <th data-sort="number">FC</th>
+              <th data-sort="number">VA</th>
+              <th data-sort="number">+/-</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Se rellena dinámicamente -->
+          </tbody>
+        </table>
+      </div>
+      <!-- BOX SCORE EQUIPO B -->
+      <div class="team-box-score">
+        <h2 id="team-b-name"></h2>
+        <table id="team-b-table">
+          <thead>
+            <tr>
+              <th data-sort="number">#</th>
+              <th data-sort="string">Jugador</th>
+              <th data-sort="string">Min</th>
+              <th data-sort="number">PTS</th>
+              <th data-sort="number">T2I</th>
+              <th data-sort="number">T2C</th>
+              <th data-sort="string">%T2</th>
+              <th data-sort="number">T3I</th>
+              <th data-sort="number">T3C</th>
+              <th data-sort="string">%T3</th>
+              <th data-sort="number">TLC</th>
+              <th data-sort="number">TLI</th>
+              <th data-sort="string">%TL</th>
+              <th data-sort="number">RO</th>
+              <th data-sort="number">RD</th>
+              <th data-sort="number">RT</th>
+              <th data-sort="number">AS</th>
+              <th data-sort="number">BR</th>
+              <th data-sort="number">BP</th>
+              <th data-sort="number">TP</th>
+              <th data-sort="number">FC</th>
+              <th data-sort="number">VA</th>
+              <th data-sort="number">+/-</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Se rellena dinámicamente -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: Play by Play -->
+  <section id="playbyplay" class="match-section">
+    <h2>Play by Play</h2>
+    <div class="pbp-filters">
+      <label for="pbpActionFilter">Acción:</label>
+      <select id="pbpActionFilter"></select>
+      <label for="pbpPlayerFilter">Jugador:</label>
+      <select id="pbpPlayerFilter"></select>
+      <label for="pbpTeamFilter">Equipo:</label>
+      <select id="pbpTeamFilter"></select>
+      <label for="pbpQuarterFilter">Cuarto:</label>
+      <select id="pbpQuarterFilter"></select>
+      <button id="pbpFilterBtn">Filtrar</button>
+    </div>
+    <div id="pbpEvents">
+      <!-- Se inyectarán dinámicamente los eventos -->
+    </div>
+  </section>
+
+  <!-- Sección: Cuadro Resumen por Cuarto -->
+  <section id="quarter-summary" class="match-section">
+    <h2>Resumen por Cuarto</h2>
+    <table id="quarterTable">
+      <thead>
+        <tr>
+          <th>Cuarto</th>
+          <th>Equipo A</th>
+          <th>Equipo B</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Se llenará dinámicamente -->
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Sección: Comparativas -->
+  <section id="comparisons" class="match-section">
+    <h2>Comparativas</h2>
+
+    <!-- Gráfica de Evolución Acumulada del Marcador -->
+    <h3>Evolución Acumulada del Marcador</h3>
+    <div class="chart-container" style="width:600px; height:400px; margin: 0 auto;">
+    <canvas id="evolutionChart"></canvas>
+    </div>
+    <!-- 1) Comparativa Estadísticas por Equipo (Horizontal Bars) -->
+    <h3>Comparativa de Equipos</h3>
+    <div class="chart-container" style="width:600px; height:500px;">
+      <canvas id="teamComparisonChart"></canvas>
+    </div>
+
+    <!-- 2) Evolución del Marcador -->
+    <h3>Evolución del Marcador</h3>
+    <div class="chart-container" style="width:600px; height:400px;">
+      <canvas id="scoreEvolutionChart"></canvas>
+    </div>
+
+    <!-- 3) Jugadores Destacados -->
+    <h3>Jugadores Destacados</h3>
+    <div class="chart-container" style="width:600px; height:400px;">
+      <canvas id="topPlayersChart"></canvas>
+    </div>
+
+    <!-- 4) Gráfico de Burbujas (Puntos vs. Minutos) -->
+    <h3>Gráfico de Burbujas (Puntos vs. Minutos)</h3>
+    <div class="chart-container" style="width:600px; height:400px;">
+      <canvas id="bubblePointsChart"></canvas>
+    </div>
+
+    <!-- 5) Gráfico de Burbujas (Valoración vs. Minutos) -->
+    <h3>Gráfico de Burbujas (Valoración vs. Minutos)</h3>
+    <div class="chart-container" style="width:600px; height:400px;">
+      <canvas id="bubbleValChart"></canvas>
+    </div>
+
+    <!-- 6) Comparación de Jugadores (Radar Chart) -->
+    <h3>Comparación de Jugadores</h3>
+    <div>
+      <label for="comparePlayer1">Jugador 1:</label>
+      <select id="comparePlayer1">
+        <option value="">Selecciona un jugador</option>
+      </select>
+      <label for="comparePlayer2">Jugador 2:</label>
+      <select id="comparePlayer2">
+        <option value="">Selecciona un jugador</option>
+      </select>
+      <button id="compareBtn">Comparar</button>
+    </div>
+    <div class="chart-container" style="width:600px; height:500px;">
+      <canvas id="radarChart"></canvas>
+    </div>
+
+
+  </section>  
+  
+  <!-- Sección: Fotos (Galería con modal) -->
+  <section id="photos" class="match-section">
+    <h2>Fotos</h2>
+    <p>Galería de fotos del partido. Haz clic en cada imagen para ampliarla.</p>
+    <div class="photo-gallery">
+      <img src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/54251131602_de9798b0a2_k.jpg" alt="Foto 1" data-full="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/54251131602_de9798b0a2_k.jpg">
+      <img src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/54251471222_a423621da7_c.jpg" alt="Foto 2" data-full="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/54251471222_a423621da7_c.jpg">
+      <img src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/54251994941_db2eafc7d7_c.jpg" alt="Foto 3" data-full="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/54251994941_db2eafc7d7_c.jpg">
+      <img src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/54252003916_4778a6a1be_c.jpg" alt="Foto 4" data-full="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/54252003916_4778a6a1be_c.jpg">
+      <img src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/54252025276_43976101a4_c.jpg" alt="Foto 5" data-full="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/54252025276_43976101a4_c.jpg">
+      <img src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/54252025371_c2a0ca4177_k.jpg" alt="Foto 6" data-full="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/54252025371_c2a0ca4177_k.jpg">
+      <img src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/54252230538_e736d36cc4_k.jpg" alt="Foto 7" data-full="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/54252230538_e736d36cc4_k.jpg">
+      <img src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/54252253659_efd9eb533b_k.jpg" alt="Foto 8" data-full="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/54252253659_efd9eb533b_k.jpg">
+      <img src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/54252274989_6cd8158f55_c.jpg" alt="Foto 9" data-full="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/54252274989_6cd8158f55_c.jpg">
+      <img src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/54252275139_c4ce85e22c_k.jpg" alt="Foto 10" data-full="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/54252275139_c4ce85e22c_k.jpg">
+      <img src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/54254760476_92537804bc_k.jpg" alt="Foto 11" data-full="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/54254760476_92537804bc_k.jpg">
+      <img src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/54254988383_bb0e3b602a_k.jpg" alt="Foto 12" data-full="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/54254988383_bb0e3b602a_k.jpg">
+      <img src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/54254988553_27ddb20dea_k.jpg" alt="Foto 13" data-full="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/54254988553_27ddb20dea_k.jpg">
+      <img src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/54254994214_c32f96df75_k.jpg" alt="Foto 14" data-full="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/54254994214_c32f96df75_k.jpg">
+    </div>
+
+    <!-- Modal para la imagen ampliada -->
+    <div class="modal" id="photoModal">
+      <span class="close" id="photoModalClose">&times;</span>
+      <img class="modal-content" id="modalImage" />
+      <div id="caption"></div>
+    </div>
+  </section>
+
+  <!-- Sección: Videos -->
+  <section id="videos" class="match-section">
+    <h2>Videos</h2>
+    <div class="video-container">
+      <video controls>
+        <source src="https://progressive.enetres.net/mp4Streamer.php?u=BD98BFE22A5946A8BB316B18D8F43054&f=dvr-ae42034e-070125-105812-LIVEMADRIDCADFEM.mp4&c=0" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+      </video>
+    </div>
+  </section>
+
+  <!-- Sección: Noticias (Fichas) -->
+  <section id="news" class="match-section">
+    <h2>Noticias</h2>
+    <ul class="news-list">
+      <li class="news-card">
+        <img src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/54251131602_de9798b0a2_k.jpg" alt="Noticia 1">
+        <div class="news-card-content">
+          <h3>
+            <a href="https://www.feb.es/2025/1/1/baloncesto/guia-oficial-del-campeonato-espana-infantil-cadete-selecciones-autonomicas/101052.aspx" target="_blank" rel="noopener noreferrer">
+              Guía oficial del Campeonato de España Infantil Cadete
+            </a>
+          </h3>
+          <p>Consulta la guía oficial con todos los detalles y regulaciones para las selecciones autonómicas.</p>
+        </div>
+      </li>
+      <li class="news-card">
+        <img src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/54251471222_a423621da7_c.jpg" alt="Noticia 2">
+        <div class="news-card-content">
+          <h3>
+            <a href="https://www.feb.es/2024/12/3/baloncesto/publicado-calendario-del-campeonato-espana-infantil-cadete-2025/100856.aspx" target="_blank" rel="noopener noreferrer">
+              Calendario del Campeonato de España Infantil Cadete 2025
+            </a>
+          </h3>
+          <p>Descubre el calendario oficial de partidos para el Campeonato de España Infantil Cadete 2025.</p>
+        </div>
+      </li>
+      <li class="news-card">
+        <img src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/54252003916_4778a6a1be_c.jpg" alt="Noticia 3">
+        <div class="news-card-content">
+          <h3>
+            <a href="https://valenciabase.com/campeones-y-subcampeones-de-espana-en-categoria-infantil-en-el-campeonato-de-espana/" target="_blank" rel="noopener noreferrer">
+              Campeones y Subcampeones en Categoría Infantil
+            </a>
+          </h3>
+          <p>Lee el artículo sobre los campeones y subcampeones en la categoría infantil en el Campeonato de España.</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="feb-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <img src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/logofeb.png" alt="Logo FEB" class="footer-logo">
+        <p class="footer-text">
+          Regístrate para recibir las últimas noticias de nuestro equipo.
+          <br>
+          <a href="#" class="footer-link">Más info &raquo;</a>
+        </p>
+        <div class="footer-social">
+          <p>Síguenos en redes:</p>
+          <a href="#" class="social-icon">FB</a>
+          <a href="#" class="social-icon">TW</a>
+          <a href="#" class="social-icon">IG</a>
+        </div>
+      </div>
+      <div class="footer-middle">
+        <h3>Links</h3>
+        <ul>
+          <li><a href="#">Noticias</a></li>
+          <li><a href="#">Fotos</a></li>
+          <li><a href="#">Vídeos</a></li>
+        </ul>
+      </div>
+      <div class="footer-right">
+        <h3>Patrocinadores Oficiales</h3>
+        <div class="partner-logos">
+          <img 
+            src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/niker.png" 
+            alt="Nike" 
+            class="partner-logo"
+          >
+          <img 
+            src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/endesa.png" 
+            alt="Endesa" 
+            class="partner-logo"
+          >
+          <img 
+            src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/azul.png" 
+            alt="Azul Marino" 
+            class="partner-logo"
+          >
+          <img 
+            src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/tenerife.png" 
+            alt="Tenerife" 
+            class="partner-logo"
+          >
+          <img 
+            src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/iberia.png" 
+            alt="Iberia" 
+            class="partner-logo"
+          >
+           <img 
+            src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/caixa.png" 
+            alt="CaixaBank" 
+            class="partner-logo"
+          >
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>
+        © 2025 Federación Española de Baloncesto. Todos los derechos reservados.
+        <br>
+        <a href="#">Política de privacidad</a> | 
+        <a href="#">Términos y condiciones</a> | 
+        <a href="#">Cookies</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Script principal -->
+  <script src="ficha.js"></script>
+</body>
+</html>
