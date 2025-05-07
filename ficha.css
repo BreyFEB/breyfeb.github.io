@@ -93,7 +93,7 @@ header {
     filter: brightness(1.2) invert(1);
   }
   header .match-header{
-    display: inline;
+    display: block;
   }
 
 /***********************************************
