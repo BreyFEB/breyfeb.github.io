@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   // URL del JSON (ajusta a la versión que necesites)
-  const jsonURL = "https://raw.githubusercontent.com/emebullon/games/refs/heads/main/2448882.json";
+  const jsonURL = "https://github.com/emebullon/cadete2025/blob/b49828c236ffaab1c3c8970775a3ddaa7593e13b/JSONs%20fichas/FullMatch_2469167_2025-05-03T13.json";
 
   fetch(jsonURL)
     .then(resp => resp.json())
