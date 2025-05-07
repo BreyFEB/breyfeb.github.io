@@ -167,7 +167,7 @@ function buildPlayerNamesDictionary(data) {
  * HERO, MINI-HEADER, BOX SCORE
  ***********************************************/
 function updateHeroFromJSON(data) {
-  const heroDiv = document.getElementById("matchHeroContent");
+  const heroDiv = document.getElementByClassName("hero-content");
   if (!heroDiv) return;
   const header = data.HEADER;
   const category = header.category || "A";
