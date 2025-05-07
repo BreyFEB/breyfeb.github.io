@@ -825,7 +825,7 @@ body {
 
 /* Contenedor central: Marcador + Logos + Video */
 .hero-content {
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: space-between;
     max-width: 1200px;
