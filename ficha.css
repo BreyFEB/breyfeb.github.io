@@ -19,71 +19,79 @@ body {
 /***********************************************
  * HEADER PRINCIPAL (top-nav)
  ***********************************************/
-.top-nav {
-  background-image: linear-gradient(to right, #2F4170, #111C4E);
-  padding: 10px 20px;
-  border-bottom: 1px solid #53565A;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.header-left {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  flex: 1;
-}
-.header-left nav {
-  flex: 1;
-  margin: 0 auto;
-}
-.header-left nav ul {
-  display: flex;
-  gap: 30px;
-  align-items: center;
-  justify-content: center;
-}
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-.logo {
-  height: 120px;
-}
-.nav-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-weight: bold;
-  font-size: 0.9em;
-  cursor: pointer;
-}
-.nav-item a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  color: #ffffff;
-  text-decoration: none;
-}
-.nav-item img,
-.icon {
-  width: 36px;
-  height: 36px;
-  filter: brightness(0) invert(1);
-  transition: filter 0.2s ease-in-out;
-}
-.nav-item:hover img,
-.icon:hover {
-  filter: brightness(1.2) invert(1);
-}
-.nav-item.active img {
-  filter: brightness(0) saturate(100%) invert(49%) sepia(100%) saturate(2637%) hue-rotate(358deg) brightness(102%) contrast(101%);
-}
-.nav-item.active span {
-  color: #FF9E1B;
-}
+header {
+    background: linear-gradient(to right, #2F4170, #111C4E);
+    padding: 10px 20px;
+    border-bottom: 1px solid #53565A;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+  }
+  .header-left nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .logo {
+    height: 100px;
+  }
+  nav ul {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Manifold', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 0.9em;
+    cursor: pointer;
+  }
+  .nav-item a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    color: #ffffff;
+  }
+  /* Iconos no seleccionados a blanco */
+  .nav-item img {
+    width: 36px;
+    height: 36px;
+    filter: brightness(0) invert(1);
+    transition: filter 0.2s ease-in-out;
+  }
+  .nav-item:hover img {
+    filter: brightness(1.2) invert(1);
+  }
+  /* Icono activo en naranja #FF9E1B */
+  .nav-item.active img {
+    filter: brightness(0) saturate(100%) invert(49%) sepia(100%) saturate(2637%) hue-rotate(358deg) brightness(102%) contrast(101%);
+  }
+  .nav-item.active span {
+    color: #FF9E1B;
+  }
+  .icon {
+    width: 36px;
+    height: 36px;
+    filter: brightness(0) invert(1);
+  }
+  .icon:hover {
+    filter: brightness(1.2) invert(1);
+  }
 
 /***********************************************
  * MINI-HEADER STICKY
