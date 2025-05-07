@@ -93,48 +93,39 @@
       <span>/</span>
       <a href="#">Partidos</a>
       <span>/</span>
-      <span>Catalunya vs Comunidad de Madrid</span>
+      <span class="teams-vs" id="teams-vs">TeamA vs TeamB</span>
     </div>
     <div class="hero-phase">
-      Final CESA Cadete Masculino • Huelva, Carolina Marin
+      <span class="fase-campeonato" id="championship-phase">Fase del campeonato</span> • 
+      <span class="pabellon-partido" id="match-location">Huelva, Carolina Marin</span>
     </div>
     <div class="hero-content">
       <div class="scoreboard">
         <div class="team-row">
           <div class="team-box">
-            <img
-              src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/logofeb.png"
-              alt="Catalunya"
-              class="team-logo"
-            >
-            <div class="team-name">CATALUNYA</div>
+            <img id="team-a-logo" class="team-logo" alt="Team A">
+            <div id="team-a-name" class="team-name">CATALUNYA</div>
           </div>
-
+  
           <div>
-            <div class="score-value">84 - 83</div>
-            <div class="score-status">FINAL</div>
-            <div class="match-datetime">07-01-2025 - 10:00</div>
+            <div id="score" class="score-value">84 - 83</div>
+            <div id="score-status" class="score-status">FINAL</div>
+            <div id="match-datetime" class="match-datetime">07-01-2025 - 10:00</div>
           </div>
-
+  
           <div class="team-box">
-            <img
-              src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/logofeb.png"
-              alt="Comunidad de Madrid"
-              class="team-logo"
-            >
-            <div class="team-name">COMUNIDAD DE MADRID</div>
+            <img id="team-b-logo" class="team-logo" alt="Team B">
+            <div id="team-b-name" class="team-name">COMUNIDAD DE MADRID</div>
           </div>
         </div>
       </div>
-
+  
       <div class="hero-video">
-        <iframe
-          src="https://progressive.enetres.net/mp4Streamer.php?u=BD98BFE22A5946A8BB316B18D8F43054&f=dvr-ae42034e-070125-105812-LIVEMADRIDCADFEM.mp4&c=0"
-          allowfullscreen
-        ></iframe>
+        <iframe id="video-frame" allowfullscreen></iframe>
       </div>
     </div>
   </header>
+
 
   <!-- NAV SECUNDARIA (tabs) -->
   <nav class="match-tabs" id="matchTabs">
