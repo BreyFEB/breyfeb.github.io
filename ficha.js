@@ -48,6 +48,14 @@ document.addEventListener("DOMContentLoaded", () => {
       const competicion = header.competition
       const pabellon = header.field
       herophaseDiv.textContent =  `${fase} • ${competicion} • ${pabellon}`;
+
+      // Meter resumen de ChatGPT
+      fetch("https://raw.githubusercontent.com/emebullon/cadete2025/refs/heads/main/JSONs%20fichas/FullMatch_2469167_2025-05-03T13_cronica_chatgpt.html")
+        .then(res => res.text())
+        .then(html => {
+          document.querySelector(".cronicatext").innerHTML = html;
+        })
+        .catch(err => console.error("Error loading crónica:", err));
       
       // Construir diccionarios: fotos, nombres de jugadores y equipos
       buildPlayerPhotoDictionary(data);
