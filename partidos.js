@@ -108,7 +108,8 @@ function parseMatchesData(json, targetCompetitionName = "PRIMERA FEB") {
       const compName = competition.name || "Competición";
 
       // ✅ Only parse if no filter OR it matches the target
-      if (compName === targetCompetitionName) {
+      // if (compName === targetCompetitionName) {
+      if (true) {
         if (Array.isArray(competition.GAMES)) {
           competition.GAMES.forEach(game => {
             const starttimeRaw = game.StartTime || "0000-00-00T00:00:00";
