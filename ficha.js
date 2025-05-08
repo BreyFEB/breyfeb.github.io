@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const main = document.querySelector('.hero-content') || document.body;
       main.innerHTML = `
         <div style="width:100%;text-align:center;padding:40px 0;font-size:1.5em;color:#B62929;">
-          <div style="font-size:2em;color:#222;margin-bottom:0.5em;">${gameName}</div>
+          <div style="font-size:2em;color:#222;margin-bottom:0.5em;"></div>
           Los datos de este partido aún no están disponibles.
         </div>
       `;
