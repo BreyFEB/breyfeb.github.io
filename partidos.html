@@ -12,7 +12,7 @@
 <body>
   <!-- HEADER -->
   <header>
-    <div class="header-left">
+    <div class="header-inner">
      <img 
         src="https://raw.githubusercontent.com/emebullon/cadete2025/refs/heads/main/febcadete.svg" 
         alt="Logo FEB" 
@@ -39,46 +39,77 @@
           </li>
           <li class="nav-item">
             <a href="#">
-              <img src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/newspaper-outline.svg" alt="Icono Noticias">
-              <span>Noticias</span>
+              <img src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/calendar-outline.svg" alt="Icono Clasificación">
+              <span>Clasificación</span>
             </a>
           </li>
           <li class="nav-item">
             <a href="#">
-              <img src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/calendar-outline.svg" alt="Icono Calendario">
-              <span>Calendario</span>
+              <!-- Player icon – white lines, 36 × 36 viewBox -->
+              <svg xmlns="http://www.w3.org/2000/svg"
+                   width="36" height="36" viewBox="0 0 64 64"
+                   role="img" aria-label="Icono de jugador de baloncesto">
+                <!-- Camiseta (contorno) -->
+                <path d="M24 6
+                         L20 6 L14 14 L14 44 L18 54 L46 54 L50 44 L50 14 L44 6 L40 6
+                         L40 16 L24 16 Z"
+                      fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round"/>
+                <!-- Balón sobre el pecho -->
+                <circle cx="32" cy="34" r="9"
+                        fill="none" stroke="#FFFFFF" stroke-width="3"/>
+                <!-- Líneas del balón -->
+                <path d="M23 34 h18"           fill="none" stroke="#FFFFFF" stroke-width="2"/>
+                <path d="M32 25 v18"           fill="none" stroke="#FFFFFF" stroke-width="2"/>
+                <path d="M26 28
+                         a9 9 0 0 0 0 12"      fill="none" stroke="#FFFFFF" stroke-width="2"/>
+                <path d="M38 28
+                         a9 9 0 0 1 0 12"      fill="none" stroke="#FFFFFF" stroke-width="2"/>
+              </svg>
+              <span>Jugadores</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#">
+              <!-- Basketball team icon – white lines, 36 × 36 viewBox -->
+              <svg xmlns="http://www.w3.org/2000/svg"
+                   width="36" height="36" viewBox="0 0 64 64"
+                   role="img" aria-label="Icono de equipo de baloncesto">
+                <!-- Escudo exterior -->
+                <path d="M32 2
+                         C48 2 58 10 58 26
+                         C58 44 32 62 32 62
+                         C32 62 6 44 6 26
+                         C6 10 16 2 32 2 Z"
+                      fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round"/>
+                <!-- Balón central -->
+                <circle cx="32" cy="30" r="12"
+                        fill="none" stroke="#FFFFFF" stroke-width="3"/>
+                <!-- Líneas del balón -->
+                <path d="M20 30 h24"           fill="none" stroke="#FFFFFF" stroke-width="2"/>
+                <path d="M32 18 v24"           fill="none" stroke="#FFFFFF" stroke-width="2"/>
+                <path d="M24 21
+                         a12 12 0 0 0 0 18"   fill="none" stroke="#FFFFFF" stroke-width="2"/>
+                <path d="M40 21
+                         a12 12 0 0 1 0 18"   fill="none" stroke="#FFFFFF" stroke-width="2"/>
+                <!-- Estrellas superiores -->
+                <polygon points="32,7 34.5,12 40,12.5 36,16.5 37.5,22 32,19 26.5,22 28,16.5 24,12.5 29.5,12"
+                         fill="#FFFFFF"/>
+                <polygon points="20,11 22,15.5 26.8,16 23.5,19.2 24.7,23.8 20,21 15.3,23.8 16.5,19.2 13.2,16 18,15.5"
+                         fill="#FFFFFF"/>
+                <polygon points="44,11 46,15.5 50.8,16 47.5,19.2 48.7,23.8 44,21 39.3,23.8 40.5,19.2 37.2,16 42,15.5"
+                         fill="#FFFFFF"/>
+              </svg>
+              <span>Equipos</span>
             </a>
           </li>
           <li class="nav-item">
             <a href="rankings.html">
-              <img src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/stats-chart-outline.svg" alt="Icono Rankings">
-              <span>Rankings</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#">
-              <img src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/add.svg" alt="Icono Más">
-              <span>Más</span>
+              <img src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/stats-chart-outline.svg" alt="Icono Ranking">
+              <span>Ranking</span>
             </a>
           </li>
         </ul>
       </nav>
-    </div>
-    <div class="header-right">
-      <a href="#">
-        <img 
-          src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/log-in.svg" 
-          alt="Icono Usuario" 
-          class="icon"
-        >
-      </a>
-      <a href="#">
-        <img 
-          src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/search.svg" 
-          alt="Icono Búsqueda" 
-          class="icon"
-        >
-      </a>
     </div>
   </header>
 
@@ -164,7 +195,7 @@
 
   <!-- FOOTER -->
   <footer class="feb-footer">
-    <div class="footer-container">
+    <div class="footer-inner">
       <div class="footer-left">
         <img 
           src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/logofeb.svg" 

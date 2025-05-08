@@ -30,12 +30,18 @@
      2) HEADER
      =========================== */
   header {
+    padding: 0;
     background: linear-gradient(to right, #2F4170, #111C4E);
-    padding: 10px 20px;
     border-bottom: 1px solid #53565A;
+  }
+  .header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 10px 20px;
   }
   .header-left {
     display: flex;
@@ -56,10 +62,17 @@
   .logo {
     height: 100px;
   }
-  nav ul {
+  .main-nav {
+    width: 100%;
+  }
+  .main-nav ul {
     display: flex;
     gap: 30px;
     align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
   }
   .nav-item {
     display: flex;
@@ -465,12 +478,18 @@
       max-width: 900px;
       margin: 0 auto;
     }
+    .main-nav ul {
+      max-width: 900px;
+    }
   }
   @media (max-width: 991px) {
     .matches-list {
       grid-template-columns: minmax(350px, 1fr);
       max-width: 450px;
       margin: 0 auto;
+    }
+    .main-nav ul {
+      max-width: 450px;
     }
   }
   .match-indicator {
@@ -486,17 +505,21 @@
   .feb-footer {
     background: linear-gradient(to right, #2F4170, #111C4E);
     color: #fff;
-    padding: 40px 20px 0 20px;
+    padding: 40px 0 0 0;
     font-size: 1em;
   }
-  .footer-container {
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 40px;
-    max-width: 1400px;
-    margin: 0 auto;
     flex-wrap: wrap;
+  }
+  .footer-container {
+    width: 100%;
   }
   .footer-left {
     flex: 1 1 300px;
@@ -506,7 +529,7 @@
     gap: 18px;
   }
   .footer-logo {
-    height: 90px;
+    height: 110px;
     margin-bottom: 10px;
   }
   .footer-text {
@@ -529,7 +552,7 @@
     gap: 18px;
   }
   .footer-right h3 {
-    color: #FFD700;
+    color: #FF9E1B;
     margin-bottom: 12px;
     font-size: 1.1em;
     font-weight: bold;
@@ -569,7 +592,7 @@
   
   /* Responsive */
   @media (max-width: 900px) {
-    .footer-container {
+    .footer-inner {
       flex-direction: column;
       align-items: center;
       gap: 28px;
@@ -581,6 +604,13 @@
     }
     .partner-logos {
       justify-content: center;
+    }
+    .footer-logo {
+      height: 70px;
+    }
+    .main-nav ul {
+      justify-content: center;
+      width: 100%;
     }
   }
   
@@ -733,4 +763,13 @@
   }
   .venue-filter {
     margin-bottom: 0;
+  }
+
+  .header-inner .footer-logo {
+    height: 72px;
+  }
+  @media (max-width: 900px) {
+    .header-inner .footer-logo {
+      height: 32px;
+    }
   }

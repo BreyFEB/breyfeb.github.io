@@ -162,8 +162,7 @@ function parseMatchesData(json, targetCompetitionName = "PRIMERA FEB") {
               venue: game.field || "",
               venueAddress: game.place || "",
               venuePlace: game.Place || "",
-              gender: gender,
-              game_id: game.ID
+              gender: gender
             });
           });
         }
@@ -311,7 +310,7 @@ function createMatchCard(match) {
   moreBtn.className = "btn-more";
   moreBtn.textContent = "Más";
   moreBtn.addEventListener("click", () => {
-    window.location.href = `ficha.html?gameId=${match.game_id}`;
+    window.location.href = "ficha.html";
   });
 
   footerDiv.appendChild(statusDiv);
@@ -760,9 +759,7 @@ closeFiltersBtn.addEventListener("click", () => {
  *********************************/
 // Función para convertir a formato Título
 function toTitleCase(str) {
-  return str
-    .toLowerCase()
-    .replace(/([\p{L}\p{M}'])([\p{L}\p{M}']*)/gu, (match, first, rest) => first.toUpperCase() + rest);
+  return str.toLowerCase().replace(/\b([a-záéíóúüñ])/giu, c => c.toUpperCase());
 }
 
 function generateVenueFilter(venues) {
