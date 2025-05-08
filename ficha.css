@@ -155,21 +155,33 @@ header {
   padding: 40px 20px;
 }
 .match-hero-content {
-  max-width: 1500px;
-  margin: 0 auto;
   display: flex;
-  gap: 20px;
+  flex-direction: row;
   align-items: flex-start;
-  justify-content: flex-start;
+  gap: 40px;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  height: 100%;
 }
 .hero-left {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  width: 60%;
+  align-items: stretch;
+  justify-content: center;
+  flex: 1;
+  min-width: 0;
+  height: 100%;
 }
 .hero-video {
-  width: 40%;
+  width: 480px;
+  height: 270px;
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  margin-left: auto;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -224,6 +236,14 @@ header {
   color: #666;
   text-transform: uppercase;
   margin-top: 2px;
+}
+
+.scoreboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
 }
 
 /***********************************************
@@ -790,44 +810,36 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
-    padding: 40px 20px; /* más espacio */
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 /* Navegación breadcrumb simulada (Home / Games / QFs-FBC) */
 .hero-breadcrumb {
-    margin-top: 20px; /* Ajusta el margen superior para bajar el breadcrumb */
-    margin-bottom: 10px; /* Añade margen inferior para crear espacio */
-    margin-left: 20px; /* Ajusta el margen izquierdo para alinearlo con la zona blanca */
+    margin-bottom: 10px;
     /* Otros estilos que puedas tener */
-}
-.hero-breadcrumb a {
-    color: #ccc;
-    text-decoration: none;
-}
-.hero-breadcrumb a:hover {
-    text-decoration: underline;
-}
-.hero-breadcrumb span {
-    margin: 0 5px;
 }
 
 /* Subtítulo de la fase y estadio */
 .hero-phase {
     font-size: 0.9rem;
     color: #ddd;
-    margin-left: 20px;
     margin-bottom: 20px;
     text-transform: uppercase;
 }
 
 /* Contenedor central: Marcador + Logos + Video */
 .hero-content {
-    display: block;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  height: 100%;
 }
 
 /* Bloque del marcador en el centro */
@@ -852,6 +864,9 @@ body {
     align-items: center;
     text-align: center;
 }
+.team-box img {
+  border-radius: 20%;
+}
 .team-logo {
     width: 90px;
     height: 90px;
@@ -872,7 +887,7 @@ body {
 
 .score-value {
     font-size: 3.5rem;
-    font-weight: bold;
+    /* Sin peso font-weight: bold; */
     color: #fff;
     margin-bottom: 5px;
 }
@@ -891,13 +906,14 @@ body {
 
 /* Contenedor del iframe (video) más grande */
 .hero-video {
-    width: 480px;  /* ajusta a tu gusto */
-    height: 270px; /* relación 16:9 aproximada */
+    width: 480px;
+    height: 270px;
     background: #000;
     border-radius: 8px;
     overflow: hidden;
-    flex-shrink: 0; /* Para que no se encoja */
+    flex-shrink: 0;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin-left: auto;
 }
 .hero-video iframe {
     width: 100%;
@@ -907,42 +923,22 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .hero-content {
+    .hero-header {
         flex-direction: column;
-        align-items: center;
     }
-    .team-row {
+    
+    .hero-content {
         flex-direction: column;
         gap: 20px;
     }
-    .score-value {
-        font-size: 2.5rem;
-    }
+    
     .hero-video {
+        margin-left: 0;
         width: 100%;
         max-width: 500px;
-        height: 281px; /* ~16:9 */
+        height: 281px;
     }
 }
-/***********************************************
- * RESET BÁSICO
- ***********************************************/
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/***********************************************
- * BODY / FUENTES / COLORES GENERALES
- ***********************************************/
-body {
-  background-color: #2F4170; 
-  color: #fff;
-  font-family: Arial, sans-serif;
-}
-
-/* ... (el resto de estilos existentes sin cambios) ... */
 
 /***********************************************
  * NUEVOS ESTILOS: Cuadro Resumen por Cuarto
@@ -1085,4 +1081,35 @@ body {
 .noticia ul li strong {
     display: block; /* Asegura que el strong ocupe una línea completa */
     margin-bottom: 5px; /* Ajusta el margen según sea necesario */
+}
+
+@media (max-width: 900px) {
+  .hero-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .hero-video {
+    margin-left: 0;
+    width: 100%;
+    max-width: 500px;
+    height: 281px;
+  }
+}
+
+.main-nav a {
+  text-decoration: none;
+}
+
+.hero-breadcrumb {
+  color: #fff;
+}
+
+.hero-breadcrumb a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.score-winner {
+  color: #FF9E1B !important;
+  font-weight: bold;
 }

@@ -1,9 +1,23 @@
+// Get gameId from URL
+function getGameIdFromUrl() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get('gameId');
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+  const gameId = getGameIdFromUrl();
+  if (!gameId) {
+    alert("No se ha especificado ningún partido.");
+    return;
+  }
   // URL del JSON (ajusta a la versión que necesites)
-  const jsonURL = "https://raw.githubusercontent.com/emebullon/cadete2025/refs/heads/main/JSONs%20fichas/FullMatch_2469167_2025-05-03T13.json";
+  const jsonURL = `https://raw.githubusercontent.com/emebullon/cadete2025/refs/heads/main/JSONs%20fichas/FullMatch_${gameId}.json`;
 
   fetch(jsonURL)
-    .then(resp => resp.json())
+    .then(resp => {
+      if (!resp.ok) throw new Error("No disponible");
+      return resp.json();
+    })
     .then(data => {
       console.log("JSON cargado:", data); // Para depuración
       const header = data.HEADER;
@@ -18,7 +32,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Actualizar el marcador
       const scoreValueEl = document.querySelector('.score-value');
-      scoreValueEl.textContent = `${tA.pts} - ${tB.pts}`;
+      scoreValueEl.innerHTML = `<span class="score-a">${tA.pts}</span> - <span class="score-b">${tB.pts}</span>`;
+      // Highlight the winner
+      const scoreASpan = scoreValueEl.querySelector('.score-a');
+      const scoreBSpan = scoreValueEl.querySelector('.score-b');
+      scoreASpan.classList.remove('score-winner');
+      scoreBSpan.classList.remove('score-winner');
+      if (parseInt(tA.pts) > parseInt(tB.pts)) {
+        scoreASpan.classList.add('score-winner');
+      } else if (parseInt(tB.pts) > parseInt(tA.pts)) {
+        scoreBSpan.classList.add('score-winner');
+      }
 
       // Actualizar estado y fecha/hora
       const scoreStatusEl = document.querySelector('.score-status');
@@ -86,7 +110,26 @@ document.addEventListener("DOMContentLoaded", () => {
       // Llenar el cuadro resumen por cuarto
       fillQuarterSummary(data);
     })
-    .catch(err => console.error("Error al cargar JSON partido:", err));
+    .catch(err => {
+      // Try to get the game name from the breadcrumb or fallback
+      let gameName = '';
+      const breadcrumbDiv = document.querySelector('.hero-breadcrumb');
+      if (breadcrumbDiv) {
+        const lastSpan = breadcrumbDiv.querySelector('span:last-child');
+        if (lastSpan && lastSpan.textContent.trim()) {
+          gameName = lastSpan.textContent.trim();
+        }
+      }
+      if (!gameName) gameName = 'Partido desconocido';
+      const main = document.querySelector('.hero-content') || document.body;
+      main.innerHTML = `
+        <div style="width:100%;text-align:center;padding:40px 0;font-size:1.5em;color:#B62929;">
+          <div style="font-size:2em;color:#222;margin-bottom:0.5em;">${gameName}</div>
+          Los datos de este partido aún no están disponibles.
+        </div>
+      `;
+      console.error("Error al cargar JSON partido:", err);
+    });
 
   // Configuración de tabs (Resumen, Estadísticas, etc.)
   const tabs = document.querySelectorAll(".tab-link");
