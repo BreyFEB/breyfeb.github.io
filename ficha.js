@@ -123,9 +123,25 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!gameName) gameName = 'Partido desconocido';
       const main = document.querySelector('.hero-content') || document.body;
       main.innerHTML = `
-        <div style="width:100%;text-align:center;padding:40px 0;font-size:1.5em;color:#B62929;">
-          <div style="font-size:2em;color:#222;margin-bottom:0.5em;"></div>
-          Los datos de este partido aún no están disponibles.
+        <div style="
+          max-width: 500px;
+          margin: 60px auto 0 auto;
+          background: #fff3e6;
+          border: 2px solid #FF9E1B;
+          border-radius: 16px;
+          box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+          padding: 40px 30px 32px 30px;
+          text-align: center;
+        ">
+          <div style="font-size:3em; color:#FF9E1B; margin-bottom:0.2em;">
+            <span style="vertical-align:middle;">&#9888;</span>
+          </div>
+          <div style="font-size:1.3em; color:#B62929; font-weight:600;">
+            Los datos de este partido aún no están disponibles.
+          </div>
+          <div style="font-size:1em; color:#666; margin-top:1em;">
+            Por favor, vuelve más tarde.
+          </div>
         </div>
       `;
       console.error("Error al cargar JSON partido:", err);
