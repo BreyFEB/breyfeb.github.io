@@ -311,7 +311,7 @@ function createMatchCard(match) {
   moreBtn.className = "btn-more";
   moreBtn.textContent = "Más";
   moreBtn.addEventListener("click", () => {
-    window.location.href = `ficha.html?gameId={$match.game_id}`;
+    window.location.href = `ficha.html?gameId=${match.game_id}`;
   });
 
   footerDiv.appendChild(statusDiv);
