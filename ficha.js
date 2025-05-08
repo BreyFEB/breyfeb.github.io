@@ -51,9 +51,35 @@ document.addEventListener("DOMContentLoaded", () => {
       matchDatetimeEl.textContent = header.starttime || '01-01-2025 - 20:00';
 
       // Actualizar el video si existe videoUrl en el JSON (opcional)
-      if (header.videoUrl) {
-        const videoIframe = document.querySelector('.hero-video iframe');
+      const videoIframe = document.querySelector('.hero-video iframe');
+      if (header.videoUrl && videoIframe) {
         videoIframe.src = header.videoUrl;
+        videoIframe.style.display = '';
+      } else if (videoIframe) {
+        videoIframe.style.display = 'none';
+        const heroVideoDiv = document.querySelector('.hero-video');
+        if (heroVideoDiv) {
+          heroVideoDiv.innerHTML = `
+            <div style="
+              width: 100%;
+              height: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background: #fff3e6;
+              border: 2px solid #FF9E1B;
+              border-radius: 12px;
+              color: #B62929;
+              font-size: 1.3em;
+              font-weight: 600;
+              text-align: center;
+              min-height: 170px;
+            ">
+              <span style="font-size:2em;color:#FF9E1B;margin-right:0.5em;vertical-align:middle;">&#128249;</span>
+              Video no disponible para este partido
+            </div>
+          `;
+        }
       }
 
       // Actualizar hero phase
@@ -74,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
       herophaseDiv.textContent =  `${fase} • ${competicion} • ${pabellon}`;
 
       // Meter resumen de ChatGPT
-      fetch("https://raw.githubusercontent.com/emebullon/cadete2025/main/JSONs%20fichas/FullMatch_2469167_2025-05-03T13_cronica_chatgpt.html")
+      fetch(`https://raw.githubusercontent.com/emebullon/cadete2025/main/JSONs%20fichas/FullMatch_${gameId}_cronica_chatgpt.html`)
         .then(res => res.text())
         .then(html => {
           const target = document.querySelector(".cronicatext");
