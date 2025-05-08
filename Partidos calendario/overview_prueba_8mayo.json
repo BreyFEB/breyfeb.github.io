@@ -917,8 +917,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951781&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952226&ti=1",
                         "Quarter": 4,
-                        "Time": "00:40:00",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -952,32 +952,53 @@
                         "Competition": "L.F.-2",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2469981,
                         "GameCode": null,
                         "Place": "Pabellón Municipal Sara Gómez (Fontecarmoa 1)",
                         "TeamAID": 951322,
                         "TeamA": "ROMAKURUMA U.E.MATARÓ",
-                        "ScoreA": 0,
+                        "ScoreA": 47,
                         "TeamACode": "08002705",
                         "TeamAClubCode": "080027",
                         "TeamBID": 950941,
                         "TeamB": "DOC GARDENSTORE BALONCESTO SEVILLA FEMENINO",
                         "TeamBCode": "41031801",
                         "TeamBClubCode": "410318",
-                        "ScoreB": 0,
+                        "ScoreB": 54,
                         "StartTime": "2025-05-08T13:30:00",
                         "StartTimeUTC": "2025-05-08T11:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951322&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950941&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 4,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "9",
+                                "scoreB": "7"
+                            },
+                            {
+                                "n": "2",
+                                "scoreA": "12",
+                                "scoreB": "18"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "14",
+                                "scoreB": "10"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "12",
+                                "scoreB": "19"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -987,7 +1008,7 @@
                         "Competition": "L.F.-2",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2469974,
                         "GameCode": null,
                         "Place": "Pabellón Municipal Sara Gómez (Fontecarmoa 1)",
@@ -1007,12 +1028,18 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951843&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951480&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:00:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
