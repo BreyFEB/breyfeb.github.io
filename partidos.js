@@ -162,7 +162,8 @@ function parseMatchesData(json, targetCompetitionName = "PRIMERA FEB") {
               venue: game.field || "",
               venueAddress: game.place || "",
               venuePlace: game.Place || "",
-              gender: gender
+              gender: gender,
+              game_id: game.ID
             });
           });
         }
@@ -310,7 +311,7 @@ function createMatchCard(match) {
   moreBtn.className = "btn-more";
   moreBtn.textContent = "Más";
   moreBtn.addEventListener("click", () => {
-    window.location.href = "ficha.html";
+    window.location.href = `ficha.html?gameId={$match.game_id}`;
   });
 
   footerDiv.appendChild(statusDiv);
