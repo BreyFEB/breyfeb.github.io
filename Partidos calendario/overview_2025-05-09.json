@@ -852,7 +852,7 @@
                 "id": "218",
                 "name": "L.F.-2",
                 "gamescount": 8,
-                "nowplaying": 0,
+                "nowplaying": 1,
                 "order": 5,
                 "GAMES": [
                     {
@@ -979,26 +979,42 @@
                         "Place": "Pabellón Municipal Sara Gómez (Fontecarmoa 1)",
                         "TeamAID": 951843,
                         "TeamA": "BOSONIT UNIBASKET",
-                        "ScoreA": 0,
+                        "ScoreA": 38,
                         "TeamACode": "26027100",
                         "TeamAClubCode": "260271",
                         "TeamBID": 952189,
                         "TeamB": "HIERROS DÍAZ EXTREMADURA MIRALVALLE",
                         "TeamBCode": "10008520",
                         "TeamBClubCode": "100085",
-                        "ScoreB": 0,
+                        "ScoreB": 35,
                         "StartTime": "2025-05-09T17:00:00",
                         "StartTimeUTC": "2025-05-09T15:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951843&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952189&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 3,
+                        "Time": "00:22:36",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "20",
+                                "scoreB": "17"
+                            },
+                            {
+                                "n": "2",
+                                "scoreA": "18",
+                                "scoreB": "14"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "0",
+                                "scoreB": "4"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
