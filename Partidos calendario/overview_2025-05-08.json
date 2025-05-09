@@ -10,7 +10,7 @@
             {
                 "id": "210",
                 "name": "Liga Femenina Endesa",
-                "gamescount": 3,
+                "gamescount": 2,
                 "nowplaying": 0,
                 "order": 2,
                 "GAMES": [
@@ -20,32 +20,53 @@
                         "Competition": "LF ENDESA",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2470038,
                         "GameCode": null,
                         "Place": "PABELLÓN MUNICIPAL FUENTE SAN LUIS",
                         "TeamAID": 951082,
                         "TeamA": "VALENCIA B.C.",
-                        "ScoreA": 0,
+                        "ScoreA": 75,
                         "TeamACode": "46000221",
                         "TeamAClubCode": "460002",
                         "TeamBID": 950928,
                         "TeamB": "CASADEMONT ZARAGOZA",
                         "TeamBCode": "50031306",
                         "TeamBClubCode": "500313",
-                        "ScoreB": 0,
+                        "ScoreB": 65,
                         "StartTime": "2025-05-08T20:45:00",
                         "StartTimeUTC": "2025-05-08T18:45:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951082&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950928&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 4,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "21",
+                                "scoreB": "12"
+                            },
+                            {
+                                "n": "2",
+                                "scoreA": "16",
+                                "scoreB": "12"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "17",
+                                "scoreB": "21"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "21",
+                                "scoreB": "20"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     }
@@ -55,7 +76,7 @@
                 "id": "218",
                 "name": "L.F.-2",
                 "gamescount": 12,
-                "nowplaying": 1,
+                "nowplaying": 0,
                 "order": 5,
                 "GAMES": [
                     {
@@ -182,30 +203,45 @@
                         "Place": "Pabellón Municipal Sara Gómez (Fontecarmoa 1)",
                         "TeamAID": 951843,
                         "TeamA": "BOSONIT UNIBASKET",
-                        "ScoreA": 0,
+                        "ScoreA": 65,
                         "TeamACode": "26027100",
                         "TeamAClubCode": "260271",
                         "TeamBID": 951480,
                         "TeamB": "ESCO GRUPO FEMENINO ALCORCON",
                         "TeamBCode": "28026901",
                         "TeamBClubCode": "280269",
-                        "ScoreB": 0,
+                        "ScoreB": 57,
                         "StartTime": "2025-05-08T17:00:00",
                         "StartTimeUTC": "2025-05-08T15:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951843&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951480&ti=1",
-                        "Quarter": 1,
-                        "Time": "00:00:00",
-                        "Status": 2,
+                        "Quarter": 4,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
                             {
                                 "n": "1",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "15",
+                                "scoreB": "12"
+                            },
+                            {
+                                "n": "2",
+                                "scoreA": "12",
+                                "scoreB": "18"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "13",
+                                "scoreB": "19"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "25",
+                                "scoreB": "8"
                             }
                         ],
                         "Season": null,
@@ -217,32 +253,58 @@
                         "Competition": "L.F.-2",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2469975,
                         "GameCode": null,
                         "Place": "Pabellón Municipal Sara Gómez (Fontecarmoa 1)",
                         "TeamAID": 951080,
                         "TeamA": "MARISCOS ANTÓN CORTEGADA",
-                        "ScoreA": 0,
+                        "ScoreA": 55,
                         "TeamACode": "36010300",
                         "TeamAClubCode": "360103",
                         "TeamBID": 952189,
                         "TeamB": "HIERROS DÍAZ EXTREMADURA MIRALVALLE",
                         "TeamBCode": "10008520",
                         "TeamBClubCode": "100085",
-                        "ScoreB": 0,
+                        "ScoreB": 60,
                         "StartTime": "2025-05-08T19:30:00",
                         "StartTimeUTC": "2025-05-08T17:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951080&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952189&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 5,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "12",
+                                "scoreB": "15"
+                            },
+                            {
+                                "n": "2",
+                                "scoreA": "9",
+                                "scoreB": "12"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "16",
+                                "scoreB": "14"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "15",
+                                "scoreB": "11"
+                            },
+                            {
+                                "n": "5",
+                                "scoreA": "3",
+                                "scoreB": "8"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     }
