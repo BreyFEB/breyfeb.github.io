@@ -11,7 +11,7 @@
                 "id": "115",
                 "name": "Primera FEB",
                 "gamescount": 9,
-                "nowplaying": 9,
+                "nowplaying": 4,
                 "order": 1,
                 "GAMES": [
                     {
@@ -26,22 +26,22 @@
                         "Place": "AMENABAR ARENA",
                         "TeamAID": 950759,
                         "TeamA": "INVEREADY GIPUZKOA",
-                        "ScoreA": 49,
+                        "ScoreA": 87,
                         "TeamACode": "20046000",
                         "TeamAClubCode": "200460",
                         "TeamBID": 952321,
                         "TeamB": "AIRCARGOBOOKING OURENSE ",
                         "TeamBCode": "32000100",
                         "TeamBClubCode": "320001",
-                        "ScoreB": 44,
+                        "ScoreB": 78,
                         "StartTime": "2025-05-09T21:00:00",
                         "StartTimeUTC": "2025-05-09T19:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950759&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952321&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:20:00",
+                        "Quarter": 4,
+                        "Time": "00:39:33",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -58,8 +58,13 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "22",
+                                "scoreB": "20"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "16",
+                                "scoreB": "14"
                             }
                         ],
                         "Season": null,
@@ -77,23 +82,23 @@
                         "Place": "PABELLÓN VICENTE TRUEBA",
                         "TeamAID": 950871,
                         "TeamA": "GRUPO ALEGA CANTABRIA",
-                        "ScoreA": 48,
+                        "ScoreA": 84,
                         "TeamACode": "39017700",
                         "TeamAClubCode": "390177",
                         "TeamBID": 951078,
                         "TeamB": "ODILO FC CARTAGENA CB",
                         "TeamBCode": "30018800",
                         "TeamBClubCode": "300188",
-                        "ScoreB": 31,
+                        "ScoreB": 69,
                         "StartTime": "2025-05-09T21:00:00",
                         "StartTimeUTC": "2025-05-09T19:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950871&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951078&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:21:42",
-                        "Status": 2,
+                        "Quarter": 4,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -109,8 +114,13 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "0",
-                                "scoreB": "6"
+                                "scoreA": "13",
+                                "scoreB": "21"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "23",
+                                "scoreB": "23"
                             }
                         ],
                         "Season": null,
@@ -128,22 +138,22 @@
                         "Place": "POLIDEPORTIVO MUNICIPAL EL PLANTIO",
                         "TeamAID": 950726,
                         "TeamA": "GRUPO URETA TIZONA BURGOS",
-                        "ScoreA": 63,
+                        "ScoreA": 100,
                         "TeamACode": "09024901",
                         "TeamAClubCode": "090249",
                         "TeamBID": 952033,
                         "TeamB": "MONBUS OBRADOIRO",
                         "TeamBCode": "15040900",
                         "TeamBClubCode": "150409",
-                        "ScoreB": 40,
+                        "ScoreB": 99,
                         "StartTime": "2025-05-09T21:00:00",
                         "StartTimeUTC": "2025-05-09T19:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950726&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952033&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:20:00",
+                        "Quarter": 4,
+                        "Time": "00:39:53",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -160,8 +170,13 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "16",
+                                "scoreB": "27"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "21",
+                                "scoreB": "32"
                             }
                         ],
                         "Season": null,
@@ -179,22 +194,22 @@
                         "Place": "POLIDEPORTIVO PISUERGA",
                         "TeamAID": 952032,
                         "TeamA": "UEMC REAL VALLADOLID BALONCESTO",
-                        "ScoreA": 31,
+                        "ScoreA": 65,
                         "TeamACode": "47036101",
                         "TeamAClubCode": "470361",
                         "TeamBID": 950650,
                         "TeamB": "HESTIA MENORCA",
                         "TeamBCode": "07033323",
                         "TeamBClubCode": "070333",
-                        "ScoreB": 36,
+                        "ScoreB": 77,
                         "StartTime": "2025-05-09T21:00:00",
                         "StartTimeUTC": "2025-05-09T19:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=952032&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950650&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:20:00",
+                        "Quarter": 4,
+                        "Time": "00:39:42",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -211,8 +226,13 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "19",
+                                "scoreB": "21"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "15",
+                                "scoreB": "20"
                             }
                         ],
                         "Season": null,
@@ -230,23 +250,23 @@
                         "Place": "PABELLÓN MUNICIPAL DE DEPORTES (PALENCIA)",
                         "TeamAID": 951848,
                         "TeamA": "SÚPER AGROPAL PALENCIA",
-                        "ScoreA": 53,
+                        "ScoreA": 87,
                         "TeamACode": "34000707",
                         "TeamAClubCode": "340007",
                         "TeamBID": 950951,
                         "TeamB": "REAL BETIS BALONCESTO",
                         "TeamBCode": "41000600",
                         "TeamBClubCode": "410006",
-                        "ScoreB": 36,
+                        "ScoreB": 68,
                         "StartTime": "2025-05-09T21:00:00",
                         "StartTimeUTC": "2025-05-09T19:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951848&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950951&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:20:00",
-                        "Status": 2,
+                        "Quarter": 4,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -262,8 +282,13 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "17",
+                                "scoreB": "17"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "17",
+                                "scoreB": "15"
                             }
                         ],
                         "Season": null,
@@ -281,22 +306,22 @@
                         "Place": "COLISEUM BURGOS",
                         "TeamAID": 951500,
                         "TeamA": "SILBÖ SAN PABLO BURGOS",
-                        "ScoreA": 54,
+                        "ScoreA": 100,
                         "TeamACode": "09018401",
                         "TeamAClubCode": "090184",
                         "TeamBID": 951466,
                         "TeamB": "MOVISTAR ESTUDIANTES",
                         "TeamBCode": "28000100",
                         "TeamBClubCode": "280001",
-                        "ScoreB": 38,
+                        "ScoreB": 88,
                         "StartTime": "2025-05-09T21:00:00",
                         "StartTimeUTC": "2025-05-09T19:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951500&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951466&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:20:00",
+                        "Quarter": 4,
+                        "Time": "00:39:16",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -313,8 +338,13 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "17",
+                                "scoreB": "26"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "29",
+                                "scoreB": "24"
                             }
                         ],
                         "Season": null,
@@ -332,23 +362,23 @@
                         "Place": "Centre de Tecnificació Esportiva d’Alacant",
                         "TeamAID": 950779,
                         "TeamA": "HLA ALICANTE",
-                        "ScoreA": 48,
+                        "ScoreA": 78,
                         "TeamACode": "03058600",
                         "TeamAClubCode": "030586",
                         "TeamBID": 951360,
                         "TeamB": "AMICS CASTELLÓ",
                         "TeamBCode": "12004900",
                         "TeamBClubCode": "120049",
-                        "ScoreB": 44,
+                        "ScoreB": 82,
                         "StartTime": "2025-05-09T21:00:00",
                         "StartTimeUTC": "2025-05-09T19:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950779&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951360&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:24:00",
-                        "Status": 2,
+                        "Quarter": 4,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -364,8 +394,13 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "5",
-                                "scoreB": "10"
+                                "scoreA": "15",
+                                "scoreB": "26"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "20",
+                                "scoreB": "22"
                             }
                         ],
                         "Season": null,
@@ -383,23 +418,23 @@
                         "Place": "POLIDEPORTIVO MUNICIPAL DE PUMARIN",
                         "TeamAID": 951497,
                         "TeamA": "ALIMERKA OVIEDO BALONCESTO",
-                        "ScoreA": 47,
+                        "ScoreA": 72,
                         "TeamACode": "33130200",
                         "TeamAClubCode": "331302",
                         "TeamBID": 950810,
                         "TeamB": "CAJA RURAL CB ZAMORA",
                         "TeamBCode": "49000100",
                         "TeamBClubCode": "490001",
-                        "ScoreB": 31,
+                        "ScoreB": 65,
                         "StartTime": "2025-05-09T21:00:00",
                         "StartTimeUTC": "2025-05-09T19:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951497&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950810&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:20:00",
-                        "Status": 2,
+                        "Quarter": 4,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -415,8 +450,13 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "8",
+                                "scoreB": "19"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "17",
+                                "scoreB": "15"
                             }
                         ],
                         "Season": null,
@@ -434,23 +474,23 @@
                         "Place": "FERNANDO MARTIN, PABELLON",
                         "TeamAID": 951321,
                         "TeamA": "FLEXICAR FUENLABRADA",
-                        "ScoreA": 42,
+                        "ScoreA": 82,
                         "TeamACode": "28332300",
                         "TeamAClubCode": "283323",
                         "TeamBID": 952158,
                         "TeamB": "C.B. NATURAVIA MORÓN",
                         "TeamBCode": "41011241",
                         "TeamBClubCode": "410112",
-                        "ScoreB": 37,
+                        "ScoreB": 65,
                         "StartTime": "2025-05-09T21:00:00",
                         "StartTimeUTC": "2025-05-09T19:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951321&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952158&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:22:23",
-                        "Status": 2,
+                        "Quarter": 4,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -466,8 +506,13 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "12",
-                                "scoreB": "0"
+                                "scoreA": "30",
+                                "scoreB": "11"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "22",
+                                "scoreB": "17"
                             }
                         ],
                         "Season": null,
@@ -558,7 +603,7 @@
                 "id": "118",
                 "name": "Segunda FEB",
                 "gamescount": 8,
-                "nowplaying": 1,
+                "nowplaying": 0,
                 "order": 3,
                 "GAMES": [
                     {
@@ -573,14 +618,14 @@
                         "Place": "PALACIO MUNICIPAL DE LOS DEPORTES",
                         "TeamAID": 950923,
                         "TeamA": "LOBE HUESCA LA MAGIA",
-                        "ScoreA": 65,
+                        "ScoreA": 77,
                         "TeamACode": "22000100",
                         "TeamAClubCode": "220001",
                         "TeamBID": 951845,
                         "TeamB": "CACERES PATRIMONIO DE LA HUMANIDAD",
                         "TeamBCode": "10030910",
                         "TeamBClubCode": "100309",
-                        "ScoreB": 57,
+                        "ScoreB": 70,
                         "StartTime": "2025-05-09T20:30:00",
                         "StartTimeUTC": "2025-05-09T18:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -588,8 +633,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950923&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951845&ti=1",
                         "Quarter": 4,
-                        "Time": "00:32:10",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -610,8 +655,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "5",
-                                "scoreB": "3"
+                                "scoreA": "17",
+                                "scoreB": "16"
                             }
                         ],
                         "Season": null,
