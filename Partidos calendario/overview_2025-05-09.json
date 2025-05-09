@@ -11,7 +11,7 @@
                 "id": "115",
                 "name": "Primera FEB",
                 "gamescount": 9,
-                "nowplaying": 0,
+                "nowplaying": 7,
                 "order": 1,
                 "GAMES": [
                     {
@@ -20,7 +20,7 @@
                         "Competition": "PRIMERA FEB",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "34",
+                        "Stage": "0",
                         "ID": 2412122,
                         "GameCode": null,
                         "Place": "AMENABAR ARENA",
@@ -40,12 +40,18 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950759&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952321&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:00:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -55,7 +61,7 @@
                         "Competition": "PRIMERA FEB",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "34",
+                        "Stage": "0",
                         "ID": 2412126,
                         "GameCode": null,
                         "Place": "PABELLÓN VICENTE TRUEBA",
@@ -75,12 +81,18 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950871&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951078&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:00:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -90,7 +102,7 @@
                         "Competition": "PRIMERA FEB",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "34",
+                        "Stage": "0",
                         "ID": 2412121,
                         "GameCode": null,
                         "Place": "POLIDEPORTIVO MUNICIPAL EL PLANTIO",
@@ -110,12 +122,18 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950726&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952033&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:00:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -125,7 +143,7 @@
                         "Competition": "PRIMERA FEB",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "34",
+                        "Stage": "0",
                         "ID": 2412127,
                         "GameCode": null,
                         "Place": "POLIDEPORTIVO PISUERGA",
@@ -145,12 +163,18 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=952032&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950650&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:00:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -160,7 +184,7 @@
                         "Competition": "PRIMERA FEB",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "34",
+                        "Stage": "0",
                         "ID": 2412125,
                         "GameCode": null,
                         "Place": "PABELLÓN MUNICIPAL DE DEPORTES (PALENCIA)",
@@ -180,12 +204,18 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951848&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950951&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:00:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -195,7 +225,7 @@
                         "Competition": "PRIMERA FEB",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "34",
+                        "Stage": "0",
                         "ID": 2412120,
                         "GameCode": null,
                         "Place": "COLISEUM BURGOS",
@@ -215,12 +245,18 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951500&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951466&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:00:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -230,7 +266,7 @@
                         "Competition": "PRIMERA FEB",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "34",
+                        "Stage": "0",
                         "ID": 2412119,
                         "GameCode": null,
                         "Place": "Centre de Tecnificació Esportiva d’Alacant",
@@ -265,7 +301,7 @@
                         "Competition": "PRIMERA FEB",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "34",
+                        "Stage": "0",
                         "ID": 2412124,
                         "GameCode": null,
                         "Place": "POLIDEPORTIVO MUNICIPAL DE PUMARIN",
@@ -285,12 +321,18 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951497&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950810&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:00:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -300,7 +342,7 @@
                         "Competition": "PRIMERA FEB",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "34",
+                        "Stage": "0",
                         "ID": 2412123,
                         "GameCode": null,
                         "Place": "FERNANDO MARTIN, PABELLON",
@@ -414,7 +456,7 @@
                 "id": "118",
                 "name": "Segunda FEB",
                 "gamescount": 8,
-                "nowplaying": 0,
+                "nowplaying": 1,
                 "order": 3,
                 "GAMES": [
                     {
@@ -429,26 +471,37 @@
                         "Place": "PALACIO MUNICIPAL DE LOS DEPORTES",
                         "TeamAID": 950923,
                         "TeamA": "LOBE HUESCA LA MAGIA",
-                        "ScoreA": 0,
+                        "ScoreA": 43,
                         "TeamACode": "22000100",
                         "TeamAClubCode": "220001",
                         "TeamBID": 951845,
                         "TeamB": "CACERES PATRIMONIO DE LA HUMANIDAD",
                         "TeamBCode": "10030910",
                         "TeamBClubCode": "100309",
-                        "ScoreB": 0,
+                        "ScoreB": 33,
                         "StartTime": "2025-05-09T20:30:00",
                         "StartTimeUTC": "2025-05-09T18:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950923&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951845&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 2,
+                        "Time": "00:14:28",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "24",
+                                "scoreB": "16"
+                            },
+                            {
+                                "n": "2",
+                                "scoreA": "19",
+                                "scoreB": "17"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -1035,22 +1088,22 @@
                         "Place": "Pabellón Municipal Sara Gómez (Fontecarmoa 1)",
                         "TeamAID": 951480,
                         "TeamA": "ESCO GRUPO FEMENINO ALCORCON",
-                        "ScoreA": 22,
+                        "ScoreA": 52,
                         "TeamACode": "28026901",
                         "TeamAClubCode": "280269",
                         "TeamBID": 951080,
                         "TeamB": "MARISCOS ANTÓN CORTEGADA",
                         "TeamBCode": "36010300",
                         "TeamBClubCode": "360103",
-                        "ScoreB": 15,
+                        "ScoreB": 53,
                         "StartTime": "2025-05-09T19:30:00",
                         "StartTimeUTC": "2025-05-09T17:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951480&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951080&ti=1",
-                        "Quarter": 2,
-                        "Time": "00:14:18",
+                        "Quarter": 4,
+                        "Time": "00:37:35",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -1062,8 +1115,18 @@
                             },
                             {
                                 "n": "2",
-                                "scoreA": "4",
-                                "scoreB": "4"
+                                "scoreA": "10",
+                                "scoreB": "10"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "14",
+                                "scoreB": "17"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "10",
+                                "scoreB": "15"
                             }
                         ],
                         "Season": null,
