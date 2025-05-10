@@ -1217,22 +1217,22 @@
                         "Place": "Pabellón Municipal Sara Gómez (Fontecarmoa 1)",
                         "TeamAID": 951322,
                         "TeamA": "ROMAKURUMA U.E.MATARÓ",
-                        "ScoreA": 32,
+                        "ScoreA": 53,
                         "TeamACode": "08002705",
                         "TeamAClubCode": "080027",
                         "TeamBID": 951781,
                         "TeamB": "MARISTAS CORUÑA",
                         "TeamBCode": "15005555",
                         "TeamBClubCode": "150055",
-                        "ScoreB": 24,
+                        "ScoreB": 58,
                         "StartTime": "2025-05-10T11:00:00",
                         "StartTimeUTC": "2025-05-10T09:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951322&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951781&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:20:00",
+                        "Quarter": 4,
+                        "Time": "00:39:47",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -1249,8 +1249,13 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "11",
+                                "scoreB": "20"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "10",
+                                "scoreB": "14"
                             }
                         ],
                         "Season": null,
