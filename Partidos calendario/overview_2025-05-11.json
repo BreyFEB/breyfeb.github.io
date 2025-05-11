@@ -729,7 +729,7 @@
                         "Competition": "LF ENDESA",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "2",
+                        "Stage": "0",
                         "ID": 2470039,
                         "GameCode": null,
                         "Place": "PABELLÓN PRINCIPE FELIPE",
@@ -814,22 +814,22 @@
                         "Place": "PALACIO MUNICIPAL DE DEPORTES DE LEÓN",
                         "TeamAID": 950809,
                         "TeamA": "CULTURAL Y DEPORTIVA LEONESA",
-                        "ScoreA": 15,
+                        "ScoreA": 47,
                         "TeamACode": "24031000",
                         "TeamAClubCode": "240310",
                         "TeamBID": 950682,
                         "TeamB": "FIBWI PALMA",
                         "TeamBCode": "07003425",
                         "TeamBClubCode": "070034",
-                        "ScoreB": 20,
+                        "ScoreB": 62,
                         "StartTime": "2025-05-11T19:30:00",
                         "StartTimeUTC": "2025-05-11T17:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950809&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950682&ti=1",
-                        "Quarter": 2,
-                        "Time": "00:13:10",
+                        "Quarter": 4,
+                        "Time": "00:31:44",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -841,8 +841,18 @@
                             },
                             {
                                 "n": "2",
-                                "scoreA": "4",
-                                "scoreB": "5"
+                                "scoreA": "13",
+                                "scoreB": "20"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "17",
+                                "scoreB": "19"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "6",
+                                "scoreB": "8"
                             }
                         ],
                         "Season": null,
@@ -1144,22 +1154,22 @@
                         "Place": "PAB. MCPAL SARA GÓMEZ",
                         "TeamAID": 951781,
                         "TeamA": "MARISTAS CORUÑA",
-                        "ScoreA": 13,
+                        "ScoreA": 46,
                         "TeamACode": "15005555",
                         "TeamAClubCode": "150055",
                         "TeamBID": 951843,
                         "TeamB": "BOSONIT UNIBASKET",
                         "TeamBCode": "26027100",
                         "TeamBClubCode": "260271",
-                        "ScoreB": 21,
+                        "ScoreB": 55,
                         "StartTime": "2025-05-11T19:30:00",
                         "StartTimeUTC": "2025-05-11T17:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951781&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951843&ti=1",
-                        "Quarter": 2,
-                        "Time": "00:13:17",
+                        "Quarter": 4,
+                        "Time": "00:35:33",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -1171,8 +1181,18 @@
                             },
                             {
                                 "n": "2",
-                                "scoreA": "0",
-                                "scoreB": "5"
+                                "scoreA": "13",
+                                "scoreB": "14"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "17",
+                                "scoreB": "15"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "3",
+                                "scoreB": "10"
                             }
                         ],
                         "Season": null,
@@ -1184,7 +1204,7 @@
                 "id": "111",
                 "name": "Tercera FEB",
                 "gamescount": 1,
-                "nowplaying": 1,
+                "nowplaying": 0,
                 "order": 6,
                 "GAMES": [
                     {
@@ -1214,8 +1234,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951750&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950949&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:59",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
