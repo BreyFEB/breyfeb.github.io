@@ -1062,7 +1062,7 @@
                 "id": "218",
                 "name": "L.F.-2",
                 "gamescount": 2,
-                "nowplaying": 0,
+                "nowplaying": 1,
                 "order": 5,
                 "GAMES": [
                     {
@@ -1071,7 +1071,7 @@
                         "Competition": "L.F.-2",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2470268,
                         "GameCode": null,
                         "Place": "PAB. MCPAL SARA GÓMEZ",
@@ -1091,12 +1091,18 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950941&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952189&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:00:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
