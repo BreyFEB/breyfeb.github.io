@@ -26,9 +26,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Actualizar logos, nombres y marcador en el Hero (si se usa el bloque estático del nuevo hero)
       document.querySelector('.team-box:first-child .team-logo').src = tA.logo;
-      document.querySelector('.team-box:first-child .team-name').textContent = tA.name;
+      // Use a short name for the team, only the first letter for the first 3 words
+      const shortNameA = tA.name.split(' ').slice(0, 3).map(word => word[0]).join('');
+      document.querySelector('.team-box:first-child .team-name').textContent = shortNameA;
+      document.querySelector('.team-box:first-child .team-name').title = tA.name;
       document.querySelector('.team-box:last-child .team-logo').src = tB.logo;
-      document.querySelector('.team-box:last-child .team-name').textContent = tB.name;
+      const shortNameB = tB.name.split(' ').slice(0, 3).map(word => word[0]).join('');
+      document.querySelector('.team-box:last-child .team-name').textContent = shortNameB;
+      document.querySelector('.team-box:last-child .team-name').title = tB.name;
 
       // Actualizar el marcador
       const scoreValueEl = document.querySelector('.score-value');
