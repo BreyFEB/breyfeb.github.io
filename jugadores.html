@@ -113,6 +113,15 @@
 
   <!-- CONTENEDOR PRINCIPAL -->
   <div class="container">
+    <!-- LOADER -->
+    <div class="loader-container">
+      <div class="loader-spinner"></div>
+      <div class="loader-text">Cargando estadísticas...</div>
+      <div class="progress-bar">
+        <div class="progress-bar-fill"></div>
+      </div>
+    </div>
+
     <!-- BARRA DE COMPETICIONES -->
     <div class="competitions-bar" id="competitionsBar">
       <!-- Se generará con JS -->
@@ -167,11 +176,10 @@
       </div>
       <div class="filter-section">
         <h4>🏟️ Equipo</h4>
-        <input type="text" id="teamSearch" class="team-search" placeholder="Buscar equipo...">
-        <select id="teamFilter" class="team-filter">
-          <option value="">Todos</option>
-          <!-- Opciones se rellenarán con JS -->
-        </select>
+        <div class="team-filter-container">
+          <input type="text" id="teamFilter" class="team-filter" placeholder="Buscar o seleccionar equipo..." autocomplete="off">
+          <div id="teamFilterDropdown" class="team-filter-dropdown"></div>
+        </div>
       </div>
       <div class="filter-section">
         <h4>📊 Estadísticas</h4>

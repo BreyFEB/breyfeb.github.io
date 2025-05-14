@@ -17,6 +17,11 @@ const jugadores = [
   { id: 15, nombre: "Marta Moreno", equipo: "Estudiantes", genero: "femenino", competicion: "Liga Cadete Femenina", foto: "https://randomuser.me/api/portraits/women/15.jpg", estadisticas: { puntos: 15.7, rebotes: 8.1, asistencias: 3.6 } }
 ];
 
+// Conjuntos para almacenar valores únicos
+const competitionSet = new Set();
+const teamSet = new Set();
+const roundSet = new Set();
+
 // Estado global de la aplicación
 const state = {
   filtros: {
@@ -32,7 +37,8 @@ const state = {
   busqueda: "",
   jugadoresFiltrados: [],
   paginaActual: 1,
-  jugadoresPorPagina: 50
+  jugadoresPorPagina: 50,
+  allPlayersStats: [] // Nuevo: almacenará todos los datos de jugadores
 };
 
 // Elementos del DOM
@@ -48,14 +54,20 @@ const elementos = {
   generoFiltros: document.getElementById('genderFilters'),
   competicionFiltros: document.getElementById('competitionFilters'),
   equipoFiltro: document.getElementById('teamFilter'),
-  equipoBusqueda: document.getElementById('teamSearch')
+  equipoBusqueda: document.getElementById('teamSearch'),
+  teamFilter: document.getElementById('teamFilter'),
+  teamFilterDropdown: document.getElementById('teamFilterDropdown')
 };
 
 // Inicialización
-function init() {
-  cargarJugadores();
-  setupEventListeners();
-  actualizarVista();
+async function init() {
+  try {
+    await loadAllStats();
+    setupEventListeners();
+  } catch (error) {
+    console.error('Error loading statistics:', error);
+    document.querySelector('.loader-text').textContent = 'Error al cargar los datos. Por favor, recarga la página.';
+  }
 }
 
 // Cargar jugadores (simulado con datos de ejemplo)
@@ -93,10 +105,97 @@ function setupEventListeners() {
     }
   });
 
-  // Búsqueda de equipo
+  // Búsqueda de equipo con debounce
+  let searchTimeout;
   elementos.equipoBusqueda.addEventListener('input', (e) => {
-    const busqueda = e.target.value.toLowerCase();
-    filtrarEquipos(busqueda);
+    clearTimeout(searchTimeout);
+    const busqueda = e.target.value.trim();
+    
+    // Actualizar inmediatamente si la búsqueda está vacía
+    if (!busqueda) {
+      actualizarFiltrosEquipo();
+      return;
+    }
+
+    // Esperar 300ms después de que el usuario deje de escribir
+    searchTimeout = setTimeout(() => {
+      filtrarEquipos(busqueda);
+    }, 300);
+  });
+
+  // Limpiar la búsqueda cuando se cierra el panel de filtros
+  elementos.btnCerrarFiltros.addEventListener('click', () => {
+    elementos.equipoBusqueda.value = '';
+    actualizarFiltrosEquipo();
+    elementos.filtrosOverlay.classList.remove('open');
+  });
+
+  // Filtro de equipo
+  const teamFilter = elementos.teamFilter;
+  const teamFilterDropdown = document.getElementById('teamFilterDropdown');
+
+  console.log('Inicializando filtro de equipo:', {
+    teamFilter,
+    teamFilterDropdown,
+    state: state.filtros
+  });
+
+  // Mostrar dropdown al hacer focus o click
+  teamFilter.addEventListener('focus', () => {
+    console.log('Focus en el filtro de equipo');
+    teamFilterDropdown.classList.add('show');
+    filtrarEquipos(teamFilter.value);
+  });
+
+  teamFilter.addEventListener('click', (e) => {
+    console.log('Click en el filtro de equipo');
+    e.stopPropagation();
+    teamFilterDropdown.classList.add('show');
+    filtrarEquipos(teamFilter.value);
+  });
+
+  // Ocultar dropdown al hacer click fuera
+  document.addEventListener('click', (e) => {
+    if (!teamFilter.contains(e.target) && !teamFilterDropdown.contains(e.target)) {
+      console.log('Click fuera del filtro de equipo');
+      teamFilterDropdown.classList.remove('show');
+    }
+  });
+
+  // Filtrar equipos mientras se escribe
+  teamFilter.addEventListener('input', (e) => {
+    console.log('Input en el filtro de equipo:', e.target.value);
+    clearTimeout(searchTimeout);
+    const busqueda = e.target.value.trim();
+    
+    searchTimeout = setTimeout(() => {
+      filtrarEquipos(busqueda);
+    }, 300);
+  });
+
+  // Manejar la selección de equipo
+  teamFilterDropdown.addEventListener('click', (e) => {
+    const option = e.target.closest('.team-filter-option');
+    console.log('Click en opción de equipo:', option);
+    
+    if (option && !option.classList.contains('no-results')) {
+      const equipo = option.dataset.equipo;
+      console.log('Equipo seleccionado:', equipo);
+      state.filtros.equipo = equipo;
+      teamFilter.value = equipo;
+      teamFilterDropdown.classList.remove('show');
+      actualizarFiltrosActivos();
+      actualizarVista();
+    }
+  });
+
+  // Limpiar el filtro de equipo cuando se cierra el panel
+  elementos.btnCerrarFiltros.addEventListener('click', () => {
+    console.log('Limpiando filtro de equipo');
+    teamFilter.value = '';
+    state.filtros.equipo = '';
+    teamFilterDropdown.classList.remove('show');
+    elementos.filtrosOverlay.classList.remove('open');
   });
 }
 
@@ -155,7 +254,22 @@ function renderizarPaginacion() {
 
 // Filtrar jugadores según los criterios actuales
 function filtrarJugadores() {
-  return jugadores.filter(jugador => {
+  // Obtener los valores de los filtros de estadísticas
+  const stats = state.filtros.estadisticas;
+  const puntosMin = stats.puntos.min ? parseFloat(stats.puntos.min) : null;
+  const puntosMax = stats.puntos.max ? parseFloat(stats.puntos.max) : null;
+  const rebotesMin = stats.rebotes.min ? parseFloat(stats.rebotes.min) : null;
+  const rebotesMax = stats.rebotes.max ? parseFloat(stats.rebotes.max) : null;
+  const asistenciasMin = stats.asistencias.min ? parseFloat(stats.asistencias.min) : null;
+  const asistenciasMax = stats.asistencias.max ? parseFloat(stats.asistencias.max) : null;
+
+  console.log('Filtros aplicados:', {
+    puntos: { min: puntosMin, max: puntosMax },
+    rebotes: { min: rebotesMin, max: rebotesMax },
+    asistencias: { min: asistenciasMin, max: asistenciasMax }
+  });
+
+  return state.allPlayersStats.filter(jugador => {
     // Filtro de búsqueda
     if (state.busqueda && !jugador.nombre.toLowerCase().includes(state.busqueda)) {
       return false;
@@ -176,46 +290,74 @@ function filtrarJugadores() {
       return false;
     }
 
-    // Filtros de estadísticas
-    const stats = state.filtros.estadisticas;
-    if (stats.puntos.min && jugador.estadisticas.puntos < stats.puntos.min) return false;
-    if (stats.puntos.max && jugador.estadisticas.puntos > stats.puntos.max) return false;
-    if (stats.rebotes.min && jugador.estadisticas.rebotes < stats.rebotes.min) return false;
-    if (stats.rebotes.max && jugador.estadisticas.rebotes > stats.rebotes.max) return false;
-    if (stats.asistencias.min && jugador.estadisticas.asistencias < stats.asistencias.min) return false;
-    if (stats.asistencias.max && jugador.estadisticas.asistencias > stats.asistencias.max) return false;
+    // Filtros de estadísticas (usando promedios)
+    const puntos = parseFloat(jugador.estadisticas.puntos);
+    const rebotes = parseFloat(jugador.estadisticas.rebotes);
+    const asistencias = parseFloat(jugador.estadisticas.asistencias);
+
+    console.log('Estadísticas del jugador:', jugador.nombre, {
+      puntos,
+      rebotes,
+      asistencias
+    });
+
+    if (puntosMin !== null && puntos < puntosMin) return false;
+    if (puntosMax !== null && puntos > puntosMax) return false;
+    if (rebotesMin !== null && rebotes < rebotesMin) return false;
+    if (rebotesMax !== null && rebotes > rebotesMax) return false;
+    if (asistenciasMin !== null && asistencias < asistenciasMin) return false;
+    if (asistenciasMax !== null && asistencias > asistenciasMax) return false;
 
     return true;
   });
 }
 
+// Función para truncar nombres largos de equipos
+function truncarNombreEquipo(nombre, maxLength = 15) {
+  if (nombre.length <= maxLength) return nombre;
+  return nombre.substring(0, maxLength) + '...';
+}
+
+// Función para truncar nombres largos de jugadores
+function truncarNombreJugador(nombre, maxLength = 18) {
+  if (nombre.length <= maxLength) return nombre;
+  return nombre.substring(0, maxLength) + '...';
+}
+
 // Renderizar jugadores en el grid
 function renderizarJugadores(jugadores) {
-  elementos.grid.innerHTML = jugadores.map(jugador => `
-    <div class="player-card">
-      <div class="player-header">
-        <img src="${jugador.foto}" alt="${jugador.nombre}" class="player-photo">
-      </div>
-      <div class="player-info">
-        <h3 class="player-name">${jugador.nombre}</h3>
-        <p class="player-team">${jugador.equipo}</p>
-        <div class="player-stats">
-          <div class="stat-item">
-            <div class="stat-value">${jugador.estadisticas.puntos}</div>
-            <div class="stat-label">Puntos</div>
+  elementos.grid.innerHTML = jugadores.map(jugador => {
+    const teamLogo = jugador.team_logo || '';
+    return `
+      <div class="player-card">
+        <div class="player-header">
+          <div class="team-logo-container">
+            <img src="${teamLogo}" alt="Logo ${jugador.equipo}" class="team-logo-img">
           </div>
-          <div class="stat-item">
-            <div class="stat-value">${jugador.estadisticas.rebotes}</div>
-            <div class="stat-label">Rebotes</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-value">${jugador.estadisticas.asistencias}</div>
-            <div class="stat-label">Asistencias</div>
+          <img src="${jugador.foto}" alt="${jugador.nombre}" class="player-photo">
+        </div>
+        <div class="player-info">
+          <h3 class="player-name" title="${jugador.nombre}">${truncarNombreJugador(jugador.nombre)}</h3>
+          <p class="player-team" title="${jugador.equipo}">${truncarNombreEquipo(jugador.equipo)}</p>
+          <p class="player-competition" title="${jugador.competicion}">${jugador.competicion}</p>
+          <div class="player-stats">
+            <div class="stat-item">
+              <div class="stat-value">${jugador.estadisticas.puntos}</div>
+              <div class="stat-label">Puntos</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">${jugador.estadisticas.rebotes}</div>
+              <div class="stat-label">Rebotes</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">${jugador.estadisticas.asistencias}</div>
+              <div class="stat-label">Asistencias</div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  `).join('');
+    `;
+  }).join('');
 }
 
 // Limpiar todos los filtros
@@ -239,6 +381,23 @@ function limpiarFiltros() {
 
 // Aplicar filtros
 function aplicarFiltros() {
+  // Obtener los valores de los inputs de estadísticas
+  const statsInputs = document.querySelectorAll('.stat-filter input');
+  statsInputs.forEach(input => {
+    const statType = input.closest('.stat-filter').querySelector('label').textContent.toLowerCase();
+    const isMin = input.placeholder.toLowerCase() === 'mín';
+    const value = input.value ? parseFloat(input.value) : null;
+    
+    if (value !== null) {
+      state.filtros.estadisticas[statType][isMin ? 'min' : 'max'] = value;
+    } else {
+      state.filtros.estadisticas[statType][isMin ? 'min' : 'max'] = null;
+    }
+  });
+
+  // Asegurarse de que el equipo seleccionado se mantiene
+  state.filtros.equipo = elementos.equipoFiltro.value;
+
   state.paginaActual = 1;
   actualizarVista();
   elementos.filtrosOverlay.classList.remove('open');
@@ -309,18 +468,110 @@ function eliminarFiltro(tipo, valor) {
 }
 
 // Filtrar equipos en el select
-function filtrarEquipos(busqueda) {
-  const equipos = [...new Set(jugadores.map(j => j.equipo))];
+function filtrarEquipos(busqueda = '') {
+  console.log('Filtrando equipos con búsqueda:', busqueda);
+  
+  const equipos = [...new Set(state.allPlayersStats.map(j => j.equipo))].sort();
+  console.log('Lista de equipos disponibles:', equipos);
+  
+  // Convertir la búsqueda a minúsculas para hacer la comparación case-insensitive
+  const busquedaLower = busqueda.toLowerCase();
   const equiposFiltrados = equipos.filter(equipo => 
-    equipo.toLowerCase().includes(busqueda)
+    equipo.toLowerCase().includes(busquedaLower)
   );
+  console.log('Equipos filtrados:', equiposFiltrados);
 
-  elementos.equipoFiltro.innerHTML = `
-    <option value="">Todos</option>
-    ${equiposFiltrados.map(equipo => `
-      <option value="${equipo}">${equipo}</option>
+  const dropdown = document.getElementById('teamFilterDropdown');
+  
+  if (equiposFiltrados.length === 0) {
+    dropdown.innerHTML = `
+      <div class="team-filter-option no-results">No se encontraron equipos</div>
+    `;
+  } else {
+    dropdown.innerHTML = `
+      <div class="team-filter-option ${state.filtros.equipo === '' ? 'selected' : ''}" data-equipo="">Todos</div>
+      ${equiposFiltrados.map(equipo => `
+        <div class="team-filter-option ${equipo === state.filtros.equipo ? 'selected' : ''}" data-equipo="${equipo}">
+          ${equipo}
+        </div>
+      `).join('')}
+    `;
+  }
+}
+
+// Función para cargar estadísticas de jugadores
+async function loadAllStats() {
+  const loaderContainer = document.querySelector('.loader-container');
+  const loaderText = document.querySelector('.loader-text');
+  const progressBar = document.querySelector('.progress-bar-fill');
+
+  try {
+    loaderText.textContent = 'Cargando estadísticas...';
+    progressBar.style.width = '50%';
+
+    // Cargar el archivo de estadísticas precalculadas
+    const response = await fetch('./player_stats.json');
+    if (!response.ok) {
+      throw new Error(`Error al cargar estadísticas: ${response.status}`);
+    }
+
+    state.allPlayersStats = await response.json();
+    console.log('Estadísticas cargadas:', state.allPlayersStats);
+    state.jugadoresFiltrados = [...state.allPlayersStats];
+
+    // Actualizar los filtros de competición y equipo
+    actualizarFiltrosCompeticion();
+    actualizarFiltrosEquipo();
+    
+    // Inicializar el dropdown de equipos con todos los equipos
+    filtrarEquipos('');
+
+    // Actualizar el progreso
+    progressBar.style.width = '100%';
+    loaderText.textContent = 'Estadísticas cargadas';
+
+    // Ocultar el loader después de un breve delay
+    setTimeout(() => {
+      loaderContainer.style.display = 'none';
+      actualizarVista();
+    }, 500);
+
+  } catch (error) {
+    console.error('Error al cargar estadísticas:', error);
+    loaderText.textContent = 'Error al cargar los datos. Por favor, recarga la página.';
+    // Si falla la carga del archivo precalculado, usar datos de ejemplo
+    state.allPlayersStats = jugadores;
+    state.jugadoresFiltrados = [...jugadores];
+    loaderContainer.style.display = 'none';
+    actualizarVista();
+  }
+}
+
+// Función para actualizar los filtros de competición
+function actualizarFiltrosCompeticion() {
+  const competiciones = [...new Set(state.allPlayersStats.map(j => j.competicion))].sort();
+  elementos.competicionFiltros.innerHTML = `
+    <button class="competition-btn active" data-competition="todas">Todas</button>
+    ${competiciones.map(comp => `
+      <button class="competition-btn" data-competition="${comp}">${comp}</button>
     `).join('')}
   `;
+
+  // Añadir event listeners a los botones de competición
+  elementos.competicionFiltros.querySelectorAll('.competition-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const competicion = e.target.dataset.competition;
+      state.filtros.competicion = competicion;
+      actualizarFiltrosActivos();
+      actualizarVista();
+    });
+  });
+}
+
+// Función para actualizar los filtros de equipo
+function actualizarFiltrosEquipo() {
+  const teamFilter = elementos.teamFilter;
+  teamFilter.value = state.filtros.equipo || '';
 }
 
 // Iniciar la aplicación
