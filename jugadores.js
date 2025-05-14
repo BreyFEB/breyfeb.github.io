@@ -66,7 +66,7 @@ async function init() {
     setupEventListeners();
   } catch (error) {
     console.error('Error loading statistics:', error);
-    document.querySelector('.loader-text').textContent = 'Error al cargar los datos. Por favor, recarga la página.';
+    document.querySelector('.loader-text').textContent = 'Cargando...';
   }
 }
 
