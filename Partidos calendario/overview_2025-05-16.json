@@ -11,7 +11,7 @@
                 "id": "115",
                 "name": "Primera FEB",
                 "gamescount": 20,
-                "nowplaying": 0,
+                "nowplaying": 2,
                 "order": 1,
                 "GAMES": [
                     {
@@ -26,26 +26,37 @@
                         "Place": "MOVISTAR ARENA",
                         "TeamAID": 951466,
                         "TeamA": "MOVISTAR ESTUDIANTES",
-                        "ScoreA": 0,
+                        "ScoreA": 36,
                         "TeamACode": "28000100",
                         "TeamAClubCode": "280001",
                         "TeamBID": 950759,
                         "TeamB": "INVEREADY GIPUZKOA",
                         "TeamBCode": "20046000",
                         "TeamBClubCode": "200460",
-                        "ScoreB": 0,
+                        "ScoreB": 23,
                         "StartTime": "2025-05-16T19:30:00",
                         "StartTimeUTC": "2025-05-16T17:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951466&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950759&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 2,
+                        "Time": "00:14:11",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "23",
+                                "scoreB": "18"
+                            },
+                            {
+                                "n": "2",
+                                "scoreA": "13",
+                                "scoreB": "5"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -55,7 +66,7 @@
                         "Competition": "PRIMERA FEB",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2470260,
                         "GameCode": null,
                         "Place": "MULTIUSOS FONTES DO SAR",
@@ -75,12 +86,18 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=952033&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951848&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:00:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -90,7 +107,7 @@
                         "Competition": "PRIMERA FEB",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2470245,
                         "GameCode": null,
                         "Place": "FERNANDO MARTIN, PABELLON",
