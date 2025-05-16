@@ -11,7 +11,7 @@
                 "id": "115",
                 "name": "Primera FEB",
                 "gamescount": 20,
-                "nowplaying": 4,
+                "nowplaying": 3,
                 "order": 1,
                 "GAMES": [
                     {
@@ -26,14 +26,14 @@
                         "Place": "MOVISTAR ARENA",
                         "TeamAID": 951466,
                         "TeamA": "MOVISTAR ESTUDIANTES",
-                        "ScoreA": 70,
+                        "ScoreA": 83,
                         "TeamACode": "28000100",
                         "TeamAClubCode": "280001",
                         "TeamBID": 950759,
                         "TeamB": "INVEREADY GIPUZKOA",
                         "TeamBCode": "20046000",
                         "TeamBClubCode": "200460",
-                        "ScoreB": 57,
+                        "ScoreB": 71,
                         "StartTime": "2025-05-16T19:30:00",
                         "StartTimeUTC": "2025-05-16T17:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -41,8 +41,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951466&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950759&ti=1",
                         "Quarter": 4,
-                        "Time": "00:34:16",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -63,8 +63,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "7",
-                                "scoreB": "12"
+                                "scoreA": "20",
+                                "scoreB": "26"
                             }
                         ],
                         "Season": null,
@@ -82,22 +82,22 @@
                         "Place": "MULTIUSOS FONTES DO SAR",
                         "TeamAID": 952033,
                         "TeamA": "MONBUS OBRADOIRO",
-                        "ScoreA": 45,
+                        "ScoreA": 87,
                         "TeamACode": "15040900",
                         "TeamAClubCode": "150409",
                         "TeamBID": 951848,
                         "TeamB": "SÚPER AGROPAL PALENCIA",
                         "TeamBCode": "34000707",
                         "TeamBClubCode": "340007",
-                        "ScoreB": 44,
+                        "ScoreB": 83,
                         "StartTime": "2025-05-16T20:00:00",
                         "StartTimeUTC": "2025-05-16T18:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=952033&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951848&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:20:00",
+                        "Quarter": 4,
+                        "Time": "00:39:59",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -114,8 +114,13 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "19",
+                                "scoreB": "19"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "23",
+                                "scoreB": "20"
                             }
                         ],
                         "Season": null,
@@ -133,22 +138,22 @@
                         "Place": "FERNANDO MARTIN, PABELLON",
                         "TeamAID": 951321,
                         "TeamA": "FLEXICAR FUENLABRADA",
-                        "ScoreA": 33,
+                        "ScoreA": 71,
                         "TeamACode": "28332300",
                         "TeamAClubCode": "283323",
                         "TeamBID": 950726,
                         "TeamB": "GRUPO URETA TIZONA BURGOS",
                         "TeamBCode": "09024901",
                         "TeamBClubCode": "090249",
-                        "ScoreB": 18,
+                        "ScoreB": 44,
                         "StartTime": "2025-05-16T20:30:00",
                         "StartTimeUTC": "2025-05-16T18:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951321&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950726&ti=1",
-                        "Quarter": 2,
-                        "Time": "00:13:41",
+                        "Quarter": 4,
+                        "Time": "00:30:48",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -160,8 +165,18 @@
                             },
                             {
                                 "n": "2",
-                                "scoreA": "10",
-                                "scoreB": "7"
+                                "scoreA": "25",
+                                "scoreB": "16"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "20",
+                                "scoreB": "17"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "3",
+                                "scoreB": "0"
                             }
                         ],
                         "Season": null,
@@ -179,30 +194,40 @@
                         "Place": "PALACIO MUNICIPAL DE DEPORTES SAN PABLO",
                         "TeamAID": 950951,
                         "TeamA": "REAL BETIS BALONCESTO",
-                        "ScoreA": 9,
+                        "ScoreA": 53,
                         "TeamACode": "41000600",
                         "TeamAClubCode": "410006",
                         "TeamBID": 951078,
                         "TeamB": "ODILO FC CARTAGENA CB",
                         "TeamBCode": "30018800",
                         "TeamBClubCode": "300188",
-                        "ScoreB": 13,
+                        "ScoreB": 48,
                         "StartTime": "2025-05-16T20:45:00",
                         "StartTimeUTC": "2025-05-16T18:45:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950951&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951078&ti=1",
-                        "Quarter": 1,
-                        "Time": "00:06:00",
+                        "Quarter": 3,
+                        "Time": "00:26:12",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
                             {
                                 "n": "1",
-                                "scoreA": "9",
-                                "scoreB": "13"
+                                "scoreA": "21",
+                                "scoreB": "20"
+                            },
+                            {
+                                "n": "2",
+                                "scoreA": "21",
+                                "scoreB": "16"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "11",
+                                "scoreB": "12"
                             }
                         ],
                         "Season": null,
