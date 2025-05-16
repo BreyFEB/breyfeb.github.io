@@ -37,7 +37,7 @@ const state = {
   busqueda: "",
   jugadoresFiltrados: [],
   paginaActual: 1,
-  jugadoresPorPagina: 50,
+  jugadoresPorPagina: 49,
   allPlayersStats: [] // Nuevo: almacenará todos los datos de jugadores
 };
 
