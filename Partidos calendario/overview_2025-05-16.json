@@ -11,7 +11,7 @@
                 "id": "115",
                 "name": "Primera FEB",
                 "gamescount": 20,
-                "nowplaying": 3,
+                "nowplaying": 1,
                 "order": 1,
                 "GAMES": [
                     {
@@ -97,8 +97,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=952033&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951848&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:59",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -138,14 +138,14 @@
                         "Place": "FERNANDO MARTIN, PABELLON",
                         "TeamAID": 951321,
                         "TeamA": "FLEXICAR FUENLABRADA",
-                        "ScoreA": 71,
+                        "ScoreA": 92,
                         "TeamACode": "28332300",
                         "TeamAClubCode": "283323",
                         "TeamBID": 950726,
                         "TeamB": "GRUPO URETA TIZONA BURGOS",
                         "TeamBCode": "09024901",
                         "TeamBClubCode": "090249",
-                        "ScoreB": 44,
+                        "ScoreB": 62,
                         "StartTime": "2025-05-16T20:30:00",
                         "StartTimeUTC": "2025-05-16T18:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -153,8 +153,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951321&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950726&ti=1",
                         "Quarter": 4,
-                        "Time": "00:30:48",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -175,8 +175,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "3",
-                                "scoreB": "0"
+                                "scoreA": "24",
+                                "scoreB": "18"
                             }
                         ],
                         "Season": null,
@@ -194,22 +194,22 @@
                         "Place": "PALACIO MUNICIPAL DE DEPORTES SAN PABLO",
                         "TeamAID": 950951,
                         "TeamA": "REAL BETIS BALONCESTO",
-                        "ScoreA": 53,
+                        "ScoreA": 95,
                         "TeamACode": "41000600",
                         "TeamAClubCode": "410006",
                         "TeamBID": 951078,
                         "TeamB": "ODILO FC CARTAGENA CB",
                         "TeamBCode": "30018800",
                         "TeamBClubCode": "300188",
-                        "ScoreB": 48,
+                        "ScoreB": 94,
                         "StartTime": "2025-05-16T20:45:00",
                         "StartTimeUTC": "2025-05-16T18:45:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950951&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951078&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:26:12",
+                        "Quarter": 5,
+                        "Time": "00:44:51",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -226,8 +226,18 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "11",
-                                "scoreB": "12"
+                                "scoreA": "15",
+                                "scoreB": "22"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "28",
+                                "scoreB": "27"
+                            },
+                            {
+                                "n": "5",
+                                "scoreA": "10",
+                                "scoreB": "9"
                             }
                         ],
                         "Season": null,
