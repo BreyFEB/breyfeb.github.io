@@ -130,6 +130,7 @@
      =========================== */
   .competitions-bar {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 15px;
     margin-bottom: 20px;
@@ -144,6 +145,8 @@
     white-space: nowrap;
     font-size: 0.9em;
     transition: background-color 0.2s ease-in-out;
+    flex: 0 1 auto;
+    min-width: fit-content;
   }
   .competition-tab:hover {
     background-color: #FF9E1B;
