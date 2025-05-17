@@ -308,6 +308,986 @@
     }
   },
   {
+    "id": "2557970",
+    "nombre": "D. CUEVAS SIMARRO",
+    "equipo": "SILBÖ SAN PABLO BURGOS",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2557970",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951500&ti=1",
+    "estadisticas": {
+      "puntos": 13.0,
+      "rebotes": 7.0,
+      "asistencias": 4.0
+    }
+  },
+  {
+    "id": "2790234",
+    "nombre": "J. TABOADA LÜHERS",
+    "equipo": "SILBÖ SAN PABLO BURGOS",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2790234",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951500&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2702840",
+    "nombre": "E. WEMBI",
+    "equipo": "SILBÖ SAN PABLO BURGOS",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2702840",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951500&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 2.0,
+      "asistencias": 1.0
+    }
+  },
+  {
+    "id": "1258492",
+    "nombre": "P. ALMAZAN SIERRA",
+    "equipo": "SILBÖ SAN PABLO BURGOS",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=1258492",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951500&ti=1",
+    "estadisticas": {
+      "puntos": 5.0,
+      "rebotes": 2.0,
+      "asistencias": 1.0
+    }
+  },
+  {
+    "id": "1763649",
+    "nombre": "A. BARRERA PASAN",
+    "equipo": "SILBÖ SAN PABLO BURGOS",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=1763649",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951500&ti=1",
+    "estadisticas": {
+      "puntos": 11.0,
+      "rebotes": 3.0,
+      "asistencias": 2.0
+    }
+  },
+  {
+    "id": "2452511",
+    "nombre": "G. CORBALAN",
+    "equipo": "SILBÖ SAN PABLO BURGOS",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2452511",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951500&ti=1",
+    "estadisticas": {
+      "puntos": 16.0,
+      "rebotes": 1.0,
+      "asistencias": 2.0
+    }
+  },
+  {
+    "id": "1425116",
+    "nombre": "D. DIEZ DE LA FAYA",
+    "equipo": "SILBÖ SAN PABLO BURGOS",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=1425116",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951500&ti=1",
+    "estadisticas": {
+      "puntos": 12.0,
+      "rebotes": 4.0,
+      "asistencias": 2.0
+    }
+  },
+  {
+    "id": "2641413",
+    "nombre": "G. GOLOMAN",
+    "equipo": "SILBÖ SAN PABLO BURGOS",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2641413",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951500&ti=1",
+    "estadisticas": {
+      "puntos": 6.0,
+      "rebotes": 1.0,
+      "asistencias": 3.0
+    }
+  },
+  {
+    "id": "2739848",
+    "nombre": "R. STUMBRIS",
+    "equipo": "SILBÖ SAN PABLO BURGOS",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2739848",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951500&ti=1",
+    "estadisticas": {
+      "puntos": 3.0,
+      "rebotes": 1.0,
+      "asistencias": 2.0
+    }
+  },
+  {
+    "id": "2452677",
+    "nombre": "J. CREMO",
+    "equipo": "SILBÖ SAN PABLO BURGOS",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2452677",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951500&ti=1",
+    "estadisticas": {
+      "puntos": 16.0,
+      "rebotes": 4.0,
+      "asistencias": 3.0
+    }
+  },
+  {
+    "id": "2217363",
+    "nombre": "M. LAPORNIK",
+    "equipo": "SILBÖ SAN PABLO BURGOS",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2217363",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951500&ti=1",
+    "estadisticas": {
+      "puntos": 13.0,
+      "rebotes": 3.0,
+      "asistencias": 1.0
+    }
+  },
+  {
+    "id": "2657736",
+    "nombre": "L. FISCHER",
+    "equipo": "SILBÖ SAN PABLO BURGOS",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2657736",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951500&ti=1",
+    "estadisticas": {
+      "puntos": 5.0,
+      "rebotes": 4.0,
+      "asistencias": 1.0
+    }
+  },
+  {
+    "id": "2371461",
+    "nombre": "D. KRAVIC",
+    "equipo": "MOVISTAR ESTUDIANTES",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2371461",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951466&ti=1",
+    "estadisticas": {
+      "puntos": 13.5,
+      "rebotes": 8.5,
+      "asistencias": 1.0
+    }
+  },
+  {
+    "id": "2524744",
+    "nombre": "M. ANDRIC",
+    "equipo": "MOVISTAR ESTUDIANTES",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2524744",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951466&ti=1",
+    "estadisticas": {
+      "puntos": 6.0,
+      "rebotes": 3.5,
+      "asistencias": 1.0
+    }
+  },
+  {
+    "id": "1875914",
+    "nombre": "A. SOLA IDDRISU",
+    "equipo": "MOVISTAR ESTUDIANTES",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=1875914",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951466&ti=1",
+    "estadisticas": {
+      "puntos": 4.0,
+      "rebotes": 2.5,
+      "asistencias": 0.5
+    }
+  },
+  {
+    "id": "1438620",
+    "nombre": "J. RUBIO NIÑIROLA",
+    "equipo": "MOVISTAR ESTUDIANTES",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=1438620",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951466&ti=1",
+    "estadisticas": {
+      "puntos": 5.5,
+      "rebotes": 0.5,
+      "asistencias": 1.5
+    }
+  },
+  {
+    "id": "2648545",
+    "nombre": "D. SCHMIDT",
+    "equipo": "MOVISTAR ESTUDIANTES",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2648545",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951466&ti=1",
+    "estadisticas": {
+      "puntos": 6.5,
+      "rebotes": 1.0,
+      "asistencias": 0.5
+    }
+  },
+  {
+    "id": "1446122",
+    "nombre": "F. ALONSO MARTÍNEZ",
+    "equipo": "MOVISTAR ESTUDIANTES",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=1446122",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951466&ti=1",
+    "estadisticas": {
+      "puntos": 15.0,
+      "rebotes": 2.0,
+      "asistencias": 1.0
+    }
+  },
+  {
+    "id": "2734234",
+    "nombre": "J. GRANGER",
+    "equipo": "MOVISTAR ESTUDIANTES",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2734234",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951466&ti=1",
+    "estadisticas": {
+      "puntos": 10.0,
+      "rebotes": 5.0,
+      "asistencias": 4.0
+    }
+  },
+  {
+    "id": "1251001",
+    "nombre": "C. DIAZ RODRIGUEZ",
+    "equipo": "MOVISTAR ESTUDIANTES",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=1251001",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951466&ti=1",
+    "estadisticas": {
+      "puntos": 4.0,
+      "rebotes": 1.5,
+      "asistencias": 2.0
+    }
+  },
+  {
+    "id": "2680850",
+    "nombre": "J. RODRÍGUEZ OLIVERA",
+    "equipo": "MOVISTAR ESTUDIANTES",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2680850",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951466&ti=1",
+    "estadisticas": {
+      "puntos": 11.0,
+      "rebotes": 4.0,
+      "asistencias": 1.5
+    }
+  },
+  {
+    "id": "2275135",
+    "nombre": "P. GARINO GULLOTTA ",
+    "equipo": "MOVISTAR ESTUDIANTES",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2275135",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951466&ti=1",
+    "estadisticas": {
+      "puntos": 1.5,
+      "rebotes": 0.5,
+      "asistencias": 1.0
+    }
+  },
+  {
+    "id": "2493108",
+    "nombre": "H. ALDERETE DÍAZ",
+    "equipo": "MOVISTAR ESTUDIANTES",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2493108",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951466&ti=1",
+    "estadisticas": {
+      "puntos": 3.5,
+      "rebotes": 0.5,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2376806",
+    "nombre": "S. BARRO",
+    "equipo": "MOVISTAR ESTUDIANTES",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2376806",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951466&ti=1",
+    "estadisticas": {
+      "puntos": 5.0,
+      "rebotes": 4.0,
+      "asistencias": 1.0
+    }
+  },
+  {
+    "id": "1958225",
+    "nombre": "J. RODRIGUEZ STEGEMEIJER",
+    "equipo": "GRUPO URETA TIZONA BURGOS",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=1958225",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950726&ti=1",
+    "estadisticas": {
+      "puntos": 14.0,
+      "rebotes": 5.0,
+      "asistencias": 0.5
+    }
+  },
+  {
+    "id": "2782204",
+    "nombre": "T. KEITA",
+    "equipo": "GRUPO URETA TIZONA BURGOS",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2782204",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950726&ti=1",
+    "estadisticas": {
+      "puntos": 5.0,
+      "rebotes": 4.5,
+      "asistencias": 1.0
+    }
+  },
+  {
+    "id": "2735006",
+    "nombre": "M. SOLUADE",
+    "equipo": "GRUPO URETA TIZONA BURGOS",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2735006",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950726&ti=1",
+    "estadisticas": {
+      "puntos": 6.5,
+      "rebotes": 2.5,
+      "asistencias": 4.5
+    }
+  },
+  {
+    "id": "2644143",
+    "nombre": "C. DE SOUZA PACHECO",
+    "equipo": "GRUPO URETA TIZONA BURGOS",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2644143",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950726&ti=1",
+    "estadisticas": {
+      "puntos": 11.0,
+      "rebotes": 2.5,
+      "asistencias": 3.5
+    }
+  },
+  {
+    "id": "1572466",
+    "nombre": "R. VILA SOLEY",
+    "equipo": "GRUPO URETA TIZONA BURGOS",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=1572466",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950726&ti=1",
+    "estadisticas": {
+      "puntos": 4.5,
+      "rebotes": 3.0,
+      "asistencias": 2.0
+    }
+  },
+  {
+    "id": "2524301",
+    "nombre": "D. SIMEUNOVIC",
+    "equipo": "GRUPO URETA TIZONA BURGOS",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2524301",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950726&ti=1",
+    "estadisticas": {
+      "puntos": 5.5,
+      "rebotes": 0.5,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "1625687",
+    "nombre": "R. SEOANE RODICIO",
+    "equipo": "GRUPO URETA TIZONA BURGOS",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=1625687",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950726&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 3.0,
+      "asistencias": 0.5
+    }
+  },
+  {
+    "id": "2164262",
+    "nombre": "A. THIAM ",
+    "equipo": "GRUPO URETA TIZONA BURGOS",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2164262",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950726&ti=1",
+    "estadisticas": {
+      "puntos": 8.0,
+      "rebotes": 3.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "1541543",
+    "nombre": "J. DIAZ ALEJANO",
+    "equipo": "GRUPO URETA TIZONA BURGOS",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=1541543",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950726&ti=1",
+    "estadisticas": {
+      "puntos": 11.5,
+      "rebotes": 8.5,
+      "asistencias": 2.5
+    }
+  },
+  {
+    "id": "2734726",
+    "nombre": "L. JONES",
+    "equipo": "GRUPO URETA TIZONA BURGOS",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2734726",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950726&ti=1",
+    "estadisticas": {
+      "puntos": 13.0,
+      "rebotes": 1.5,
+      "asistencias": 2.0
+    }
+  },
+  {
+    "id": "2735928",
+    "nombre": "B. DAVISON",
+    "equipo": "MONBUS OBRADOIRO",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2735928",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952033&ti=1",
+    "estadisticas": {
+      "puntos": 5.5,
+      "rebotes": 1.5,
+      "asistencias": 0.5
+    }
+  },
+  {
+    "id": "1836771",
+    "nombre": "A. GALAN POZO ",
+    "equipo": "MONBUS OBRADOIRO",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=1836771",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952033&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 2.5,
+      "asistencias": 0.5
+    }
+  },
+  {
+    "id": "2027537",
+    "nombre": "V. BRODZIANSKY",
+    "equipo": "MONBUS OBRADOIRO",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2027537",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952033&ti=1",
+    "estadisticas": {
+      "puntos": 15.0,
+      "rebotes": 6.0,
+      "asistencias": 3.0
+    }
+  },
+  {
+    "id": "2787684",
+    "nombre": "O. BALVIN",
+    "equipo": "MONBUS OBRADOIRO",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2787684",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952033&ti=1",
+    "estadisticas": {
+      "puntos": 12.0,
+      "rebotes": 5.5,
+      "asistencias": 1.0
+    }
+  },
+  {
+    "id": "2735930",
+    "nombre": "S. MICOVIC",
+    "equipo": "MONBUS OBRADOIRO",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2735930",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952033&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 1.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "1806007",
+    "nombre": "M. JIMENEZ GARRIDO",
+    "equipo": "MONBUS OBRADOIRO",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=1806007",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952033&ti=1",
+    "estadisticas": {
+      "puntos": 12.5,
+      "rebotes": 3.0,
+      "asistencias": 0.5
+    }
+  },
+  {
+    "id": "2432363",
+    "nombre": "L. FAGGIANO",
+    "equipo": "MONBUS OBRADOIRO",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2432363",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952033&ti=1",
+    "estadisticas": {
+      "puntos": 13.0,
+      "rebotes": 1.0,
+      "asistencias": 2.5
+    }
+  },
+  {
+    "id": "2275973",
+    "nombre": "I. ARROYO VARELA",
+    "equipo": "MONBUS OBRADOIRO",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2275973",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952033&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 1.5,
+      "asistencias": 1.0
+    }
+  },
+  {
+    "id": "2220063",
+    "nombre": "S. QUINTELA SALVADOR",
+    "equipo": "MONBUS OBRADOIRO",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2220063",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952033&ti=1",
+    "estadisticas": {
+      "puntos": 12.0,
+      "rebotes": 2.0,
+      "asistencias": 2.0
+    }
+  },
+  {
+    "id": "2640794",
+    "nombre": "A. BARCELLO",
+    "equipo": "MONBUS OBRADOIRO",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2640794",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952033&ti=1",
+    "estadisticas": {
+      "puntos": 18.0,
+      "rebotes": 1.5,
+      "asistencias": 5.0
+    }
+  },
+  {
+    "id": "1253254",
+    "nombre": "A. MUÑOZ BORCHERS",
+    "equipo": "MONBUS OBRADOIRO",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=1253254",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952033&ti=1",
+    "estadisticas": {
+      "puntos": 1.0,
+      "rebotes": 0.5,
+      "asistencias": 0.5
+    }
+  },
+  {
+    "id": "2701583",
+    "nombre": "O. STEVIC",
+    "equipo": "MONBUS OBRADOIRO",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2701583",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952033&ti=1",
+    "estadisticas": {
+      "puntos": 3.5,
+      "rebotes": 0.5,
+      "asistencias": 0.5
+    }
+  },
+  {
+    "id": "2734467",
+    "nombre": "X. JOHNSON",
+    "equipo": "INVEREADY GIPUZKOA",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2734467",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950759&ti=1",
+    "estadisticas": {
+      "puntos": 7.5,
+      "rebotes": 3.0,
+      "asistencias": 6.5
+    }
+  },
+  {
+    "id": "2796917",
+    "nombre": "D. SMITH",
+    "equipo": "INVEREADY GIPUZKOA",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2796917",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950759&ti=1",
+    "estadisticas": {
+      "puntos": 14.0,
+      "rebotes": 2.5,
+      "asistencias": 2.5
+    }
+  },
+  {
+    "id": "2640789",
+    "nombre": "J. VRANKIC",
+    "equipo": "INVEREADY GIPUZKOA",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2640789",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950759&ti=1",
+    "estadisticas": {
+      "puntos": 11.0,
+      "rebotes": 2.0,
+      "asistencias": 1.0
+    }
+  },
+  {
+    "id": "1749125",
+    "nombre": "A. ZUBIZARRETA ARANBARRI",
+    "equipo": "INVEREADY GIPUZKOA",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=1749125",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950759&ti=1",
+    "estadisticas": {
+      "puntos": 3.0,
+      "rebotes": 3.5,
+      "asistencias": 2.0
+    }
+  },
+  {
+    "id": "2736767",
+    "nombre": "M. DIAZ",
+    "equipo": "INVEREADY GIPUZKOA",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2736767",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950759&ti=1",
+    "estadisticas": {
+      "puntos": 11.5,
+      "rebotes": 2.5,
+      "asistencias": 2.5
+    }
+  },
+  {
+    "id": "2219810",
+    "nombre": "M. STÜRUP",
+    "equipo": "INVEREADY GIPUZKOA",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2219810",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950759&ti=1",
+    "estadisticas": {
+      "puntos": 2.5,
+      "rebotes": 0.5,
+      "asistencias": 1.5
+    }
+  },
+  {
+    "id": "1447983",
+    "nombre": "M. MOTOS CABODEVILLA",
+    "equipo": "INVEREADY GIPUZKOA",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=1447983",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950759&ti=1",
+    "estadisticas": {
+      "puntos": 6.0,
+      "rebotes": 5.0,
+      "asistencias": 1.5
+    }
+  },
+  {
+    "id": "2082685",
+    "nombre": "M. ANSORREGUI DEBA",
+    "equipo": "INVEREADY GIPUZKOA",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2082685",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950759&ti=1",
+    "estadisticas": {
+      "puntos": 10.5,
+      "rebotes": 6.0,
+      "asistencias": 1.0
+    }
+  },
+  {
+    "id": "1988355",
+    "nombre": "J. NICOLAU ALEDON",
+    "equipo": "INVEREADY GIPUZKOA",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=1988355",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950759&ti=1",
+    "estadisticas": {
+      "puntos": 3.5,
+      "rebotes": 2.0,
+      "asistencias": 0.5
+    }
+  },
+  {
+    "id": "1432499",
+    "nombre": "A. MARTINEZ DE LA ORDEN",
+    "equipo": "INVEREADY GIPUZKOA",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=1432499",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950759&ti=1",
+    "estadisticas": {
+      "puntos": 9.5,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2734268",
+    "nombre": "J. MOKRAN",
+    "equipo": "INVEREADY GIPUZKOA",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2734268",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950759&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2616996",
+    "nombre": "M. N´GUESSAN",
+    "equipo": "INVEREADY GIPUZKOA",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2616996",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950759&ti=1",
+    "estadisticas": {
+      "puntos": 5.5,
+      "rebotes": 3.5,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2528063",
+    "nombre": "D. DE SOUSA ANJO BRITO",
+    "equipo": "AIRCARGOBOOKING OURENSE ",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2528063",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952321&ti=1",
+    "estadisticas": {
+      "puntos": 13.0,
+      "rebotes": 5.0,
+      "asistencias": 4.0
+    }
+  },
+  {
+    "id": "2734740",
+    "nombre": "A. MOODY",
+    "equipo": "AIRCARGOBOOKING OURENSE ",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2734740",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952321&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "1869378",
+    "nombre": "U. MENDICOTE RUBIO",
+    "equipo": "AIRCARGOBOOKING OURENSE ",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=1869378",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952321&ti=1",
+    "estadisticas": {
+      "puntos": 6.0,
+      "rebotes": 4.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "1373532",
+    "nombre": "S. RODRÍGUEZ FEBLES",
+    "equipo": "AIRCARGOBOOKING OURENSE ",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=1373532",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952321&ti=1",
+    "estadisticas": {
+      "puntos": 11.0,
+      "rebotes": 5.0,
+      "asistencias": 3.0
+    }
+  },
+  {
+    "id": "2451497",
+    "nombre": "C. BARTON",
+    "equipo": "AIRCARGOBOOKING OURENSE ",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2451497",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952321&ti=1",
+    "estadisticas": {
+      "puntos": 5.0,
+      "rebotes": 2.0,
+      "asistencias": 2.0
+    }
+  },
+  {
+    "id": "841966",
+    "nombre": "S. RODRÍGUEZ RAMOS",
+    "equipo": "AIRCARGOBOOKING OURENSE ",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=841966",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952321&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "1886852",
+    "nombre": "M. FERNANDEZ CARBALLO",
+    "equipo": "AIRCARGOBOOKING OURENSE ",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=1886852",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952321&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "1834527",
+    "nombre": "S. PAZ VAZQUEZ",
+    "equipo": "AIRCARGOBOOKING OURENSE ",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=1834527",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952321&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 2.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2734737",
+    "nombre": "B. KRIKKE",
+    "equipo": "AIRCARGOBOOKING OURENSE ",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2734737",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952321&ti=1",
+    "estadisticas": {
+      "puntos": 9.0,
+      "rebotes": 3.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2533905",
+    "nombre": "M. OGUNSIPE",
+    "equipo": "AIRCARGOBOOKING OURENSE ",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2533905",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952321&ti=1",
+    "estadisticas": {
+      "puntos": 10.0,
+      "rebotes": 4.0,
+      "asistencias": 1.0
+    }
+  },
+  {
+    "id": "2650871",
+    "nombre": "R. DIAS MARQUES LISBOA SANTOS",
+    "equipo": "AIRCARGOBOOKING OURENSE ",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2650871",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952321&ti=1",
+    "estadisticas": {
+      "puntos": 7.0,
+      "rebotes": 6.0,
+      "asistencias": 4.0
+    }
+  },
+  {
+    "id": "2654188",
+    "nombre": "R. GILL",
+    "equipo": "AIRCARGOBOOKING OURENSE ",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2654188",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952321&ti=1",
+    "estadisticas": {
+      "puntos": 13.0,
+      "rebotes": 7.0,
+      "asistencias": 0.0
+    }
+  },
+  {
     "id": "2027826",
     "nombre": "O. MATULIONIS",
     "equipo": "FLEXICAR FUENLABRADA",
@@ -316,9 +1296,9 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2027826",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951321&ti=1",
     "estadisticas": {
-      "puntos": 7.0,
+      "puntos": 11.0,
       "rebotes": 3.0,
-      "asistencias": 1.0
+      "asistencias": 1.5
     }
   },
   {
@@ -331,8 +1311,8 @@
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951321&ti=1",
     "estadisticas": {
       "puntos": 12.0,
-      "rebotes": 3.0,
-      "asistencias": 3.0
+      "rebotes": 3.5,
+      "asistencias": 3.5
     }
   },
   {
@@ -344,8 +1324,8 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2446720",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951321&ti=1",
     "estadisticas": {
-      "puntos": 19.0,
-      "rebotes": 6.0,
+      "puntos": 15.0,
+      "rebotes": 4.5,
       "asistencias": 3.0
     }
   },
@@ -359,8 +1339,8 @@
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951321&ti=1",
     "estadisticas": {
       "puntos": 3.0,
-      "rebotes": 7.0,
-      "asistencias": 3.0
+      "rebotes": 8.5,
+      "asistencias": 1.5
     }
   },
   {
@@ -372,9 +1352,9 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2222601",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951321&ti=1",
     "estadisticas": {
-      "puntos": 2.0,
+      "puntos": 1.0,
       "rebotes": 1.0,
-      "asistencias": 0.0
+      "asistencias": 0.5
     }
   },
   {
@@ -400,9 +1380,9 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2533052",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951321&ti=1",
     "estadisticas": {
-      "puntos": 2.0,
-      "rebotes": 1.0,
-      "asistencias": 1.0
+      "puntos": 5.0,
+      "rebotes": 3.5,
+      "asistencias": 1.5
     }
   },
   {
@@ -414,8 +1394,8 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=1285645",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951321&ti=1",
     "estadisticas": {
-      "puntos": 12.0,
-      "rebotes": 0.0,
+      "puntos": 11.0,
+      "rebotes": 0.5,
       "asistencias": 1.0
     }
   },
@@ -428,9 +1408,9 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2648543",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951321&ti=1",
     "estadisticas": {
-      "puntos": 8.0,
-      "rebotes": 5.0,
-      "asistencias": 1.0
+      "puntos": 9.0,
+      "rebotes": 5.5,
+      "asistencias": 0.5
     }
   },
   {
@@ -442,9 +1422,9 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=1382710",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951321&ti=1",
     "estadisticas": {
-      "puntos": 11.0,
-      "rebotes": 11.0,
-      "asistencias": 1.0
+      "puntos": 7.0,
+      "rebotes": 7.5,
+      "asistencias": 2.0
     }
   },
   {
@@ -470,9 +1450,9 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2436780",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951321&ti=1",
     "estadisticas": {
-      "puntos": 3.0,
-      "rebotes": 2.0,
-      "asistencias": 2.0
+      "puntos": 8.5,
+      "rebotes": 1.0,
+      "asistencias": 1.5
     }
   },
   {
@@ -932,9 +1912,9 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2797850",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951848&ti=1",
     "estadisticas": {
-      "puntos": 17.0,
-      "rebotes": 2.0,
-      "asistencias": 1.0
+      "puntos": 11.0,
+      "rebotes": 3.5,
+      "asistencias": 0.5
     }
   },
   {
@@ -946,9 +1926,9 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2276415",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951848&ti=1",
     "estadisticas": {
-      "puntos": 14.0,
-      "rebotes": 4.0,
-      "asistencias": 2.0
+      "puntos": 14.5,
+      "rebotes": 2.0,
+      "asistencias": 3.5
     }
   },
   {
@@ -960,7 +1940,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2734949",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951848&ti=1",
     "estadisticas": {
-      "puntos": 6.0,
+      "puntos": 13.5,
       "rebotes": 1.0,
       "asistencias": 2.0
     }
@@ -974,9 +1954,9 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2092465",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951848&ti=1",
     "estadisticas": {
-      "puntos": 5.0,
-      "rebotes": 1.0,
-      "asistencias": 7.0
+      "puntos": 9.0,
+      "rebotes": 1.5,
+      "asistencias": 5.0
     }
   },
   {
@@ -988,9 +1968,9 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=1750421",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951848&ti=1",
     "estadisticas": {
-      "puntos": 6.0,
+      "puntos": 5.0,
       "rebotes": 3.0,
-      "asistencias": 8.0
+      "asistencias": 4.5
     }
   },
   {
@@ -1002,8 +1982,8 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=1376540",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951848&ti=1",
     "estadisticas": {
-      "puntos": 11.0,
-      "rebotes": 2.0,
+      "puntos": 9.0,
+      "rebotes": 1.5,
       "asistencias": 0.0
     }
   },
@@ -1031,8 +2011,8 @@
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951848&ti=1",
     "estadisticas": {
       "puntos": 0.0,
-      "rebotes": 2.0,
-      "asistencias": 1.0
+      "rebotes": 1.0,
+      "asistencias": 0.5
     }
   },
   {
@@ -1044,8 +2024,8 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=1442713",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951848&ti=1",
     "estadisticas": {
-      "puntos": 3.0,
-      "rebotes": 2.0,
+      "puntos": 1.5,
+      "rebotes": 2.5,
       "asistencias": 0.0
     }
   },
@@ -1058,9 +2038,9 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2371568",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951848&ti=1",
     "estadisticas": {
-      "puntos": 8.0,
-      "rebotes": 4.0,
-      "asistencias": 0.0
+      "puntos": 6.5,
+      "rebotes": 3.0,
+      "asistencias": 0.5
     }
   },
   {
@@ -1072,9 +2052,9 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2644146",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951848&ti=1",
     "estadisticas": {
-      "puntos": 12.0,
-      "rebotes": 11.0,
-      "asistencias": 0.0
+      "puntos": 11.0,
+      "rebotes": 9.5,
+      "asistencias": 1.5
     }
   },
   {
@@ -1086,9 +2066,9 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2734948",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951848&ti=1",
     "estadisticas": {
-      "puntos": 5.0,
-      "rebotes": 6.0,
-      "asistencias": 1.0
+      "puntos": 2.5,
+      "rebotes": 3.0,
+      "asistencias": 0.5
     }
   },
   {
@@ -1100,8 +2080,8 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2433147",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950951&ti=1",
     "estadisticas": {
-      "puntos": 9.0,
-      "rebotes": 3.0,
+      "puntos": 14.5,
+      "rebotes": 4.0,
       "asistencias": 2.0
     }
   },
@@ -1114,9 +2094,9 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2734562",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950951&ti=1",
     "estadisticas": {
-      "puntos": 9.0,
-      "rebotes": 1.0,
-      "asistencias": 2.0
+      "puntos": 14.5,
+      "rebotes": 2.5,
+      "asistencias": 3.0
     }
   },
   {
@@ -1128,8 +2108,8 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2791828",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950951&ti=1",
     "estadisticas": {
-      "puntos": 5.0,
-      "rebotes": 1.0,
+      "puntos": 6.0,
+      "rebotes": 3.0,
       "asistencias": 0.0
     }
   },
@@ -1142,9 +2122,9 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2612621",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950951&ti=1",
     "estadisticas": {
-      "puntos": 11.0,
-      "rebotes": 3.0,
-      "asistencias": 2.0
+      "puntos": 8.0,
+      "rebotes": 2.5,
+      "asistencias": 1.0
     }
   },
   {
@@ -1156,9 +2136,9 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=1873981",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950951&ti=1",
     "estadisticas": {
-      "puntos": 6.0,
-      "rebotes": 4.0,
-      "asistencias": 2.0
+      "puntos": 9.0,
+      "rebotes": 3.5,
+      "asistencias": 1.0
     }
   },
   {
@@ -1170,9 +2150,9 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2703151",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950951&ti=1",
     "estadisticas": {
-      "puntos": 2.0,
-      "rebotes": 0.0,
-      "asistencias": 1.0
+      "puntos": 1.0,
+      "rebotes": 0.5,
+      "asistencias": 0.5
     }
   },
   {
@@ -1184,9 +2164,9 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=1594835",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950951&ti=1",
     "estadisticas": {
-      "puntos": 7.0,
+      "puntos": 6.5,
       "rebotes": 3.0,
-      "asistencias": 0.0
+      "asistencias": 0.5
     }
   },
   {
@@ -1198,9 +2178,9 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2236015",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950951&ti=1",
     "estadisticas": {
-      "puntos": 5.0,
-      "rebotes": 3.0,
-      "asistencias": 2.0
+      "puntos": 8.5,
+      "rebotes": 3.5,
+      "asistencias": 3.0
     }
   },
   {
@@ -1212,9 +2192,9 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2797792",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950951&ti=1",
     "estadisticas": {
-      "puntos": 13.0,
-      "rebotes": 8.0,
-      "asistencias": 2.0
+      "puntos": 8.0,
+      "rebotes": 6.0,
+      "asistencias": 1.5
     }
   },
   {
@@ -1240,9 +2220,9 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=1322114",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950951&ti=1",
     "estadisticas": {
-      "puntos": 1.0,
-      "rebotes": 0.0,
-      "asistencias": 0.0
+      "puntos": 3.0,
+      "rebotes": 1.5,
+      "asistencias": 0.5
     }
   },
   {
@@ -1408,9 +2388,9 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2094445",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951078&ti=1",
     "estadisticas": {
-      "puntos": 4.0,
-      "rebotes": 3.0,
-      "asistencias": 0.0
+      "puntos": 7.0,
+      "rebotes": 3.5,
+      "asistencias": 0.5
     }
   },
   {
@@ -1422,9 +2402,9 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2159336",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951078&ti=1",
     "estadisticas": {
-      "puntos": 7.0,
+      "puntos": 6.0,
       "rebotes": 2.0,
-      "asistencias": 0.0
+      "asistencias": 2.0
     }
   },
   {
@@ -1436,9 +2416,9 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=1384223",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951078&ti=1",
     "estadisticas": {
-      "puntos": 7.0,
-      "rebotes": 2.0,
-      "asistencias": 2.0
+      "puntos": 6.5,
+      "rebotes": 3.0,
+      "asistencias": 3.5
     }
   },
   {
@@ -1450,8 +2430,8 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2616999",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951078&ti=1",
     "estadisticas": {
-      "puntos": 0.0,
-      "rebotes": 0.0,
+      "puntos": 6.0,
+      "rebotes": 1.5,
       "asistencias": 0.0
     }
   },
@@ -1464,8 +2444,8 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=1808439",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951078&ti=1",
     "estadisticas": {
-      "puntos": 3.0,
-      "rebotes": 4.0,
+      "puntos": 3.5,
+      "rebotes": 3.5,
       "asistencias": 0.0
     }
   },
@@ -1478,8 +2458,8 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=1210759",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951078&ti=1",
     "estadisticas": {
-      "puntos": 9.0,
-      "rebotes": 1.0,
+      "puntos": 5.5,
+      "rebotes": 1.5,
       "asistencias": 1.0
     }
   },
@@ -1492,8 +2472,8 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=1923881",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951078&ti=1",
     "estadisticas": {
-      "puntos": 4.0,
-      "rebotes": 1.0,
+      "puntos": 5.0,
+      "rebotes": 2.0,
       "asistencias": 1.0
     }
   },
@@ -1506,9 +2486,9 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=1676991",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951078&ti=1",
     "estadisticas": {
-      "puntos": 11.0,
-      "rebotes": 2.0,
-      "asistencias": 0.0
+      "puntos": 10.0,
+      "rebotes": 1.5,
+      "asistencias": 1.5
     }
   },
   {
@@ -1520,9 +2500,9 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2560959",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951078&ti=1",
     "estadisticas": {
-      "puntos": 2.0,
+      "puntos": 3.0,
       "rebotes": 3.0,
-      "asistencias": 3.0
+      "asistencias": 2.0
     }
   },
   {
@@ -1534,9 +2514,9 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2735658",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951078&ti=1",
     "estadisticas": {
-      "puntos": 15.0,
-      "rebotes": 4.0,
-      "asistencias": 3.0
+      "puntos": 17.0,
+      "rebotes": 3.0,
+      "asistencias": 2.5
     }
   },
   {
@@ -1548,9 +2528,345 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2738742",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951078&ti=1",
     "estadisticas": {
-      "puntos": 7.0,
-      "rebotes": 6.0,
+      "puntos": 9.0,
+      "rebotes": 6.5,
       "asistencias": 1.0
+    }
+  },
+  {
+    "id": "2735247",
+    "nombre": "V. VUCETIC",
+    "equipo": "UEMC REAL VALLADOLID BALONCESTO",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2735247",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952032&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2130102",
+    "nombre": "J. GARCIA-ABRIL GUERRERO",
+    "equipo": "UEMC REAL VALLADOLID BALONCESTO",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2130102",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952032&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 2.0,
+      "asistencias": 1.0
+    }
+  },
+  {
+    "id": "2436640",
+    "nombre": "J. PUIDET",
+    "equipo": "UEMC REAL VALLADOLID BALONCESTO",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2436640",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952032&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 2.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2735245",
+    "nombre": "S. WILSON",
+    "equipo": "UEMC REAL VALLADOLID BALONCESTO",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2735245",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952032&ti=1",
+    "estadisticas": {
+      "puntos": 5.0,
+      "rebotes": 3.0,
+      "asistencias": 1.0
+    }
+  },
+  {
+    "id": "1710454",
+    "nombre": "D. MANCHON CRESPO",
+    "equipo": "UEMC REAL VALLADOLID BALONCESTO",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=1710454",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952032&ti=1",
+    "estadisticas": {
+      "puntos": 11.0,
+      "rebotes": 3.0,
+      "asistencias": 2.0
+    }
+  },
+  {
+    "id": "2651586",
+    "nombre": "E. DEMERS",
+    "equipo": "UEMC REAL VALLADOLID BALONCESTO",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2651586",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952032&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 2.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2582813",
+    "nombre": "M. KOVACEVIC",
+    "equipo": "UEMC REAL VALLADOLID BALONCESTO",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2582813",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952032&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "1322135",
+    "nombre": "A. SANS VALLS",
+    "equipo": "UEMC REAL VALLADOLID BALONCESTO",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=1322135",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952032&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 1.0,
+      "asistencias": 2.0
+    }
+  },
+  {
+    "id": "1078295",
+    "nombre": "S. DE LA FUENTE VALDIZAN",
+    "equipo": "UEMC REAL VALLADOLID BALONCESTO",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=1078295",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952032&ti=1",
+    "estadisticas": {
+      "puntos": 1.0,
+      "rebotes": 2.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2796834",
+    "nombre": "S. CELE",
+    "equipo": "UEMC REAL VALLADOLID BALONCESTO",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2796834",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952032&ti=1",
+    "estadisticas": {
+      "puntos": 16.0,
+      "rebotes": 2.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "1285873",
+    "nombre": "M. TORRES CUEVAS",
+    "equipo": "UEMC REAL VALLADOLID BALONCESTO",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=1285873",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952032&ti=1",
+    "estadisticas": {
+      "puntos": 14.0,
+      "rebotes": 3.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2736310",
+    "nombre": "J. MBALLA",
+    "equipo": "UEMC REAL VALLADOLID BALONCESTO",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2736310",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952032&ti=1",
+    "estadisticas": {
+      "puntos": 14.0,
+      "rebotes": 4.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2785180",
+    "nombre": "J. CONE",
+    "equipo": "HESTIA MENORCA",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2785180",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950650&ti=1",
+    "estadisticas": {
+      "puntos": 18.0,
+      "rebotes": 0.0,
+      "asistencias": 1.0
+    }
+  },
+  {
+    "id": "2735014",
+    "nombre": "P. IVANOV",
+    "equipo": "HESTIA MENORCA",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2735014",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950650&ti=1",
+    "estadisticas": {
+      "puntos": 10.0,
+      "rebotes": 3.0,
+      "asistencias": 1.0
+    }
+  },
+  {
+    "id": "2003549",
+    "nombre": "J. GOMEZ GOMEZ",
+    "equipo": "HESTIA MENORCA",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2003549",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950650&ti=1",
+    "estadisticas": {
+      "puntos": 10.0,
+      "rebotes": 3.0,
+      "asistencias": 1.0
+    }
+  },
+  {
+    "id": "1496030",
+    "nombre": "P. FIGUERAS LOPEZ",
+    "equipo": "HESTIA MENORCA",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=1496030",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950650&ti=1",
+    "estadisticas": {
+      "puntos": 5.0,
+      "rebotes": 6.0,
+      "asistencias": 9.0
+    }
+  },
+  {
+    "id": "1759354",
+    "nombre": "G. DIKE EGUN",
+    "equipo": "HESTIA MENORCA",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=1759354",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950650&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 3.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "1676845",
+    "nombre": "D. ALDERETE DIAZ",
+    "equipo": "HESTIA MENORCA",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=1676845",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950650&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "1381662",
+    "nombre": "S. LLORENTE PAZ",
+    "equipo": "HESTIA MENORCA",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=1381662",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950650&ti=1",
+    "estadisticas": {
+      "puntos": 3.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "1784407",
+    "nombre": "P. MOLINS CALDERON",
+    "equipo": "HESTIA MENORCA",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=1784407",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950650&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 1.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2462416",
+    "nombre": "E. STOILOV",
+    "equipo": "HESTIA MENORCA",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2462416",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950650&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2781800",
+    "nombre": "S. MC DONNELL",
+    "equipo": "HESTIA MENORCA",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2781800",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950650&ti=1",
+    "estadisticas": {
+      "puntos": 14.0,
+      "rebotes": 3.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2735842",
+    "nombre": "M. LUKOVIC",
+    "equipo": "HESTIA MENORCA",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2735842",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950650&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 5.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "1382456",
+    "nombre": "V. ARTEAGA GONZALEZ",
+    "equipo": "HESTIA MENORCA",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=1382456",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950650&ti=1",
+    "estadisticas": {
+      "puntos": 13.0,
+      "rebotes": 7.0,
+      "asistencias": 2.0
     }
   },
   {
@@ -6042,8 +7358,8 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2736302",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951082&ti=1",
     "estadisticas": {
-      "puntos": 9.0,
-      "rebotes": 4.0,
+      "puntos": 4.5,
+      "rebotes": 2.5,
       "asistencias": 0.0
     }
   },
@@ -6056,8 +7372,8 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2432613",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951082&ti=1",
     "estadisticas": {
-      "puntos": 12.0,
-      "rebotes": 4.0,
+      "puntos": 9.5,
+      "rebotes": 5.5,
       "asistencias": 2.0
     }
   },
@@ -6070,9 +7386,9 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=975683",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951082&ti=1",
     "estadisticas": {
-      "puntos": 0.0,
-      "rebotes": 0.0,
-      "asistencias": 1.0
+      "puntos": 4.5,
+      "rebotes": 1.0,
+      "asistencias": 0.5
     }
   },
   {
@@ -6084,9 +7400,9 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=1375056",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951082&ti=1",
     "estadisticas": {
-      "puntos": 7.0,
+      "puntos": 6.5,
       "rebotes": 3.0,
-      "asistencias": 4.0
+      "asistencias": 2.5
     }
   },
   {
@@ -6098,9 +7414,9 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2532108",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951082&ti=1",
     "estadisticas": {
-      "puntos": 8.0,
-      "rebotes": 7.0,
-      "asistencias": 3.0
+      "puntos": 10.0,
+      "rebotes": 4.0,
+      "asistencias": 2.0
     }
   },
   {
@@ -6112,9 +7428,9 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=1704138",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951082&ti=1",
     "estadisticas": {
-      "puntos": 4.0,
-      "rebotes": 6.0,
-      "asistencias": 3.0
+      "puntos": 8.0,
+      "rebotes": 5.5,
+      "asistencias": 2.0
     }
   },
   {
@@ -6127,7 +7443,7 @@
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951082&ti=1",
     "estadisticas": {
       "puntos": 0.0,
-      "rebotes": 1.0,
+      "rebotes": 0.5,
       "asistencias": 0.0
     }
   },
@@ -6140,9 +7456,9 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2752000",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951082&ti=1",
     "estadisticas": {
-      "puntos": 12.0,
-      "rebotes": 1.0,
-      "asistencias": 1.0
+      "puntos": 6.5,
+      "rebotes": 1.5,
+      "asistencias": 0.5
     }
   },
   {
@@ -6154,9 +7470,9 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2703447",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951082&ti=1",
     "estadisticas": {
-      "puntos": 5.0,
-      "rebotes": 7.0,
-      "asistencias": 4.0
+      "puntos": 7.0,
+      "rebotes": 6.0,
+      "asistencias": 2.5
     }
   },
   {
@@ -6168,9 +7484,9 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2740906",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951082&ti=1",
     "estadisticas": {
-      "puntos": 18.0,
-      "rebotes": 6.0,
-      "asistencias": 1.0
+      "puntos": 16.5,
+      "rebotes": 7.0,
+      "asistencias": 0.5
     }
   },
   {
@@ -6196,9 +7512,9 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2631378",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950928&ti=1",
     "estadisticas": {
-      "puntos": 7.0,
-      "rebotes": 2.0,
-      "asistencias": 1.0
+      "puntos": 5.5,
+      "rebotes": 3.0,
+      "asistencias": 1.5
     }
   },
   {
@@ -6210,9 +7526,9 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2787694",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950928&ti=1",
     "estadisticas": {
-      "puntos": 2.0,
+      "puntos": 3.5,
       "rebotes": 0.0,
-      "asistencias": 1.0
+      "asistencias": 0.5
     }
   },
   {
@@ -6224,9 +7540,9 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2274935",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950928&ti=1",
     "estadisticas": {
-      "puntos": 10.0,
+      "puntos": 8.0,
       "rebotes": 2.0,
-      "asistencias": 2.0
+      "asistencias": 1.0
     }
   },
   {
@@ -6238,9 +7554,9 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=703084",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950928&ti=1",
     "estadisticas": {
-      "puntos": 12.0,
-      "rebotes": 4.0,
-      "asistencias": 4.0
+      "puntos": 9.0,
+      "rebotes": 2.5,
+      "asistencias": 2.5
     }
   },
   {
@@ -6266,9 +7582,9 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=1572736",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950928&ti=1",
     "estadisticas": {
-      "puntos": 0.0,
-      "rebotes": 2.0,
-      "asistencias": 5.0
+      "puntos": 3.5,
+      "rebotes": 2.5,
+      "asistencias": 2.5
     }
   },
   {
@@ -6281,8 +7597,8 @@
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950928&ti=1",
     "estadisticas": {
       "puntos": 5.0,
-      "rebotes": 2.0,
-      "asistencias": 3.0
+      "rebotes": 3.0,
+      "asistencias": 1.5
     }
   },
   {
@@ -6294,9 +7610,9 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=1572741",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950928&ti=1",
     "estadisticas": {
-      "puntos": 6.0,
-      "rebotes": 8.0,
-      "asistencias": 0.0
+      "puntos": 5.5,
+      "rebotes": 5.0,
+      "asistencias": 1.0
     }
   },
   {
@@ -6308,8 +7624,8 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2325358",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950928&ti=1",
     "estadisticas": {
-      "puntos": 0.0,
-      "rebotes": 0.0,
+      "puntos": 7.0,
+      "rebotes": 2.0,
       "asistencias": 0.0
     }
   },
@@ -6322,9 +7638,9 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2274976",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950928&ti=1",
     "estadisticas": {
-      "puntos": 9.0,
-      "rebotes": 3.0,
-      "asistencias": 1.0
+      "puntos": 5.5,
+      "rebotes": 2.0,
+      "asistencias": 0.5
     }
   },
   {
@@ -6336,9 +7652,9 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2642682",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950928&ti=1",
     "estadisticas": {
-      "puntos": 14.0,
-      "rebotes": 3.0,
-      "asistencias": 1.0
+      "puntos": 11.5,
+      "rebotes": 1.5,
+      "asistencias": 0.5
     }
   },
   {
@@ -7641,6 +8957,132 @@
       "puntos": 2.0,
       "rebotes": 1.0,
       "asistencias": 1.0
+    }
+  },
+  {
+    "id": "2378856",
+    "nombre": "Y. NZOSA MANZILA",
+    "equipo": "FLEXICAR FUENLABRADA",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2378856",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951321&ti=1",
+    "estadisticas": {
+      "puntos": 6.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2349620",
+    "nombre": "C. OKITO KANYINDA",
+    "equipo": "FLEXICAR FUENLABRADA",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2349620",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951321&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "1938697",
+    "nombre": "J. LOBO MARTORELL",
+    "equipo": "GRUPO URETA TIZONA BURGOS",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=1938697",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950726&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2325671",
+    "nombre": "A. ALONSO RUIZ",
+    "equipo": "GRUPO URETA TIZONA BURGOS",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2325671",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950726&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "1591996",
+    "nombre": "J. CARRALERO MARTIN",
+    "equipo": "INVEREADY GIPUZKOA",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=1591996",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950759&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2303399",
+    "nombre": "E. MARTINEZ CENDON",
+    "equipo": "INVEREADY GIPUZKOA",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2303399",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950759&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2157874",
+    "nombre": "V. ALVES BENITE ",
+    "equipo": "REAL BETIS BALONCESTO",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2157874",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=950951&ti=1",
+    "estadisticas": {
+      "puntos": 5.0,
+      "rebotes": 1.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "1394852",
+    "nombre": "G. BLAT BAEZA",
+    "equipo": "ODILO FC CARTAGENA CB",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=1394852",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951078&ti=1",
+    "estadisticas": {
+      "puntos": 6.0,
+      "rebotes": 2.0,
+      "asistencias": 2.0
+    }
+  },
+  {
+    "id": "2797515",
+    "nombre": "L. GNJIDIC",
+    "equipo": "SÚPER AGROPAL PALENCIA",
+    "genero": "masculino",
+    "competicion": "PRIMERA FEB",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2797515",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=951848&ti=1",
+    "estadisticas": {
+      "puntos": 3.0,
+      "rebotes": 4.0,
+      "asistencias": 0.0
     }
   }
 ]
