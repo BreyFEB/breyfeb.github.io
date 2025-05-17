@@ -20,235 +20,6 @@
                         "Competition": "PRIMERA FEB",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "0",
-                        "ID": 2470250,
-                        "GameCode": null,
-                        "Place": "MOVISTAR ARENA",
-                        "TeamAID": 951466,
-                        "TeamA": "MOVISTAR ESTUDIANTES",
-                        "ScoreA": 83,
-                        "TeamACode": "28000100",
-                        "TeamAClubCode": "280001",
-                        "TeamBID": 950759,
-                        "TeamB": "INVEREADY GIPUZKOA",
-                        "TeamBCode": "20046000",
-                        "TeamBClubCode": "200460",
-                        "ScoreB": 71,
-                        "StartTime": "2025-05-16T19:30:00",
-                        "StartTimeUTC": "2025-05-16T17:30:00Z",
-                        "_GameTime": "0001-01-01T00:00:00",
-                        "GameTime": "00:00",
-                        "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951466&ti=1",
-                        "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950759&ti=1",
-                        "Quarter": 4,
-                        "Time": "FINAL",
-                        "Status": 3,
-                        "Timezone": null,
-                        "Duration": 0,
-                        "Quarters": [
-                            {
-                                "n": "1",
-                                "scoreA": "23",
-                                "scoreB": "18"
-                            },
-                            {
-                                "n": "2",
-                                "scoreA": "18",
-                                "scoreB": "11"
-                            },
-                            {
-                                "n": "3",
-                                "scoreA": "22",
-                                "scoreB": "16"
-                            },
-                            {
-                                "n": "4",
-                                "scoreA": "20",
-                                "scoreB": "26"
-                            }
-                        ],
-                        "Season": null,
-                        "SeasonID": null
-                    },
-                    {
-                        "CompID": "115",
-                        "CompCode": null,
-                        "Competition": "PRIMERA FEB",
-                        "RoundID": 0,
-                        "Round": null,
-                        "Stage": "0",
-                        "ID": 2470260,
-                        "GameCode": null,
-                        "Place": "MULTIUSOS FONTES DO SAR",
-                        "TeamAID": 952033,
-                        "TeamA": "MONBUS OBRADOIRO",
-                        "ScoreA": 87,
-                        "TeamACode": "15040900",
-                        "TeamAClubCode": "150409",
-                        "TeamBID": 951848,
-                        "TeamB": "SÚPER AGROPAL PALENCIA",
-                        "TeamBCode": "34000707",
-                        "TeamBClubCode": "340007",
-                        "ScoreB": 83,
-                        "StartTime": "2025-05-16T20:00:00",
-                        "StartTimeUTC": "2025-05-16T18:00:00Z",
-                        "_GameTime": "0001-01-01T00:00:00",
-                        "GameTime": "00:00",
-                        "LogoA": "https://imagenes.feb.es/imagen.aspx?i=952033&ti=1",
-                        "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951848&ti=1",
-                        "Quarter": 4,
-                        "Time": "FINAL",
-                        "Status": 3,
-                        "Timezone": null,
-                        "Duration": 0,
-                        "Quarters": [
-                            {
-                                "n": "1",
-                                "scoreA": "28",
-                                "scoreB": "32"
-                            },
-                            {
-                                "n": "2",
-                                "scoreA": "17",
-                                "scoreB": "12"
-                            },
-                            {
-                                "n": "3",
-                                "scoreA": "19",
-                                "scoreB": "19"
-                            },
-                            {
-                                "n": "4",
-                                "scoreA": "23",
-                                "scoreB": "20"
-                            }
-                        ],
-                        "Season": null,
-                        "SeasonID": null
-                    },
-                    {
-                        "CompID": "115",
-                        "CompCode": null,
-                        "Competition": "PRIMERA FEB",
-                        "RoundID": 0,
-                        "Round": null,
-                        "Stage": "0",
-                        "ID": 2470245,
-                        "GameCode": null,
-                        "Place": "FERNANDO MARTIN, PABELLON",
-                        "TeamAID": 951321,
-                        "TeamA": "FLEXICAR FUENLABRADA",
-                        "ScoreA": 92,
-                        "TeamACode": "28332300",
-                        "TeamAClubCode": "283323",
-                        "TeamBID": 950726,
-                        "TeamB": "GRUPO URETA TIZONA BURGOS",
-                        "TeamBCode": "09024901",
-                        "TeamBClubCode": "090249",
-                        "ScoreB": 62,
-                        "StartTime": "2025-05-16T20:30:00",
-                        "StartTimeUTC": "2025-05-16T18:30:00Z",
-                        "_GameTime": "0001-01-01T00:00:00",
-                        "GameTime": "00:00",
-                        "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951321&ti=1",
-                        "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950726&ti=1",
-                        "Quarter": 4,
-                        "Time": "FINAL",
-                        "Status": 3,
-                        "Timezone": null,
-                        "Duration": 0,
-                        "Quarters": [
-                            {
-                                "n": "1",
-                                "scoreA": "23",
-                                "scoreB": "11"
-                            },
-                            {
-                                "n": "2",
-                                "scoreA": "25",
-                                "scoreB": "16"
-                            },
-                            {
-                                "n": "3",
-                                "scoreA": "20",
-                                "scoreB": "17"
-                            },
-                            {
-                                "n": "4",
-                                "scoreA": "24",
-                                "scoreB": "18"
-                            }
-                        ],
-                        "Season": null,
-                        "SeasonID": null
-                    },
-                    {
-                        "CompID": "115",
-                        "CompCode": null,
-                        "Competition": "PRIMERA FEB",
-                        "RoundID": 0,
-                        "Round": null,
-                        "Stage": "0",
-                        "ID": 2470255,
-                        "GameCode": null,
-                        "Place": "PALACIO MUNICIPAL DE DEPORTES SAN PABLO",
-                        "TeamAID": 950951,
-                        "TeamA": "REAL BETIS BALONCESTO",
-                        "ScoreA": 95,
-                        "TeamACode": "41000600",
-                        "TeamAClubCode": "410006",
-                        "TeamBID": 951078,
-                        "TeamB": "ODILO FC CARTAGENA CB",
-                        "TeamBCode": "30018800",
-                        "TeamBClubCode": "300188",
-                        "ScoreB": 94,
-                        "StartTime": "2025-05-16T20:45:00",
-                        "StartTimeUTC": "2025-05-16T18:45:00Z",
-                        "_GameTime": "0001-01-01T00:00:00",
-                        "GameTime": "00:00",
-                        "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950951&ti=1",
-                        "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951078&ti=1",
-                        "Quarter": 5,
-                        "Time": "FINAL",
-                        "Status": 3,
-                        "Timezone": null,
-                        "Duration": 0,
-                        "Quarters": [
-                            {
-                                "n": "1",
-                                "scoreA": "21",
-                                "scoreB": "20"
-                            },
-                            {
-                                "n": "2",
-                                "scoreA": "21",
-                                "scoreB": "16"
-                            },
-                            {
-                                "n": "3",
-                                "scoreA": "15",
-                                "scoreB": "22"
-                            },
-                            {
-                                "n": "4",
-                                "scoreA": "28",
-                                "scoreB": "27"
-                            },
-                            {
-                                "n": "5",
-                                "scoreA": "10",
-                                "scoreB": "9"
-                            }
-                        ],
-                        "Season": null,
-                        "SeasonID": null
-                    },
-                    {
-                        "CompID": "115",
-                        "CompCode": null,
-                        "Competition": "PRIMERA FEB",
-                        "RoundID": 0,
-                        "Round": null,
                         "Stage": "2",
                         "ID": 2470251,
                         "GameCode": null,
@@ -389,7 +160,7 @@
                 "id": "118",
                 "name": "Segunda FEB",
                 "gamescount": 4,
-                "nowplaying": 2,
+                "nowplaying": 1,
                 "order": 3,
                 "GAMES": [
                     {
@@ -419,8 +190,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950682&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950809&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:55",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -460,22 +231,22 @@
                         "Place": "Polideportivo Sa Pedrera",
                         "TeamAID": 950733,
                         "TeamA": "CLASS BASQUET SANT ANTONI",
-                        "ScoreA": 47,
+                        "ScoreA": 63,
                         "TeamACode": "07020127",
                         "TeamAClubCode": "070201",
                         "TeamBID": 950692,
                         "TeamB": "C.B. PRAT",
                         "TeamBCode": "08013900",
                         "TeamBClubCode": "080139",
-                        "ScoreB": 53,
+                        "ScoreB": 78,
                         "StartTime": "2025-05-17T19:30:00",
                         "StartTimeUTC": "2025-05-17T17:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950733&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950692&ti=1",
-                        "Quarter": 2,
-                        "Time": "00:20:00",
+                        "Quarter": 3,
+                        "Time": "00:28:19",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -489,6 +260,11 @@
                                 "n": "2",
                                 "scoreA": "23",
                                 "scoreB": "21"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "16",
+                                "scoreB": "25"
                             }
                         ],
                         "Season": null,
@@ -641,14 +417,14 @@
                         "Place": "Pabellón Municipal La Lobilla",
                         "TeamAID": 950940,
                         "TeamA": "UNICAJA MIJAS",
-                        "ScoreA": 38,
+                        "ScoreA": 47,
                         "TeamACode": "29000164",
                         "TeamAClubCode": "290001",
                         "TeamBID": 951834,
                         "TeamB": "RECOLETAS ZAMORA",
                         "TeamBCode": "49005701",
                         "TeamBClubCode": "490057",
-                        "ScoreB": 35,
+                        "ScoreB": 42,
                         "StartTime": "2025-05-17T19:45:00",
                         "StartTimeUTC": "2025-05-17T17:45:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -656,7 +432,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950940&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951834&ti=1",
                         "Quarter": 3,
-                        "Time": "00:20:00",
+                        "Time": "00:24:48",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -673,8 +449,8 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "9",
+                                "scoreB": "7"
                             }
                         ],
                         "Season": null,
