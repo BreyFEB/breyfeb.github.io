@@ -160,7 +160,7 @@
                 "id": "118",
                 "name": "Segunda FEB",
                 "gamescount": 4,
-                "nowplaying": 1,
+                "nowplaying": 0,
                 "order": 3,
                 "GAMES": [
                     {
@@ -190,8 +190,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950954&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952045&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:15",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -348,7 +348,7 @@
                 "id": "253",
                 "name": "CE Clubes Cad Fem",
                 "gamescount": 48,
-                "nowplaying": 2,
+                "nowplaying": 1,
                 "order": 19,
                 "GAMES": [
                     {
@@ -755,14 +755,14 @@
                         "Place": "POLIDEPORTIVO MUNICIPAL CIUDAD DE ALGECIRAS",
                         "TeamAID": 962266,
                         "TeamA": "CELTA FEMXA ZORKA",
-                        "ScoreA": 29,
+                        "ScoreA": 38,
                         "TeamACode": "36000199",
                         "TeamAClubCode": "360001",
                         "TeamBID": 961618,
                         "TeamB": "MOVISTAR ESTUDIANTES 'A'",
                         "TeamBCode": "28000138",
                         "TeamBClubCode": "280001",
-                        "ScoreB": 57,
+                        "ScoreB": 62,
                         "StartTime": "2025-05-18T12:30:00",
                         "StartTimeUTC": "2025-05-18T10:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -770,8 +770,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=962266&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=961618&ti=1",
                         "Quarter": 4,
-                        "Time": "00:32:12",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -792,8 +792,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "0",
-                                "scoreB": "2"
+                                "scoreA": "9",
+                                "scoreB": "7"
                             }
                         ],
                         "Season": null,
@@ -811,22 +811,22 @@
                         "Place": "POLIDEPORTIVO MUNICIPAL LA LÍNEA",
                         "TeamAID": 966582,
                         "TeamA": " 09-CIUDAD DE CORDOBA",
-                        "ScoreA": 27,
+                        "ScoreA": 44,
                         "TeamACode": "14403153",
                         "TeamAClubCode": "144031",
                         "TeamBID": 961627,
                         "TeamB": "BRAINS MORALEJA 'A'",
                         "TeamBCode": "28039736",
                         "TeamBClubCode": "280397",
-                        "ScoreB": 29,
+                        "ScoreB": 41,
                         "StartTime": "2025-05-18T13:30:00",
                         "StartTimeUTC": "2025-05-18T11:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=966582&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=961627&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:20:00",
+                        "Quarter": 4,
+                        "Time": "00:33:18",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -843,8 +843,13 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "16",
+                                "scoreB": "8"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "1",
+                                "scoreB": "4"
                             }
                         ],
                         "Season": null,
@@ -2572,22 +2577,22 @@
                         "Place": "PAB. MANUEL PRADO",
                         "TeamAID": 957745,
                         "TeamA": "SHIPPING TRANSPORT UPB GANDIA A",
-                        "ScoreA": 34,
+                        "ScoreA": 51,
                         "TeamACode": "46058413",
                         "TeamAClubCode": "460584",
                         "TeamBID": 952255,
                         "TeamB": "JOVENTUT BADALONA  A",
                         "TeamBCode": "08000504",
                         "TeamBClubCode": "080005",
-                        "ScoreB": 41,
+                        "ScoreB": 67,
                         "StartTime": "2025-05-18T13:30:00",
                         "StartTimeUTC": "2025-05-18T11:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=957745&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952255&ti=1",
-                        "Quarter": 2,
-                        "Time": "00:18:33",
+                        "Quarter": 3,
+                        "Time": "00:26:52",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -2599,8 +2604,13 @@
                             },
                             {
                                 "n": "2",
-                                "scoreA": "20",
-                                "scoreB": "14"
+                                "scoreA": "22",
+                                "scoreB": "19"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "15",
+                                "scoreB": "21"
                             }
                         ],
                         "Season": null,
@@ -2618,22 +2628,22 @@
                         "Place": "COMPLEJO DEPORTIVO CIUDAD DE CÁDIZ",
                         "TeamAID": 963044,
                         "TeamA": "GAZTE BERRIAK",
-                        "ScoreA": 25,
+                        "ScoreA": 38,
                         "TeamACode": "31020131",
                         "TeamAClubCode": "310201",
                         "TeamBID": 960915,
                         "TeamB": "BASQUET CORUÑA U16",
                         "TeamBCode": "15022051",
                         "TeamBClubCode": "150220",
-                        "ScoreB": 39,
+                        "ScoreB": 60,
                         "StartTime": "2025-05-18T13:30:00",
                         "StartTimeUTC": "2025-05-18T11:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=963044&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=960915&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:20:00",
+                        "Quarter": 4,
+                        "Time": "00:30:00",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -2650,6 +2660,11 @@
                             },
                             {
                                 "n": "3",
+                                "scoreA": "13",
+                                "scoreB": "21"
+                            },
+                            {
+                                "n": "4",
                                 "scoreA": "0",
                                 "scoreB": "0"
                             }
