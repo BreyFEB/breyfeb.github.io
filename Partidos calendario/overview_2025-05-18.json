@@ -244,7 +244,7 @@
                 "id": "118",
                 "name": "Segunda FEB",
                 "gamescount": 4,
-                "nowplaying": 1,
+                "nowplaying": 0,
                 "order": 3,
                 "GAMES": [
                     {
@@ -330,8 +330,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951845&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950923&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:55",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -2499,7 +2499,7 @@
                 "id": "252",
                 "name": "CE Clubes Cad Masc",
                 "gamescount": 48,
-                "nowplaying": 2,
+                "nowplaying": 1,
                 "order": 20,
                 "GAMES": [
                     {
@@ -3242,14 +3242,14 @@
                         "Place": "PAB. MANUEL PRADO",
                         "TeamAID": 954793,
                         "TeamA": "SANDÁ ELECTROCLIMA - C.B. L'HOSPITALET A",
-                        "ScoreA": 56,
+                        "ScoreA": 60,
                         "TeamACode": "08000909",
                         "TeamAClubCode": "080009",
                         "TeamBID": 962401,
                         "TeamB": "REAL MADRID ´A´",
                         "TeamBCode": "28000203",
                         "TeamBClubCode": "280002",
-                        "ScoreB": 89,
+                        "ScoreB": 99,
                         "StartTime": "2025-05-18T19:30:00",
                         "StartTimeUTC": "2025-05-18T17:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -3257,7 +3257,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=954793&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=962401&ti=1",
                         "Quarter": 4,
-                        "Time": "00:34:27",
+                        "Time": "00:39:53",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -3279,8 +3279,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "15",
-                                "scoreB": "9"
+                                "scoreA": "19",
+                                "scoreB": "19"
                             }
                         ],
                         "Season": null,
@@ -3369,8 +3369,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=952773&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=976041&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:52",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
