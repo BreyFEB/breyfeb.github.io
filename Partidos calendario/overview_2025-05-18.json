@@ -11,7 +11,7 @@
                 "id": "115",
                 "name": "Primera FEB",
                 "gamescount": 4,
-                "nowplaying": 3,
+                "nowplaying": 4,
                 "order": 1,
                 "GAMES": [
                     {
@@ -26,22 +26,22 @@
                         "Place": "MOVISTAR ACADEMY MAGARIÑOS, PABELLON",
                         "TeamAID": 951466,
                         "TeamA": "MOVISTAR ESTUDIANTES",
-                        "ScoreA": 19,
+                        "ScoreA": 32,
                         "TeamACode": "28000100",
                         "TeamAClubCode": "280001",
                         "TeamBID": 950759,
                         "TeamB": "INVEREADY GIPUZKOA",
                         "TeamBCode": "20046000",
                         "TeamBClubCode": "200460",
-                        "ScoreB": 21,
+                        "ScoreB": 33,
                         "StartTime": "2025-05-18T18:00:00",
                         "StartTimeUTC": "2025-05-18T16:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951466&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950759&ti=1",
-                        "Quarter": 2,
-                        "Time": "00:10:00",
+                        "Quarter": 3,
+                        "Time": "00:20:00",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -53,6 +53,11 @@
                             },
                             {
                                 "n": "2",
+                                "scoreA": "13",
+                                "scoreB": "12"
+                            },
+                            {
+                                "n": "3",
                                 "scoreA": "0",
                                 "scoreB": "0"
                             }
@@ -72,30 +77,35 @@
                         "Place": "MULTIUSOS FONTES DO SAR",
                         "TeamAID": 952033,
                         "TeamA": "MONBUS OBRADOIRO",
-                        "ScoreA": 11,
+                        "ScoreA": 36,
                         "TeamACode": "15040900",
                         "TeamAClubCode": "150409",
                         "TeamBID": 951848,
                         "TeamB": "SÚPER AGROPAL PALENCIA",
                         "TeamBCode": "34000707",
                         "TeamBClubCode": "340007",
-                        "ScoreB": 13,
+                        "ScoreB": 28,
                         "StartTime": "2025-05-18T18:15:00",
                         "StartTimeUTC": "2025-05-18T16:15:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=952033&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951848&ti=1",
-                        "Quarter": 1,
-                        "Time": "00:07:58",
+                        "Quarter": 2,
+                        "Time": "00:19:00",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
                             {
                                 "n": "1",
-                                "scoreA": "11",
-                                "scoreB": "13"
+                                "scoreA": "17",
+                                "scoreB": "19"
+                            },
+                            {
+                                "n": "2",
+                                "scoreA": "19",
+                                "scoreB": "9"
                             }
                         ],
                         "Season": null,
@@ -113,30 +123,35 @@
                         "Place": "PALACIO MUNICIPAL DE DEPORTES SAN PABLO",
                         "TeamAID": 950951,
                         "TeamA": "REAL BETIS BALONCESTO",
-                        "ScoreA": 0,
+                        "ScoreA": 24,
                         "TeamACode": "41000600",
                         "TeamAClubCode": "410006",
                         "TeamBID": 951078,
                         "TeamB": "ODILO FC CARTAGENA CB",
                         "TeamBCode": "30018800",
                         "TeamBClubCode": "300188",
-                        "ScoreB": 0,
+                        "ScoreB": 29,
                         "StartTime": "2025-05-18T18:30:00",
                         "StartTimeUTC": "2025-05-18T16:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950951&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951078&ti=1",
-                        "Quarter": 1,
-                        "Time": "00:00:00",
+                        "Quarter": 2,
+                        "Time": "00:11:32",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
                             {
                                 "n": "1",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "22",
+                                "scoreB": "24"
+                            },
+                            {
+                                "n": "2",
+                                "scoreA": "2",
+                                "scoreB": "5"
                             }
                         ],
                         "Season": null,
@@ -168,12 +183,18 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951321&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950726&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:00:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     }
@@ -298,22 +319,22 @@
                         "Place": "PABELLÓN MUNICIPAL LA LOBILLA",
                         "TeamAID": 950939,
                         "TeamA": "CAB ESTEPONA JARDÍN DE LA COSTA DEL SOL",
-                        "ScoreA": 43,
+                        "ScoreA": 72,
                         "TeamACode": "29026320",
                         "TeamAClubCode": "290263",
                         "TeamBID": 950940,
                         "TeamB": "UNICAJA MIJAS",
                         "TeamBCode": "29000164",
                         "TeamBClubCode": "290001",
-                        "ScoreB": 32,
+                        "ScoreB": 50,
                         "StartTime": "2025-05-18T17:30:00",
                         "StartTimeUTC": "2025-05-18T15:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950939&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950940&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:20:00",
+                        "Quarter": 4,
+                        "Time": "00:31:41",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -330,8 +351,13 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "28",
+                                "scoreB": "11"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "1",
+                                "scoreB": "7"
                             }
                         ],
                         "Season": null,
@@ -962,14 +988,14 @@
                         "Place": "PABELLÓN CUBIERTO SOLDADO MANUEL AGUILAR",
                         "TeamAID": 965035,
                         "TeamA": "MERCADO CENTRAL OSB A1",
-                        "ScoreA": 46,
+                        "ScoreA": 53,
                         "TeamACode": "50086907",
                         "TeamAClubCode": "500869",
                         "TeamBID": 967856,
                         "TeamB": "UBJ GRIS-TOLDOS EL PORTAL",
                         "TeamBCode": "11040809",
                         "TeamBClubCode": "110408",
-                        "ScoreB": 48,
+                        "ScoreB": 56,
                         "StartTime": "2025-05-18T17:00:00",
                         "StartTimeUTC": "2025-05-18T15:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -977,7 +1003,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=965035&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=967856&ti=1",
                         "Quarter": 4,
-                        "Time": "00:31:07",
+                        "Time": "00:39:52",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -999,8 +1025,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "2",
-                                "scoreB": "5"
+                                "scoreA": "9",
+                                "scoreB": "13"
                             }
                         ],
                         "Season": null,
@@ -1018,14 +1044,14 @@
                         "Place": "PABELLÓN MUNICIPAL CIUDAD DE SAN ROQUE",
                         "TeamAID": 954122,
                         "TeamA": "BALONCESTO VALDEPEÑAS",
-                        "ScoreA": 38,
+                        "ScoreA": 46,
                         "TeamACode": "13003056",
                         "TeamAClubCode": "130030",
                         "TeamBID": 959646,
                         "TeamB": "ASEVI ARASKI",
                         "TeamBCode": "01024197",
                         "TeamBClubCode": "010241",
-                        "ScoreB": 50,
+                        "ScoreB": 58,
                         "StartTime": "2025-05-18T17:00:00",
                         "StartTimeUTC": "2025-05-18T15:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -1033,8 +1059,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=954122&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=959646&ti=1",
                         "Quarter": 4,
-                        "Time": "00:36:24",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -1055,8 +1081,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "13",
-                                "scoreB": "6"
+                                "scoreA": "21",
+                                "scoreB": "14"
                             }
                         ],
                         "Season": null,
@@ -1074,22 +1100,22 @@
                         "Place": "POLIDEPORTIVO MUNICIPAL LA LÍNEA",
                         "TeamAID": 962950,
                         "TeamA": "KELLS COLLEGE",
-                        "ScoreA": 9,
+                        "ScoreA": 23,
                         "TeamACode": "39019604",
                         "TeamAClubCode": "390196",
                         "TeamBID": 956301,
                         "TeamB": "BARÇA CBS",
                         "TeamBCode": "08004210",
                         "TeamBClubCode": "080042",
-                        "ScoreB": 51,
+                        "ScoreB": 84,
                         "StartTime": "2025-05-18T17:30:00",
                         "StartTimeUTC": "2025-05-18T15:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=962950&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=956301&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:20:02",
+                        "Quarter": 4,
+                        "Time": "00:36:33",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -1106,8 +1132,13 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "8",
+                                "scoreB": "21"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "6",
+                                "scoreB": "12"
                             }
                         ],
                         "Season": null,
@@ -1154,7 +1185,7 @@
                         "Competition": "C ESP CLUBES CAD FEM",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2470326,
                         "GameCode": null,
                         "Place": "PABELLÓN MUNICIPAL CIUDAD DE SAN ROQUE",
@@ -1174,12 +1205,18 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=965317&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=963073&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:00:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -2919,30 +2956,40 @@
                         "Place": "PAB. MANUEL PRADO",
                         "TeamAID": 964721,
                         "TeamA": "UCAM MURCIA CB 'A'",
-                        "ScoreA": 11,
+                        "ScoreA": 32,
                         "TeamACode": "30001803",
                         "TeamAClubCode": "300018",
                         "TeamBID": 960677,
                         "TeamB": "FUNDACION BILBAO BASKET FUNDAZIOA",
                         "TeamBCode": "48042303",
                         "TeamBClubCode": "480423",
-                        "ScoreB": 23,
+                        "ScoreB": 54,
                         "StartTime": "2025-05-18T17:30:00",
                         "StartTimeUTC": "2025-05-18T15:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=964721&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=960677&ti=1",
-                        "Quarter": 1,
-                        "Time": "00:08:55",
+                        "Quarter": 3,
+                        "Time": "00:20:00",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
                             {
                                 "n": "1",
-                                "scoreA": "11",
-                                "scoreB": "23"
+                                "scoreA": "12",
+                                "scoreB": "26"
+                            },
+                            {
+                                "n": "2",
+                                "scoreA": "20",
+                                "scoreB": "28"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "0",
+                                "scoreB": "0"
                             }
                         ],
                         "Season": null,
@@ -2960,22 +3007,22 @@
                         "Place": "COMPLEJO DEPORTIVO CIUDAD DE CÁDIZ",
                         "TeamAID": 972458,
                         "TeamA": "EASO BASKET COMERCIAL AZKUE",
-                        "ScoreA": 27,
+                        "ScoreA": 55,
                         "TeamACode": "20030298",
                         "TeamAClubCode": "200302",
                         "TeamBID": 960634,
                         "TeamB": "IVECO REAL VALLADOLID BALONCESTO A",
                         "TeamBCode": "47036108",
                         "TeamBClubCode": "470361",
-                        "ScoreB": 36,
+                        "ScoreB": 60,
                         "StartTime": "2025-05-18T17:30:00",
                         "StartTimeUTC": "2025-05-18T15:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=972458&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=960634&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:20:00",
+                        "Quarter": 4,
+                        "Time": "00:31:40",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -2992,7 +3039,12 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "0",
+                                "scoreA": "23",
+                                "scoreB": "24"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "5",
                                 "scoreB": "0"
                             }
                         ],
@@ -3011,22 +3063,22 @@
                         "Place": "PABELLÓN MUNICIPAL ALMIRANTE LAHULÉ (PARQUE)",
                         "TeamAID": 970143,
                         "TeamA": "ABQ CALAHORRA CAD",
-                        "ScoreA": 42,
+                        "ScoreA": 53,
                         "TeamACode": "26025302",
                         "TeamAClubCode": "260253",
                         "TeamBID": 958230,
                         "TeamB": "ALIMERKA OVIEDO BALONCESTO 'A'",
                         "TeamBCode": "33130215",
                         "TeamBClubCode": "331302",
-                        "ScoreB": 42,
+                        "ScoreB": 61,
                         "StartTime": "2025-05-18T17:30:00",
                         "StartTimeUTC": "2025-05-18T15:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=970143&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=958230&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:21:31",
+                        "Quarter": 4,
+                        "Time": "00:33:38",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -3043,8 +3095,13 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "2",
-                                "scoreB": "6"
+                                "scoreA": "13",
+                                "scoreB": "21"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "0",
+                                "scoreB": "4"
                             }
                         ],
                         "Season": null,
