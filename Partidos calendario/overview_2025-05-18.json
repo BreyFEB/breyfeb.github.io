@@ -2499,7 +2499,7 @@
                 "id": "252",
                 "name": "CE Clubes Cad Masc",
                 "gamescount": 48,
-                "nowplaying": 1,
+                "nowplaying": 0,
                 "order": 20,
                 "GAMES": [
                     {
@@ -3257,8 +3257,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=954793&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=962401&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:53",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
