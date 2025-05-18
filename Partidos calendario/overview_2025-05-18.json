@@ -867,14 +867,14 @@
                         "Place": "POLIDEPORTIVO MUNICIPAL LA LÍNEA",
                         "TeamAID": 953852,
                         "TeamA": "LUCENTUM ALICANTE AZUL",
-                        "ScoreA": 14,
+                        "ScoreA": 15,
                         "TeamACode": "03058618",
                         "TeamAClubCode": "030586",
                         "TeamBID": 963863,
                         "TeamB": "CASADEMONT ZARAGOZA A",
                         "TeamBCode": "50031314",
                         "TeamBClubCode": "500313",
-                        "ScoreB": 21,
+                        "ScoreB": 23,
                         "StartTime": "2025-05-18T15:30:00",
                         "StartTimeUTC": "2025-05-18T13:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -882,15 +882,15 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=953852&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=963863&ti=1",
                         "Quarter": 1,
-                        "Time": "00:08:54",
+                        "Time": "00:09:15",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
                             {
                                 "n": "1",
-                                "scoreA": "14",
-                                "scoreB": "21"
+                                "scoreA": "15",
+                                "scoreB": "23"
                             }
                         ],
                         "Season": null,
@@ -2695,7 +2695,7 @@
                         "Place": "COMPLEJO DEPORTIVO CIUDAD DE CÁDIZ",
                         "TeamAID": 953908,
                         "TeamA": "EBA ",
-                        "ScoreA": 7,
+                        "ScoreA": 9,
                         "TeamACode": "02012821",
                         "TeamAClubCode": "020128",
                         "TeamBID": 967323,
@@ -2709,16 +2709,21 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=953908&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=967323&ti=1",
-                        "Quarter": 1,
-                        "Time": "00:09:34",
+                        "Quarter": 2,
+                        "Time": "00:10:00",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
                             {
                                 "n": "1",
-                                "scoreA": "7",
+                                "scoreA": "9",
                                 "scoreB": "23"
+                            },
+                            {
+                                "n": "2",
+                                "scoreA": "0",
+                                "scoreB": "0"
                             }
                         ],
                         "Season": null,
@@ -2743,7 +2748,7 @@
                         "TeamB": "FUNDACION ARO REAL BETIS BALONCESTO",
                         "TeamBCode": "41022304",
                         "TeamBClubCode": "410223",
-                        "ScoreB": 3,
+                        "ScoreB": 5,
                         "StartTime": "2025-05-18T15:30:00",
                         "StartTimeUTC": "2025-05-18T13:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -2751,7 +2756,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=962464&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=967487&ti=1",
                         "Quarter": 1,
-                        "Time": "00:02:59",
+                        "Time": "00:03:48",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -2759,7 +2764,7 @@
                             {
                                 "n": "1",
                                 "scoreA": "4",
-                                "scoreB": "3"
+                                "scoreB": "5"
                             }
                         ],
                         "Season": null,
