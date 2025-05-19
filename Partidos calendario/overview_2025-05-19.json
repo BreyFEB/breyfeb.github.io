@@ -1476,7 +1476,7 @@
                 "id": "252",
                 "name": "CE Clubes Cad Masc",
                 "gamescount": 48,
-                "nowplaying": 2,
+                "nowplaying": 0,
                 "order": 20,
                 "GAMES": [
                     {
@@ -2275,14 +2275,14 @@
                         "Place": "COMPLEJO DEPORTIVO CIUDAD DE CÁDIZ",
                         "TeamAID": 964721,
                         "TeamA": "UCAM MURCIA CB 'A'",
-                        "ScoreA": 39,
+                        "ScoreA": 50,
                         "TeamACode": "30001803",
                         "TeamAClubCode": "300018",
                         "TeamBID": 962401,
                         "TeamB": "REAL MADRID ´A´",
                         "TeamBCode": "28000203",
                         "TeamBClubCode": "280002",
-                        "ScoreB": 86,
+                        "ScoreB": 101,
                         "StartTime": "2025-05-19T19:30:00",
                         "StartTimeUTC": "2025-05-19T17:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -2290,8 +2290,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=964721&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=962401&ti=1",
                         "Quarter": 4,
-                        "Time": "00:32:58",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -2312,8 +2312,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "4",
-                                "scoreB": "12"
+                                "scoreA": "15",
+                                "scoreB": "27"
                             }
                         ],
                         "Season": null,
@@ -2346,8 +2346,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=958230&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952773&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:42",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
