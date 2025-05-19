@@ -11,7 +11,7 @@
                 "id": "253",
                 "name": "CE Clubes Cad Fem",
                 "gamescount": 48,
-                "nowplaying": 1,
+                "nowplaying": 0,
                 "order": 19,
                 "GAMES": [
                     {
@@ -866,14 +866,14 @@
                         "Place": "POLIDEPORTIVO MUNICIPAL CIUDAD DE ALGECIRAS",
                         "TeamAID": 966226,
                         "TeamA": "LA SALLE",
-                        "ScoreA": 42,
+                        "ScoreA": 46,
                         "TeamACode": "52003355",
                         "TeamAClubCode": "520033",
                         "TeamBID": 967856,
                         "TeamB": "UBJ GRIS-TOLDOS EL PORTAL",
                         "TeamBCode": "11040809",
                         "TeamBClubCode": "110408",
-                        "ScoreB": 78,
+                        "ScoreB": 86,
                         "StartTime": "2025-05-19T19:00:00",
                         "StartTimeUTC": "2025-05-19T17:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -881,8 +881,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=966226&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=967856&ti=1",
                         "Quarter": 4,
-                        "Time": "00:36:24",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -903,8 +903,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "2",
-                                "scoreB": "12"
+                                "scoreA": "6",
+                                "scoreB": "20"
                             }
                         ],
                         "Season": null,
@@ -1476,7 +1476,7 @@
                 "id": "252",
                 "name": "CE Clubes Cad Masc",
                 "gamescount": 48,
-                "nowplaying": 3,
+                "nowplaying": 2,
                 "order": 20,
                 "GAMES": [
                     {
@@ -2219,14 +2219,14 @@
                         "Place": "PABELLÓN MUNICIPAL ALMIRANTE LAHULÉ (PARQUE)",
                         "TeamAID": 972458,
                         "TeamA": "EASO BASKET COMERCIAL AZKUE",
-                        "ScoreA": 50,
+                        "ScoreA": 57,
                         "TeamACode": "20030298",
                         "TeamAClubCode": "200302",
                         "TeamBID": 959450,
                         "TeamB": "ZENTRO BASKET MADRID",
                         "TeamBCode": "28305722",
                         "TeamBClubCode": "283057",
-                        "ScoreB": 99,
+                        "ScoreB": 101,
                         "StartTime": "2025-05-19T19:30:00",
                         "StartTimeUTC": "2025-05-19T17:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -2234,8 +2234,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=972458&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=959450&ti=1",
                         "Quarter": 4,
-                        "Time": "00:38:08",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -2256,8 +2256,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "11",
-                                "scoreB": "21"
+                                "scoreA": "18",
+                                "scoreB": "23"
                             }
                         ],
                         "Season": null,
@@ -2275,22 +2275,22 @@
                         "Place": "COMPLEJO DEPORTIVO CIUDAD DE CÁDIZ",
                         "TeamAID": 964721,
                         "TeamA": "UCAM MURCIA CB 'A'",
-                        "ScoreA": 31,
+                        "ScoreA": 39,
                         "TeamACode": "30001803",
                         "TeamAClubCode": "300018",
                         "TeamBID": 962401,
                         "TeamB": "REAL MADRID ´A´",
                         "TeamBCode": "28000203",
                         "TeamBClubCode": "280002",
-                        "ScoreB": 54,
+                        "ScoreB": 86,
                         "StartTime": "2025-05-19T19:30:00",
                         "StartTimeUTC": "2025-05-19T17:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=964721&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=962401&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:20:37",
+                        "Quarter": 4,
+                        "Time": "00:32:58",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -2307,8 +2307,13 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "0",
-                                "scoreB": "2"
+                                "scoreA": "4",
+                                "scoreB": "22"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "4",
+                                "scoreB": "12"
                             }
                         ],
                         "Season": null,
@@ -2326,22 +2331,22 @@
                         "Place": "PAB. MANUEL PRADO",
                         "TeamAID": 958230,
                         "TeamA": "ALIMERKA OVIEDO BALONCESTO 'A'",
-                        "ScoreA": 55,
+                        "ScoreA": 78,
                         "TeamACode": "33130215",
                         "TeamAClubCode": "331302",
                         "TeamBID": 952773,
                         "TeamB": "CB SONSECA EUROCAJA RURAL",
                         "TeamBCode": "45013268",
                         "TeamBClubCode": "450132",
-                        "ScoreB": 58,
+                        "ScoreB": 73,
                         "StartTime": "2025-05-19T19:30:00",
                         "StartTimeUTC": "2025-05-19T17:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=958230&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952773&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:29:18",
+                        "Quarter": 4,
+                        "Time": "00:39:42",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -2358,8 +2363,13 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "17",
+                                "scoreA": "19",
                                 "scoreB": "18"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "21",
+                                "scoreB": "15"
                             }
                         ],
                         "Season": null,
