@@ -250,22 +250,22 @@
                         "Place": "POLIDEPORTIVO MUNICIPAL CIUDAD DE ALGECIRAS",
                         "TeamAID": 962638,
                         "TeamA": "ALCUDIA BASQUETBOL CLUB A",
-                        "ScoreA": 8,
+                        "ScoreA": 18,
                         "TeamACode": "07038202",
                         "TeamAClubCode": "070382",
                         "TeamBID": 964743,
                         "TeamB": "SPAR GRAN CANARIA",
                         "TeamBCode": "35000104",
                         "TeamBClubCode": "350001",
-                        "ScoreB": 21,
+                        "ScoreB": 54,
                         "StartTime": "2025-05-19T12:30:00",
                         "StartTimeUTC": "2025-05-19T10:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=962638&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=964743&ti=1",
-                        "Quarter": 1,
-                        "Time": "00:08:24",
+                        "Quarter": 3,
+                        "Time": "00:20:00",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -273,7 +273,17 @@
                             {
                                 "n": "1",
                                 "scoreA": "8",
-                                "scoreB": "21"
+                                "scoreB": "26"
+                            },
+                            {
+                                "n": "2",
+                                "scoreA": "10",
+                                "scoreB": "28"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "0",
+                                "scoreB": "0"
                             }
                         ],
                         "Season": null,
@@ -291,30 +301,35 @@
                         "Place": "PABELLÓN CUBIERTO SOLDADO MANUEL AGUILAR",
                         "TeamAID": 967955,
                         "TeamA": "SAN ANTONIO - JOSEFINAS",
-                        "ScoreA": 2,
+                        "ScoreA": 16,
                         "TeamACode": "10001507",
                         "TeamAClubCode": "100015",
                         "TeamBID": 963410,
                         "TeamB": "TOYOTA ADAREVA TENERIFE",
                         "TeamBCode": "38038702",
                         "TeamBClubCode": "380387",
-                        "ScoreB": 8,
+                        "ScoreB": 28,
                         "StartTime": "2025-05-19T12:30:00",
                         "StartTimeUTC": "2025-05-19T10:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=967955&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=963410&ti=1",
-                        "Quarter": 1,
-                        "Time": "00:06:41",
+                        "Quarter": 2,
+                        "Time": "00:15:38",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
                             {
                                 "n": "1",
-                                "scoreA": "2",
-                                "scoreB": "8"
+                                "scoreA": "10",
+                                "scoreB": "15"
+                            },
+                            {
+                                "n": "2",
+                                "scoreA": "6",
+                                "scoreB": "13"
                             }
                         ],
                         "Season": null,
@@ -332,30 +347,35 @@
                         "Place": "POLIDEPORTIVO MUNICIPAL LA LÍNEA",
                         "TeamAID": 958232,
                         "TeamA": "C.D.ART-CHIVO NORMAGRUP",
-                        "ScoreA": 12,
+                        "ScoreA": 30,
                         "TeamACode": "33001219",
                         "TeamAClubCode": "330012",
                         "TeamBID": 964644,
                         "TeamB": "CB ANEJAS FRANCES ARANDA TERUEL",
                         "TeamBCode": "44005207",
                         "TeamBClubCode": "440052",
-                        "ScoreB": 18,
+                        "ScoreB": 45,
                         "StartTime": "2025-05-19T12:30:00",
                         "StartTimeUTC": "2025-05-19T10:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=958232&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=964644&ti=1",
-                        "Quarter": 1,
-                        "Time": "00:08:27",
+                        "Quarter": 2,
+                        "Time": "00:19:54",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
                             {
                                 "n": "1",
-                                "scoreA": "12",
-                                "scoreB": "18"
+                                "scoreA": "14",
+                                "scoreB": "20"
+                            },
+                            {
+                                "n": "2",
+                                "scoreA": "16",
+                                "scoreB": "25"
                             }
                         ],
                         "Season": null,
@@ -373,29 +393,34 @@
                         "Place": "PABELLÓN MUNICIPAL CIUDAD DE SAN ROQUE",
                         "TeamAID": 961618,
                         "TeamA": "MOVISTAR ESTUDIANTES 'A'",
-                        "ScoreA": 4,
+                        "ScoreA": 18,
                         "TeamACode": "28000138",
                         "TeamAClubCode": "280001",
                         "TeamBID": 952716,
                         "TeamB": "VALENCIA BASKET ",
                         "TeamBCode": "46000208",
                         "TeamBClubCode": "460002",
-                        "ScoreB": 15,
+                        "ScoreB": 30,
                         "StartTime": "2025-05-19T12:30:00",
                         "StartTimeUTC": "2025-05-19T10:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=961618&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952716&ti=1",
-                        "Quarter": 1,
-                        "Time": "00:09:31",
+                        "Quarter": 2,
+                        "Time": "00:19:53",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
                             {
                                 "n": "1",
-                                "scoreA": "4",
+                                "scoreA": "5",
+                                "scoreB": "15"
+                            },
+                            {
+                                "n": "2",
+                                "scoreA": "13",
                                 "scoreB": "15"
                             }
                         ],
@@ -1248,7 +1273,7 @@
                 "id": "252",
                 "name": "CE Clubes Cad Masc",
                 "gamescount": 48,
-                "nowplaying": 3,
+                "nowplaying": 0,
                 "order": 20,
                 "GAMES": [
                     {
@@ -1431,14 +1456,14 @@
                         "Place": "PABELLÓN MUNICIPAL ALMIRANTE LAHULÉ (PARQUE)",
                         "TeamAID": 965282,
                         "TeamA": "UNICAJA ANDALUCÍA",
-                        "ScoreA": 55,
+                        "ScoreA": 64,
                         "TeamACode": "29000188",
                         "TeamAClubCode": "290001",
                         "TeamBID": 962029,
                         "TeamB": "PABLO LASO ACADEMY 'A'",
                         "TeamBCode": "28297301",
                         "TeamBClubCode": "282973",
-                        "ScoreB": 59,
+                        "ScoreB": 71,
                         "StartTime": "2025-05-19T11:30:00",
                         "StartTimeUTC": "2025-05-19T09:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -1446,8 +1471,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=965282&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=962029&ti=1",
                         "Quarter": 4,
-                        "Time": "00:33:25",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -1468,8 +1493,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "8",
-                                "scoreB": "3"
+                                "scoreA": "17",
+                                "scoreB": "15"
                             }
                         ],
                         "Season": null,
@@ -1487,14 +1512,14 @@
                         "Place": "COMPLEJO DEPORTIVO CIUDAD DE CÁDIZ",
                         "TeamAID": 962509,
                         "TeamA": "CANTERBURY SCHOOL ",
-                        "ScoreA": 38,
+                        "ScoreA": 49,
                         "TeamACode": "35015102",
                         "TeamAClubCode": "350151",
                         "TeamBID": 954794,
                         "TeamB": "BARÇA",
                         "TeamBCode": "08000303",
                         "TeamBClubCode": "080003",
-                        "ScoreB": 69,
+                        "ScoreB": 96,
                         "StartTime": "2025-05-19T11:30:00",
                         "StartTimeUTC": "2025-05-19T09:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -1502,8 +1527,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=962509&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=954794&ti=1",
                         "Quarter": 4,
-                        "Time": "00:30:00",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -1520,12 +1545,12 @@
                             {
                                 "n": "3",
                                 "scoreA": "11",
-                                "scoreB": "25"
+                                "scoreB": "26"
                             },
                             {
                                 "n": "4",
-                                "scoreA": "0",
-                                "scoreB": "2"
+                                "scoreA": "11",
+                                "scoreB": "28"
                             }
                         ],
                         "Season": null,
@@ -1543,14 +1568,14 @@
                         "Place": "PAB. MANUEL PRADO",
                         "TeamAID": 972604,
                         "TeamA": "LA SALLE",
-                        "ScoreA": 33,
+                        "ScoreA": 40,
                         "TeamACode": "52003350",
                         "TeamAClubCode": "520033",
                         "TeamBID": 956589,
                         "TeamB": "BASKONIA 'A'",
                         "TeamBCode": "01000198",
                         "TeamBClubCode": "010001",
-                        "ScoreB": 80,
+                        "ScoreB": 100,
                         "StartTime": "2025-05-19T11:30:00",
                         "StartTimeUTC": "2025-05-19T09:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -1558,8 +1583,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=972604&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=956589&ti=1",
                         "Quarter": 4,
-                        "Time": "00:33:03",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -1580,8 +1605,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "7",
-                                "scoreB": "8"
+                                "scoreA": "14",
+                                "scoreB": "28"
                             }
                         ],
                         "Season": null,
@@ -1593,7 +1618,7 @@
                         "Competition": "C ESP CLUBES CAD MASC",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "2",
+                        "Stage": "0",
                         "ID": 2470381,
                         "GameCode": null,
                         "Place": "COMPLEJO DEPORTIVO CIUDAD DE CÁDIZ",
@@ -1628,7 +1653,7 @@
                         "Competition": "C ESP CLUBES CAD MASC",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "2",
+                        "Stage": "0",
                         "ID": 2470412,
                         "GameCode": null,
                         "Place": "PAB. MANUEL PRADO",
