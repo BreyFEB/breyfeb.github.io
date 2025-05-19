@@ -11,7 +11,7 @@
                 "id": "253",
                 "name": "CE Clubes Cad Fem",
                 "gamescount": 48,
-                "nowplaying": 0,
+                "nowplaying": 2,
                 "order": 19,
                 "GAMES": [
                     {
@@ -40,12 +40,18 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=962266&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951189&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:00:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -55,7 +61,7 @@
                         "Competition": "C ESP CLUBES CAD FEM",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "2",
+                        "Stage": "0",
                         "ID": 2470304,
                         "GameCode": null,
                         "Place": "POLIDEPORTIVO MUNICIPAL CIUDAD DE ALGECIRAS",
@@ -145,12 +151,18 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=978124&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=961428&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:00:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -1155,22 +1167,22 @@
                         "Place": "COMPLEJO DEPORTIVO CIUDAD DE CÁDIZ",
                         "TeamAID": 952713,
                         "TeamA": "VALENCIA BASKET ",
-                        "ScoreA": 31,
+                        "ScoreA": 60,
                         "TeamACode": "46000203",
                         "TeamAClubCode": "460002",
                         "TeamBID": 963857,
                         "TeamB": "CASADEMONT ZARAGOZA A",
                         "TeamBCode": "50031303",
                         "TeamBClubCode": "500313",
-                        "ScoreB": 25,
+                        "ScoreB": 38,
                         "StartTime": "2025-05-19T09:30:00",
                         "StartTimeUTC": "2025-05-19T07:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=952713&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=963857&ti=1",
-                        "Quarter": 2,
-                        "Time": "00:10:58",
+                        "Quarter": 3,
+                        "Time": "00:20:00",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -1182,8 +1194,13 @@
                             },
                             {
                                 "n": "2",
-                                "scoreA": "1",
-                                "scoreB": "2"
+                                "scoreA": "30",
+                                "scoreB": "15"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "0",
+                                "scoreB": "0"
                             }
                         ],
                         "Season": null,
@@ -1201,22 +1218,22 @@
                         "Place": "PABELLÓN MUNICIPAL ALMIRANTE LAHULÉ (PARQUE)",
                         "TeamAID": 959386,
                         "TeamA": "BALIDEA OBRADOIRO",
-                        "ScoreA": 21,
+                        "ScoreA": 43,
                         "TeamACode": "15000304",
                         "TeamAClubCode": "150003",
                         "TeamBID": 957776,
                         "TeamB": "GRAN CANARIA",
                         "TeamBCode": "35000298",
                         "TeamBClubCode": "350002",
-                        "ScoreB": 26,
+                        "ScoreB": 51,
                         "StartTime": "2025-05-19T09:30:00",
                         "StartTimeUTC": "2025-05-19T07:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=959386&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=957776&ti=1",
-                        "Quarter": 2,
-                        "Time": "00:12:35",
+                        "Quarter": 3,
+                        "Time": "00:20:06",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -1228,8 +1245,13 @@
                             },
                             {
                                 "n": "2",
-                                "scoreA": "5",
-                                "scoreB": "11"
+                                "scoreA": "27",
+                                "scoreB": "36"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "0",
+                                "scoreB": "0"
                             }
                         ],
                         "Season": null,
@@ -1247,22 +1269,22 @@
                         "Place": "PAB. MANUEL PRADO",
                         "TeamAID": 966498,
                         "TeamA": "CB IMPRENTA BAHIA SAN AGUSTIN A",
-                        "ScoreA": 24,
+                        "ScoreA": 40,
                         "TeamACode": "07003424",
                         "TeamAClubCode": "070034",
                         "TeamBID": 967939,
                         "TeamB": "CBA",
                         "TeamBCode": "06014005",
                         "TeamBClubCode": "060140",
-                        "ScoreB": 23,
+                        "ScoreB": 43,
                         "StartTime": "2025-05-19T09:30:00",
                         "StartTimeUTC": "2025-05-19T07:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=966498&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=967939&ti=1",
-                        "Quarter": 2,
-                        "Time": "00:13:05",
+                        "Quarter": 3,
+                        "Time": "00:20:26",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -1274,8 +1296,13 @@
                             },
                             {
                                 "n": "2",
-                                "scoreA": "7",
-                                "scoreB": "11"
+                                "scoreA": "23",
+                                "scoreB": "30"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "0",
+                                "scoreB": "1"
                             }
                         ],
                         "Season": null,
