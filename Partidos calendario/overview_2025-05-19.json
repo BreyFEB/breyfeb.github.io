@@ -873,7 +873,7 @@
                         "TeamB": "UBJ GRIS-TOLDOS EL PORTAL",
                         "TeamBCode": "11040809",
                         "TeamBClubCode": "110408",
-                        "ScoreB": 76,
+                        "ScoreB": 78,
                         "StartTime": "2025-05-19T19:00:00",
                         "StartTimeUTC": "2025-05-19T17:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -881,7 +881,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=966226&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=967856&ti=1",
                         "Quarter": 4,
-                        "Time": "00:35:29",
+                        "Time": "00:36:24",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -904,7 +904,7 @@
                             {
                                 "n": "4",
                                 "scoreA": "2",
-                                "scoreB": "10"
+                                "scoreB": "12"
                             }
                         ],
                         "Season": null,
@@ -2226,7 +2226,7 @@
                         "TeamB": "ZENTRO BASKET MADRID",
                         "TeamBCode": "28305722",
                         "TeamBClubCode": "283057",
-                        "ScoreB": 96,
+                        "ScoreB": 99,
                         "StartTime": "2025-05-19T19:30:00",
                         "StartTimeUTC": "2025-05-19T17:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -2234,7 +2234,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=972458&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=959450&ti=1",
                         "Quarter": 4,
-                        "Time": "00:37:08",
+                        "Time": "00:38:08",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -2257,7 +2257,7 @@
                             {
                                 "n": "4",
                                 "scoreA": "11",
-                                "scoreB": "18"
+                                "scoreB": "21"
                             }
                         ],
                         "Season": null,
@@ -2282,7 +2282,7 @@
                         "TeamB": "REAL MADRID ´A´",
                         "TeamBCode": "28000203",
                         "TeamBClubCode": "280002",
-                        "ScoreB": 52,
+                        "ScoreB": 54,
                         "StartTime": "2025-05-19T19:30:00",
                         "StartTimeUTC": "2025-05-19T17:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -2290,7 +2290,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=964721&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=962401&ti=1",
                         "Quarter": 3,
-                        "Time": "00:20:00",
+                        "Time": "00:20:37",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -2308,7 +2308,7 @@
                             {
                                 "n": "3",
                                 "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreB": "2"
                             }
                         ],
                         "Season": null,
@@ -2326,14 +2326,14 @@
                         "Place": "PAB. MANUEL PRADO",
                         "TeamAID": 958230,
                         "TeamA": "ALIMERKA OVIEDO BALONCESTO 'A'",
-                        "ScoreA": 53,
+                        "ScoreA": 55,
                         "TeamACode": "33130215",
                         "TeamAClubCode": "331302",
                         "TeamBID": 952773,
                         "TeamB": "CB SONSECA EUROCAJA RURAL",
                         "TeamBCode": "45013268",
                         "TeamBClubCode": "450132",
-                        "ScoreB": 56,
+                        "ScoreB": 58,
                         "StartTime": "2025-05-19T19:30:00",
                         "StartTimeUTC": "2025-05-19T17:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -2341,7 +2341,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=958230&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952773&ti=1",
                         "Quarter": 3,
-                        "Time": "00:28:03",
+                        "Time": "00:29:18",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -2358,8 +2358,8 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "15",
-                                "scoreB": "16"
+                                "scoreA": "17",
+                                "scoreB": "18"
                             }
                         ],
                         "Season": null,
