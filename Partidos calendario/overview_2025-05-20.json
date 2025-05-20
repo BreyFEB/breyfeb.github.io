@@ -1326,7 +1326,7 @@
                 "id": "252",
                 "name": "CE Clubes Cad Masc",
                 "gamescount": 32,
-                "nowplaying": 2,
+                "nowplaying": 1,
                 "order": 20,
                 "GAMES": [
                     {
@@ -1677,23 +1677,23 @@
                         "Place": "COMPLEJO DEPORTIVO CIUDAD DE CÁDIZ",
                         "TeamAID": 960915,
                         "TeamA": "BASQUET CORUÑA U16",
-                        "ScoreA": 48,
+                        "ScoreA": 62,
                         "TeamACode": "15022051",
                         "TeamAClubCode": "150220",
                         "TeamBID": 967323,
                         "TeamB": "PANADERIA SALVADOR FCBG",
                         "TeamBCode": "18014217",
                         "TeamBClubCode": "180142",
-                        "ScoreB": 76,
+                        "ScoreB": 95,
                         "StartTime": "2025-05-20T13:30:00",
                         "StartTimeUTC": "2025-05-20T11:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=960915&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=967323&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:27:49",
-                        "Status": 2,
+                        "Quarter": 4,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -1709,8 +1709,13 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "13",
-                                "scoreB": "20"
+                                "scoreA": "15",
+                                "scoreB": "26"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "12",
+                                "scoreB": "13"
                             }
                         ],
                         "Season": null,
@@ -1728,22 +1733,22 @@
                         "Place": "PAB. MANUEL PRADO",
                         "TeamAID": 962464,
                         "TeamA": "CAJASIETE CANARIAS",
-                        "ScoreA": 54,
+                        "ScoreA": 70,
                         "TeamACode": "38023202",
                         "TeamAClubCode": "380232",
                         "TeamBID": 957745,
                         "TeamB": "SHIPPING TRANSPORT UPB GANDIA A",
                         "TeamBCode": "46058413",
                         "TeamBClubCode": "460584",
-                        "ScoreB": 48,
+                        "ScoreB": 66,
                         "StartTime": "2025-05-20T13:30:00",
                         "StartTimeUTC": "2025-05-20T11:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=962464&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=957745&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:23:22",
+                        "Quarter": 4,
+                        "Time": "00:34:51",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -1760,8 +1765,13 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "12",
-                                "scoreB": "6"
+                                "scoreA": "24",
+                                "scoreB": "12"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "4",
+                                "scoreB": "12"
                             }
                         ],
                         "Season": null,
@@ -1773,7 +1783,7 @@
                         "Competition": "C ESP CLUBES CAD MASC",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "3",
+                        "Stage": "0",
                         "ID": 2470413,
                         "GameCode": null,
                         "Place": "COMPLEJO DEPORTIVO CIUDAD DE CÁDIZ",
