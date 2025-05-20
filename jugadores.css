@@ -81,125 +81,93 @@ button:focus-visible {
 /* ===========================
    HEADER
    =========================== */
-.header {
-  padding: 0;
-  background: var(--color-background);
-  border-bottom: 1px solid var(--color-border);
-}
-
-.header-inner {
-  max-width: var(--container-max-width);
-  margin: 0 auto;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: var(--spacing-sm) var(--spacing-md);
-}
-
-.header-left {
-  display: flex;
-  align-items: center;
-  gap: 0;
-}
-
-.header-left nav {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-md);
-}
-
-.logo {
-  height: 100px;
-  width: auto;
-}
-
-.logo-feb {
-  height: 60px;
-  width: auto;
-  display: block;
-  object-fit: contain;
-  margin: 0 auto;
-}
-
-.logo-cadete {
-  height: 48px;
-  width: auto;
-  display: block;
-}
-
-.header-divider {
-  width: 2px;
-  height: 48px;
-  background: var(--color-text);
-  opacity: 0.3;
-  margin: 0 var(--spacing-lg);
-  display: inline-block;
-}
-
-/* Navigation */
-.main-nav {
-  width: 100%;
-}
-
-.main-nav ul {
-  display: flex;
-  gap: var(--spacing-xl);
-  align-items: center;
-  justify-content: center;
-  max-width: var(--container-max-width);
-  margin: 0 auto;
-  width: 100%;
-}
-
-.nav-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: 'Manifold', Arial, sans-serif;
-  font-weight: bold;
-  font-size: 0.9em;
-  cursor: pointer;
-}
-
-.nav-item a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--spacing-xs);
-  color: var(--color-text);
-}
-
-.nav-item img {
-  width: 36px;
-  height: 36px;
-  filter: brightness(0) invert(1);
-  transition: filter var(--transition-fast);
-}
-
-.nav-item:hover img {
-  filter: brightness(1.2) invert(1);
-}
-
-.nav-item.active img,
-.nav-item.active svg {
-  filter: brightness(0) saturate(100%) invert(49%) sepia(100%) saturate(2637%) hue-rotate(358deg) brightness(102%) contrast(101%);
-}
-
-.nav-item span {
-  color: var(--color-text);
-  transition: color var(--transition-fast);
-}
-
-.nav-item.active span {
-  color: var(--color-primary);
-}
+   header {
+    padding: 0;
+    background: linear-gradient(to right, #2F4170, #111C4E);
+    border-bottom: 1px solid #53565A;
+  }
+  .header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+  }
+  .header-left nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .logo {
+    height: 100px;
+  }
+  .main-nav {
+    width: 100%;
+  }
+  .main-nav ul {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Manifold', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 0.9em;
+    cursor: pointer;
+  }
+  .nav-item a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    color: #ffffff;
+  }
+  /* Iconos no seleccionados a blanco */
+  .nav-item img {
+    width: 36px;
+    height: 36px;
+    filter: brightness(0) invert(1);
+    transition: filter 0.2s ease-in-out;
+  }
+  .nav-item:hover img {
+    filter: brightness(1.2) invert(1);
+  }
+  /* Icono activo en naranja #FF9E1B */
+  .nav-item.active img {
+    filter: brightness(0) saturate(100%) invert(49%) sepia(100%) saturate(2637%) hue-rotate(358deg) brightness(102%) contrast(101%);
+  }
+  .nav-item.active span {
+    color: #FF9E1B;
+  }
+  .icon {
+    width: 36px;
+    height: 36px;
+    filter: brightness(0) invert(1);
+  }
+  .icon:hover {
+    filter: brightness(1.2) invert(1);
+  }
+  
 
 /* ===========================
    CONTENEDOR PRINCIPAL
@@ -717,8 +685,8 @@ button:focus-visible {
 }
 
 .footer-logo {
-  width: 120px;
-  margin-bottom: var(--spacing-sm);
+  height: 110px;
+  margin-bottom: 10px;
 }
 
 .footer-right {
