@@ -94,6 +94,9 @@ body {
 .nav-item.active img {
   filter: brightness(0) saturate(100%) invert(49%) sepia(100%) saturate(2637%) hue-rotate(358deg) brightness(102%) contrast(101%);
 }
+.nav-item.active svg {
+  filter: brightness(0) saturate(100%) invert(49%) sepia(100%) saturate(2637%) hue-rotate(358deg) brightness(102%) contrast(101%);
+}
 .nav-item.active span {
   color: #FF9E1B;
 }
@@ -106,6 +109,11 @@ body {
   filter: brightness(1.2) invert(1);
 }
 
+.match-header {
+  padding: 20px;
+  display: flex;             /* 💡 required for justify-content to work */
+  justify-content: center;
+}
 
 /***********************************************
  * MINI-HEADER STICKY
@@ -299,7 +307,7 @@ body {
  * SECCIONES (match-section)
  ***********************************************/
 .match-section {
-  width: 1500px;
+  width: 90%;
   margin: 20px auto;
   background-color: #fff;
   color: #111C4E;
@@ -425,7 +433,7 @@ table tbody td:hover {
   gap: 18px;
 }
 .footer-logo {
-  height: 110px;
+  height: 72px;
   margin-bottom: 10px;
 }
 .footer-text {
@@ -646,9 +654,7 @@ table tbody td:hover {
   .score-result {
     font-size: 1.2em;
   }
-  .match-section {
-    width: 100%;
-  }
+
   table {
     min-width: 1000px;
     display: block;
@@ -862,12 +868,12 @@ body {
 .hero-content {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   gap: 40px;
-  width: 100%;
   max-width: none;
   margin: 0;
   height: 100%;
+  width: 80%;
 }
 
 /* Bloque del marcador en el centro */
@@ -1046,7 +1052,7 @@ body {
   text-decoration: underline;
 }
 
-/* Asegurar que las nuevas secciones queden centradas en el contenedor blanco */
+/* Asegurar que las nuevas secciones queden centradas en el contenedor blanco 
 .match-section {
   width: 1500px;
   margin: 20px auto;
@@ -1055,7 +1061,7 @@ body {
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 40px;
-}
+} */
 
 /* Ajuste para los contenedores de gráficos para que sean más grandes y centrados */
 .chart-container {
