@@ -2629,7 +2629,7 @@
                         "Place": "PAB. MANUEL PRADO",
                         "TeamAID": 959450,
                         "TeamA": "ZENTRO BASKET MADRID",
-                        "ScoreA": 73,
+                        "ScoreA": 77,
                         "TeamACode": "28305722",
                         "TeamAClubCode": "283057",
                         "TeamBID": 960634,
@@ -2644,7 +2644,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=959450&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=960634&ti=1",
                         "Quarter": 4,
-                        "Time": "00:37:03",
+                        "Time": "00:38:16",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -2666,7 +2666,7 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "16",
+                                "scoreA": "20",
                                 "scoreB": "7"
                             }
                         ],
