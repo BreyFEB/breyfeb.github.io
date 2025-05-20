@@ -343,12 +343,19 @@ body {
   padding: 20px;
   margin-bottom: 20px;
   color: #111C4E;
+  width: 100%;
+  overflow-x: scroll;
 }
 .team-box-score h2 {
   text-align: center;
   margin-bottom: 20px;
   color: #111C4E;
 }
+
+.match-section h2 {
+  text-align: center;
+}
+
 .team-heading {
   display: flex;
   align-items: center;
@@ -362,10 +369,11 @@ body {
   object-fit: cover;
 }
 table {
-  width: 100%;
   border-collapse: collapse;
   background-color: #fff;
   color: #111C4E;
+  width: 100%;
+  min-width: max-content; /* Ensure table doesn't collapse */
 }
 th, td {
   padding: 8px 12px;
@@ -873,7 +881,7 @@ body {
   max-width: none;
   margin: 0;
   height: 100%;
-  width: 80%;
+  width: 90%;
 }
 
 /* Bloque del marcador en el centro */
