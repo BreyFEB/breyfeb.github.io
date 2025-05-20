@@ -589,7 +589,7 @@
                 "id": "253",
                 "name": "CE Clubes Cad Fem",
                 "gamescount": 32,
-                "nowplaying": 0,
+                "nowplaying": 4,
                 "order": 19,
                 "GAMES": [
                     {
@@ -604,26 +604,42 @@
                         "Place": "PABELLÓN CUBIERTO SOLDADO MANUEL AGUILAR",
                         "TeamAID": 952716,
                         "TeamA": "VALENCIA BASKET ",
-                        "ScoreA": 0,
+                        "ScoreA": 47,
                         "TeamACode": "46000208",
                         "TeamAClubCode": "460002",
                         "TeamBID": 962266,
                         "TeamB": "CELTA FEMXA ZORKA",
                         "TeamBCode": "36000199",
                         "TeamBClubCode": "360001",
-                        "ScoreB": 0,
+                        "ScoreB": 31,
                         "StartTime": "2025-05-20T10:30:00",
                         "StartTimeUTC": "2025-05-20T08:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=952716&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=962266&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 3,
+                        "Time": "00:20:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "25",
+                                "scoreB": "7"
+                            },
+                            {
+                                "n": "2",
+                                "scoreA": "22",
+                                "scoreB": "24"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -639,26 +655,42 @@
                         "Place": "POLIDEPORTIVO MUNICIPAL CIUDAD DE ALGECIRAS",
                         "TeamAID": 959718,
                         "TeamA": "PONCE GINEMEDICA VALLADOLID",
-                        "ScoreA": 0,
+                        "ScoreA": 38,
                         "TeamACode": "47002405",
                         "TeamAClubCode": "470024",
                         "TeamBID": 967955,
                         "TeamB": "SAN ANTONIO - JOSEFINAS",
                         "TeamBCode": "10001507",
                         "TeamBClubCode": "100015",
-                        "ScoreB": 0,
+                        "ScoreB": 32,
                         "StartTime": "2025-05-20T10:30:00",
                         "StartTimeUTC": "2025-05-20T08:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=959718&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=967955&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 3,
+                        "Time": "00:20:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "16",
+                                "scoreB": "16"
+                            },
+                            {
+                                "n": "2",
+                                "scoreA": "22",
+                                "scoreB": "16"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -674,26 +706,42 @@
                         "Place": "PABELLÓN MUNICIPAL CIUDAD DE SAN ROQUE",
                         "TeamAID": 956086,
                         "TeamA": "BFB BRICOCENTRO",
-                        "ScoreA": 0,
+                        "ScoreA": 41,
                         "TeamACode": "09028601",
                         "TeamAClubCode": "090286",
                         "TeamBID": 962638,
                         "TeamB": "ALCUDIA BASQUETBOL CLUB A",
                         "TeamBCode": "07038202",
                         "TeamBClubCode": "070382",
-                        "ScoreB": 0,
+                        "ScoreB": 19,
                         "StartTime": "2025-05-20T10:30:00",
                         "StartTimeUTC": "2025-05-20T08:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=956086&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=962638&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 3,
+                        "Time": "00:21:23",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "19",
+                                "scoreB": "12"
+                            },
+                            {
+                                "n": "2",
+                                "scoreA": "14",
+                                "scoreB": "7"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "8",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -709,26 +757,42 @@
                         "Place": "POLIDEPORTIVO MUNICIPAL LA LÍNEA",
                         "TeamAID": 961428,
                         "TeamA": "ALZ MOTORS MUTILBASKET",
-                        "ScoreA": 0,
+                        "ScoreA": 22,
                         "TeamACode": "31015207",
                         "TeamAClubCode": "310152",
                         "TeamBID": 958232,
                         "TeamB": "C.D.ART-CHIVO NORMAGRUP",
                         "TeamBCode": "33001219",
                         "TeamBClubCode": "330012",
-                        "ScoreB": 0,
+                        "ScoreB": 18,
                         "StartTime": "2025-05-20T10:30:00",
                         "StartTimeUTC": "2025-05-20T08:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=961428&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=958232&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 3,
+                        "Time": "00:20:22",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "9",
+                                "scoreB": "10"
+                            },
+                            {
+                                "n": "2",
+                                "scoreA": "13",
+                                "scoreB": "8"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -1158,7 +1222,7 @@
                 "id": "252",
                 "name": "CE Clubes Cad Masc",
                 "gamescount": 32,
-                "nowplaying": 3,
+                "nowplaying": 0,
                 "order": 20,
                 "GAMES": [
                     {
@@ -1173,23 +1237,23 @@
                         "Place": "PABELLÓN MUNICIPAL ALMIRANTE LAHULÉ (PARQUE)",
                         "TeamAID": 963857,
                         "TeamA": "CASADEMONT ZARAGOZA A",
-                        "ScoreA": 25,
+                        "ScoreA": 66,
                         "TeamACode": "50031303",
                         "TeamAClubCode": "500313",
                         "TeamBID": 962509,
                         "TeamB": "CANTERBURY SCHOOL ",
                         "TeamBCode": "35015102",
                         "TeamBClubCode": "350151",
-                        "ScoreB": 30,
+                        "ScoreB": 55,
                         "StartTime": "2025-05-20T09:30:00",
                         "StartTimeUTC": "2025-05-20T07:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=963857&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=962509&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:21:35",
-                        "Status": 2,
+                        "Quarter": 4,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -1205,8 +1269,13 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "2",
-                                "scoreB": "4"
+                                "scoreA": "20",
+                                "scoreB": "16"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "23",
+                                "scoreB": "13"
                             }
                         ],
                         "Season": null,
@@ -1224,23 +1293,23 @@
                         "Place": "COMPLEJO DEPORTIVO CIUDAD DE CÁDIZ",
                         "TeamAID": 967939,
                         "TeamA": "CBA",
-                        "ScoreA": 44,
+                        "ScoreA": 77,
                         "TeamACode": "06014005",
                         "TeamAClubCode": "060140",
                         "TeamBID": 972604,
                         "TeamB": "LA SALLE",
                         "TeamBCode": "52003350",
                         "TeamBClubCode": "520033",
-                        "ScoreB": 28,
+                        "ScoreB": 47,
                         "StartTime": "2025-05-20T09:30:00",
                         "StartTimeUTC": "2025-05-20T07:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=967939&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=972604&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:20:00",
-                        "Status": 2,
+                        "Quarter": 4,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -1256,8 +1325,13 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "16",
+                                "scoreB": "10"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "17",
+                                "scoreB": "9"
                             }
                         ],
                         "Season": null,
@@ -1275,23 +1349,23 @@
                         "Place": "PAB. MANUEL PRADO",
                         "TeamAID": 962029,
                         "TeamA": "PABLO LASO ACADEMY 'A'",
-                        "ScoreA": 61,
+                        "ScoreA": 119,
                         "TeamACode": "28297301",
                         "TeamAClubCode": "282973",
                         "TeamBID": 959386,
                         "TeamB": "BALIDEA OBRADOIRO",
                         "TeamBCode": "15000304",
                         "TeamBClubCode": "150003",
-                        "ScoreB": 29,
+                        "ScoreB": 68,
                         "StartTime": "2025-05-20T09:30:00",
                         "StartTimeUTC": "2025-05-20T07:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=962029&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=959386&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:21:01",
-                        "Status": 2,
+                        "Quarter": 4,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -1307,8 +1381,13 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "5",
-                                "scoreB": "3"
+                                "scoreA": "29",
+                                "scoreB": "18"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "34",
+                                "scoreB": "24"
                             }
                         ],
                         "Season": null,
@@ -1320,7 +1399,7 @@
                         "Competition": "C ESP CLUBES CAD MASC",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "3",
+                        "Stage": "0",
                         "ID": 2470408,
                         "GameCode": null,
                         "Place": "COMPLEJO DEPORTIVO CIUDAD DE CÁDIZ",
@@ -1355,7 +1434,7 @@
                         "Competition": "C ESP CLUBES CAD MASC",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "3",
+                        "Stage": "0",
                         "ID": 2470390,
                         "GameCode": null,
                         "Place": "PAB. MANUEL PRADO",
@@ -1390,7 +1469,7 @@
                         "Competition": "C ESP CLUBES CAD MASC",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "3",
+                        "Stage": "0",
                         "ID": 2470372,
                         "GameCode": null,
                         "Place": "PABELLÓN MUNICIPAL ALMIRANTE LAHULÉ (PARQUE)",
