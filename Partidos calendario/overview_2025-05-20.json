@@ -1318,7 +1318,7 @@
                         "TeamB": "BRAINS MORALEJA 'A'",
                         "TeamBCode": "28039736",
                         "TeamBClubCode": "280397",
-                        "ScoreB": 0,
+                        "ScoreB": 1,
                         "StartTime": "2025-05-20T19:00:00",
                         "StartTimeUTC": "2025-05-20T17:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -1326,7 +1326,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=963863&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=961627&ti=1",
                         "Quarter": 1,
-                        "Time": "00:00:07",
+                        "Time": "00:00:44",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -1334,7 +1334,7 @@
                             {
                                 "n": "1",
                                 "scoreA": "2",
-                                "scoreB": "0"
+                                "scoreB": "1"
                             }
                         ],
                         "Season": null,
@@ -1998,7 +1998,7 @@
                         "TeamB": "ALIMERKA OVIEDO BALONCESTO 'A'",
                         "TeamBCode": "33130215",
                         "TeamBClubCode": "331302",
-                        "ScoreB": 44,
+                        "ScoreB": 46,
                         "StartTime": "2025-05-20T17:30:00",
                         "StartTimeUTC": "2025-05-20T15:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -2006,7 +2006,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=976041&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=958230&ti=1",
                         "Quarter": 3,
-                        "Time": "00:26:04",
+                        "Time": "00:26:56",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -2024,7 +2024,7 @@
                             {
                                 "n": "3",
                                 "scoreA": "8",
-                                "scoreB": "8"
+                                "scoreB": "10"
                             }
                         ],
                         "Season": null,
@@ -2042,7 +2042,7 @@
                         "Place": "PABELLÓN MUNICIPAL ALMIRANTE LAHULÉ (PARQUE)",
                         "TeamAID": 954793,
                         "TeamA": "SANDÁ ELECTROCLIMA - C.B. L'HOSPITALET A",
-                        "ScoreA": 68,
+                        "ScoreA": 69,
                         "TeamACode": "08000909",
                         "TeamAClubCode": "080009",
                         "TeamBID": 964721,
@@ -2057,7 +2057,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=954793&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=964721&ti=1",
                         "Quarter": 4,
-                        "Time": "00:31:33",
+                        "Time": "00:31:36",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -2079,7 +2079,7 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "10",
+                                "scoreA": "11",
                                 "scoreB": "4"
                             }
                         ],
