@@ -104,6 +104,9 @@
   .nav-item.active img {
     filter: brightness(0) saturate(100%) invert(49%) sepia(100%) saturate(2637%) hue-rotate(358deg) brightness(102%) contrast(101%);
   }
+  .nav-item.active svg {
+    filter: brightness(0) saturate(100%) invert(49%) sepia(100%) saturate(2637%) hue-rotate(358deg) brightness(102%) contrast(101%);
+  }
   .nav-item.active span {
     color: #FF9E1B;
   }
