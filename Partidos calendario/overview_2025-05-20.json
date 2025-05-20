@@ -589,7 +589,7 @@
                 "id": "253",
                 "name": "CE Clubes Cad Fem",
                 "gamescount": 32,
-                "nowplaying": 4,
+                "nowplaying": 0,
                 "order": 19,
                 "GAMES": [
                     {
@@ -1291,8 +1291,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=965035&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=966226&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:58",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -1339,7 +1339,7 @@
                         "TeamB": "BRAINS MORALEJA 'A'",
                         "TeamBCode": "28039736",
                         "TeamBClubCode": "280397",
-                        "ScoreB": 55,
+                        "ScoreB": 58,
                         "StartTime": "2025-05-20T19:00:00",
                         "StartTimeUTC": "2025-05-20T17:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -1347,8 +1347,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=963863&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=961627&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:21",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -1370,7 +1370,7 @@
                             {
                                 "n": "4",
                                 "scoreA": "22",
-                                "scoreB": "20"
+                                "scoreB": "23"
                             }
                         ],
                         "Season": null,
@@ -1388,14 +1388,14 @@
                         "Place": "PABELLÓN MUNICIPAL CIUDAD DE SAN ROQUE",
                         "TeamAID": 965298,
                         "TeamA": "UNICAJA ANDALUCÍA",
-                        "ScoreA": 54,
+                        "ScoreA": 56,
                         "TeamACode": "29000167",
                         "TeamAClubCode": "290001",
                         "TeamBID": 956301,
                         "TeamB": "BARÇA CBS",
                         "TeamBCode": "08004210",
                         "TeamBClubCode": "080042",
-                        "ScoreB": 63,
+                        "ScoreB": 67,
                         "StartTime": "2025-05-20T19:00:00",
                         "StartTimeUTC": "2025-05-20T17:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -1403,8 +1403,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=965298&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=956301&ti=1",
                         "Quarter": 4,
-                        "Time": "00:38:47",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -1425,8 +1425,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "11",
-                                "scoreB": "17"
+                                "scoreA": "13",
+                                "scoreB": "21"
                             }
                         ],
                         "Season": null,
@@ -1459,8 +1459,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=963073&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=959646&ti=1",
                         "Quarter": 4,
-                        "Time": "00:38:22",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -1494,7 +1494,7 @@
                 "id": "252",
                 "name": "CE Clubes Cad Masc",
                 "gamescount": 32,
-                "nowplaying": 3,
+                "nowplaying": 2,
                 "order": 20,
                 "GAMES": [
                     {
@@ -2237,22 +2237,22 @@
                         "Place": "PABELLÓN MUNICIPAL ALMIRANTE LAHULÉ (PARQUE)",
                         "TeamAID": 962401,
                         "TeamA": "REAL MADRID ´A´",
-                        "ScoreA": 65,
+                        "ScoreA": 105,
                         "TeamACode": "28000203",
                         "TeamAClubCode": "280002",
                         "TeamBID": 960677,
                         "TeamB": "FUNDACION BILBAO BASKET FUNDAZIOA",
                         "TeamBCode": "48042303",
                         "TeamBClubCode": "480423",
-                        "ScoreB": 21,
+                        "ScoreB": 47,
                         "StartTime": "2025-05-20T19:30:00",
                         "StartTimeUTC": "2025-05-20T17:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=962401&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=960677&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:23:53",
+                        "Quarter": 4,
+                        "Time": "00:38:42",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -2269,8 +2269,13 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "18",
-                                "scoreB": "2"
+                                "scoreA": "35",
+                                "scoreB": "9"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "23",
+                                "scoreB": "19"
                             }
                         ],
                         "Season": null,
@@ -2288,22 +2293,22 @@
                         "Place": "PAB. MANUEL PRADO",
                         "TeamAID": 959450,
                         "TeamA": "ZENTRO BASKET MADRID",
-                        "ScoreA": 35,
+                        "ScoreA": 52,
                         "TeamACode": "28305722",
                         "TeamAClubCode": "283057",
                         "TeamBID": 960634,
                         "TeamB": "IVECO REAL VALLADOLID BALONCESTO A",
                         "TeamBCode": "47036108",
                         "TeamBClubCode": "470361",
-                        "ScoreB": 25,
+                        "ScoreB": 36,
                         "StartTime": "2025-05-20T19:30:00",
                         "StartTimeUTC": "2025-05-20T17:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=959450&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=960634&ti=1",
-                        "Quarter": 2,
-                        "Time": "00:17:07",
+                        "Quarter": 3,
+                        "Time": "00:25:32",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -2315,8 +2320,13 @@
                             },
                             {
                                 "n": "2",
-                                "scoreA": "15",
-                                "scoreB": "5"
+                                "scoreA": "25",
+                                "scoreB": "14"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "7",
+                                "scoreB": "2"
                             }
                         ],
                         "Season": null,
@@ -2334,23 +2344,23 @@
                         "Place": "COMPLEJO DEPORTIVO CIUDAD DE CÁDIZ",
                         "TeamAID": 952773,
                         "TeamA": "CB SONSECA EUROCAJA RURAL",
-                        "ScoreA": 57,
+                        "ScoreA": 75,
                         "TeamACode": "45013268",
                         "TeamAClubCode": "450132",
                         "TeamBID": 970143,
                         "TeamB": "ABQ CALAHORRA CAD",
                         "TeamBCode": "26025302",
                         "TeamBClubCode": "260253",
-                        "ScoreB": 73,
+                        "ScoreB": 101,
                         "StartTime": "2025-05-20T19:30:00",
                         "StartTimeUTC": "2025-05-20T17:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=952773&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=970143&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:28:13",
-                        "Status": 2,
+                        "Quarter": 4,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -2366,8 +2376,13 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "11",
-                                "scoreB": "12"
+                                "scoreA": "14",
+                                "scoreB": "14"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "15",
+                                "scoreB": "26"
                             }
                         ],
                         "Season": null,
