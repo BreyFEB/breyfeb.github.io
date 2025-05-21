@@ -1298,7 +1298,7 @@
                 "id": "253",
                 "name": "CE Clubes Cad Fem",
                 "gamescount": 24,
-                "nowplaying": 2,
+                "nowplaying": 1,
                 "order": 19,
                 "GAMES": [
                     {
@@ -1537,14 +1537,14 @@
                         "Place": "POLIDEPORTIVO MUNICIPAL CIUDAD DE ALGECIRAS",
                         "TeamAID": 952076,
                         "TeamA": "JOVENTUT BADALONA A",
-                        "ScoreA": 68,
+                        "ScoreA": 78,
                         "TeamACode": "08130503",
                         "TeamAClubCode": "081305",
                         "TeamBID": 957986,
                         "TeamB": "ZENTRO BASKET MADRID",
                         "TeamBCode": "28305783",
                         "TeamBClubCode": "283057",
-                        "ScoreB": 42,
+                        "ScoreB": 46,
                         "StartTime": "2025-05-21T17:00:00",
                         "StartTimeUTC": "2025-05-21T15:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -1552,8 +1552,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=952076&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=957986&ti=1",
                         "Quarter": 4,
-                        "Time": "00:36:24",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -1574,8 +1574,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "3",
-                                "scoreB": "2"
+                                "scoreA": "13",
+                                "scoreB": "6"
                             }
                         ],
                         "Season": null,
@@ -1593,14 +1593,14 @@
                         "Place": "POLIDEPORTIVO MUNICIPAL LA LÍNEA",
                         "TeamAID": 963863,
                         "TeamA": "CASADEMONT ZARAGOZA A",
-                        "ScoreA": 47,
+                        "ScoreA": 61,
                         "TeamACode": "50031314",
                         "TeamAClubCode": "500313",
                         "TeamBID": 959394,
                         "TeamB": "TRAUMACOR CULLEREDO",
                         "TeamBCode": "15007322",
                         "TeamBClubCode": "150073",
-                        "ScoreB": 40,
+                        "ScoreB": 45,
                         "StartTime": "2025-05-21T17:00:00",
                         "StartTimeUTC": "2025-05-21T15:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -1608,8 +1608,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=963863&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=959394&ti=1",
                         "Quarter": 4,
-                        "Time": "00:33:12",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -1630,8 +1630,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "7",
-                                "scoreB": "2"
+                                "scoreA": "21",
+                                "scoreB": "7"
                             }
                         ],
                         "Season": null,
@@ -1643,7 +1643,7 @@
                         "Competition": "C ESP CLUBES CAD FEM",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2470356,
                         "GameCode": null,
                         "Place": "POLIDEPORTIVO MUNICIPAL CIUDAD DE ALGECIRAS",
@@ -1663,12 +1663,18 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=956301&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=961627&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:00:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -1678,7 +1684,7 @@
                         "Competition": "C ESP CLUBES CAD FEM",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2470355,
                         "GameCode": null,
                         "Place": "POLIDEPORTIVO MUNICIPAL LA LINEA",
@@ -1713,7 +1719,7 @@
                 "id": "252",
                 "name": "CE Clubes Cad Masc",
                 "gamescount": 24,
-                "nowplaying": 2,
+                "nowplaying": 0,
                 "order": 20,
                 "GAMES": [
                     {
@@ -1952,14 +1958,14 @@
                         "Place": "COMPLEJO DEPORTIVO CIUDAD DE CÁDIZ",
                         "TeamAID": 952713,
                         "TeamA": "VALENCIA BASKET ",
-                        "ScoreA": 117,
+                        "ScoreA": 131,
                         "TeamACode": "46000203",
                         "TeamAClubCode": "460002",
                         "TeamBID": 976041,
                         "TeamB": "SAN AGUSTÍN TRANSPORTES CUÉLLAR",
                         "TeamBCode": "47003802",
                         "TeamBClubCode": "470038",
-                        "ScoreB": 49,
+                        "ScoreB": 58,
                         "StartTime": "2025-05-21T17:00:00",
                         "StartTimeUTC": "2025-05-21T15:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -1967,8 +1973,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=952713&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=976041&ti=1",
                         "Quarter": 4,
-                        "Time": "00:34:39",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -1989,8 +1995,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "13",
-                                "scoreB": "2"
+                                "scoreA": "27",
+                                "scoreB": "11"
                             }
                         ],
                         "Season": null,
@@ -2008,14 +2014,14 @@
                         "Place": "PAB. MANUEL PRADO",
                         "TeamAID": 952255,
                         "TeamA": "JOVENTUT BADALONA  A",
-                        "ScoreA": 71,
+                        "ScoreA": 85,
                         "TeamACode": "08000504",
                         "TeamAClubCode": "080005",
                         "TeamBID": 954793,
                         "TeamB": "SANDÁ ELECTROCLIMA - C.B. L'HOSPITALET A",
                         "TeamBCode": "08000909",
                         "TeamBClubCode": "080009",
-                        "ScoreB": 49,
+                        "ScoreB": 63,
                         "StartTime": "2025-05-21T17:00:00",
                         "StartTimeUTC": "2025-05-21T15:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -2023,8 +2029,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=952255&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=954793&ti=1",
                         "Quarter": 4,
-                        "Time": "00:31:35",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -2045,8 +2051,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "0",
-                                "scoreB": "2"
+                                "scoreA": "14",
+                                "scoreB": "16"
                             }
                         ],
                         "Season": null,
@@ -2058,7 +2064,7 @@
                         "Competition": "C ESP CLUBES CAD MASC",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2470421,
                         "GameCode": null,
                         "Place": "PAB. MANUEL PRADO",
@@ -2093,7 +2099,7 @@
                         "Competition": "C ESP CLUBES CAD MASC",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2470422,
                         "GameCode": null,
                         "Place": "COMPLEJO DEPORTIVO CIUDAD DE CÁDIZ",
