@@ -2309,7 +2309,7 @@
                         "TeamB": "CBA",
                         "TeamBCode": "06014005",
                         "TeamBClubCode": "060140",
-                        "ScoreB": 59,
+                        "ScoreB": 61,
                         "StartTime": "2025-05-21T19:00:00",
                         "StartTimeUTC": "2025-05-21T17:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -2317,7 +2317,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=957776&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=967939&ti=1",
                         "Quarter": 4,
-                        "Time": "00:37:58",
+                        "Time": "00:38:36",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -2340,7 +2340,7 @@
                             {
                                 "n": "4",
                                 "scoreA": "16",
-                                "scoreB": "14"
+                                "scoreB": "16"
                             }
                         ],
                         "Season": null,
