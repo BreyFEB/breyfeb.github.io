@@ -93,30 +93,6 @@ function setupMobileMenu() {
 /***************************************
  * Funciones principales
  ***************************************/
-async function fetchMatchFiles() {
-  const apiUrl = "https://api.github.com/repos/emebullon/cadete2025/contents/JSONs fichas";
-  try {
-    const response = await fetch(apiUrl);
-    const files = await response.json();
-    return files.filter(file => file.name.endsWith(".json")).map(file => file.download_url);
-  } catch (error) {
-    console.error("Error al obtener la lista de archivos:", error);
-    return [];
-  }
-}
-
-function isGroupPhase(round) {
-  // Si es una letra sola (A, B, C, D, E, F, G, H) es fase de grupos
-  return /^[A-H]$/.test(round.trim());
-}
-
-// Añadir función para convertir minutos formateados a segundos
-function minutesToSeconds(minFormatted) {
-  if (!minFormatted) return 0;
-  const [minutes, seconds] = minFormatted.split(':').map(Number);
-  return minutes * 60 + seconds;
-}
-
 // Añadir función para convertir segundos a formato MM:SS
 function secondsToMinutes(totalSeconds) {
   const minutes = Math.floor(totalSeconds / 60);
@@ -125,325 +101,32 @@ function secondsToMinutes(totalSeconds) {
 }
 
 async function loadAllStats() {
-  const urls = await fetchMatchFiles();
-  const totalFiles = urls.length;
-  let processedFiles = 0;
-  const playersMap = new Map();
   const loaderText = document.querySelector('.loader-text');
   const progressBar = document.querySelector('.progress-bar-fill');
 
-  for (const url of urls) {
-    try {
-      const resp = await fetch(url);
-      const data = await resp.json();
+  try {
+    // Load precalculated stats
+    const response = await fetch('rankings_stats.json');
+    const data = await response.json();
 
-      // Actualizar el progreso
-      processedFiles++;
-      const progress = Math.round((processedFiles / totalFiles) * 100);
-      loaderText.textContent = `Cargando estadísticas... ${progress}%`;
-      progressBar.style.width = `${progress}%`;
+    // Update progress
+    loaderText.textContent = 'Cargando estadísticas... 100%';
+    progressBar.style.width = '100%';
 
-      const comp = data.HEADER.competition || "";
-      const round = data.HEADER.round || "";
-      competitionSet.add(comp);
+    // Set the data - only use total records by default
+    allPlayersStats = data.players;
+    competitionSet = new Set(data.competitions);
+    teamSet = new Set(data.teams);
 
-      const matchDate = data.HEADER.starttime || "";
+    // Store phase records for later use
+    window.phaseRecords = data.phase_records;
 
-      // NUEVO: Usar HEADER.TEAM para puntos/nombre/logo y SCOREBOARD.TEAM para jugadores
-      const teamAHeader = data.HEADER.TEAM[0];
-      const teamBHeader = data.HEADER.TEAM[1];
-      const teamA = data.SCOREBOARD.TEAM[0];
-      const teamB = data.SCOREBOARD.TEAM[1];
-
-      const teamAPoints = parseInt(teamAHeader.pts, 10) || 0;
-      const teamBPoints = parseInt(teamBHeader.pts, 10) || 0;
-
-      const teamAName = teamAHeader.name || "Equipo A";
-      const teamBName = teamBHeader.name || "Equipo B";
-
-      const currentPhase = isGroupPhase(round) ? "Fase de Grupos" : "Playoffs";
-
-      const femaleCompetitions = [
-        "LF Endesa",
-        "LF Challenge",
-        "L.F. 2",
-        "C ESP CLUBES JR FEM",
-        "CE SSAA Cadete Fem.",
-        "CE SSA Infantil Fem."
-      ];
-      let genero = "H";
-      if (femaleCompetitions.some(f => f.toLowerCase() === comp.trim().toLowerCase())) {
-        genero = "M";
-      }
-
-      // --- Jugadores del equipo A ---
-      (teamA.PLAYER || []).forEach((player) => {
-        const teamName = teamAName;
-        teamSet.add(teamName);
-
-        const rivalName = teamBName;
-
-        const p2a = parseInt(player.p2a || 0);
-        const p2m = parseInt(player.p2m || 0);
-        const p3a = parseInt(player.p3a || 0);
-        const p3m = parseInt(player.p3m || 0);
-        const p1a = parseInt(player.p1a || 0);
-        const p1m = parseInt(player.p1m || 0);
-
-        // Crear IDs únicos para cada fase y total
-        const totalId = `${player.id}-${teamName}-${comp}-total`;
-        const groupPhaseId = `${player.id}-${teamName}-${comp}-grupos`;
-        const playoffsId = `${player.id}-${teamName}-${comp}-playoffs`;
-
-        // Inicializar registros si no existen
-        [totalId, groupPhaseId, playoffsId].forEach(id => {
-          if (!playersMap.has(id)) {
-            playersMap.set(id, {
-              dorsal: player.no || "",
-              playerPhoto: player.logo || "https://via.placeholder.com/50",
-              playerName: player.name || "Desconocido",
-              teamName,
-              competition: comp,
-              round: round,
-              phaseType: id.endsWith('total') ? "" : (id.endsWith('grupos') ? "Fase de Grupos" : "Playoffs"),
-              gender: genero,
-              games: 0,
-              seconds: 0,
-              pts: 0,
-              t2i: 0,
-              t2c: 0,
-              t3i: 0,
-              t3c: 0,
-              tli: 0,
-              tlc: 0,
-              ro: 0,
-              rd: 0,
-              rt: 0,
-              as: 0,
-              br: 0,
-              bp: 0,
-              tp: 0,
-              fc: 0,
-              va: 0,
-              pm: 0,
-              matches: []
-            });
-          }
-        });
-
-        // Actualizar estadísticas en el registro total y de fase
-        const totalRecord = playersMap.get(totalId);
-        const phaseRecord = playersMap.get(currentPhase === "Fase de Grupos" ? groupPhaseId : playoffsId);
-
-        [totalRecord, phaseRecord].forEach(record => {
-          record.games += 1;
-          record.seconds += minutesToSeconds(player.minFormatted || "0:00");
-
-          record.pts += parseInt(player.pts || 0);
-          record.t2i += p2a;
-          record.t2c += p2m;
-          record.t3i += p3a;
-          record.t3c += p3m;
-          record.tli += p1a;
-          record.tlc += p1m;
-          record.ro += parseInt(player.ro || 0);
-          record.rd += parseInt(player.rd || 0);
-          record.rt += parseInt(player.rt || 0);
-          record.as += parseInt(player.assist || 0);
-          record.br += parseInt(player.st || 0);
-          record.bp += parseInt(player.to || 0);
-          record.tp += parseInt(player.bs || 0);
-          record.fc += parseInt(player.pf || 0);
-          record.va += parseInt(player.val || 0);
-          record.pm += parseInt(player.pllss || 0);
-
-          const pct2 = (p2a > 0) ? ((p2m / p2a) * 100).toFixed(1) : "0.0";
-          const pct3 = (p3a > 0) ? ((p3m / p3a) * 100).toFixed(1) : "0.0";
-          const pctTl = (p1a > 0) ? ((p1m / p1a) * 100).toFixed(1) : "0.0";
-
-          record.matches.push({
-            matchDate,
-            round: round,
-            phaseType: currentPhase,
-            rival: rivalName,
-            rivalFull: rivalName,
-            rivalShort: rivalName.substring(0, 3).toUpperCase(),
-            minutes: player.minFormatted || "0:00",
-            pts: parseInt(player.pts || 0),
-            t2i: p2a,
-            t2c: p2m,
-            pct2,
-            t3i: p3a,
-            t3c: p3m,
-            pct3,
-            tli: p1a,
-            tlc: p1m,
-            pctTl,
-            ro: parseInt(player.ro || 0),
-            rd: parseInt(player.rd || 0),
-            rt: parseInt(player.rt || 0),
-            as: parseInt(player.assist || 0),
-            br: parseInt(player.st || 0),
-            bp: parseInt(player.to || 0),
-            tp: parseInt(player.bs || 0),
-            fc: parseInt(player.pf || 0),
-            va: parseInt(player.val || 0),
-            pm: parseInt(player.pllss || 0),
-            teamPoints: teamAPoints,
-            rivalPoints: teamBPoints,
-            resultado: teamAPoints > teamBPoints ? "G" : "P",
-            marcador: `${teamAPoints}-${teamBPoints}`
-          });
-        });
-
-        // Después de actualizar los totales:
-        totalRecord.pct2 = totalRecord.t2i > 0 ? ((totalRecord.t2c / totalRecord.t2i) * 100).toFixed(1) : "0.0";
-        totalRecord.pct3 = totalRecord.t3i > 0 ? ((totalRecord.t3c / totalRecord.t3i) * 100).toFixed(1) : "0.0";
-        totalRecord.pctTl = totalRecord.tli > 0 ? ((totalRecord.tlc / totalRecord.tli) * 100).toFixed(1) : "0.0";
-        phaseRecord.pct2 = phaseRecord.t2i > 0 ? ((phaseRecord.t2c / phaseRecord.t2i) * 100).toFixed(1) : "0.0";
-        phaseRecord.pct3 = phaseRecord.t3i > 0 ? ((phaseRecord.t3c / phaseRecord.t3i) * 100).toFixed(1) : "0.0";
-        phaseRecord.pctTl = phaseRecord.tli > 0 ? ((phaseRecord.tlc / phaseRecord.tli) * 100).toFixed(1) : "0.0";
-      });
-
-      // --- Jugadores del equipo B ---
-      (teamB.PLAYER || []).forEach((player) => {
-        const teamName = teamBName;
-        teamSet.add(teamName);
-
-        const rivalName = teamAName;
-
-        const p2a = parseInt(player.p2a || 0);
-        const p2m = parseInt(player.p2m || 0);
-        const p3a = parseInt(player.p3a || 0);
-        const p3m = parseInt(player.p3m || 0);
-        const p1a = parseInt(player.p1a || 0);
-        const p1m = parseInt(player.p1m || 0);
-
-        // Crear IDs únicos para cada fase y total
-        const totalId = `${player.id}-${teamName}-${comp}-total`;
-        const groupPhaseId = `${player.id}-${teamName}-${comp}-grupos`;
-        const playoffsId = `${player.id}-${teamName}-${comp}-playoffs`;
-
-        // Inicializar registros si no existen
-        [totalId, groupPhaseId, playoffsId].forEach(id => {
-          if (!playersMap.has(id)) {
-            playersMap.set(id, {
-              dorsal: player.no || "",
-              playerPhoto: player.logo || "https://via.placeholder.com/50",
-              playerName: player.name || "Desconocido",
-              teamName,
-              competition: comp,
-              round: round,
-              phaseType: id.endsWith('total') ? "" : (id.endsWith('grupos') ? "Fase de Grupos" : "Playoffs"),
-              gender: genero,
-              games: 0,
-              seconds: 0,
-              pts: 0,
-              t2i: 0,
-              t2c: 0,
-              t3i: 0,
-              t3c: 0,
-              tli: 0,
-              tlc: 0,
-              ro: 0,
-              rd: 0,
-              rt: 0,
-              as: 0,
-              br: 0,
-              bp: 0,
-              tp: 0,
-              fc: 0,
-              va: 0,
-              pm: 0,
-              matches: []
-            });
-          }
-        });
-
-        // Actualizar estadísticas en el registro total y de fase
-        const totalRecord = playersMap.get(totalId);
-        const phaseRecord = playersMap.get(currentPhase === "Fase de Grupos" ? groupPhaseId : playoffsId);
-
-        [totalRecord, phaseRecord].forEach(record => {
-          record.games += 1;
-          record.seconds += minutesToSeconds(player.minFormatted || "0:00");
-
-          record.pts += parseInt(player.pts || 0);
-          record.t2i += p2a;
-          record.t2c += p2m;
-          record.t3i += p3a;
-          record.t3c += p3m;
-          record.tli += p1a;
-          record.tlc += p1m;
-          record.ro += parseInt(player.ro || 0);
-          record.rd += parseInt(player.rd || 0);
-          record.rt += parseInt(player.rt || 0);
-          record.as += parseInt(player.assist || 0);
-          record.br += parseInt(player.st || 0);
-          record.bp += parseInt(player.to || 0);
-          record.tp += parseInt(player.bs || 0);
-          record.fc += parseInt(player.pf || 0);
-          record.va += parseInt(player.val || 0);
-          record.pm += parseInt(player.pllss || 0);
-
-          const pct2 = (p2a > 0) ? ((p2m / p2a) * 100).toFixed(1) : "0.0";
-          const pct3 = (p3a > 0) ? ((p3m / p3a) * 100).toFixed(1) : "0.0";
-          const pctTl = (p1a > 0) ? ((p1m / p1a) * 100).toFixed(1) : "0.0";
-
-          record.matches.push({
-            matchDate,
-            round: round,
-            phaseType: currentPhase,
-            rival: rivalName,
-            rivalFull: rivalName,
-            rivalShort: rivalName.substring(0, 3).toUpperCase(),
-            minutes: player.minFormatted || "0:00",
-            pts: parseInt(player.pts || 0),
-            t2i: p2a,
-            t2c: p2m,
-            pct2,
-            t3i: p3a,
-            t3c: p3m,
-            pct3,
-            tli: p1a,
-            tlc: p1m,
-            pctTl,
-            ro: parseInt(player.ro || 0),
-            rd: parseInt(player.rd || 0),
-            rt: parseInt(player.rt || 0),
-            as: parseInt(player.assist || 0),
-            br: parseInt(player.st || 0),
-            bp: parseInt(player.to || 0),
-            tp: parseInt(player.bs || 0),
-            fc: parseInt(player.pf || 0),
-            va: parseInt(player.val || 0),
-            pm: parseInt(player.pllss || 0),
-            teamPoints: teamBPoints,
-            rivalPoints: teamAPoints,
-            resultado: teamBPoints > teamAPoints ? "G" : "P",
-            marcador: `${teamBPoints}-${teamAPoints}`
-          });
-        });
-
-        // Después de actualizar los totales:
-        totalRecord.pct2 = totalRecord.t2i > 0 ? ((totalRecord.t2c / totalRecord.t2i) * 100).toFixed(1) : "0.0";
-        totalRecord.pct3 = totalRecord.t3i > 0 ? ((totalRecord.t3c / totalRecord.t3i) * 100).toFixed(1) : "0.0";
-        totalRecord.pctTl = totalRecord.tli > 0 ? ((totalRecord.tlc / totalRecord.tli) * 100).toFixed(1) : "0.0";
-        phaseRecord.pct2 = phaseRecord.t2i > 0 ? ((phaseRecord.t2c / phaseRecord.t2i) * 100).toFixed(1) : "0.0";
-        phaseRecord.pct3 = phaseRecord.t3i > 0 ? ((phaseRecord.t3c / phaseRecord.t3i) * 100).toFixed(1) : "0.0";
-        phaseRecord.pctTl = phaseRecord.tli > 0 ? ((phaseRecord.tlc / phaseRecord.tli) * 100).toFixed(1) : "0.0";
-      });
-    } catch (err) {
-      console.error("Error al cargar", url, err);
-      processedFiles++; // Incrementar aunque haya error para mantener el progreso
-      const progress = Math.round((processedFiles / totalFiles) * 100);
-      progressBar.style.width = `${progress}%`;
-    }
+    fillSelects();
+    applyFilters();
+  } catch (error) {
+    console.error("Error al cargar las estadísticas:", error);
+    loaderText.textContent = 'Error al cargar los datos. Por favor, recarga la página.';
   }
-
-  allPlayersStats = Array.from(playersMap.values());
-  fillSelects();
-  applyFilters();
 }
 
 function fillSelects() {
@@ -482,16 +165,10 @@ function applyFilters() {
   const searchInput = document.getElementById("searchPlayerTeam");
   const searchTerm = searchInput.value.toLowerCase();
 
-  let filteredData = allPlayersStats.filter(player => {
-    // Si no hay fase seleccionada, mostrar solo los registros totales
-    if (!phaseSel && player.phaseType !== "") {
-      return false;
-    }
-    // Si hay fase seleccionada, mostrar solo los registros de esa fase
-    if (phaseSel && player.phaseType !== phaseSel) {
-      return false;
-    }
+  // Use phase records if a phase is selected, otherwise use total records
+  let dataToFilter = phaseSel ? window.phaseRecords.filter(p => p.phaseType === phaseSel) : allPlayersStats;
 
+  let filteredData = dataToFilter.filter(player => {
     const matchesComp = !compSel || player.competition === compSel;
     const matchesTeam = !teamSel || player.teamName === teamSel;
     const matchesGender = !genderSel || player.gender === genderSel;
@@ -589,13 +266,13 @@ function renderTable(data, mode = "totales") {
       <td data-col="pts">${pts}</td>
       <td data-col="t2c">${t2c}</td>
       <td data-col="t2i">${t2i}</td>
-      <td data-col="pct2">${pct2}</td>
+      <td data-col="pct2" data-value="${parseFloat(pct2)}">${pct2}</td>
       <td data-col="t3c">${t3c}</td>
       <td data-col="t3i">${t3i}</td>
-      <td data-col="pct3">${pct3}</td>
+      <td data-col="pct3" data-value="${parseFloat(pct3)}">${pct3}</td>
       <td data-col="tlc">${tlc}</td>
       <td data-col="tli">${tli}</td>
-      <td data-col="pctTl">${pctTl}</td>
+      <td data-col="pctTl" data-value="${parseFloat(pctTl)}">${pctTl}</td>
       <td data-col="ro">${ro}</td>
       <td data-col="rd">${rd}</td>
       <td data-col="rt">${rt}</td>
@@ -844,11 +521,8 @@ function getSortValue(obj, colKey, mode) {
 
   // Forzar conversión a número para porcentajes
   if (['pct2', 'pct3', 'pctTl'].includes(colKey)) {
-    if (mode === "promedios" && obj.games > 0) {
-      // Si es promedio, calcula el porcentaje promedio
-      return obj[colKey] ? parseFloat(obj[colKey]) : 0;
-    }
-    return obj[colKey] ? parseFloat(obj[colKey]) : 0;
+    // Always return a number, even if the field is a string
+    return typeof obj[colKey] === 'number' ? obj[colKey] : parseFloat(obj[colKey]) || 0;
   }
 
   if (mode === "promedios" && obj.games > 0) {
@@ -886,6 +560,13 @@ function updatePaginationInfo(totalItems) {
 
   prevBtn.disabled = currentPage === 1;
   nextBtn.disabled = currentPage === totalPages;
+}
+
+// Add helper function to convert minutes to seconds
+function minutesToSeconds(minutesStr) {
+  if (!minutesStr) return 0;
+  const [mins, secs] = minutesStr.split(':').map(Number);
+  return mins * 60 + secs;
 }
 
 /***************************************
