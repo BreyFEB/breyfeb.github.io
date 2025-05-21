@@ -521,8 +521,14 @@ function getSortValue(obj, colKey, mode) {
 
   // Forzar conversión a número para porcentajes
   if (['pct2', 'pct3', 'pctTl'].includes(colKey)) {
-    // Always return a number, even if the field is a string
-    return typeof obj[colKey] === 'number' ? obj[colKey] : parseFloat(obj[colKey]) || 0;
+    // Calculate percentage directly from the raw values
+    if (colKey === 'pct2') {
+      return obj.t2i > 0 ? (obj.t2c / obj.t2i) * 100 : 0;
+    } else if (colKey === 'pct3') {
+      return obj.t3i > 0 ? (obj.t3c / obj.t3i) * 100 : 0;
+    } else if (colKey === 'pctTl') {
+      return obj.tli > 0 ? (obj.tlc / obj.tli) * 100 : 0;
+    }
   }
 
   if (mode === "promedios" && obj.games > 0) {
