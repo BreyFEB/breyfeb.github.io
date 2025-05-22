@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Actualizar estado y fecha/hora
       const scoreStatusEl = document.querySelector('.score-status');
-      scoreStatusEl.textContent = header.status || 'FINAL';
+      scoreStatusEl.textContent = header.time || 'FINAL';
       const matchDatetimeEl = document.querySelector('.match-datetime');
       matchDatetimeEl.textContent = header.starttime || '01-01-2025 - 20:00';
 
