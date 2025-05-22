@@ -1142,7 +1142,7 @@
                 "id": "211",
                 "name": "F.Ascenso Lf2",
                 "gamescount": 24,
-                "nowplaying": 2,
+                "nowplaying": 1,
                 "order": 10,
                 "GAMES": [
                     {
@@ -1284,8 +1284,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=964328&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952863&ti=1",
                         "Quarter": 4,
-                        "Time": "00:40:00",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -1325,14 +1325,14 @@
                         "Place": "PABELLÓN DEPORTIVO INSULAR LA PATERNA",
                         "TeamAID": 951719,
                         "TeamA": "DON MARTÍN - DRAFT GRAMENET",
-                        "ScoreA": 24,
+                        "ScoreA": 33,
                         "TeamACode": "08051100",
                         "TeamAClubCode": "080511",
                         "TeamBID": 951016,
                         "TeamB": "RAISAN ELOY VILLANUEVA",
                         "TeamBCode": "39020210",
                         "TeamBClubCode": "390202",
-                        "ScoreB": 26,
+                        "ScoreB": 30,
                         "StartTime": "2025-05-22T13:15:00",
                         "StartTimeUTC": "2025-05-22T11:15:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -1340,7 +1340,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951719&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951016&ti=1",
                         "Quarter": 3,
-                        "Time": "00:21:35",
+                        "Time": "00:27:43",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -1357,8 +1357,8 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "2",
-                                "scoreB": "1"
+                                "scoreA": "11",
+                                "scoreB": "5"
                             }
                         ],
                         "Season": null,
