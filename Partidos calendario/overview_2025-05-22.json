@@ -336,14 +336,14 @@
                         "Place": "PABELLÓN SIGLO XXI (PISTA B)",
                         "TeamAID": 951794,
                         "TeamA": "C.B. GETAFE",
-                        "ScoreA": 58,
+                        "ScoreA": 72,
                         "TeamACode": "28290717",
                         "TeamAClubCode": "282907",
                         "TeamBID": 950648,
                         "TeamB": "CASTILLO DE GORRAIZ VALLE DE EGÜES",
                         "TeamBCode": "31017402",
                         "TeamBClubCode": "310174",
-                        "ScoreB": 61,
+                        "ScoreB": 72,
                         "StartTime": "2025-05-22T12:30:00",
                         "StartTimeUTC": "2025-05-22T10:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -351,7 +351,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951794&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950648&ti=1",
                         "Quarter": 4,
-                        "Time": "00:30:58",
+                        "Time": "00:36:10",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -373,8 +373,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "14",
+                                "scoreB": "11"
                             }
                         ],
                         "Season": null,
@@ -399,15 +399,15 @@
                         "TeamB": "LBC COCINAS.COM",
                         "TeamBCode": "26021200",
                         "TeamBClubCode": "260212",
-                        "ScoreB": 24,
+                        "ScoreB": 27,
                         "StartTime": "2025-05-22T13:00:00",
                         "StartTimeUTC": "2025-05-22T11:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951498&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952231&ti=1",
-                        "Quarter": 2,
-                        "Time": "00:18:48",
+                        "Quarter": 3,
+                        "Time": "00:20:00",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -420,7 +420,12 @@
                             {
                                 "n": "2",
                                 "scoreA": "10",
-                                "scoreB": "14"
+                                "scoreB": "17"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "0",
+                                "scoreB": "0"
                             }
                         ],
                         "Season": null,
@@ -1132,7 +1137,7 @@
                 "id": "211",
                 "name": "F.Ascenso Lf2",
                 "gamescount": 24,
-                "nowplaying": 2,
+                "nowplaying": 1,
                 "order": 10,
                 "GAMES": [
                     {
@@ -1203,7 +1208,7 @@
                         "Place": "PABELLÓN DEPORTIVO INSULAR LA PATERNA",
                         "TeamAID": 956733,
                         "TeamA": "CESUR DISTRITO OLIMPICO",
-                        "ScoreA": 62,
+                        "ScoreA": 65,
                         "TeamACode": "28011029",
                         "TeamAClubCode": "280110",
                         "TeamBID": 966754,
@@ -1218,8 +1223,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=956733&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=966754&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:04",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -1240,7 +1245,7 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "15",
+                                "scoreA": "18",
                                 "scoreB": "12"
                             }
                         ],
@@ -1259,14 +1264,14 @@
                         "Place": "Pabellón Nou Congost",
                         "TeamAID": 964328,
                         "TeamA": "C. B. ISLA BONITA",
-                        "ScoreA": 28,
+                        "ScoreA": 37,
                         "TeamACode": "38037000",
                         "TeamAClubCode": "380370",
                         "TeamBID": 952863,
                         "TeamB": "STADIUM CASABLANCA",
                         "TeamBCode": "50000517",
                         "TeamBClubCode": "500005",
-                        "ScoreB": 25,
+                        "ScoreB": 29,
                         "StartTime": "2025-05-22T12:30:00",
                         "StartTimeUTC": "2025-05-22T10:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -1274,7 +1279,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=964328&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952863&ti=1",
                         "Quarter": 3,
-                        "Time": "00:20:00",
+                        "Time": "00:25:19",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -1291,8 +1296,8 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "9",
+                                "scoreB": "4"
                             }
                         ],
                         "Season": null,
@@ -1304,7 +1309,7 @@
                         "Competition": "Fase Final 1ª División Femenin",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2470994,
                         "GameCode": null,
                         "Place": "PABELLÓN DEPORTIVO INSULAR LA PATERNA",
@@ -2110,14 +2115,14 @@
                         "Place": "POLIDEPORTIVO MUNICIPAL LA LÍNEA",
                         "TeamAID": 965298,
                         "TeamA": "UNICAJA ANDALUCÍA",
-                        "ScoreA": 27,
+                        "ScoreA": 32,
                         "TeamACode": "29000167",
                         "TeamAClubCode": "290001",
                         "TeamBID": 952716,
                         "TeamB": "VALENCIA BASKET ",
                         "TeamBCode": "46000208",
                         "TeamBClubCode": "460002",
-                        "ScoreB": 50,
+                        "ScoreB": 68,
                         "StartTime": "2025-05-22T12:30:00",
                         "StartTimeUTC": "2025-05-22T10:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -2125,7 +2130,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=965298&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952716&ti=1",
                         "Quarter": 3,
-                        "Time": "00:22:19",
+                        "Time": "00:28:01",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -2142,8 +2147,8 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "5",
-                                "scoreB": "2"
+                                "scoreA": "10",
+                                "scoreB": "20"
                             }
                         ],
                         "Season": null,
@@ -2296,22 +2301,22 @@
                         "Place": "PAB. MANUEL PRADO",
                         "TeamAID": 959450,
                         "TeamA": "ZENTRO BASKET MADRID",
-                        "ScoreA": 36,
+                        "ScoreA": 43,
                         "TeamACode": "28305722",
                         "TeamAClubCode": "283057",
                         "TeamBID": 962029,
                         "TeamB": "PABLO LASO ACADEMY 'A'",
                         "TeamBCode": "28297301",
                         "TeamBClubCode": "282973",
-                        "ScoreB": 39,
+                        "ScoreB": 50,
                         "StartTime": "2025-05-22T12:30:00",
                         "StartTimeUTC": "2025-05-22T10:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=959450&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=962029&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:25:53",
+                        "Quarter": 4,
+                        "Time": "00:30:40",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -2328,8 +2333,13 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "13",
-                                "scoreB": "4"
+                                "scoreA": "20",
+                                "scoreB": "15"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "0",
+                                "scoreB": "0"
                             }
                         ],
                         "Season": null,
