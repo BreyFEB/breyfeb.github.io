@@ -1325,14 +1325,14 @@
                         "Place": "PABELLÓN DEPORTIVO INSULAR LA PATERNA",
                         "TeamAID": 951719,
                         "TeamA": "DON MARTÍN - DRAFT GRAMENET",
-                        "ScoreA": 44,
+                        "ScoreA": 54,
                         "TeamACode": "08051100",
                         "TeamAClubCode": "080511",
                         "TeamBID": 951016,
                         "TeamB": "RAISAN ELOY VILLANUEVA",
                         "TeamBCode": "39020210",
                         "TeamBClubCode": "390202",
-                        "ScoreB": 40,
+                        "ScoreB": 44,
                         "StartTime": "2025-05-22T13:15:00",
                         "StartTimeUTC": "2025-05-22T11:15:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -1340,7 +1340,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951719&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951016&ti=1",
                         "Quarter": 4,
-                        "Time": "00:34:08",
+                        "Time": "00:39:48",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -1362,8 +1362,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "9",
-                                "scoreB": "3"
+                                "scoreA": "19",
+                                "scoreB": "7"
                             }
                         ],
                         "Season": null,
