@@ -567,15 +567,15 @@
                         "TeamB": "CÍRCULO GIJÓN NOEGA BALONCESTO",
                         "TeamBCode": "33032000",
                         "TeamBClubCode": "330320",
-                        "ScoreB": 23,
+                        "ScoreB": 24,
                         "StartTime": "2025-05-22T20:00:00",
                         "StartTimeUTC": "2025-05-22T18:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950943&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950872&ti=1",
-                        "Quarter": 2,
-                        "Time": "00:19:22",
+                        "Quarter": 3,
+                        "Time": "00:20:00",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -588,7 +588,12 @@
                             {
                                 "n": "2",
                                 "scoreA": "14",
-                                "scoreB": "9"
+                                "scoreB": "10"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "0",
+                                "scoreB": "0"
                             }
                         ],
                         "Season": null,
@@ -606,30 +611,35 @@
                         "Place": "PABELLÓN COLEGIO LICEO EUROPA",
                         "TeamAID": 950647,
                         "TeamA": "AZULEJOS MONCAYO CBZ",
-                        "ScoreA": 13,
+                        "ScoreA": 22,
                         "TeamACode": "50000102",
                         "TeamAClubCode": "500001",
                         "TeamBID": 952322,
                         "TeamB": "ATICA SEVILLA CB CORIA",
                         "TeamBCode": "41000506",
                         "TeamBClubCode": "410005",
-                        "ScoreB": 16,
+                        "ScoreB": 25,
                         "StartTime": "2025-05-22T20:30:00",
                         "StartTimeUTC": "2025-05-22T18:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950647&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952322&ti=1",
-                        "Quarter": 1,
-                        "Time": "00:08:50",
+                        "Quarter": 2,
+                        "Time": "00:14:33",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
                             {
                                 "n": "1",
-                                "scoreA": "13",
-                                "scoreB": "16"
+                                "scoreA": "15",
+                                "scoreB": "19"
+                            },
+                            {
+                                "n": "2",
+                                "scoreA": "7",
+                                "scoreB": "6"
                             }
                         ],
                         "Season": null,
@@ -1552,22 +1562,22 @@
                         "Place": "PABELLÓN DEPORTIVO INSULAR LA PATERNA",
                         "TeamAID": 961289,
                         "TeamA": "INSTITUTO DE FERTILIDAD",
-                        "ScoreA": 11,
+                        "ScoreA": 21,
                         "TeamACode": "07003402",
                         "TeamAClubCode": "070034",
                         "TeamBID": 952346,
                         "TeamB": "FEMXA CELTA UVIGO",
                         "TeamBCode": "36000102",
                         "TeamBClubCode": "360001",
-                        "ScoreB": 40,
+                        "ScoreB": 51,
                         "StartTime": "2025-05-22T19:15:00",
                         "StartTimeUTC": "2025-05-22T17:15:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=961289&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952346&ti=1",
-                        "Quarter": 2,
-                        "Time": "00:13:43",
+                        "Quarter": 3,
+                        "Time": "00:20:00",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -1579,8 +1589,13 @@
                             },
                             {
                                 "n": "2",
-                                "scoreA": "3",
-                                "scoreB": "10"
+                                "scoreA": "13",
+                                "scoreB": "21"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "0",
+                                "scoreB": "0"
                             }
                         ],
                         "Season": null,
@@ -1598,7 +1613,7 @@
                         "Place": "PAVELLO NOU CONGOST",
                         "TeamAID": 953175,
                         "TeamA": "ALUDIUM LUCENTUM ALICANTE",
-                        "ScoreA": 16,
+                        "ScoreA": 26,
                         "TeamACode": "03058615",
                         "TeamAClubCode": "030586",
                         "TeamBID": 951272,
@@ -1613,7 +1628,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=953175&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951272&ti=1",
                         "Quarter": 3,
-                        "Time": "00:20:00",
+                        "Time": "00:23:53",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -1630,7 +1645,7 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "0",
+                                "scoreA": "10",
                                 "scoreB": "0"
                             }
                         ],
@@ -2386,14 +2401,14 @@
                         "Place": "POLIDEPORTIVO MUNICIPAL LA LÍNEA",
                         "TeamAID": 961618,
                         "TeamA": "MOVISTAR ESTUDIANTES 'A'",
-                        "ScoreA": 42,
+                        "ScoreA": 51,
                         "TeamACode": "28000138",
                         "TeamAClubCode": "280001",
                         "TeamBID": 956301,
                         "TeamB": "BARÇA CBS",
                         "TeamBCode": "08004210",
                         "TeamBClubCode": "080042",
-                        "ScoreB": 49,
+                        "ScoreB": 63,
                         "StartTime": "2025-05-22T19:00:00",
                         "StartTimeUTC": "2025-05-22T17:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -2401,7 +2416,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=961618&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=956301&ti=1",
                         "Quarter": 4,
-                        "Time": "00:31:52",
+                        "Time": "00:37:56",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -2423,8 +2438,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "4",
-                                "scoreB": "0"
+                                "scoreA": "13",
+                                "scoreB": "14"
                             }
                         ],
                         "Season": null,
@@ -2654,22 +2669,22 @@
                         "Place": "PAB. MANUEL PRADO",
                         "TeamAID": 957776,
                         "TeamA": "GRAN CANARIA",
-                        "ScoreA": 46,
+                        "ScoreA": 64,
                         "TeamACode": "35000298",
                         "TeamAClubCode": "350002",
                         "TeamBID": 962401,
                         "TeamB": "REAL MADRID ´A´",
                         "TeamBCode": "28000203",
                         "TeamBClubCode": "280002",
-                        "ScoreB": 55,
+                        "ScoreB": 63,
                         "StartTime": "2025-05-22T19:00:00",
                         "StartTimeUTC": "2025-05-22T17:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=957776&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=962401&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:28:16",
+                        "Quarter": 4,
+                        "Time": "00:33:43",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -2686,8 +2701,13 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "17",
-                                "scoreB": "19"
+                                "scoreA": "24",
+                                "scoreB": "20"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "11",
+                                "scoreB": "7"
                             }
                         ],
                         "Season": null,
