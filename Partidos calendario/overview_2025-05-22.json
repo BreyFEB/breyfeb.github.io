@@ -616,14 +616,14 @@
                         "Place": "PABELLÓN COLEGIO LICEO EUROPA",
                         "TeamAID": 950647,
                         "TeamA": "AZULEJOS MONCAYO CBZ",
-                        "ScoreA": 71,
+                        "ScoreA": 76,
                         "TeamACode": "50000102",
                         "TeamAClubCode": "500001",
                         "TeamBID": 952322,
                         "TeamB": "ATICA SEVILLA CB CORIA",
                         "TeamBCode": "41000506",
                         "TeamBClubCode": "410005",
-                        "ScoreB": 67,
+                        "ScoreB": 74,
                         "StartTime": "2025-05-22T20:30:00",
                         "StartTimeUTC": "2025-05-22T18:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -631,7 +631,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950647&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952322&ti=1",
                         "Quarter": 4,
-                        "Time": "00:36:08",
+                        "Time": "00:39:54",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -653,8 +653,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "16",
-                                "scoreB": "12"
+                                "scoreA": "21",
+                                "scoreB": "19"
                             }
                         ],
                         "Season": null,
