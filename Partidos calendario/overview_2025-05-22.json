@@ -448,14 +448,14 @@
                         "Place": "PABELLÓN DE DEPORTES PRESIDENTE ADOLFO SUÁREZ",
                         "TeamAID": 950728,
                         "TeamA": "DM GROUP MOLLET",
-                        "ScoreA": 21,
+                        "ScoreA": 28,
                         "TeamACode": "08000605",
                         "TeamAClubCode": "080006",
                         "TeamBID": 951421,
                         "TeamB": "SERCOMOSA MOLINA BASKET",
                         "TeamBCode": "30019717",
                         "TeamBClubCode": "300197",
-                        "ScoreB": 31,
+                        "ScoreB": 46,
                         "StartTime": "2025-05-22T17:00:00",
                         "StartTimeUTC": "2025-05-22T15:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -463,7 +463,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950728&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951421&ti=1",
                         "Quarter": 2,
-                        "Time": "00:13:15",
+                        "Time": "00:18:52",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -475,8 +475,8 @@
                             },
                             {
                                 "n": "2",
-                                "scoreA": "9",
-                                "scoreB": "8"
+                                "scoreA": "16",
+                                "scoreB": "23"
                             }
                         ],
                         "Season": null,
@@ -1153,7 +1153,7 @@
                 "id": "211",
                 "name": "F.Ascenso Lf2",
                 "gamescount": 24,
-                "nowplaying": 0,
+                "nowplaying": 1,
                 "order": 10,
                 "GAMES": [
                     {
@@ -1441,12 +1441,18 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=966408&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=970944&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:00:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -2213,14 +2219,14 @@
                         "Place": "POLIDEPORTIVO MUNICIPAL LA LÍNEA",
                         "TeamAID": 963863,
                         "TeamA": "CASADEMONT ZARAGOZA A",
-                        "ScoreA": 17,
+                        "ScoreA": 20,
                         "TeamACode": "50031314",
                         "TeamAClubCode": "500313",
                         "TeamBID": 952076,
                         "TeamB": "JOVENTUT BADALONA A",
                         "TeamBCode": "08130503",
                         "TeamBClubCode": "081305",
-                        "ScoreB": 13,
+                        "ScoreB": 25,
                         "StartTime": "2025-05-22T17:00:00",
                         "StartTimeUTC": "2025-05-22T15:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -2228,7 +2234,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=963863&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952076&ti=1",
                         "Quarter": 2,
-                        "Time": "00:11:31",
+                        "Time": "00:17:23",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -2240,8 +2246,8 @@
                             },
                             {
                                 "n": "2",
-                                "scoreA": "2",
-                                "scoreB": "0"
+                                "scoreA": "5",
+                                "scoreB": "12"
                             }
                         ],
                         "Season": null,
@@ -2415,14 +2421,14 @@
                         "Place": "PAB. MANUEL PRADO",
                         "TeamAID": 952255,
                         "TeamA": "JOVENTUT BADALONA  A",
-                        "ScoreA": 24,
+                        "ScoreA": 40,
                         "TeamACode": "08000504",
                         "TeamAClubCode": "080005",
                         "TeamBID": 952713,
                         "TeamB": "VALENCIA BASKET ",
                         "TeamBCode": "46000203",
                         "TeamBClubCode": "460002",
-                        "ScoreB": 26,
+                        "ScoreB": 35,
                         "StartTime": "2025-05-22T17:00:00",
                         "StartTimeUTC": "2025-05-22T15:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -2430,7 +2436,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=952255&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952713&ti=1",
                         "Quarter": 2,
-                        "Time": "00:10:49",
+                        "Time": "00:16:14",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -2442,8 +2448,8 @@
                             },
                             {
                                 "n": "2",
-                                "scoreA": "2",
-                                "scoreB": "2"
+                                "scoreA": "18",
+                                "scoreB": "11"
                             }
                         ],
                         "Season": null,
