@@ -106,13 +106,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Meter resumen de ChatGPT
       fetch(`https://raw.githubusercontent.com/emebullon/cadete2025/main/JSONs%20fichas/FullMatch_${gameId}_cronica_chatgpt.html`)
-        .then(res => res.text())
+        .then(res => {
+          if (!res.ok) {
+            throw new Error('Crónica no encontrada');
+          }
+          return res.text();
+        })
         .then(html => {
           const target = document.querySelector(".cronicatext");
           if (target) target.innerHTML = html;
           else console.warn("Element '.cronicatext' not found.");
         })
-        .catch(err => console.error("Error loading crónica:", err));
+        .catch(err => {
+          const target = document.querySelector(".cronicatext");
+          if (target) target.innerHTML = "La crónica estará disponible al acabar el partido.";
+          console.error("Error loading crónica:", err);
+        });
       
       // Construir diccionarios: fotos, nombres de jugadores y equipos
       buildPlayerPhotoDictionary(data);
