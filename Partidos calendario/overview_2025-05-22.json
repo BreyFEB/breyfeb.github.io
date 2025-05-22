@@ -204,7 +204,7 @@
                 "id": "111",
                 "name": "Tercera FEB",
                 "gamescount": 24,
-                "nowplaying": 2,
+                "nowplaying": 0,
                 "order": 6,
                 "GAMES": [
                     {
@@ -575,8 +575,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950943&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950872&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:52",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -631,8 +631,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950647&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952322&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:54",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
