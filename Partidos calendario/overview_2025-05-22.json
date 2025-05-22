@@ -204,7 +204,7 @@
                 "id": "111",
                 "name": "Tercera FEB",
                 "gamescount": 24,
-                "nowplaying": 1,
+                "nowplaying": 0,
                 "order": 6,
                 "GAMES": [
                     {
@@ -407,8 +407,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951498&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952231&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:59",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -1325,22 +1325,22 @@
                         "Place": "PABELLÓN DEPORTIVO INSULAR LA PATERNA",
                         "TeamAID": 951719,
                         "TeamA": "DON MARTÍN - DRAFT GRAMENET",
-                        "ScoreA": 22,
+                        "ScoreA": 24,
                         "TeamACode": "08051100",
                         "TeamAClubCode": "080511",
                         "TeamBID": 951016,
                         "TeamB": "RAISAN ELOY VILLANUEVA",
                         "TeamBCode": "39020210",
                         "TeamBClubCode": "390202",
-                        "ScoreB": 25,
+                        "ScoreB": 26,
                         "StartTime": "2025-05-22T13:15:00",
                         "StartTimeUTC": "2025-05-22T11:15:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951719&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951016&ti=1",
-                        "Quarter": 2,
-                        "Time": "00:19:57",
+                        "Quarter": 3,
+                        "Time": "00:21:35",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -1354,6 +1354,11 @@
                                 "n": "2",
                                 "scoreA": "11",
                                 "scoreB": "14"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "2",
+                                "scoreB": "1"
                             }
                         ],
                         "Season": null,
