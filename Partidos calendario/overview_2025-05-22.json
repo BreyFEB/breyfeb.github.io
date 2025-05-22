@@ -504,14 +504,14 @@
                         "Place": "PABELLÓN COLEGIO LICEO EUROPA",
                         "TeamAID": 951964,
                         "TeamA": "NB TORRENT",
-                        "ScoreA": 36,
+                        "ScoreA": 42,
                         "TeamACode": "46002604",
                         "TeamAClubCode": "460026",
                         "TeamBID": 951062,
                         "TeamB": "FUNDACION GLOBALCAJA LA RODA",
                         "TeamBCode": "02015901",
                         "TeamBClubCode": "020159",
-                        "ScoreB": 48,
+                        "ScoreB": 67,
                         "StartTime": "2025-05-22T18:15:00",
                         "StartTimeUTC": "2025-05-22T16:15:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -519,7 +519,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951964&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951062&ti=1",
                         "Quarter": 4,
-                        "Time": "00:31:02",
+                        "Time": "00:39:25",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -541,8 +541,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "2",
-                                "scoreB": "1"
+                                "scoreA": "8",
+                                "scoreB": "20"
                             }
                         ],
                         "Season": null,
@@ -1184,7 +1184,7 @@
                 "id": "211",
                 "name": "F.Ascenso Lf2",
                 "gamescount": 24,
-                "nowplaying": 1,
+                "nowplaying": 0,
                 "order": 10,
                 "GAMES": [
                     {
@@ -1423,14 +1423,14 @@
                         "Place": "PABELLÓN DEPORTIVO INSULAR LA PATERNA",
                         "TeamAID": 966464,
                         "TeamA": "SPAR GRAN CANARIA",
-                        "ScoreA": 65,
+                        "ScoreA": 78,
                         "TeamACode": "35000108",
                         "TeamAClubCode": "350001",
                         "TeamBID": 952857,
                         "TeamB": "C.B. AL-QAZERES",
                         "TeamBCode": "10032504",
                         "TeamBClubCode": "100325",
-                        "ScoreB": 53,
+                        "ScoreB": 58,
                         "StartTime": "2025-05-22T17:00:00",
                         "StartTimeUTC": "2025-05-22T15:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -1438,8 +1438,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=966464&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952857&ti=1",
                         "Quarter": 4,
-                        "Time": "00:35:49",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -1460,8 +1460,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "7",
-                                "scoreB": "12"
+                                "scoreA": "20",
+                                "scoreB": "17"
                             }
                         ],
                         "Season": null,
@@ -1564,7 +1564,7 @@
                         "Competition": "Fase Final 1ª División Femenin",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2471082,
                         "GameCode": null,
                         "Place": "PAVELLO NOU CONGOST",
@@ -2342,30 +2342,35 @@
                         "Place": "POLIDEPORTIVO MUNICIPAL LA LÍNEA",
                         "TeamAID": 961618,
                         "TeamA": "MOVISTAR ESTUDIANTES 'A'",
-                        "ScoreA": 9,
+                        "ScoreA": 13,
                         "TeamACode": "28000138",
                         "TeamAClubCode": "280001",
                         "TeamBID": 956301,
                         "TeamB": "BARÇA CBS",
                         "TeamBCode": "08004210",
                         "TeamBClubCode": "080042",
-                        "ScoreB": 12,
+                        "ScoreB": 21,
                         "StartTime": "2025-05-22T19:00:00",
                         "StartTimeUTC": "2025-05-22T17:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=961618&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=956301&ti=1",
-                        "Quarter": 1,
-                        "Time": "00:07:48",
+                        "Quarter": 2,
+                        "Time": "00:13:23",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
                             {
                                 "n": "1",
-                                "scoreA": "9",
-                                "scoreB": "12"
+                                "scoreA": "13",
+                                "scoreB": "14"
+                            },
+                            {
+                                "n": "2",
+                                "scoreA": "0",
+                                "scoreB": "7"
                             }
                         ],
                         "Season": null,
@@ -2595,26 +2600,32 @@
                         "Place": "PAB. MANUEL PRADO",
                         "TeamAID": 957776,
                         "TeamA": "GRAN CANARIA",
-                        "ScoreA": 0,
+                        "ScoreA": 8,
                         "TeamACode": "35000298",
                         "TeamAClubCode": "350002",
                         "TeamBID": 962401,
                         "TeamB": "REAL MADRID ´A´",
                         "TeamBCode": "28000203",
                         "TeamBClubCode": "280002",
-                        "ScoreB": 0,
+                        "ScoreB": 13,
                         "StartTime": "2025-05-22T19:00:00",
                         "StartTimeUTC": "2025-05-22T17:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=957776&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=962401&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00:00",
+                        "Quarter": 1,
+                        "Time": "00:05:05",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "8",
+                                "scoreB": "13"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     }
