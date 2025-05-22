@@ -234,8 +234,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=952153&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951750&ti=1",
                         "Quarter": 5,
-                        "Time": "00:44:57",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -350,12 +350,18 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951794&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950648&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:00:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -1171,7 +1177,7 @@
                         "Place": "PABELLÓN DEPORTIVO INSULAR LA PATERNA",
                         "TeamAID": 956733,
                         "TeamA": "CESUR DISTRITO OLIMPICO",
-                        "ScoreA": 18,
+                        "ScoreA": 21,
                         "TeamACode": "28011029",
                         "TeamAClubCode": "280110",
                         "TeamBID": 966754,
@@ -1186,7 +1192,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=956733&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=966754&ti=1",
                         "Quarter": 2,
-                        "Time": "00:12:44",
+                        "Time": "00:14:26",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -1198,7 +1204,7 @@
                             },
                             {
                                 "n": "2",
-                                "scoreA": "7",
+                                "scoreA": "10",
                                 "scoreB": "0"
                             }
                         ],
@@ -1211,7 +1217,7 @@
                         "Competition": "Fase Final 1ª División Femenin",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2470685,
                         "GameCode": null,
                         "Place": "Pabellón Nou Congost",
@@ -2059,7 +2065,7 @@
                         "TeamB": "VALENCIA BASKET ",
                         "TeamBCode": "46000208",
                         "TeamBClubCode": "460002",
-                        "ScoreB": 0,
+                        "ScoreB": 4,
                         "StartTime": "2025-05-22T12:30:00",
                         "StartTimeUTC": "2025-05-22T10:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -2067,7 +2073,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=965298&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952716&ti=1",
                         "Quarter": 1,
-                        "Time": "00:00:00",
+                        "Time": "00:01:11",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -2075,7 +2081,7 @@
                             {
                                 "n": "1",
                                 "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreB": "4"
                             }
                         ],
                         "Season": null,
@@ -2243,7 +2249,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=959450&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=962029&ti=1",
                         "Quarter": 1,
-                        "Time": "00:00:00",
+                        "Time": "00:00:55",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
