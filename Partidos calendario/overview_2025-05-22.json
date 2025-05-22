@@ -560,14 +560,14 @@
                         "Place": "PABELLÓN DE DEPORTES PRESIDENTE ADOLFO SUÁREZ",
                         "TeamAID": 950943,
                         "TeamA": "COLEGIO EL PINAR",
-                        "ScoreA": 61,
+                        "ScoreA": 62,
                         "TeamACode": "29018601",
                         "TeamAClubCode": "290186",
                         "TeamBID": 950872,
                         "TeamB": "CÍRCULO GIJÓN NOEGA BALONCESTO",
                         "TeamBCode": "33032000",
                         "TeamBClubCode": "330320",
-                        "ScoreB": 62,
+                        "ScoreB": 68,
                         "StartTime": "2025-05-22T20:00:00",
                         "StartTimeUTC": "2025-05-22T18:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -575,7 +575,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950943&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950872&ti=1",
                         "Quarter": 4,
-                        "Time": "00:37:22",
+                        "Time": "00:39:52",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -597,8 +597,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "12",
-                                "scoreB": "11"
+                                "scoreA": "13",
+                                "scoreB": "17"
                             }
                         ],
                         "Season": null,
@@ -616,14 +616,14 @@
                         "Place": "PABELLÓN COLEGIO LICEO EUROPA",
                         "TeamAID": 950647,
                         "TeamA": "AZULEJOS MONCAYO CBZ",
-                        "ScoreA": 55,
+                        "ScoreA": 71,
                         "TeamACode": "50000102",
                         "TeamAClubCode": "500001",
                         "TeamBID": 952322,
                         "TeamB": "ATICA SEVILLA CB CORIA",
                         "TeamBCode": "41000506",
                         "TeamBClubCode": "410005",
-                        "ScoreB": 55,
+                        "ScoreB": 67,
                         "StartTime": "2025-05-22T20:30:00",
                         "StartTimeUTC": "2025-05-22T18:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -631,7 +631,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950647&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952322&ti=1",
                         "Quarter": 4,
-                        "Time": "00:30:00",
+                        "Time": "00:36:08",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -653,8 +653,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "16",
+                                "scoreB": "12"
                             }
                         ],
                         "Season": null,
@@ -1226,7 +1226,7 @@
                 "id": "211",
                 "name": "F.Ascenso Lf2",
                 "gamescount": 24,
-                "nowplaying": 1,
+                "nowplaying": 0,
                 "order": 10,
                 "GAMES": [
                     {
@@ -1577,14 +1577,14 @@
                         "Place": "PABELLÓN DEPORTIVO INSULAR LA PATERNA",
                         "TeamAID": 961289,
                         "TeamA": "INSTITUTO DE FERTILIDAD",
-                        "ScoreA": 50,
+                        "ScoreA": 55,
                         "TeamACode": "07003402",
                         "TeamAClubCode": "070034",
                         "TeamBID": 952346,
                         "TeamB": "FEMXA CELTA UVIGO",
                         "TeamBCode": "36000102",
                         "TeamBClubCode": "360001",
-                        "ScoreB": 77,
+                        "ScoreB": 81,
                         "StartTime": "2025-05-22T19:15:00",
                         "StartTimeUTC": "2025-05-22T17:15:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -1592,8 +1592,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=961289&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952346&ti=1",
                         "Quarter": 4,
-                        "Time": "00:37:04",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -1614,8 +1614,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "9",
-                                "scoreB": "9"
+                                "scoreA": "14",
+                                "scoreB": "13"
                             }
                         ],
                         "Season": null,
@@ -2033,7 +2033,7 @@
                         "Competition": "Fase Final 1ª División Femenin",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "3",
+                        "Stage": "0",
                         "ID": 2470998,
                         "GameCode": null,
                         "Place": "PABELLÓN DEPORTIVO INSULAR LA PATERNA",
