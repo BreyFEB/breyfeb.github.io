@@ -849,6 +849,29 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Add horizontal scroll arrow functionality
+  const tableContainer = document.querySelector('.stats-table-container');
+  const scrollLeftBtn = document.getElementById('scrollLeftBtn');
+  const scrollRightBtn = document.getElementById('scrollRightBtn');
+  const scrollAmount = 200;
+  function updateArrowState() {
+    if (!tableContainer) return;
+    scrollLeftBtn.disabled = tableContainer.scrollLeft <= 0;
+    scrollRightBtn.disabled = tableContainer.scrollLeft + tableContainer.clientWidth >= tableContainer.scrollWidth - 1;
+  }
+  if (scrollLeftBtn && scrollRightBtn && tableContainer) {
+    scrollLeftBtn.addEventListener('click', () => {
+      tableContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      setTimeout(updateArrowState, 300);
+    });
+    scrollRightBtn.addEventListener('click', () => {
+      tableContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      setTimeout(updateArrowState, 300);
+    });
+    tableContainer.addEventListener('scroll', updateArrowState);
+    updateArrowState();
+  }
+
   const ths = document.querySelectorAll("#statsTable thead th");
   ths.forEach(th => {
     th.addEventListener("click", () => {
