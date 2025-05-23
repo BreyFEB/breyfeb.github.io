@@ -90,7 +90,7 @@
                         "Competition": "PRIMERA FEB",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "3",
+                        "Stage": "0",
                         "ID": 2470247,
                         "GameCode": null,
                         "Place": "POLIDEPORTIVO MUNICIPAL EL PLANTIO",
@@ -379,7 +379,7 @@
                 "id": "111",
                 "name": "Tercera FEB",
                 "gamescount": 24,
-                "nowplaying": 1,
+                "nowplaying": 2,
                 "order": 6,
                 "GAMES": [
                     {
@@ -674,7 +674,7 @@
                         "Place": "PABELLÓN COLEGIO LICEO EUROPA",
                         "TeamAID": 951964,
                         "TeamA": "NB TORRENT",
-                        "ScoreA": 55,
+                        "ScoreA": 57,
                         "TeamACode": "46002604",
                         "TeamAClubCode": "460026",
                         "TeamBID": 952322,
@@ -689,7 +689,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951964&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952322&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:36",
+                        "Time": "00:39:45",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -711,7 +711,7 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "14",
+                                "scoreA": "16",
                                 "scoreB": "14"
                             }
                         ],
@@ -744,12 +744,18 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950872&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950728&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:00:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -1952,7 +1958,7 @@
                         "Place": "POLIDEPORTIVO MUNICIPAL LA LÍNEA",
                         "TeamAID": 952076,
                         "TeamA": "JOVENTUT BADALONA A",
-                        "ScoreA": 30,
+                        "ScoreA": 33,
                         "TeamACode": "08130503",
                         "TeamAClubCode": "081305",
                         "TeamBID": 956301,
@@ -1967,7 +1973,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=952076&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=956301&ti=1",
                         "Quarter": 3,
-                        "Time": "00:21:20",
+                        "Time": "00:21:39",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -1984,7 +1990,7 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "1",
+                                "scoreA": "4",
                                 "scoreB": "4"
                             }
                         ],
