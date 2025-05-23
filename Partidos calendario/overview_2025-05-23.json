@@ -506,14 +506,14 @@
                         "Place": "PABELLÓN SIGLO XXI (PISTA B)",
                         "TeamAID": 950922,
                         "TeamA": "ESPORTIU BÀSQUET VILA-REAL",
-                        "ScoreA": 61,
+                        "ScoreA": 68,
                         "TeamACode": "12000301",
                         "TeamAClubCode": "120003",
                         "TeamBID": 950648,
                         "TeamB": "CASTILLO DE GORRAIZ VALLE DE EGÜES",
                         "TeamBCode": "31017402",
                         "TeamBClubCode": "310174",
-                        "ScoreB": 70,
+                        "ScoreB": 75,
                         "StartTime": "2025-05-23T12:30:00",
                         "StartTimeUTC": "2025-05-23T10:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -521,7 +521,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950922&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950648&ti=1",
                         "Quarter": 4,
-                        "Time": "00:30:00",
+                        "Time": "00:34:29",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -543,8 +543,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "7",
+                                "scoreB": "5"
                             }
                         ],
                         "Season": null,
@@ -562,14 +562,14 @@
                         "Place": "PABELLÓN DE DEPORTES PRESIDENTE ADOLFO SUÁREZ",
                         "TeamAID": 952153,
                         "TeamA": "RIGALLI ALGINET",
-                        "ScoreA": 51,
+                        "ScoreA": 59,
                         "TeamACode": "46004600",
                         "TeamAClubCode": "460046",
                         "TeamBID": 952231,
                         "TeamB": "LBC COCINAS.COM",
                         "TeamBCode": "26021200",
                         "TeamBClubCode": "260212",
-                        "ScoreB": 40,
+                        "ScoreB": 52,
                         "StartTime": "2025-05-23T13:00:00",
                         "StartTimeUTC": "2025-05-23T11:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -577,7 +577,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=952153&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952231&ti=1",
                         "Quarter": 3,
-                        "Time": "00:21:34",
+                        "Time": "00:26:33",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -594,8 +594,8 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "6",
-                                "scoreB": "5"
+                                "scoreA": "14",
+                                "scoreB": "17"
                             }
                         ],
                         "Season": null,
@@ -1154,14 +1154,14 @@
                         "Place": "PABELLÓN DEPORTIVO INSULAR LA PATERNA",
                         "TeamAID": 956733,
                         "TeamA": "CESUR DISTRITO OLIMPICO",
-                        "ScoreA": 30,
+                        "ScoreA": 44,
                         "TeamACode": "28011029",
                         "TeamAClubCode": "280110",
                         "TeamBID": 951016,
                         "TeamB": "RAISAN ELOY VILLANUEVA",
                         "TeamBCode": "39020210",
                         "TeamBClubCode": "390202",
-                        "ScoreB": 17,
+                        "ScoreB": 20,
                         "StartTime": "2025-05-23T12:30:00",
                         "StartTimeUTC": "2025-05-23T10:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -1169,7 +1169,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=956733&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951016&ti=1",
                         "Quarter": 2,
-                        "Time": "00:13:22",
+                        "Time": "00:19:21",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -1181,8 +1181,8 @@
                             },
                             {
                                 "n": "2",
-                                "scoreA": "4",
-                                "scoreB": "6"
+                                "scoreA": "18",
+                                "scoreB": "9"
                             }
                         ],
                         "Season": null,
@@ -1200,14 +1200,14 @@
                         "Place": "Pabellón Nou Congost",
                         "TeamAID": 970943,
                         "TeamA": "UNIVERSIDAD DEUSTO LOIOLA INDAUTXU ",
-                        "ScoreA": 46,
+                        "ScoreA": 48,
                         "TeamACode": "48000520",
                         "TeamAClubCode": "480005",
                         "TeamBID": 952863,
                         "TeamB": "STADIUM CASABLANCA",
                         "TeamBCode": "50000517",
                         "TeamBClubCode": "500005",
-                        "ScoreB": 51,
+                        "ScoreB": 53,
                         "StartTime": "2025-05-23T12:30:00",
                         "StartTimeUTC": "2025-05-23T10:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -1215,7 +1215,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=970943&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952863&ti=1",
                         "Quarter": 4,
-                        "Time": "00:36:54",
+                        "Time": "00:40:00",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -1237,8 +1237,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "4",
-                                "scoreB": "8"
+                                "scoreA": "6",
+                                "scoreB": "10"
                             }
                         ],
                         "Season": null,
@@ -1748,7 +1748,7 @@
                         "TeamB": "UNICAJA ANDALUCÍA",
                         "TeamBCode": "29000167",
                         "TeamBClubCode": "290001",
-                        "ScoreB": 36,
+                        "ScoreB": 39,
                         "StartTime": "2025-05-23T12:30:00",
                         "StartTimeUTC": "2025-05-23T10:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -1756,7 +1756,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=963863&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=965298&ti=1",
                         "Quarter": 4,
-                        "Time": "00:30:00",
+                        "Time": "00:36:00",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -1779,7 +1779,7 @@
                             {
                                 "n": "4",
                                 "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreB": "3"
                             }
                         ],
                         "Season": null,
@@ -1861,7 +1861,7 @@
                 "id": "252",
                 "name": "CE Clubes Cad Masc",
                 "gamescount": 8,
-                "nowplaying": 1,
+                "nowplaying": 0,
                 "order": 20,
                 "GAMES": [
                     {
@@ -1932,14 +1932,14 @@
                         "Place": "PAB. MANUEL PRADO",
                         "TeamAID": 959450,
                         "TeamA": "ZENTRO BASKET MADRID",
-                        "ScoreA": 84,
+                        "ScoreA": 93,
                         "TeamACode": "28305722",
                         "TeamAClubCode": "283057",
                         "TeamBID": 967323,
                         "TeamB": "PANADERIA SALVADOR FCBG",
                         "TeamBCode": "18014217",
                         "TeamBClubCode": "180142",
-                        "ScoreB": 67,
+                        "ScoreB": 71,
                         "StartTime": "2025-05-23T12:30:00",
                         "StartTimeUTC": "2025-05-23T10:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -1947,8 +1947,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=959450&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=967323&ti=1",
                         "Quarter": 4,
-                        "Time": "00:35:08",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -1969,8 +1969,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "13",
-                                "scoreB": "11"
+                                "scoreA": "22",
+                                "scoreB": "15"
                             }
                         ],
                         "Season": null,
