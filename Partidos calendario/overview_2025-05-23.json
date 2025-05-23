@@ -394,14 +394,14 @@
                         "Place": "PABELLÓN DE DEPORTES PRESIDENTE ADOLFO SUÁREZ",
                         "TeamAID": 951750,
                         "TeamA": "JAEN PARAISO INTERIOR FS",
-                        "ScoreA": 0,
+                        "ScoreA": 12,
                         "TeamACode": "23560100",
                         "TeamAClubCode": "235601",
                         "TeamBID": 951498,
                         "TeamB": "CB ARIDANE",
                         "TeamBCode": "38003721",
                         "TeamBClubCode": "380037",
-                        "ScoreB": 0,
+                        "ScoreB": 10,
                         "StartTime": "2025-05-23T10:00:00",
                         "StartTimeUTC": "2025-05-23T08:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -409,15 +409,15 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951750&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951498&ti=1",
                         "Quarter": 1,
-                        "Time": "00:00:00",
+                        "Time": "00:06:37",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
                             {
                                 "n": "1",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "12",
+                                "scoreB": "10"
                             }
                         ],
                         "Season": null,
@@ -954,7 +954,7 @@
                 "id": "211",
                 "name": "F.Ascenso Lf2",
                 "gamescount": 24,
-                "nowplaying": 0,
+                "nowplaying": 1,
                 "order": 10,
                 "GAMES": [
                     {
@@ -1018,12 +1018,18 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=954186&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=964328&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:00:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -1532,7 +1538,7 @@
                         "Competition": "C ESP CLUBES CAD FEM",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2470366,
                         "GameCode": null,
                         "Place": "POLIDEPORTIVO MUNICIPAL LA LÍNEA",
