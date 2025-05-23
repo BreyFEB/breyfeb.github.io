@@ -379,7 +379,7 @@
                 "id": "111",
                 "name": "Tercera FEB",
                 "gamescount": 24,
-                "nowplaying": 2,
+                "nowplaying": 1,
                 "order": 6,
                 "GAMES": [
                     {
@@ -633,8 +633,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950943&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951421&ti=1",
                         "Quarter": 4,
-                        "Time": "00:40:00",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -674,14 +674,14 @@
                         "Place": "PABELLÓN COLEGIO LICEO EUROPA",
                         "TeamAID": 951964,
                         "TeamA": "NB TORRENT",
-                        "ScoreA": 31,
+                        "ScoreA": 40,
                         "TeamACode": "46002604",
                         "TeamAClubCode": "460026",
                         "TeamBID": 952322,
                         "TeamB": "ATICA SEVILLA CB CORIA",
                         "TeamBCode": "41000506",
                         "TeamBClubCode": "410005",
-                        "ScoreB": 40,
+                        "ScoreB": 50,
                         "StartTime": "2025-05-23T18:15:00",
                         "StartTimeUTC": "2025-05-23T16:15:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -689,7 +689,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951964&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952322&ti=1",
                         "Quarter": 3,
-                        "Time": "00:21:14",
+                        "Time": "00:26:49",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -706,8 +706,8 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "5",
-                                "scoreB": "4"
+                                "scoreA": "14",
+                                "scoreB": "14"
                             }
                         ],
                         "Season": null,
@@ -719,7 +719,7 @@
                         "Competition": "TERCERA FEB",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "2",
+                        "Stage": "0",
                         "ID": 2470741,
                         "GameCode": null,
                         "Place": "PABELLÓN DE DEPORTES PRESIDENTE ADOLFO SUÁREZ",
@@ -1069,7 +1069,7 @@
                 "id": "211",
                 "name": "F.Ascenso Lf2",
                 "gamescount": 24,
-                "nowplaying": 2,
+                "nowplaying": 1,
                 "order": 10,
                 "GAMES": [
                     {
@@ -1308,22 +1308,22 @@
                         "Place": "PABELLÓN DEPORTIVO INSULAR LA PATERNA",
                         "TeamAID": 961289,
                         "TeamA": "INSTITUTO DE FERTILIDAD",
-                        "ScoreA": 31,
+                        "ScoreA": 37,
                         "TeamACode": "07003402",
                         "TeamAClubCode": "070034",
                         "TeamBID": 952857,
                         "TeamB": "C.B. AL-QAZERES",
                         "TeamBCode": "10032504",
                         "TeamBClubCode": "100325",
-                        "ScoreB": 48,
+                        "ScoreB": 55,
                         "StartTime": "2025-05-23T17:00:00",
                         "StartTimeUTC": "2025-05-23T15:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=961289&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952857&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:26:48",
+                        "Quarter": 4,
+                        "Time": "00:33:33",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -1340,8 +1340,13 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "2",
-                                "scoreB": "8"
+                                "scoreA": "4",
+                                "scoreB": "11"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "4",
+                                "scoreB": "4"
                             }
                         ],
                         "Season": null,
@@ -1359,14 +1364,14 @@
                         "Place": "PAVELLO NOU CONGOST",
                         "TeamAID": 953175,
                         "TeamA": "ALUDIUM LUCENTUM ALICANTE",
-                        "ScoreA": 49,
+                        "ScoreA": 56,
                         "TeamACode": "03058615",
                         "TeamAClubCode": "030586",
                         "TeamBID": 970944,
                         "TeamB": "LA SALLE VERSIA",
                         "TeamBCode": "48000740",
                         "TeamBClubCode": "480007",
-                        "ScoreB": 26,
+                        "ScoreB": 30,
                         "StartTime": "2025-05-23T17:45:00",
                         "StartTimeUTC": "2025-05-23T15:45:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -1374,8 +1379,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=953175&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=970944&ti=1",
                         "Quarter": 4,
-                        "Time": "00:36:23",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -1396,8 +1401,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "11",
-                                "scoreB": "2"
+                                "scoreA": "18",
+                                "scoreB": "6"
                             }
                         ],
                         "Season": null,
@@ -1942,30 +1947,35 @@
                         "Place": "POLIDEPORTIVO MUNICIPAL LA LÍNEA",
                         "TeamAID": 952076,
                         "TeamA": "JOVENTUT BADALONA A",
-                        "ScoreA": 8,
+                        "ScoreA": 17,
                         "TeamACode": "08130503",
                         "TeamAClubCode": "081305",
                         "TeamBID": 956301,
                         "TeamB": "BARÇA CBS",
                         "TeamBCode": "08004210",
                         "TeamBClubCode": "080042",
-                        "ScoreB": 4,
+                        "ScoreB": 15,
                         "StartTime": "2025-05-23T19:00:00",
                         "StartTimeUTC": "2025-05-23T17:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=952076&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=956301&ti=1",
-                        "Quarter": 1,
-                        "Time": "00:04:16",
+                        "Quarter": 2,
+                        "Time": "00:11:18",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
                             {
                                 "n": "1",
-                                "scoreA": "8",
-                                "scoreB": "4"
+                                "scoreA": "15",
+                                "scoreB": "13"
+                            },
+                            {
+                                "n": "2",
+                                "scoreA": "2",
+                                "scoreB": "2"
                             }
                         ],
                         "Season": null,
@@ -2160,30 +2170,35 @@
                         "Place": "PAB. MANUEL PRADO",
                         "TeamAID": 952713,
                         "TeamA": "VALENCIA BASKET ",
-                        "ScoreA": 14,
+                        "ScoreA": 30,
                         "TeamACode": "46000203",
                         "TeamAClubCode": "460002",
                         "TeamBID": 962401,
                         "TeamB": "REAL MADRID ´A´",
                         "TeamBCode": "28000203",
                         "TeamBClubCode": "280002",
-                        "ScoreB": 13,
+                        "ScoreB": 24,
                         "StartTime": "2025-05-23T19:00:00",
                         "StartTimeUTC": "2025-05-23T17:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=952713&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=962401&ti=1",
-                        "Quarter": 1,
-                        "Time": "00:06:40",
+                        "Quarter": 2,
+                        "Time": "00:12:18",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
                             {
                                 "n": "1",
-                                "scoreA": "14",
-                                "scoreB": "13"
+                                "scoreA": "26",
+                                "scoreB": "19"
+                            },
+                            {
+                                "n": "2",
+                                "scoreA": "4",
+                                "scoreB": "5"
                             }
                         ],
                         "Season": null,
