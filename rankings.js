@@ -226,8 +226,42 @@ function updateSelectHeader(type) {
   }
 }
 
+function formatCompetitionName(comp) {
+  // Dictionary of competition name mappings
+  const nameMappings = {
+    "LF CHALLENGE": "Liga Femenina Challenge",
+    "C ESP CLUBES JR MASC": "Clubes Junior Masculino",
+    "PRIMERA FEB": "Primera FEB",
+    "Fase Final 1ª División Femenin": "Fase de ascenso a LF2",
+    "C ESP CLUBES CAD MASC": "Clubes Cadete Masculino",
+    "LF ENDESA": "Liga Femenina Endesa",
+    "L.F.-2": "Liga Femenina 2",
+    "C ESP CLUBES CAD FEM": "Clubes Cadete Femenino",
+    "SEGUNDA FEB": "Segunda FEB",
+    "TERCERA FEB": "Tercera FEB"
+  };
+
+  // If we have a mapping for this competition, use it
+  if (nameMappings[comp.trim()]) {
+    return nameMappings[comp.trim()];
+  }
+
+  // For other competitions, apply some general formatting rules
+  let formatted = comp
+    // Replace underscores with spaces
+    .replace(/_/g, ' ')
+    // Replace multiple spaces with a single space
+    .replace(/\s+/g, ' ')
+    // Capitalize first letter of each word
+    .split(' ')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join(' ');
+
+  return formatted;
+}
+
 function fillSelects() {
-  // Define competition hierarchy
+  // Define competition hierarchy with raw competition names
   const competitionHierarchy = {
     'Ligas profesionales masculinas': ['PRIMERA FEB', 'SEGUNDA FEB', 'TERCERA FEB'],
     'Ligas profesionales femeninas': ['LF ENDESA', 'LF CHALLENGE', 'L.F.-2'],
@@ -253,7 +287,7 @@ function fillSelects() {
         label.className = 'option';
         label.innerHTML = `
           <input type="checkbox" value="${competition}">
-          <span>${competition}</span>
+          <span>${formatCompetitionName(competition)}</span>
         `;
         competitionList.appendChild(label);
       }
@@ -271,7 +305,7 @@ function fillSelects() {
       label.className = 'option';
       label.innerHTML = `
         <input type="checkbox" value="${competition}">
-        <span>${competition}</span>
+        <span>${formatCompetitionName(competition)}</span>
       `;
       competitionList.appendChild(label);
     });

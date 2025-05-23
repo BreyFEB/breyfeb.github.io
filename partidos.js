@@ -489,6 +489,42 @@ openDatePicker.addEventListener("click", () => {
  * 11) COMPETITION TABS (COMBINADO)
  *********************************/
 const competitionsBar = document.getElementById("competitionsBar");
+function formatCompetitionName(comp) {
+  // Dictionary of competition name mappings
+  const nameMappings = {
+    'C ESP CLUBES JR MASC': 'Clubes Junior Masculino',
+    'C ESP CLUBES JR FEM': 'Clubes Junior Femenino',
+    'Liga Femenina Endesa': 'Liga Femenina Endesa',
+    'Liga Femenina Challenge': 'Liga Femenina Challenge',
+    'L.F.-2': 'Liga Femenina 2',
+    'Primera FEB': 'Primera FEB',
+    'Segunda FEB': 'Segunda FEB',
+    'Tercera FEB': 'Tercera FEB',
+    'CE Clubes Cad Fem': 'Clubes Cadete Masculino',
+    'CE Clubes Cad Masc': 'Clubes Cadete Femenino',
+    'Liga Cadete Femenina': 'Liga Cadete Femenina',
+    'F.Ascenso Lf2': 'Fase de ascenso a LF2'
+  };
+
+  // If we have a mapping for this competition, use it
+  if (nameMappings[comp.trim()]) {
+    return nameMappings[comp.trim()];
+  }
+
+  // For other competitions, apply some general formatting rules
+  let formatted = comp
+    // Replace underscores with spaces
+    .replace(/_/g, ' ')
+    // Replace multiple spaces with a single space
+    .replace(/\s+/g, ' ')
+    // Capitalize first letter of each word
+    .split(' ')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join(' ');
+
+  return formatted;
+}
+
 function generateCompetitionTabs(competitions) {
   competitionsBar.innerHTML = "";
   const allBtn = document.createElement("button");
@@ -500,13 +536,7 @@ function generateCompetitionTabs(competitions) {
   competitions.forEach(comp => {
     const btn = document.createElement("button");
     btn.className = "competition-tab";
-    if (comp === 'C ESP CLUBES JR MASC') {
-      btn.textContent = 'Campeonato de España Clubes JR Masculino';
-    } else if (comp === 'C ESP CLUBES JR FEM') {
-      btn.textContent = 'Campeonato de España Clubes JR Femenino';
-    } else {
-      btn.textContent = comp;
-    }
+    btn.textContent = formatCompetitionName(comp);
     btn.dataset.competition = comp;
     competitionsBar.appendChild(btn);
   });
@@ -553,7 +583,7 @@ function generateCompetitionFilters(competitions) {
     btn.type = "button";
     btn.className = "competition-btn" + (selectedCompetition === comp ? " active" : "");
     btn.dataset.competition = comp;
-    btn.textContent = comp;
+    btn.textContent = formatCompetitionName(comp);
     compFiltersList.appendChild(btn);
   });
 
