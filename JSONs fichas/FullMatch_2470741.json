@@ -617,8 +617,8 @@
                         "fgm": "7",
                         "fga": "9",
                         "fgp": "77,8",
-                        "min": "1448",
-                        "minFormatted": "24:08",
+                        "min": "1409",
+                        "minFormatted": "23:29",
                         "sta": null,
                         "bs": "0",
                         "tc": "0",
@@ -9436,6 +9436,32 @@
             },
             {
                 "num": "182",
+                "text": "(DM GROUP MOLLET) I. BELVER EDO: Sustitución (Entra a pista)",
+                "team": "2",
+                "time": "04:57",
+                "deleted": null,
+                "scoreA": null,
+                "scoreB": null,
+                "quarter": "2",
+                "logo": "https://imagenes.feb.es/foto.aspx?c=1393320",
+                "idPlayer": "1393320",
+                "idLicense": "10438014",
+                "idTeam": "950728",
+                "action": "subst",
+                "logParam1": "00000000-0000-0002-0000-000002470741",
+                "logParam2": null,
+                "logParam3": "10438014",
+                "logParam4": "",
+                "logParam5": "",
+                "logParam6": "",
+                "logParam7": "",
+                "logParam8": "",
+                "logParam9": "",
+                "logParam10": "",
+                "Position": ""
+            },
+            {
+                "num": "181",
                 "text": "(DM GROUP MOLLET) A. REAL LOPEZ: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "04:57",
@@ -9461,7 +9487,7 @@
                 "Position": ""
             },
             {
-                "num": "181",
+                "num": "180",
                 "text": "(DM GROUP MOLLET) J. AURO GARRIGA: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "04:57",
@@ -9487,7 +9513,7 @@
                 "Position": ""
             },
             {
-                "num": "180",
+                "num": "179",
                 "text": "(CÍRCULO GIJÓN NOEGA BALONCESTO) S. GALLEGO MOGRO: FALTA Personal (Faltas: 1. Faltas de equipo: 4). Tiros libres: 2",
                 "team": "1",
                 "time": "04:58",
@@ -9513,7 +9539,7 @@
                 "Position": "10.833334075080048|61.063830781490275"
             },
             {
-                "num": "179",
+                "num": "178",
                 "text": "(DM GROUP MOLLET) A. SOTO CAPARROS: REBOTE (Rebotes: 2)",
                 "team": "2",
                 "time": "05:11",
@@ -9539,7 +9565,7 @@
                 "Position": ""
             },
             {
-                "num": "178",
+                "num": "177",
                 "text": "(CÍRCULO GIJÓN NOEGA BALONCESTO) S. IDRIS IGENE: TIRO DE 3 FALLADO",
                 "team": "1",
                 "time": "05:11",
@@ -9565,7 +9591,7 @@
                 "Position": "93.05555957335025|95.19503659334028"
             },
             {
-                "num": "177",
+                "num": "176",
                 "text": "(CÍRCULO GIJÓN NOEGA BALONCESTO) M. OKAFOR AUGUSTIN: REBOTE (Rebotes: 3)",
                 "team": "1",
                 "time": "05:27",
@@ -9591,7 +9617,7 @@
                 "Position": ""
             },
             {
-                "num": "176",
+                "num": "175",
                 "text": "(CÍRCULO GIJÓN NOEGA BALONCESTO) S. IDRIS IGENE: TIRO DE 2 FALLADO",
                 "team": "1",
                 "time": "05:27",
@@ -9615,32 +9641,6 @@
                 "logParam9": "",
                 "logParam10": "",
                 "Position": "89.23611288821262|60.19503642763091"
-            },
-            {
-                "num": "175",
-                "text": "(DM GROUP MOLLET) I. BELVER EDO: Sustitución (Entra a pista)",
-                "team": "2",
-                "time": "05:36",
-                "deleted": null,
-                "scoreA": null,
-                "scoreB": null,
-                "quarter": "2",
-                "logo": "https://imagenes.feb.es/foto.aspx?c=1393320",
-                "idPlayer": "1393320",
-                "idLicense": "10438014",
-                "idTeam": "950728",
-                "action": "subst",
-                "logParam1": "00000000-0000-0002-0000-000002470741",
-                "logParam2": null,
-                "logParam3": "10438014",
-                "logParam4": "",
-                "logParam5": "",
-                "logParam6": "",
-                "logParam7": "",
-                "logParam8": "",
-                "logParam9": "",
-                "logParam10": "",
-                "Position": ""
             },
             {
                 "num": "174",
@@ -14735,8 +14735,8 @@
                         "fgm": "7",
                         "fga": "9",
                         "fgp": "77,8",
-                        "min": "1448",
-                        "minFormatted": "24:08",
+                        "min": "1409",
+                        "minFormatted": "23:29",
                         "sta": null,
                         "bs": "0",
                         "tc": "0",
