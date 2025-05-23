@@ -11,7 +11,7 @@
                 "id": "115",
                 "name": "Primera FEB",
                 "gamescount": 8,
-                "nowplaying": 0,
+                "nowplaying": 1,
                 "order": 1,
                 "GAMES": [
                     {
@@ -61,7 +61,7 @@
                         "Place": "AMENABAR ARENA",
                         "TeamAID": 950759,
                         "TeamA": "INVEREADY GIPUZKOA",
-                        "ScoreA": 0,
+                        "ScoreA": 2,
                         "TeamACode": "20046000",
                         "TeamAClubCode": "200460",
                         "TeamBID": 951466,
@@ -75,12 +75,18 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950759&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951466&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:00:37",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "2",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -379,7 +385,7 @@
                 "id": "111",
                 "name": "Tercera FEB",
                 "gamescount": 24,
-                "nowplaying": 1,
+                "nowplaying": 2,
                 "order": 6,
                 "GAMES": [
                     {
@@ -730,14 +736,14 @@
                         "Place": "PABELLÓN DE DEPORTES PRESIDENTE ADOLFO SUÁREZ",
                         "TeamAID": 950872,
                         "TeamA": "CÍRCULO GIJÓN NOEGA BALONCESTO",
-                        "ScoreA": 32,
+                        "ScoreA": 34,
                         "TeamACode": "33032000",
                         "TeamAClubCode": "330320",
                         "TeamBID": 950728,
                         "TeamB": "DM GROUP MOLLET",
                         "TeamBCode": "08000605",
                         "TeamBClubCode": "080006",
-                        "ScoreB": 28,
+                        "ScoreB": 31,
                         "StartTime": "2025-05-23T20:00:00",
                         "StartTimeUTC": "2025-05-23T18:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -745,7 +751,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950872&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950728&ti=1",
                         "Quarter": 2,
-                        "Time": "00:13:54",
+                        "Time": "00:15:06",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -757,8 +763,8 @@
                             },
                             {
                                 "n": "2",
-                                "scoreA": "11",
-                                "scoreB": "6"
+                                "scoreA": "13",
+                                "scoreB": "9"
                             }
                         ],
                         "Season": null,
@@ -790,12 +796,18 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951062&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950647&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:00:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -1436,30 +1448,35 @@
                         "Place": "PABELLÓN DEPORTIVO INSULAR LA PATERNA",
                         "TeamAID": 952346,
                         "TeamA": "FEMXA CELTA UVIGO",
-                        "ScoreA": 17,
+                        "ScoreA": 24,
                         "TeamACode": "36000102",
                         "TeamAClubCode": "360001",
                         "TeamBID": 966464,
                         "TeamB": "SPAR GRAN CANARIA",
                         "TeamBCode": "35000108",
                         "TeamBClubCode": "350001",
-                        "ScoreB": 21,
+                        "ScoreB": 23,
                         "StartTime": "2025-05-23T19:15:00",
                         "StartTimeUTC": "2025-05-23T17:15:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=952346&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=966464&ti=1",
-                        "Quarter": 1,
-                        "Time": "00:08:30",
+                        "Quarter": 2,
+                        "Time": "00:10:00",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
                             {
                                 "n": "1",
-                                "scoreA": "17",
-                                "scoreB": "21"
+                                "scoreA": "24",
+                                "scoreB": "23"
+                            },
+                            {
+                                "n": "2",
+                                "scoreA": "0",
+                                "scoreB": "0"
                             }
                         ],
                         "Season": null,
@@ -1477,14 +1494,14 @@
                         "Place": "PAVELLO NOU CONGOST",
                         "TeamAID": 951272,
                         "TeamA": "MANRESA CBF A",
-                        "ScoreA": 13,
+                        "ScoreA": 16,
                         "TeamACode": "08160700",
                         "TeamAClubCode": "081607",
                         "TeamBID": 966408,
                         "TeamB": "XEREZ CLUB DEPORTIVO BALONCESTO",
                         "TeamBCode": "11101211",
                         "TeamBClubCode": "111012",
-                        "ScoreB": 17,
+                        "ScoreB": 20,
                         "StartTime": "2025-05-23T20:00:00",
                         "StartTimeUTC": "2025-05-23T18:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -1492,7 +1509,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951272&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=966408&ti=1",
                         "Quarter": 2,
-                        "Time": "00:14:10",
+                        "Time": "00:15:59",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -1504,8 +1521,8 @@
                             },
                             {
                                 "n": "2",
-                                "scoreA": "7",
-                                "scoreB": "9"
+                                "scoreA": "10",
+                                "scoreB": "12"
                             }
                         ],
                         "Season": null,
@@ -1980,14 +1997,14 @@
                         "Place": "POLIDEPORTIVO MUNICIPAL LA LÍNEA",
                         "TeamAID": 952076,
                         "TeamA": "JOVENTUT BADALONA A",
-                        "ScoreA": 46,
+                        "ScoreA": 48,
                         "TeamACode": "08130503",
                         "TeamAClubCode": "081305",
                         "TeamBID": 956301,
                         "TeamB": "BARÇA CBS",
                         "TeamBCode": "08004210",
                         "TeamBClubCode": "080042",
-                        "ScoreB": 50,
+                        "ScoreB": 52,
                         "StartTime": "2025-05-23T19:00:00",
                         "StartTimeUTC": "2025-05-23T17:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -1995,7 +2012,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=952076&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=956301&ti=1",
                         "Quarter": 4,
-                        "Time": "00:35:13",
+                        "Time": "00:36:58",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -2017,8 +2034,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "7",
-                                "scoreB": "6"
+                                "scoreA": "9",
+                                "scoreB": "8"
                             }
                         ],
                         "Season": null,
@@ -2213,7 +2230,7 @@
                         "Place": "PAB. MANUEL PRADO",
                         "TeamAID": 952713,
                         "TeamA": "VALENCIA BASKET ",
-                        "ScoreA": 63,
+                        "ScoreA": 66,
                         "TeamACode": "46000203",
                         "TeamAClubCode": "460002",
                         "TeamBID": 962401,
@@ -2245,7 +2262,7 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "16",
+                                "scoreA": "19",
                                 "scoreB": "23"
                             }
                         ],
