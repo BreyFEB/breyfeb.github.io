@@ -1032,7 +1032,7 @@
                 "id": "211",
                 "name": "F.Ascenso Lf2",
                 "gamescount": 24,
-                "nowplaying": 1,
+                "nowplaying": 0,
                 "order": 10,
                 "GAMES": [
                     {
@@ -1159,14 +1159,14 @@
                         "Place": "PABELLÓN DEPORTIVO INSULAR LA PATERNA",
                         "TeamAID": 956733,
                         "TeamA": "CESUR DISTRITO OLIMPICO",
-                        "ScoreA": 75,
+                        "ScoreA": 80,
                         "TeamACode": "28011029",
                         "TeamAClubCode": "280110",
                         "TeamBID": 951016,
                         "TeamB": "RAISAN ELOY VILLANUEVA",
                         "TeamBCode": "39020210",
                         "TeamBClubCode": "390202",
-                        "ScoreB": 38,
+                        "ScoreB": 44,
                         "StartTime": "2025-05-23T12:30:00",
                         "StartTimeUTC": "2025-05-23T10:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -1174,8 +1174,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=956733&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951016&ti=1",
                         "Quarter": 4,
-                        "Time": "00:36:37",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -1196,8 +1196,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "6",
-                                "scoreB": "7"
+                                "scoreA": "11",
+                                "scoreB": "13"
                             }
                         ],
                         "Season": null,
