@@ -618,14 +618,14 @@
                         "Place": "PABELLÓN DE DEPORTES PRESIDENTE ADOLFO SUÁREZ",
                         "TeamAID": 950943,
                         "TeamA": "COLEGIO EL PINAR",
-                        "ScoreA": 22,
+                        "ScoreA": 29,
                         "TeamACode": "29018601",
                         "TeamAClubCode": "290186",
                         "TeamBID": 951421,
                         "TeamB": "SERCOMOSA MOLINA BASKET",
                         "TeamBCode": "30019717",
                         "TeamBClubCode": "300197",
-                        "ScoreB": 26,
+                        "ScoreB": 35,
                         "StartTime": "2025-05-23T17:00:00",
                         "StartTimeUTC": "2025-05-23T15:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -633,7 +633,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950943&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951421&ti=1",
                         "Quarter": 2,
-                        "Time": "00:12:57",
+                        "Time": "00:18:48",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -645,8 +645,8 @@
                             },
                             {
                                 "n": "2",
-                                "scoreA": "7",
-                                "scoreB": "7"
+                                "scoreA": "14",
+                                "scoreB": "16"
                             }
                         ],
                         "Season": null,
@@ -1043,7 +1043,7 @@
                 "id": "211",
                 "name": "F.Ascenso Lf2",
                 "gamescount": 24,
-                "nowplaying": 0,
+                "nowplaying": 1,
                 "order": 10,
                 "GAMES": [
                     {
@@ -1331,12 +1331,18 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=953175&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=970944&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:00:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -1823,14 +1829,14 @@
                         "Place": "POLIDEPORTIVO MUNICIPAL LA LÍNEA",
                         "TeamAID": 964743,
                         "TeamA": "SPAR GRAN CANARIA",
-                        "ScoreA": 26,
+                        "ScoreA": 31,
                         "TeamACode": "35000104",
                         "TeamAClubCode": "350001",
                         "TeamBID": 952716,
                         "TeamB": "VALENCIA BASKET ",
                         "TeamBCode": "46000208",
                         "TeamBClubCode": "460002",
-                        "ScoreB": 26,
+                        "ScoreB": 39,
                         "StartTime": "2025-05-23T17:00:00",
                         "StartTimeUTC": "2025-05-23T15:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -1838,7 +1844,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=964743&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952716&ti=1",
                         "Quarter": 2,
-                        "Time": "00:11:35",
+                        "Time": "00:17:53",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -1850,8 +1856,8 @@
                             },
                             {
                                 "n": "2",
-                                "scoreA": "2",
-                                "scoreB": "2"
+                                "scoreA": "7",
+                                "scoreB": "15"
                             }
                         ],
                         "Season": null,
@@ -2025,14 +2031,14 @@
                         "Place": "PAB. MANUEL PRADO",
                         "TeamAID": 954794,
                         "TeamA": "BARÇA",
-                        "ScoreA": 23,
+                        "ScoreA": 35,
                         "TeamACode": "08000303",
                         "TeamAClubCode": "080003",
                         "TeamBID": 962029,
                         "TeamB": "PABLO LASO ACADEMY 'A'",
                         "TeamBCode": "28297301",
                         "TeamBClubCode": "282973",
-                        "ScoreB": 8,
+                        "ScoreB": 18,
                         "StartTime": "2025-05-23T17:00:00",
                         "StartTimeUTC": "2025-05-23T15:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -2040,7 +2046,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=954794&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=962029&ti=1",
                         "Quarter": 2,
-                        "Time": "00:11:14",
+                        "Time": "00:19:16",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -2052,8 +2058,8 @@
                             },
                             {
                                 "n": "2",
-                                "scoreA": "6",
-                                "scoreB": "0"
+                                "scoreA": "18",
+                                "scoreB": "10"
                             }
                         ],
                         "Season": null,
