@@ -26,14 +26,14 @@
                         "Place": "PABELLÓN MUNICIPAL DE DEPORTES (PALENCIA)",
                         "TeamAID": 951848,
                         "TeamA": "SÚPER AGROPAL PALENCIA",
-                        "ScoreA": 46,
+                        "ScoreA": 54,
                         "TeamACode": "34000707",
                         "TeamAClubCode": "340007",
                         "TeamBID": 952033,
                         "TeamB": "MONBUS OBRADOIRO",
                         "TeamBCode": "15040900",
                         "TeamBClubCode": "150409",
-                        "ScoreB": 47,
+                        "ScoreB": 56,
                         "StartTime": "2025-05-23T20:00:00",
                         "StartTimeUTC": "2025-05-23T18:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -41,7 +41,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951848&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952033&ti=1",
                         "Quarter": 3,
-                        "Time": "00:20:00",
+                        "Time": "00:24:27",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -58,8 +58,8 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "8",
+                                "scoreB": "9"
                             }
                         ],
                         "Season": null,
@@ -77,22 +77,22 @@
                         "Place": "AMENABAR ARENA",
                         "TeamAID": 950759,
                         "TeamA": "INVEREADY GIPUZKOA",
-                        "ScoreA": 48,
+                        "ScoreA": 57,
                         "TeamACode": "20046000",
                         "TeamAClubCode": "200460",
                         "TeamBID": 951466,
                         "TeamB": "MOVISTAR ESTUDIANTES",
                         "TeamBCode": "28000100",
                         "TeamBClubCode": "280001",
-                        "ScoreB": 47,
+                        "ScoreB": 57,
                         "StartTime": "2025-05-23T20:30:00",
                         "StartTimeUTC": "2025-05-23T18:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950759&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951466&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:26:51",
+                        "Quarter": 4,
+                        "Time": "00:32:43",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -109,8 +109,13 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "7",
-                                "scoreB": "6"
+                                "scoreA": "13",
+                                "scoreB": "12"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "3",
+                                "scoreB": "4"
                             }
                         ],
                         "Season": null,
@@ -128,22 +133,22 @@
                         "Place": "POLIDEPORTIVO MUNICIPAL EL PLANTIO",
                         "TeamAID": 950726,
                         "TeamA": "GRUPO URETA TIZONA BURGOS",
-                        "ScoreA": 45,
+                        "ScoreA": 49,
                         "TeamACode": "09024901",
                         "TeamAClubCode": "090249",
                         "TeamBID": 951321,
                         "TeamB": "FLEXICAR FUENLABRADA",
                         "TeamBCode": "28332300",
                         "TeamBClubCode": "283323",
-                        "ScoreB": 52,
+                        "ScoreB": 59,
                         "StartTime": "2025-05-23T20:45:00",
                         "StartTimeUTC": "2025-05-23T18:45:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950726&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951321&ti=1",
-                        "Quarter": 2,
-                        "Time": "00:19:54",
+                        "Quarter": 3,
+                        "Time": "00:23:29",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -157,6 +162,11 @@
                                 "n": "2",
                                 "scoreA": "19",
                                 "scoreB": "29"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "4",
+                                "scoreB": "7"
                             }
                         ],
                         "Season": null,
@@ -174,14 +184,14 @@
                         "Place": "PALACIO DE LOS DEPORTES DE CARTAGENA",
                         "TeamAID": 951078,
                         "TeamA": "ODILO FC CARTAGENA CB",
-                        "ScoreA": 30,
+                        "ScoreA": 33,
                         "TeamACode": "30018800",
                         "TeamAClubCode": "300188",
                         "TeamBID": 950951,
                         "TeamB": "REAL BETIS BALONCESTO",
                         "TeamBCode": "41000600",
                         "TeamBClubCode": "410006",
-                        "ScoreB": 36,
+                        "ScoreB": 39,
                         "StartTime": "2025-05-23T21:00:00",
                         "StartTimeUTC": "2025-05-23T19:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -189,7 +199,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951078&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950951&ti=1",
                         "Quarter": 2,
-                        "Time": "00:14:58",
+                        "Time": "00:16:25",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -201,8 +211,8 @@
                             },
                             {
                                 "n": "2",
-                                "scoreA": "14",
-                                "scoreB": "10"
+                                "scoreA": "17",
+                                "scoreB": "13"
                             }
                         ],
                         "Season": null,
@@ -433,7 +443,7 @@
                 "id": "111",
                 "name": "Tercera FEB",
                 "gamescount": 24,
-                "nowplaying": 2,
+                "nowplaying": 1,
                 "order": 6,
                 "GAMES": [
                     {
@@ -784,7 +794,7 @@
                         "Place": "PABELLÓN DE DEPORTES PRESIDENTE ADOLFO SUÁREZ",
                         "TeamAID": 950872,
                         "TeamA": "CÍRCULO GIJÓN NOEGA BALONCESTO",
-                        "ScoreA": 84,
+                        "ScoreA": 90,
                         "TeamACode": "33032000",
                         "TeamAClubCode": "330320",
                         "TeamBID": 950728,
@@ -799,8 +809,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950872&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950728&ti=1",
                         "Quarter": 4,
-                        "Time": "00:38:27",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -821,7 +831,7 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "26",
+                                "scoreA": "32",
                                 "scoreB": "14"
                             }
                         ],
@@ -840,14 +850,14 @@
                         "Place": "PABELLÓN COLEGIO LICEO EUROPA",
                         "TeamAID": 951062,
                         "TeamA": "FUNDACION GLOBALCAJA LA RODA",
-                        "ScoreA": 51,
+                        "ScoreA": 66,
                         "TeamACode": "02015901",
                         "TeamAClubCode": "020159",
                         "TeamBID": 950647,
                         "TeamB": "AZULEJOS MONCAYO CBZ",
                         "TeamBCode": "50000102",
                         "TeamBClubCode": "500001",
-                        "ScoreB": 63,
+                        "ScoreB": 73,
                         "StartTime": "2025-05-23T20:30:00",
                         "StartTimeUTC": "2025-05-23T18:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -855,7 +865,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951062&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950647&ti=1",
                         "Quarter": 4,
-                        "Time": "00:31:53",
+                        "Time": "00:39:51",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -877,8 +887,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "0",
-                                "scoreB": "5"
+                                "scoreA": "15",
+                                "scoreB": "15"
                             }
                         ],
                         "Season": null,
@@ -1170,7 +1180,7 @@
                 "id": "211",
                 "name": "F.Ascenso Lf2",
                 "gamescount": 24,
-                "nowplaying": 2,
+                "nowplaying": 0,
                 "order": 10,
                 "GAMES": [
                     {
@@ -1521,14 +1531,14 @@
                         "Place": "PABELLÓN DEPORTIVO INSULAR LA PATERNA",
                         "TeamAID": 952346,
                         "TeamA": "FEMXA CELTA UVIGO",
-                        "ScoreA": 66,
+                        "ScoreA": 72,
                         "TeamACode": "36000102",
                         "TeamAClubCode": "360001",
                         "TeamBID": 966464,
                         "TeamB": "SPAR GRAN CANARIA",
                         "TeamBCode": "35000108",
                         "TeamBClubCode": "350001",
-                        "ScoreB": 74,
+                        "ScoreB": 77,
                         "StartTime": "2025-05-23T19:15:00",
                         "StartTimeUTC": "2025-05-23T17:15:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -1536,8 +1546,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=952346&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=966464&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:15",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -1558,8 +1568,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "14",
-                                "scoreB": "9"
+                                "scoreA": "20",
+                                "scoreB": "12"
                             }
                         ],
                         "Season": null,
@@ -1592,8 +1602,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951272&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=966408&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:59",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
