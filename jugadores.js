@@ -328,13 +328,17 @@ function truncarNombreJugador(nombre, maxLength = 18) {
 function renderizarJugadores(jugadores) {
   elementos.grid.innerHTML = jugadores.map(jugador => {
     const teamLogo = jugador.team_logo || '';
+    const playerPhoto = jugador.foto && jugador.foto.trim() !== '' ? 
+      jugador.foto : 
+      'player_placeholder.png';
+    
     return `
       <div class="player-card">
         <div class="player-header">
           <div class="team-logo-container">
-            <img src="${teamLogo}" alt="Logo ${jugador.equipo}" class="team-logo-img">
+            <img src="${teamLogo}" alt="Logo ${jugador.equipo}" class="team-logo-img" onerror="this.src='player_placeholder.png'">
           </div>
-          <img src="${jugador.foto}" alt="${jugador.nombre}" class="player-photo">
+          <img src="${playerPhoto}" alt="${jugador.nombre}" class="player-photo" onerror="this.src='player_placeholder.png'">
         </div>
         <div class="player-info">
           <h3 class="player-name" title="${jugador.nombre}">${truncarNombreJugador(jugador.nombre)}</h3>

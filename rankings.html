@@ -123,20 +123,90 @@
 
     <!-- FILTROS -->
     <div class="stats-filters">
-      <select id="filterCompetition">
-        <option value="">-- Competición --</option>
-      </select>
-      <select id="filterRound">
-        <option value="">-- Fase --</option>
-      </select>
-      <select id="filterTeam">
-        <option value="">-- Equipo --</option>
-      </select>
-      <select id="filterGender">
-        <option value="">-- Género --</option>
-        <option value="H">Hombres</option>
-        <option value="M">Mujeres</option>
-      </select>
+      <div class="custom-select">
+        <div class="select-header" onclick="toggleDropdown('competition')">
+          <span>Competición</span>
+          <span class="arrow">▼</span>
+        </div>
+        <div class="select-options" id="competitionOptions">
+          <div class="select-search">
+            <input type="text" placeholder="Buscar..." onkeyup="filterOptions('competition')">
+          </div>
+          <div class="select-all-options">
+            <button onclick="selectAll('competition')" class="select-all-btn">Seleccionar todo</button>
+            <button onclick="deselectAll('competition')" class="deselect-all-btn" style="display: block;">Deseleccionar todo</button>
+          </div>
+          <div class="options-list" id="competitionList">
+            <!-- Options will be filled dynamically -->
+          </div>
+        </div>
+      </div>
+
+      <div class="custom-select">
+        <div class="select-header" onclick="toggleDropdown('round')">
+          <span>Fase</span>
+          <span class="arrow">▼</span>
+        </div>
+        <div class="select-options" id="roundOptions">
+          <div class="select-all-options">
+            <button onclick="selectAll('round')" class="select-all-btn">Seleccionar todo</button>
+            <button onclick="deselectAll('round')" class="deselect-all-btn" style="display: block;">Deseleccionar todo</button>
+          </div>
+          <div class="options-list" id="roundList">
+            <label class="option">
+              <input type="checkbox" value="Fase de Grupos">
+              <span>Fase de Grupos</span>
+            </label>
+            <label class="option">
+              <input type="checkbox" value="Playoffs">
+              <span>Playoffs</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="custom-select">
+        <div class="select-header" onclick="toggleDropdown('team')">
+          <span>Equipo</span>
+          <span class="arrow">▼</span>
+        </div>
+        <div class="select-options" id="teamOptions">
+          <div class="select-search">
+            <input type="text" placeholder="Buscar..." onkeyup="filterOptions('team')">
+          </div>
+          <div class="select-all-options">
+            <button onclick="selectAll('team')" class="select-all-btn">Seleccionar todo</button>
+            <button onclick="deselectAll('team')" class="deselect-all-btn" style="display: block;">Deseleccionar todo</button>
+          </div>
+          <div class="options-list" id="teamList">
+            <!-- Options will be filled dynamically -->
+          </div>
+        </div>
+      </div>
+
+      <div class="custom-select">
+        <div class="select-header" onclick="toggleDropdown('gender')">
+          <span>Género</span>
+          <span class="arrow">▼</span>
+        </div>
+        <div class="select-options" id="genderOptions">
+          <div class="select-all-options">
+            <button onclick="selectAll('gender')" class="select-all-btn">Seleccionar todo</button>
+            <button onclick="deselectAll('gender')" class="deselect-all-btn" style="display: block;">Deseleccionar todo</button>
+          </div>
+          <div class="options-list" id="genderList">
+            <label class="option">
+              <input type="checkbox" value="H">
+              <span>Hombres</span>
+            </label>
+            <label class="option">
+              <input type="checkbox" value="M">
+              <span>Mujeres</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
       <input type="text" id="searchPlayerTeam" placeholder="Buscar equipo o jugador...">
       <div class="toggle-container">
         <span>Totales</span>

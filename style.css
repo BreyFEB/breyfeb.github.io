@@ -355,6 +355,7 @@ input:checked + .slider:before {
   justify-content: center;
   gap: 15px;
   margin-bottom: 30px;
+  margin-top: 30px;
 }
 .pagination-controls button {
   padding: 8px 16px;
@@ -688,6 +689,7 @@ input:checked + .slider:before {
     z-index: 100;
     background-color: #f2f2f2;
     border-bottom: 2px solid #ddd;
+    padding-left: 10px !important;
   }
 
   /* Eliminar todos los z-index de las celdas del cuerpo */
@@ -1014,4 +1016,227 @@ input:checked + .slider:before {
 
 .player-name:hover::after {
     opacity: 1;
+}
+
+/* Custom Select Styles */
+.custom-select {
+  position: relative;
+  min-width: 200px;
+  margin: 0 5px;
+}
+
+.select-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #111C4E;
+  font-size: 1em;
+}
+
+.select-header:hover {
+  border-color: #FF9E1B;
+}
+
+.arrow {
+  font-size: 0.8em;
+  transition: transform 0.3s ease;
+}
+
+.select-options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 5px;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.select-options.active {
+  display: block;
+}
+
+.select-search {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.select-search input {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.options-list {
+  padding: 5px 0;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.option:hover {
+  background-color: #f5f5f5;
+}
+
+.option input[type="checkbox"] {
+  margin-right: 8px;
+  width: 16px !important;
+  height: 16px !important;
+  min-width: 16px !important;
+  min-height: 16px !important;
+  cursor: pointer;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  border: 1px solid #111C4E !important;
+  border-radius: 2px;
+  position: relative;
+  vertical-align: middle;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  flex-shrink: 0 !important;
+}
+
+.option input[type="checkbox"]:checked {
+  background-color: #FF9E1B !important;
+  border-color: #FF9E1B !important;
+}
+
+.option input[type="checkbox"]:checked::after {
+  content: '✓';
+  position: absolute;
+  color: white;
+  font-size: 8px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.option input[type="checkbox"]:hover {
+  border-color: #FF9E1B;
+}
+
+.option span {
+  color: #111C4E;
+  font-size: 0.9em;
+}
+
+/* Selected state */
+.option input[type="checkbox"]:checked + span {
+  color: #FF9E1B;
+  font-weight: 500;
+}
+
+/* Scrollbar styles */
+.select-options::-webkit-scrollbar {
+  width: 8px;
+}
+
+.select-options::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.select-options::-webkit-scrollbar-thumb {
+  background: #FF9E1B;
+  border-radius: 4px;
+}
+
+.select-options::-webkit-scrollbar-thumb:hover {
+  background: #C8102E;
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 768px) {
+  .custom-select {
+    width: 100%;
+    margin: 5px 0;
+  }
+  
+  .select-options {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-height: 80vh;
+  }
+}
+
+/* Select All Options */
+.select-all-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+  background-color: #f8f8f8;
+}
+
+.select-all-btn,
+.deselect-all-btn {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #111C4E;
+  font-size: 0.85em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.select-all-btn:hover {
+  background-color: #FF9E1B;
+  color: #fff;
+  border-color: #FF9E1B;
+}
+
+.deselect-all-btn:hover {
+  background-color: #C8102E;
+  color: #fff;
+  border-color: #C8102E;
+}
+
+/* Adjust spacing for options list */
+.options-list {
+  padding: 5px 0;
+  max-height: 250px; /* Reduced to accommodate the select all buttons */
+}
+
+.option-category {
+  padding: 8px 12px;
+  font-weight: bold;
+  color: #111C4E;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+  font-size: 0.9em;
+  cursor: default;
+}
+
+.option-category:first-child {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.option-category:last-child {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }

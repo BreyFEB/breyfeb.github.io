@@ -129,49 +129,200 @@ async function loadAllStats() {
   }
 }
 
+function toggleDropdown(type) {
+  const options = document.getElementById(`${type}Options`);
+  const header = options.previousElementSibling;
+  const arrow = header.querySelector('.arrow');
+  
+  // Close all other dropdowns
+  document.querySelectorAll('.select-options').forEach(dropdown => {
+    if (dropdown !== options) {
+      dropdown.classList.remove('active');
+      dropdown.previousElementSibling.querySelector('.arrow').style.transform = 'rotate(0deg)';
+    }
+  });
+
+  // Toggle current dropdown
+  options.classList.toggle('active');
+  arrow.style.transform = options.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0deg)';
+}
+
+function selectAll(type) {
+  const options = document.querySelectorAll(`#${type}List .option input[type="checkbox"]`);
+  options.forEach(checkbox => {
+    checkbox.checked = true;
+  });
+  updateSelectHeader(type);
+}
+
+function deselectAll(type) {
+  const options = document.querySelectorAll(`#${type}List .option input[type="checkbox"]`);
+  options.forEach(checkbox => {
+    checkbox.checked = false;
+  });
+  updateSelectHeader(type);
+}
+
+function filterOptions(type) {
+  const input = document.querySelector(`#${type}Options .select-search input`);
+  const options = document.querySelectorAll(`#${type}List .option`);
+  const searchTerm = input.value.toLowerCase();
+
+  options.forEach(option => {
+    const text = option.querySelector('span').textContent.toLowerCase();
+    option.style.display = text.includes(searchTerm) ? 'flex' : 'none';
+  });
+
+  // Update select all buttons state based on visible options
+  updateSelectAllButtonsState(type);
+}
+
+function updateSelectAllButtonsState(type) {
+  const visibleOptions = Array.from(document.querySelectorAll(`#${type}List .option`))
+    .filter(option => option.style.display !== 'none');
+  
+  const allChecked = visibleOptions.every(option => 
+    option.querySelector('input[type="checkbox"]').checked
+  );
+  
+  const someChecked = visibleOptions.some(option => 
+    option.querySelector('input[type="checkbox"]').checked
+  );
+
+  const selectAllBtn = document.querySelector(`#${type}Options .select-all-btn`);
+  const deselectAllBtn = document.querySelector(`#${type}Options .deselect-all-btn`);
+
+  if (selectAllBtn && deselectAllBtn) {
+    selectAllBtn.textContent = allChecked ? 'Deseleccionar todo' : 'Seleccionar todo';
+    selectAllBtn.onclick = allChecked ? 
+      () => deselectAll(type) : 
+      () => selectAll(type);
+    
+    // Show deselect all button when all options are selected or some options are selected
+    deselectAllBtn.style.display = (allChecked || someChecked) ? 'block' : 'block';
+  }
+}
+
+function getSelectedValues(type) {
+  const checkboxes = document.querySelectorAll(`#${type}List input[type="checkbox"]:checked`);
+  return Array.from(checkboxes).map(cb => cb.value);
+}
+
+function updateSelectHeader(type) {
+  const header = document.querySelector(`#${type}Options`).previousElementSibling;
+  const selectedValues = getSelectedValues(type);
+  
+  if (selectedValues.length === 0) {
+    // Keep the original Spanish text
+    const originalText = {
+      'competition': 'Competición',
+      'round': 'Fase',
+      'team': 'Equipo',
+      'gender': 'Género'
+    };
+    header.querySelector('span:first-child').textContent = originalText[type];
+  } else {
+    header.querySelector('span:first-child').textContent = `${selectedValues.length} seleccionados`;
+  }
+}
+
 function fillSelects() {
-  const filterCompetition = document.getElementById("filterCompetition");
-  const filterTeam = document.getElementById("filterTeam");
-  const filterRound = document.getElementById("filterRound");
+  // Define competition hierarchy
+  const competitionHierarchy = {
+    'Ligas profesionales masculinas': ['PRIMERA FEB', 'SEGUNDA FEB', 'TERCERA FEB'],
+    'Ligas profesionales femeninas': ['LF ENDESA', 'LF CHALLENGE', 'L.F.-2'],
+    'Otras competiciones': []
+  };
 
-  competitionSet.forEach(c => {
-    const opt = document.createElement("option");
-    opt.value = c;
-    opt.textContent = c;
-    filterCompetition.appendChild(opt);
+  // Fill competition options
+  const competitionList = document.getElementById('competitionList');
+  competitionList.innerHTML = '';
+
+  // First, add the main competitions in their specified order
+  Object.entries(competitionHierarchy).forEach(([category, competitions]) => {
+    // Add category header
+    const categoryHeader = document.createElement('div');
+    categoryHeader.className = 'option-category';
+    categoryHeader.textContent = category;
+    competitionList.appendChild(categoryHeader);
+
+    // Add competitions for this category
+    competitions.forEach(competition => {
+      if (competitionSet.has(competition)) {
+        const label = document.createElement('label');
+        label.className = 'option';
+        label.innerHTML = `
+          <input type="checkbox" value="${competition}">
+          <span>${competition}</span>
+        `;
+        competitionList.appendChild(label);
+      }
+    });
   });
 
+  // Add remaining competitions to "Otras competiciones"
+  const otherCompetitions = [...competitionSet].filter(comp => 
+    !Object.values(competitionHierarchy).flat().includes(comp)
+  ).sort((a, b) => a.localeCompare(b));
+
+  if (otherCompetitions.length > 0) {
+    otherCompetitions.forEach(competition => {
+      const label = document.createElement('label');
+      label.className = 'option';
+      label.innerHTML = `
+        <input type="checkbox" value="${competition}">
+        <span>${competition}</span>
+      `;
+      competitionList.appendChild(label);
+    });
+  }
+
+  // Fill team options
+  const teamList = document.getElementById('teamList');
+  teamList.innerHTML = '';
   [...teamSet].sort((a, b) => a.localeCompare(b)).forEach(t => {
-    const opt = document.createElement("option");
-    opt.value = t;
-    opt.textContent = t;
-    filterTeam.appendChild(opt);
+    const label = document.createElement('label');
+    label.className = 'option';
+    label.innerHTML = `
+      <input type="checkbox" value="${t}">
+      <span>${t}</span>
+    `;
+    teamList.appendChild(label);
   });
 
-  // Limpiar y añadir las dos opciones principales al select de fases
-  filterRound.innerHTML = `
-    <option value="">-- Fase --</option>
-    <option value="Fase de Grupos">Fase de Grupos</option>
-    <option value="Playoffs">Playoffs</option>
-  `;
+  // Add change event listeners to all checkboxes
+  document.querySelectorAll('.option input[type="checkbox"]').forEach(checkbox => {
+    checkbox.addEventListener('change', () => {
+      const type = checkbox.closest('.select-options').id.replace('Options', '');
+      updateSelectHeader(type);
+      updateSelectAllButtonsState(type);
+    });
+  });
+
+  // Initialize select all buttons state for each dropdown
+  ['competition', 'round', 'team', 'gender'].forEach(type => {
+    updateSelectAllButtonsState(type);
+  });
 }
 
 function applyFilters() {
-  const compSel = document.getElementById("filterCompetition").value;
-  const teamSel = document.getElementById("filterTeam").value;
-  const genderSel = document.getElementById("filterGender").value;
-  const phaseSel = document.getElementById("filterRound").value;
+  const selectedCompetitions = getSelectedValues('competition');
+  const selectedTeams = getSelectedValues('team');
+  const selectedGenders = getSelectedValues('gender');
+  const selectedPhases = getSelectedValues('round');
   const modeToggle = document.getElementById("modeToggle");
   const searchInput = document.getElementById("searchPlayerTeam");
   const searchTerm = searchInput.value.toLowerCase();
 
   // Use phase records if a phase is selected, otherwise use total records
-  let dataToFilter = phaseSel ? window.phaseRecords.filter(p => p.phaseType === phaseSel) : allPlayersStats;
+  let dataToFilter = selectedPhases.length > 0 ? 
+    window.phaseRecords.filter(p => selectedPhases.includes(p.phaseType)) : 
+    allPlayersStats;
 
   let filteredData = dataToFilter.filter(player => {
-    const matchesComp = !compSel || player.competition === compSel;
-    const matchesTeam = !teamSel || player.teamName === teamSel;
-    const matchesGender = !genderSel || player.gender === genderSel;
+    const matchesComp = selectedCompetitions.length === 0 || selectedCompetitions.includes(player.competition);
+    const matchesTeam = selectedTeams.length === 0 || selectedTeams.includes(player.teamName);
+    const matchesGender = selectedGenders.length === 0 || selectedGenders.includes(player.gender);
     const matchesSearch = !searchTerm || 
       player.playerName.toLowerCase().includes(searchTerm) || 
       player.teamName.toLowerCase().includes(searchTerm);
@@ -216,6 +367,11 @@ function renderTable(data, mode = "totales") {
     const row = document.createElement("tr");
     const rank = (currentPage - 1) * itemsPerPage + index + 1;
 
+    // Handle player photo with placeholder
+    const playerPhoto = player.playerPhoto && player.playerPhoto.trim() !== '' ? 
+      player.playerPhoto : 
+      'player_placeholder.png';
+
     // Calcular minutos promedio si es necesario
     const minutes = mode === "totales" 
       ? secondsToMinutes(player.seconds)
@@ -258,7 +414,7 @@ function renderTable(data, mode = "totales") {
     row.innerHTML = `
       <td>${rank}</td>
       <td>${player.dorsal}</td>
-      <td><img src="${player.playerPhoto}" alt="${player.playerName}" class="player-photo"></td>
+      <td><img src="${playerPhoto}" alt="${player.playerName}" class="player-photo" onerror="this.src='player_placeholder.png'"></td>
       <td class="player-name" onclick='showPlayerMatches(${JSON.stringify(player).replace(/'/g, "\\'")})'
           style="cursor: pointer">${limitName(player.playerName)}</td>
       <td class="team-name" data-fullname="${teamName}">${shortTeamName}</td>
@@ -637,5 +793,15 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("nextPageBtn").addEventListener("click", () => {
     currentPage++;
     applyFilters();
+  });
+
+  // Add click outside listener to close dropdowns
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.custom-select')) {
+      document.querySelectorAll('.select-options').forEach(dropdown => {
+        dropdown.classList.remove('active');
+        dropdown.previousElementSibling.querySelector('.arrow').style.transform = 'rotate(0deg)';
+      });
+    }
   });
 }); 
