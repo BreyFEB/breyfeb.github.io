@@ -393,9 +393,29 @@ function showPlayerMatches(playerData) {
   }
 }
 
+function toTitleCase(str) {
+  return str.toLowerCase().split(' ').map(word => 
+    word.charAt(0).toUpperCase() + word.slice(1)
+  ).join(' ');
+}
+
 function renderTable(data, mode = "totales") {
   const tbody = document.querySelector("#statsTable tbody");
   tbody.innerHTML = "";
+
+  if (data.length === 0) {
+    // Show message if no data
+    const row = document.createElement("tr");
+    const cell = document.createElement("td");
+    cell.colSpan = 28; // Number of columns in the table
+    cell.textContent = "No hay datos para los filtros seleccionados. Por favor, ajusta los filtros y vuelve a intentarlo.";
+    cell.style.textAlign = "left";
+    cell.style.fontWeight = "bold";
+    cell.style.padding = "20px";
+    row.appendChild(cell);
+    tbody.appendChild(row);
+    return;
+  }
 
   data.forEach((player, index) => {
     const row = document.createElement("tr");
@@ -405,6 +425,9 @@ function renderTable(data, mode = "totales") {
     const playerPhoto = player.playerPhoto && player.playerPhoto.trim() !== '' ? 
       player.playerPhoto : 
       'player_placeholder.png';
+
+    // Format player name with title case
+    const formattedName = toTitleCase(player.playerName);
 
     // Calcular minutos promedio si es necesario
     const minutes = mode === "totales" 
@@ -448,9 +471,9 @@ function renderTable(data, mode = "totales") {
     row.innerHTML = `
       <td>${rank}</td>
       <td>${player.dorsal}</td>
-      <td><img src="${playerPhoto}" alt="${player.playerName}" class="player-photo" onerror="this.src='player_placeholder.png'"></td>
+      <td><img src="${playerPhoto}" alt="${formattedName}" class="player-photo" onerror="this.src='player_placeholder.png'"></td>
       <td class="player-name" onclick='showPlayerMatches(${JSON.stringify(player).replace(/'/g, "\\'")})'
-          style="cursor: pointer">${limitName(player.playerName)}</td>
+          title="${formattedName}">${formattedName}</td>
       <td class="team-name" data-fullname="${teamName}">${shortTeamName}</td>
       <td data-col="min">${minutes}</td>
       <td data-col="pts">${pts}</td>
@@ -706,7 +729,10 @@ function sortArray(array, colKey, order, mode) {
 function getSortValue(obj, colKey, mode) {
   // Caso especial para minutos
   if (colKey === 'min') {
-    return obj.seconds;  // Usamos los segundos directamente para ordenar
+    if (mode === 'promedios' && obj.games > 0) {
+      return obj.seconds / obj.games; // Use average seconds for averages mode
+    }
+    return obj.seconds; // Use total seconds for totals mode
   }
 
   // Forzar conversión a número para porcentajes
@@ -722,9 +748,6 @@ function getSortValue(obj, colKey, mode) {
   }
 
   if (mode === "promedios" && obj.games > 0) {
-    if (colKey === 'min') {
-      return obj.seconds / obj.games;  // Para promedios también usamos segundos
-    }
     return obj[colKey] / obj.games;
   }
 
@@ -792,6 +815,39 @@ document.addEventListener("DOMContentLoaded", () => {
     currentPage = 1;
     applyFilters();
   });
+
+  // Add reset filters functionality
+  const btnResetFilters = document.getElementById("btnResetFilters");
+  if (btnResetFilters) {
+    btnResetFilters.addEventListener("click", () => {
+      // Uncheck all checkboxes in dropdowns
+      document.querySelectorAll('.option input[type="checkbox"]').forEach(cb => cb.checked = false);
+      // Reset search input
+      const searchInput = document.getElementById("searchPlayerTeam");
+      if (searchInput) searchInput.value = "";
+      // Reset mode toggle to Totales
+      const modeToggle = document.getElementById("modeToggle");
+      if (modeToggle) modeToggle.checked = false;
+      // Reset dropdown headers
+      ["competition", "round", "team", "gender"].forEach(type => {
+        const header = document.querySelector(`#${type}Options`).previousElementSibling;
+        if (header) {
+          const originalText = {
+            'competition': 'Competición',
+            'round': 'Fase',
+            'team': 'Equipo',
+            'gender': 'Género'
+          };
+          header.querySelector('span:first-child').textContent = originalText[type];
+        }
+      });
+      // Reset current page and sorting
+      currentPage = 1;
+      currentSortCol = "pts";
+      currentSortOrder = "desc";
+      applyFilters();
+    });
+  }
 
   const ths = document.querySelectorAll("#statsTable thead th");
   ths.forEach(th => {
