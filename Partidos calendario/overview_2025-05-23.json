@@ -199,14 +199,14 @@
                         "Place": "PALACIO DE LOS DEPORTES DE CARTAGENA",
                         "TeamAID": 951078,
                         "TeamA": "ODILO FC CARTAGENA CB",
-                        "ScoreA": 82,
+                        "ScoreA": 87,
                         "TeamACode": "30018800",
                         "TeamAClubCode": "300188",
                         "TeamBID": 950951,
                         "TeamB": "REAL BETIS BALONCESTO",
                         "TeamBCode": "41000600",
                         "TeamBClubCode": "410006",
-                        "ScoreB": 81,
+                        "ScoreB": 83,
                         "StartTime": "2025-05-23T21:00:00",
                         "StartTimeUTC": "2025-05-23T19:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -214,7 +214,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951078&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950951&ti=1",
                         "Quarter": 5,
-                        "Time": "00:42:15",
+                        "Time": "00:44:53",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -241,8 +241,8 @@
                             },
                             {
                                 "n": "5",
-                                "scoreA": "6",
-                                "scoreB": "5"
+                                "scoreA": "11",
+                                "scoreB": "7"
                             }
                         ],
                         "Season": null,
