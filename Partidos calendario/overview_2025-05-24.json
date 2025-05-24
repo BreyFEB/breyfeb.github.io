@@ -169,7 +169,7 @@
                 "id": "111",
                 "name": "Tercera FEB",
                 "gamescount": 16,
-                "nowplaying": 1,
+                "nowplaying": 2,
                 "order": 6,
                 "GAMES": [
                     {
@@ -520,14 +520,14 @@
                         "Place": "PABELLÓN SIGLO XXI (PISTA A)",
                         "TeamAID": 950647,
                         "TeamA": "AZULEJOS MONCAYO CBZ",
-                        "ScoreA": 64,
+                        "ScoreA": 75,
                         "TeamACode": "50000102",
                         "TeamAClubCode": "500001",
                         "TeamBID": 951964,
                         "TeamB": "NB TORRENT",
                         "TeamBCode": "46002604",
                         "TeamBClubCode": "460026",
-                        "ScoreB": 64,
+                        "ScoreB": 76,
                         "StartTime": "2025-05-24T18:30:00",
                         "StartTimeUTC": "2025-05-24T16:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -535,7 +535,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950647&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951964&ti=1",
                         "Quarter": 4,
-                        "Time": "00:36:59",
+                        "Time": "00:39:43",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -557,8 +557,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "14",
-                                "scoreB": "10"
+                                "scoreA": "25",
+                                "scoreB": "22"
                             }
                         ],
                         "Season": null,
@@ -576,26 +576,32 @@
                         "Place": "PABELLÓN DE DEPORTES PRESIDENTE ADOLFO SUÁREZ",
                         "TeamAID": 951421,
                         "TeamA": "SERCOMOSA MOLINA BASKET",
-                        "ScoreA": 0,
+                        "ScoreA": 11,
                         "TeamACode": "30019717",
                         "TeamAClubCode": "300197",
                         "TeamBID": 950872,
                         "TeamB": "CÍRCULO GIJÓN NOEGA BALONCESTO",
                         "TeamBCode": "33032000",
                         "TeamBClubCode": "330320",
-                        "ScoreB": 0,
+                        "ScoreB": 22,
                         "StartTime": "2025-05-24T20:00:00",
                         "StartTimeUTC": "2025-05-24T18:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951421&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950872&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:07:16",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "11",
+                                "scoreB": "22"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     }
@@ -991,14 +997,14 @@
                         "Place": "PAVELLO NOU CONGOST",
                         "TeamAID": 970944,
                         "TeamA": "LA SALLE VERSIA",
-                        "ScoreA": 0,
+                        "ScoreA": 10,
                         "TeamACode": "48000740",
                         "TeamAClubCode": "480007",
                         "TeamBID": 951272,
                         "TeamB": "MANRESA CBF A",
                         "TeamBCode": "08160700",
                         "TeamBClubCode": "081607",
-                        "ScoreB": 0,
+                        "ScoreB": 6,
                         "StartTime": "2025-05-24T20:00:00",
                         "StartTimeUTC": "2025-05-24T18:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -1006,15 +1012,15 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=970944&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951272&ti=1",
                         "Quarter": 1,
-                        "Time": "00:00:00",
+                        "Time": "00:08:41",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
                             {
                                 "n": "1",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "10",
+                                "scoreB": "6"
                             }
                         ],
                         "Season": null,
