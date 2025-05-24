@@ -169,7 +169,7 @@
                 "id": "111",
                 "name": "Tercera FEB",
                 "gamescount": 16,
-                "nowplaying": 1,
+                "nowplaying": 0,
                 "order": 6,
                 "GAMES": [
                     {
@@ -184,14 +184,14 @@
                         "Place": "PABELLÓN DE DEPORTES PRESIDENTE ADOLFO SUÁREZ",
                         "TeamAID": 951498,
                         "TeamA": "CB ARIDANE",
-                        "ScoreA": 59,
+                        "ScoreA": 83,
                         "TeamACode": "38003721",
                         "TeamAClubCode": "380037",
                         "TeamBID": 952153,
                         "TeamB": "RIGALLI ALGINET",
                         "TeamBCode": "46004600",
                         "TeamBClubCode": "460046",
-                        "ScoreB": 50,
+                        "ScoreB": 66,
                         "StartTime": "2025-05-24T10:00:00",
                         "StartTimeUTC": "2025-05-24T08:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -199,8 +199,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951498&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952153&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:53",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -216,6 +216,11 @@
                             },
                             {
                                 "n": "3",
+                                "scoreA": "24",
+                                "scoreB": "16"
+                            },
+                            {
+                                "n": "4",
                                 "scoreA": "29",
                                 "scoreB": "21"
                             }
@@ -320,7 +325,7 @@
                         "Competition": "TERCERA FEB",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "3",
+                        "Stage": "0",
                         "ID": 2470749,
                         "GameCode": null,
                         "Place": "PABELLÓN DE DEPORTES PRESIDENTE ADOLFO SUÁREZ",
@@ -495,7 +500,7 @@
                 "id": "211",
                 "name": "F.Ascenso Lf2",
                 "gamescount": 16,
-                "nowplaying": 2,
+                "nowplaying": 1,
                 "order": 10,
                 "GAMES": [
                     {
@@ -517,7 +522,7 @@
                         "TeamB": "UNIVERSIDAD DEUSTO LOIOLA INDAUTXU ",
                         "TeamBCode": "48000520",
                         "TeamBClubCode": "480005",
-                        "ScoreB": 60,
+                        "ScoreB": 62,
                         "StartTime": "2025-05-24T10:15:00",
                         "StartTimeUTC": "2025-05-24T08:15:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -525,8 +530,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=964328&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=970943&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:30",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -548,7 +553,7 @@
                             {
                                 "n": "4",
                                 "scoreA": "10",
-                                "scoreB": "17"
+                                "scoreB": "19"
                             }
                         ],
                         "Season": null,
@@ -566,14 +571,14 @@
                         "Place": "PABELLÓN DEPORTIVO INSULAR LA PATERNA",
                         "TeamAID": 951719,
                         "TeamA": "DON MARTÍN - DRAFT GRAMENET",
-                        "ScoreA": 23,
+                        "ScoreA": 39,
                         "TeamACode": "08051100",
                         "TeamAClubCode": "080511",
                         "TeamBID": 956733,
                         "TeamB": "CESUR DISTRITO OLIMPICO",
                         "TeamBCode": "28011029",
                         "TeamBClubCode": "280110",
-                        "ScoreB": 24,
+                        "ScoreB": 36,
                         "StartTime": "2025-05-24T10:15:00",
                         "StartTimeUTC": "2025-05-24T08:15:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -581,7 +586,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951719&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=956733&ti=1",
                         "Quarter": 2,
-                        "Time": "00:12:35",
+                        "Time": "00:19:28",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -593,8 +598,8 @@
                             },
                             {
                                 "n": "2",
-                                "scoreA": "6",
-                                "scoreB": "8"
+                                "scoreA": "22",
+                                "scoreB": "20"
                             }
                         ],
                         "Season": null,
@@ -641,7 +646,7 @@
                         "Competition": "Fase Final 1ª División Femenin",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "3",
+                        "Stage": "0",
                         "ID": 2470689,
                         "GameCode": null,
                         "Place": "Pabellón Nou Congost",
@@ -887,14 +892,14 @@
                         "Place": "POLIDEPORTIVO MUNICIPAL LA LÍNEA",
                         "TeamAID": 952716,
                         "TeamA": "VALENCIA BASKET ",
-                        "ScoreA": 0,
+                        "ScoreA": 14,
                         "TeamACode": "46000208",
                         "TeamAClubCode": "460002",
                         "TeamBID": 956301,
                         "TeamB": "BARÇA CBS",
                         "TeamBCode": "08004210",
                         "TeamBClubCode": "080042",
-                        "ScoreB": 0,
+                        "ScoreB": 12,
                         "StartTime": "2025-05-24T12:00:00",
                         "StartTimeUTC": "2025-05-24T10:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -902,15 +907,15 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=952716&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=956301&ti=1",
                         "Quarter": 1,
-                        "Time": "00:00:00",
+                        "Time": "00:07:53",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
                             {
                                 "n": "1",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "14",
+                                "scoreB": "12"
                             }
                         ],
                         "Season": null,
@@ -922,7 +927,7 @@
                 "id": "252",
                 "name": "CE Clubes Cad Masc",
                 "gamescount": 6,
-                "nowplaying": 0,
+                "nowplaying": 1,
                 "order": 20,
                 "GAMES": [
                     {
@@ -993,26 +998,32 @@
                         "Place": "PAB. MANUEL PRADO",
                         "TeamAID": 954794,
                         "TeamA": "BARÇA",
-                        "ScoreA": 0,
+                        "ScoreA": 6,
                         "TeamACode": "08000303",
                         "TeamAClubCode": "080003",
                         "TeamBID": 962401,
                         "TeamB": "REAL MADRID ´A´",
                         "TeamBCode": "28000203",
                         "TeamBClubCode": "280002",
-                        "ScoreB": 0,
+                        "ScoreB": 4,
                         "StartTime": "2025-05-24T12:00:00",
                         "StartTimeUTC": "2025-05-24T10:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=954794&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=962401&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:01:54",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "6",
+                                "scoreB": "4"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     }
