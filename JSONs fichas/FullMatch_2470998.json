@@ -1,0 +1,213 @@
+{
+    "HEADER": {
+        "CompID": "211",
+        "competition": "Fase Final 1ª División Femenin",
+        "round": "FFB3                ",
+        "quarter": 0,
+        "time": "00:00",
+        "logo": null,
+        "duration": null,
+        "starttime": "24-05-2025 - 12:30",
+        "place": "C/ MANUEL DE FALLA, S/N, Las Palmas (Palmas de Gran Canaria, Las)",
+        "field": "PABELLÓN DEPORTIVO INSULAR LA PATERNA",
+        "referee1": "NDONG OBONO, FRANCISCO GREGORIO",
+        "referee2": "GONZÁLEZ GARCÍA, KEVIN",
+        "referee3": null,
+        "TEAM": [
+            {
+                "pts": "0",
+                "fouls": null,
+                "id": "951016",
+                "name": "RAISAN ELOY VILLANUEVA",
+                "logo": "https://imagenes.feb.es/imagen.aspx?i=951016&ti=1",
+                "teamCode": "39020210",
+                "clubCode": "390202"
+            },
+            {
+                "pts": "0",
+                "fouls": null,
+                "id": "966754",
+                "name": "CB EL PALO BASKET4LIFE",
+                "logo": "https://imagenes.feb.es/imagen.aspx?i=966754&ti=1",
+                "teamCode": "29003701",
+                "clubCode": "290037"
+            }
+        ],
+        "QUARTERS": {
+            "QUARTER": []
+        }
+    },
+    "SCOREBOARD": {
+        "duration": null,
+        "TEAM": [
+            {
+                "PLAYER": [],
+                "id": "951016",
+                "name": "RAISAN ELOY VILLANUEVA",
+                "logo": "https://imagenes.feb.es/imagen.aspx?i=951016&ti=1",
+                "teamCode": "39020210",
+                "clubCode": "390202"
+            },
+            {
+                "PLAYER": [],
+                "id": "966754",
+                "name": "CB EL PALO BASKET4LIFE",
+                "logo": "https://imagenes.feb.es/imagen.aspx?i=966754&ti=1",
+                "teamCode": "29003701",
+                "clubCode": "290037"
+            }
+        ]
+    },
+    "TEAMSTATS": {
+        "duration": null,
+        "TEAM": [
+            {
+                "p1m": "0",
+                "p1a": "0",
+                "p1p": "0,0",
+                "p2m": "0",
+                "p2a": "0",
+                "p2p": "0,0",
+                "p3m": "0",
+                "p3a": "0",
+                "p3p": "0,0",
+                "fgm": "0",
+                "fga": "0",
+                "fgp": "0,0",
+                "assist": "0",
+                "bs": "0",
+                "tc": null,
+                "mt": null,
+                "ro": "0",
+                "rd": "0",
+                "rt": "0",
+                "pf": "0",
+                "rf": "0",
+                "to": "0",
+                "st": "0",
+                "fastb": null,
+                "ptsto": null,
+                "secpts": null,
+                "bench": null,
+                "paint": null,
+                "min": null,
+                "minFormatted": "0:00",
+                "val": null,
+                "pts": "0",
+                "fouls": "0",
+                "id": "951016",
+                "name": "RAISAN ELOY VILLANUEVA",
+                "logo": "https://imagenes.feb.es/imagen.aspx?i=951016&ti=1",
+                "teamCode": "39020210",
+                "clubCode": "390202"
+            },
+            {
+                "p1m": "0",
+                "p1a": "0",
+                "p1p": "0,0",
+                "p2m": "0",
+                "p2a": "0",
+                "p2p": "0,0",
+                "p3m": "0",
+                "p3a": "0",
+                "p3p": "0,0",
+                "fgm": "0",
+                "fga": "0",
+                "fgp": "0,0",
+                "assist": "0",
+                "bs": "0",
+                "tc": null,
+                "mt": null,
+                "ro": "0",
+                "rd": "0",
+                "rt": "0",
+                "pf": "0",
+                "rf": "0",
+                "to": "0",
+                "st": "0",
+                "fastb": null,
+                "ptsto": null,
+                "secpts": null,
+                "bench": null,
+                "paint": null,
+                "min": null,
+                "minFormatted": "0:00",
+                "val": null,
+                "pts": "0",
+                "fouls": "0",
+                "id": "966754",
+                "name": "CB EL PALO BASKET4LIFE",
+                "logo": "https://imagenes.feb.es/imagen.aspx?i=966754&ti=1",
+                "teamCode": "29003701",
+                "clubCode": "290037"
+            }
+        ]
+    },
+    "TICKER": {
+        "text": null,
+        "duration": null,
+        "ITEM": null
+    },
+    "OVERVIEW": null,
+    "PLAYBYPLAY": {
+        "duration": null,
+        "hasExtension": false,
+        "LINES": []
+    },
+    "BANNER": {
+        "file": "http://baloncestoenvivo.feb.es/files/newbanner.swf",
+        "link": null,
+        "alt": null,
+        "duration": null
+    },
+    "BOXSCORE": null,
+    "SHOTCHART": {
+        "quarters": 0,
+        "duration": null,
+        "TEAM": [
+            {
+                "PLAYER": [],
+                "id": "951016",
+                "name": "RAISAN ELOY VILLANUEVA",
+                "logo": "https://imagenes.feb.es/imagen.aspx?i=951016&ti=1",
+                "teamCode": "39020210",
+                "clubCode": "390202"
+            },
+            {
+                "PLAYER": [],
+                "id": "966754",
+                "name": "CB EL PALO BASKET4LIFE",
+                "logo": "https://imagenes.feb.es/imagen.aspx?i=966754&ti=1",
+                "teamCode": "29003701",
+                "clubCode": "290037"
+            }
+        ],
+        "SHOTS": []
+    },
+    "RANKING": {
+        "TEAMS": [
+            {
+                "Puntos": [],
+                "Rebotes": [],
+                "Asistencias": [],
+                "Faltas": [],
+                "id": "951016",
+                "name": "RAISAN ELOY VILLANUEVA",
+                "logo": "https://imagenes.feb.es/imagen.aspx?i=951016&ti=1",
+                "teamCode": null,
+                "clubCode": null
+            },
+            {
+                "Puntos": [],
+                "Rebotes": [],
+                "Asistencias": [],
+                "Faltas": [],
+                "id": "966754",
+                "name": "CB EL PALO BASKET4LIFE",
+                "logo": "https://imagenes.feb.es/imagen.aspx?i=966754&ti=1",
+                "teamCode": null,
+                "clubCode": null
+            }
+        ]
+    }
+}
