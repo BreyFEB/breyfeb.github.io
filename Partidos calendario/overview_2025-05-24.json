@@ -105,14 +105,14 @@
                         "Place": "PALACIO MUNICIPAL DE LOS DEPORTES",
                         "TeamAID": 950923,
                         "TeamA": "LOBE HUESCA LA MAGIA",
-                        "ScoreA": 33,
+                        "ScoreA": 47,
                         "TeamACode": "22000100",
                         "TeamAClubCode": "220001",
                         "TeamBID": 950682,
                         "TeamB": "FIBWI PALMA",
                         "TeamBCode": "07003425",
                         "TeamBClubCode": "070034",
-                        "ScoreB": 36,
+                        "ScoreB": 53,
                         "StartTime": "2025-05-24T20:30:00",
                         "StartTimeUTC": "2025-05-24T18:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -120,7 +120,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950923&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950682&ti=1",
                         "Quarter": 3,
-                        "Time": "00:22:19",
+                        "Time": "00:29:49",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -137,8 +137,8 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "4",
-                                "scoreB": "0"
+                                "scoreA": "18",
+                                "scoreB": "17"
                             }
                         ],
                         "Season": null,
@@ -597,14 +597,14 @@
                         "Place": "PABELLÓN DE DEPORTES PRESIDENTE ADOLFO SUÁREZ",
                         "TeamAID": 951421,
                         "TeamA": "SERCOMOSA MOLINA BASKET",
-                        "ScoreA": 69,
+                        "ScoreA": 74,
                         "TeamACode": "30019717",
                         "TeamAClubCode": "300197",
                         "TeamBID": 950872,
                         "TeamB": "CÍRCULO GIJÓN NOEGA BALONCESTO",
                         "TeamBCode": "33032000",
                         "TeamBClubCode": "330320",
-                        "ScoreB": 68,
+                        "ScoreB": 71,
                         "StartTime": "2025-05-24T20:00:00",
                         "StartTimeUTC": "2025-05-24T18:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -612,7 +612,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951421&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950872&ti=1",
                         "Quarter": 4,
-                        "Time": "00:38:33",
+                        "Time": "00:39:59",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -634,8 +634,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "15",
-                                "scoreB": "10"
+                                "scoreA": "20",
+                                "scoreB": "13"
                             }
                         ],
                         "Season": null,
@@ -681,8 +681,8 @@
             {
                 "id": "211",
                 "name": "F.Ascenso Lf2",
-                "gamescount": 16,
-                "nowplaying": 1,
+                "gamescount": 17,
+                "nowplaying": 0,
                 "order": 10,
                 "GAMES": [
                     {
@@ -1033,14 +1033,14 @@
                         "Place": "PABELLÓN DEPORTIVO INSULAR LA PATERNA",
                         "TeamAID": 966464,
                         "TeamA": "SPAR GRAN CANARIA",
-                        "ScoreA": 90,
+                        "ScoreA": 92,
                         "TeamACode": "35000108",
                         "TeamAClubCode": "350001",
                         "TeamBID": 961289,
                         "TeamB": "INSTITUTO DE FERTILIDAD",
                         "TeamBCode": "07003402",
                         "TeamBClubCode": "070034",
-                        "ScoreB": 53,
+                        "ScoreB": 55,
                         "StartTime": "2025-05-24T19:15:00",
                         "StartTimeUTC": "2025-05-24T17:15:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -1048,8 +1048,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=966464&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=961289&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:18",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -1070,8 +1070,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "26",
-                                "scoreB": "10"
+                                "scoreA": "28",
+                                "scoreB": "12"
                             }
                         ],
                         "Season": null,
@@ -1130,6 +1130,41 @@
                                 "scoreB": "9"
                             }
                         ],
+                        "Season": null,
+                        "SeasonID": null
+                    },
+                    {
+                        "CompID": "211",
+                        "CompCode": null,
+                        "Competition": "Fase Final 1ª División Femenin",
+                        "RoundID": 0,
+                        "Round": null,
+                        "Stage": "1",
+                        "ID": 2471519,
+                        "GameCode": null,
+                        "Place": "Pabellón Nou Congost",
+                        "TeamAID": 964328,
+                        "TeamA": "C. B. ISLA BONITA",
+                        "ScoreA": 0,
+                        "TeamACode": "38037000",
+                        "TeamAClubCode": "380370",
+                        "TeamBID": 953175,
+                        "TeamB": "ALUDIUM LUCENTUM ALICANTE",
+                        "TeamBCode": "03058615",
+                        "TeamBClubCode": "030586",
+                        "ScoreB": 0,
+                        "StartTime": "2025-05-25T12:00:00",
+                        "StartTimeUTC": "2025-05-25T10:00:00Z",
+                        "_GameTime": "0001-01-01T00:00:00",
+                        "GameTime": "00:00",
+                        "LogoA": "https://imagenes.feb.es/imagen.aspx?i=964328&ti=1",
+                        "LogoB": "https://imagenes.feb.es/imagen.aspx?i=953175&ti=1",
+                        "Quarter": 0,
+                        "Time": "00:00",
+                        "Status": 1,
+                        "Timezone": null,
+                        "Duration": 0,
+                        "Quarters": [],
                         "Season": null,
                         "SeasonID": null
                     }
