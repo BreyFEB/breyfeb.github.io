@@ -402,7 +402,7 @@
                         "Competition": "TERCERA FEB",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "3",
+                        "Stage": "0",
                         "ID": 2470869,
                         "GameCode": null,
                         "Place": "PABELLÓN SIGLO XXI (PISTA A)",
@@ -542,7 +542,7 @@
                 "id": "211",
                 "name": "F.Ascenso Lf2",
                 "gamescount": 16,
-                "nowplaying": 1,
+                "nowplaying": 0,
                 "order": 10,
                 "GAMES": [
                     {
@@ -669,14 +669,14 @@
                         "Place": "PABELLÓN DEPORTIVO INSULAR LA PATERNA",
                         "TeamAID": 951016,
                         "TeamA": "RAISAN ELOY VILLANUEVA",
-                        "ScoreA": 46,
+                        "ScoreA": 49,
                         "TeamACode": "39020210",
                         "TeamAClubCode": "390202",
                         "TeamBID": 966754,
                         "TeamB": "CB EL PALO BASKET4LIFE",
                         "TeamBCode": "29003701",
                         "TeamBClubCode": "290037",
-                        "ScoreB": 66,
+                        "ScoreB": 70,
                         "StartTime": "2025-05-24T12:30:00",
                         "StartTimeUTC": "2025-05-24T10:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -684,8 +684,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951016&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=966754&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:07",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -706,8 +706,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "6",
-                                "scoreB": "10"
+                                "scoreA": "9",
+                                "scoreB": "14"
                             }
                         ],
                         "Season": null,
