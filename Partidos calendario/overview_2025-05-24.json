@@ -520,22 +520,22 @@
                         "Place": "PABELLÓN SIGLO XXI (PISTA A)",
                         "TeamAID": 950647,
                         "TeamA": "AZULEJOS MONCAYO CBZ",
-                        "ScoreA": 38,
+                        "ScoreA": 50,
                         "TeamACode": "50000102",
                         "TeamAClubCode": "500001",
                         "TeamBID": 951964,
                         "TeamB": "NB TORRENT",
                         "TeamBCode": "46002604",
                         "TeamBClubCode": "460026",
-                        "ScoreB": 40,
+                        "ScoreB": 54,
                         "StartTime": "2025-05-24T18:30:00",
                         "StartTimeUTC": "2025-05-24T16:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950647&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951964&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:23:47",
+                        "Quarter": 4,
+                        "Time": "00:30:00",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -552,8 +552,13 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "7",
-                                "scoreB": "5"
+                                "scoreA": "19",
+                                "scoreB": "19"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "0",
+                                "scoreB": "0"
                             }
                         ],
                         "Season": null,
@@ -600,7 +605,7 @@
                 "id": "211",
                 "name": "F.Ascenso Lf2",
                 "gamescount": 16,
-                "nowplaying": 2,
+                "nowplaying": 1,
                 "order": 10,
                 "GAMES": [
                     {
@@ -839,14 +844,14 @@
                         "Place": "PABELLÓN DEPORTIVO INSULAR LA PATERNA",
                         "TeamAID": 952857,
                         "TeamA": "C.B. AL-QAZERES",
-                        "ScoreA": 49,
+                        "ScoreA": 54,
                         "TeamACode": "10032504",
                         "TeamAClubCode": "100325",
                         "TeamBID": 952346,
                         "TeamB": "FEMXA CELTA UVIGO",
                         "TeamBCode": "36000102",
                         "TeamBClubCode": "360001",
-                        "ScoreB": 53,
+                        "ScoreB": 65,
                         "StartTime": "2025-05-24T17:00:00",
                         "StartTimeUTC": "2025-05-24T15:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -854,7 +859,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=952857&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952346&ti=1",
                         "Quarter": 4,
-                        "Time": "00:35:16",
+                        "Time": "00:40:00",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -876,8 +881,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "8",
-                                "scoreB": "8"
+                                "scoreA": "13",
+                                "scoreB": "20"
                             }
                         ],
                         "Season": null,
@@ -910,8 +915,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=966408&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=953175&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:05",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -980,7 +985,7 @@
                         "Competition": "Fase Final 1ª División Femenin",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "3",
+                        "Stage": "0",
                         "ID": 2471087,
                         "GameCode": null,
                         "Place": "PAVELLO NOU CONGOST",
