@@ -585,8 +585,8 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951719&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=956733&ti=1",
-                        "Quarter": 2,
-                        "Time": "00:19:28",
+                        "Quarter": 3,
+                        "Time": "00:20:00",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -600,6 +600,11 @@
                                 "n": "2",
                                 "scoreA": "22",
                                 "scoreB": "20"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "0",
+                                "scoreB": "0"
                             }
                         ],
                         "Season": null,
@@ -892,30 +897,35 @@
                         "Place": "POLIDEPORTIVO MUNICIPAL LA LÍNEA",
                         "TeamAID": 952716,
                         "TeamA": "VALENCIA BASKET ",
-                        "ScoreA": 14,
+                        "ScoreA": 21,
                         "TeamACode": "46000208",
                         "TeamAClubCode": "460002",
                         "TeamBID": 956301,
                         "TeamB": "BARÇA CBS",
                         "TeamBCode": "08004210",
                         "TeamBClubCode": "080042",
-                        "ScoreB": 12,
+                        "ScoreB": 21,
                         "StartTime": "2025-05-24T12:00:00",
                         "StartTimeUTC": "2025-05-24T10:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=952716&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=956301&ti=1",
-                        "Quarter": 1,
-                        "Time": "00:07:53",
+                        "Quarter": 2,
+                        "Time": "00:13:04",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
                             {
                                 "n": "1",
-                                "scoreA": "14",
-                                "scoreB": "12"
+                                "scoreA": "19",
+                                "scoreB": "17"
+                            },
+                            {
+                                "n": "2",
+                                "scoreA": "2",
+                                "scoreB": "4"
                             }
                         ],
                         "Season": null,
@@ -998,14 +1008,14 @@
                         "Place": "PAB. MANUEL PRADO",
                         "TeamAID": 954794,
                         "TeamA": "BARÇA",
-                        "ScoreA": 6,
+                        "ScoreA": 15,
                         "TeamACode": "08000303",
                         "TeamAClubCode": "080003",
                         "TeamBID": 962401,
                         "TeamB": "REAL MADRID ´A´",
                         "TeamBCode": "28000203",
                         "TeamBClubCode": "280002",
-                        "ScoreB": 4,
+                        "ScoreB": 15,
                         "StartTime": "2025-05-24T12:00:00",
                         "StartTimeUTC": "2025-05-24T10:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -1013,15 +1023,15 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=954794&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=962401&ti=1",
                         "Quarter": 1,
-                        "Time": "00:01:54",
+                        "Time": "00:09:27",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
                             {
                                 "n": "1",
-                                "scoreA": "6",
-                                "scoreB": "4"
+                                "scoreA": "15",
+                                "scoreB": "15"
                             }
                         ],
                         "Season": null,
