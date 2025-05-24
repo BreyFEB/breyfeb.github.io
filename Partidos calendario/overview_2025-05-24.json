@@ -99,7 +99,7 @@
                         "Competition": "SEGUNDA FEB",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2471074,
                         "GameCode": null,
                         "Place": "PALACIO MUNICIPAL DE LOS DEPORTES",
@@ -520,14 +520,14 @@
                         "Place": "PABELLÓN SIGLO XXI (PISTA A)",
                         "TeamAID": 950647,
                         "TeamA": "AZULEJOS MONCAYO CBZ",
-                        "ScoreA": 50,
+                        "ScoreA": 64,
                         "TeamACode": "50000102",
                         "TeamAClubCode": "500001",
                         "TeamBID": 951964,
                         "TeamB": "NB TORRENT",
                         "TeamBCode": "46002604",
                         "TeamBClubCode": "460026",
-                        "ScoreB": 54,
+                        "ScoreB": 64,
                         "StartTime": "2025-05-24T18:30:00",
                         "StartTimeUTC": "2025-05-24T16:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -535,7 +535,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950647&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951964&ti=1",
                         "Quarter": 4,
-                        "Time": "00:30:00",
+                        "Time": "00:36:59",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -557,8 +557,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "14",
+                                "scoreB": "10"
                             }
                         ],
                         "Season": null,
@@ -859,8 +859,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=952857&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952346&ti=1",
                         "Quarter": 4,
-                        "Time": "00:40:00",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -950,7 +950,7 @@
                         "Competition": "Fase Final 1ª División Femenin",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "3",
+                        "Stage": "0",
                         "ID": 2471003,
                         "GameCode": null,
                         "Place": "PABELLÓN DEPORTIVO INSULAR LA PATERNA",
@@ -1005,12 +1005,18 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=970944&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951272&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:00:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     }
