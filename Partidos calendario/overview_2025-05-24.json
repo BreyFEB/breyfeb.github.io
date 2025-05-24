@@ -105,7 +105,7 @@
                         "Place": "PALACIO MUNICIPAL DE LOS DEPORTES",
                         "TeamAID": 950923,
                         "TeamA": "LOBE HUESCA LA MAGIA",
-                        "ScoreA": 29,
+                        "ScoreA": 33,
                         "TeamACode": "22000100",
                         "TeamAClubCode": "220001",
                         "TeamBID": 950682,
@@ -120,7 +120,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950923&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950682&ti=1",
                         "Quarter": 3,
-                        "Time": "00:20:00",
+                        "Time": "00:22:19",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -137,7 +137,7 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "0",
+                                "scoreA": "4",
                                 "scoreB": "0"
                             }
                         ],
@@ -597,14 +597,14 @@
                         "Place": "PABELLÓN DE DEPORTES PRESIDENTE ADOLFO SUÁREZ",
                         "TeamAID": 951421,
                         "TeamA": "SERCOMOSA MOLINA BASKET",
-                        "ScoreA": 59,
+                        "ScoreA": 69,
                         "TeamACode": "30019717",
                         "TeamAClubCode": "300197",
                         "TeamBID": 950872,
                         "TeamB": "CÍRCULO GIJÓN NOEGA BALONCESTO",
                         "TeamBCode": "33032000",
                         "TeamBClubCode": "330320",
-                        "ScoreB": 59,
+                        "ScoreB": 68,
                         "StartTime": "2025-05-24T20:00:00",
                         "StartTimeUTC": "2025-05-24T18:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -612,7 +612,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951421&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950872&ti=1",
                         "Quarter": 4,
-                        "Time": "00:32:44",
+                        "Time": "00:38:33",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -634,8 +634,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "5",
-                                "scoreB": "1"
+                                "scoreA": "15",
+                                "scoreB": "10"
                             }
                         ],
                         "Season": null,
@@ -682,7 +682,7 @@
                 "id": "211",
                 "name": "F.Ascenso Lf2",
                 "gamescount": 16,
-                "nowplaying": 2,
+                "nowplaying": 1,
                 "order": 10,
                 "GAMES": [
                     {
@@ -1033,14 +1033,14 @@
                         "Place": "PABELLÓN DEPORTIVO INSULAR LA PATERNA",
                         "TeamAID": 966464,
                         "TeamA": "SPAR GRAN CANARIA",
-                        "ScoreA": 67,
+                        "ScoreA": 90,
                         "TeamACode": "35000108",
                         "TeamAClubCode": "350001",
                         "TeamBID": 961289,
                         "TeamB": "INSTITUTO DE FERTILIDAD",
                         "TeamBCode": "07003402",
                         "TeamBClubCode": "070034",
-                        "ScoreB": 45,
+                        "ScoreB": 53,
                         "StartTime": "2025-05-24T19:15:00",
                         "StartTimeUTC": "2025-05-24T17:15:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -1048,7 +1048,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=966464&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=961289&ti=1",
                         "Quarter": 4,
-                        "Time": "00:31:48",
+                        "Time": "00:39:18",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -1070,8 +1070,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "3",
-                                "scoreB": "2"
+                                "scoreA": "26",
+                                "scoreB": "10"
                             }
                         ],
                         "Season": null,
@@ -1096,7 +1096,7 @@
                         "TeamB": "MANRESA CBF A",
                         "TeamBCode": "08160700",
                         "TeamBClubCode": "081607",
-                        "ScoreB": 38,
+                        "ScoreB": 41,
                         "StartTime": "2025-05-24T20:00:00",
                         "StartTimeUTC": "2025-05-24T18:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -1104,8 +1104,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=970944&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951272&ti=1",
                         "Quarter": 4,
-                        "Time": "00:38:39",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -1127,7 +1127,7 @@
                             {
                                 "n": "4",
                                 "scoreA": "13",
-                                "scoreB": "6"
+                                "scoreB": "9"
                             }
                         ],
                         "Season": null,
