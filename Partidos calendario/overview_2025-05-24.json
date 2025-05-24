@@ -105,14 +105,14 @@
                         "Place": "PALACIO MUNICIPAL DE LOS DEPORTES",
                         "TeamAID": 950923,
                         "TeamA": "LOBE HUESCA LA MAGIA",
-                        "ScoreA": 66,
+                        "ScoreA": 68,
                         "TeamACode": "22000100",
                         "TeamAClubCode": "220001",
                         "TeamBID": 950682,
                         "TeamB": "FIBWI PALMA",
                         "TeamBCode": "07003425",
                         "TeamBClubCode": "070034",
-                        "ScoreB": 63,
+                        "ScoreB": 65,
                         "StartTime": "2025-05-24T20:30:00",
                         "StartTimeUTC": "2025-05-24T18:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -120,7 +120,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950923&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950682&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:10",
+                        "Time": "00:39:50",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -142,8 +142,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "19",
-                                "scoreB": "10"
+                                "scoreA": "21",
+                                "scoreB": "12"
                             }
                         ],
                         "Season": null,
