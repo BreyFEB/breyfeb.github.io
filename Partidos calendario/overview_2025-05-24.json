@@ -520,30 +520,35 @@
                         "Place": "PABELLÓN SIGLO XXI (PISTA A)",
                         "TeamAID": 950647,
                         "TeamA": "AZULEJOS MONCAYO CBZ",
-                        "ScoreA": 18,
+                        "ScoreA": 27,
                         "TeamACode": "50000102",
                         "TeamAClubCode": "500001",
                         "TeamBID": 951964,
                         "TeamB": "NB TORRENT",
                         "TeamBCode": "46002604",
                         "TeamBClubCode": "460026",
-                        "ScoreB": 7,
+                        "ScoreB": 25,
                         "StartTime": "2025-05-24T18:30:00",
                         "StartTimeUTC": "2025-05-24T16:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950647&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951964&ti=1",
-                        "Quarter": 1,
-                        "Time": "00:07:01",
+                        "Quarter": 2,
+                        "Time": "00:14:25",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
                             {
                                 "n": "1",
-                                "scoreA": "18",
-                                "scoreB": "7"
+                                "scoreA": "20",
+                                "scoreB": "16"
+                            },
+                            {
+                                "n": "2",
+                                "scoreA": "7",
+                                "scoreB": "9"
                             }
                         ],
                         "Season": null,
@@ -836,15 +841,15 @@
                         "TeamB": "FEMXA CELTA UVIGO",
                         "TeamBCode": "36000102",
                         "TeamBClubCode": "360001",
-                        "ScoreB": 37,
+                        "ScoreB": 41,
                         "StartTime": "2025-05-24T17:00:00",
                         "StartTimeUTC": "2025-05-24T15:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=952857&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952346&ti=1",
-                        "Quarter": 2,
-                        "Time": "00:19:05",
+                        "Quarter": 3,
+                        "Time": "00:21:35",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -857,7 +862,12 @@
                             {
                                 "n": "2",
                                 "scoreA": "20",
-                                "scoreB": "18"
+                                "scoreB": "19"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "0",
+                                "scoreB": "3"
                             }
                         ],
                         "Season": null,
@@ -875,14 +885,14 @@
                         "Place": "PAVELLO NOU CONGOST",
                         "TeamAID": 966408,
                         "TeamA": "XEREZ CLUB DEPORTIVO BALONCESTO",
-                        "ScoreA": 28,
+                        "ScoreA": 34,
                         "TeamACode": "11101211",
                         "TeamAClubCode": "111012",
                         "TeamBID": 953175,
                         "TeamB": "ALUDIUM LUCENTUM ALICANTE",
                         "TeamBCode": "03058615",
                         "TeamBClubCode": "030586",
-                        "ScoreB": 22,
+                        "ScoreB": 31,
                         "StartTime": "2025-05-24T17:45:00",
                         "StartTimeUTC": "2025-05-24T15:45:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -890,7 +900,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=966408&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=953175&ti=1",
                         "Quarter": 3,
-                        "Time": "00:20:00",
+                        "Time": "00:27:14",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -907,8 +917,8 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "6",
+                                "scoreB": "9"
                             }
                         ],
                         "Season": null,
