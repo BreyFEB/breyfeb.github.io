@@ -90,7 +90,7 @@
                 "id": "118",
                 "name": "Segunda FEB",
                 "gamescount": 2,
-                "nowplaying": 0,
+                "nowplaying": 1,
                 "order": 3,
                 "GAMES": [
                     {
@@ -119,12 +119,18 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950923&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950682&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:00:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -520,22 +526,22 @@
                         "Place": "PABELLÓN SIGLO XXI (PISTA A)",
                         "TeamAID": 950647,
                         "TeamA": "AZULEJOS MONCAYO CBZ",
-                        "ScoreA": 75,
+                        "ScoreA": 94,
                         "TeamACode": "50000102",
                         "TeamAClubCode": "500001",
                         "TeamBID": 951964,
                         "TeamB": "NB TORRENT",
                         "TeamBCode": "46002604",
                         "TeamBClubCode": "460026",
-                        "ScoreB": 76,
+                        "ScoreB": 90,
                         "StartTime": "2025-05-24T18:30:00",
                         "StartTimeUTC": "2025-05-24T16:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950647&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951964&ti=1",
-                        "Quarter": 4,
-                        "Time": "00:39:43",
+                        "Quarter": 5,
+                        "Time": "00:44:35",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -557,8 +563,13 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "25",
+                                "scoreA": "26",
                                 "scoreB": "22"
+                            },
+                            {
+                                "n": "5",
+                                "scoreA": "18",
+                                "scoreB": "14"
                             }
                         ],
                         "Season": null,
@@ -576,30 +587,35 @@
                         "Place": "PABELLÓN DE DEPORTES PRESIDENTE ADOLFO SUÁREZ",
                         "TeamAID": 951421,
                         "TeamA": "SERCOMOSA MOLINA BASKET",
-                        "ScoreA": 11,
+                        "ScoreA": 24,
                         "TeamACode": "30019717",
                         "TeamAClubCode": "300197",
                         "TeamBID": 950872,
                         "TeamB": "CÍRCULO GIJÓN NOEGA BALONCESTO",
                         "TeamBCode": "33032000",
                         "TeamBClubCode": "330320",
-                        "ScoreB": 22,
+                        "ScoreB": 33,
                         "StartTime": "2025-05-24T20:00:00",
                         "StartTimeUTC": "2025-05-24T18:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951421&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950872&ti=1",
-                        "Quarter": 1,
-                        "Time": "00:07:16",
+                        "Quarter": 2,
+                        "Time": "00:13:09",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
                             {
                                 "n": "1",
-                                "scoreA": "11",
-                                "scoreB": "22"
+                                "scoreA": "19",
+                                "scoreB": "27"
+                            },
+                            {
+                                "n": "2",
+                                "scoreA": "5",
+                                "scoreB": "6"
                             }
                         ],
                         "Season": null,
@@ -611,7 +627,7 @@
                 "id": "211",
                 "name": "F.Ascenso Lf2",
                 "gamescount": 16,
-                "nowplaying": 1,
+                "nowplaying": 2,
                 "order": 10,
                 "GAMES": [
                     {
@@ -962,26 +978,32 @@
                         "Place": "PABELLÓN DEPORTIVO INSULAR LA PATERNA",
                         "TeamAID": 966464,
                         "TeamA": "SPAR GRAN CANARIA",
-                        "ScoreA": 0,
+                        "ScoreA": 10,
                         "TeamACode": "35000108",
                         "TeamAClubCode": "350001",
                         "TeamBID": 961289,
                         "TeamB": "INSTITUTO DE FERTILIDAD",
                         "TeamBCode": "07003402",
                         "TeamBClubCode": "070034",
-                        "ScoreB": 0,
+                        "ScoreB": 10,
                         "StartTime": "2025-05-24T19:15:00",
                         "StartTimeUTC": "2025-05-24T17:15:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=966464&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=961289&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:06:54",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "10",
+                                "scoreB": "10"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -997,30 +1019,35 @@
                         "Place": "PAVELLO NOU CONGOST",
                         "TeamAID": 970944,
                         "TeamA": "LA SALLE VERSIA",
-                        "ScoreA": 10,
+                        "ScoreA": 13,
                         "TeamACode": "48000740",
                         "TeamAClubCode": "480007",
                         "TeamBID": 951272,
                         "TeamB": "MANRESA CBF A",
                         "TeamBCode": "08160700",
                         "TeamBClubCode": "081607",
-                        "ScoreB": 6,
+                        "ScoreB": 18,
                         "StartTime": "2025-05-24T20:00:00",
                         "StartTimeUTC": "2025-05-24T18:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=970944&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951272&ti=1",
-                        "Quarter": 1,
-                        "Time": "00:08:41",
+                        "Quarter": 2,
+                        "Time": "00:16:20",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
                             {
                                 "n": "1",
-                                "scoreA": "10",
-                                "scoreB": "6"
+                                "scoreA": "11",
+                                "scoreB": "13"
+                            },
+                            {
+                                "n": "2",
+                                "scoreA": "2",
+                                "scoreB": "5"
                             }
                         ],
                         "Season": null,
