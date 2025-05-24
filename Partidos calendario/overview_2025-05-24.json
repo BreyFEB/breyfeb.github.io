@@ -169,7 +169,7 @@
                 "id": "111",
                 "name": "Tercera FEB",
                 "gamescount": 16,
-                "nowplaying": 2,
+                "nowplaying": 1,
                 "order": 6,
                 "GAMES": [
                     {
@@ -408,14 +408,14 @@
                         "Place": "PABELLÓN SIGLO XXI (PISTA A)",
                         "TeamAID": 952322,
                         "TeamA": "ATICA SEVILLA CB CORIA",
-                        "ScoreA": 53,
+                        "ScoreA": 58,
                         "TeamACode": "41000506",
                         "TeamAClubCode": "410005",
                         "TeamBID": 951062,
                         "TeamB": "FUNDACION GLOBALCAJA LA RODA",
                         "TeamBCode": "02015901",
                         "TeamBClubCode": "020159",
-                        "ScoreB": 61,
+                        "ScoreB": 68,
                         "StartTime": "2025-05-24T16:00:00",
                         "StartTimeUTC": "2025-05-24T14:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -423,8 +423,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=952322&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951062&ti=1",
                         "Quarter": 4,
-                        "Time": "00:36:32",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -445,8 +445,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "10",
-                                "scoreB": "14"
+                                "scoreA": "15",
+                                "scoreB": "21"
                             }
                         ],
                         "Season": null,
@@ -464,22 +464,22 @@
                         "Place": "PABELLÓN DE DEPORTES PRESIDENTE ADOLFO SUÁREZ",
                         "TeamAID": 950728,
                         "TeamA": "DM GROUP MOLLET",
-                        "ScoreA": 23,
+                        "ScoreA": 32,
                         "TeamACode": "08000605",
                         "TeamAClubCode": "080006",
                         "TeamBID": 950943,
                         "TeamB": "COLEGIO EL PINAR",
                         "TeamBCode": "29018601",
                         "TeamBClubCode": "290186",
-                        "ScoreB": 21,
+                        "ScoreB": 29,
                         "StartTime": "2025-05-24T17:00:00",
                         "StartTimeUTC": "2025-05-24T15:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950728&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950943&ti=1",
-                        "Quarter": 2,
-                        "Time": "00:14:13",
+                        "Quarter": 3,
+                        "Time": "00:20:00",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -491,8 +491,13 @@
                             },
                             {
                                 "n": "2",
-                                "scoreA": "6",
-                                "scoreB": "9"
+                                "scoreA": "15",
+                                "scoreB": "17"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "0",
+                                "scoreB": "0"
                             }
                         ],
                         "Season": null,
