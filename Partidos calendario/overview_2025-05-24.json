@@ -169,7 +169,7 @@
                 "id": "111",
                 "name": "Tercera FEB",
                 "gamescount": 16,
-                "nowplaying": 1,
+                "nowplaying": 0,
                 "order": 6,
                 "GAMES": [
                     {
@@ -352,14 +352,14 @@
                         "Place": "PABELLÓN DE DEPORTES PRESIDENTE ADOLFO SUÁREZ",
                         "TeamAID": 952231,
                         "TeamA": "LBC COCINAS.COM",
-                        "ScoreA": 82,
+                        "ScoreA": 83,
                         "TeamACode": "26021200",
                         "TeamAClubCode": "260212",
                         "TeamBID": 951750,
                         "TeamB": "JAEN PARAISO INTERIOR FS",
                         "TeamBCode": "23560100",
                         "TeamBClubCode": "235601",
-                        "ScoreB": 77,
+                        "ScoreB": 84,
                         "StartTime": "2025-05-24T13:00:00",
                         "StartTimeUTC": "2025-05-24T11:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -367,8 +367,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=952231&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951750&ti=1",
                         "Quarter": 4,
-                        "Time": "00:38:27",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -389,8 +389,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "16",
-                                "scoreB": "14"
+                                "scoreA": "17",
+                                "scoreB": "21"
                             }
                         ],
                         "Season": null,
@@ -669,22 +669,22 @@
                         "Place": "PABELLÓN DEPORTIVO INSULAR LA PATERNA",
                         "TeamAID": 951016,
                         "TeamA": "RAISAN ELOY VILLANUEVA",
-                        "ScoreA": 33,
+                        "ScoreA": 43,
                         "TeamACode": "39020210",
                         "TeamAClubCode": "390202",
                         "TeamBID": 966754,
                         "TeamB": "CB EL PALO BASKET4LIFE",
                         "TeamBCode": "29003701",
                         "TeamBClubCode": "290037",
-                        "ScoreB": 46,
+                        "ScoreB": 56,
                         "StartTime": "2025-05-24T12:30:00",
                         "StartTimeUTC": "2025-05-24T10:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951016&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=966754&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:24:31",
+                        "Quarter": 4,
+                        "Time": "00:30:48",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -701,8 +701,13 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "12",
-                                "scoreB": "8"
+                                "scoreA": "19",
+                                "scoreB": "18"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "3",
+                                "scoreB": "0"
                             }
                         ],
                         "Season": null,
