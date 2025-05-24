@@ -4,7 +4,7 @@
         "competition": "TERCERA FEB",
         "round": "FFA2                ",
         "quarter": 4,
-        "time": "00:00",
+        "time": "FINAL",
         "logo": null,
         "duration": null,
         "starttime": "24-05-2025 - 10:00",
@@ -44,6 +44,11 @@
                     "n": "2",
                     "scoreA": "9",
                     "scoreB": "13"
+                },
+                {
+                    "n": "3",
+                    "scoreA": "24",
+                    "scoreB": "16"
                 },
                 {
                     "n": "4",
@@ -1046,7 +1051,33 @@
         "hasExtension": false,
         "LINES": [
             {
-                "num": "505",
+                "num": "508",
+                "text": "Fin del Cuarto 4",
+                "team": null,
+                "time": "00:00",
+                "deleted": null,
+                "scoreA": null,
+                "scoreB": null,
+                "quarter": "4",
+                "logo": null,
+                "idPlayer": null,
+                "idLicense": null,
+                "idTeam": null,
+                "action": "period",
+                "logParam1": "4",
+                "logParam2": "1",
+                "logParam3": "",
+                "logParam4": "",
+                "logParam5": "",
+                "logParam6": "",
+                "logParam7": "",
+                "logParam8": "",
+                "logParam9": "",
+                "logParam10": "",
+                "Position": ""
+            },
+            {
+                "num": "507",
                 "text": "(CB ARIDANE) J. HIDALGO CABRERO: TIRO DE 1 ANOTADO (Puntos: 3)",
                 "team": "1",
                 "time": "00:07",
@@ -1072,7 +1103,7 @@
                 "Position": ""
             },
             {
-                "num": "504",
+                "num": "506",
                 "text": "(RIGALLI ALGINET) A. MARTIN MARGARIT: FALTA Personal (Faltas: 2. Faltas de equipo: 25). Tiros libres: 1",
                 "team": "2",
                 "time": "00:07",
@@ -1098,7 +1129,7 @@
                 "Position": "87.01389165498601|49.27305215864888"
             },
             {
-                "num": "503",
+                "num": "505",
                 "text": "(CB ARIDANE) J. HIDALGO CABRERO: TIRO DE 2 ANOTADO (Puntos: 2)",
                 "team": "1",
                 "time": "00:07",
@@ -1124,7 +1155,7 @@
                 "Position": "87.08333398236171|49.52127816998372"
             },
             {
-                "num": "502",
+                "num": "504",
                 "text": "(RIGALLI ALGINET) I. LERIN PEREZ: ASISTENCIA (Asistencias: 2)",
                 "team": "2",
                 "time": "00:16",
@@ -1150,7 +1181,7 @@
                 "Position": ""
             },
             {
-                "num": "501",
+                "num": "503",
                 "text": "(RIGALLI ALGINET) H. MARTORELL TRONCHONI: MATE ANOTADO (Puntos: 2)",
                 "team": "2",
                 "time": "00:16",
@@ -1176,7 +1207,7 @@
                 "Position": "6.805555771898347|51.507092889037274"
             },
             {
-                "num": "500",
+                "num": "502",
                 "text": "(RIGALLI ALGINET) I. LERIN PEREZ: REBOTE (Rebotes: 4)",
                 "team": "2",
                 "time": "00:16",
@@ -1202,7 +1233,7 @@
                 "Position": ""
             },
             {
-                "num": "499",
+                "num": "501",
                 "text": "(CB ARIDANE) K. RIVEROL DE LAS CASAS: TIRO DE 3 FALLADO",
                 "team": "1",
                 "time": "00:16",
@@ -1228,7 +1259,7 @@
                 "Position": "73.05556105684369|81.66666926278016"
             },
             {
-                "num": "498",
+                "num": "500",
                 "text": "(CB ARIDANE) A. CASTILLO ORTEGA: REBOTE (Rebotes: 7)",
                 "team": "1",
                 "time": "00:33",
@@ -1254,7 +1285,7 @@
                 "Position": ""
             },
             {
-                "num": "497",
+                "num": "499",
                 "text": "(RIGALLI ALGINET) I. CUBERO SANTAFE: TIRO DE 3 FALLADO",
                 "team": "2",
                 "time": "00:33",
@@ -1280,7 +1311,7 @@
                 "Position": "33.888890496006766|33.13829845232323"
             },
             {
-                "num": "496",
+                "num": "498",
                 "text": "(CB ARIDANE) V. ESPAÑOL BERENGUER: FALTA Personal (Faltas: 1. Faltas de equipo: 21). Tiros libres: 0",
                 "team": "1",
                 "time": "00:48",
@@ -1306,7 +1337,7 @@
                 "Position": "25.694445526158404|60.56737875882061"
             },
             {
-                "num": "495",
+                "num": "497",
                 "text": "(CB ARIDANE) J. HIDALGO CABRERO: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "00:57",
@@ -1332,7 +1363,7 @@
                 "Position": ""
             },
             {
-                "num": "494",
+                "num": "496",
                 "text": "(CB ARIDANE) O. BALSELLS PLAZA: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "00:57",
@@ -1358,7 +1389,7 @@
                 "Position": ""
             },
             {
-                "num": "493",
+                "num": "495",
                 "text": "(CB ARIDANE) V. ESPAÑOL BERENGUER: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "00:57",
@@ -1384,7 +1415,7 @@
                 "Position": ""
             },
             {
-                "num": "492",
+                "num": "494",
                 "text": "(CB ARIDANE) D. RAMÍREZ SÁNCHEZ: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "00:57",
@@ -1410,7 +1441,7 @@
                 "Position": ""
             },
             {
-                "num": "491",
+                "num": "493",
                 "text": "(CB ARIDANE) D. RAMÍREZ SÁNCHEZ: TIRO DE 1 ANOTADO (Puntos: 17)",
                 "team": "1",
                 "time": "00:57",
@@ -1436,7 +1467,7 @@
                 "Position": ""
             },
             {
-                "num": "490",
+                "num": "492",
                 "text": "(CB ARIDANE) D. RAMÍREZ SÁNCHEZ: TIRO DE 1 FALLADO",
                 "team": "1",
                 "time": "00:57",
@@ -1462,7 +1493,7 @@
                 "Position": ""
             },
             {
-                "num": "489",
+                "num": "491",
                 "text": "(RIGALLI ALGINET) I. CUBERO SANTAFE: FALTA Personal (Faltas: 2. Faltas de equipo: 24). Tiros libres: 2",
                 "team": "2",
                 "time": "00:57",
@@ -1488,7 +1519,7 @@
                 "Position": "77.4305611959212|49.27305215864888"
             },
             {
-                "num": "488",
+                "num": "490",
                 "text": "(CB ARIDANE) D. RAMÍREZ SÁNCHEZ: REBOTE (Rebotes: 6)",
                 "team": "1",
                 "time": "01:02",
@@ -1514,7 +1545,7 @@
                 "Position": ""
             },
             {
-                "num": "487",
+                "num": "489",
                 "text": "(RIGALLI ALGINET) E. LLACER SIMLAT: TIRO DE 2 FALLADO",
                 "team": "2",
                 "time": "01:02",
@@ -1540,7 +1571,7 @@
                 "Position": "11.180555910975857|53.86524993928053"
             },
             {
-                "num": "486",
+                "num": "488",
                 "text": "(CB ARIDANE) O. BALSELLS PLAZA: ASISTENCIA (Asistencias: 6)",
                 "team": "1",
                 "time": "01:14",
@@ -1566,7 +1597,7 @@
                 "Position": ""
             },
             {
-                "num": "485",
+                "num": "487",
                 "text": "(CB ARIDANE) D. KROHNERT MOTO: TIRO DE 2 ANOTADO (Puntos: 5)",
                 "team": "1",
                 "time": "01:14",
@@ -1592,7 +1623,7 @@
                 "Position": "90.97222299487505|51.63120589470469"
             },
             {
-                "num": "484",
+                "num": "486",
                 "text": "(CB ARIDANE) D. KROHNERT MOTO: TAPÓN (Tapones: 1)",
                 "team": "1",
                 "time": "01:24",
@@ -1618,7 +1649,7 @@
                 "Position": ""
             },
             {
-                "num": "483",
+                "num": "485",
                 "text": "(RIGALLI ALGINET) A. MARTIN MARGARIT: TIRO DE 2 FALLADO",
                 "team": "2",
                 "time": "01:24",
@@ -1644,7 +1675,7 @@
                 "Position": "9.166667222976702|53.98936294494795"
             },
             {
-                "num": "482",
+                "num": "484",
                 "text": "(CB ARIDANE) K. RIVEROL DE LAS CASAS: TIRO DE 3 ANOTADO (Puntos: 3)",
                 "team": "1",
                 "time": "01:33",
@@ -1670,7 +1701,7 @@
                 "Position": "68.194449791202|75.95745111695432"
             },
             {
-                "num": "481",
+                "num": "483",
                 "text": "(CB ARIDANE) A. CASTILLO ORTEGA: REBOTE (Rebotes: 6)",
                 "team": "1",
                 "time": "01:39",
@@ -1696,7 +1727,7 @@
                 "Position": ""
             },
             {
-                "num": "480",
+                "num": "482",
                 "text": "(CB ARIDANE) O. BALSELLS PLAZA: TIRO DE 2 FALLADO",
                 "team": "1",
                 "time": "01:39",
@@ -1722,7 +1753,7 @@
                 "Position": "84.44444394994663|58.45744771991218"
             },
             {
-                "num": "479",
+                "num": "481",
                 "text": "(CB ARIDANE) A. CASTILLO ORTEGA: REBOTE (Rebotes: 5)",
                 "team": "1",
                 "time": "01:58",
@@ -1748,7 +1779,7 @@
                 "Position": ""
             },
             {
-                "num": "478",
+                "num": "480",
                 "text": "(RIGALLI ALGINET) I. LERIN PEREZ: TIRO DE 2 FALLADO",
                 "team": "2",
                 "time": "01:58",
@@ -1774,7 +1805,7 @@
                 "Position": "15.347222577642523|51.13475387203503"
             },
             {
-                "num": "477",
+                "num": "479",
                 "text": "(RIGALLI ALGINET) A. MARTIN MARGARIT: REBOTE (Rebotes: 3)",
                 "team": "2",
                 "time": "01:59",
@@ -1800,7 +1831,7 @@
                 "Position": ""
             },
             {
-                "num": "476",
+                "num": "478",
                 "text": "(CB ARIDANE) A. CASTILLO ORTEGA: TIRO DE 2 FALLADO",
                 "team": "1",
                 "time": "01:59",
@@ -1826,7 +1857,7 @@
                 "Position": "81.8750036623744|50.88652786070019"
             },
             {
-                "num": "475",
+                "num": "477",
                 "text": "(RIGALLI ALGINET) E. LLACER SIMLAT: ASISTENCIA (Asistencias: 3)",
                 "team": "2",
                 "time": "02:07",
@@ -1852,7 +1883,7 @@
                 "Position": ""
             },
             {
-                "num": "474",
+                "num": "476",
                 "text": "(RIGALLI ALGINET) A. MARTIN MARGARIT: MATE ANOTADO (Puntos: 2)",
                 "team": "2",
                 "time": "02:07",
@@ -1878,7 +1909,7 @@
                 "Position": "19.30555669908174|52.12766123156181"
             },
             {
-                "num": "473",
+                "num": "475",
                 "text": "(CB ARIDANE) O. BALSELLS PLAZA: TIRO DE 1 ANOTADO (Puntos: 6)",
                 "team": "1",
                 "time": "02:12",
@@ -1904,7 +1935,7 @@
                 "Position": ""
             },
             {
-                "num": "472",
+                "num": "474",
                 "text": "(CB ARIDANE) O. BALSELLS PLAZA: TIRO DE 1 ANOTADO (Puntos: 6)",
                 "team": "1",
                 "time": "02:12",
@@ -1930,7 +1961,7 @@
                 "Position": ""
             },
             {
-                "num": "471",
+                "num": "473",
                 "text": "(CB ARIDANE) D. KROHNERT MOTO: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "02:12",
@@ -1956,7 +1987,7 @@
                 "Position": ""
             },
             {
-                "num": "470",
+                "num": "472",
                 "text": "(CB ARIDANE) S. GUEYE: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "02:12",
@@ -1982,7 +2013,7 @@
                 "Position": ""
             },
             {
-                "num": "469",
+                "num": "471",
                 "text": "(RIGALLI ALGINET) H. MARTORELL TRONCHONI: FALTA Personal (Faltas: 1. Faltas de equipo: 23). Tiros libres: 2",
                 "team": "2",
                 "time": "02:12",
@@ -2008,7 +2039,7 @@
                 "Position": "80.69444700965182|48.528370810456934"
             },
             {
-                "num": "468",
+                "num": "470",
                 "text": "(RIGALLI ALGINET) E. LLACER SIMLAT: ASISTENCIA (Asistencias: 2)",
                 "team": "2",
                 "time": "02:33",
@@ -2034,7 +2065,7 @@
                 "Position": ""
             },
             {
-                "num": "467",
+                "num": "469",
                 "text": "(RIGALLI ALGINET) I. CUBERO SANTAFE: TIRO DE 3 ANOTADO (Puntos: 9)",
                 "team": "2",
                 "time": "02:33",
@@ -2060,7 +2091,7 @@
                 "Position": "33.19444496984837|49.645391175651135"
             },
             {
-                "num": "466",
+                "num": "468",
                 "text": "(RIGALLI ALGINET) Tiempo muerto",
                 "team": "2",
                 "time": "02:40",
@@ -2086,7 +2117,7 @@
                 "Position": ""
             },
             {
-                "num": "465",
+                "num": "467",
                 "text": "(CB ARIDANE) K. RIVEROL DE LAS CASAS: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "02:40",
@@ -2112,7 +2143,7 @@
                 "Position": ""
             },
             {
-                "num": "464",
+                "num": "466",
                 "text": "(CB ARIDANE) P. MARTINEZ ALEJANO: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "02:40",
@@ -2138,7 +2169,7 @@
                 "Position": ""
             },
             {
-                "num": "463",
+                "num": "465",
                 "text": "(RIGALLI ALGINET) H. MARTORELL TRONCHONI: TIRO DE 2 FALLADO",
                 "team": "2",
                 "time": "02:47",
@@ -2164,7 +2195,7 @@
                 "Position": "17.708333101537484|54.237588956282785"
             },
             {
-                "num": "462",
+                "num": "464",
                 "text": "(RIGALLI ALGINET) H. MARTORELL TRONCHONI: REBOTE (Rebotes: 1)",
                 "team": "2",
                 "time": "02:47",
@@ -2190,7 +2221,7 @@
                 "Position": ""
             },
             {
-                "num": "461",
+                "num": "463",
                 "text": "(RIGALLI ALGINET) E. LLACER SIMLAT: TIRO DE 2 FALLADO",
                 "team": "2",
                 "time": "02:47",
@@ -2216,7 +2247,7 @@
                 "Position": "17.708333101537484|54.237588956282785"
             },
             {
-                "num": "460",
+                "num": "462",
                 "text": "(CB ARIDANE) D. RAMÍREZ SÁNCHEZ: FALTA Personal (Faltas: 3. Faltas de equipo: 20). Tiros libres: 0",
                 "team": "1",
                 "time": "03:04",
@@ -2242,7 +2273,7 @@
                 "Position": "77.77778025026683|52.62411656841892"
             },
             {
-                "num": "459",
+                "num": "461",
                 "text": "(RIGALLI ALGINET) A. MARTIN MARGARIT: REBOTE (Rebotes: 2)",
                 "team": "2",
                 "time": "03:04",
@@ -2268,7 +2299,7 @@
                 "Position": ""
             },
             {
-                "num": "458",
+                "num": "460",
                 "text": "(RIGALLI ALGINET) A. MARTIN MARGARIT: TAPÓN (Tapones: 1)",
                 "team": "2",
                 "time": "03:04",
@@ -2294,7 +2325,7 @@
                 "Position": ""
             },
             {
-                "num": "457",
+                "num": "459",
                 "text": "(CB ARIDANE) A. CASTILLO ORTEGA: TIRO DE 2 FALLADO",
                 "team": "1",
                 "time": "03:04",
@@ -2320,7 +2351,7 @@
                 "Position": "75.06944789047606|50.63829853517792"
             },
             {
-                "num": "456",
+                "num": "458",
                 "text": "(RIGALLI ALGINET) E. LLACER SIMLAT: TIRO DE 2 ANOTADO (Puntos: 8)",
                 "team": "2",
                 "time": "03:26",
@@ -2346,7 +2377,7 @@
                 "Position": "25.83333388964337|33.634753789180344"
             },
             {
-                "num": "455",
+                "num": "457",
                 "text": "(CB ARIDANE) A. CASTILLO ORTEGA: TIRO DE 1 ANOTADO (Puntos: 16)",
                 "team": "1",
                 "time": "03:39",
@@ -2372,7 +2403,7 @@
                 "Position": ""
             },
             {
-                "num": "454",
+                "num": "456",
                 "text": "(CB ARIDANE) A. CASTILLO ORTEGA: TIRO DE 1 ANOTADO (Puntos: 15)",
                 "team": "1",
                 "time": "03:39",
@@ -2398,7 +2429,7 @@
                 "Position": ""
             },
             {
-                "num": "453",
+                "num": "455",
                 "text": "(RIGALLI ALGINET) I. CUBERO SANTAFE: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "03:39",
@@ -2424,7 +2455,7 @@
                 "Position": ""
             },
             {
-                "num": "452",
+                "num": "454",
                 "text": "(RIGALLI ALGINET) H. MARTORELL TRONCHONI: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "03:39",
@@ -2450,7 +2481,7 @@
                 "Position": ""
             },
             {
-                "num": "451",
+                "num": "453",
                 "text": "(RIGALLI ALGINET) M. MARTINEZ HERNANDEZ : Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "03:39",
@@ -2476,7 +2507,7 @@
                 "Position": ""
             },
             {
-                "num": "450",
+                "num": "452",
                 "text": "(RIGALLI ALGINET) A. ZURBRIGGEN : Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "03:39",
@@ -2502,7 +2533,7 @@
                 "Position": ""
             },
             {
-                "num": "449",
+                "num": "451",
                 "text": "(RIGALLI ALGINET) I. LERIN PEREZ: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "03:39",
@@ -2528,7 +2559,7 @@
                 "Position": ""
             },
             {
-                "num": "448",
+                "num": "450",
                 "text": "(RIGALLI ALGINET) R. MALLIK BOUNAD: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "03:39",
@@ -2554,7 +2585,7 @@
                 "Position": ""
             },
             {
-                "num": "447",
+                "num": "449",
                 "text": "(CB ARIDANE) Tiempo muerto",
                 "team": "1",
                 "time": "03:39",
@@ -2580,7 +2611,7 @@
                 "Position": ""
             },
             {
-                "num": "446",
+                "num": "448",
                 "text": "(RIGALLI ALGINET) A. MARTIN MARGARIT: FALTA Personal (Faltas: 1. Faltas de equipo: 22). Tiros libres: 2",
                 "team": "2",
                 "time": "03:39",
@@ -2606,7 +2637,7 @@
                 "Position": "78.40278344904954|49.89361718698597"
             },
             {
-                "num": "445",
+                "num": "447",
                 "text": "(CB ARIDANE) D. RAMÍREZ SÁNCHEZ: REBOTE (Rebotes: 5)",
                 "team": "1",
                 "time": "03:54",
@@ -2632,7 +2663,7 @@
                 "Position": ""
             },
             {
-                "num": "444",
+                "num": "446",
                 "text": "(RIGALLI ALGINET) A. MARTIN MARGARIT: TIRO DE 2 FALLADO",
                 "team": "2",
                 "time": "03:54",
@@ -2658,7 +2689,7 @@
                 "Position": "18.26389026421092|91.59574948642286"
             },
             {
-                "num": "443",
+                "num": "445",
                 "text": "(RIGALLI ALGINET) A. MARTIN MARGARIT: REBOTE (Rebotes: 1)",
                 "team": "2",
                 "time": "03:54",
@@ -2684,7 +2715,7 @@
                 "Position": ""
             },
             {
-                "num": "442",
+                "num": "444",
                 "text": "(RIGALLI ALGINET) A. ZURBRIGGEN : TIRO DE 3 FALLADO",
                 "team": "2",
                 "time": "03:54",
@@ -2710,7 +2741,7 @@
                 "Position": "18.26389026421092|91.59574948642286"
             },
             {
-                "num": "441",
+                "num": "443",
                 "text": "(CB ARIDANE) A. CASTILLO ORTEGA: TIRO DE 1 ANOTADO (Puntos: 14)",
                 "team": "1",
                 "time": "04:16",
@@ -2736,7 +2767,7 @@
                 "Position": ""
             },
             {
-                "num": "440",
+                "num": "442",
                 "text": "(CB ARIDANE) A. CASTILLO ORTEGA: TIRO DE 1 ANOTADO (Puntos: 13)",
                 "team": "1",
                 "time": "04:16",
@@ -2762,7 +2793,7 @@
                 "Position": ""
             },
             {
-                "num": "439",
+                "num": "441",
                 "text": "(RIGALLI ALGINET) A. MARTIN MARGARIT: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "04:16",
@@ -2788,7 +2819,7 @@
                 "Position": ""
             },
             {
-                "num": "438",
+                "num": "440",
                 "text": "(RIGALLI ALGINET) J. DALMAU ROIG: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "04:16",
@@ -2814,7 +2845,7 @@
                 "Position": ""
             },
             {
-                "num": "437",
+                "num": "439",
                 "text": "(RIGALLI ALGINET) J. DALMAU ROIG: FALTA Personal (Faltas: 5. Faltas de equipo: 21). Tiros libres: 2",
                 "team": "2",
                 "time": "04:16",
@@ -2840,7 +2871,7 @@
                 "Position": "76.87500032451419|50.26595951817566"
             },
             {
-                "num": "436",
+                "num": "438",
                 "text": "(RIGALLI ALGINET) A. ZURBRIGGEN : PÉRDIDA (Pérdidas: 3)",
                 "team": "2",
                 "time": "04:29",
@@ -2866,7 +2897,7 @@
                 "Position": "26.875000324514186|47.03900811407304"
             },
             {
-                "num": "435",
+                "num": "437",
                 "text": "(CB ARIDANE) A. CASTILLO ORTEGA: TIRO DE 1 ANOTADO (Puntos: 12)",
                 "team": "1",
                 "time": "04:34",
@@ -2892,7 +2923,7 @@
                 "Position": ""
             },
             {
-                "num": "434",
+                "num": "436",
                 "text": "(CB ARIDANE) A. CASTILLO ORTEGA: TIRO DE 1 ANOTADO (Puntos: 11)",
                 "team": "1",
                 "time": "04:34",
@@ -2918,7 +2949,7 @@
                 "Position": ""
             },
             {
-                "num": "433",
+                "num": "435",
                 "text": "(RIGALLI ALGINET) J. DALMAU ROIG: FALTA Personal (Faltas: 4. Faltas de equipo: 20). Tiros libres: 2",
                 "team": "2",
                 "time": "04:34",
@@ -2944,7 +2975,7 @@
                 "Position": "81.59722693540446|41.702128985249445"
             },
             {
-                "num": "432",
+                "num": "434",
                 "text": "(RIGALLI ALGINET) J. DALMAU ROIG: ASISTENCIA (Asistencias: 2)",
                 "team": "2",
                 "time": "04:51",
@@ -2970,7 +3001,7 @@
                 "Position": ""
             },
             {
-                "num": "431",
+                "num": "433",
                 "text": "(RIGALLI ALGINET) A. ZURBRIGGEN : TIRO DE 3 ANOTADO (Puntos: 12)",
                 "team": "2",
                 "time": "04:51",
@@ -2996,7 +3027,7 @@
                 "Position": "34.02777885949173|52.50000024856406"
             },
             {
-                "num": "430",
+                "num": "432",
                 "text": "(RIGALLI ALGINET) S. GUEYE: ASISTENCIA (Asistencias: 1)",
                 "team": "2",
                 "time": "04:57",
@@ -3022,7 +3053,7 @@
                 "Position": ""
             },
             {
-                "num": "429",
+                "num": "431",
                 "text": "(CB ARIDANE) A. CASTILLO ORTEGA: TIRO DE 1 ANOTADO (Puntos: 10)",
                 "team": "1",
                 "time": "04:57",
@@ -3048,7 +3079,7 @@
                 "Position": ""
             },
             {
-                "num": "428",
+                "num": "430",
                 "text": "(CB ARIDANE) A. CASTILLO ORTEGA: TIRO DE 1 ANOTADO (Puntos: 9)",
                 "team": "1",
                 "time": "04:57",
@@ -3074,7 +3105,7 @@
                 "Position": ""
             },
             {
-                "num": "427",
+                "num": "429",
                 "text": "(RIGALLI ALGINET) J. DALMAU ROIG: FALTA Personal (Faltas: 3. Faltas de equipo: 19). Tiros libres: 2",
                 "team": "2",
                 "time": "04:57",
@@ -3100,7 +3131,7 @@
                 "Position": "79.86111682874203|50.88652786070019"
             },
             {
-                "num": "426",
+                "num": "428",
                 "text": "(RIGALLI ALGINET) R. MALLIK BOUNAD: ASISTENCIA (Asistencias: 3)",
                 "team": "2",
                 "time": "05:21",
@@ -3126,7 +3157,7 @@
                 "Position": ""
             },
             {
-                "num": "425",
+                "num": "427",
                 "text": "(RIGALLI ALGINET) M. MARTINEZ HERNANDEZ : TIRO DE 3 ANOTADO (Puntos: 11)",
                 "team": "2",
                 "time": "05:21",
@@ -3152,7 +3183,7 @@
                 "Position": "33.333333333333336|55.851064658334096"
             },
             {
-                "num": "424",
+                "num": "426",
                 "text": "(RIGALLI ALGINET) R. MALLIK BOUNAD: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "05:28",
@@ -3178,7 +3209,7 @@
                 "Position": ""
             },
             {
-                "num": "423",
+                "num": "425",
                 "text": "(RIGALLI ALGINET) L. VERDEGUER FERRER: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "05:28",
@@ -3204,7 +3235,7 @@
                 "Position": ""
             },
             {
-                "num": "422",
+                "num": "424",
                 "text": "(RIGALLI ALGINET) Tiempo muerto",
                 "team": "2",
                 "time": "05:28",
@@ -3230,7 +3261,7 @@
                 "Position": ""
             },
             {
-                "num": "421",
+                "num": "423",
                 "text": "(CB ARIDANE) O. BALSELLS PLAZA: ASISTENCIA (Asistencias: 5)",
                 "team": "1",
                 "time": "05:28",
@@ -3256,7 +3287,7 @@
                 "Position": ""
             },
             {
-                "num": "420",
+                "num": "422",
                 "text": "(CB ARIDANE) S. GUEYE: MATE ANOTADO (Puntos: 16)",
                 "team": "1",
                 "time": "05:28",
@@ -3282,7 +3313,7 @@
                 "Position": "81.8055613349987|55.47872564133184"
             },
             {
-                "num": "419",
+                "num": "421",
                 "text": "(CB ARIDANE) O. BALSELLS PLAZA: ROBO (Robos: 1)",
                 "team": "1",
                 "time": "05:28",
@@ -3308,7 +3339,7 @@
                 "Position": ""
             },
             {
-                "num": "418",
+                "num": "420",
                 "text": "(RIGALLI ALGINET) A. ZURBRIGGEN : PÉRDIDA (Pérdidas: 2)",
                 "team": "2",
                 "time": "05:28",
@@ -3334,7 +3365,7 @@
                 "Position": "23.40277825682253|55.97518097818896"
             },
             {
-                "num": "417",
+                "num": "419",
                 "text": "(CB ARIDANE) P. MARTINEZ ALEJANO: TIRO DE 3 ANOTADO (Puntos: 3)",
                 "team": "1",
                 "time": "05:44",
@@ -3360,7 +3391,7 @@
                 "Position": "72.77777691240661|22.216312526247478"
             },
             {
-                "num": "416",
+                "num": "418",
                 "text": "(RIGALLI ALGINET) E. LLACER SIMLAT: FALTA Personal (Faltas: 1. Faltas de equipo: 18). Tiros libres: 0",
                 "team": "2",
                 "time": "06:02",
@@ -3386,7 +3417,7 @@
                 "Position": "77.01389239673273|44.18439904116012"
             },
             {
-                "num": "415",
+                "num": "417",
                 "text": "(RIGALLI ALGINET) E. LLACER SIMLAT: PÉRDIDA (Pérdidas: 1)",
                 "team": "2",
                 "time": "06:13",
@@ -3412,7 +3443,7 @@
                 "Position": "31.458334863185932|45.92198774887885"
             },
             {
-                "num": "414",
+                "num": "416",
                 "text": "(CB ARIDANE) O. BALSELLS PLAZA: TIRO DE 1 ANOTADO (Puntos: 4)",
                 "team": "1",
                 "time": "06:21",
@@ -3438,7 +3469,7 @@
                 "Position": ""
             },
             {
-                "num": "413",
+                "num": "415",
                 "text": "(CB ARIDANE) O. BALSELLS PLAZA: TIRO DE 1 FALLADO",
                 "team": "1",
                 "time": "06:21",
@@ -3464,7 +3495,7 @@
                 "Position": ""
             },
             {
-                "num": "412",
+                "num": "414",
                 "text": "(CB ARIDANE) O. FUENTES PELUFO: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "06:21",
@@ -3490,7 +3521,7 @@
                 "Position": ""
             },
             {
-                "num": "411",
+                "num": "413",
                 "text": "(RIGALLI ALGINET) E. LLACER SIMLAT: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "06:21",
@@ -3516,7 +3547,7 @@
                 "Position": ""
             },
             {
-                "num": "410",
+                "num": "412",
                 "text": "(CB ARIDANE) P. MARTINEZ ALEJANO: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "06:21",
@@ -3542,7 +3573,7 @@
                 "Position": ""
             },
             {
-                "num": "409",
+                "num": "411",
                 "text": "(RIGALLI ALGINET) R. MALLIK BOUNAD: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "06:21",
@@ -3568,7 +3599,7 @@
                 "Position": ""
             },
             {
-                "num": "408",
+                "num": "410",
                 "text": "(RIGALLI ALGINET) A. ZURBRIGGEN : FALTA Personal (Faltas: 2. Faltas de equipo: 17). Tiros libres: 2",
                 "team": "2",
                 "time": "06:21",
@@ -3594,7 +3625,7 @@
                 "Position": "77.77778025026683|50.26595951817566"
             },
             {
-                "num": "407",
+                "num": "409",
                 "text": "(CB ARIDANE) S. GUEYE: REBOTE (Rebotes: 9)",
                 "team": "1",
                 "time": "06:41",
@@ -3620,7 +3651,7 @@
                 "Position": ""
             },
             {
-                "num": "406",
+                "num": "408",
                 "text": "(RIGALLI ALGINET) R. MALLIK BOUNAD: TIRO DE 2 FALLADO",
                 "team": "2",
                 "time": "06:41",
@@ -3646,7 +3677,7 @@
                 "Position": "12.63888929066836|44.680851063829785"
             },
             {
-                "num": "405",
+                "num": "407",
                 "text": "(CB ARIDANE) S. GUEYE: TIRO DE 3 FALLADO",
                 "team": "1",
                 "time": "06:49",
@@ -3672,7 +3703,7 @@
                 "Position": "67.15277779323084|40.33687929453297"
             },
             {
-                "num": "404",
+                "num": "406",
                 "text": "(CB ARIDANE) S. GUEYE: REBOTE (Rebotes: 8)",
                 "team": "1",
                 "time": "07:07",
@@ -3698,7 +3729,7 @@
                 "Position": ""
             },
             {
-                "num": "403",
+                "num": "405",
                 "text": "(RIGALLI ALGINET) A. ZURBRIGGEN : TIRO DE 2 FALLADO",
                 "team": "2",
                 "time": "07:07",
@@ -3724,7 +3755,7 @@
                 "Position": "17.43055637456755|41.45390297391461"
             },
             {
-                "num": "402",
+                "num": "404",
                 "text": "(CB ARIDANE) A. CASTILLO ORTEGA: TIRO DE 1 ANOTADO (Puntos: 8)",
                 "team": "1",
                 "time": "07:28",
@@ -3750,7 +3781,7 @@
                 "Position": ""
             },
             {
-                "num": "401",
+                "num": "403",
                 "text": "(CB ARIDANE) A. CASTILLO ORTEGA: TIRO DE 1 ANOTADO (Puntos: 7)",
                 "team": "1",
                 "time": "07:28",
@@ -3776,7 +3807,7 @@
                 "Position": ""
             },
             {
-                "num": "400",
+                "num": "402",
                 "text": "(CB ARIDANE) D. KROHNERT MOTO: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "07:28",
@@ -3802,7 +3833,7 @@
                 "Position": ""
             },
             {
-                "num": "399",
+                "num": "401",
                 "text": "(CB ARIDANE) S. GUEYE: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "07:28",
@@ -3828,7 +3859,7 @@
                 "Position": ""
             },
             {
-                "num": "398",
+                "num": "400",
                 "text": "(RIGALLI ALGINET) J. DALMAU ROIG: FALTA Personal (Faltas: 2. Faltas de equipo: 16). Tiros libres: 2",
                 "team": "2",
                 "time": "07:28",
@@ -3854,7 +3885,7 @@
                 "Position": "77.36111145107836|51.87943522022697"
             },
             {
-                "num": "397",
+                "num": "399",
                 "text": "(RIGALLI ALGINET) V. PELUFO LOZANO: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "07:42",
@@ -3880,7 +3911,7 @@
                 "Position": ""
             },
             {
-                "num": "396",
+                "num": "398",
                 "text": "(RIGALLI ALGINET) R. MALLIK BOUNAD: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "07:42",
@@ -3906,7 +3937,7 @@
                 "Position": ""
             },
             {
-                "num": "395",
+                "num": "397",
                 "text": "(RIGALLI ALGINET) V. PELUFO LOZANO: FALTA Personal (Faltas: 5. Faltas de equipo: 15). Tiros libres: 0",
                 "team": "2",
                 "time": "07:42",
@@ -3932,7 +3963,7 @@
                 "Position": "77.01389239673273|54.60993128747248"
             },
             {
-                "num": "394",
+                "num": "396",
                 "text": "(CB ARIDANE) A. CASTILLO ORTEGA: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "08:00",
@@ -3958,7 +3989,7 @@
                 "Position": ""
             },
             {
-                "num": "393",
+                "num": "395",
                 "text": "(CB ARIDANE) J. PARRONDO CASTRO: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "08:00",
@@ -3984,7 +4015,7 @@
                 "Position": ""
             },
             {
-                "num": "392",
+                "num": "394",
                 "text": "(CB ARIDANE) K. RIVEROL DE LAS CASAS: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "08:00",
@@ -4010,7 +4041,7 @@
                 "Position": ""
             },
             {
-                "num": "391",
+                "num": "393",
                 "text": "(CB ARIDANE) D. RAMÍREZ SÁNCHEZ: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "08:00",
@@ -4036,7 +4067,7 @@
                 "Position": ""
             },
             {
-                "num": "390",
+                "num": "392",
                 "text": "(CB ARIDANE) Tiempo muerto",
                 "team": "1",
                 "time": "08:00",
@@ -4062,7 +4093,7 @@
                 "Position": ""
             },
             {
-                "num": "389",
+                "num": "391",
                 "text": "(RIGALLI ALGINET) V. PELUFO LOZANO: ASISTENCIA (Asistencias: 2)",
                 "team": "2",
                 "time": "08:00",
@@ -4088,7 +4119,7 @@
                 "Position": ""
             },
             {
-                "num": "388",
+                "num": "390",
                 "text": "(RIGALLI ALGINET) J. DALMAU ROIG: TIRO DE 3 ANOTADO (Puntos: 7)",
                 "team": "2",
                 "time": "08:00",
@@ -4114,7 +4145,7 @@
                 "Position": "32.7083338432842|28.546100671691576"
             },
             {
-                "num": "387",
+                "num": "389",
                 "text": "(RIGALLI ALGINET) L. VERDEGUER FERRER: REBOTE (Rebotes: 7)",
                 "team": "2",
                 "time": "08:08",
@@ -4140,7 +4171,7 @@
                 "Position": ""
             },
             {
-                "num": "386",
+                "num": "388",
                 "text": "(RIGALLI ALGINET) A. ZURBRIGGEN : TIRO DE 2 FALLADO",
                 "team": "2",
                 "time": "08:08",
@@ -4166,7 +4197,7 @@
                 "Position": "15.97222299487505|56.099290669668925"
             },
             {
-                "num": "385",
+                "num": "387",
                 "text": "(RIGALLI ALGINET) J. DALMAU ROIG: REBOTE (Rebotes: 5)",
                 "team": "2",
                 "time": "08:25",
@@ -4192,7 +4223,7 @@
                 "Position": ""
             },
             {
-                "num": "384",
+                "num": "386",
                 "text": "(CB ARIDANE) O. BALSELLS PLAZA: TIRO DE 2 FALLADO",
                 "team": "1",
                 "time": "08:25",
@@ -4218,7 +4249,7 @@
                 "Position": "75.76389341663446|54.36170527613765"
             },
             {
-                "num": "383",
+                "num": "385",
                 "text": "(RIGALLI ALGINET) J. DALMAU ROIG: ASISTENCIA (Asistencias: 1)",
                 "team": "2",
                 "time": "08:52",
@@ -4244,7 +4275,7 @@
                 "Position": ""
             },
             {
-                "num": "382",
+                "num": "384",
                 "text": "(RIGALLI ALGINET) A. ZURBRIGGEN : TIRO DE 3 ANOTADO (Puntos: 9)",
                 "team": "2",
                 "time": "08:52",
@@ -4270,7 +4301,7 @@
                 "Position": "31.9444459897501|71.73758903913748"
             },
             {
-                "num": "381",
+                "num": "383",
                 "text": "(RIGALLI ALGINET) J. DALMAU ROIG: REBOTE (Rebotes: 4)",
                 "team": "2",
                 "time": "08:57",
@@ -4296,7 +4327,7 @@
                 "Position": ""
             },
             {
-                "num": "380",
+                "num": "382",
                 "text": "(RIGALLI ALGINET) M. MARTINEZ HERNANDEZ : TIRO DE 3 FALLADO",
                 "team": "2",
                 "time": "08:57",
@@ -4322,7 +4353,7 @@
                 "Position": "31.041667918364247|71.48936302780264"
             },
             {
-                "num": "379",
+                "num": "381",
                 "text": "(CB ARIDANE) O. FUENTES PELUFO: FALTA Personal (Faltas: 2. Faltas de equipo: 19). Tiros libres: 0",
                 "team": "1",
                 "time": "09:08",
@@ -4348,7 +4379,7 @@
                 "Position": "13.402778071385852|54.98227030447473"
             },
             {
-                "num": "378",
+                "num": "380",
                 "text": "(CB ARIDANE) O. BALSELLS PLAZA: ASISTENCIA (Asistencias: 4)",
                 "team": "1",
                 "time": "09:33",
@@ -4374,7 +4405,7 @@
                 "Position": ""
             },
             {
-                "num": "377",
+                "num": "379",
                 "text": "(CB ARIDANE) J. PARRONDO CASTRO: TIRO DE 2 ANOTADO (Puntos: 9)",
                 "team": "1",
                 "time": "09:33",
@@ -4400,7 +4431,7 @@
                 "Position": "86.59722285579754|52.872342579753756"
             },
             {
-                "num": "376",
+                "num": "378",
                 "text": "(CB ARIDANE) O. FUENTES PELUFO: REBOTE (Rebotes: 3)",
                 "team": "1",
                 "time": "09:52",
@@ -4426,7 +4457,7 @@
                 "Position": ""
             },
             {
-                "num": "375",
+                "num": "377",
                 "text": "(RIGALLI ALGINET) J. DALMAU ROIG: TIRO DE 2 FALLADO",
                 "team": "2",
                 "time": "09:52",
@@ -4452,7 +4483,7 @@
                 "Position": "20.486111497437523|28.17375834050188"
             },
             {
-                "num": "374",
+                "num": "376",
                 "text": "(RIGALLI ALGINET) V. PELUFO LOZANO: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "10:00",
@@ -4478,7 +4509,7 @@
                 "Position": ""
             },
             {
-                "num": "373",
+                "num": "375",
                 "text": "(CB ARIDANE) D. RAMÍREZ SÁNCHEZ: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "10:00",
@@ -4504,7 +4535,7 @@
                 "Position": ""
             },
             {
-                "num": "372",
+                "num": "374",
                 "text": "(RIGALLI ALGINET) I. CUBERO SANTAFE: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "10:00",
@@ -4530,7 +4561,7 @@
                 "Position": ""
             },
             {
-                "num": "371",
+                "num": "373",
                 "text": "(RIGALLI ALGINET) E. LLACER SIMLAT: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "10:00",
@@ -4556,7 +4587,7 @@
                 "Position": ""
             },
             {
-                "num": "370",
+                "num": "372",
                 "text": "(RIGALLI ALGINET) J. DALMAU ROIG: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "10:00",
@@ -4582,7 +4613,7 @@
                 "Position": ""
             },
             {
-                "num": "369",
+                "num": "371",
                 "text": "(CB ARIDANE) O. FUENTES PELUFO: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "10:00",
@@ -4608,7 +4639,7 @@
                 "Position": ""
             },
             {
-                "num": "368",
+                "num": "370",
                 "text": "Comienzo del Cuarto 4",
                 "team": null,
                 "time": "10:00",
@@ -4634,7 +4665,7 @@
                 "Position": ""
             },
             {
-                "num": "367",
+                "num": "369",
                 "text": "Fin del Cuarto 3",
                 "team": null,
                 "time": "00:00",
@@ -4660,7 +4691,7 @@
                 "Position": ""
             },
             {
-                "num": "366",
+                "num": "368",
                 "text": "(RIGALLI ALGINET) I. CUBERO SANTAFE: REBOTE (Rebotes: 4)",
                 "team": "2",
                 "time": "00:05",
@@ -4686,7 +4717,7 @@
                 "Position": ""
             },
             {
-                "num": "365",
+                "num": "367",
                 "text": "(CB ARIDANE) O. BALSELLS PLAZA: TIRO DE 2 FALLADO",
                 "team": "1",
                 "time": "00:05",
@@ -4712,7 +4743,7 @@
                 "Position": "76.31944687057432|50.39007252384308"
             },
             {
-                "num": "364",
+                "num": "366",
                 "text": "(CB ARIDANE) J. PARRONDO CASTRO: REBOTE (Rebotes: 4)",
                 "team": "1",
                 "time": "00:20",
@@ -4738,7 +4769,7 @@
                 "Position": ""
             },
             {
-                "num": "363",
+                "num": "365",
                 "text": "(RIGALLI ALGINET) A. ZURBRIGGEN : TIRO DE 2 FALLADO",
                 "team": "2",
                 "time": "00:20",
@@ -4764,7 +4795,7 @@
                 "Position": "15.208334214157556|56.471633000858624"
             },
             {
-                "num": "362",
+                "num": "364",
                 "text": "(CB ARIDANE) D. RAMÍREZ SÁNCHEZ: TIRO DE 2 ANOTADO (Puntos: 16)",
                 "team": "1",
                 "time": "00:39",
@@ -4790,7 +4821,7 @@
                 "Position": "82.15278038934433|49.89361718698597"
             },
             {
-                "num": "361",
+                "num": "363",
                 "text": "(CB ARIDANE) K. RIVEROL DE LAS CASAS: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "00:59",
@@ -4816,7 +4847,7 @@
                 "Position": ""
             },
             {
-                "num": "360",
+                "num": "362",
                 "text": "(CB ARIDANE) P. MARTINEZ ALEJANO: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "00:59",
@@ -4842,7 +4873,7 @@
                 "Position": ""
             },
             {
-                "num": "359",
+                "num": "361",
                 "text": "(RIGALLI ALGINET) M. MARTINEZ HERNANDEZ : TIRO DE 1 ANOTADO (Puntos: 8)",
                 "team": "2",
                 "time": "00:59",
@@ -4868,7 +4899,7 @@
                 "Position": ""
             },
             {
-                "num": "358",
+                "num": "360",
                 "text": "(RIGALLI ALGINET) M. MARTINEZ HERNANDEZ : TIRO DE 1 ANOTADO (Puntos: 7)",
                 "team": "2",
                 "time": "00:59",
@@ -4894,7 +4925,7 @@
                 "Position": ""
             },
             {
-                "num": "357",
+                "num": "359",
                 "text": "(CB ARIDANE) P. MARTINEZ ALEJANO: FALTA Personal (Faltas: 3. Faltas de equipo: 18). Tiros libres: 2",
                 "team": "1",
                 "time": "00:59",
@@ -4920,7 +4951,7 @@
                 "Position": "33.19444496984837|52.996455585421174"
             },
             {
-                "num": "356",
+                "num": "358",
                 "text": "(CB ARIDANE) J. PARRONDO CASTRO: FALTA Personal (Faltas: 2. Faltas de equipo: 17). Tiros libres: 0",
                 "team": "1",
                 "time": "01:07",
@@ -4946,7 +4977,7 @@
                 "Position": "23.680556838159248|57.09220134338315"
             },
             {
-                "num": "355",
+                "num": "357",
                 "text": "(RIGALLI ALGINET) I. CUBERO SANTAFE: REBOTE (Rebotes: 3)",
                 "team": "2",
                 "time": "01:19",
@@ -4972,7 +5003,7 @@
                 "Position": ""
             },
             {
-                "num": "354",
+                "num": "356",
                 "text": "(CB ARIDANE) O. BALSELLS PLAZA: TIRO DE 2 FALLADO",
                 "team": "1",
                 "time": "01:19",
@@ -4998,7 +5029,7 @@
                 "Position": "86.31944612882761|43.56383069863559"
             },
             {
-                "num": "353",
+                "num": "355",
                 "text": "(CB ARIDANE) D. RAMÍREZ SÁNCHEZ: REBOTE (Rebotes: 4)",
                 "team": "1",
                 "time": "01:37",
@@ -5024,7 +5055,7 @@
                 "Position": ""
             },
             {
-                "num": "352",
+                "num": "354",
                 "text": "(RIGALLI ALGINET) E. LLACER SIMLAT: TIRO DE 2 FALLADO",
                 "team": "2",
                 "time": "01:37",
@@ -5050,7 +5081,7 @@
                 "Position": "16.73611084840915|77.32269749348335"
             },
             {
-                "num": "351",
+                "num": "353",
                 "text": "(RIGALLI ALGINET) A. ZURBRIGGEN : TIRO DE 2 FALLADO",
                 "team": "2",
                 "time": "01:51",
@@ -5076,7 +5107,7 @@
                 "Position": "8.055555679180008|47.907802467932406"
             },
             {
-                "num": "350",
+                "num": "352",
                 "text": "(CB ARIDANE) O. BALSELLS PLAZA: TIRO DE 2 ANOTADO (Puntos: 3)",
                 "team": "1",
                 "time": "02:00",
@@ -5102,7 +5133,7 @@
                 "Position": "80.62500468227613|53.36879460242342"
             },
             {
-                "num": "349",
+                "num": "351",
                 "text": "(CB ARIDANE) J. PARRONDO CASTRO: ROBO (Robos: 1)",
                 "team": "1",
                 "time": "02:21",
@@ -5128,7 +5159,7 @@
                 "Position": ""
             },
             {
-                "num": "348",
+                "num": "350",
                 "text": "(RIGALLI ALGINET) A. ZURBRIGGEN : PÉRDIDA (Pérdidas: 1)",
                 "team": "2",
                 "time": "02:21",
@@ -5154,7 +5185,7 @@
                 "Position": "21.319445387080894|44.80496738368465"
             },
             {
-                "num": "347",
+                "num": "349",
                 "text": "(CB ARIDANE) S. GUEYE: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "02:30",
@@ -5180,7 +5211,7 @@
                 "Position": ""
             },
             {
-                "num": "346",
+                "num": "348",
                 "text": "(CB ARIDANE) D. KROHNERT MOTO: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "02:30",
@@ -5206,7 +5237,7 @@
                 "Position": ""
             },
             {
-                "num": "345",
+                "num": "347",
                 "text": "(CB ARIDANE)  Equipo: PÉRDIDA (Pérdidas: 2)",
                 "team": "1",
                 "time": "02:30",
@@ -5232,7 +5263,7 @@
                 "Position": "78.3333337042067|51.01064086636761"
             },
             {
-                "num": "344",
+                "num": "346",
                 "text": "(CB ARIDANE) J. PARRONDO CASTRO: TIRO DE 2 FALLADO",
                 "team": "1",
                 "time": "02:30",
@@ -5258,7 +5289,7 @@
                 "Position": "83.4722216968183|49.52127816998372"
             },
             {
-                "num": "343",
+                "num": "345",
                 "text": "(CB ARIDANE) P. MARTINEZ ALEJANO: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "02:36",
@@ -5284,7 +5315,7 @@
                 "Position": ""
             },
             {
-                "num": "342",
+                "num": "344",
                 "text": "(CB ARIDANE) O. FUENTES PELUFO: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "02:36",
@@ -5310,7 +5341,7 @@
                 "Position": ""
             },
             {
-                "num": "341",
+                "num": "343",
                 "text": "(RIGALLI ALGINET) M. MARTINEZ HERNANDEZ : ASISTENCIA (Asistencias: 3)",
                 "team": "2",
                 "time": "02:59",
@@ -5336,7 +5367,7 @@
                 "Position": ""
             },
             {
-                "num": "340",
+                "num": "342",
                 "text": "(RIGALLI ALGINET) A. ZURBRIGGEN : TIRO DE 3 ANOTADO (Puntos: 6)",
                 "team": "2",
                 "time": "02:59",
@@ -5362,7 +5393,7 @@
                 "Position": "31.52777719056163|69.62766462860394"
             },
             {
-                "num": "339",
+                "num": "341",
                 "text": "(CB ARIDANE) D. RAMÍREZ SÁNCHEZ: TIRO DE 1 ANOTADO (Puntos: 14)",
                 "team": "1",
                 "time": "03:20",
@@ -5388,7 +5419,7 @@
                 "Position": ""
             },
             {
-                "num": "338",
+                "num": "340",
                 "text": "(RIGALLI ALGINET) R. MALLIK BOUNAD: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "03:20",
@@ -5414,7 +5445,7 @@
                 "Position": ""
             },
             {
-                "num": "337",
+                "num": "339",
                 "text": "(RIGALLI ALGINET) A. ZURBRIGGEN : Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "03:20",
@@ -5440,7 +5471,7 @@
                 "Position": ""
             },
             {
-                "num": "336",
+                "num": "338",
                 "text": "(RIGALLI ALGINET) Tiempo muerto",
                 "team": "2",
                 "time": "03:20",
@@ -5466,7 +5497,7 @@
                 "Position": ""
             },
             {
-                "num": "335",
+                "num": "337",
                 "text": "(RIGALLI ALGINET) M. MARTINEZ HERNANDEZ : FALTA Personal (Faltas: 2. Faltas de equipo: 14). Tiros libres: 1",
                 "team": "2",
                 "time": "03:20",
@@ -5492,7 +5523,7 @@
                 "Position": "74.58333676391189|52.00354822589439"
             },
             {
-                "num": "334",
+                "num": "336",
                 "text": "(CB ARIDANE) D. RAMÍREZ SÁNCHEZ: TIRO DE 2 ANOTADO (Puntos: 13)",
                 "team": "1",
                 "time": "03:20",
@@ -5518,7 +5549,7 @@
                 "Position": "86.45833820104615|49.89361718698597"
             },
             {
-                "num": "333",
+                "num": "335",
                 "text": "(CB ARIDANE) S. GUEYE: REBOTE (Rebotes: 7)",
                 "team": "1",
                 "time": "03:41",
@@ -5544,7 +5575,7 @@
                 "Position": ""
             },
             {
-                "num": "332",
+                "num": "334",
                 "text": "(RIGALLI ALGINET) E. LLACER SIMLAT: TIRO DE 2 FALLADO",
                 "team": "2",
                 "time": "03:41",
@@ -5570,7 +5601,7 @@
                 "Position": "8.95833375056586|17.748227751283242"
             },
             {
-                "num": "331",
+                "num": "333",
                 "text": "(RIGALLI ALGINET) D. RAMÍREZ SÁNCHEZ: ASISTENCIA (Asistencias: 2)",
                 "team": "2",
                 "time": "04:04",
@@ -5596,7 +5627,7 @@
                 "Position": ""
             },
             {
-                "num": "330",
+                "num": "332",
                 "text": "(CB ARIDANE) J. PARRONDO CASTRO: TIRO DE 1 ANOTADO (Puntos: 7)",
                 "team": "1",
                 "time": "04:04",
@@ -5622,7 +5653,7 @@
                 "Position": ""
             },
             {
-                "num": "329",
+                "num": "331",
                 "text": "(CB ARIDANE) J. PARRONDO CASTRO: TIRO DE 1 ANOTADO (Puntos: 6)",
                 "team": "1",
                 "time": "04:04",
@@ -5648,7 +5679,7 @@
                 "Position": ""
             },
             {
-                "num": "328",
+                "num": "330",
                 "text": "(RIGALLI ALGINET) V. PELUFO LOZANO: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "04:04",
@@ -5674,7 +5705,7 @@
                 "Position": ""
             },
             {
-                "num": "327",
+                "num": "329",
                 "text": "(RIGALLI ALGINET) I. CUBERO SANTAFE: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "04:04",
@@ -5700,7 +5731,7 @@
                 "Position": ""
             },
             {
-                "num": "326",
+                "num": "328",
                 "text": "(RIGALLI ALGINET) J. DALMAU ROIG: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "04:04",
@@ -5726,7 +5757,7 @@
                 "Position": ""
             },
             {
-                "num": "325",
+                "num": "327",
                 "text": "(RIGALLI ALGINET) L. VERDEGUER FERRER: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "04:04",
@@ -5752,7 +5783,7 @@
                 "Position": ""
             },
             {
-                "num": "324",
+                "num": "326",
                 "text": "(RIGALLI ALGINET) V. PELUFO LOZANO: FALTA Personal (Faltas: 4. Faltas de equipo: 13). Tiros libres: 2",
                 "team": "2",
                 "time": "04:04",
@@ -5778,7 +5809,7 @@
                 "Position": "75.00000556310036|52.74822957408634"
             },
             {
-                "num": "323",
+                "num": "325",
                 "text": "(CB ARIDANE) S. GUEYE: REBOTE (Rebotes: 6)",
                 "team": "1",
                 "time": "04:19",
@@ -5804,7 +5835,7 @@
                 "Position": ""
             },
             {
-                "num": "322",
+                "num": "324",
                 "text": "(RIGALLI ALGINET) J. DALMAU ROIG: TIRO DE 2 FALLADO",
                 "team": "2",
                 "time": "04:19",
@@ -5830,7 +5861,7 @@
                 "Position": "21.527777932308343|64.04255617425807"
             },
             {
-                "num": "321",
+                "num": "323",
                 "text": "(CB ARIDANE) O. BALSELLS PLAZA: ASISTENCIA (Asistencias: 3)",
                 "team": "1",
                 "time": "04:36",
@@ -5856,7 +5887,7 @@
                 "Position": ""
             },
             {
-                "num": "320",
+                "num": "322",
                 "text": "(CB ARIDANE) S. GUEYE: TIRO DE 3 ANOTADO (Puntos: 14)",
                 "team": "1",
                 "time": "04:36",
@@ -5882,7 +5913,7 @@
                 "Position": "69.7916678256459|84.64539465554795"
             },
             {
-                "num": "319",
+                "num": "321",
                 "text": "(RIGALLI ALGINET) V. PELUFO LOZANO: ASISTENCIA (Asistencias: 1)",
                 "team": "2",
                 "time": "04:59",
@@ -5908,7 +5939,7 @@
                 "Position": ""
             },
             {
-                "num": "318",
+                "num": "320",
                 "text": "(RIGALLI ALGINET) M. MARTINEZ HERNANDEZ : TIRO DE 3 ANOTADO (Puntos: 6)",
                 "team": "2",
                 "time": "04:59",
@@ -5934,7 +5965,7 @@
                 "Position": "30.347222392205843|73.84752007804589"
             },
             {
-                "num": "317",
+                "num": "319",
                 "text": "(RIGALLI ALGINET) E. LLACER SIMLAT: REBOTE (Rebotes: 5)",
                 "team": "2",
                 "time": "05:15",
@@ -5960,7 +5991,7 @@
                 "Position": ""
             },
             {
-                "num": "316",
+                "num": "318",
                 "text": "(CB ARIDANE) J. PARRONDO CASTRO: TIRO DE 2 FALLADO",
                 "team": "1",
                 "time": "05:15",
@@ -5986,7 +6017,7 @@
                 "Position": "70.41667102442861|58.581564039767045"
             },
             {
-                "num": "315",
+                "num": "317",
                 "text": "(CB ARIDANE) O. BALSELLS PLAZA: REBOTE (Rebotes: 3)",
                 "team": "1",
                 "time": "05:39",
@@ -6012,7 +6043,7 @@
                 "Position": ""
             },
             {
-                "num": "314",
+                "num": "316",
                 "text": "(RIGALLI ALGINET) E. LLACER SIMLAT: TIRO DE 3 FALLADO",
                 "team": "2",
                 "time": "05:39",
@@ -6038,7 +6069,7 @@
                 "Position": "24.930555818257517|11.04609976029003"
             },
             {
-                "num": "313",
+                "num": "315",
                 "text": "(CB ARIDANE) D. RAMÍREZ SÁNCHEZ: TIRO DE 1 ANOTADO (Puntos: 11)",
                 "team": "1",
                 "time": "05:56",
@@ -6064,7 +6095,7 @@
                 "Position": ""
             },
             {
-                "num": "312",
+                "num": "314",
                 "text": "(CB ARIDANE) D. RAMÍREZ SÁNCHEZ: TIRO DE 1 ANOTADO (Puntos: 10)",
                 "team": "1",
                 "time": "05:56",
@@ -6090,7 +6121,7 @@
                 "Position": ""
             },
             {
-                "num": "311",
+                "num": "313",
                 "text": "(CB ARIDANE) O. BALSELLS PLAZA: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "05:56",
@@ -6116,7 +6147,7 @@
                 "Position": ""
             },
             {
-                "num": "310",
+                "num": "312",
                 "text": "(CB ARIDANE) P. MARTINEZ ALEJANO: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "05:56",
@@ -6142,7 +6173,7 @@
                 "Position": ""
             },
             {
-                "num": "309",
+                "num": "311",
                 "text": "(RIGALLI ALGINET) L. VERDEGUER FERRER: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "05:56",
@@ -6168,7 +6199,7 @@
                 "Position": ""
             },
             {
-                "num": "308",
+                "num": "310",
                 "text": "(RIGALLI ALGINET) V. PELUFO LOZANO: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "05:56",
@@ -6194,7 +6225,7 @@
                 "Position": ""
             },
             {
-                "num": "307",
+                "num": "309",
                 "text": "(RIGALLI ALGINET) A. ZURBRIGGEN : Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "05:56",
@@ -6220,7 +6251,7 @@
                 "Position": ""
             },
             {
-                "num": "306",
+                "num": "308",
                 "text": "(RIGALLI ALGINET) R. MALLIK BOUNAD: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "05:56",
@@ -6246,7 +6277,7 @@
                 "Position": ""
             },
             {
-                "num": "305",
+                "num": "307",
                 "text": "(RIGALLI ALGINET) A. ZURBRIGGEN : FALTA Personal (Faltas: 1. Faltas de equipo: 12). Tiros libres: 2",
                 "team": "2",
                 "time": "05:56",
@@ -6272,7 +6303,7 @@
                 "Position": "70.55555567918|45.54964541768915"
             },
             {
-                "num": "304",
+                "num": "306",
                 "text": "(RIGALLI ALGINET) L. VERDEGUER FERRER: TIRO DE 2 ANOTADO (Puntos: 7)",
                 "team": "2",
                 "time": "06:04",
@@ -6298,7 +6329,7 @@
                 "Position": "11.041666620307497|51.507092889037274"
             },
             {
-                "num": "303",
+                "num": "305",
                 "text": "(CB ARIDANE) P. MARTINEZ ALEJANO: ASISTENCIA (Asistencias: 6)",
                 "team": "1",
                 "time": "06:16",
@@ -6324,7 +6355,7 @@
                 "Position": ""
             },
             {
-                "num": "302",
+                "num": "304",
                 "text": "(CB ARIDANE) D. RAMÍREZ SÁNCHEZ: TIRO DE 3 ANOTADO (Puntos: 9)",
                 "team": "1",
                 "time": "06:16",
@@ -6350,7 +6381,7 @@
                 "Position": "70.20833662483437|18.617022105142606"
             },
             {
-                "num": "301",
+                "num": "303",
                 "text": "(RIGALLI ALGINET) L. VERDEGUER FERRER: PÉRDIDA (Pérdidas: 2)",
                 "team": "2",
                 "time": "06:35",
@@ -6376,7 +6407,7 @@
                 "Position": "16.111111358360017|49.14893915298147"
             },
             {
-                "num": "300",
+                "num": "302",
                 "text": "(CB ARIDANE) P. MARTINEZ ALEJANO: ASISTENCIA (Asistencias: 5)",
                 "team": "1",
                 "time": "06:54",
@@ -6402,7 +6433,7 @@
                 "Position": ""
             },
             {
-                "num": "299",
+                "num": "301",
                 "text": "(CB ARIDANE) J. PARRONDO CASTRO: TIRO DE 2 ANOTADO (Puntos: 5)",
                 "team": "1",
                 "time": "06:54",
@@ -6428,7 +6459,7 @@
                 "Position": "78.68056017601947|48.280144799122105"
             },
             {
-                "num": "298",
+                "num": "300",
                 "text": "(RIGALLI ALGINET) E. LLACER SIMLAT: TIRO DE 1 ANOTADO (Puntos: 6)",
                 "team": "2",
                 "time": "07:08",
@@ -6454,7 +6485,7 @@
                 "Position": ""
             },
             {
-                "num": "297",
+                "num": "299",
                 "text": "(RIGALLI ALGINET) E. LLACER SIMLAT: TIRO DE 1 ANOTADO (Puntos: 5)",
                 "team": "2",
                 "time": "07:08",
@@ -6480,7 +6511,7 @@
                 "Position": ""
             },
             {
-                "num": "296",
+                "num": "298",
                 "text": "(CB ARIDANE) J. PARRONDO CASTRO: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "07:08",
@@ -6506,7 +6537,7 @@
                 "Position": ""
             },
             {
-                "num": "295",
+                "num": "297",
                 "text": "(CB ARIDANE) A. CASTILLO ORTEGA: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "07:08",
@@ -6532,7 +6563,7 @@
                 "Position": ""
             },
             {
-                "num": "294",
+                "num": "296",
                 "text": "(CB ARIDANE) A. CASTILLO ORTEGA: FALTA Personal (Faltas: 4. Faltas de equipo: 16). Tiros libres: 2",
                 "team": "1",
                 "time": "07:08",
@@ -6558,7 +6589,7 @@
                 "Position": "24.375000509950866|57.09220134338315"
             },
             {
-                "num": "293",
+                "num": "295",
                 "text": "(RIGALLI ALGINET) L. VERDEGUER FERRER: REBOTE (Rebotes: 6)",
                 "team": "2",
                 "time": "07:14",
@@ -6584,7 +6615,7 @@
                 "Position": ""
             },
             {
-                "num": "292",
+                "num": "294",
                 "text": "(CB ARIDANE) P. MARTINEZ ALEJANO: TIRO DE 3 FALLADO",
                 "team": "1",
                 "time": "07:14",
@@ -6610,7 +6641,7 @@
                 "Position": "67.84722331938924|41.3297899682472"
             },
             {
-                "num": "291",
+                "num": "293",
                 "text": "(RIGALLI ALGINET) E. LLACER SIMLAT: TIRO DE 3 FALLADO",
                 "team": "2",
                 "time": "07:33",
@@ -6636,7 +6667,7 @@
                 "Position": "39.09722452472765|51.01064086636761"
             },
             {
-                "num": "290",
+                "num": "292",
                 "text": "(RIGALLI ALGINET) E. LLACER SIMLAT: REBOTE (Rebotes: 4)",
                 "team": "2",
                 "time": "07:47",
@@ -6662,7 +6693,7 @@
                 "Position": ""
             },
             {
-                "num": "289",
+                "num": "291",
                 "text": "(RIGALLI ALGINET) A. ZURBRIGGEN : TIRO DE 3 FALLADO",
                 "team": "2",
                 "time": "07:47",
@@ -6688,7 +6719,7 @@
                 "Position": "31.458334863185932|74.84043075176012"
             },
             {
-                "num": "288",
+                "num": "290",
                 "text": "(CB ARIDANE) O. FUENTES PELUFO: TIRO DE 1 ANOTADO (Puntos: 5)",
                 "team": "1",
                 "time": "07:54",
@@ -6714,7 +6745,7 @@
                 "Position": ""
             },
             {
-                "num": "287",
+                "num": "289",
                 "text": "(RIGALLI ALGINET) J. DALMAU ROIG: FALTA Personal (Faltas: 1. Faltas de equipo: 11). Tiros libres: 1",
                 "team": "2",
                 "time": "07:54",
@@ -6740,7 +6771,7 @@
                 "Position": "78.1944490494553|49.024822833126606"
             },
             {
-                "num": "286",
+                "num": "288",
                 "text": "(CB ARIDANE) O. FUENTES PELUFO: TIRO DE 2 ANOTADO (Puntos: 4)",
                 "team": "1",
                 "time": "07:54",
@@ -6766,7 +6797,7 @@
                 "Position": "78.47222577642523|49.76950418131855"
             },
             {
-                "num": "285",
+                "num": "287",
                 "text": "(RIGALLI ALGINET) E. LLACER SIMLAT: TIRO DE 2 ANOTADO (Puntos: 4)",
                 "team": "2",
                 "time": "08:08",
@@ -6792,7 +6823,7 @@
                 "Position": "24.305556328208382|44.0602860354927"
             },
             {
-                "num": "284",
+                "num": "286",
                 "text": "(RIGALLI ALGINET) A. ZURBRIGGEN : TIRO DE 3 FALLADO",
                 "team": "2",
                 "time": "08:14",
@@ -6818,7 +6849,7 @@
                 "Position": "33.402779369442605|21.719858846484087"
             },
             {
-                "num": "283",
+                "num": "285",
                 "text": "(RIGALLI ALGINET) J. DALMAU ROIG: REBOTE (Rebotes: 3)",
                 "team": "2",
                 "time": "08:14",
@@ -6844,7 +6875,7 @@
                 "Position": ""
             },
             {
-                "num": "282",
+                "num": "284",
                 "text": "(RIGALLI ALGINET) M. MARTINEZ HERNANDEZ : TIRO DE 3 FALLADO",
                 "team": "2",
                 "time": "08:14",
@@ -6870,7 +6901,7 @@
                 "Position": "33.68055609641254|27.553191655071075"
             },
             {
-                "num": "281",
+                "num": "283",
                 "text": "(CB ARIDANE) S. GUEYE: TAPÓN (Tapones: 1)",
                 "team": "1",
                 "time": "08:28",
@@ -6896,7 +6927,7 @@
                 "Position": ""
             },
             {
-                "num": "280",
+                "num": "282",
                 "text": "(RIGALLI ALGINET) E. LLACER SIMLAT: TIRO DE 2 FALLADO",
                 "team": "2",
                 "time": "08:28",
@@ -6922,7 +6953,7 @@
                 "Position": "14.791667269335871|46.17021376021368"
             },
             {
-                "num": "279",
+                "num": "281",
                 "text": "(RIGALLI ALGINET) L. VERDEGUER FERRER: ROBO (Robos: 2)",
                 "team": "2",
                 "time": "08:33",
@@ -6948,7 +6979,7 @@
                 "Position": ""
             },
             {
-                "num": "278",
+                "num": "280",
                 "text": "(CB ARIDANE) P. MARTINEZ ALEJANO: PÉRDIDA (Pérdidas: 3)",
                 "team": "1",
                 "time": "08:33",
@@ -6974,7 +7005,7 @@
                 "Position": "76.25000454319863|41.95035499658428"
             },
             {
-                "num": "277",
+                "num": "279",
                 "text": "(RIGALLI ALGINET) M. MARTINEZ HERNANDEZ : FALTA Personal (Faltas: 1. Faltas de equipo: 10). Tiros libres: 0",
                 "team": "2",
                 "time": "08:39",
@@ -7000,7 +7031,7 @@
                 "Position": "68.194449791202|53.86524993928053"
             },
             {
-                "num": "276",
+                "num": "278",
                 "text": "(RIGALLI ALGINET) J. DALMAU ROIG: TIRO DE 2 ANOTADO (Puntos: 4)",
                 "team": "2",
                 "time": "08:56",
@@ -7026,7 +7057,7 @@
                 "Position": "20.069444552615842|48.031915473599824"
             },
             {
-                "num": "275",
+                "num": "277",
                 "text": "(RIGALLI ALGINET) J. DALMAU ROIG: REBOTE (Rebotes: 2)",
                 "team": "2",
                 "time": "08:56",
@@ -7052,7 +7083,7 @@
                 "Position": ""
             },
             {
-                "num": "274",
+                "num": "276",
                 "text": "(RIGALLI ALGINET) J. DALMAU ROIG: TIRO DE 2 FALLADO",
                 "team": "2",
                 "time": "08:56",
@@ -7078,7 +7109,7 @@
                 "Position": "20.069444552615842|48.031915473599824"
             },
             {
-                "num": "273",
+                "num": "275",
                 "text": "(CB ARIDANE) A. CASTILLO ORTEGA: FALTA Personal (Faltas: 3. Faltas de equipo: 15). Tiros libres: 0",
                 "team": "1",
                 "time": "09:10",
@@ -7104,7 +7135,7 @@
                 "Position": "18.194444228101652|56.34751668100376"
             },
             {
-                "num": "272",
+                "num": "274",
                 "text": "(RIGALLI ALGINET) L. VERDEGUER FERRER: REBOTE (Rebotes: 5)",
                 "team": "2",
                 "time": "09:10",
@@ -7130,7 +7161,7 @@
                 "Position": ""
             },
             {
-                "num": "271",
+                "num": "273",
                 "text": "(RIGALLI ALGINET) J. DALMAU ROIG: TIRO DE 3 FALLADO",
                 "team": "2",
                 "time": "09:10",
@@ -7156,7 +7187,7 @@
                 "Position": "33.0555566063634|37.73049623295488"
             },
             {
-                "num": "270",
+                "num": "272",
                 "text": "(CB ARIDANE) D. RAMÍREZ SÁNCHEZ: ASISTENCIA (Asistencias: 1)",
                 "team": "1",
                 "time": "09:44",
@@ -7182,7 +7213,7 @@
                 "Position": ""
             },
             {
-                "num": "269",
+                "num": "271",
                 "text": "(CB ARIDANE) A. CASTILLO ORTEGA: TIRO DE 2 ANOTADO (Puntos: 6)",
                 "team": "1",
                 "time": "09:44",
@@ -7206,6 +7237,58 @@
                 "logParam9": "",
                 "logParam10": "",
                 "Position": "87.70833718114442|48.280144799122105"
+            },
+            {
+                "num": "270",
+                "text": "Comienzo del Cuarto 3",
+                "team": null,
+                "time": "10:00",
+                "deleted": null,
+                "scoreA": null,
+                "scoreB": null,
+                "quarter": "3",
+                "logo": null,
+                "idPlayer": null,
+                "idLicense": null,
+                "idTeam": null,
+                "action": "period",
+                "logParam1": "3",
+                "logParam2": "0",
+                "logParam3": "",
+                "logParam4": "",
+                "logParam5": "",
+                "logParam6": "",
+                "logParam7": "",
+                "logParam8": "",
+                "logParam9": "",
+                "logParam10": "",
+                "Position": ""
+            },
+            {
+                "num": "269",
+                "text": "Fin del Cuarto 2",
+                "team": null,
+                "time": "00:00",
+                "deleted": null,
+                "scoreA": null,
+                "scoreB": null,
+                "quarter": "2",
+                "logo": null,
+                "idPlayer": null,
+                "idLicense": null,
+                "idTeam": null,
+                "action": "period",
+                "logParam1": "2",
+                "logParam2": "1",
+                "logParam3": "",
+                "logParam4": "",
+                "logParam5": "",
+                "logParam6": "",
+                "logParam7": "",
+                "logParam8": "",
+                "logParam9": "",
+                "logParam10": "",
+                "Position": ""
             },
             {
                 "num": "268",
