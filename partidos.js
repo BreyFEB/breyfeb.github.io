@@ -500,8 +500,8 @@ function formatCompetitionName(comp) {
     'Primera FEB': 'Primera FEB',
     'Segunda FEB': 'Segunda FEB',
     'Tercera FEB': 'Tercera FEB',
-    'CE Clubes Cad Fem': 'Clubes Cadete Masculino',
-    'CE Clubes Cad Masc': 'Clubes Cadete Femenino',
+    'CE Clubes Cad Fem': 'Clubes Cadete Femenino',
+    'CE Clubes Cad Masc': 'Clubes Cadete Masculino',
     'Liga Cadete Femenina': 'Liga Cadete Femenina',
     'F.Ascenso Lf2': 'Fase de ascenso a LF2'
   };
