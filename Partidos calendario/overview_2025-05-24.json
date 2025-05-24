@@ -184,14 +184,14 @@
                         "Place": "PABELLÓN DE DEPORTES PRESIDENTE ADOLFO SUÁREZ",
                         "TeamAID": 951498,
                         "TeamA": "CB ARIDANE",
-                        "ScoreA": 22,
+                        "ScoreA": 30,
                         "TeamACode": "38003721",
                         "TeamAClubCode": "380037",
                         "TeamBID": 952153,
                         "TeamB": "RIGALLI ALGINET",
                         "TeamBCode": "46004600",
                         "TeamBClubCode": "460046",
-                        "ScoreB": 26,
+                        "ScoreB": 29,
                         "StartTime": "2025-05-24T10:00:00",
                         "StartTimeUTC": "2025-05-24T08:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -199,7 +199,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951498&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952153&ti=1",
                         "Quarter": 2,
-                        "Time": "00:17:20",
+                        "Time": "00:19:54",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -211,8 +211,8 @@
                             },
                             {
                                 "n": "2",
-                                "scoreA": "1",
-                                "scoreB": "10"
+                                "scoreA": "9",
+                                "scoreB": "13"
                             }
                         ],
                         "Season": null,
@@ -230,22 +230,22 @@
                         "Place": "PABELLÓN SIGLO XXI (PISTA A)",
                         "TeamAID": 951794,
                         "TeamA": "C.B. GETAFE",
-                        "ScoreA": 31,
+                        "ScoreA": 50,
                         "TeamACode": "28290717",
                         "TeamAClubCode": "282907",
                         "TeamBID": 950922,
                         "TeamB": "ESPORTIU BÀSQUET VILA-REAL",
                         "TeamBCode": "12000301",
                         "TeamBClubCode": "120003",
-                        "ScoreB": 39,
+                        "ScoreB": 52,
                         "StartTime": "2025-05-24T10:00:00",
                         "StartTimeUTC": "2025-05-24T08:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951794&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950922&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:23:09",
+                        "Quarter": 4,
+                        "Time": "00:31:06",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -262,8 +262,13 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "2",
-                                "scoreB": "6"
+                                "scoreA": "18",
+                                "scoreB": "19"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "3",
+                                "scoreB": "0"
                             }
                         ],
                         "Season": null,
@@ -500,14 +505,14 @@
                         "Place": "Pabellón Nou Congost",
                         "TeamAID": 964328,
                         "TeamA": "C. B. ISLA BONITA",
-                        "ScoreA": 29,
+                        "ScoreA": 44,
                         "TeamACode": "38037000",
                         "TeamAClubCode": "380370",
                         "TeamBID": 970943,
                         "TeamB": "UNIVERSIDAD DEUSTO LOIOLA INDAUTXU ",
                         "TeamBCode": "48000520",
                         "TeamBClubCode": "480005",
-                        "ScoreB": 18,
+                        "ScoreB": 24,
                         "StartTime": "2025-05-24T10:15:00",
                         "StartTimeUTC": "2025-05-24T08:15:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -515,7 +520,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=964328&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=970943&ti=1",
                         "Quarter": 2,
-                        "Time": "00:12:39",
+                        "Time": "00:18:24",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -527,8 +532,8 @@
                             },
                             {
                                 "n": "2",
-                                "scoreA": "0",
-                                "scoreB": "7"
+                                "scoreA": "15",
+                                "scoreB": "13"
                             }
                         ],
                         "Season": null,
@@ -807,7 +812,7 @@
                         "TeamB": "JOVENTUT BADALONA A",
                         "TeamBCode": "08130503",
                         "TeamBClubCode": "081305",
-                        "ScoreB": 28,
+                        "ScoreB": 34,
                         "StartTime": "2025-05-24T10:00:00",
                         "StartTimeUTC": "2025-05-24T08:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -815,7 +820,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=964743&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952076&ti=1",
                         "Quarter": 3,
-                        "Time": "00:20:00",
+                        "Time": "00:22:21",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -833,7 +838,7 @@
                             {
                                 "n": "3",
                                 "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreB": "6"
                             }
                         ],
                         "Season": null,
@@ -895,22 +900,22 @@
                         "Place": "PAB. MANUEL PRADO",
                         "TeamAID": 962029,
                         "TeamA": "PABLO LASO ACADEMY 'A'",
-                        "ScoreA": 34,
+                        "ScoreA": 40,
                         "TeamACode": "28297301",
                         "TeamAClubCode": "282973",
                         "TeamBID": 952713,
                         "TeamB": "VALENCIA BASKET ",
                         "TeamBCode": "46000203",
                         "TeamBClubCode": "460002",
-                        "ScoreB": 38,
+                        "ScoreB": 42,
                         "StartTime": "2025-05-24T10:00:00",
                         "StartTimeUTC": "2025-05-24T08:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=962029&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952713&ti=1",
-                        "Quarter": 2,
-                        "Time": "00:19:24",
+                        "Quarter": 3,
+                        "Time": "00:21:23",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -922,8 +927,13 @@
                             },
                             {
                                 "n": "2",
-                                "scoreA": "22",
-                                "scoreB": "15"
+                                "scoreA": "24",
+                                "scoreB": "17"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "4",
+                                "scoreB": "2"
                             }
                         ],
                         "Season": null,
