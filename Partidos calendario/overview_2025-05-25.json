@@ -20,7 +20,7 @@
                         "Competition": "PRIMERA FEB",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "4",
+                        "Stage": "0",
                         "ID": 2470258,
                         "GameCode": null,
                         "Place": "PALACIO DE LOS DEPORTES DE CARTAGENA",
@@ -105,14 +105,14 @@
                         "Place": "PABELLÓN DE DEPORTES JAVIER IMBRODA ORTIZ",
                         "TeamAID": 950954,
                         "TeamA": "MELILLA CIUDAD DEL DEPORTE",
-                        "ScoreA": 0,
+                        "ScoreA": 11,
                         "TeamACode": "52004200",
                         "TeamAClubCode": "520042",
                         "TeamBID": 950733,
                         "TeamB": "CLASS BASQUET SANT ANTONI",
                         "TeamBCode": "07020127",
                         "TeamBClubCode": "070201",
-                        "ScoreB": 0,
+                        "ScoreB": 24,
                         "StartTime": "2025-05-25T12:00:00",
                         "StartTimeUTC": "2025-05-25T10:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -120,15 +120,15 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950954&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950733&ti=1",
                         "Quarter": 1,
-                        "Time": "00:00:00",
+                        "Time": "00:06:08",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
                             {
                                 "n": "1",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "11",
+                                "scoreB": "24"
                             }
                         ],
                         "Season": null,
@@ -219,7 +219,7 @@
                 "id": "211",
                 "name": "F.Ascenso Lf2",
                 "gamescount": 10,
-                "nowplaying": 0,
+                "nowplaying": 1,
                 "order": 10,
                 "GAMES": [
                     {
@@ -269,26 +269,32 @@
                         "Place": "Pabellón Nou Congost",
                         "TeamAID": 964328,
                         "TeamA": "C. B. ISLA BONITA",
-                        "ScoreA": 0,
+                        "ScoreA": 11,
                         "TeamACode": "38037000",
                         "TeamAClubCode": "380370",
                         "TeamBID": 953175,
                         "TeamB": "ALUDIUM LUCENTUM ALICANTE",
                         "TeamBCode": "03058615",
                         "TeamBClubCode": "030586",
-                        "ScoreB": 0,
+                        "ScoreB": 5,
                         "StartTime": "2025-05-25T12:00:00",
                         "StartTimeUTC": "2025-05-25T10:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=964328&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=953175&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:06:21",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "11",
+                                "scoreB": "5"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     }
