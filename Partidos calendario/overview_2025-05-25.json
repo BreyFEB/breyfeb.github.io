@@ -11,7 +11,7 @@
                 "id": "115",
                 "name": "Primera FEB",
                 "gamescount": 2,
-                "nowplaying": 1,
+                "nowplaying": 0,
                 "order": 1,
                 "GAMES": [
                     {
@@ -82,14 +82,14 @@
                         "Place": "PABELLÓN MUNICIPAL DE DEPORTES (PALENCIA)",
                         "TeamAID": 951848,
                         "TeamA": "SÚPER AGROPAL PALENCIA",
-                        "ScoreA": 90,
+                        "ScoreA": 92,
                         "TeamACode": "34000707",
                         "TeamAClubCode": "340007",
                         "TeamBID": 952033,
                         "TeamB": "MONBUS OBRADOIRO",
                         "TeamBCode": "15040900",
                         "TeamBClubCode": "150409",
-                        "ScoreB": 80,
+                        "ScoreB": 83,
                         "StartTime": "2025-05-25T20:00:00",
                         "StartTimeUTC": "2025-05-25T18:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -97,8 +97,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951848&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952033&ti=1",
                         "Quarter": 4,
-                        "Time": "00:38:29",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -119,8 +119,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "31",
-                                "scoreB": "21"
+                                "scoreA": "33",
+                                "scoreB": "24"
                             }
                         ],
                         "Season": null,
