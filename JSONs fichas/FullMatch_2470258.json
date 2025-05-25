@@ -4,7 +4,7 @@
         "competition": "PRIMERA FEB",
         "round": "1/4 Final           ",
         "quarter": 4,
-        "time": "00:00",
+        "time": "FINAL",
         "logo": null,
         "duration": null,
         "starttime": "25-05-2025 - 12:30",
@@ -238,11 +238,11 @@
                         "rd": "5",
                         "rt": "8",
                         "rf": "6",
-                        "to": "3",
+                        "to": "4",
                         "st": "2",
                         "ind": null,
                         "pllss": "-12",
-                        "val": "17",
+                        "val": "16",
                         "assist": "1",
                         "reb": "8",
                         "pf": "3",
@@ -1018,7 +1018,7 @@
                 "rt": "26",
                 "pf": "23",
                 "rf": "23",
-                "to": "12",
+                "to": "13",
                 "st": "11",
                 "fastb": null,
                 "ptsto": null,
@@ -1089,8 +1089,34 @@
         "hasExtension": false,
         "LINES": [
             {
-                "num": "514",
-                "text": "(ODILO FC CARTAGENA CB) D. VAN EICK: PÉRDIDA (Pérdidas: 3)",
+                "num": "516",
+                "text": "Fin del Cuarto 4",
+                "team": null,
+                "time": "00:00",
+                "deleted": null,
+                "scoreA": null,
+                "scoreB": null,
+                "quarter": "4",
+                "logo": null,
+                "idPlayer": null,
+                "idLicense": null,
+                "idTeam": null,
+                "action": "period",
+                "logParam1": "4",
+                "logParam2": "1",
+                "logParam3": "",
+                "logParam4": "",
+                "logParam5": "",
+                "logParam6": "",
+                "logParam7": "",
+                "logParam8": "",
+                "logParam9": "",
+                "logParam10": "",
+                "Position": ""
+            },
+            {
+                "num": "515",
+                "text": "(ODILO FC CARTAGENA CB) D. VAN EICK: PÉRDIDA (Pérdidas: 4)",
                 "team": "1",
                 "time": "00:11",
                 "deleted": null,
@@ -1115,7 +1141,7 @@
                 "Position": "19.217419624328613|48.964680610819066"
             },
             {
-                "num": "513",
+                "num": "514",
                 "text": "(ODILO FC CARTAGENA CB) D. VAN EICK: REBOTE (Rebotes: 8)",
                 "team": "1",
                 "time": "00:16",
@@ -1141,7 +1167,7 @@
                 "Position": ""
             },
             {
-                "num": "512",
+                "num": "513",
                 "text": "(REAL BETIS BALONCESTO) A. CVETKOVIC: TIRO DE 1 FALLADO",
                 "team": "2",
                 "time": "00:16",
@@ -1167,7 +1193,7 @@
                 "Position": ""
             },
             {
-                "num": "511",
+                "num": "512",
                 "text": "(REAL BETIS BALONCESTO) A. CVETKOVIC: TIRO DE 1 ANOTADO (Puntos: 10)",
                 "team": "2",
                 "time": "00:16",
@@ -1193,7 +1219,7 @@
                 "Position": ""
             },
             {
-                "num": "510",
+                "num": "511",
                 "text": "(ODILO FC CARTAGENA CB) J. BALASTEGUI MARTINEZ: FALTA Personal (Faltas: 2. Faltas de equipo: 23). Tiros libres: 2",
                 "team": "1",
                 "time": "00:16",
@@ -1219,7 +1245,7 @@
                 "Position": "32.19676971435547|46.60848942208798"
             },
             {
-                "num": "509",
+                "num": "510",
                 "text": "(REAL BETIS BALONCESTO) M. HUGHES: REBOTE (Rebotes: 3)",
                 "team": "2",
                 "time": "00:21",
@@ -1245,7 +1271,7 @@
                 "Position": ""
             },
             {
-                "num": "508",
+                "num": "509",
                 "text": "(ODILO FC CARTAGENA CB) C. HERMANSON: TIRO DE 3 FALLADO",
                 "team": "1",
                 "time": "00:21",
@@ -1271,7 +1297,7 @@
                 "Position": "24.42304452260335|10.76955592378657"
             },
             {
-                "num": "507",
+                "num": "508",
                 "text": "(ODILO FC CARTAGENA CB) Tiempo muerto",
                 "team": "1",
                 "time": "00:25",
@@ -1297,7 +1323,7 @@
                 "Position": ""
             },
             {
-                "num": "506",
+                "num": "507",
                 "text": "(REAL BETIS BALONCESTO) M. HUGHES: TIRO DE 2 ANOTADO (Puntos: 13)",
                 "team": "2",
                 "time": "00:25",
@@ -1323,7 +1349,7 @@
                 "Position": "75.02168655395508|48.840665614351316"
             },
             {
-                "num": "505",
+                "num": "506",
                 "text": "(REAL BETIS BALONCESTO) Tiempo muerto",
                 "team": "2",
                 "time": "00:37",
@@ -1349,7 +1375,7 @@
                 "Position": ""
             },
             {
-                "num": "504",
+                "num": "505",
                 "text": "(REAL BETIS BALONCESTO) D. RADONCIC: REBOTE (Rebotes: 7)",
                 "team": "2",
                 "time": "00:41",
@@ -1375,7 +1401,7 @@
                 "Position": ""
             },
             {
-                "num": "503",
+                "num": "504",
                 "text": "(ODILO FC CARTAGENA CB) C. HERMANSON: TIRO DE 1 FALLADO",
                 "team": "1",
                 "time": "00:41",
@@ -1401,7 +1427,7 @@
                 "Position": ""
             },
             {
-                "num": "502",
+                "num": "503",
                 "text": "(ODILO FC CARTAGENA CB) C. HERMANSON: TIRO DE 1 FALLADO",
                 "team": "1",
                 "time": "00:41",
@@ -1427,7 +1453,7 @@
                 "Position": ""
             },
             {
-                "num": "501",
+                "num": "502",
                 "text": "(REAL BETIS BALONCESTO) B. OLUMUYIWA: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "00:41",
@@ -1453,7 +1479,7 @@
                 "Position": ""
             },
             {
-                "num": "500",
+                "num": "501",
                 "text": "(REAL BETIS BALONCESTO) J. KASIBABU SHILALA: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "00:41",
@@ -1479,7 +1505,7 @@
                 "Position": ""
             },
             {
-                "num": "499",
+                "num": "500",
                 "text": "(REAL BETIS BALONCESTO) B. OLUMUYIWA: FALTA Personal (Faltas: 5. Faltas de equipo: 23). Tiros libres: 2",
                 "team": "2",
                 "time": "00:41",
@@ -1505,7 +1531,7 @@
                 "Position": "19.217419624328613|49.21269924082655"
             },
             {
-                "num": "498",
+                "num": "499",
                 "text": "(ODILO FC CARTAGENA CB) A. JORDA RODRIGUEZ: ROBO (Robos: 1)",
                 "team": "1",
                 "time": "00:57",
@@ -1531,7 +1557,7 @@
                 "Position": ""
             },
             {
-                "num": "497",
+                "num": "498",
                 "text": "(REAL BETIS BALONCESTO) A. CVETKOVIC: PÉRDIDA (Pérdidas: 4)",
                 "team": "2",
                 "time": "00:57",
@@ -1557,7 +1583,7 @@
                 "Position": "72.52298990885417|41.27604910667907"
             },
             {
-                "num": "496",
+                "num": "497",
                 "text": "(REAL BETIS BALONCESTO) D. RADONCIC: REBOTE (Rebotes: 6)",
                 "team": "2",
                 "time": "01:18",
@@ -1583,7 +1609,7 @@
                 "Position": ""
             },
             {
-                "num": "495",
+                "num": "496",
                 "text": "(ODILO FC CARTAGENA CB) C. HERMANSON: TIRO DE 3 FALLADO",
                 "team": "1",
                 "time": "01:18",
@@ -1609,7 +1635,7 @@
                 "Position": "32.89085388183594|24.286665003350443"
             },
             {
-                "num": "494",
+                "num": "495",
                 "text": "(REAL BETIS BALONCESTO) M. HUGHES: TIRO DE 1 ANOTADO (Puntos: 11)",
                 "team": "2",
                 "time": "01:29",
@@ -1635,7 +1661,7 @@
                 "Position": ""
             },
             {
-                "num": "493",
+                "num": "494",
                 "text": "(REAL BETIS BALONCESTO) M. HUGHES: TIRO DE 1 FALLADO",
                 "team": "2",
                 "time": "01:29",
@@ -1661,7 +1687,7 @@
                 "Position": ""
             },
             {
-                "num": "492",
+                "num": "493",
                 "text": "(ODILO FC CARTAGENA CB) D. VAN EICK: FALTA Personal (Faltas: 3. Faltas de equipo: 22). Tiros libres: 2",
                 "team": "1",
                 "time": "01:29",
@@ -1687,7 +1713,7 @@
                 "Position": "77.45097478230794|46.73249589635971"
             },
             {
-                "num": "491",
+                "num": "492",
                 "text": "(REAL BETIS BALONCESTO) M. HUGHES: ROBO (Robos: 3)",
                 "team": "2",
                 "time": "01:36",
@@ -1713,7 +1739,7 @@
                 "Position": ""
             },
             {
-                "num": "490",
+                "num": "491",
                 "text": "(ODILO FC CARTAGENA CB) S. UGOCHUKWU: PÉRDIDA (Pérdidas: 3)",
                 "team": "1",
                 "time": "01:36",
@@ -1739,7 +1765,7 @@
                 "Position": "32.12736447652181|48.71666198081159"
             },
             {
-                "num": "489",
+                "num": "490",
                 "text": "(REAL BETIS BALONCESTO) B. OLUMUYIWA: TIRO DE 1 ANOTADO (Puntos: 6)",
                 "team": "2",
                 "time": "01:45",
@@ -1765,7 +1791,7 @@
                 "Position": ""
             },
             {
-                "num": "488",
+                "num": "489",
                 "text": "(REAL BETIS BALONCESTO) B. OLUMUYIWA: TIRO DE 1 ANOTADO (Puntos: 5)",
                 "team": "2",
                 "time": "01:45",
@@ -1791,7 +1817,7 @@
                 "Position": ""
             },
             {
-                "num": "487",
+                "num": "488",
                 "text": "(ODILO FC CARTAGENA CB) C. HERMANSON: FALTA Personal (Faltas: 2. Faltas de equipo: 21). Tiros libres: 2",
                 "team": "1",
                 "time": "01:45",
@@ -1817,7 +1843,7 @@
                 "Position": "86.33523941040039|48.09660972432888"
             },
             {
-                "num": "486",
+                "num": "487",
                 "text": "(ODILO FC CARTAGENA CB) S. UGOCHUKWU: ASISTENCIA (Asistencias: 2)",
                 "team": "1",
                 "time": "02:00",
@@ -1843,7 +1869,7 @@
                 "Position": ""
             },
             {
-                "num": "485",
+                "num": "486",
                 "text": "(ODILO FC CARTAGENA CB) D. VAN EICK: TIRO DE 3 ANOTADO (Puntos: 10)",
                 "team": "1",
                 "time": "02:00",
@@ -1869,7 +1895,7 @@
                 "Position": "30.32274881998698|77.98304781000665"
             },
             {
-                "num": "484",
+                "num": "485",
                 "text": "(ODILO FC CARTAGENA CB) A. JORDA RODRIGUEZ: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "02:08",
@@ -1895,7 +1921,7 @@
                 "Position": ""
             },
             {
-                "num": "483",
+                "num": "484",
                 "text": "(ODILO FC CARTAGENA CB) A. GARUBA ALARI: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "02:08",
@@ -1921,7 +1947,7 @@
                 "Position": ""
             },
             {
-                "num": "482",
+                "num": "483",
                 "text": "(ODILO FC CARTAGENA CB) S. UGOCHUKWU: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "02:08",
@@ -1947,7 +1973,7 @@
                 "Position": ""
             },
             {
-                "num": "481",
+                "num": "482",
                 "text": "(ODILO FC CARTAGENA CB) A. DOMENECH FONTANA: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "02:08",
@@ -1973,7 +1999,7 @@
                 "Position": ""
             },
             {
-                "num": "480",
+                "num": "481",
                 "text": "(REAL BETIS BALONCESTO) M. HUGHES: ASISTENCIA (Asistencias: 4)",
                 "team": "2",
                 "time": "02:09",
@@ -1999,7 +2025,7 @@
                 "Position": ""
             },
             {
-                "num": "479",
+                "num": "480",
                 "text": "(REAL BETIS BALONCESTO) B. OLUMUYIWA: TIRO DE 2 ANOTADO (Puntos: 4)",
                 "team": "2",
                 "time": "02:09",
@@ -2025,7 +2051,7 @@
                 "Position": "93.13725153605144|51.94092121530087"
             },
             {
-                "num": "478",
+                "num": "479",
                 "text": "(REAL BETIS BALONCESTO) D. RADONCIC: REBOTE (Rebotes: 5)",
                 "team": "2",
                 "time": "02:25",
@@ -2051,7 +2077,7 @@
                 "Position": ""
             },
             {
-                "num": "477",
+                "num": "478",
                 "text": "(ODILO FC CARTAGENA CB) D. VAN EICK: TIRO DE 1 FALLADO",
                 "team": "1",
                 "time": "02:25",
@@ -2077,7 +2103,7 @@
                 "Position": ""
             },
             {
-                "num": "476",
+                "num": "477",
                 "text": "(ODILO FC CARTAGENA CB) D. VAN EICK: TIRO DE 1 FALLADO",
                 "team": "1",
                 "time": "02:25",
@@ -2103,7 +2129,7 @@
                 "Position": ""
             },
             {
-                "num": "475",
+                "num": "476",
                 "text": "(REAL BETIS BALONCESTO) G. RENFROE: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "02:25",
@@ -2129,7 +2155,7 @@
                 "Position": ""
             },
             {
-                "num": "474",
+                "num": "475",
                 "text": "(REAL BETIS BALONCESTO) D. JELINEK: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "02:25",
@@ -2155,7 +2181,7 @@
                 "Position": ""
             },
             {
-                "num": "473",
+                "num": "474",
                 "text": "(REAL BETIS BALONCESTO) V. ALVES BENITE : Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "02:25",
@@ -2181,7 +2207,7 @@
                 "Position": ""
             },
             {
-                "num": "472",
+                "num": "473",
                 "text": "(REAL BETIS BALONCESTO) D. RADONCIC: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "02:25",
@@ -2207,7 +2233,7 @@
                 "Position": ""
             },
             {
-                "num": "471",
+                "num": "472",
                 "text": "(REAL BETIS BALONCESTO) A. CVETKOVIC: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "02:25",
@@ -2233,7 +2259,7 @@
                 "Position": ""
             },
             {
-                "num": "470",
+                "num": "471",
                 "text": "(REAL BETIS BALONCESTO) A. SUÁREZ CASTRO: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "02:25",
@@ -2259,7 +2285,7 @@
                 "Position": ""
             },
             {
-                "num": "469",
+                "num": "470",
                 "text": "(REAL BETIS BALONCESTO) G. RENFROE: FALTA Personal (Faltas: 3. Faltas de equipo: 22). Tiros libres: 2",
                 "team": "2",
                 "time": "02:25",
@@ -2285,7 +2311,7 @@
                 "Position": "22.132568359375|44.50031686336436"
             },
             {
-                "num": "468",
+                "num": "469",
                 "text": "(ODILO FC CARTAGENA CB) D. VAN EICK: ROBO (Robos: 2)",
                 "team": "1",
                 "time": "02:34",
@@ -2311,7 +2337,7 @@
                 "Position": ""
             },
             {
-                "num": "467",
+                "num": "468",
                 "text": "(REAL BETIS BALONCESTO) D. JELINEK: PÉRDIDA (Pérdidas: 1)",
                 "team": "2",
                 "time": "02:34",
@@ -2337,7 +2363,7 @@
                 "Position": "75.02168655395508|41.896101363161776"
             },
             {
-                "num": "466",
+                "num": "467",
                 "text": "(ODILO FC CARTAGENA CB) A. DOMENECH FONTANA: TIRO DE 2 ANOTADO (Puntos: 6)",
                 "team": "1",
                 "time": "03:01",
@@ -2363,7 +2389,7 @@
                 "Position": "30.461565653483074|75.9988930884828"
             },
             {
-                "num": "465",
+                "num": "466",
                 "text": "(ODILO FC CARTAGENA CB) A. DOMENECH FONTANA: REBOTE (Rebotes: 2)",
                 "team": "1",
                 "time": "03:01",
@@ -2389,7 +2415,7 @@
                 "Position": ""
             },
             {
-                "num": "464",
+                "num": "465",
                 "text": "(ODILO FC CARTAGENA CB) J. BALASTEGUI MARTINEZ: TIRO DE 3 FALLADO",
                 "team": "1",
                 "time": "03:01",
@@ -2415,7 +2441,7 @@
                 "Position": "30.461565653483074|75.9988930884828"
             },
             {
-                "num": "463",
+                "num": "464",
                 "text": "(ODILO FC CARTAGENA CB) J. BALASTEGUI MARTINEZ: ROBO (Robos: 1)",
                 "team": "1",
                 "time": "03:07",
@@ -2441,7 +2467,7 @@
                 "Position": ""
             },
             {
-                "num": "462",
+                "num": "463",
                 "text": "(REAL BETIS BALONCESTO) G. RENFROE: PÉRDIDA (Pérdidas: 5)",
                 "team": "2",
                 "time": "03:07",
@@ -2467,7 +2493,7 @@
                 "Position": "66.76210403442383|26.270825406338307"
             },
             {
-                "num": "461",
+                "num": "462",
                 "text": "(ODILO FC CARTAGENA CB) C. HERMANSON: FALTA Personal (Faltas: 1. Faltas de equipo: 20). Tiros libres: 0",
                 "team": "1",
                 "time": "03:14",
@@ -2493,7 +2519,7 @@
                 "Position": "63.291683197021484|46.60848942208798"
             },
             {
-                "num": "460",
+                "num": "461",
                 "text": "(REAL BETIS BALONCESTO) Tiempo muerto",
                 "team": "2",
                 "time": "03:29",
@@ -2519,7 +2545,7 @@
                 "Position": ""
             },
             {
-                "num": "459",
+                "num": "460",
                 "text": "(ODILO FC CARTAGENA CB) A. DOMENECH FONTANA: ASISTENCIA (Asistencias: 1)",
                 "team": "1",
                 "time": "03:31",
@@ -2545,7 +2571,7 @@
                 "Position": ""
             },
             {
-                "num": "458",
+                "num": "459",
                 "text": "(ODILO FC CARTAGENA CB) J. BALASTEGUI MARTINEZ: TIRO DE 2 ANOTADO (Puntos: 5)",
                 "team": "1",
                 "time": "03:31",
@@ -2571,7 +2597,7 @@
                 "Position": "6.376887559890747|49.58472718583777"
             },
             {
-                "num": "457",
+                "num": "458",
                 "text": "(REAL BETIS BALONCESTO) M. HUGHES: PÉRDIDA (Pérdidas: 3)",
                 "team": "2",
                 "time": "03:41",
@@ -2597,7 +2623,7 @@
                 "Position": "90.56914647420247|65.83005539914396"
             },
             {
-                "num": "456",
+                "num": "457",
                 "text": "(ODILO FC CARTAGENA CB) D. VAN EICK: TIRO DE 2 ANOTADO (Puntos: 7)",
                 "team": "1",
                 "time": "03:56",
@@ -2623,7 +2649,7 @@
                 "Position": "11.721324920654297|51.81691190029713"
             },
             {
-                "num": "455",
+                "num": "456",
                 "text": "(REAL BETIS BALONCESTO) M. HUGHES: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "04:09",
@@ -2649,7 +2675,7 @@
                 "Position": ""
             },
             {
-                "num": "454",
+                "num": "455",
                 "text": "(REAL BETIS BALONCESTO) D. JELINEK: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "04:09",
@@ -2675,7 +2701,7 @@
                 "Position": ""
             },
             {
-                "num": "453",
+                "num": "454",
                 "text": "(REAL BETIS BALONCESTO) V. ALVES BENITE : Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "04:09",
@@ -2701,7 +2727,7 @@
                 "Position": ""
             },
             {
-                "num": "452",
+                "num": "453",
                 "text": "(REAL BETIS BALONCESTO) R. LOPEZ DE LA TORRE SANCHEZ: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "04:09",
@@ -2727,7 +2753,7 @@
                 "Position": ""
             },
             {
-                "num": "451",
+                "num": "452",
                 "text": "(REAL BETIS BALONCESTO) B. OLUMUYIWA: FALTA Personal (Faltas: 4. Faltas de equipo: 21). Tiros libres: 0",
                 "team": "2",
                 "time": "04:09",
@@ -2753,7 +2779,7 @@
                 "Position": "15.191739400227865|48.59265266580785"
             },
             {
-                "num": "450",
+                "num": "451",
                 "text": "(ODILO FC CARTAGENA CB) D. VAN EICK: REBOTE (Rebotes: 7)",
                 "team": "1",
                 "time": "04:14",
@@ -2779,7 +2805,7 @@
                 "Position": ""
             },
             {
-                "num": "449",
+                "num": "450",
                 "text": "(ODILO FC CARTAGENA CB) C. HERMANSON: TIRO DE 3 FALLADO",
                 "team": "1",
                 "time": "04:14",
@@ -2805,7 +2831,7 @@
                 "Position": "7.070969740549724|5.561132380302917"
             },
             {
-                "num": "448",
+                "num": "449",
                 "text": "(ODILO FC CARTAGENA CB) A. GARUBA ALARI: REBOTE (Rebotes: 5)",
                 "team": "1",
                 "time": "04:21",
@@ -2831,7 +2857,7 @@
                 "Position": ""
             },
             {
-                "num": "447",
+                "num": "448",
                 "text": "(REAL BETIS BALONCESTO) V. ALVES BENITE : TIRO DE 2 FALLADO",
                 "team": "2",
                 "time": "04:21",
@@ -2857,7 +2883,7 @@
                 "Position": "83.35068384806316|46.60848942208798"
             },
             {
-                "num": "446",
+                "num": "447",
                 "text": "(REAL BETIS BALONCESTO) A. SUÁREZ CASTRO: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "04:43",
@@ -2883,7 +2909,7 @@
                 "Position": ""
             },
             {
-                "num": "445",
+                "num": "446",
                 "text": "(REAL BETIS BALONCESTO) D. RADONCIC: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "04:43",
@@ -2909,7 +2935,7 @@
                 "Position": ""
             },
             {
-                "num": "444",
+                "num": "445",
                 "text": "(REAL BETIS BALONCESTO) G. RENFROE: REBOTE (Rebotes: 4)",
                 "team": "2",
                 "time": "04:51",
@@ -2935,7 +2961,7 @@
                 "Position": ""
             },
             {
-                "num": "443",
+                "num": "444",
                 "text": "(ODILO FC CARTAGENA CB) C. HERMANSON: TIRO DE 3 FALLADO",
                 "team": "1",
                 "time": "04:51",
@@ -2961,7 +2987,7 @@
                 "Position": "30.253337224324543|17.71412727680612"
             },
             {
-                "num": "442",
+                "num": "443",
                 "text": "(ODILO FC CARTAGENA CB) C. HERMANSON: ROBO (Robos: 1)",
                 "team": "1",
                 "time": "04:57",
@@ -2987,7 +3013,7 @@
                 "Position": ""
             },
             {
-                "num": "441",
+                "num": "442",
                 "text": "(REAL BETIS BALONCESTO) V. ALVES BENITE : PÉRDIDA (Pérdidas: 2)",
                 "team": "2",
                 "time": "04:57",
@@ -3013,7 +3039,7 @@
                 "Position": "70.71837743123372|19.078235423311277"
             },
             {
-                "num": "440",
+                "num": "441",
                 "text": "(REAL BETIS BALONCESTO) V. ALVES BENITE : ROBO (Robos: 1)",
                 "team": "2",
                 "time": "05:06",
@@ -3039,7 +3065,7 @@
                 "Position": ""
             },
             {
-                "num": "439",
+                "num": "440",
                 "text": "(ODILO FC CARTAGENA CB) A. GARUBA ALARI: PÉRDIDA (Pérdidas: 1)",
                 "team": "1",
                 "time": "05:06",
@@ -3065,7 +3091,7 @@
                 "Position": "13.525942166646322|56.281281329215844"
             },
             {
-                "num": "438",
+                "num": "439",
                 "text": "(ODILO FC CARTAGENA CB) A. GARUBA ALARI: REBOTE (Rebotes: 4)",
                 "team": "1",
                 "time": "05:13",
@@ -3091,7 +3117,7 @@
                 "Position": ""
             },
             {
-                "num": "437",
+                "num": "438",
                 "text": "(REAL BETIS BALONCESTO) R. LOPEZ DE LA TORRE SANCHEZ: TIRO DE 2 FALLADO",
                 "team": "2",
                 "time": "05:13",
@@ -3117,7 +3143,7 @@
                 "Position": "91.47145589192708|27.38691492283598"
             },
             {
-                "num": "436",
+                "num": "437",
                 "text": "(ODILO FC CARTAGENA CB) D. VAN EICK: TIRO DE 1 ANOTADO (Puntos: 5)",
                 "team": "1",
                 "time": "05:31",
@@ -3143,7 +3169,7 @@
                 "Position": ""
             },
             {
-                "num": "435",
+                "num": "436",
                 "text": "(ODILO FC CARTAGENA CB) D. VAN EICK: TIRO DE 1 FALLADO",
                 "team": "1",
                 "time": "05:31",
@@ -3169,7 +3195,7 @@
                 "Position": ""
             },
             {
-                "num": "434",
+                "num": "435",
                 "text": "(REAL BETIS BALONCESTO) R. LOPEZ DE LA TORRE SANCHEZ: FALTA Personal (Faltas: 3. Faltas de equipo: 20). Tiros libres: 2",
                 "team": "2",
                 "time": "05:31",
@@ -3195,7 +3221,7 @@
                 "Position": "16.37168089548747|45.368384909122554"
             },
             {
-                "num": "433",
+                "num": "434",
                 "text": "(ODILO FC CARTAGENA CB) D. VAN EICK: REBOTE (Rebotes: 6)",
                 "team": "1",
                 "time": "05:37",
@@ -3221,7 +3247,7 @@
                 "Position": ""
             },
             {
-                "num": "432",
+                "num": "433",
                 "text": "(ODILO FC CARTAGENA CB) A. DOMENECH FONTANA: TIRO DE 2 FALLADO",
                 "team": "1",
                 "time": "05:37",
@@ -3247,7 +3273,7 @@
                 "Position": "10.749609470367432|46.112443639877"
             },
             {
-                "num": "431",
+                "num": "432",
                 "text": "(ODILO FC CARTAGENA CB) Tiempo muerto",
                 "team": "1",
                 "time": "05:52",
@@ -3273,7 +3299,7 @@
                 "Position": ""
             },
             {
-                "num": "430",
+                "num": "431",
                 "text": "(REAL BETIS BALONCESTO) V. ALVES BENITE : TIRO DE 2 ANOTADO (Puntos: 10)",
                 "team": "2",
                 "time": "05:52",
@@ -3299,7 +3325,7 @@
                 "Position": "75.6463623046875|51.69289690382937"
             },
             {
-                "num": "429",
+                "num": "430",
                 "text": "(ODILO FC CARTAGENA CB) C. HERMANSON: PÉRDIDA (Pérdidas: 1)",
                 "team": "1",
                 "time": "06:02",
@@ -3325,7 +3351,7 @@
                 "Position": "33.79316012064616|55.16519181271817"
             },
             {
-                "num": "428",
+                "num": "429",
                 "text": "(ODILO FC CARTAGENA CB) J. BALASTEGUI MARTINEZ: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "06:17",
@@ -3351,7 +3377,7 @@
                 "Position": ""
             },
             {
-                "num": "427",
+                "num": "428",
                 "text": "(ODILO FC CARTAGENA CB) A. GARUBA ALARI: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "06:17",
@@ -3377,7 +3403,7 @@
                 "Position": ""
             },
             {
-                "num": "426",
+                "num": "427",
                 "text": "(ODILO FC CARTAGENA CB) J. ROGERS GARCIA: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "06:17",
@@ -3403,7 +3429,7 @@
                 "Position": ""
             },
             {
-                "num": "425",
+                "num": "426",
                 "text": "(ODILO FC CARTAGENA CB) C. HERMANSON: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "06:17",
@@ -3429,7 +3455,7 @@
                 "Position": ""
             },
             {
-                "num": "424",
+                "num": "425",
                 "text": "(ODILO FC CARTAGENA CB) A. MARTIN MARIN: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "06:17",
@@ -3455,7 +3481,7 @@
                 "Position": ""
             },
             {
-                "num": "423",
+                "num": "424",
                 "text": "(ODILO FC CARTAGENA CB) A. JORDA RODRIGUEZ: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "06:17",
@@ -3481,7 +3507,7 @@
                 "Position": ""
             },
             {
-                "num": "422",
+                "num": "423",
                 "text": "(REAL BETIS BALONCESTO) V. ALVES BENITE : PÉRDIDA (Pérdidas: 1)",
                 "team": "2",
                 "time": "06:17",
@@ -3507,7 +3533,7 @@
                 "Position": "64.88807678222656|18.954227528673538"
             },
             {
-                "num": "421",
+                "num": "422",
                 "text": "(REAL BETIS BALONCESTO) D. RADONCIC: REBOTE (Rebotes: 4)",
                 "team": "2",
                 "time": "06:35",
@@ -3533,7 +3559,7 @@
                 "Position": ""
             },
             {
-                "num": "420",
+                "num": "421",
                 "text": "(ODILO FC CARTAGENA CB) A. JORDA RODRIGUEZ: TIRO DE 3 FALLADO",
                 "team": "1",
                 "time": "06:35",
@@ -3559,7 +3585,7 @@
                 "Position": "29.489847819010418|74.51076426404589"
             },
             {
-                "num": "419",
+                "num": "420",
                 "text": "(REAL BETIS BALONCESTO) R. LOPEZ DE LA TORRE SANCHEZ: TIRO DE 2 ANOTADO (Puntos: 22)",
                 "team": "2",
                 "time": "06:57",
@@ -3585,7 +3611,7 @@
                 "Position": "89.31979497273763|47.60056962358191"
             },
             {
-                "num": "418",
+                "num": "419",
                 "text": "(ODILO FC CARTAGENA CB) A. MARTIN MARIN: TIRO DE 2 ANOTADO (Puntos: 6)",
                 "team": "1",
                 "time": "07:20",
@@ -3611,7 +3637,7 @@
                 "Position": "15.74700673421224|41.77209204815804"
             },
             {
-                "num": "417",
+                "num": "418",
                 "text": "(ODILO FC CARTAGENA CB) D. VAN EICK: ROBO (Robos: 1)",
                 "team": "1",
                 "time": "07:25",
@@ -3637,7 +3663,7 @@
                 "Position": ""
             },
             {
-                "num": "416",
+                "num": "417",
                 "text": "(REAL BETIS BALONCESTO) G. RENFROE: PÉRDIDA (Pérdidas: 4)",
                 "team": "2",
                 "time": "07:25",
@@ -3663,7 +3689,7 @@
                 "Position": "77.38156636555989|45.616406379862035"
             },
             {
-                "num": "415",
+                "num": "416",
                 "text": "(REAL BETIS BALONCESTO) R. LOPEZ DE LA TORRE SANCHEZ: ROBO (Robos: 1)",
                 "team": "2",
                 "time": "07:30",
@@ -3689,8 +3715,8 @@
                 "Position": ""
             },
             {
-                "num": "414",
-                "text": "(ODILO FC CARTAGENA CB) D. VAN EICK: PÉRDIDA (Pérdidas: 2)",
+                "num": "415",
+                "text": "(ODILO FC CARTAGENA CB) D. VAN EICK: PÉRDIDA (Pérdidas: 3)",
                 "team": "1",
                 "time": "07:30",
                 "deleted": null,
@@ -3715,7 +3741,7 @@
                 "Position": "75.02168655395508|51.69289690382937"
             },
             {
-                "num": "413",
+                "num": "414",
                 "text": "(ODILO FC CARTAGENA CB) D. VAN EICK: REBOTE (Rebotes: 5)",
                 "team": "1",
                 "time": "07:30",
@@ -3741,7 +3767,7 @@
                 "Position": ""
             },
             {
-                "num": "412",
+                "num": "413",
                 "text": "(REAL BETIS BALONCESTO) D. RADONCIC: TIRO DE 1 FALLADO",
                 "team": "2",
                 "time": "07:30",
@@ -3767,7 +3793,7 @@
                 "Position": ""
             },
             {
-                "num": "411",
+                "num": "412",
                 "text": "(REAL BETIS BALONCESTO) D. RADONCIC: TIRO DE 1 ANOTADO (Puntos: 7)",
                 "team": "2",
                 "time": "07:30",
@@ -3793,7 +3819,7 @@
                 "Position": ""
             },
             {
-                "num": "410",
+                "num": "411",
                 "text": "(REAL BETIS BALONCESTO) R. LOPEZ DE LA TORRE SANCHEZ: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "07:30",
@@ -3819,7 +3845,7 @@
                 "Position": ""
             },
             {
-                "num": "409",
+                "num": "410",
                 "text": "(REAL BETIS BALONCESTO) D. JELINEK: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "07:30",
@@ -3845,7 +3871,7 @@
                 "Position": ""
             },
             {
-                "num": "408",
+                "num": "409",
                 "text": "(REAL BETIS BALONCESTO) D. JELINEK: TIRO DE 1 ANOTADO (Puntos: 7)",
                 "team": "2",
                 "time": "07:30",
@@ -3871,7 +3897,7 @@
                 "Position": ""
             },
             {
-                "num": "407",
+                "num": "408",
                 "text": "(ODILO FC CARTAGENA CB) Entrenador: FALTA Técnica. Tiros libres: 1",
                 "team": "1",
                 "time": "07:30",
@@ -3897,7 +3923,7 @@
                 "Position": "62.3199717203776|56.281281329215844"
             },
             {
-                "num": "406",
+                "num": "407",
                 "text": "(ODILO FC CARTAGENA CB) D. VAN EICK: FALTA Personal (Faltas: 2. Faltas de equipo: 19). Tiros libres: 2",
                 "team": "1",
                 "time": "07:30",
@@ -3923,7 +3949,7 @@
                 "Position": "79.04736836751302|47.84858541285738"
             },
             {
-                "num": "405",
+                "num": "406",
                 "text": "(ODILO FC CARTAGENA CB) A. DOMENECH FONTANA: MATE ANOTADO (Puntos: 4)",
                 "team": "1",
                 "time": "07:52",
@@ -3949,7 +3975,7 @@
                 "Position": "9.777893225351969|53.55305367327751"
             },
             {
-                "num": "404",
+                "num": "405",
                 "text": "(REAL BETIS BALONCESTO) M. HUGHES: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "07:59",
@@ -3975,7 +4001,7 @@
                 "Position": ""
             },
             {
-                "num": "403",
+                "num": "404",
                 "text": "(REAL BETIS BALONCESTO) V. ALVES BENITE : Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "07:59",
@@ -4001,7 +4027,7 @@
                 "Position": ""
             },
             {
-                "num": "402",
+                "num": "403",
                 "text": "(ODILO FC CARTAGENA CB) A. MARTIN MARIN: ROBO (Robos: 2)",
                 "team": "1",
                 "time": "08:06",
@@ -4027,7 +4053,7 @@
                 "Position": ""
             },
             {
-                "num": "401",
+                "num": "402",
                 "text": "(REAL BETIS BALONCESTO) G. RENFROE: PÉRDIDA (Pérdidas: 3)",
                 "team": "2",
                 "time": "08:06",
@@ -4053,7 +4079,7 @@
                 "Position": "64.54103469848633|40.40798106092088"
             },
             {
-                "num": "400",
+                "num": "401",
                 "text": "(REAL BETIS BALONCESTO) A. CVETKOVIC: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "08:13",
@@ -4079,7 +4105,7 @@
                 "Position": ""
             },
             {
-                "num": "399",
+                "num": "400",
                 "text": "(REAL BETIS BALONCESTO) G. RENFROE: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "08:13",
@@ -4105,7 +4131,7 @@
                 "Position": ""
             },
             {
-                "num": "398",
+                "num": "399",
                 "text": "(ODILO FC CARTAGENA CB) A. MARTIN MARIN: ASISTENCIA (Asistencias: 2)",
                 "team": "1",
                 "time": "08:32",
@@ -4131,7 +4157,7 @@
                 "Position": ""
             },
             {
-                "num": "397",
+                "num": "398",
                 "text": "(ODILO FC CARTAGENA CB) D. VAN EICK: TIRO DE 2 ANOTADO (Puntos: 4)",
                 "team": "1",
                 "time": "08:32",
@@ -4157,7 +4183,7 @@
                 "Position": "8.112093607584635|47.104526682102936"
             },
             {
-                "num": "396",
+                "num": "397",
                 "text": "(ODILO FC CARTAGENA CB) A. MARTIN MARIN: ROBO (Robos: 1)",
                 "team": "1",
                 "time": "08:37",
@@ -4183,7 +4209,7 @@
                 "Position": ""
             },
             {
-                "num": "395",
+                "num": "396",
                 "text": "(REAL BETIS BALONCESTO) M. HUGHES: PÉRDIDA (Pérdidas: 2)",
                 "team": "2",
                 "time": "08:37",
@@ -4209,7 +4235,7 @@
                 "Position": "65.16571044921875|36.68767604422062"
             },
             {
-                "num": "394",
+                "num": "395",
                 "text": "(ODILO FC CARTAGENA CB) A. DOMENECH FONTANA: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "08:55",
@@ -4235,7 +4261,7 @@
                 "Position": ""
             },
             {
-                "num": "393",
+                "num": "394",
                 "text": "(ODILO FC CARTAGENA CB) S. UGOCHUKWU: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "08:55",
@@ -4261,7 +4287,7 @@
                 "Position": ""
             },
             {
-                "num": "392",
+                "num": "393",
                 "text": "(ODILO FC CARTAGENA CB) S. UGOCHUKWU: PÉRDIDA (Pérdidas: 2)",
                 "team": "1",
                 "time": "08:55",
@@ -4287,7 +4313,7 @@
                 "Position": ""
             },
             {
-                "num": "391",
+                "num": "392",
                 "text": "(ODILO FC CARTAGENA CB) S. UGOCHUKWU: FALTA Ofensiva (Faltas: 4. Faltas de equipo: 18). Tiros libres: 0",
                 "team": "1",
                 "time": "08:55",
@@ -4313,7 +4339,7 @@
                 "Position": "31.086238225301106|30.98320778380049"
             },
             {
-                "num": "390",
+                "num": "391",
                 "text": "(REAL BETIS BALONCESTO) A. CVETKOVIC: PÉRDIDA (Pérdidas: 3)",
                 "team": "2",
                 "time": "09:09",
@@ -4339,7 +4365,7 @@
                 "Position": "63.22227478027344|51.94092121530087"
             },
             {
-                "num": "389",
+                "num": "390",
                 "text": "(ODILO FC CARTAGENA CB) A. JORDA RODRIGUEZ: FALTA Personal (Faltas: 3. Faltas de equipo: 17). Tiros libres: 0",
                 "team": "1",
                 "time": "09:21",
@@ -4365,7 +4391,7 @@
                 "Position": "86.75168991088867|51.19685964381441"
             },
             {
-                "num": "388",
+                "num": "389",
                 "text": "(ODILO FC CARTAGENA CB) S. UGOCHUKWU: TIRO DE 2 ANOTADO (Puntos: 15)",
                 "team": "1",
                 "time": "09:35",
@@ -4391,7 +4417,7 @@
                 "Position": "5.960437059402466|50.576807387331705"
             },
             {
-                "num": "387",
+                "num": "388",
                 "text": "(REAL BETIS BALONCESTO) J. KASIBABU SHILALA: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "09:46",
@@ -4417,7 +4443,7 @@
                 "Position": ""
             },
             {
-                "num": "386",
+                "num": "387",
                 "text": "(REAL BETIS BALONCESTO) B. OLUMUYIWA: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "09:46",
@@ -4443,7 +4469,7 @@
                 "Position": ""
             },
             {
-                "num": "385",
+                "num": "386",
                 "text": "(REAL BETIS BALONCESTO) J. KASIBABU SHILALA: PÉRDIDA (Pérdidas: 2)",
                 "team": "2",
                 "time": "09:46",
@@ -4469,7 +4495,7 @@
                 "Position": ""
             },
             {
-                "num": "384",
+                "num": "385",
                 "text": "(REAL BETIS BALONCESTO) J. KASIBABU SHILALA: FALTA Ofensiva (Faltas: 4. Faltas de equipo: 19). Tiros libres: 0",
                 "team": "2",
                 "time": "09:46",
@@ -4495,7 +4521,7 @@
                 "Position": "74.25819396972656|49.46071787083403"
             },
             {
-                "num": "383",
+                "num": "384",
                 "text": "(ODILO FC CARTAGENA CB) A. GONZÁLEZ PÉREZ: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "10:00",
@@ -4521,7 +4547,7 @@
                 "Position": ""
             },
             {
-                "num": "382",
+                "num": "383",
                 "text": "(ODILO FC CARTAGENA CB) S. UGOCHUKWU: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "10:00",
@@ -4547,7 +4573,7 @@
                 "Position": ""
             },
             {
-                "num": "381",
+                "num": "382",
                 "text": "Comienzo del Cuarto 4",
                 "team": null,
                 "time": "10:00",
@@ -4573,7 +4599,7 @@
                 "Position": ""
             },
             {
-                "num": "380",
+                "num": "381",
                 "text": "Fin del Cuarto 3",
                 "team": null,
                 "time": "00:00",
@@ -4599,7 +4625,7 @@
                 "Position": ""
             },
             {
-                "num": "379",
+                "num": "380",
                 "text": "(REAL BETIS BALONCESTO) J. KASIBABU SHILALA: REBOTE (Rebotes: 2)",
                 "team": "2",
                 "time": "00:01",
@@ -4625,7 +4651,7 @@
                 "Position": ""
             },
             {
-                "num": "378",
+                "num": "379",
                 "text": "(ODILO FC CARTAGENA CB) A. MARTIN MARIN: TIRO DE 2 FALLADO",
                 "team": "1",
                 "time": "00:01",
@@ -4651,7 +4677,7 @@
                 "Position": "5.752211809158325|50.08077012731674"
             },
             {
-                "num": "377",
+                "num": "378",
                 "text": "(REAL BETIS BALONCESTO) D. JELINEK: ASISTENCIA (Asistencias: 3)",
                 "team": "2",
                 "time": "00:19",
@@ -4677,7 +4703,7 @@
                 "Position": ""
             },
             {
-                "num": "376",
+                "num": "377",
                 "text": "(REAL BETIS BALONCESTO) M. HUGHES: TIRO DE 3 ANOTADO (Puntos: 10)",
                 "team": "2",
                 "time": "00:19",
@@ -4703,7 +4729,7 @@
                 "Position": "94.66423670450847|95.46848053627826"
             },
             {
-                "num": "375",
+                "num": "376",
                 "text": "(ODILO FC CARTAGENA CB) A. JORDA RODRIGUEZ: TIRO DE 2 ANOTADO (Puntos: 15)",
                 "team": "1",
                 "time": "00:45",
@@ -4729,7 +4755,7 @@
                 "Position": "5.752211809158325|71.65853297456782"
             },
             {
-                "num": "374",
+                "num": "375",
                 "text": "(REAL BETIS BALONCESTO) D. JELINEK: ASISTENCIA (Asistencias: 2)",
                 "team": "2",
                 "time": "00:59",
@@ -4755,7 +4781,7 @@
                 "Position": ""
             },
             {
-                "num": "373",
+                "num": "374",
                 "text": "(REAL BETIS BALONCESTO) J. KASIBABU SHILALA: TIRO DE 2 ANOTADO (Puntos: 4)",
                 "team": "2",
                 "time": "00:59",
@@ -4781,7 +4807,7 @@
                 "Position": "89.59742863972981|46.112443639877"
             },
             {
-                "num": "372",
+                "num": "373",
                 "text": "(ODILO FC CARTAGENA CB) D. VAN EICK: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "01:17",
@@ -4807,7 +4833,7 @@
                 "Position": ""
             },
             {
-                "num": "371",
+                "num": "372",
                 "text": "(ODILO FC CARTAGENA CB) G. GIL GARCIA: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "01:17",
@@ -4833,7 +4859,7 @@
                 "Position": ""
             },
             {
-                "num": "370",
+                "num": "371",
                 "text": "(ODILO FC CARTAGENA CB) G. GIL GARCIA: TIRO DE 1 ANOTADO (Puntos: 7)",
                 "team": "1",
                 "time": "01:17",
@@ -4859,7 +4885,7 @@
                 "Position": ""
             },
             {
-                "num": "369",
+                "num": "370",
                 "text": "(ODILO FC CARTAGENA CB) G. GIL GARCIA: TIRO DE 1 ANOTADO (Puntos: 6)",
                 "team": "1",
                 "time": "01:17",
@@ -4885,7 +4911,7 @@
                 "Position": ""
             },
             {
-                "num": "368",
+                "num": "369",
                 "text": "(REAL BETIS BALONCESTO) J. KASIBABU SHILALA: FALTA Personal (Faltas: 3. Faltas de equipo: 18). Tiros libres: 2",
                 "team": "2",
                 "time": "01:17",
@@ -4911,7 +4937,7 @@
                 "Position": "27.33819007873535|41.896101363161776"
             },
             {
-                "num": "367",
+                "num": "368",
                 "text": "(ODILO FC CARTAGENA CB) A. SUÁREZ CASTRO: ASISTENCIA (Asistencias: 1)",
                 "team": "1",
                 "time": "01:36",
@@ -4937,7 +4963,7 @@
                 "Position": ""
             },
             {
-                "num": "366",
+                "num": "367",
                 "text": "(REAL BETIS BALONCESTO) M. HUGHES: TIRO DE 1 ANOTADO (Puntos: 7)",
                 "team": "2",
                 "time": "01:36",
@@ -4963,7 +4989,7 @@
                 "Position": ""
             },
             {
-                "num": "365",
+                "num": "366",
                 "text": "(REAL BETIS BALONCESTO) M. HUGHES: TIRO DE 1 ANOTADO (Puntos: 6)",
                 "team": "2",
                 "time": "01:36",
@@ -4989,7 +5015,7 @@
                 "Position": ""
             },
             {
-                "num": "364",
+                "num": "365",
                 "text": "(REAL BETIS BALONCESTO) A. SUÁREZ CASTRO: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "01:36",
@@ -5015,7 +5041,7 @@
                 "Position": ""
             },
             {
-                "num": "363",
+                "num": "364",
                 "text": "(REAL BETIS BALONCESTO) D. RADONCIC: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "01:36",
@@ -5041,7 +5067,7 @@
                 "Position": ""
             },
             {
-                "num": "362",
+                "num": "363",
                 "text": "(ODILO FC CARTAGENA CB) J. ROGERS GARCIA: FALTA Personal (Faltas: 2. Faltas de equipo: 16). Tiros libres: 2",
                 "team": "1",
                 "time": "01:36",
@@ -5067,7 +5093,7 @@
                 "Position": "90.9161885579427|54.421124559767705"
             },
             {
-                "num": "361",
+                "num": "362",
                 "text": "(REAL BETIS BALONCESTO) A. SUÁREZ CASTRO: ROBO (Robos: 1)",
                 "team": "2",
                 "time": "01:43",
@@ -5093,7 +5119,7 @@
                 "Position": ""
             },
             {
-                "num": "360",
+                "num": "361",
                 "text": "(ODILO FC CARTAGENA CB) G. GIL GARCIA: PÉRDIDA (Pérdidas: 1)",
                 "team": "1",
                 "time": "01:43",
@@ -5119,7 +5145,7 @@
                 "Position": "80.85198084513347|52.68498278678732"
             },
             {
-                "num": "359",
+                "num": "360",
                 "text": "(REAL BETIS BALONCESTO) A. CVETKOVIC: TIRO DE 1 ANOTADO (Puntos: 9)",
                 "team": "2",
                 "time": "01:59",
@@ -5145,7 +5171,7 @@
                 "Position": ""
             },
             {
-                "num": "358",
+                "num": "359",
                 "text": "(REAL BETIS BALONCESTO) A. CVETKOVIC: TIRO DE 1 ANOTADO (Puntos: 8)",
                 "team": "2",
                 "time": "01:59",
@@ -5171,7 +5197,7 @@
                 "Position": ""
             },
             {
-                "num": "357",
+                "num": "358",
                 "text": "(ODILO FC CARTAGENA CB) A. MARTIN MARIN: FALTA Personal (Faltas: 2. Faltas de equipo: 15). Tiros libres: 2",
                 "team": "1",
                 "time": "01:59",
@@ -5197,7 +5223,7 @@
                 "Position": "64.40221786499023|46.112443639877"
             },
             {
-                "num": "356",
+                "num": "357",
                 "text": "(REAL BETIS BALONCESTO) D. JELINEK: REBOTE (Rebotes: 2)",
                 "team": "2",
                 "time": "02:11",
@@ -5223,7 +5249,7 @@
                 "Position": ""
             },
             {
-                "num": "355",
+                "num": "356",
                 "text": "(ODILO FC CARTAGENA CB) A. GONZÁLEZ PÉREZ: TIRO DE 1 FALLADO",
                 "team": "1",
                 "time": "02:11",
@@ -5249,7 +5275,7 @@
                 "Position": ""
             },
             {
-                "num": "354",
+                "num": "355",
                 "text": "(ODILO FC CARTAGENA CB) A. GONZÁLEZ PÉREZ: TIRO DE 1 ANOTADO (Puntos: 1)",
                 "team": "1",
                 "time": "02:11",
@@ -5275,7 +5301,7 @@
                 "Position": ""
             },
             {
-                "num": "353",
+                "num": "354",
                 "text": "(REAL BETIS BALONCESTO) J. KASIBABU SHILALA: FALTA Personal (Faltas: 2. Faltas de equipo: 17). Tiros libres: 2",
                 "team": "2",
                 "time": "02:11",
@@ -5301,7 +5327,7 @@
                 "Position": "18.52333704630534|46.980517367099196"
             },
             {
-                "num": "352",
+                "num": "353",
                 "text": "(ODILO FC CARTAGENA CB) A. GONZÁLEZ PÉREZ: REBOTE (Rebotes: 2)",
                 "team": "1",
                 "time": "02:14",
@@ -5327,7 +5353,7 @@
                 "Position": ""
             },
             {
-                "num": "351",
+                "num": "352",
                 "text": "(ODILO FC CARTAGENA CB) A. JORDA RODRIGUEZ: TIRO DE 2 FALLADO",
                 "team": "1",
                 "time": "02:14",
@@ -5353,7 +5379,7 @@
                 "Position": "17.621029218037922|61.613710281696726"
             },
             {
-                "num": "350",
+                "num": "351",
                 "text": "(REAL BETIS BALONCESTO) M. HUGHES: ASISTENCIA (Asistencias: 3)",
                 "team": "2",
                 "time": "02:33",
@@ -5379,7 +5405,7 @@
                 "Position": ""
             },
             {
-                "num": "349",
+                "num": "350",
                 "text": "(REAL BETIS BALONCESTO) J. KASIBABU SHILALA: TIRO DE 2 ANOTADO (Puntos: 2)",
                 "team": "2",
                 "time": "02:33",
@@ -5405,7 +5431,7 @@
                 "Position": "93.62310409545898|51.072856010274684"
             },
             {
-                "num": "348",
+                "num": "349",
                 "text": "(REAL BETIS BALONCESTO) M. HUGHES: REBOTE (Rebotes: 2)",
                 "team": "2",
                 "time": "02:45",
@@ -5431,7 +5457,7 @@
                 "Position": ""
             },
             {
-                "num": "347",
+                "num": "348",
                 "text": "(REAL BETIS BALONCESTO) A. SUÁREZ CASTRO: TIRO DE 3 FALLADO",
                 "team": "2",
                 "time": "02:45",
@@ -5457,7 +5483,7 @@
                 "Position": "69.0525754292806|19.45026904978651"
             },
             {
-                "num": "346",
+                "num": "347",
                 "text": "(REAL BETIS BALONCESTO) V. ALVES BENITE : Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "02:53",
@@ -5483,7 +5509,7 @@
                 "Position": ""
             },
             {
-                "num": "345",
+                "num": "346",
                 "text": "(REAL BETIS BALONCESTO) M. HUGHES: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "02:53",
@@ -5509,7 +5535,7 @@
                 "Position": ""
             },
             {
-                "num": "344",
+                "num": "345",
                 "text": "(ODILO FC CARTAGENA CB) A. MARTIN MARIN: TIRO DE 2 ANOTADO (Puntos: 4)",
                 "team": "1",
                 "time": "03:02",
@@ -5535,7 +5561,7 @@
                 "Position": "7.418011824289958|45.616406379862035"
             },
             {
-                "num": "343",
+                "num": "344",
                 "text": "(ODILO FC CARTAGENA CB) A. MARTIN MARIN: REBOTE (Rebotes: 2)",
                 "team": "1",
                 "time": "03:11",
@@ -5561,7 +5587,7 @@
                 "Position": ""
             },
             {
-                "num": "342",
+                "num": "343",
                 "text": "(ODILO FC CARTAGENA CB) A. JORDA RODRIGUEZ: TAPÓN (Tapones: 1)",
                 "team": "1",
                 "time": "03:11",
@@ -5587,7 +5613,7 @@
                 "Position": ""
             },
             {
-                "num": "341",
+                "num": "342",
                 "text": "(REAL BETIS BALONCESTO) V. ALVES BENITE : TIRO DE 2 FALLADO",
                 "team": "2",
                 "time": "03:11",
@@ -5613,7 +5639,7 @@
                 "Position": "86.61287307739258|31.231232095271984"
             },
             {
-                "num": "340",
+                "num": "341",
                 "text": "(ODILO FC CARTAGENA CB) A. JORDA RODRIGUEZ: TIRO DE 3 ANOTADO (Puntos: 13)",
                 "team": "1",
                 "time": "03:31",
@@ -5639,7 +5665,7 @@
                 "Position": "25.60298442840576|86.53974735990484"
             },
             {
-                "num": "339",
+                "num": "340",
                 "text": "(ODILO FC CARTAGENA CB) A. GONZÁLEZ PÉREZ: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "03:35",
@@ -5665,7 +5691,7 @@
                 "Position": ""
             },
             {
-                "num": "338",
+                "num": "339",
                 "text": "(ODILO FC CARTAGENA CB) A. DOMENECH FONTANA: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "03:35",
@@ -5691,7 +5717,7 @@
                 "Position": ""
             },
             {
-                "num": "337",
+                "num": "338",
                 "text": "(REAL BETIS BALONCESTO) J. KASIBABU SHILALA: PÉRDIDA (Pérdidas: 1)",
                 "team": "2",
                 "time": "03:35",
@@ -5717,7 +5743,7 @@
                 "Position": ""
             },
             {
-                "num": "336",
+                "num": "337",
                 "text": "(REAL BETIS BALONCESTO) J. KASIBABU SHILALA: FALTA Ofensiva (Faltas: 1. Faltas de equipo: 16). Tiros libres: 0",
                 "team": "2",
                 "time": "03:35",
@@ -5743,7 +5769,7 @@
                 "Position": "78.76973470052083|44.6243233376361"
             },
             {
-                "num": "335",
+                "num": "336",
                 "text": "(ODILO FC CARTAGENA CB) J. ROGERS GARCIA: ASISTENCIA (Asistencias: 1)",
                 "team": "1",
                 "time": "03:49",
@@ -5769,7 +5795,7 @@
                 "Position": ""
             },
             {
-                "num": "334",
+                "num": "335",
                 "text": "(ODILO FC CARTAGENA CB) G. GIL GARCIA: TIRO DE 3 ANOTADO (Puntos: 5)",
                 "team": "1",
                 "time": "03:49",
@@ -5795,7 +5821,7 @@
                 "Position": "29.281625747680664|77.98304781000665"
             },
             {
-                "num": "333",
+                "num": "334",
                 "text": "(ODILO FC CARTAGENA CB) J. ROGERS GARCIA: REBOTE (Rebotes: 1)",
                 "team": "1",
                 "time": "03:56",
@@ -5821,7 +5847,7 @@
                 "Position": ""
             },
             {
-                "num": "332",
+                "num": "333",
                 "text": "(ODILO FC CARTAGENA CB) A. DOMENECH FONTANA: TIRO DE 3 FALLADO",
                 "team": "1",
                 "time": "03:56",
@@ -5847,7 +5873,7 @@
                 "Position": "30.669787724812824|18.210164536821082"
             },
             {
-                "num": "331",
+                "num": "332",
                 "text": "(REAL BETIS BALONCESTO) A. CVETKOVIC: TIRO DE 2 ANOTADO (Puntos: 7)",
                 "team": "2",
                 "time": "04:04",
@@ -5873,7 +5899,7 @@
                 "Position": "80.15790303548177|47.72457609785364"
             },
             {
-                "num": "330",
+                "num": "331",
                 "text": "(ODILO FC CARTAGENA CB) A. MARTIN MARIN: TIRO DE 1 ANOTADO (Puntos: 2)",
                 "team": "1",
                 "time": "04:25",
@@ -5899,7 +5925,7 @@
                 "Position": ""
             },
             {
-                "num": "329",
+                "num": "330",
                 "text": "(ODILO FC CARTAGENA CB) A. MARTIN MARIN: TIRO DE 1 ANOTADO (Puntos: 1)",
                 "team": "1",
                 "time": "04:25",
@@ -5925,7 +5951,7 @@
                 "Position": ""
             },
             {
-                "num": "328",
+                "num": "329",
                 "text": "(REAL BETIS BALONCESTO) J. KASIBABU SHILALA: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "04:25",
@@ -5951,7 +5977,7 @@
                 "Position": ""
             },
             {
-                "num": "327",
+                "num": "328",
                 "text": "(REAL BETIS BALONCESTO) B. DE BISSCHOP: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "04:25",
@@ -5977,7 +6003,7 @@
                 "Position": ""
             },
             {
-                "num": "326",
+                "num": "327",
                 "text": "(ODILO FC CARTAGENA CB) J. ROGERS GARCIA: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "04:25",
@@ -6003,7 +6029,7 @@
                 "Position": ""
             },
             {
-                "num": "325",
+                "num": "326",
                 "text": "(ODILO FC CARTAGENA CB) C. HERMANSON: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "04:25",
@@ -6029,7 +6055,7 @@
                 "Position": ""
             },
             {
-                "num": "324",
+                "num": "325",
                 "text": "(REAL BETIS BALONCESTO) A. SUÁREZ CASTRO: FALTA Personal (Faltas: 1. Faltas de equipo: 15). Tiros libres: 2",
                 "team": "2",
                 "time": "04:25",
@@ -6055,7 +6081,7 @@
                 "Position": "13.456533749898275|47.72457609785364"
             },
             {
-                "num": "323",
+                "num": "324",
                 "text": "(ODILO FC CARTAGENA CB) C. HERMANSON: REBOTE (Rebotes: 1)",
                 "team": "1",
                 "time": "04:39",
@@ -6081,7 +6107,7 @@
                 "Position": ""
             },
             {
-                "num": "322",
+                "num": "323",
                 "text": "(REAL BETIS BALONCESTO) V. ALVES BENITE : TIRO DE 3 FALLADO",
                 "team": "2",
                 "time": "04:39",
@@ -6107,7 +6133,7 @@
                 "Position": "75.92399597167969|10.27351866377161"
             },
             {
-                "num": "321",
+                "num": "322",
                 "text": "(REAL BETIS BALONCESTO) A. SUÁREZ CASTRO: REBOTE (Rebotes: 2)",
                 "team": "2",
                 "time": "05:00",
@@ -6133,7 +6159,7 @@
                 "Position": ""
             },
             {
-                "num": "320",
+                "num": "321",
                 "text": "(ODILO FC CARTAGENA CB) A. JORDA RODRIGUEZ: TIRO DE 2 FALLADO",
                 "team": "1",
                 "time": "05:00",
@@ -6159,7 +6185,7 @@
                 "Position": "9.639076391855875|31.72727219601895"
             },
             {
-                "num": "319",
+                "num": "320",
                 "text": "(ODILO FC CARTAGENA CB) V. ALVES BENITE : ASISTENCIA (Asistencias: 2)",
                 "team": "1",
                 "time": "05:26",
@@ -6185,7 +6211,7 @@
                 "Position": ""
             },
             {
-                "num": "318",
+                "num": "319",
                 "text": "(REAL BETIS BALONCESTO) B. DE BISSCHOP: TIRO DE 1 ANOTADO (Puntos: 2)",
                 "team": "2",
                 "time": "05:26",
@@ -6211,7 +6237,7 @@
                 "Position": ""
             },
             {
-                "num": "317",
+                "num": "318",
                 "text": "(REAL BETIS BALONCESTO) B. DE BISSCHOP: TIRO DE 1 ANOTADO (Puntos: 1)",
                 "team": "2",
                 "time": "05:26",
@@ -6237,7 +6263,7 @@
                 "Position": ""
             },
             {
-                "num": "316",
+                "num": "317",
                 "text": "(ODILO FC CARTAGENA CB) G. GIL GARCIA: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "05:26",
@@ -6263,7 +6289,7 @@
                 "Position": ""
             },
             {
-                "num": "315",
+                "num": "316",
                 "text": "(ODILO FC CARTAGENA CB) A. JORDA RODRIGUEZ: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "05:26",
@@ -6289,7 +6315,7 @@
                 "Position": ""
             },
             {
-                "num": "314",
+                "num": "315",
                 "text": "(ODILO FC CARTAGENA CB) A. GARUBA ALARI: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "05:26",
@@ -6315,7 +6341,7 @@
                 "Position": ""
             },
             {
-                "num": "313",
+                "num": "314",
                 "text": "(ODILO FC CARTAGENA CB) S. UGOCHUKWU: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "05:26",
@@ -6341,7 +6367,7 @@
                 "Position": ""
             },
             {
-                "num": "312",
+                "num": "313",
                 "text": "(ODILO FC CARTAGENA CB) A. GARUBA ALARI: FALTA Personal (Faltas: 1. Faltas de equipo: 14). Tiros libres: 2",
                 "team": "1",
                 "time": "05:26",
@@ -6367,7 +6393,7 @@
                 "Position": "89.18097813924153|45.74041285413377"
             },
             {
-                "num": "311",
+                "num": "312",
                 "text": "(REAL BETIS BALONCESTO) B. DE BISSCHOP: REBOTE (Rebotes: 6)",
                 "team": "2",
                 "time": "05:52",
@@ -6393,7 +6419,7 @@
                 "Position": ""
             },
             {
-                "num": "310",
+                "num": "311",
                 "text": "(ODILO FC CARTAGENA CB) A. GARUBA ALARI: TIRO DE 3 FALLADO",
                 "team": "1",
                 "time": "05:52",
@@ -6419,7 +6445,7 @@
                 "Position": "32.89085388183594|65.58204245060048"
             },
             {
-                "num": "309",
+                "num": "310",
                 "text": "(REAL BETIS BALONCESTO) V. ALVES BENITE : TIRO DE 1 ANOTADO (Puntos: 8)",
                 "team": "2",
                 "time": "06:12",
@@ -6445,7 +6471,7 @@
                 "Position": ""
             },
             {
-                "num": "308",
+                "num": "309",
                 "text": "(REAL BETIS BALONCESTO) V. ALVES BENITE : TIRO DE 1 ANOTADO (Puntos: 7)",
                 "team": "2",
                 "time": "06:12",
@@ -6471,7 +6497,7 @@
                 "Position": ""
             },
             {
-                "num": "307",
+                "num": "308",
                 "text": "(REAL BETIS BALONCESTO) D. JELINEK: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "06:12",
@@ -6497,7 +6523,7 @@
                 "Position": ""
             },
             {
-                "num": "306",
+                "num": "307",
                 "text": "(REAL BETIS BALONCESTO) R. LOPEZ DE LA TORRE SANCHEZ: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "06:12",
@@ -6523,7 +6549,7 @@
                 "Position": ""
             },
             {
-                "num": "305",
+                "num": "306",
                 "text": "(ODILO FC CARTAGENA CB) S. UGOCHUKWU: FALTA Personal (Faltas: 3. Faltas de equipo: 13). Tiros libres: 2",
                 "team": "1",
                 "time": "06:12",
@@ -6549,7 +6575,7 @@
                 "Position": "85.50233840942383|34.82752211550449"
             },
             {
-                "num": "304",
+                "num": "305",
                 "text": "(ODILO FC CARTAGENA CB) A. MARTIN MARIN: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "06:24",
@@ -6575,7 +6601,7 @@
                 "Position": ""
             },
             {
-                "num": "303",
+                "num": "304",
                 "text": "(ODILO FC CARTAGENA CB) G. BLAT BAEZA: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "06:24",
@@ -6601,7 +6627,7 @@
                 "Position": ""
             },
             {
-                "num": "302",
+                "num": "303",
                 "text": "(REAL BETIS BALONCESTO) D. RADONCIC: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "06:24",
@@ -6627,7 +6653,7 @@
                 "Position": ""
             },
             {
-                "num": "301",
+                "num": "302",
                 "text": "(REAL BETIS BALONCESTO) A. SUÁREZ CASTRO: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "06:24",
@@ -6653,7 +6679,7 @@
                 "Position": ""
             },
             {
-                "num": "300",
+                "num": "301",
                 "text": "(ODILO FC CARTAGENA CB) S. UGOCHUKWU: FALTA Personal (Faltas: 2. Faltas de equipo: 12). Tiros libres: 0",
                 "team": "1",
                 "time": "06:24",
@@ -6679,7 +6705,7 @@
                 "Position": "73.07825724283855|21.558440188144118"
             },
             {
-                "num": "299",
+                "num": "300",
                 "text": "(REAL BETIS BALONCESTO) B. DE BISSCHOP: REBOTE (Rebotes: 5)",
                 "team": "2",
                 "time": "06:31",
@@ -6705,7 +6731,7 @@
                 "Position": ""
             },
             {
-                "num": "298",
+                "num": "299",
                 "text": "(ODILO FC CARTAGENA CB) S. UGOCHUKWU: TIRO DE 2 FALLADO",
                 "team": "1",
                 "time": "06:31",
@@ -6731,7 +6757,7 @@
                 "Position": "22.54901885986328|55.04117681625042"
             },
             {
-                "num": "297",
+                "num": "298",
                 "text": "(REAL BETIS BALONCESTO) D. RADONCIC: ASISTENCIA (Asistencias: 4)",
                 "team": "2",
                 "time": "06:47",
@@ -6757,7 +6783,7 @@
                 "Position": ""
             },
             {
-                "num": "296",
+                "num": "297",
                 "text": "(REAL BETIS BALONCESTO) A. CVETKOVIC: TIRO DE 3 ANOTADO (Puntos: 5)",
                 "team": "2",
                 "time": "06:47",
@@ -6783,7 +6809,7 @@
                 "Position": "68.7055269877116|76.99097328997674"
             },
             {
-                "num": "295",
+                "num": "296",
                 "text": "(ODILO FC CARTAGENA CB) A. DOMENECH FONTANA: FALTA Personal (Faltas: 1. Faltas de equipo: 11). Tiros libres: 0",
                 "team": "1",
                 "time": "06:58",
@@ -6809,7 +6835,7 @@
                 "Position": "65.37393569946289|18.70620463756805"
             },
             {
-                "num": "294",
+                "num": "295",
                 "text": "(REAL BETIS BALONCESTO) G. RENFROE: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "07:08",
@@ -6835,7 +6861,7 @@
                 "Position": ""
             },
             {
-                "num": "293",
+                "num": "294",
                 "text": "(REAL BETIS BALONCESTO) A. CVETKOVIC: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "07:08",
@@ -6861,7 +6887,7 @@
                 "Position": ""
             },
             {
-                "num": "292",
+                "num": "293",
                 "text": "(REAL BETIS BALONCESTO) V. ALVES BENITE : Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "07:08",
@@ -6887,7 +6913,7 @@
                 "Position": ""
             },
             {
-                "num": "291",
+                "num": "292",
                 "text": "(REAL BETIS BALONCESTO) M. HUGHES: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "07:08",
@@ -6913,7 +6939,7 @@
                 "Position": ""
             },
             {
-                "num": "290",
+                "num": "291",
                 "text": "(REAL BETIS BALONCESTO) Tiempo muerto",
                 "team": "2",
                 "time": "07:08",
@@ -6939,7 +6965,7 @@
                 "Position": ""
             },
             {
-                "num": "289",
+                "num": "290",
                 "text": "(ODILO FC CARTAGENA CB) G. BLAT BAEZA: ASISTENCIA (Asistencias: 2)",
                 "team": "1",
                 "time": "07:08",
@@ -6965,7 +6991,7 @@
                 "Position": ""
             },
             {
-                "num": "288",
+                "num": "289",
                 "text": "(ODILO FC CARTAGENA CB) A. GARUBA ALARI: TIRO DE 2 ANOTADO (Puntos: 4)",
                 "team": "1",
                 "time": "07:08",
@@ -6991,7 +7017,7 @@
                 "Position": "8.112093607584635|39.53991017443069"
             },
             {
-                "num": "287",
+                "num": "288",
                 "text": "(ODILO FC CARTAGENA CB) G. BLAT BAEZA: ROBO (Robos: 2)",
                 "team": "1",
                 "time": "07:15",
@@ -7017,7 +7043,7 @@
                 "Position": ""
             },
             {
-                "num": "286",
+                "num": "287",
                 "text": "(REAL BETIS BALONCESTO) G. RENFROE: PÉRDIDA (Pérdidas: 2)",
                 "team": "2",
                 "time": "07:15",
@@ -7043,7 +7069,7 @@
                 "Position": "77.72860844930013|70.17041551305893"
             },
             {
-                "num": "285",
+                "num": "286",
                 "text": "(REAL BETIS BALONCESTO) G. RENFROE: REBOTE (Rebotes: 3)",
                 "team": "2",
                 "time": "07:24",
@@ -7069,7 +7095,7 @@
                 "Position": ""
             },
             {
-                "num": "284",
+                "num": "285",
                 "text": "(REAL BETIS BALONCESTO) G. RENFROE: TIRO DE 3 FALLADO",
                 "team": "2",
                 "time": "07:24",
@@ -7095,7 +7121,7 @@
                 "Position": "65.0963020324707|65.70604608414021"
             },
             {
-                "num": "283",
+                "num": "284",
                 "text": "(REAL BETIS BALONCESTO) B. DE BISSCHOP: REBOTE (Rebotes: 4)",
                 "team": "2",
                 "time": "07:30",
@@ -7121,7 +7147,7 @@
                 "Position": ""
             },
             {
-                "num": "282",
+                "num": "283",
                 "text": "(REAL BETIS BALONCESTO) D. RADONCIC: TIRO DE 2 FALLADO",
                 "team": "2",
                 "time": "07:30",
@@ -7147,7 +7173,7 @@
                 "Position": "91.26322428385417|54.297115244763965"
             },
             {
-                "num": "281",
+                "num": "282",
                 "text": "(ODILO FC CARTAGENA CB) A. DOMENECH FONTANA: TIRO DE 2 ANOTADO (Puntos: 2)",
                 "team": "1",
                 "time": "07:44",
@@ -7173,7 +7199,7 @@
                 "Position": "7.279194990793864|48.964680610819066"
             },
             {
-                "num": "280",
+                "num": "281",
                 "text": "(ODILO FC CARTAGENA CB) A. DOMENECH FONTANA: ROBO (Robos: 1)",
                 "team": "1",
                 "time": "07:50",
@@ -7199,7 +7225,7 @@
                 "Position": ""
             },
             {
-                "num": "279",
+                "num": "280",
                 "text": "(REAL BETIS BALONCESTO) G. RENFROE: PÉRDIDA (Pérdidas: 1)",
                 "team": "2",
                 "time": "07:50",
@@ -7225,7 +7251,7 @@
                 "Position": "87.16814041137695|27.138896292828502"
             },
             {
-                "num": "278",
+                "num": "279",
                 "text": "(ODILO FC CARTAGENA CB) C. HERMANSON: ASISTENCIA (Asistencias: 1)",
                 "team": "1",
                 "time": "08:11",
@@ -7251,7 +7277,7 @@
                 "Position": ""
             },
             {
-                "num": "277",
+                "num": "278",
                 "text": "(ODILO FC CARTAGENA CB) S. UGOCHUKWU: TIRO DE 3 ANOTADO (Puntos: 13)",
                 "team": "1",
                 "time": "08:11",
@@ -7277,7 +7303,7 @@
                 "Position": "34.14020538330078|56.40528496275557"
             },
             {
-                "num": "276",
+                "num": "277",
                 "text": "(ODILO FC CARTAGENA CB) Tiempo muerto",
                 "team": "1",
                 "time": "08:24",
@@ -7303,7 +7329,7 @@
                 "Position": ""
             },
             {
-                "num": "275",
+                "num": "276",
                 "text": "(REAL BETIS BALONCESTO) M. HUGHES: ASISTENCIA (Asistencias: 2)",
                 "team": "2",
                 "time": "08:28",
@@ -7329,7 +7355,7 @@
                 "Position": ""
             },
             {
-                "num": "274",
+                "num": "275",
                 "text": "(REAL BETIS BALONCESTO) R. LOPEZ DE LA TORRE SANCHEZ: TIRO DE 3 ANOTADO (Puntos: 20)",
                 "team": "2",
                 "time": "08:28",
@@ -7355,7 +7381,7 @@
                 "Position": "90.43032964070638|93.60832944829414"
             },
             {
-                "num": "273",
+                "num": "274",
                 "text": "(ODILO FC CARTAGENA CB) G. BLAT BAEZA: FALTA Personal (Faltas: 1. Faltas de equipo: 10). Tiros libres: 0",
                 "team": "1",
                 "time": "08:35",
@@ -7381,7 +7407,7 @@
                 "Position": "24.49244976043701|19.078235423311277"
             },
             {
-                "num": "272",
+                "num": "273",
                 "text": "(REAL BETIS BALONCESTO) M. HUGHES: ROBO (Robos: 2)",
                 "team": "2",
                 "time": "08:35",
@@ -7407,7 +7433,7 @@
                 "Position": ""
             },
             {
-                "num": "271",
+                "num": "272",
                 "text": "(ODILO FC CARTAGENA CB) G. BLAT BAEZA: PÉRDIDA (Pérdidas: 1)",
                 "team": "1",
                 "time": "08:35",
@@ -7433,7 +7459,7 @@
                 "Position": "31.363871892293293|34.951534271240234"
             },
             {
-                "num": "270",
+                "num": "271",
                 "text": "(ODILO FC CARTAGENA CB) G. BLAT BAEZA: ROBO (Robos: 1)",
                 "team": "1",
                 "time": "08:40",
@@ -7459,7 +7485,7 @@
                 "Position": ""
             },
             {
-                "num": "269",
+                "num": "270",
                 "text": "(REAL BETIS BALONCESTO) B. DE BISSCHOP: PÉRDIDA (Pérdidas: 3)",
                 "team": "2",
                 "time": "08:40",
@@ -7485,7 +7511,7 @@
                 "Position": "85.50233840942383|61.86173459316822"
             },
             {
-                "num": "268",
+                "num": "269",
                 "text": "(REAL BETIS BALONCESTO) R. LOPEZ DE LA TORRE SANCHEZ: REBOTE (Rebotes: 5)",
                 "team": "2",
                 "time": "08:54",
@@ -7511,7 +7537,7 @@
                 "Position": ""
             },
             {
-                "num": "267",
+                "num": "268",
                 "text": "(ODILO FC CARTAGENA CB) G. BLAT BAEZA: TIRO DE 3 FALLADO",
                 "team": "1",
                 "time": "08:54",
@@ -7537,7 +7563,7 @@
                 "Position": "28.309907913208008|75.62685946200757"
             },
             {
-                "num": "266",
+                "num": "267",
                 "text": "(REAL BETIS BALONCESTO) B. DE BISSCHOP: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "08:59",
@@ -7563,7 +7589,7 @@
                 "Position": ""
             },
             {
-                "num": "265",
+                "num": "266",
                 "text": "(REAL BETIS BALONCESTO) B. OLUMUYIWA: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "08:59",
@@ -7589,7 +7615,7 @@
                 "Position": ""
             },
             {
-                "num": "264",
+                "num": "265",
                 "text": "(REAL BETIS BALONCESTO) G. RENFROE: FALTA Personal (Faltas: 2. Faltas de equipo: 14). Tiros libres: 0",
                 "team": "2",
                 "time": "08:59",
@@ -7615,7 +7641,7 @@
                 "Position": "24.70067818959554|49.95675513084899"
             },
             {
-                "num": "263",
+                "num": "264",
                 "text": "(REAL BETIS BALONCESTO) B. OLUMUYIWA: FALTA Personal (Faltas: 3. Faltas de equipo: 13). Tiros libres: 0",
                 "team": "2",
                 "time": "09:12",
@@ -7641,7 +7667,7 @@
                 "Position": "27.06055959065755|41.524070577418556"
             },
             {
-                "num": "262",
+                "num": "263",
                 "text": "(REAL BETIS BALONCESTO) G. RENFROE: ASISTENCIA (Asistencias: 5)",
                 "team": "2",
                 "time": "09:26",
@@ -7667,7 +7693,7 @@
                 "Position": ""
             },
             {
-                "num": "261",
+                "num": "262",
                 "text": "(REAL BETIS BALONCESTO) R. LOPEZ DE LA TORRE SANCHEZ: TIRO DE 3 ANOTADO (Puntos: 17)",
                 "team": "2",
                 "time": "09:26",
@@ -7693,7 +7719,7 @@
                 "Position": "69.74665959676106|20.070317045171212"
             },
             {
-                "num": "260",
+                "num": "261",
                 "text": "(REAL BETIS BALONCESTO) R. LOPEZ DE LA TORRE SANCHEZ: REBOTE (Rebotes: 4)",
                 "team": "2",
                 "time": "09:48",
@@ -7719,7 +7745,7 @@
                 "Position": ""
             },
             {
-                "num": "259",
+                "num": "260",
                 "text": "(ODILO FC CARTAGENA CB) G. BLAT BAEZA: TIRO DE 2 FALLADO",
                 "team": "1",
                 "time": "09:48",
@@ -7745,7 +7771,7 @@
                 "Position": "13.803572654724121|52.31294916031209"
             },
             {
-                "num": "258",
+                "num": "259",
                 "text": "(ODILO FC CARTAGENA CB) A. JORDA RODRIGUEZ: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "10:00",
@@ -7771,7 +7797,7 @@
                 "Position": ""
             },
             {
-                "num": "257",
+                "num": "258",
                 "text": "(REAL BETIS BALONCESTO) R. LOPEZ DE LA TORRE SANCHEZ: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "10:00",
@@ -7797,7 +7823,7 @@
                 "Position": ""
             },
             {
-                "num": "256",
+                "num": "257",
                 "text": "(REAL BETIS BALONCESTO) A. CVETKOVIC: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "10:00",
@@ -7823,7 +7849,7 @@
                 "Position": ""
             },
             {
-                "num": "255",
+                "num": "256",
                 "text": "(REAL BETIS BALONCESTO) V. ALVES BENITE : Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "10:00",
@@ -7849,7 +7875,7 @@
                 "Position": ""
             },
             {
-                "num": "254",
+                "num": "255",
                 "text": "(ODILO FC CARTAGENA CB) A. DOMENECH FONTANA: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "10:00",
@@ -7875,7 +7901,7 @@
                 "Position": ""
             },
             {
-                "num": "253",
+                "num": "254",
                 "text": "(REAL BETIS BALONCESTO) D. JELINEK: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "10:00",
@@ -7901,7 +7927,7 @@
                 "Position": ""
             },
             {
-                "num": "252",
+                "num": "253",
                 "text": "(ODILO FC CARTAGENA CB) D. VAN EICK: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "10:00",
@@ -7927,7 +7953,7 @@
                 "Position": ""
             },
             {
-                "num": "251",
+                "num": "252",
                 "text": "(REAL BETIS BALONCESTO) G. RENFROE: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "10:00",
@@ -7953,7 +7979,7 @@
                 "Position": ""
             },
             {
-                "num": "250",
+                "num": "251",
                 "text": "(REAL BETIS BALONCESTO) M. HUGHES: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "10:00",
@@ -7979,7 +8005,7 @@
                 "Position": ""
             },
             {
-                "num": "249",
+                "num": "250",
                 "text": "(ODILO FC CARTAGENA CB) A. GARUBA ALARI: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "10:00",
@@ -8005,7 +8031,7 @@
                 "Position": ""
             },
             {
-                "num": "248",
+                "num": "249",
                 "text": "Comienzo del Cuarto 3",
                 "team": null,
                 "time": "10:00",
@@ -8031,7 +8057,7 @@
                 "Position": ""
             },
             {
-                "num": "247",
+                "num": "248",
                 "text": "Fin del Cuarto 2",
                 "team": null,
                 "time": "00:00",
@@ -8057,7 +8083,7 @@
                 "Position": ""
             },
             {
-                "num": "246",
+                "num": "247",
                 "text": "(REAL BETIS BALONCESTO) D. JELINEK: REBOTE (Rebotes: 1)",
                 "team": "2",
                 "time": "00:02",
@@ -8083,7 +8109,7 @@
                 "Position": ""
             },
             {
-                "num": "245",
+                "num": "246",
                 "text": "(ODILO FC CARTAGENA CB) G. BLAT BAEZA: TIRO DE 2 FALLADO",
                 "team": "1",
                 "time": "00:02",
@@ -8109,7 +8135,7 @@
                 "Position": "89.875062306722|48.59265266580785"
             },
             {
-                "num": "244",
+                "num": "245",
                 "text": "(REAL BETIS BALONCESTO) V. ALVES BENITE : ASISTENCIA (Asistencias: 1)",
                 "team": "2",
                 "time": "00:18",
@@ -8135,7 +8161,7 @@
                 "Position": ""
             },
             {
-                "num": "243",
+                "num": "244",
                 "text": "(REAL BETIS BALONCESTO) B. OLUMUYIWA: MATE ANOTADO (Puntos: 2)",
                 "team": "2",
                 "time": "00:18",
@@ -8161,7 +8187,7 @@
                 "Position": "6.723927656809489|46.856502370631446"
             },
             {
-                "num": "242",
+                "num": "243",
                 "text": "(REAL BETIS BALONCESTO) Tiempo muerto",
                 "team": "2",
                 "time": "00:38",
@@ -8187,7 +8213,7 @@
                 "Position": ""
             },
             {
-                "num": "241",
+                "num": "242",
                 "text": "(ODILO FC CARTAGENA CB) D. VAN EICK: TIRO DE 1 ANOTADO (Puntos: 2)",
                 "team": "1",
                 "time": "00:38",
@@ -8213,7 +8239,7 @@
                 "Position": ""
             },
             {
-                "num": "240",
+                "num": "241",
                 "text": "(ODILO FC CARTAGENA CB) D. VAN EICK: TIRO DE 1 ANOTADO (Puntos: 1)",
                 "team": "1",
                 "time": "00:38",
@@ -8239,7 +8265,7 @@
                 "Position": ""
             },
             {
-                "num": "239",
+                "num": "240",
                 "text": "(REAL BETIS BALONCESTO) A. CVETKOVIC: FALTA Personal (Faltas: 2. Faltas de equipo: 12). Tiros libres: 2",
                 "team": "2",
                 "time": "00:38",
@@ -8265,7 +8291,7 @@
                 "Position": "76.6874885559082|40.035950275177655"
             },
             {
-                "num": "238",
+                "num": "239",
                 "text": "(ODILO FC CARTAGENA CB) S. UGOCHUKWU: REBOTE (Rebotes: 3)",
                 "team": "1",
                 "time": "00:44",
@@ -8291,7 +8317,7 @@
                 "Position": ""
             },
             {
-                "num": "237",
+                "num": "238",
                 "text": "(REAL BETIS BALONCESTO) A. CVETKOVIC: TIRO DE 2 FALLADO",
                 "team": "2",
                 "time": "00:44",
@@ -8317,7 +8343,7 @@
                 "Position": "23.867777188618977|35.32356221625145"
             },
             {
-                "num": "236",
+                "num": "237",
                 "text": "(REAL BETIS BALONCESTO) V. ALVES BENITE : REBOTE (Rebotes: 3)",
                 "team": "2",
                 "time": "01:02",
@@ -8343,7 +8369,7 @@
                 "Position": ""
             },
             {
-                "num": "235",
+                "num": "236",
                 "text": "(ODILO FC CARTAGENA CB) D. VAN EICK: TIRO DE 3 FALLADO",
                 "team": "1",
                 "time": "01:02",
@@ -8369,7 +8395,7 @@
                 "Position": "64.54103469848633|49.3367142372943"
             },
             {
-                "num": "234",
+                "num": "235",
                 "text": "(REAL BETIS BALONCESTO) A. CVETKOVIC: PÉRDIDA (Pérdidas: 2)",
                 "team": "2",
                 "time": "01:03",
@@ -8395,7 +8421,7 @@
                 "Position": "85.08588790893555|32.09930298176218"
             },
             {
-                "num": "233",
+                "num": "234",
                 "text": "(ODILO FC CARTAGENA CB) S. UGOCHUKWU: TIRO DE 1 ANOTADO (Puntos: 10)",
                 "team": "1",
                 "time": "01:07",
@@ -8421,7 +8447,7 @@
                 "Position": ""
             },
             {
-                "num": "232",
+                "num": "233",
                 "text": "(REAL BETIS BALONCESTO) B. OLUMUYIWA: FALTA Personal (Faltas: 2. Faltas de equipo: 11). Tiros libres: 1",
                 "team": "2",
                 "time": "01:07",
@@ -8447,7 +8473,7 @@
                 "Position": "79.94967778523763|50.948841013806934"
             },
             {
-                "num": "231",
+                "num": "232",
                 "text": "(ODILO FC CARTAGENA CB) S. UGOCHUKWU: TIRO DE 2 ANOTADO (Puntos: 9)",
                 "team": "1",
                 "time": "01:07",
@@ -8473,7 +8499,7 @@
                 "Position": "91.26322428385417|47.22854167857069"
             },
             {
-                "num": "230",
+                "num": "231",
                 "text": "(REAL BETIS BALONCESTO) A. CVETKOVIC: ASISTENCIA (Asistencias: 1)",
                 "team": "2",
                 "time": "01:31",
@@ -8499,7 +8525,7 @@
                 "Position": ""
             },
             {
-                "num": "229",
+                "num": "230",
                 "text": "(REAL BETIS BALONCESTO) D. RADONCIC: TIRO DE 3 ANOTADO (Puntos: 6)",
                 "team": "2",
                 "time": "01:31",
@@ -8525,7 +8551,7 @@
                 "Position": "7.279194990793864|95.96451779629322"
             },
             {
-                "num": "228",
+                "num": "229",
                 "text": "(ODILO FC CARTAGENA CB) S. UGOCHUKWU: ASISTENCIA (Asistencias: 1)",
                 "team": "1",
                 "time": "01:42",
@@ -8551,7 +8577,7 @@
                 "Position": ""
             },
             {
-                "num": "227",
+                "num": "228",
                 "text": "(ODILO FC CARTAGENA CB) G. BLAT BAEZA: TIRO DE 2 ANOTADO (Puntos: 2)",
                 "team": "1",
                 "time": "01:42",
@@ -8577,7 +8603,7 @@
                 "Position": "92.85961786905925|50.948841013806934"
             },
             {
-                "num": "226",
+                "num": "227",
                 "text": "(REAL BETIS BALONCESTO) V. ALVES BENITE : TIRO DE 1 ANOTADO (Puntos: 6)",
                 "team": "2",
                 "time": "01:59",
@@ -8603,7 +8629,7 @@
                 "Position": ""
             },
             {
-                "num": "225",
+                "num": "226",
                 "text": "(REAL BETIS BALONCESTO) V. ALVES BENITE : TIRO DE 1 FALLADO",
                 "team": "2",
                 "time": "01:59",
@@ -8629,7 +8655,7 @@
                 "Position": ""
             },
             {
-                "num": "224",
+                "num": "225",
                 "text": "(ODILO FC CARTAGENA CB) G. GIL GARCIA: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "01:59",
@@ -8655,7 +8681,7 @@
                 "Position": ""
             },
             {
-                "num": "223",
+                "num": "224",
                 "text": "(ODILO FC CARTAGENA CB) C. HERMANSON: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "01:59",
@@ -8681,7 +8707,7 @@
                 "Position": ""
             },
             {
-                "num": "222",
+                "num": "223",
                 "text": "(ODILO FC CARTAGENA CB) G. GIL GARCIA: FALTA Personal (Faltas: 2. Faltas de equipo: 9). Tiros libres: 2",
                 "team": "1",
                 "time": "01:59",
@@ -8707,7 +8733,7 @@
                 "Position": "33.584938049316406|70.0464061980552"
             },
             {
-                "num": "221",
+                "num": "222",
                 "text": "(REAL BETIS BALONCESTO) V. ALVES BENITE : Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "02:18",
@@ -8733,7 +8759,7 @@
                 "Position": ""
             },
             {
-                "num": "220",
+                "num": "221",
                 "text": "(ODILO FC CARTAGENA CB) G. BLAT BAEZA: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "02:18",
@@ -8759,7 +8785,7 @@
                 "Position": ""
             },
             {
-                "num": "219",
+                "num": "220",
                 "text": "(REAL BETIS BALONCESTO) A. CVETKOVIC: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "02:18",
@@ -8785,7 +8811,7 @@
                 "Position": ""
             },
             {
-                "num": "218",
+                "num": "219",
                 "text": "(REAL BETIS BALONCESTO) G. RENFROE: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "02:18",
@@ -8811,7 +8837,7 @@
                 "Position": ""
             },
             {
-                "num": "217",
+                "num": "218",
                 "text": "(REAL BETIS BALONCESTO) M. HUGHES: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "02:18",
@@ -8837,7 +8863,7 @@
                 "Position": ""
             },
             {
-                "num": "216",
+                "num": "217",
                 "text": "(ODILO FC CARTAGENA CB) J. BALASTEGUI MARTINEZ: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "02:18",
@@ -8863,7 +8889,7 @@
                 "Position": ""
             },
             {
-                "num": "215",
+                "num": "216",
                 "text": "(ODILO FC CARTAGENA CB) A. GONZÁLEZ PÉREZ: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "02:18",
@@ -8889,7 +8915,7 @@
                 "Position": ""
             },
             {
-                "num": "214",
+                "num": "215",
                 "text": "(ODILO FC CARTAGENA CB) S. UGOCHUKWU: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "02:18",
@@ -8915,7 +8941,7 @@
                 "Position": ""
             },
             {
-                "num": "213",
+                "num": "214",
                 "text": "(REAL BETIS BALONCESTO) REBOTE (Rebotes: 17)",
                 "team": "2",
                 "time": "02:18",
@@ -8941,7 +8967,7 @@
                 "Position": ""
             },
             {
-                "num": "212",
+                "num": "213",
                 "text": "(ODILO FC CARTAGENA CB) A. JORDA RODRIGUEZ: TIRO DE 3 FALLADO",
                 "team": "1",
                 "time": "02:18",
@@ -8967,7 +8993,7 @@
                 "Position": "66.13742192586263|75.9988930884828"
             },
             {
-                "num": "211",
+                "num": "212",
                 "text": "(ODILO FC CARTAGENA CB) A. GONZÁLEZ PÉREZ: REBOTE (Rebotes: 1)",
                 "team": "1",
                 "time": "02:27",
@@ -8993,7 +9019,7 @@
                 "Position": ""
             },
             {
-                "num": "210",
+                "num": "211",
                 "text": "(REAL BETIS BALONCESTO) M. HUGHES: TIRO DE 2 FALLADO",
                 "team": "2",
                 "time": "02:27",
@@ -9019,7 +9045,7 @@
                 "Position": "13.387125333150228|58.38945104720745"
             },
             {
-                "num": "209",
+                "num": "210",
                 "text": "(ODILO FC CARTAGENA CB) A. JORDA RODRIGUEZ: TIRO DE 2 ANOTADO (Puntos: 10)",
                 "team": "1",
                 "time": "02:39",
@@ -9045,7 +9071,7 @@
                 "Position": "79.60263570149739|52.43696415677984"
             },
             {
-                "num": "208",
+                "num": "209",
                 "text": "(REAL BETIS BALONCESTO) D. RADONCIC: ASISTENCIA (Asistencias: 3)",
                 "team": "2",
                 "time": "03:02",
@@ -9071,7 +9097,7 @@
                 "Position": ""
             },
             {
-                "num": "207",
+                "num": "208",
                 "text": "(REAL BETIS BALONCESTO) D. JELINEK: TIRO DE 3 ANOTADO (Puntos: 6)",
                 "team": "2",
                 "time": "03:02",
@@ -9097,7 +9123,7 @@
                 "Position": "33.93197695414225|47.60056962358191"
             },
             {
-                "num": "206",
+                "num": "207",
                 "text": "(REAL BETIS BALONCESTO) M. HUGHES: REBOTE (Rebotes: 1)",
                 "team": "2",
                 "time": "03:11",
@@ -9123,7 +9149,7 @@
                 "Position": ""
             },
             {
-                "num": "205",
+                "num": "206",
                 "text": "(REAL BETIS BALONCESTO) D. JELINEK: TIRO DE 3 FALLADO",
                 "team": "2",
                 "time": "03:11",
@@ -9149,7 +9175,7 @@
                 "Position": "25.53357442220052|83.19147881041182"
             },
             {
-                "num": "204",
+                "num": "205",
                 "text": "(REAL BETIS BALONCESTO) B. OLUMUYIWA: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "03:12",
@@ -9175,7 +9201,7 @@
                 "Position": ""
             },
             {
-                "num": "203",
+                "num": "204",
                 "text": "(REAL BETIS BALONCESTO) J. KASIBABU SHILALA: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "03:12",
@@ -9201,7 +9227,7 @@
                 "Position": ""
             },
             {
-                "num": "202",
+                "num": "203",
                 "text": "(ODILO FC CARTAGENA CB) G. GIL GARCIA: FALTA Personal (Faltas: 1. Faltas de equipo: 8). Tiros libres: 0",
                 "team": "1",
                 "time": "03:12",
@@ -9227,7 +9253,7 @@
                 "Position": "15.330556233723959|46.856502370631446"
             },
             {
-                "num": "201",
+                "num": "202",
                 "text": "(ODILO FC CARTAGENA CB) D. VAN EICK: ASISTENCIA (Asistencias: 1)",
                 "team": "1",
                 "time": "03:43",
@@ -9253,7 +9279,7 @@
                 "Position": ""
             },
             {
-                "num": "200",
+                "num": "201",
                 "text": "(ODILO FC CARTAGENA CB) A. JORDA RODRIGUEZ: TIRO DE 3 ANOTADO (Puntos: 8)",
                 "team": "1",
                 "time": "03:43",
@@ -9279,7 +9305,7 @@
                 "Position": "93.41488520304362|93.60832944829414"
             },
             {
-                "num": "199",
+                "num": "200",
                 "text": "(ODILO FC CARTAGENA CB) D. VAN EICK: REBOTE (Rebotes: 4)",
                 "team": "1",
                 "time": "03:49",
@@ -9305,7 +9331,7 @@
                 "Position": ""
             },
             {
-                "num": "198",
+                "num": "199",
                 "text": "(ODILO FC CARTAGENA CB) G. GIL GARCIA: TIRO DE 3 FALLADO",
                 "team": "1",
                 "time": "03:49",
@@ -9331,7 +9357,7 @@
                 "Position": "65.0963020324707|33.21539249825985"
             },
             {
-                "num": "197",
+                "num": "198",
                 "text": "(ODILO FC CARTAGENA CB) D. VAN EICK: REBOTE (Rebotes: 3)",
                 "team": "1",
                 "time": "03:54",
@@ -9357,7 +9383,7 @@
                 "Position": ""
             },
             {
-                "num": "196",
+                "num": "197",
                 "text": "(REAL BETIS BALONCESTO) J. KASIBABU SHILALA: TIRO DE 2 FALLADO",
                 "team": "2",
                 "time": "03:54",
@@ -9383,7 +9409,7 @@
                 "Position": "9.361442724863688|48.09660972432888"
             },
             {
-                "num": "195",
+                "num": "196",
                 "text": "(REAL BETIS BALONCESTO) D. RADONCIC: REBOTE (Rebotes: 3)",
                 "team": "2",
                 "time": "04:03",
@@ -9409,7 +9435,7 @@
                 "Position": ""
             },
             {
-                "num": "194",
+                "num": "195",
                 "text": "(ODILO FC CARTAGENA CB) A. JORDA RODRIGUEZ: TIRO DE 1 FALLADO",
                 "team": "1",
                 "time": "04:03",
@@ -9435,7 +9461,7 @@
                 "Position": ""
             },
             {
-                "num": "193",
+                "num": "194",
                 "text": "(ODILO FC CARTAGENA CB) A. JORDA RODRIGUEZ: TIRO DE 1 ANOTADO (Puntos: 5)",
                 "team": "1",
                 "time": "04:03",
@@ -9461,7 +9487,7 @@
                 "Position": ""
             },
             {
-                "num": "192",
+                "num": "193",
                 "text": "(REAL BETIS BALONCESTO) D. JELINEK: FALTA Personal (Faltas: 1. Faltas de equipo: 10). Tiros libres: 2",
                 "team": "2",
                 "time": "04:03",
@@ -9487,7 +9513,7 @@
                 "Position": "77.38156636555989|66.45010765562667"
             },
             {
-                "num": "191",
+                "num": "192",
                 "text": "(REAL BETIS BALONCESTO) D. RADONCIC: FALTA Personal (Faltas: 2. Faltas de equipo: 9). Tiros libres: 0",
                 "team": "2",
                 "time": "04:09",
@@ -9513,7 +9539,7 @@
                 "Position": "76.27103805541992|60.99365802521402"
             },
             {
-                "num": "190",
+                "num": "191",
                 "text": "(REAL BETIS BALONCESTO) G. RENFROE: ASISTENCIA (Asistencias: 4)",
                 "team": "2",
                 "time": "04:31",
@@ -9539,7 +9565,7 @@
                 "Position": ""
             },
             {
-                "num": "189",
+                "num": "190",
                 "text": "(REAL BETIS BALONCESTO) D. JELINEK: TIRO DE 3 ANOTADO (Puntos: 3)",
                 "team": "2",
                 "time": "04:31",
@@ -9565,7 +9591,7 @@
                 "Position": "11.02724313735962|97.45264093926613"
             },
             {
-                "num": "188",
+                "num": "189",
                 "text": "(ODILO FC CARTAGENA CB) A. JORDA RODRIGUEZ: FALTA Personal (Faltas: 2. Faltas de equipo: 7). Tiros libres: 0",
                 "team": "1",
                 "time": "04:34",
@@ -9591,7 +9617,7 @@
                 "Position": "24.978307088216145|14.241839469747342"
             },
             {
-                "num": "187",
+                "num": "188",
                 "text": "(REAL BETIS BALONCESTO) J. KASIBABU SHILALA: REBOTE (Rebotes: 1)",
                 "team": "2",
                 "time": "04:43",
@@ -9617,7 +9643,7 @@
                 "Position": ""
             },
             {
-                "num": "186",
+                "num": "187",
                 "text": "(REAL BETIS BALONCESTO) M. HUGHES: TIRO DE 3 FALLADO",
                 "team": "2",
                 "time": "04:43",
@@ -9643,7 +9669,7 @@
                 "Position": "22.271385192871094|10.27351866377161"
             },
             {
-                "num": "185",
+                "num": "186",
                 "text": "(ODILO FC CARTAGENA CB) D. VAN EICK: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "04:51",
@@ -9669,7 +9695,7 @@
                 "Position": ""
             },
             {
-                "num": "184",
+                "num": "185",
                 "text": "(REAL BETIS BALONCESTO) V. ALVES BENITE : Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "04:51",
@@ -9695,7 +9721,7 @@
                 "Position": ""
             },
             {
-                "num": "183",
+                "num": "184",
                 "text": "(REAL BETIS BALONCESTO) D. JELINEK: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "04:51",
@@ -9721,7 +9747,7 @@
                 "Position": ""
             },
             {
-                "num": "182",
+                "num": "183",
                 "text": "(ODILO FC CARTAGENA CB) J. ROGERS GARCIA: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "04:51",
@@ -9747,7 +9773,7 @@
                 "Position": ""
             },
             {
-                "num": "181",
+                "num": "182",
                 "text": "(REAL BETIS BALONCESTO) Tiempo muerto",
                 "team": "2",
                 "time": "04:51",
@@ -9773,7 +9799,7 @@
                 "Position": ""
             },
             {
-                "num": "180",
+                "num": "181",
                 "text": "(ODILO FC CARTAGENA CB) G. GIL GARCIA: ASISTENCIA (Asistencias: 1)",
                 "team": "1",
                 "time": "04:51",
@@ -9799,7 +9825,7 @@
                 "Position": ""
             },
             {
-                "num": "179",
+                "num": "180",
                 "text": "(ODILO FC CARTAGENA CB) A. JORDA RODRIGUEZ: TIRO DE 2 ANOTADO (Puntos: 4)",
                 "team": "1",
                 "time": "04:51",
@@ -9825,7 +9851,7 @@
                 "Position": "93.69251887003581|48.2206133578686"
             },
             {
-                "num": "178",
+                "num": "179",
                 "text": "(ODILO FC CARTAGENA CB) G. GIL GARCIA: REBOTE (Rebotes: 1)",
                 "team": "1",
                 "time": "04:59",
@@ -9851,7 +9877,7 @@
                 "Position": ""
             },
             {
-                "num": "177",
+                "num": "178",
                 "text": "(REAL BETIS BALONCESTO) D. RADONCIC: TIRO DE 2 FALLADO",
                 "team": "2",
                 "time": "04:59",
@@ -9877,7 +9903,7 @@
                 "Position": "11.02724313735962|46.23645863634475"
             },
             {
-                "num": "176",
+                "num": "177",
                 "text": "(ODILO FC CARTAGENA CB) G. GIL GARCIA: TIRO DE 2 ANOTADO (Puntos: 2)",
                 "team": "1",
                 "time": "05:17",
@@ -9903,7 +9929,7 @@
                 "Position": "76.96512222290039|52.06493621176862"
             },
             {
-                "num": "175",
+                "num": "176",
                 "text": "(REAL BETIS BALONCESTO) V. ALVES BENITE : TIRO DE 3 ANOTADO (Puntos: 5)",
                 "team": "2",
                 "time": "05:40",
@@ -9929,7 +9955,7 @@
                 "Position": "34.97310320536295|43.632243136142165"
             },
             {
-                "num": "174",
+                "num": "175",
                 "text": "(REAL BETIS BALONCESTO) V. ALVES BENITE : REBOTE (Rebotes: 2)",
                 "team": "2",
                 "time": "05:57",
@@ -9955,7 +9981,7 @@
                 "Position": ""
             },
             {
-                "num": "173",
+                "num": "174",
                 "text": "(REAL BETIS BALONCESTO) V. ALVES BENITE : TIRO DE 3 FALLADO",
                 "team": "2",
                 "time": "05:57",
@@ -9981,7 +10007,7 @@
                 "Position": "34.070793787638344|24.162652847614694"
             },
             {
-                "num": "172",
+                "num": "173",
                 "text": "(ODILO FC CARTAGENA CB) A. JORDA RODRIGUEZ: TIRO DE 2 ANOTADO (Puntos: 2)",
                 "team": "1",
                 "time": "06:16",
@@ -10007,7 +10033,7 @@
                 "Position": "90.15269597371419|38.67183928794049"
             },
             {
-                "num": "171",
+                "num": "172",
                 "text": "(REAL BETIS BALONCESTO) G. RENFROE: TIRO DE 2 ANOTADO (Puntos: 4)",
                 "team": "2",
                 "time": "06:29",
@@ -10033,7 +10059,7 @@
                 "Position": "20.119725863138836|51.19685964381441"
             },
             {
-                "num": "170",
+                "num": "171",
                 "text": "(ODILO FC CARTAGENA CB) A. JORDA RODRIGUEZ: ASISTENCIA (Asistencias: 1)",
                 "team": "1",
                 "time": "06:44",
@@ -10059,7 +10085,7 @@
                 "Position": ""
             },
             {
-                "num": "169",
+                "num": "170",
                 "text": "(ODILO FC CARTAGENA CB) J. BALASTEGUI MARTINEZ: TIRO DE 3 ANOTADO (Puntos: 3)",
                 "team": "1",
                 "time": "06:44",
@@ -10085,7 +10111,7 @@
                 "Position": "68.08085759480794|70.54244345807015"
             },
             {
-                "num": "168",
+                "num": "169",
                 "text": "(ODILO FC CARTAGENA CB) G. GIL GARCIA: ROBO (Robos: 1)",
                 "team": "1",
                 "time": "06:51",
@@ -10111,7 +10137,7 @@
                 "Position": ""
             },
             {
-                "num": "167",
+                "num": "168",
                 "text": "(REAL BETIS BALONCESTO) M. HUGHES: PÉRDIDA (Pérdidas: 1)",
                 "team": "2",
                 "time": "06:51",
@@ -10137,7 +10163,7 @@
                 "Position": "31.294463475545246|77.73503486146319"
             },
             {
-                "num": "166",
+                "num": "167",
                 "text": "(ODILO FC CARTAGENA CB) J. BALASTEGUI MARTINEZ: FALTA Personal (Faltas: 1. Faltas de equipo: 6). Tiros libres: 0",
                 "team": "1",
                 "time": "07:04",
@@ -10163,7 +10189,7 @@
                 "Position": "23.59014352162679|55.78523270627286"
             },
             {
-                "num": "165",
+                "num": "166",
                 "text": "(REAL BETIS BALONCESTO) M. HUGHES: ROBO (Robos: 1)",
                 "team": "2",
                 "time": "07:07",
@@ -10189,7 +10215,7 @@
                 "Position": ""
             },
             {
-                "num": "164",
+                "num": "165",
                 "text": "(ODILO FC CARTAGENA CB) A. GONZÁLEZ PÉREZ: PÉRDIDA (Pérdidas: 1)",
                 "team": "1",
                 "time": "07:07",
@@ -10215,7 +10241,7 @@
                 "Position": "85.50233840942383|50.452803753791976"
             },
             {
-                "num": "163",
+                "num": "164",
                 "text": "(ODILO FC CARTAGENA CB) A. GARUBA ALARI: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "07:23",
@@ -10241,7 +10267,7 @@
                 "Position": ""
             },
             {
-                "num": "162",
+                "num": "163",
                 "text": "(ODILO FC CARTAGENA CB) A. MARTIN MARIN: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "07:23",
@@ -10267,7 +10293,7 @@
                 "Position": ""
             },
             {
-                "num": "161",
+                "num": "162",
                 "text": "(ODILO FC CARTAGENA CB) A. JORDA RODRIGUEZ: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "07:23",
@@ -10293,7 +10319,7 @@
                 "Position": ""
             },
             {
-                "num": "160",
+                "num": "161",
                 "text": "(ODILO FC CARTAGENA CB) J. BALASTEGUI MARTINEZ: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "07:23",
@@ -10319,7 +10345,7 @@
                 "Position": ""
             },
             {
-                "num": "159",
+                "num": "160",
                 "text": "(REAL BETIS BALONCESTO) B. DE BISSCHOP: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "07:23",
@@ -10345,7 +10371,7 @@
                 "Position": ""
             },
             {
-                "num": "158",
+                "num": "159",
                 "text": "(REAL BETIS BALONCESTO) J. KASIBABU SHILALA: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "07:23",
@@ -10371,7 +10397,7 @@
                 "Position": ""
             },
             {
-                "num": "157",
+                "num": "158",
                 "text": "(REAL BETIS BALONCESTO) G. RENFROE: ASISTENCIA (Asistencias: 3)",
                 "team": "2",
                 "time": "07:23",
@@ -10397,7 +10423,7 @@
                 "Position": ""
             },
             {
-                "num": "156",
+                "num": "157",
                 "text": "(REAL BETIS BALONCESTO) M. HUGHES: TIRO DE 2 ANOTADO (Puntos: 5)",
                 "team": "2",
                 "time": "07:23",
@@ -10423,7 +10449,7 @@
                 "Position": "6.6545188426971436|49.83275149730926"
             },
             {
-                "num": "155",
+                "num": "156",
                 "text": "(ODILO FC CARTAGENA CB) A. MARTIN MARIN: FALTA Personal (Faltas: 1. Faltas de equipo: 5). Tiros libres: 0",
                 "team": "1",
                 "time": "07:23",
@@ -10449,7 +10475,7 @@
                 "Position": "25.464167594909668|47.352548152842424"
             },
             {
-                "num": "154",
+                "num": "155",
                 "text": "(REAL BETIS BALONCESTO) B. DE BISSCHOP: REBOTE (Rebotes: 3)",
                 "team": "2",
                 "time": "07:30",
@@ -10475,7 +10501,7 @@
                 "Position": ""
             },
             {
-                "num": "153",
+                "num": "154",
                 "text": "(REAL BETIS BALONCESTO) B. DE BISSCHOP: TIRO DE 2 FALLADO",
                 "team": "2",
                 "time": "07:30",
@@ -10501,7 +10527,7 @@
                 "Position": "11.790733337402344|31.479250725279464"
             },
             {
-                "num": "152",
+                "num": "153",
                 "text": "(REAL BETIS BALONCESTO) B. DE BISSCHOP: REBOTE (Rebotes: 3)",
                 "team": "2",
                 "time": "07:30",
@@ -10527,7 +10553,7 @@
                 "Position": ""
             },
             {
-                "num": "151",
+                "num": "152",
                 "text": "(REAL BETIS BALONCESTO) V. ALVES BENITE : TIRO DE 2 FALLADO",
                 "team": "2",
                 "time": "07:30",
@@ -10553,7 +10579,7 @@
                 "Position": "11.790733337402344|31.479250725279464"
             },
             {
-                "num": "150",
+                "num": "151",
                 "text": "(REAL BETIS BALONCESTO) REBOTE (Rebotes: 11)",
                 "team": "2",
                 "time": "07:43",
@@ -10579,7 +10605,7 @@
                 "Position": ""
             },
             {
-                "num": "149",
+                "num": "150",
                 "text": "(ODILO FC CARTAGENA CB) G. GIL GARCIA: TIRO DE 3 FALLADO",
                 "team": "1",
                 "time": "07:43",
@@ -10605,7 +10631,7 @@
                 "Position": "68.28908284505208|63.101833424669636"
             },
             {
-                "num": "148",
+                "num": "149",
                 "text": "(ODILO FC CARTAGENA CB) A. DOMENECH FONTANA: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "08:01",
@@ -10631,7 +10657,7 @@
                 "Position": ""
             },
             {
-                "num": "147",
+                "num": "148",
                 "text": "(ODILO FC CARTAGENA CB) A. GONZÁLEZ PÉREZ: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "08:01",
@@ -10657,7 +10683,7 @@
                 "Position": ""
             },
             {
-                "num": "146",
+                "num": "147",
                 "text": "(ODILO FC CARTAGENA CB) S. UGOCHUKWU: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "08:01",
@@ -10683,7 +10709,7 @@
                 "Position": ""
             },
             {
-                "num": "145",
+                "num": "146",
                 "text": "(ODILO FC CARTAGENA CB) G. GIL GARCIA: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "08:01",
@@ -10709,7 +10735,7 @@
                 "Position": ""
             },
             {
-                "num": "144",
+                "num": "145",
                 "text": "(REAL BETIS BALONCESTO) B. DE BISSCHOP: PÉRDIDA (Pérdidas: 2)",
                 "team": "2",
                 "time": "08:01",
@@ -10735,7 +10761,7 @@
                 "Position": ""
             },
             {
-                "num": "143",
+                "num": "144",
                 "text": "(REAL BETIS BALONCESTO) B. DE BISSCHOP: FALTA Ofensiva (Faltas: 1. Faltas de equipo: 8). Tiros libres: 0",
                 "team": "2",
                 "time": "08:01",
@@ -10761,7 +10787,7 @@
                 "Position": "12.97067403793335|49.088689925822806"
             },
             {
-                "num": "142",
+                "num": "143",
                 "text": "(REAL BETIS BALONCESTO) B. DE BISSCHOP: REBOTE (Rebotes: 1)",
                 "team": "2",
                 "time": "08:17",
@@ -10787,7 +10813,7 @@
                 "Position": ""
             },
             {
-                "num": "141",
+                "num": "142",
                 "text": "(ODILO FC CARTAGENA CB) A. MARTIN MARIN: TIRO DE 3 FALLADO",
                 "team": "1",
                 "time": "08:17",
@@ -10813,7 +10839,7 @@
                 "Position": "63.84695053100586|48.09660972432888"
             },
             {
-                "num": "140",
+                "num": "141",
                 "text": "(REAL BETIS BALONCESTO) R. LOPEZ DE LA TORRE SANCHEZ: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "08:30",
@@ -10839,7 +10865,7 @@
                 "Position": ""
             },
             {
-                "num": "139",
+                "num": "140",
                 "text": "(REAL BETIS BALONCESTO) A. SUÁREZ CASTRO: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "08:30",
@@ -10865,7 +10891,7 @@
                 "Position": ""
             },
             {
-                "num": "138",
+                "num": "139",
                 "text": "(REAL BETIS BALONCESTO) V. ALVES BENITE : Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "08:30",
@@ -10891,7 +10917,7 @@
                 "Position": ""
             },
             {
-                "num": "137",
+                "num": "138",
                 "text": "(REAL BETIS BALONCESTO) D. RADONCIC: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "08:30",
@@ -10917,7 +10943,7 @@
                 "Position": ""
             },
             {
-                "num": "136",
+                "num": "137",
                 "text": "(ODILO FC CARTAGENA CB) S. UGOCHUKWU: REBOTE (Rebotes: 2)",
                 "team": "1",
                 "time": "08:39",
@@ -10943,7 +10969,7 @@
                 "Position": ""
             },
             {
-                "num": "135",
+                "num": "136",
                 "text": "(REAL BETIS BALONCESTO) G. RENFROE: TIRO DE 3 FALLADO",
                 "team": "2",
                 "time": "08:39",
@@ -10969,7 +10995,7 @@
                 "Position": "29.489847819010418|71.78254797103557"
             },
             {
-                "num": "134",
+                "num": "135",
                 "text": "(REAL BETIS BALONCESTO) G. RENFROE: ROBO (Robos: 2)",
                 "team": "2",
                 "time": "08:44",
@@ -10995,7 +11021,7 @@
                 "Position": ""
             },
             {
-                "num": "133",
+                "num": "134",
                 "text": "(ODILO FC CARTAGENA CB) A. DOMENECH FONTANA: PÉRDIDA (Pérdidas: 1)",
                 "team": "1",
                 "time": "08:44",
@@ -11021,7 +11047,7 @@
                 "Position": "82.79541651407878|47.60056962358191"
             },
             {
-                "num": "132",
+                "num": "133",
                 "text": "(REAL BETIS BALONCESTO) R. LOPEZ DE LA TORRE SANCHEZ: FALTA Personal (Faltas: 2. Faltas de equipo: 7). Tiros libres: 0",
                 "team": "2",
                 "time": "08:50",
@@ -11047,7 +11073,7 @@
                 "Position": "83.35068384806316|52.43696415677984"
             },
             {
-                "num": "131",
+                "num": "132",
                 "text": "(REAL BETIS BALONCESTO) R. LOPEZ DE LA TORRE SANCHEZ: FALTA Personal (Faltas: 1. Faltas de equipo: 6). Tiros libres: 0",
                 "team": "2",
                 "time": "08:51",
@@ -11073,7 +11099,7 @@
                 "Position": "81.75429662068684|60.99365802521402"
             },
             {
-                "num": "130",
+                "num": "131",
                 "text": "(ODILO FC CARTAGENA CB) A. MARTIN MARIN: REBOTE (Rebotes: 1)",
                 "team": "1",
                 "time": "09:03",
@@ -11099,7 +11125,7 @@
                 "Position": ""
             },
             {
-                "num": "129",
+                "num": "130",
                 "text": "(ODILO FC CARTAGENA CB) S. UGOCHUKWU: TAPÓN (Tapones: 1)",
                 "team": "1",
                 "time": "09:03",
@@ -11125,7 +11151,7 @@
                 "Position": ""
             },
             {
-                "num": "128",
+                "num": "129",
                 "text": "(REAL BETIS BALONCESTO) R. LOPEZ DE LA TORRE SANCHEZ: TIRO DE 2 FALLADO",
                 "team": "2",
                 "time": "09:03",
@@ -11151,7 +11177,7 @@
                 "Position": "10.541384220123291|39.53991017443069"
             },
             {
-                "num": "127",
+                "num": "128",
                 "text": "(ODILO FC CARTAGENA CB) J. ROGERS GARCIA: TIRO DE 3 ANOTADO (Puntos: 3)",
                 "team": "1",
                 "time": "09:28",
@@ -11177,7 +11203,7 @@
                 "Position": "69.88547643025716|18.086156642183344"
             },
             {
-                "num": "126",
+                "num": "127",
                 "text": "(REAL BETIS BALONCESTO) B. DE BISSCHOP: PÉRDIDA (Pérdidas: 1)",
                 "team": "2",
                 "time": "09:40",
@@ -11203,7 +11229,7 @@
                 "Position": "16.09404722849528|24.410671477622177"
             },
             {
-                "num": "125",
+                "num": "126",
                 "text": "(REAL BETIS BALONCESTO) A. CVETKOVIC: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "10:00",
@@ -11229,7 +11255,7 @@
                 "Position": ""
             },
             {
-                "num": "124",
+                "num": "125",
                 "text": "(REAL BETIS BALONCESTO) R. LOPEZ DE LA TORRE SANCHEZ: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "10:00",
@@ -11255,7 +11281,7 @@
                 "Position": ""
             },
             {
-                "num": "123",
+                "num": "124",
                 "text": "(REAL BETIS BALONCESTO) G. RENFROE: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "10:00",
@@ -11281,7 +11307,7 @@
                 "Position": ""
             },
             {
-                "num": "122",
+                "num": "123",
                 "text": "(REAL BETIS BALONCESTO) M. HUGHES: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "10:00",
@@ -11307,7 +11333,7 @@
                 "Position": ""
             },
             {
-                "num": "121",
+                "num": "122",
                 "text": "(REAL BETIS BALONCESTO) B. OLUMUYIWA: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "10:00",
@@ -11333,7 +11359,7 @@
                 "Position": ""
             },
             {
-                "num": "120",
+                "num": "121",
                 "text": "(REAL BETIS BALONCESTO) D. JELINEK: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "10:00",
@@ -11359,7 +11385,7 @@
                 "Position": ""
             },
             {
-                "num": "119",
+                "num": "120",
                 "text": "(REAL BETIS BALONCESTO) B. DE BISSCHOP: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "10:00",
@@ -11385,7 +11411,7 @@
                 "Position": ""
             },
             {
-                "num": "118",
+                "num": "119",
                 "text": "(REAL BETIS BALONCESTO) V. ALVES BENITE : Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "10:00",
@@ -11411,7 +11437,7 @@
                 "Position": ""
             },
             {
-                "num": "117",
+                "num": "118",
                 "text": "Comienzo del Cuarto 2",
                 "team": null,
                 "time": "10:00",
@@ -11437,7 +11463,7 @@
                 "Position": ""
             },
             {
-                "num": "116",
+                "num": "117",
                 "text": "Fin del Cuarto 1",
                 "team": null,
                 "time": "00:00",
@@ -11463,7 +11489,7 @@
                 "Position": ""
             },
             {
-                "num": "115",
+                "num": "116",
                 "text": "(ODILO FC CARTAGENA CB) A. DOMENECH FONTANA: REBOTE (Rebotes: 1)",
                 "team": "1",
                 "time": "00:01",
@@ -11489,7 +11515,7 @@
                 "Position": ""
             },
             {
-                "num": "114",
+                "num": "115",
                 "text": "(ODILO FC CARTAGENA CB) S. UGOCHUKWU: TIRO DE 3 FALLADO",
                 "team": "1",
                 "time": "00:01",
@@ -11515,7 +11541,7 @@
                 "Position": "66.90091451009114|53.18102572826629"
             },
             {
-                "num": "113",
+                "num": "114",
                 "text": "(REAL BETIS BALONCESTO) D. JELINEK: ASISTENCIA (Asistencias: 1)",
                 "team": "2",
                 "time": "00:24",
@@ -11541,7 +11567,7 @@
                 "Position": ""
             },
             {
-                "num": "112",
+                "num": "113",
                 "text": "(REAL BETIS BALONCESTO) A. SUÁREZ CASTRO: TIRO DE 3 ANOTADO (Puntos: 3)",
                 "team": "2",
                 "time": "00:24",
@@ -11567,7 +11593,7 @@
                 "Position": "3.322921395301819|94.1043667083091"
             },
             {
-                "num": "111",
+                "num": "112",
                 "text": "(REAL BETIS BALONCESTO) A. SUÁREZ CASTRO: REBOTE (Rebotes: 1)",
                 "team": "2",
                 "time": "00:45",
@@ -11593,7 +11619,7 @@
                 "Position": ""
             },
             {
-                "num": "110",
+                "num": "111",
                 "text": "(ODILO FC CARTAGENA CB) A. GARUBA ALARI: TIRO DE 2 FALLADO",
                 "team": "1",
                 "time": "00:45",
@@ -11619,7 +11645,7 @@
                 "Position": "91.19382222493489|54.54513955623546"
             },
             {
-                "num": "109",
+                "num": "110",
                 "text": "(REAL BETIS BALONCESTO) A. CVETKOVIC: PÉRDIDA (Pérdidas: 1)",
                 "team": "2",
                 "time": "00:59",
@@ -11645,7 +11671,7 @@
                 "Position": "17.065765062967937|74.63477926051364"
             },
             {
-                "num": "108",
+                "num": "109",
                 "text": "(REAL BETIS BALONCESTO) A. MARTIN MARIN: ASISTENCIA (Asistencias: 1)",
                 "team": "2",
                 "time": "01:16",
@@ -11671,7 +11697,7 @@
                 "Position": ""
             },
             {
-                "num": "107",
+                "num": "108",
                 "text": "(ODILO FC CARTAGENA CB) S. UGOCHUKWU: TIRO DE 1 ANOTADO (Puntos: 7)",
                 "team": "1",
                 "time": "01:16",
@@ -11697,7 +11723,7 @@
                 "Position": ""
             },
             {
-                "num": "106",
+                "num": "107",
                 "text": "(ODILO FC CARTAGENA CB) S. UGOCHUKWU: TIRO DE 1 ANOTADO (Puntos: 6)",
                 "team": "1",
                 "time": "01:16",
@@ -11723,7 +11749,7 @@
                 "Position": ""
             },
             {
-                "num": "105",
+                "num": "106",
                 "text": "(REAL BETIS BALONCESTO) V. ALVES BENITE : FALTA Personal (Faltas: 1. Faltas de equipo: 5). Tiros libres: 2",
                 "team": "2",
                 "time": "01:16",
@@ -11749,7 +11775,7 @@
                 "Position": "90.9161885579427|49.46071787083403"
             },
             {
-                "num": "104",
+                "num": "105",
                 "text": "(REAL BETIS BALONCESTO) A. CVETKOVIC: TIRO DE 1 ANOTADO (Puntos: 2)",
                 "team": "2",
                 "time": "01:24",
@@ -11775,7 +11801,7 @@
                 "Position": ""
             },
             {
-                "num": "103",
+                "num": "104",
                 "text": "(REAL BETIS BALONCESTO) A. CVETKOVIC: TIRO DE 1 ANOTADO (Puntos: 1)",
                 "team": "2",
                 "time": "01:24",
@@ -11801,7 +11827,7 @@
                 "Position": ""
             },
             {
-                "num": "102",
+                "num": "103",
                 "text": "(ODILO FC CARTAGENA CB) S. UGOCHUKWU: FALTA Personal (Faltas: 1. Faltas de equipo: 4). Tiros libres: 2",
                 "team": "1",
                 "time": "01:24",
@@ -11827,7 +11853,7 @@
                 "Position": "7.001561323801677|49.46071787083403"
             },
             {
-                "num": "101",
+                "num": "102",
                 "text": "(REAL BETIS BALONCESTO) A. CVETKOVIC: ROBO (Robos: 1)",
                 "team": "2",
                 "time": "01:32",
@@ -11853,7 +11879,7 @@
                 "Position": ""
             },
             {
-                "num": "100",
+                "num": "101",
                 "text": "(ODILO FC CARTAGENA CB) S. UGOCHUKWU: PÉRDIDA (Pérdidas: 1)",
                 "team": "1",
                 "time": "01:32",
@@ -11879,7 +11905,7 @@
                 "Position": "80.3661282857259|31.97529082602643"
             },
             {
-                "num": "99",
+                "num": "100",
                 "text": "(ODILO FC CARTAGENA CB) A. GARUBA ALARI: REBOTE (Rebotes: 3)",
                 "team": "1",
                 "time": "01:41",
@@ -11905,7 +11931,7 @@
                 "Position": ""
             },
             {
-                "num": "98",
+                "num": "99",
                 "text": "(ODILO FC CARTAGENA CB) S. UGOCHUKWU: TIRO DE 3 FALLADO",
                 "team": "1",
                 "time": "01:41",
@@ -11931,7 +11957,7 @@
                 "Position": "65.0963020324707|62.23376253817944"
             },
             {
-                "num": "97",
+                "num": "98",
                 "text": "(REAL BETIS BALONCESTO) A. CVETKOVIC: FALTA Personal (Faltas: 1. Faltas de equipo: 4). Tiros libres: 0",
                 "team": "2",
                 "time": "01:54",
@@ -11957,7 +11983,7 @@
                 "Position": "38.09647560119629|74.26275131550241"
             },
             {
-                "num": "96",
+                "num": "97",
                 "text": "(ODILO FC CARTAGENA CB) A. GARUBA ALARI: REBOTE (Rebotes: 2)",
                 "team": "1",
                 "time": "02:00",
@@ -11983,7 +12009,7 @@
                 "Position": ""
             },
             {
-                "num": "95",
+                "num": "96",
                 "text": "(REAL BETIS BALONCESTO) V. ALVES BENITE : TIRO DE 3 FALLADO",
                 "team": "2",
                 "time": "02:00",
@@ -12009,7 +12035,7 @@
                 "Position": "28.587541580200195|17.466104385700632"
             },
             {
-                "num": "94",
+                "num": "95",
                 "text": "(ODILO FC CARTAGENA CB) A. GARUBA ALARI: ASISTENCIA (Asistencias: 1)",
                 "team": "1",
                 "time": "02:24",
@@ -12035,7 +12061,7 @@
                 "Position": ""
             },
             {
-                "num": "93",
+                "num": "94",
                 "text": "(ODILO FC CARTAGENA CB) S. UGOCHUKWU: TIRO DE 3 ANOTADO (Puntos: 5)",
                 "team": "1",
                 "time": "02:24",
@@ -12061,7 +12087,7 @@
                 "Position": "78.07565689086914|89.88802727232589"
             },
             {
-                "num": "92",
+                "num": "93",
                 "text": "(REAL BETIS BALONCESTO) V. ALVES BENITE : TIRO DE 2 ANOTADO (Puntos: 2)",
                 "team": "2",
                 "time": "02:41",
@@ -12087,7 +12113,7 @@
                 "Position": "21.507894198099773|33.46341396899934"
             },
             {
-                "num": "91",
+                "num": "92",
                 "text": "(ODILO FC CARTAGENA CB) J. ROGERS GARCIA: FALTA Personal (Faltas: 1. Faltas de equipo: 3). Tiros libres: 0",
                 "team": "1",
                 "time": "02:42",
@@ -12113,7 +12139,7 @@
                 "Position": "35.32014528910319|50.576807387331705"
             },
             {
-                "num": "90",
+                "num": "91",
                 "text": "(ODILO FC CARTAGENA CB) A. GARUBA ALARI: TIRO DE 2 ANOTADO (Puntos: 2)",
                 "team": "1",
                 "time": "03:01",
@@ -12139,7 +12165,7 @@
                 "Position": "89.80565388997395|57.27336153070978"
             },
             {
-                "num": "89",
+                "num": "90",
                 "text": "(ODILO FC CARTAGENA CB) A. GARUBA ALARI: REBOTE (Rebotes: 1)",
                 "team": "1",
                 "time": "03:01",
@@ -12165,7 +12191,7 @@
                 "Position": ""
             },
             {
-                "num": "88",
+                "num": "89",
                 "text": "(ODILO FC CARTAGENA CB) J. ROGERS GARCIA: TIRO DE 2 FALLADO",
                 "team": "1",
                 "time": "03:01",
@@ -12191,7 +12217,7 @@
                 "Position": "89.80565388997395|57.27336153070978"
             },
             {
-                "num": "87",
+                "num": "88",
                 "text": "(ODILO FC CARTAGENA CB) C. HERMANSON: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "03:17",
@@ -12217,7 +12243,7 @@
                 "Position": ""
             },
             {
-                "num": "86",
+                "num": "87",
                 "text": "(ODILO FC CARTAGENA CB) D. VAN EICK: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "03:17",
@@ -12243,7 +12269,7 @@
                 "Position": ""
             },
             {
-                "num": "85",
+                "num": "86",
                 "text": "(ODILO FC CARTAGENA CB) A. DOMENECH FONTANA: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "03:17",
@@ -12269,7 +12295,7 @@
                 "Position": ""
             },
             {
-                "num": "84",
+                "num": "85",
                 "text": "(ODILO FC CARTAGENA CB) J. ROGERS GARCIA: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "03:17",
@@ -12295,7 +12321,7 @@
                 "Position": ""
             },
             {
-                "num": "83",
+                "num": "84",
                 "text": "(REAL BETIS BALONCESTO) G. RENFROE: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "03:17",
@@ -12321,7 +12347,7 @@
                 "Position": ""
             },
             {
-                "num": "82",
+                "num": "83",
                 "text": "(REAL BETIS BALONCESTO) A. CVETKOVIC: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "03:17",
@@ -12347,7 +12373,7 @@
                 "Position": ""
             },
             {
-                "num": "81",
+                "num": "82",
                 "text": "(REAL BETIS BALONCESTO) A. SUÁREZ CASTRO: TIRO DE 3 FALLADO",
                 "team": "2",
                 "time": "03:20",
@@ -12373,7 +12399,7 @@
                 "Position": "3.3923296133677163|5.933162455863141"
             },
             {
-                "num": "80",
+                "num": "81",
                 "text": "(REAL BETIS BALONCESTO) D. JELINEK: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "03:26",
@@ -12399,7 +12425,7 @@
                 "Position": ""
             },
             {
-                "num": "79",
+                "num": "80",
                 "text": "(REAL BETIS BALONCESTO) R. LOPEZ DE LA TORRE SANCHEZ: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "03:26",
@@ -12425,7 +12451,7 @@
                 "Position": ""
             },
             {
-                "num": "78",
+                "num": "79",
                 "text": "(REAL BETIS BALONCESTO) A. SUÁREZ CASTRO: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "03:26",
@@ -12451,7 +12477,7 @@
                 "Position": ""
             },
             {
-                "num": "77",
+                "num": "78",
                 "text": "(REAL BETIS BALONCESTO) D. RADONCIC: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "03:26",
@@ -12477,7 +12503,7 @@
                 "Position": ""
             },
             {
-                "num": "76",
+                "num": "77",
                 "text": "(ODILO FC CARTAGENA CB) S. UGOCHUKWU: TIRO DE 2 ANOTADO (Puntos: 2)",
                 "team": "1",
                 "time": "03:48",
@@ -12503,7 +12529,7 @@
                 "Position": "90.43032964070638|61.86173459316822"
             },
             {
-                "num": "75",
+                "num": "76",
                 "text": "(ODILO FC CARTAGENA CB) S. UGOCHUKWU: REBOTE (Rebotes: 1)",
                 "team": "1",
                 "time": "03:48",
@@ -12529,7 +12555,7 @@
                 "Position": ""
             },
             {
-                "num": "74",
+                "num": "75",
                 "text": "(ODILO FC CARTAGENA CB) A. MARTIN MARIN: TIRO DE 2 FALLADO",
                 "team": "1",
                 "time": "03:48",
@@ -12555,7 +12581,7 @@
                 "Position": "90.43032964070638|61.86173459316822"
             },
             {
-                "num": "73",
+                "num": "74",
                 "text": "(ODILO FC CARTAGENA CB) D. VAN EICK: REBOTE (Rebotes: 2)",
                 "team": "1",
                 "time": "03:56",
@@ -12581,7 +12607,7 @@
                 "Position": ""
             },
             {
-                "num": "72",
+                "num": "73",
                 "text": "(REAL BETIS BALONCESTO) G. RENFROE: TIRO DE 3 FALLADO",
                 "team": "2",
                 "time": "03:56",
@@ -12607,7 +12633,7 @@
                 "Position": "29.420442581176758|14.117831575109605"
             },
             {
-                "num": "71",
+                "num": "72",
                 "text": "(REAL BETIS BALONCESTO) V. ALVES BENITE : REBOTE (Rebotes: 1)",
                 "team": "2",
                 "time": "04:00",
@@ -12633,7 +12659,7 @@
                 "Position": ""
             },
             {
-                "num": "70",
+                "num": "71",
                 "text": "(REAL BETIS BALONCESTO) D. RADONCIC: TIRO DE 2 FALLADO",
                 "team": "2",
                 "time": "04:00",
@@ -12659,7 +12685,7 @@
                 "Position": "9.430851141611734|16.35001486920296"
             },
             {
-                "num": "69",
+                "num": "70",
                 "text": "(REAL BETIS BALONCESTO) D. RADONCIC: REBOTE (Rebotes: 2)",
                 "team": "2",
                 "time": "04:20",
@@ -12685,7 +12711,7 @@
                 "Position": ""
             },
             {
-                "num": "68",
+                "num": "69",
                 "text": "(ODILO FC CARTAGENA CB) A. MARTIN MARIN: TIRO DE 3 FALLADO",
                 "team": "1",
                 "time": "04:20",
@@ -12711,7 +12737,7 @@
                 "Position": "71.20422999064128|83.81152538543053"
             },
             {
-                "num": "67",
+                "num": "68",
                 "text": "(ODILO FC CARTAGENA CB) A. GONZÁLEZ PÉREZ: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "04:28",
@@ -12737,7 +12763,7 @@
                 "Position": ""
             },
             {
-                "num": "66",
+                "num": "67",
                 "text": "(ODILO FC CARTAGENA CB) S. UGOCHUKWU: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "04:28",
@@ -12763,7 +12789,7 @@
                 "Position": ""
             },
             {
-                "num": "65",
+                "num": "66",
                 "text": "(ODILO FC CARTAGENA CB) A. GARUBA ALARI: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "04:28",
@@ -12789,7 +12815,7 @@
                 "Position": ""
             },
             {
-                "num": "64",
+                "num": "65",
                 "text": "(ODILO FC CARTAGENA CB) A. JORDA RODRIGUEZ: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "04:28",
@@ -12815,7 +12841,7 @@
                 "Position": ""
             },
             {
-                "num": "63",
+                "num": "64",
                 "text": "(ODILO FC CARTAGENA CB) REBOTE (Rebotes: 2)",
                 "team": "1",
                 "time": "04:32",
@@ -12841,7 +12867,7 @@
                 "Position": ""
             },
             {
-                "num": "62",
+                "num": "63",
                 "text": "(ODILO FC CARTAGENA CB) A. JORDA RODRIGUEZ: TIRO DE 3 FALLADO",
                 "team": "1",
                 "time": "04:32",
@@ -12867,7 +12893,7 @@
                 "Position": "78.00624211629231|5.437121289841673"
             },
             {
-                "num": "61",
+                "num": "62",
                 "text": "(REAL BETIS BALONCESTO) R. LOPEZ DE LA TORRE SANCHEZ: TIRO DE 2 ANOTADO (Puntos: 14)",
                 "team": "2",
                 "time": "04:45",
@@ -12893,7 +12919,7 @@
                 "Position": "12.068367004394531|48.34462835433636"
             },
             {
-                "num": "60",
+                "num": "61",
                 "text": "(REAL BETIS BALONCESTO) R. LOPEZ DE LA TORRE SANCHEZ: REBOTE (Rebotes: 3)",
                 "team": "2",
                 "time": "04:45",
@@ -12919,7 +12945,7 @@
                 "Position": ""
             },
             {
-                "num": "59",
+                "num": "60",
                 "text": "(REAL BETIS BALONCESTO) B. OLUMUYIWA: TIRO DE 2 FALLADO",
                 "team": "2",
                 "time": "04:45",
@@ -12945,7 +12971,7 @@
                 "Position": "12.068367004394531|48.34462835433636"
             },
             {
-                "num": "58",
+                "num": "59",
                 "text": "(REAL BETIS BALONCESTO) B. OLUMUYIWA: REBOTE (Rebotes: 1)",
                 "team": "2",
                 "time": "05:02",
@@ -12971,7 +12997,7 @@
                 "Position": ""
             },
             {
-                "num": "57",
+                "num": "58",
                 "text": "(ODILO FC CARTAGENA CB) A. GONZÁLEZ PÉREZ: TIRO DE 2 FALLADO",
                 "team": "1",
                 "time": "05:02",
@@ -12997,7 +13023,7 @@
                 "Position": "93.69251887003581|47.476554627114155"
             },
             {
-                "num": "56",
+                "num": "57",
                 "text": "(REAL BETIS BALONCESTO) M. HUGHES: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "05:09",
@@ -13023,7 +13049,7 @@
                 "Position": ""
             },
             {
-                "num": "55",
+                "num": "56",
                 "text": "(REAL BETIS BALONCESTO) V. ALVES BENITE : Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "05:09",
@@ -13049,7 +13075,7 @@
                 "Position": ""
             },
             {
-                "num": "54",
+                "num": "55",
                 "text": "(REAL BETIS BALONCESTO) B. OLUMUYIWA: FALTA Personal (Faltas: 1. Faltas de equipo: 3). Tiros libres: 0",
                 "team": "2",
                 "time": "05:09",
@@ -13075,7 +13101,7 @@
                 "Position": "84.600035349528|52.43696415677984"
             },
             {
-                "num": "53",
+                "num": "54",
                 "text": "(ODILO FC CARTAGENA CB) A. MARTIN MARIN: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "05:19",
@@ -13101,7 +13127,7 @@
                 "Position": ""
             },
             {
-                "num": "52",
+                "num": "53",
                 "text": "(ODILO FC CARTAGENA CB) G. BLAT BAEZA: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "05:19",
@@ -13127,7 +13153,7 @@
                 "Position": ""
             },
             {
-                "num": "51",
+                "num": "52",
                 "text": "(REAL BETIS BALONCESTO) D. RADONCIC: FALTA Personal (Faltas: 1. Faltas de equipo: 2). Tiros libres: 0",
                 "team": "2",
                 "time": "05:19",
@@ -13153,7 +13179,7 @@
                 "Position": "80.92139561971028|52.18894552677236"
             },
             {
-                "num": "50",
+                "num": "51",
                 "text": "(REAL BETIS BALONCESTO) G. RENFROE: ASISTENCIA (Asistencias: 2)",
                 "team": "2",
                 "time": "05:29",
@@ -13179,7 +13205,7 @@
                 "Position": ""
             },
             {
-                "num": "49",
+                "num": "50",
                 "text": "(REAL BETIS BALONCESTO) D. RADONCIC: TIRO DE 3 ANOTADO (Puntos: 3)",
                 "team": "2",
                 "time": "05:29",
@@ -13203,6 +13229,32 @@
                 "logParam9": "",
                 "logParam10": "",
                 "Position": "7.070969740549724|4.44504108834774"
+            },
+            {
+                "num": "49",
+                "text": "(ODILO FC CARTAGENA CB) D. VAN EICK: PÉRDIDA (Pérdidas: 2)",
+                "team": "1",
+                "time": "05:45",
+                "deleted": null,
+                "scoreA": null,
+                "scoreB": null,
+                "quarter": "1",
+                "logo": "https://imagenes.feb.es/foto.aspx?c=2616999",
+                "idPlayer": "2616999",
+                "idLicense": "10436292",
+                "idTeam": "951078",
+                "action": "lose",
+                "logParam1": "00000000-0000-0001-0000-000002470258",
+                "logParam2": "0",
+                "logParam3": "",
+                "logParam4": "10436292",
+                "logParam5": "",
+                "logParam6": "",
+                "logParam7": "",
+                "logParam8": "26",
+                "logParam9": "",
+                "logParam10": "",
+                "Position": "90.63855489095052|60.24960213519157"
             },
             {
                 "num": "48",
@@ -14642,11 +14694,11 @@
                         "rd": "5",
                         "rt": "8",
                         "rf": "6",
-                        "to": "3",
+                        "to": "4",
                         "st": "2",
                         "ind": null,
                         "pllss": "-12",
-                        "val": "17",
+                        "val": "16",
                         "assist": "1",
                         "reb": "8",
                         "pf": "3",
