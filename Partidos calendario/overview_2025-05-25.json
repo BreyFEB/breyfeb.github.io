@@ -26,22 +26,22 @@
                         "Place": "PALACIO DE LOS DEPORTES DE CARTAGENA",
                         "TeamAID": 951078,
                         "TeamA": "ODILO FC CARTAGENA CB",
-                        "ScoreA": 60,
+                        "ScoreA": 70,
                         "TeamACode": "30018800",
                         "TeamAClubCode": "300188",
                         "TeamBID": 950951,
                         "TeamB": "REAL BETIS BALONCESTO",
                         "TeamBCode": "41000600",
                         "TeamBClubCode": "410006",
-                        "ScoreB": 71,
+                        "ScoreB": 80,
                         "StartTime": "2025-05-25T12:30:00",
                         "StartTimeUTC": "2025-05-25T10:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951078&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950951&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:29:01",
+                        "Quarter": 4,
+                        "Time": "00:34:08",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -58,8 +58,13 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "20",
-                                "scoreB": "23"
+                                "scoreA": "22",
+                                "scoreB": "26"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "8",
+                                "scoreB": "6"
                             }
                         ],
                         "Season": null,
@@ -106,7 +111,7 @@
                 "id": "118",
                 "name": "Segunda FEB",
                 "gamescount": 2,
-                "nowplaying": 1,
+                "nowplaying": 0,
                 "order": 3,
                 "GAMES": [
                     {
@@ -121,7 +126,7 @@
                         "Place": "PABELLÓN DE DEPORTES JAVIER IMBRODA ORTIZ",
                         "TeamAID": 950954,
                         "TeamA": "MELILLA CIUDAD DEL DEPORTE",
-                        "ScoreA": 104,
+                        "ScoreA": 107,
                         "TeamACode": "52004200",
                         "TeamAClubCode": "520042",
                         "TeamBID": 950733,
@@ -136,8 +141,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950954&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950733&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:45",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -158,7 +163,7 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "20",
+                                "scoreA": "23",
                                 "scoreB": "11"
                             }
                         ],
@@ -171,7 +176,7 @@
                 "id": "111",
                 "name": "Tercera FEB",
                 "gamescount": 10,
-                "nowplaying": 2,
+                "nowplaying": 1,
                 "order": 6,
                 "GAMES": [
                     {
@@ -201,8 +206,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950648&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951062&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:03",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -242,14 +247,14 @@
                         "Place": "PABELLÓN DE DEPORTES PRESIDENTE ADOLFO SUÁREZ",
                         "TeamAID": 950872,
                         "TeamA": "CÍRCULO GIJÓN NOEGA BALONCESTO",
-                        "ScoreA": 68,
+                        "ScoreA": 78,
                         "TeamACode": "33032000",
                         "TeamAClubCode": "330320",
                         "TeamBID": 951498,
                         "TeamB": "CB ARIDANE",
                         "TeamBCode": "38003721",
                         "TeamBClubCode": "380037",
-                        "ScoreB": 61,
+                        "ScoreB": 65,
                         "StartTime": "2025-05-25T12:30:00",
                         "StartTimeUTC": "2025-05-25T10:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -257,7 +262,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950872&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951498&ti=1",
                         "Quarter": 4,
-                        "Time": "00:30:46",
+                        "Time": "00:35:50",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -279,8 +284,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "3",
-                                "scoreB": "0"
+                                "scoreA": "13",
+                                "scoreB": "4"
                             }
                         ],
                         "Season": null,
@@ -292,7 +297,7 @@
                 "id": "211",
                 "name": "F.Ascenso Lf2",
                 "gamescount": 10,
-                "nowplaying": 2,
+                "nowplaying": 1,
                 "order": 10,
                 "GAMES": [
                     {
@@ -307,14 +312,14 @@
                         "Place": "PABELLÓN DEPORTIVO INSULAR LA PATERNA",
                         "TeamAID": 951719,
                         "TeamA": "DON MARTÍN - DRAFT GRAMENET",
-                        "ScoreA": 31,
+                        "ScoreA": 34,
                         "TeamACode": "08051100",
                         "TeamAClubCode": "080511",
                         "TeamBID": 952346,
                         "TeamB": "FEMXA CELTA UVIGO",
                         "TeamBCode": "36000102",
                         "TeamBClubCode": "360001",
-                        "ScoreB": 37,
+                        "ScoreB": 44,
                         "StartTime": "2025-05-25T12:00:00",
                         "StartTimeUTC": "2025-05-25T10:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -322,7 +327,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951719&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952346&ti=1",
                         "Quarter": 3,
-                        "Time": "00:22:19",
+                        "Time": "00:29:08",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -339,8 +344,8 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "1",
-                                "scoreB": "2"
+                                "scoreA": "4",
+                                "scoreB": "9"
                             }
                         ],
                         "Season": null,
@@ -373,8 +378,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=964328&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=953175&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:43",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
