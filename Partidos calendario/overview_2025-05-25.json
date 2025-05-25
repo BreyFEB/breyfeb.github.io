@@ -82,14 +82,14 @@
                         "Place": "PABELLÓN MUNICIPAL DE DEPORTES (PALENCIA)",
                         "TeamAID": 951848,
                         "TeamA": "SÚPER AGROPAL PALENCIA",
-                        "ScoreA": 51,
+                        "ScoreA": 59,
                         "TeamACode": "34000707",
                         "TeamAClubCode": "340007",
                         "TeamBID": 952033,
                         "TeamB": "MONBUS OBRADOIRO",
                         "TeamBCode": "15040900",
                         "TeamBClubCode": "150409",
-                        "ScoreB": 49,
+                        "ScoreB": 59,
                         "StartTime": "2025-05-25T20:00:00",
                         "StartTimeUTC": "2025-05-25T18:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -97,7 +97,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951848&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952033&ti=1",
                         "Quarter": 3,
-                        "Time": "00:24:16",
+                        "Time": "00:29:24",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -114,8 +114,8 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "8",
-                                "scoreB": "8"
+                                "scoreA": "16",
+                                "scoreB": "18"
                             }
                         ],
                         "Season": null,
