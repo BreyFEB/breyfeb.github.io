@@ -25,16 +25,44 @@ let venueSet = new Set();
  * 1) OBTENER LA LISTA DE ARCHIVOS JSON DESDE GITHUB
  *********************************/
 async function fetchMatchFiles() {
-  const apiUrl = "https://api.github.com/repos/emebullon/cadete2025/contents/Partidos calendario"; // Ajusta si están en subcarpeta
+  const apiUrl = "https://api.github.com/repos/emebullon/cadete2025/contents/Partidos%20calendario";
   try {
-    const response = await fetch(apiUrl);
+    // Intentar con el API de GitHub primero
+    const response = await fetch(apiUrl, {
+      headers: {
+        'Accept': 'application/vnd.github.v3+json',
+        // Añadir un User-Agent para evitar problemas con la API de GitHub
+        'User-Agent': 'Cadete2025-WebApp'
+      }
+    });
+    
+    if (!response.ok) {
+      throw new Error(`GitHub API responded with status: ${response.status}`);
+    }
+    
     const files = await response.json();
     // Filtrar solo archivos .json
     const jsonFiles = files.filter(file => file.name.endsWith(".json"));
     return jsonFiles.map(file => file.download_url);
   } catch (error) {
-    console.error("Error al obtener la lista de archivos:", error);
-    return [];
+    console.error("Error al obtener la lista de archivos desde GitHub:", error);
+    
+    // Fallback: Intentar cargar desde el directorio local
+    try {
+      const localResponse = await fetch('/JSONs/');
+      const text = await localResponse.text();
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(text, 'text/html');
+      const links = Array.from(doc.querySelectorAll('a'));
+      const jsonFiles = links
+        .map(link => link.href)
+        .filter(href => href.endsWith('.json'))
+        .map(href => `/JSONs/${href.split('/').pop()}`);
+      return jsonFiles;
+    } catch (localError) {
+      console.error("Error al obtener la lista de archivos locales:", localError);
+      return [];
+    }
   }
 }
 
@@ -45,6 +73,21 @@ async function loadMatchesFromRepo() {
   const urls = await fetchMatchFiles();
   const allMatches = [];
 
+  if (urls.length === 0) {
+    console.error("No se pudieron cargar los archivos de partidos");
+    // Mostrar mensaje de error al usuario
+    const matchesList = document.getElementById("matchesList");
+    if (matchesList) {
+      matchesList.innerHTML = `
+        <div class="error-message">
+          <p>No se pudieron cargar los partidos. Por favor, intente recargar la página.</p>
+          <p>Si el problema persiste, contacte al administrador.</p>
+        </div>
+      `;
+    }
+    return;
+  }
+
   // Obtener la fecha actual en formato DD-MM-YYYY
   const today = new Date();
   const currentDay = today.getDate().toString().padStart(2, '0');
@@ -54,7 +97,17 @@ async function loadMatchesFromRepo() {
 
   for (const url of urls) {
     try {
-      const resp = await fetch(url);
+      const resp = await fetch(url, {
+        headers: {
+          'Accept': 'application/json',
+          'User-Agent': 'Cadete2025-WebApp'
+        }
+      });
+      
+      if (!resp.ok) {
+        throw new Error(`Failed to fetch ${url}: ${resp.status}`);
+      }
+      
       const data = await resp.json();
       const matchesArray = parseMatchesData(data);
       allMatches.push(...matchesArray);
