@@ -26,22 +26,22 @@
                         "Place": "PALACIO MUNICIPAL DE DEPORTES SAN PABLO",
                         "TeamAID": 950951,
                         "TeamA": "REAL BETIS BALONCESTO",
-                        "ScoreA": 58,
+                        "ScoreA": 69,
                         "TeamACode": "41000600",
                         "TeamAClubCode": "410006",
                         "TeamBID": 951078,
                         "TeamB": "ODILO FC CARTAGENA CB",
                         "TeamBCode": "30018800",
                         "TeamBClubCode": "300188",
-                        "ScoreB": 44,
+                        "ScoreB": 54,
                         "StartTime": "2025-05-30T20:30:00",
                         "StartTimeUTC": "2025-05-30T18:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950951&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951078&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:23:42",
+                        "Quarter": 4,
+                        "Time": "00:30:00",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -58,8 +58,13 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "10",
-                                "scoreB": "8"
+                                "scoreA": "21",
+                                "scoreB": "18"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "0",
+                                "scoreB": "0"
                             }
                         ],
                         "Season": null,
