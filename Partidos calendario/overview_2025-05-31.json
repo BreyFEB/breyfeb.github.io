@@ -26,14 +26,14 @@
                         "Place": "POLIDEPORTIVO DE SON MOIX",
                         "TeamAID": 950682,
                         "TeamA": "FIBWI PALMA",
-                        "ScoreA": 63,
+                        "ScoreA": 71,
                         "TeamACode": "07003425",
                         "TeamAClubCode": "070034",
                         "TeamBID": 950923,
                         "TeamB": "LOBE HUESCA LA MAGIA",
                         "TeamBCode": "22000100",
                         "TeamBClubCode": "220001",
-                        "ScoreB": 60,
+                        "ScoreB": 62,
                         "StartTime": "2025-05-31T18:30:00",
                         "StartTimeUTC": "2025-05-31T16:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -41,7 +41,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950682&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950923&ti=1",
                         "Quarter": 4,
-                        "Time": "00:33:51",
+                        "Time": "00:37:26",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -63,8 +63,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "10",
-                                "scoreB": "10"
+                                "scoreA": "18",
+                                "scoreB": "12"
                             }
                         ],
                         "Season": null,
@@ -82,30 +82,35 @@
                         "Place": "Polideportivo Sa Pedrera",
                         "TeamAID": 950733,
                         "TeamA": "CLASS BASQUET SANT ANTONI",
-                        "ScoreA": 16,
+                        "ScoreA": 33,
                         "TeamACode": "07020127",
                         "TeamAClubCode": "070201",
                         "TeamBID": 950954,
                         "TeamB": "MELILLA CIUDAD DEL DEPORTE",
                         "TeamBCode": "52004200",
                         "TeamBClubCode": "520042",
-                        "ScoreB": 11,
+                        "ScoreB": 19,
                         "StartTime": "2025-05-31T20:00:00",
                         "StartTimeUTC": "2025-05-31T18:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950733&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950954&ti=1",
-                        "Quarter": 1,
-                        "Time": "00:07:08",
+                        "Quarter": 2,
+                        "Time": "00:11:40",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
                             {
                                 "n": "1",
-                                "scoreA": "16",
-                                "scoreB": "11"
+                                "scoreA": "29",
+                                "scoreB": "17"
+                            },
+                            {
+                                "n": "2",
+                                "scoreA": "4",
+                                "scoreB": "2"
                             }
                         ],
                         "Season": null,
