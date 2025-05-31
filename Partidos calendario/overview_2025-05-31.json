@@ -82,14 +82,14 @@
                         "Place": "Polideportivo Sa Pedrera",
                         "TeamAID": 950733,
                         "TeamA": "CLASS BASQUET SANT ANTONI",
-                        "ScoreA": 89,
+                        "ScoreA": 93,
                         "TeamACode": "07020127",
                         "TeamAClubCode": "070201",
                         "TeamBID": 950954,
                         "TeamB": "MELILLA CIUDAD DEL DEPORTE",
                         "TeamBCode": "52004200",
                         "TeamBClubCode": "520042",
-                        "ScoreB": 67,
+                        "ScoreB": 76,
                         "StartTime": "2025-05-31T20:00:00",
                         "StartTimeUTC": "2025-05-31T18:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -97,7 +97,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950733&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950954&ti=1",
                         "Quarter": 5,
-                        "Time": "00:40:24",
+                        "Time": "00:45:00",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -124,8 +124,8 @@
                             },
                             {
                                 "n": "5",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "4",
+                                "scoreB": "9"
                             }
                         ],
                         "Season": null,
