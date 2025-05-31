@@ -11,7 +11,7 @@
                 "id": "118",
                 "name": "Segunda FEB",
                 "gamescount": 2,
-                "nowplaying": 1,
+                "nowplaying": 0,
                 "order": 3,
                 "GAMES": [
                     {
@@ -97,8 +97,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950733&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950954&ti=1",
                         "Quarter": 5,
-                        "Time": "00:45:00",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
