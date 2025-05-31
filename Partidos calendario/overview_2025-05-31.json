@@ -11,7 +11,7 @@
                 "id": "118",
                 "name": "Segunda FEB",
                 "gamescount": 2,
-                "nowplaying": 0,
+                "nowplaying": 1,
                 "order": 3,
                 "GAMES": [
                     {
@@ -26,26 +26,32 @@
                         "Place": "POLIDEPORTIVO DE SON MOIX",
                         "TeamAID": 950682,
                         "TeamA": "FIBWI PALMA",
-                        "ScoreA": 0,
+                        "ScoreA": 12,
                         "TeamACode": "07003425",
                         "TeamAClubCode": "070034",
                         "TeamBID": 950923,
                         "TeamB": "LOBE HUESCA LA MAGIA",
                         "TeamBCode": "22000100",
                         "TeamBClubCode": "220001",
-                        "ScoreB": 0,
+                        "ScoreB": 11,
                         "StartTime": "2025-05-31T18:30:00",
                         "StartTimeUTC": "2025-05-31T16:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=950682&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950923&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:06:29",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "12",
+                                "scoreB": "11"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
