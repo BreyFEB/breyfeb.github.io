@@ -11,7 +11,7 @@
                 "id": "255",
                 "name": "CE Clubes Inf Fem",
                 "gamescount": 48,
-                "nowplaying": 4,
+                "nowplaying": 2,
                 "order": 21,
                 "GAMES": [
                     {
@@ -250,14 +250,14 @@
                         "Place": "PABELLÓN MUNICIPAL PLUS ULTRA",
                         "TeamAID": 963453,
                         "TeamA": "CELTA FEMXA ZORKA",
-                        "ScoreA": 41,
+                        "ScoreA": 43,
                         "TeamACode": "36000195",
                         "TeamAClubCode": "360001",
                         "TeamBID": 955644,
                         "TeamB": "HOMS UE MATARÓ - IAF",
                         "TeamBCode": "08002725",
                         "TeamBClubCode": "080027",
-                        "ScoreB": 52,
+                        "ScoreB": 57,
                         "StartTime": "2025-06-01T12:30:00",
                         "StartTimeUTC": "2025-06-01T10:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -265,7 +265,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=963453&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=955644&ti=1",
                         "Quarter": 4,
-                        "Time": "00:36:33",
+                        "Time": "00:39:52",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -287,8 +287,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "10",
-                                "scoreB": "3"
+                                "scoreA": "12",
+                                "scoreB": "8"
                             }
                         ],
                         "Season": null,
@@ -306,22 +306,22 @@
                         "Place": "POLIDEPORTIVO DIEGO LOBATO",
                         "TeamAID": 965647,
                         "TeamA": "GESTIÓN  Y CALOR CORDOBASKET",
-                        "ScoreA": 31,
+                        "ScoreA": 38,
                         "TeamACode": "14300197",
                         "TeamAClubCode": "143001",
                         "TeamBID": 956376,
                         "TeamB": "BARÇA CBS",
                         "TeamBCode": "08004219",
                         "TeamBClubCode": "080042",
-                        "ScoreB": 49,
+                        "ScoreB": 59,
                         "StartTime": "2025-06-01T12:30:00",
                         "StartTimeUTC": "2025-06-01T10:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=965647&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=956376&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:27:42",
+                        "Quarter": 4,
+                        "Time": "00:34:52",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -338,8 +338,13 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "7",
-                                "scoreB": "12"
+                                "scoreA": "9",
+                                "scoreB": "18"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "5",
+                                "scoreB": "4"
                             }
                         ],
                         "Season": null,
@@ -372,8 +377,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=955643&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=965301&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:23",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -413,14 +418,14 @@
                         "Place": "COMPLEJO DEPORTIVO HERNÁNDEZ ALBARRACÍN",
                         "TeamAID": 965110,
                         "TeamA": "CB CIUTAT D'INCA FETICHE A ",
-                        "ScoreA": 68,
+                        "ScoreA": 74,
                         "TeamACode": "07036119",
                         "TeamAClubCode": "070361",
                         "TeamBID": 960293,
                         "TeamB": "EM PIELAGOS-A",
                         "TeamBCode": "39010010",
                         "TeamBClubCode": "390100",
-                        "ScoreB": 27,
+                        "ScoreB": 33,
                         "StartTime": "2025-06-01T12:30:00",
                         "StartTimeUTC": "2025-06-01T10:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -428,8 +433,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=965110&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=960293&ti=1",
                         "Quarter": 4,
-                        "Time": "00:36:01",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -450,8 +455,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "16",
-                                "scoreB": "5"
+                                "scoreA": "22",
+                                "scoreB": "11"
                             }
                         ],
                         "Season": null,
@@ -1863,7 +1868,7 @@
                 "id": "254",
                 "name": "CE Clubes Inf Masc",
                 "gamescount": 48,
-                "nowplaying": 4,
+                "nowplaying": 2,
                 "order": 22,
                 "GAMES": [
                     {
@@ -2102,14 +2107,14 @@
                         "Place": "POLIDEPORTIVO ANTONIO GIL HERNÁNDEZ",
                         "TeamAID": 963871,
                         "TeamA": "EM EL OLIVAR A1",
-                        "ScoreA": 49,
+                        "ScoreA": 62,
                         "TeamACode": "50000769",
                         "TeamAClubCode": "500007",
                         "TeamBID": 963244,
                         "TeamB": "CYD-LEONESA - COL. LEONÉS A",
                         "TeamBCode": "24031003",
                         "TeamBClubCode": "240310",
-                        "ScoreB": 75,
+                        "ScoreB": 88,
                         "StartTime": "2025-06-01T12:30:00",
                         "StartTimeUTC": "2025-06-01T10:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -2117,7 +2122,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=963871&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=963244&ti=1",
                         "Quarter": 4,
-                        "Time": "00:30:00",
+                        "Time": "00:38:53",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -2139,8 +2144,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "13",
+                                "scoreB": "13"
                             }
                         ],
                         "Season": null,
@@ -2173,8 +2178,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=953909&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=964324&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:50",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -2214,14 +2219,14 @@
                         "Place": "POLIDEPORTIVO ANDRÉS ESTRADA",
                         "TeamAID": 953274,
                         "TeamA": "CBI ELCHE A",
-                        "ScoreA": 45,
+                        "ScoreA": 50,
                         "TeamACode": "03003101",
                         "TeamAClubCode": "030031",
                         "TeamBID": 955053,
                         "TeamB": "BARÇA",
                         "TeamBCode": "08000305",
                         "TeamBClubCode": "080003",
-                        "ScoreB": 72,
+                        "ScoreB": 74,
                         "StartTime": "2025-06-01T12:30:00",
                         "StartTimeUTC": "2025-06-01T10:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -2229,8 +2234,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=953274&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=955053&ti=1",
                         "Quarter": 4,
-                        "Time": "00:36:20",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -2251,8 +2256,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "10",
-                                "scoreB": "13"
+                                "scoreA": "15",
+                                "scoreB": "15"
                             }
                         ],
                         "Season": null,
@@ -2270,14 +2275,14 @@
                         "Place": "PABELLÓN NUEVO FRONTÓN PALOS",
                         "TeamAID": 961887,
                         "TeamA": "NEXO 8 ETT NOVOBASKET",
-                        "ScoreA": 46,
+                        "ScoreA": 56,
                         "TeamACode": "36024106",
                         "TeamAClubCode": "360241",
                         "TeamBID": 955052,
                         "TeamB": "JOVENTUT BADALONA  A",
                         "TeamBCode": "08000507",
                         "TeamBClubCode": "080005",
-                        "ScoreB": 66,
+                        "ScoreB": 75,
                         "StartTime": "2025-06-01T12:30:00",
                         "StartTimeUTC": "2025-06-01T10:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -2285,7 +2290,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=961887&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=955052&ti=1",
                         "Quarter": 4,
-                        "Time": "00:31:01",
+                        "Time": "00:36:45",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -2307,8 +2312,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "2",
-                                "scoreB": "0"
+                                "scoreA": "12",
+                                "scoreB": "9"
                             }
                         ],
                         "Season": null,
