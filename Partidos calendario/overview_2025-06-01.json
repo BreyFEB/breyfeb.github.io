@@ -11,7 +11,7 @@
                 "id": "255",
                 "name": "CE Clubes Inf Fem",
                 "gamescount": 48,
-                "nowplaying": 3,
+                "nowplaying": 1,
                 "order": 21,
                 "GAMES": [
                     {
@@ -754,14 +754,14 @@
                         "Place": "PALACIO DE LOS DEPORTES CAROLINA MARÍN",
                         "TeamAID": 963886,
                         "TeamA": "CASADEMONT ZARAGOZA A",
-                        "ScoreA": 47,
+                        "ScoreA": 62,
                         "TeamACode": "50031316",
                         "TeamAClubCode": "500313",
                         "TeamBID": 952711,
                         "TeamB": "VALENCIA BASKET ",
                         "TeamBCode": "46000217",
                         "TeamBClubCode": "460002",
-                        "ScoreB": 62,
+                        "ScoreB": 73,
                         "StartTime": "2025-06-01T19:00:00",
                         "StartTimeUTC": "2025-06-01T17:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -769,7 +769,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=963886&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952711&ti=1",
                         "Quarter": 4,
-                        "Time": "00:33:49",
+                        "Time": "00:39:51",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -791,8 +791,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "6",
-                                "scoreB": "4"
+                                "scoreA": "21",
+                                "scoreB": "15"
                             }
                         ],
                         "Season": null,
@@ -825,8 +825,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=970692&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=958235&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:49",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -881,8 +881,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=963882&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=975697&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:33",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -2036,7 +2036,7 @@
                 "id": "254",
                 "name": "CE Clubes Inf Masc",
                 "gamescount": 48,
-                "nowplaying": 3,
+                "nowplaying": 0,
                 "order": 22,
                 "GAMES": [
                     {
@@ -2738,8 +2738,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=969512&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=963406&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:21",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -2794,8 +2794,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=977179&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=962213&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:59",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -2898,7 +2898,7 @@
                         "TeamB": "FUNDACION ARO REAL BETIS BALONCESTO",
                         "TeamBCode": "41022305",
                         "TeamBClubCode": "410223",
-                        "ScoreB": 63,
+                        "ScoreB": 70,
                         "StartTime": "2025-06-01T19:00:00",
                         "StartTimeUTC": "2025-06-01T17:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -2906,8 +2906,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=964730&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=973110&ti=1",
                         "Quarter": 4,
-                        "Time": "00:38:02",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -2929,7 +2929,7 @@
                             {
                                 "n": "4",
                                 "scoreA": "11",
-                                "scoreB": "14"
+                                "scoreB": "21"
                             }
                         ],
                         "Season": null,
