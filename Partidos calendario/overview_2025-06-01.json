@@ -11,7 +11,7 @@
                 "id": "255",
                 "name": "CE Clubes Inf Fem",
                 "gamescount": 48,
-                "nowplaying": 1,
+                "nowplaying": 0,
                 "order": 21,
                 "GAMES": [
                     {
@@ -769,8 +769,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=963886&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952711&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:51",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
