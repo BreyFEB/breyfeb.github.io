@@ -11,7 +11,7 @@
                 "id": "255",
                 "name": "CE Clubes Inf Fem",
                 "gamescount": 48,
-                "nowplaying": 2,
+                "nowplaying": 0,
                 "order": 21,
                 "GAMES": [
                     {
@@ -41,8 +41,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=956579&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=964746&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:36",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -138,14 +138,14 @@
                         "Place": "POLIDEPORTIVO DIEGO LOBATO",
                         "TeamAID": 971006,
                         "TeamA": "UNIBASKET GRANATE LOGROÑO",
-                        "ScoreA": 41,
+                        "ScoreA": 44,
                         "TeamACode": "26027109",
                         "TeamAClubCode": "260271",
                         "TeamBID": 961030,
                         "TeamB": "C.B. LAS ROZAS \"A\"",
                         "TeamBCode": "28001785",
                         "TeamBClubCode": "280017",
-                        "ScoreB": 49,
+                        "ScoreB": 54,
                         "StartTime": "2025-06-01T10:30:00",
                         "StartTimeUTC": "2025-06-01T08:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -153,8 +153,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=971006&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=961030&ti=1",
                         "Quarter": 4,
-                        "Time": "00:36:25",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -175,8 +175,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "7",
-                                "scoreB": "6"
+                                "scoreA": "10",
+                                "scoreB": "11"
                             }
                         ],
                         "Season": null,
@@ -244,7 +244,7 @@
                         "Competition": "C ESP CLUBES INF FEM",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2471430,
                         "GameCode": null,
                         "Place": "PABELLÓN MUNICIPAL PLUS ULTRA",
@@ -1784,7 +1784,7 @@
                 "id": "254",
                 "name": "CE Clubes Inf Masc",
                 "gamescount": 48,
-                "nowplaying": 1,
+                "nowplaying": 0,
                 "order": 22,
                 "GAMES": [
                     {
@@ -1926,8 +1926,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=965290&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=963874&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:53",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -2087,7 +2087,7 @@
                         "Competition": "C ESP CLUBES INF MASC",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2471613,
                         "GameCode": null,
                         "Place": "POLIDEPORTIVO ANDRÉS ESTRADA",
@@ -2122,7 +2122,7 @@
                         "Competition": "C ESP CLUBES INF MASC",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2471630,
                         "GameCode": null,
                         "Place": "PABELLÓN NUEVO FRONTÓN PALOS",
