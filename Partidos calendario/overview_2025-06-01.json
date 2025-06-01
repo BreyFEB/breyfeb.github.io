@@ -11,7 +11,7 @@
                 "id": "255",
                 "name": "CE Clubes Inf Fem",
                 "gamescount": 48,
-                "nowplaying": 2,
+                "nowplaying": 1,
                 "order": 21,
                 "GAMES": [
                     {
@@ -545,8 +545,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=952723&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=976039&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:57",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -657,8 +657,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=959719&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=959479&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:14",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -712,12 +712,18 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=963223&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=963974&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:00:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -797,7 +803,7 @@
                         "Competition": "C ESP CLUBES INF FEM",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2471449,
                         "GameCode": null,
                         "Place": "POLIDEPORTIVO DIEGO LOBATO",
@@ -1952,7 +1958,7 @@
                 "id": "254",
                 "name": "CE Clubes Inf Masc",
                 "gamescount": 48,
-                "nowplaying": 2,
+                "nowplaying": 1,
                 "order": 22,
                 "GAMES": [
                     {
@@ -2430,8 +2436,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=956584&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=964492&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:57",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -2486,8 +2492,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=970475&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=964200&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:36",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -2633,7 +2639,7 @@
                         "Competition": "C ESP CLUBES INF MASC",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2471637,
                         "GameCode": null,
                         "Place": "POLIDEPORTIVO ANDRÉS ESTRADA",
@@ -2723,12 +2729,18 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=952724&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=958271&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:00:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -2738,7 +2750,7 @@
                         "Competition": "C ESP CLUBES INF MASC",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2471625,
                         "GameCode": null,
                         "Place": "PABELLÓN NUEVO FRONTÓN PALOS",
