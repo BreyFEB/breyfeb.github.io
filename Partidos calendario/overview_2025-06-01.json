@@ -1868,7 +1868,7 @@
                 "id": "254",
                 "name": "CE Clubes Inf Masc",
                 "gamescount": 48,
-                "nowplaying": 1,
+                "nowplaying": 0,
                 "order": 22,
                 "GAMES": [
                     {
@@ -2122,8 +2122,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=963871&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=963244&ti=1",
                         "Quarter": 4,
-                        "Time": "00:40:00",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
