@@ -471,7 +471,11 @@ function renderTable(data, mode = "totales") {
     row.innerHTML = `
       <td>${rank}</td>
       <td>${player.dorsal}</td>
-      <td><img src="${playerPhoto}" alt="${formattedName}" class="player-photo" onerror="this.src='player_placeholder.png'"></td>
+      <td>
+        <a href="player_profile.html?player_id=${player.id}" title="Ver perfil detallado">
+          <img src="${playerPhoto}" alt="${formattedName}" class="player-photo" onerror="this.src='player_placeholder.png'">
+        </a>
+      </td>
       <td class="player-name" onclick='showPlayerMatches(${JSON.stringify(player).replace(/'/g, "\\'")})'
           title="${formattedName}">${formattedName}</td>
       <td class="team-name" data-fullname="${teamName}">${shortTeamName}</td>
