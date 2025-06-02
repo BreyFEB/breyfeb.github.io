@@ -11,7 +11,7 @@
                 "id": "255",
                 "name": "CE Clubes Inf Fem",
                 "gamescount": 48,
-                "nowplaying": 0,
+                "nowplaying": 1,
                 "order": 21,
                 "GAMES": [
                     {
@@ -40,12 +40,18 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=971006&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=956376&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:00:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -1140,7 +1146,7 @@
                 "id": "254",
                 "name": "CE Clubes Inf Masc",
                 "gamescount": 48,
-                "nowplaying": 0,
+                "nowplaying": 1,
                 "order": 22,
                 "GAMES": [
                     {
@@ -1169,12 +1175,18 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=976015&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=963871&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:00:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
