@@ -11,7 +11,7 @@
                 "id": "255",
                 "name": "CE Clubes Inf Fem",
                 "gamescount": 48,
-                "nowplaying": 1,
+                "nowplaying": 2,
                 "order": 21,
                 "GAMES": [
                     {
@@ -545,8 +545,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=959479&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=963886&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:51",
-                        "Status": 2,
+                        "Time": "00:40:00",
+                        "Status": 6,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -727,7 +727,7 @@
                         "Competition": "C ESP CLUBES INF FEM",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "2",
+                        "Stage": "0",
                         "ID": 2471438,
                         "GameCode": null,
                         "Place": "PALACIO DE LOS DEPORTES CAROLINA MARÍN",
@@ -782,12 +782,18 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=952723&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=975697&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:00:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -797,7 +803,7 @@
                         "Competition": "C ESP CLUBES INF FEM",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "2",
+                        "Stage": "0",
                         "ID": 2471420,
                         "GameCode": null,
                         "Place": "POLIDEPORTIVO DIEGO LOBATO",
@@ -1967,14 +1973,14 @@
                         "Place": "PABELLÓN MUNICIPAL DE ALJARAQUE",
                         "TeamAID": 964200,
                         "TeamA": "CANTBASKET04 A",
-                        "ScoreA": 47,
+                        "ScoreA": 49,
                         "TeamACode": "39017907",
                         "TeamAClubCode": "390179",
                         "TeamBID": 969512,
                         "TeamB": "MELILLA CIUDAD DEL DEPORTE",
                         "TeamBCode": "52004960",
                         "TeamBClubCode": "520049",
-                        "ScoreB": 81,
+                        "ScoreB": 87,
                         "StartTime": "2025-06-02T17:00:00",
                         "StartTimeUTC": "2025-06-02T15:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -1982,7 +1988,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=964200&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=969512&ti=1",
                         "Quarter": 4,
-                        "Time": "00:38:50",
+                        "Time": "00:39:59",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -2004,8 +2010,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "7",
-                                "scoreB": "22"
+                                "scoreA": "9",
+                                "scoreB": "28"
                             }
                         ],
                         "Season": null,
@@ -2023,14 +2029,14 @@
                         "Place": "POLIDEPORTIVO ANDRÉS ESTRADA",
                         "TeamAID": 956584,
                         "TeamA": "TLSI GODELLA",
-                        "ScoreA": 55,
+                        "ScoreA": 63,
                         "TeamACode": "46049506",
                         "TeamAClubCode": "460495",
                         "TeamBID": 973110,
                         "TeamB": "FUNDACION ARO REAL BETIS BALONCESTO",
                         "TeamBCode": "41022305",
                         "TeamBClubCode": "410223",
-                        "ScoreB": 61,
+                        "ScoreB": 71,
                         "StartTime": "2025-06-02T17:00:00",
                         "StartTimeUTC": "2025-06-02T15:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -2038,7 +2044,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=956584&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=973110&ti=1",
                         "Quarter": 4,
-                        "Time": "00:35:04",
+                        "Time": "00:39:52",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -2060,8 +2066,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "11",
-                                "scoreB": "10"
+                                "scoreA": "19",
+                                "scoreB": "20"
                             }
                         ],
                         "Season": null,
