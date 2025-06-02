@@ -11,7 +11,7 @@
                 "id": "255",
                 "name": "CE Clubes Inf Fem",
                 "gamescount": 48,
-                "nowplaying": 2,
+                "nowplaying": 0,
                 "order": 21,
                 "GAMES": [
                     {
@@ -33,7 +33,7 @@
                         "TeamB": "BARÇA CBS",
                         "TeamBCode": "08004219",
                         "TeamBClubCode": "080042",
-                        "ScoreB": 52,
+                        "ScoreB": 53,
                         "StartTime": "2025-06-02T10:30:00",
                         "StartTimeUTC": "2025-06-02T08:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -41,8 +41,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=971006&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=956376&ti=1",
                         "Quarter": 4,
-                        "Time": "00:37:43",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -64,7 +64,7 @@
                             {
                                 "n": "4",
                                 "scoreA": "13",
-                                "scoreB": "2"
+                                "scoreB": "3"
                             }
                         ],
                         "Season": null,
@@ -138,7 +138,7 @@
                         "Place": "POLIDEPORTIVO DIEGO LOBATO",
                         "TeamAID": 955643,
                         "TeamA": "JOVENTUT BADALONA A",
-                        "ScoreA": 47,
+                        "ScoreA": 48,
                         "TeamACode": "08130509",
                         "TeamAClubCode": "081305",
                         "TeamBID": 957706,
@@ -153,8 +153,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=955643&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=957706&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:52",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -175,7 +175,7 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "7",
+                                "scoreA": "8",
                                 "scoreB": "10"
                             }
                         ],
@@ -314,7 +314,7 @@
                         "Competition": "C ESP CLUBES INF FEM",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "2",
+                        "Stage": "0",
                         "ID": 2471427,
                         "GameCode": null,
                         "Place": "COMPLEJO DEPORTIVO HERNÁNDEZ ALBARRACÍN",
@@ -349,7 +349,7 @@
                         "Competition": "C ESP CLUBES INF FEM",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "2",
+                        "Stage": "0",
                         "ID": 2471415,
                         "GameCode": null,
                         "Place": "POLIDEPORTIVO DIEGO LOBATO",
@@ -1224,7 +1224,7 @@
                 "id": "254",
                 "name": "CE Clubes Inf Masc",
                 "gamescount": 48,
-                "nowplaying": 4,
+                "nowplaying": 0,
                 "order": 22,
                 "GAMES": [
                     {
@@ -1254,8 +1254,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=976015&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=963871&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:51",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -1310,8 +1310,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=963878&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=964324&ti=1",
                         "Quarter": 4,
-                        "Time": "00:36:52",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -1351,14 +1351,14 @@
                         "Place": "POLIDEPORTIVO ANDRÉS ESTRADA",
                         "TeamAID": 961887,
                         "TeamA": "NEXO 8 ETT NOVOBASKET",
-                        "ScoreA": 66,
+                        "ScoreA": 68,
                         "TeamACode": "36024106",
                         "TeamAClubCode": "360241",
                         "TeamBID": 963874,
                         "TeamB": "CASADEMONT ZARAGOZA A",
                         "TeamBCode": "50031313",
                         "TeamBClubCode": "500313",
-                        "ScoreB": 80,
+                        "ScoreB": 82,
                         "StartTime": "2025-06-02T10:30:00",
                         "StartTimeUTC": "2025-06-02T08:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -1366,8 +1366,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=961887&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=963874&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:36",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -1388,8 +1388,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "11",
-                                "scoreB": "22"
+                                "scoreA": "13",
+                                "scoreB": "24"
                             }
                         ],
                         "Season": null,
@@ -1422,8 +1422,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=961579&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=953274&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:27",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -1457,7 +1457,7 @@
                         "Competition": "C ESP CLUBES INF MASC",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "2",
+                        "Stage": "0",
                         "ID": 2471650,
                         "GameCode": null,
                         "Place": "PABELLÓN NUEVO FRONTÓN PALOS",
@@ -1527,7 +1527,7 @@
                         "Competition": "C ESP CLUBES INF MASC",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "2",
+                        "Stage": "0",
                         "ID": 2471645,
                         "GameCode": null,
                         "Place": "POLIDEPORTIVO ANTONIO GIL HERNÁNDEZ",
@@ -1562,7 +1562,7 @@
                         "Competition": "C ESP CLUBES INF MASC",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "2",
+                        "Stage": "0",
                         "ID": 2471633,
                         "GameCode": null,
                         "Place": "POLIDEPORTIVO ANDRÉS ESTRADA",
