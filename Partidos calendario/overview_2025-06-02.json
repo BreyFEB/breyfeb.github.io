@@ -1476,7 +1476,7 @@
                 "id": "254",
                 "name": "CE Clubes Inf Masc",
                 "gamescount": 48,
-                "nowplaying": 2,
+                "nowplaying": 1,
                 "order": 22,
                 "GAMES": [
                     {
@@ -2290,8 +2290,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=970475&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=963406&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:43",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -2331,14 +2331,14 @@
                         "Place": "POLIDEPORTIVO ANDRÉS ESTRADA",
                         "TeamAID": 964492,
                         "TeamA": "PABLO LASO ACADEMY",
-                        "ScoreA": 68,
+                        "ScoreA": 80,
                         "TeamACode": "28297302",
                         "TeamAClubCode": "282973",
                         "TeamBID": 964730,
                         "TeamB": "UCAM MURCIA CB.  POLYMEC",
                         "TeamBCode": "30001827",
                         "TeamBClubCode": "300018",
-                        "ScoreB": 71,
+                        "ScoreB": 76,
                         "StartTime": "2025-06-02T19:00:00",
                         "StartTimeUTC": "2025-06-02T17:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -2346,7 +2346,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=964492&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=964730&ti=1",
                         "Quarter": 4,
-                        "Time": "00:35:16",
+                        "Time": "00:39:40",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -2368,8 +2368,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "11",
-                                "scoreB": "14"
+                                "scoreA": "23",
+                                "scoreB": "19"
                             }
                         ],
                         "Season": null,
