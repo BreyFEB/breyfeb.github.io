@@ -11,7 +11,7 @@
                 "id": "255",
                 "name": "CE Clubes Inf Fem",
                 "gamescount": 48,
-                "nowplaying": 5,
+                "nowplaying": 3,
                 "order": 21,
                 "GAMES": [
                     {
@@ -698,7 +698,7 @@
                         "Place": "PABELLÓN MUNICIPAL PLUS ULTRA",
                         "TeamAID": 976037,
                         "TeamA": "LOINTEK GERNIKA",
-                        "ScoreA": 70,
+                        "ScoreA": 74,
                         "TeamACode": "48035609",
                         "TeamAClubCode": "480356",
                         "TeamBID": 963223,
@@ -713,8 +713,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=976037&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=963223&ti=1",
                         "Quarter": 4,
-                        "Time": "00:34:20",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -735,7 +735,7 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "8",
+                                "scoreA": "12",
                                 "scoreB": "4"
                             }
                         ],
@@ -754,14 +754,14 @@
                         "Place": "PALACIO DE LOS DEPORTES CAROLINA MARÍN",
                         "TeamAID": 970692,
                         "TeamA": "RACA TEAR",
-                        "ScoreA": 48,
+                        "ScoreA": 52,
                         "TeamACode": "18012829",
                         "TeamAClubCode": "180128",
                         "TeamBID": 956235,
                         "TeamB": "CUMBERS AUTOMOVILES GABILONDO CDSI",
                         "TeamBCode": "47008603",
                         "TeamBClubCode": "470086",
-                        "ScoreB": 36,
+                        "ScoreB": 38,
                         "StartTime": "2025-06-02T19:00:00",
                         "StartTimeUTC": "2025-06-02T17:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -769,7 +769,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=970692&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=956235&ti=1",
                         "Quarter": 4,
-                        "Time": "00:35:22",
+                        "Time": "00:39:38",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -791,8 +791,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "6",
-                                "scoreB": "11"
+                                "scoreA": "10",
+                                "scoreB": "13"
                             }
                         ],
                         "Season": null,
@@ -810,14 +810,14 @@
                         "Place": "COMPLEJO DEPORTIVO HERNÁNDEZ ALBARRACÍN",
                         "TeamAID": 952723,
                         "TeamA": "FUNDACIÓN VALENCIA BASQUET 2000",
-                        "ScoreA": 56,
+                        "ScoreA": 74,
                         "TeamACode": "46082410",
                         "TeamAClubCode": "460824",
                         "TeamBID": 975697,
                         "TeamB": "NÁUTICO TENERIFE ULL",
                         "TeamBCode": "38001612",
                         "TeamBClubCode": "380016",
-                        "ScoreB": 31,
+                        "ScoreB": 37,
                         "StartTime": "2025-06-02T19:00:00",
                         "StartTimeUTC": "2025-06-02T17:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -825,7 +825,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=952723&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=975697&ti=1",
                         "Quarter": 4,
-                        "Time": "00:31:27",
+                        "Time": "00:39:20",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -847,8 +847,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "0",
-                                "scoreB": "3"
+                                "scoreA": "18",
+                                "scoreB": "9"
                             }
                         ],
                         "Season": null,
@@ -866,14 +866,14 @@
                         "Place": "POLIDEPORTIVO DIEGO LOBATO",
                         "TeamAID": 959719,
                         "TeamA": "LA MAFIA BABIECA",
-                        "ScoreA": 52,
+                        "ScoreA": 60,
                         "TeamACode": "09025100",
                         "TeamAClubCode": "090251",
                         "TeamBID": 952711,
                         "TeamB": "VALENCIA BASKET ",
                         "TeamBCode": "46000217",
                         "TeamBClubCode": "460002",
-                        "ScoreB": 83,
+                        "ScoreB": 88,
                         "StartTime": "2025-06-02T19:00:00",
                         "StartTimeUTC": "2025-06-02T17:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -881,8 +881,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=959719&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952711&ti=1",
                         "Quarter": 4,
-                        "Time": "00:33:54",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -903,8 +903,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "8",
-                                "scoreB": "13"
+                                "scoreA": "16",
+                                "scoreB": "18"
                             }
                         ],
                         "Season": null,
@@ -1476,7 +1476,7 @@
                 "id": "254",
                 "name": "CE Clubes Inf Masc",
                 "gamescount": 48,
-                "nowplaying": 3,
+                "nowplaying": 2,
                 "order": 22,
                 "GAMES": [
                     {
@@ -2219,14 +2219,14 @@
                         "Place": "PABELLÓN NUEVO FRONTÓN PALOS",
                         "TeamAID": 978550,
                         "TeamA": "MARISTAS CBA",
-                        "ScoreA": 52,
+                        "ScoreA": 58,
                         "TeamACode": "06014006",
                         "TeamAClubCode": "060140",
                         "TeamBID": 958271,
                         "TeamB": "REAL MADRID ´A´",
                         "TeamBCode": "28000204",
                         "TeamBClubCode": "280002",
-                        "ScoreB": 71,
+                        "ScoreB": 85,
                         "StartTime": "2025-06-02T19:00:00",
                         "StartTimeUTC": "2025-06-02T17:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -2234,8 +2234,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=978550&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=958271&ti=1",
                         "Quarter": 4,
-                        "Time": "00:34:57",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -2256,8 +2256,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "5",
-                                "scoreB": "6"
+                                "scoreA": "11",
+                                "scoreB": "20"
                             }
                         ],
                         "Season": null,
@@ -2275,22 +2275,22 @@
                         "Place": "PABELLÓN MUNICIPAL DE ALJARAQUE",
                         "TeamAID": 970475,
                         "TeamA": "CB QALAT",
-                        "ScoreA": 75,
+                        "ScoreA": 84,
                         "TeamACode": "41003410",
                         "TeamAClubCode": "410034",
                         "TeamBID": 963406,
                         "TeamB": "CANTERBURY SCHOOL ",
                         "TeamBCode": "35015103",
                         "TeamBClubCode": "350151",
-                        "ScoreB": 82,
+                        "ScoreB": 97,
                         "StartTime": "2025-06-02T19:00:00",
                         "StartTimeUTC": "2025-06-02T17:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=970475&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=963406&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:29:35",
+                        "Quarter": 4,
+                        "Time": "00:35:10",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -2308,7 +2308,12 @@
                             {
                                 "n": "3",
                                 "scoreA": "30",
-                                "scoreB": "32"
+                                "scoreB": "33"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "9",
+                                "scoreB": "14"
                             }
                         ],
                         "Season": null,
@@ -2326,22 +2331,22 @@
                         "Place": "POLIDEPORTIVO ANDRÉS ESTRADA",
                         "TeamAID": 964492,
                         "TeamA": "PABLO LASO ACADEMY",
-                        "ScoreA": 45,
+                        "ScoreA": 57,
                         "TeamACode": "28297302",
                         "TeamAClubCode": "282973",
                         "TeamBID": 964730,
                         "TeamB": "UCAM MURCIA CB.  POLYMEC",
                         "TeamBCode": "30001827",
                         "TeamBClubCode": "300018",
-                        "ScoreB": 43,
+                        "ScoreB": 57,
                         "StartTime": "2025-06-02T19:00:00",
                         "StartTimeUTC": "2025-06-02T17:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=964492&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=964730&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:22:45",
+                        "Quarter": 4,
+                        "Time": "00:30:00",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -2358,8 +2363,13 @@
                             },
                             {
                                 "n": "3",
+                                "scoreA": "12",
+                                "scoreB": "19"
+                            },
+                            {
+                                "n": "4",
                                 "scoreA": "0",
-                                "scoreB": "5"
+                                "scoreB": "0"
                             }
                         ],
                         "Season": null,
