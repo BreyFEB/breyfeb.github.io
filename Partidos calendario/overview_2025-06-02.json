@@ -250,22 +250,22 @@
                         "Place": "PALACIO DE LOS DEPORTES CAROLINA MARÍN",
                         "TeamAID": 955644,
                         "TeamA": "HOMS UE MATARÓ - IAF",
-                        "ScoreA": 40,
+                        "ScoreA": 47,
                         "TeamACode": "08002725",
                         "TeamAClubCode": "080027",
                         "TeamBID": 956579,
                         "TeamB": "MIARCO GODELLA",
                         "TeamBCode": "46049500",
                         "TeamBClubCode": "460495",
-                        "ScoreB": 33,
+                        "ScoreB": 41,
                         "StartTime": "2025-06-02T12:30:00",
                         "StartTimeUTC": "2025-06-02T10:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=955644&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=956579&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:26:14",
+                        "Quarter": 4,
+                        "Time": "00:32:22",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -282,8 +282,13 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "5",
-                                "scoreB": "14"
+                                "scoreA": "11",
+                                "scoreB": "18"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "1",
+                                "scoreB": "4"
                             }
                         ],
                         "Season": null,
@@ -301,22 +306,22 @@
                         "Place": "PABELLÓN MUNICIPAL PLUS ULTRA",
                         "TeamAID": 965110,
                         "TeamA": "CB CIUTAT D'INCA FETICHE A ",
-                        "ScoreA": 35,
+                        "ScoreA": 41,
                         "TeamACode": "07036119",
                         "TeamAClubCode": "070361",
                         "TeamBID": 964228,
                         "TeamB": "ARANGUREN MUTILBASKET A",
                         "TeamBCode": "31015202",
                         "TeamBClubCode": "310152",
-                        "ScoreB": 61,
+                        "ScoreB": 74,
                         "StartTime": "2025-06-02T12:30:00",
                         "StartTimeUTC": "2025-06-02T10:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=965110&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=964228&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:29:46",
+                        "Quarter": 4,
+                        "Time": "00:36:34",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -335,6 +340,11 @@
                                 "n": "3",
                                 "scoreA": "5",
                                 "scoreB": "14"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "6",
+                                "scoreB": "13"
                             }
                         ],
                         "Season": null,
@@ -352,22 +362,22 @@
                         "Place": "COMPLEJO DEPORTIVO HERNÁNDEZ ALBARRACÍN",
                         "TeamAID": 961030,
                         "TeamA": "C.B. LAS ROZAS \"A\"",
-                        "ScoreA": 24,
+                        "ScoreA": 33,
                         "TeamACode": "28001785",
                         "TeamAClubCode": "280017",
                         "TeamBID": 965647,
                         "TeamB": "GESTIÓN  Y CALOR CORDOBASKET",
                         "TeamBCode": "14300197",
                         "TeamBClubCode": "143001",
-                        "ScoreB": 42,
+                        "ScoreB": 47,
                         "StartTime": "2025-06-02T12:30:00",
                         "StartTimeUTC": "2025-06-02T10:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=961030&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=965647&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:23:45",
+                        "Quarter": 4,
+                        "Time": "00:30:00",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -384,8 +394,13 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "3",
-                                "scoreB": "12"
+                                "scoreA": "12",
+                                "scoreB": "17"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "0",
+                                "scoreB": "0"
                             }
                         ],
                         "Season": null,
@@ -403,22 +418,22 @@
                         "Place": "POLIDEPORTIVO DIEGO LOBATO",
                         "TeamAID": 965301,
                         "TeamA": "UNICAJA ANDALUCÍA",
-                        "ScoreA": 54,
+                        "ScoreA": 68,
                         "TeamACode": "29000165",
                         "TeamAClubCode": "290001",
                         "TeamBID": 964395,
                         "TeamB": "DELEITE BALONCESTO TREBOADA",
                         "TeamBCode": "15039604",
                         "TeamBClubCode": "150396",
-                        "ScoreB": 13,
+                        "ScoreB": 17,
                         "StartTime": "2025-06-02T12:30:00",
                         "StartTimeUTC": "2025-06-02T10:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=965301&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=964395&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:29:08",
+                        "Quarter": 4,
+                        "Time": "00:35:14",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -435,8 +450,13 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "13",
+                                "scoreA": "17",
                                 "scoreB": "7"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "10",
+                                "scoreB": "4"
                             }
                         ],
                         "Season": null,
@@ -1288,7 +1308,7 @@
                 "id": "254",
                 "name": "CE Clubes Inf Masc",
                 "gamescount": 48,
-                "nowplaying": 4,
+                "nowplaying": 3,
                 "order": 22,
                 "GAMES": [
                     {
@@ -1534,7 +1554,7 @@
                         "TeamB": "CYD-LEONESA - COL. LEONÉS A",
                         "TeamBCode": "24031003",
                         "TeamBClubCode": "240310",
-                        "ScoreB": 80,
+                        "ScoreB": 85,
                         "StartTime": "2025-06-02T12:30:00",
                         "StartTimeUTC": "2025-06-02T10:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -1542,7 +1562,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=966063&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=963244&ti=1",
                         "Quarter": 4,
-                        "Time": "00:31:18",
+                        "Time": "00:32:42",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -1565,7 +1585,7 @@
                             {
                                 "n": "4",
                                 "scoreA": "0",
-                                "scoreB": "2"
+                                "scoreB": "7"
                             }
                         ],
                         "Season": null,
@@ -1597,9 +1617,9 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=964801&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=955053&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:20:16",
-                        "Status": 2,
+                        "Quarter": 4,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -1617,6 +1637,11 @@
                                 "n": "3",
                                 "scoreA": "0",
                                 "scoreB": "2"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "0",
+                                "scoreB": "0"
                             }
                         ],
                         "Season": null,
@@ -1634,14 +1659,14 @@
                         "Place": "POLIDEPORTIVO ANTONIO GIL HERNÁNDEZ",
                         "TeamAID": 963286,
                         "TeamA": "CB COLONYA POLLENÇA A ",
-                        "ScoreA": 67,
+                        "ScoreA": 71,
                         "TeamACode": "07034258",
                         "TeamAClubCode": "070342",
                         "TeamBID": 953909,
                         "TeamB": "EBA ",
                         "TeamBCode": "02012829",
                         "TeamBClubCode": "020128",
-                        "ScoreB": 47,
+                        "ScoreB": 56,
                         "StartTime": "2025-06-02T12:30:00",
                         "StartTimeUTC": "2025-06-02T10:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -1649,7 +1674,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=963286&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=953909&ti=1",
                         "Quarter": 4,
-                        "Time": "00:31:13",
+                        "Time": "00:38:23",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -1671,8 +1696,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "0",
-                                "scoreB": "2"
+                                "scoreA": "4",
+                                "scoreB": "11"
                             }
                         ],
                         "Season": null,
@@ -1690,22 +1715,22 @@
                         "Place": "POLIDEPORTIVO ANDRÉS ESTRADA",
                         "TeamAID": 955052,
                         "TeamA": "JOVENTUT BADALONA  A",
-                        "ScoreA": 39,
+                        "ScoreA": 53,
                         "TeamACode": "08000507",
                         "TeamAClubCode": "080005",
                         "TeamBID": 965290,
                         "TeamB": "UNICAJA ANDALUCÍA",
                         "TeamBCode": "29000130",
                         "TeamBClubCode": "290001",
-                        "ScoreB": 43,
+                        "ScoreB": 50,
                         "StartTime": "2025-06-02T12:30:00",
                         "StartTimeUTC": "2025-06-02T10:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=955052&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=965290&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:22:52",
+                        "Quarter": 4,
+                        "Time": "00:30:00",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -1722,8 +1747,13 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "2",
-                                "scoreB": "3"
+                                "scoreA": "16",
+                                "scoreB": "10"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "0",
+                                "scoreB": "0"
                             }
                         ],
                         "Season": null,
