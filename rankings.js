@@ -238,7 +238,9 @@ function formatCompetitionName(comp) {
     "L.F.-2": "Liga Femenina 2",
     "C ESP CLUBES CAD FEM": "Clubes Cadete Femenino",
     "SEGUNDA FEB": "Segunda FEB",
-    "TERCERA FEB": "Tercera FEB"
+    "TERCERA FEB": "Tercera FEB",
+    "C ESP CLUBES INF FEM": "Clubes Infantil Femenino",
+    "C ESP CLUBES INF MASC": "Clubes Infantil Masculino"
   };
 
   // If we have a mapping for this competition, use it
