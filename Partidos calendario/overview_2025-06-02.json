@@ -2331,7 +2331,7 @@
                         "Place": "POLIDEPORTIVO ANDRÉS ESTRADA",
                         "TeamAID": 964492,
                         "TeamA": "PABLO LASO ACADEMY",
-                        "ScoreA": 80,
+                        "ScoreA": 82,
                         "TeamACode": "28297302",
                         "TeamAClubCode": "282973",
                         "TeamBID": 964730,
@@ -2346,7 +2346,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=964492&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=964730&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:40",
+                        "Time": "00:39:55",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -2368,7 +2368,7 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "23",
+                                "scoreA": "25",
                                 "scoreB": "19"
                             }
                         ],
