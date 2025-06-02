@@ -26,22 +26,22 @@
                         "Place": "COMPLEJO DEPORTIVO HERNÁNDEZ ALBARRACÍN",
                         "TeamAID": 971006,
                         "TeamA": "UNIBASKET GRANATE LOGROÑO",
-                        "ScoreA": 17,
+                        "ScoreA": 20,
                         "TeamACode": "26027109",
                         "TeamAClubCode": "260271",
                         "TeamBID": 956376,
                         "TeamB": "BARÇA CBS",
                         "TeamBCode": "08004219",
                         "TeamBClubCode": "080042",
-                        "ScoreB": 36,
+                        "ScoreB": 38,
                         "StartTime": "2025-06-02T10:30:00",
                         "StartTimeUTC": "2025-06-02T08:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=971006&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=956376&ti=1",
-                        "Quarter": 2,
-                        "Time": "00:18:13",
+                        "Quarter": 3,
+                        "Time": "00:20:00",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -53,8 +53,13 @@
                             },
                             {
                                 "n": "2",
-                                "scoreA": "7",
-                                "scoreB": "14"
+                                "scoreA": "10",
+                                "scoreB": "16"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "0",
+                                "scoreB": "0"
                             }
                         ],
                         "Season": null,
@@ -79,15 +84,15 @@
                         "TeamB": "HOZONO GLOBAL JAIRIS  AMARILLO ",
                         "TeamBCode": "30000808",
                         "TeamBClubCode": "300008",
-                        "ScoreB": 25,
+                        "ScoreB": 29,
                         "StartTime": "2025-06-02T10:30:00",
                         "StartTimeUTC": "2025-06-02T08:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=960293&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=967520&ti=1",
-                        "Quarter": 2,
-                        "Time": "00:18:15",
+                        "Quarter": 3,
+                        "Time": "00:20:00",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -100,7 +105,12 @@
                             {
                                 "n": "2",
                                 "scoreA": "10",
-                                "scoreB": "15"
+                                "scoreB": "19"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "0",
+                                "scoreB": "0"
                             }
                         ],
                         "Season": null,
@@ -118,7 +128,7 @@
                         "Place": "POLIDEPORTIVO DIEGO LOBATO",
                         "TeamAID": 955643,
                         "TeamA": "JOVENTUT BADALONA A",
-                        "ScoreA": 23,
+                        "ScoreA": 26,
                         "TeamACode": "08130509",
                         "TeamAClubCode": "081305",
                         "TeamBID": 957706,
@@ -132,8 +142,8 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=955643&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=957706&ti=1",
-                        "Quarter": 2,
-                        "Time": "00:18:37",
+                        "Quarter": 3,
+                        "Time": "00:20:00",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -145,8 +155,13 @@
                             },
                             {
                                 "n": "2",
-                                "scoreA": "14",
+                                "scoreA": "17",
                                 "scoreB": "6"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "0",
+                                "scoreB": "0"
                             }
                         ],
                         "Season": null,
@@ -171,15 +186,15 @@
                         "TeamB": "SPAR GRAN CANARIA",
                         "TeamBCode": "35000102",
                         "TeamBClubCode": "350001",
-                        "ScoreB": 60,
+                        "ScoreB": 66,
                         "StartTime": "2025-06-02T10:30:00",
                         "StartTimeUTC": "2025-06-02T08:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=963453&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=964746&ti=1",
-                        "Quarter": 2,
-                        "Time": "00:19:38",
+                        "Quarter": 3,
+                        "Time": "00:22:17",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -193,6 +208,11 @@
                                 "n": "2",
                                 "scoreA": "12",
                                 "scoreB": "23"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "0",
+                                "scoreB": "6"
                             }
                         ],
                         "Season": null,
@@ -1199,22 +1219,22 @@
                         "Place": "PABELLÓN NUEVO FRONTÓN PALOS",
                         "TeamAID": 976015,
                         "TeamA": "EASO BASKET KARTING IRUN",
-                        "ScoreA": 38,
+                        "ScoreA": 39,
                         "TeamACode": "20030266",
                         "TeamAClubCode": "200302",
                         "TeamBID": 963871,
                         "TeamB": "EM EL OLIVAR A1",
                         "TeamBCode": "50000769",
                         "TeamBClubCode": "500007",
-                        "ScoreB": 42,
+                        "ScoreB": 44,
                         "StartTime": "2025-06-02T10:30:00",
                         "StartTimeUTC": "2025-06-02T08:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=976015&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=963871&ti=1",
-                        "Quarter": 2,
-                        "Time": "00:18:14",
+                        "Quarter": 3,
+                        "Time": "00:20:00",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -1226,8 +1246,13 @@
                             },
                             {
                                 "n": "2",
-                                "scoreA": "21",
-                                "scoreB": "18"
+                                "scoreA": "22",
+                                "scoreB": "20"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "0",
+                                "scoreB": "0"
                             }
                         ],
                         "Season": null,
@@ -1252,7 +1277,7 @@
                         "TeamB": "CAJASIETE CANARIAS",
                         "TeamBCode": "38023203",
                         "TeamBClubCode": "380232",
-                        "ScoreB": 42,
+                        "ScoreB": 50,
                         "StartTime": "2025-06-02T10:30:00",
                         "StartTimeUTC": "2025-06-02T08:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -1260,7 +1285,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=963878&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=964324&ti=1",
                         "Quarter": 3,
-                        "Time": "00:20:00",
+                        "Time": "00:22:54",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -1278,7 +1303,7 @@
                             {
                                 "n": "3",
                                 "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreB": "8"
                             }
                         ],
                         "Season": null,
@@ -1296,22 +1321,22 @@
                         "Place": "POLIDEPORTIVO ANDRÉS ESTRADA",
                         "TeamAID": 961887,
                         "TeamA": "NEXO 8 ETT NOVOBASKET",
-                        "ScoreA": 33,
+                        "ScoreA": 34,
                         "TeamACode": "36024106",
                         "TeamAClubCode": "360241",
                         "TeamBID": 963874,
                         "TeamB": "CASADEMONT ZARAGOZA A",
                         "TeamBCode": "50031313",
                         "TeamBClubCode": "500313",
-                        "ScoreB": 28,
+                        "ScoreB": 30,
                         "StartTime": "2025-06-02T10:30:00",
                         "StartTimeUTC": "2025-06-02T08:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=961887&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=963874&ti=1",
-                        "Quarter": 2,
-                        "Time": "00:19:05",
+                        "Quarter": 3,
+                        "Time": "00:20:09",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -1323,8 +1348,13 @@
                             },
                             {
                                 "n": "2",
-                                "scoreA": "18",
-                                "scoreB": "12"
+                                "scoreA": "19",
+                                "scoreB": "14"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "0",
+                                "scoreB": "0"
                             }
                         ],
                         "Season": null,
@@ -1342,14 +1372,14 @@
                         "Place": "PABELLÓN MUNICIPAL DE ALJARAQUE",
                         "TeamAID": 961579,
                         "TeamA": "FUNDAL ALCOBENDAS \"A\"",
-                        "ScoreA": 36,
+                        "ScoreA": 44,
                         "TeamACode": "28021923",
                         "TeamAClubCode": "280219",
                         "TeamBID": 953274,
                         "TeamB": "CBI ELCHE A",
                         "TeamBCode": "03003101",
                         "TeamBClubCode": "030031",
-                        "ScoreB": 36,
+                        "ScoreB": 48,
                         "StartTime": "2025-06-02T10:30:00",
                         "StartTimeUTC": "2025-06-02T08:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -1357,7 +1387,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=961579&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=953274&ti=1",
                         "Quarter": 3,
-                        "Time": "00:20:00",
+                        "Time": "00:22:58",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -1374,8 +1404,8 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "8",
+                                "scoreB": "12"
                             }
                         ],
                         "Season": null,
