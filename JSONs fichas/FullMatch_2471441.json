@@ -456,8 +456,8 @@
                         "fgm": "1",
                         "fga": "5",
                         "fgp": "20,0",
-                        "min": "1027",
-                        "minFormatted": "17:07",
+                        "min": "1087",
+                        "minFormatted": "18:07",
                         "sta": null,
                         "bs": "0",
                         "tc": "0",
@@ -469,7 +469,7 @@
                         "to": "0",
                         "st": "0",
                         "ind": null,
-                        "pllss": "-8",
+                        "pllss": "-6",
                         "val": "-1",
                         "assist": "1",
                         "reb": "0",
@@ -5186,32 +5186,6 @@
             },
             {
                 "num": "383",
-                "text": "(CUMBERS AUTOMOVILES GABILONDO CDSI) C. MUCIENTES RAMOS: Sustitución (Entra a pista)",
-                "team": "1",
-                "time": "02:34",
-                "deleted": null,
-                "scoreA": null,
-                "scoreB": null,
-                "quarter": "3",
-                "logo": "https://imagenes.feb.es/foto.aspx?c=2304847",
-                "idPlayer": "2304847",
-                "idLicense": "10439477",
-                "idTeam": "956235",
-                "action": "subst",
-                "logParam1": "00000000-0000-0001-0000-000002471441",
-                "logParam2": null,
-                "logParam3": "10439477",
-                "logParam4": "",
-                "logParam5": "",
-                "logParam6": "",
-                "logParam7": "",
-                "logParam8": "",
-                "logParam9": "",
-                "logParam10": "",
-                "Position": ""
-            },
-            {
-                "num": "382",
                 "text": "(CUMBERS AUTOMOVILES GABILONDO CDSI) M. RUBIO SANCHEZ: FALTA Personal (Faltas: 3. Faltas de equipo: 11). Tiros libres: 0",
                 "team": "1",
                 "time": "02:34",
@@ -5237,7 +5211,7 @@
                 "Position": "10.402567386627197|22.798540440011532"
             },
             {
-                "num": "381",
+                "num": "382",
                 "text": "(CUMBERS AUTOMOVILES GABILONDO CDSI) I. ZAPATERO RODRÍGUEZ: PÉRDIDA (Pérdidas: 2)",
                 "team": "1",
                 "time": "02:38",
@@ -5263,7 +5237,7 @@
                 "Position": "32.12736447652181|20.442346410548435"
             },
             {
-                "num": "380",
+                "num": "381",
                 "text": "(CUMBERS AUTOMOVILES GABILONDO CDSI) I. ZAPATERO RODRÍGUEZ: REBOTE (Rebotes: 3)",
                 "team": "1",
                 "time": "02:43",
@@ -5289,7 +5263,7 @@
                 "Position": ""
             },
             {
-                "num": "379",
+                "num": "380",
                 "text": "(ALIMERKA OVIEDO BALONCESTO-CAU \"A\" ) A. THOMPSON SEGURA: TIRO DE 2 FALLADO",
                 "team": "2",
                 "time": "02:43",
@@ -5315,7 +5289,7 @@
                 "Position": "22.757242520650227|55.16519181271817"
             },
             {
-                "num": "378",
+                "num": "379",
                 "text": "(CUMBERS AUTOMOVILES GABILONDO CDSI) S. RODRIGUEZ MARTIN: TIRO DE 1 ANOTADO (Puntos: 6)",
                 "team": "1",
                 "time": "02:59",
@@ -5341,7 +5315,7 @@
                 "Position": ""
             },
             {
-                "num": "377",
+                "num": "378",
                 "text": "(CUMBERS AUTOMOVILES GABILONDO CDSI) S. RODRIGUEZ MARTIN: TIRO DE 1 ANOTADO (Puntos: 5)",
                 "team": "1",
                 "time": "02:59",
@@ -5367,7 +5341,7 @@
                 "Position": ""
             },
             {
-                "num": "376",
+                "num": "377",
                 "text": "(ALIMERKA OVIEDO BALONCESTO-CAU \"A\" ) A. RODRIGUEZ FERNANDEZ: FALTA Personal (Faltas: 1. Faltas de equipo: 12). Tiros libres: 0",
                 "team": "2",
                 "time": "03:00",
@@ -5393,7 +5367,7 @@
                 "Position": "86.12701416015625|76.74294897850524"
             },
             {
-                "num": "375",
+                "num": "376",
                 "text": "(ALIMERKA OVIEDO BALONCESTO-CAU \"A\" ) A. RODRIGUEZ FERNANDEZ: PÉRDIDA (Pérdidas: 2)",
                 "team": "2",
                 "time": "03:08",
@@ -5419,7 +5393,7 @@
                 "Position": "29.62866465250651|85.7956914698824"
             },
             {
-                "num": "374",
+                "num": "375",
                 "text": "(ALIMERKA OVIEDO BALONCESTO-CAU \"A\" ) C. BRAVO OLASCOAGA: ROBO (Robos: 1)",
                 "team": "2",
                 "time": "03:19",
@@ -5445,7 +5419,7 @@
                 "Position": ""
             },
             {
-                "num": "373",
+                "num": "374",
                 "text": "(CUMBERS AUTOMOVILES GABILONDO CDSI) E. CASTAÑO JIMENEZ: PÉRDIDA (Pérdidas: 1)",
                 "team": "1",
                 "time": "03:19",
@@ -5469,6 +5443,32 @@
                 "logParam9": "",
                 "logParam10": "",
                 "Position": "83.35068384806316|70.79046776954165"
+            },
+            {
+                "num": "373",
+                "text": "(CUMBERS AUTOMOVILES GABILONDO CDSI) C. MUCIENTES RAMOS: Sustitución (Entra a pista)",
+                "team": "1",
+                "time": "03:34",
+                "deleted": null,
+                "scoreA": null,
+                "scoreB": null,
+                "quarter": "3",
+                "logo": "https://imagenes.feb.es/foto.aspx?c=2304847",
+                "idPlayer": "2304847",
+                "idLicense": "10439477",
+                "idTeam": "956235",
+                "action": "subst",
+                "logParam1": "00000000-0000-0001-0000-000002471441",
+                "logParam2": null,
+                "logParam3": "10439477",
+                "logParam4": "",
+                "logParam5": "",
+                "logParam6": "",
+                "logParam7": "",
+                "logParam8": "",
+                "logParam9": "",
+                "logParam10": "",
+                "Position": ""
             },
             {
                 "num": "372",
@@ -15550,8 +15550,8 @@
                         "fgm": "1",
                         "fga": "5",
                         "fgp": "20,0",
-                        "min": "1027",
-                        "minFormatted": "17:07",
+                        "min": "1087",
+                        "minFormatted": "18:07",
                         "sta": null,
                         "bs": "0",
                         "tc": "0",
@@ -15563,7 +15563,7 @@
                         "to": "0",
                         "st": "0",
                         "ind": null,
-                        "pllss": "-8",
+                        "pllss": "-6",
                         "val": "-1",
                         "assist": "1",
                         "reb": "0",
