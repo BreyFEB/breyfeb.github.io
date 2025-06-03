@@ -11,7 +11,7 @@
                 "id": "255",
                 "name": "CE Clubes Inf Fem",
                 "gamescount": 32,
-                "nowplaying": 0,
+                "nowplaying": 1,
                 "order": 21,
                 "GAMES": [
                     {
@@ -279,7 +279,7 @@
                         "Competition": "C ESP CLUBES INF FEM",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "3",
+                        "Stage": "0",
                         "ID": 2471429,
                         "GameCode": null,
                         "Place": "PABELLÓN MUNICIPAL PLUS ULTRA",
@@ -369,12 +369,18 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=964746&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=955644&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:00:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -664,7 +670,7 @@
                 "id": "254",
                 "name": "CE Clubes Inf Masc",
                 "gamescount": 32,
-                "nowplaying": 1,
+                "nowplaying": 0,
                 "order": 22,
                 "GAMES": [
                     {
@@ -862,8 +868,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=953274&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=964801&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:26",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -967,7 +973,7 @@
                         "Competition": "C ESP CLUBES INF MASC",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "3",
+                        "Stage": "0",
                         "ID": 2471617,
                         "GameCode": null,
                         "Place": "POLIDEPORTIVO ANTONIO GIL HERNÁNDEZ",
