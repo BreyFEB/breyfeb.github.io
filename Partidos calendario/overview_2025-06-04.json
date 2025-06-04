@@ -384,7 +384,7 @@
                 "id": "254",
                 "name": "CE Clubes Inf Masc",
                 "gamescount": 24,
-                "nowplaying": 0,
+                "nowplaying": 1,
                 "order": 22,
                 "GAMES": [
                     {
@@ -637,12 +637,18 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=953274&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=964324&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:00:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
