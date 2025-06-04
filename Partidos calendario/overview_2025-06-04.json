@@ -11,7 +11,7 @@
                 "id": "255",
                 "name": "CE Clubes Inf Fem",
                 "gamescount": 24,
-                "nowplaying": 3,
+                "nowplaying": 2,
                 "order": 21,
                 "GAMES": [
                     {
@@ -250,14 +250,14 @@
                         "Place": "PALACIO DE LOS DEPORTES CAROLINA MARÍN",
                         "TeamAID": 956376,
                         "TeamA": "BARÇA CBS",
-                        "ScoreA": 63,
+                        "ScoreA": 83,
                         "TeamACode": "08004219",
                         "TeamAClubCode": "080042",
                         "TeamBID": 963886,
                         "TeamB": "CASADEMONT ZARAGOZA A",
                         "TeamBCode": "50031316",
                         "TeamBClubCode": "500313",
-                        "ScoreB": 62,
+                        "ScoreB": 67,
                         "StartTime": "2025-06-04T17:00:00",
                         "StartTimeUTC": "2025-06-04T15:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -265,7 +265,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=956376&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=963886&ti=1",
                         "Quarter": 4,
-                        "Time": "00:33:24",
+                        "Time": "00:39:36",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -287,8 +287,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "8",
-                                "scoreB": "6"
+                                "scoreA": "28",
+                                "scoreB": "11"
                             }
                         ],
                         "Season": null,
@@ -321,8 +321,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=964746&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952723&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:31",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -391,7 +391,7 @@
                         "Competition": "C ESP CLUBES INF FEM",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2471467,
                         "GameCode": null,
                         "Place": "COMPLEJO DEPORTIVO HERNÁNDEZ ALBARRACÍN",
@@ -426,7 +426,7 @@
                 "id": "254",
                 "name": "CE Clubes Inf Masc",
                 "gamescount": 26,
-                "nowplaying": 2,
+                "nowplaying": 1,
                 "order": 22,
                 "GAMES": [
                     {
@@ -665,14 +665,14 @@
                         "Place": "PABELLÓN MUNICIPAL DE ALJARAQUE",
                         "TeamAID": 953274,
                         "TeamA": "CBI ELCHE A",
-                        "ScoreA": 48,
+                        "ScoreA": 50,
                         "TeamACode": "03003101",
                         "TeamAClubCode": "030031",
                         "TeamBID": 964324,
                         "TeamB": "CAJASIETE CANARIAS",
                         "TeamBCode": "38023203",
                         "TeamBClubCode": "380232",
-                        "ScoreB": 49,
+                        "ScoreB": 58,
                         "StartTime": "2025-06-04T17:00:00",
                         "StartTimeUTC": "2025-06-04T15:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -680,7 +680,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=953274&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=964324&ti=1",
                         "Quarter": 4,
-                        "Time": "00:35:03",
+                        "Time": "00:39:30",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -702,8 +702,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "4",
-                                "scoreB": "7"
+                                "scoreA": "6",
+                                "scoreB": "16"
                             }
                         ],
                         "Season": null,
@@ -721,7 +721,7 @@
                         "Place": "POLIDEPORTIVO ANDRÉS ESTRADA",
                         "TeamAID": 964492,
                         "TeamA": "PABLO LASO ACADEMY",
-                        "ScoreA": 75,
+                        "ScoreA": 82,
                         "TeamACode": "28297302",
                         "TeamAClubCode": "282973",
                         "TeamBID": 955055,
@@ -736,8 +736,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=964492&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=955055&ti=1",
                         "Quarter": 4,
-                        "Time": "00:38:57",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -758,7 +758,7 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "22",
+                                "scoreA": "29",
                                 "scoreB": "15"
                             }
                         ],
@@ -771,7 +771,7 @@
                         "Competition": "C ESP CLUBES INF MASC",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2471666,
                         "GameCode": null,
                         "Place": "POLIDEPORTIVO ANDRÉS ESTRADA",
