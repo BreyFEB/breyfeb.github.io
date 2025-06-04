@@ -41,8 +41,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=955643&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=956579&ti=1",
                         "Quarter": 4,
-                        "Time": "00:38:40",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -132,7 +132,7 @@
                         "Competition": "C ESP CLUBES INF FEM",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2471461,
                         "GameCode": null,
                         "Place": "PALACIO DE LOS DEPORTES CAROLINA MARÍN",
@@ -167,7 +167,7 @@
                         "Competition": "C ESP CLUBES INF FEM",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2471462,
                         "GameCode": null,
                         "Place": "COMPLEJO DEPORTIVO HERNÁNDEZ ALBARRACÍN",
@@ -187,12 +187,18 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=959479&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=970692&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:00:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
