@@ -11,7 +11,7 @@
                 "id": "255",
                 "name": "CE Clubes Inf Fem",
                 "gamescount": 24,
-                "nowplaying": 2,
+                "nowplaying": 3,
                 "order": 21,
                 "GAMES": [
                     {
@@ -138,7 +138,7 @@
                         "Place": "PALACIO DE LOS DEPORTES CAROLINA MARÍN",
                         "TeamAID": 961030,
                         "TeamA": "C.B. LAS ROZAS \"A\"",
-                        "ScoreA": 0,
+                        "ScoreA": 2,
                         "TeamACode": "28001785",
                         "TeamAClubCode": "280017",
                         "TeamBID": 964228,
@@ -152,12 +152,18 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=961030&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=964228&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:00:05",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "2",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -173,14 +179,14 @@
                         "Place": "COMPLEJO DEPORTIVO HERNÁNDEZ ALBARRACÍN",
                         "TeamAID": 959479,
                         "TeamA": "JANSEN BT \"A\"",
-                        "ScoreA": 0,
+                        "ScoreA": 12,
                         "TeamACode": "28013978",
                         "TeamAClubCode": "280139",
                         "TeamBID": 970692,
                         "TeamB": "RACA TEAR",
                         "TeamBCode": "18012829",
                         "TeamBClubCode": "180128",
-                        "ScoreB": 0,
+                        "ScoreB": 15,
                         "StartTime": "2025-06-04T12:30:00",
                         "StartTimeUTC": "2025-06-04T10:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -188,15 +194,15 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=959479&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=970692&ti=1",
                         "Quarter": 1,
-                        "Time": "00:00:00",
+                        "Time": "00:06:14",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
                             {
                                 "n": "1",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "12",
+                                "scoreB": "15"
                             }
                         ],
                         "Season": null,
@@ -348,7 +354,7 @@
                 "id": "254",
                 "name": "CE Clubes Inf Masc",
                 "gamescount": 24,
-                "nowplaying": 0,
+                "nowplaying": 2,
                 "order": 22,
                 "GAMES": [
                     {
@@ -475,26 +481,32 @@
                         "Place": "PABELLÓN MUNICIPAL DE ALJARAQUE",
                         "TeamAID": 973110,
                         "TeamA": "FUNDACION ARO REAL BETIS BALONCESTO",
-                        "ScoreA": 0,
+                        "ScoreA": 22,
                         "TeamACode": "41022305",
                         "TeamAClubCode": "410223",
                         "TeamBID": 962213,
                         "TeamB": "ALIMERKA OVIEDO BALONCESTO \"A\"",
                         "TeamBCode": "33130204",
                         "TeamBClubCode": "331302",
-                        "ScoreB": 0,
+                        "ScoreB": 6,
                         "StartTime": "2025-06-04T12:30:00",
                         "StartTimeUTC": "2025-06-04T10:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=973110&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=962213&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:06:35",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "22",
+                                "scoreB": "6"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -510,26 +522,32 @@
                         "Place": "POLIDEPORTIVO ANDRÉS ESTRADA",
                         "TeamAID": 952724,
                         "TeamA": "FUNDACIÓN VALENCIA BASQUET 2000",
-                        "ScoreA": 0,
+                        "ScoreA": 5,
                         "TeamACode": "46082406",
                         "TeamAClubCode": "460824",
                         "TeamBID": 963406,
                         "TeamB": "CANTERBURY SCHOOL ",
                         "TeamBCode": "35015103",
                         "TeamBClubCode": "350151",
-                        "ScoreB": 0,
+                        "ScoreB": 18,
                         "StartTime": "2025-06-04T12:30:00",
                         "StartTimeUTC": "2025-06-04T10:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=952724&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=963406&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:06:02",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "5",
+                                "scoreB": "18"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
