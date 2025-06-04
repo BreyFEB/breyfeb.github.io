@@ -579,8 +579,8 @@
                         "fgm": "1",
                         "fga": "12",
                         "fgp": "8,3",
-                        "min": "1804",
-                        "minFormatted": "30:04",
+                        "min": "1820",
+                        "minFormatted": "30:20",
                         "sta": null,
                         "bs": "1",
                         "tc": "1",
@@ -655,8 +655,8 @@
                         "fgm": "7",
                         "fga": "17",
                         "fgp": "41,2",
-                        "min": "1776",
-                        "minFormatted": "29:36",
+                        "min": "1792",
+                        "minFormatted": "29:52",
                         "sta": null,
                         "bs": "0",
                         "tc": "2",
@@ -769,8 +769,8 @@
                         "fgm": "2",
                         "fga": "10",
                         "fgp": "20,0",
-                        "min": "1744",
-                        "minFormatted": "29:04",
+                        "min": "1760",
+                        "minFormatted": "29:20",
                         "sta": null,
                         "bs": "0",
                         "tc": "0",
@@ -896,7 +896,7 @@
                         "to": "0",
                         "st": "0",
                         "ind": null,
-                        "pllss": "0",
+                        "pllss": "7",
                         "val": "-1",
                         "assist": "2",
                         "reb": "0",
@@ -1051,7 +1051,7 @@
         "hasExtension": false,
         "LINES": [
             {
-                "num": "544",
+                "num": "543",
                 "text": "Fin del Cuarto 4",
                 "team": null,
                 "time": "00:00",
@@ -1077,7 +1077,7 @@
                 "Position": ""
             },
             {
-                "num": "543",
+                "num": "542",
                 "text": "(UNICAJA ANDALUCÍA) P. COMINO CANO: REBOTE (Rebotes: 9)",
                 "team": "2",
                 "time": "00:16",
@@ -1103,7 +1103,7 @@
                 "Position": ""
             },
             {
-                "num": "542",
+                "num": "541",
                 "text": "(HOMS UE MATARÓ - IAF) A. ARAGÓN ALBERT: TIRO DE 2 FALLADO",
                 "team": "1",
                 "time": "00:16",
@@ -1129,7 +1129,7 @@
                 "Position": "91.67968114217122|57.39737084571352"
             },
             {
-                "num": "541",
+                "num": "540",
                 "text": "(HOMS UE MATARÓ - IAF) A. ARAGÓN ALBERT: ROBO (Robos: 1)",
                 "team": "1",
                 "time": "00:23",
@@ -1155,7 +1155,7 @@
                 "Position": ""
             },
             {
-                "num": "540",
+                "num": "539",
                 "text": "(UNICAJA ANDALUCÍA) M. ZORRILLA DÍAZ: PÉRDIDA (Pérdidas: 3)",
                 "team": "2",
                 "time": "00:23",
@@ -1181,7 +1181,7 @@
                 "Position": "69.74665959676106|33.83544475474256"
             },
             {
-                "num": "539",
+                "num": "538",
                 "text": "(UNICAJA ANDALUCÍA) M. ALMARZA GARRIDO: ROBO (Robos: 1)",
                 "team": "2",
                 "time": "00:26",
@@ -1207,7 +1207,7 @@
                 "Position": ""
             },
             {
-                "num": "538",
+                "num": "537",
                 "text": "(HOMS UE MATARÓ - IAF) A. FRÍAS CASAS: PÉRDIDA (Pérdidas: 2)",
                 "team": "1",
                 "time": "00:26",
@@ -1233,7 +1233,7 @@
                 "Position": "70.78778584798177|11.513619625822027"
             },
             {
-                "num": "537",
+                "num": "536",
                 "text": "(UNICAJA ANDALUCÍA) M. ALMARZA GARRIDO: TIRO DE 2 ANOTADO (Puntos: 17)",
                 "team": "2",
                 "time": "00:35",
@@ -1259,7 +1259,7 @@
                 "Position": "10.819017887115479|54.669143189775184"
             },
             {
-                "num": "536",
+                "num": "535",
                 "text": "(UNICAJA ANDALUCÍA) P. COMINO CANO: TIRO DE 1 FALLADO",
                 "team": "2",
                 "time": "00:41",
@@ -1285,7 +1285,7 @@
                 "Position": ""
             },
             {
-                "num": "535",
+                "num": "534",
                 "text": "(UNICAJA ANDALUCÍA) L. BERROCAL AGUILERA: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "00:41",
@@ -1311,7 +1311,7 @@
                 "Position": ""
             },
             {
-                "num": "534",
+                "num": "533",
                 "text": "(UNICAJA ANDALUCÍA) M. IKPONMWOSA BOZANO: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "00:41",
@@ -1337,7 +1337,7 @@
                 "Position": ""
             },
             {
-                "num": "533",
+                "num": "532",
                 "text": "(HOMS UE MATARÓ - IAF) Entrenador: FALTA Técnica. Tiros libres: 1",
                 "team": "1",
                 "time": "00:41",
@@ -1363,7 +1363,7 @@
                 "Position": "36.0836378733317|44.12828607762114"
             },
             {
-                "num": "532",
+                "num": "531",
                 "text": "(HOMS UE MATARÓ - IAF) B. LOPEZ SELLÉS: TIRO DE 2 FALLADO",
                 "team": "1",
                 "time": "00:47",
@@ -1389,7 +1389,7 @@
                 "Position": "93.48429361979167|51.94092121530087"
             },
             {
-                "num": "531",
+                "num": "530",
                 "text": "(HOMS UE MATARÓ - IAF) B. LOPEZ SELLÉS: REBOTE (Rebotes: 4)",
                 "team": "1",
                 "time": "00:54",
@@ -1415,7 +1415,7 @@
                 "Position": ""
             },
             {
-                "num": "530",
+                "num": "529",
                 "text": "(HOMS UE MATARÓ - IAF) C. BONIFACE PONS: TAPÓN (Tapones: 5)",
                 "team": "1",
                 "time": "00:54",
@@ -1441,7 +1441,7 @@
                 "Position": ""
             },
             {
-                "num": "529",
+                "num": "528",
                 "text": "(UNICAJA ANDALUCÍA) M. IKPONMWOSA BOZANO: TIRO DE 3 FALLADO",
                 "team": "2",
                 "time": "00:54",
@@ -1467,7 +1467,7 @@
                 "Position": "35.66718737284342|62.35777185318318"
             },
             {
-                "num": "528",
+                "num": "527",
                 "text": "(UNICAJA ANDALUCÍA) M. ZORRILLA DÍAZ: TIRO DE 2 FALLADO",
                 "team": "2",
                 "time": "01:03",
@@ -1493,7 +1493,7 @@
                 "Position": "14.358839988708496|82.19939860891789"
             },
             {
-                "num": "527",
+                "num": "526",
                 "text": "(HOMS UE MATARÓ - IAF) A. ARAGÓN ALBERT: FALTA Personal (Faltas: 4. Faltas de equipo: 16). Tiros libres: 0",
                 "team": "1",
                 "time": "01:21",
@@ -1519,7 +1519,7 @@
                 "Position": "31.91913604736328|35.81960515773043"
             },
             {
-                "num": "526",
+                "num": "525",
                 "text": "(UNICAJA ANDALUCÍA) M. ZORRILLA DÍAZ: ROBO (Robos: 1)",
                 "team": "2",
                 "time": "01:38",
@@ -1545,7 +1545,7 @@
                 "Position": ""
             },
             {
-                "num": "525",
+                "num": "524",
                 "text": "(HOMS UE MATARÓ - IAF) A. FRÍAS CASAS: PÉRDIDA (Pérdidas: 1)",
                 "team": "1",
                 "time": "01:38",
@@ -1571,7 +1571,7 @@
                 "Position": "68.21967442830403|5.6851416953066565"
             },
             {
-                "num": "524",
+                "num": "523",
                 "text": "(HOMS UE MATARÓ - IAF) A. FRÍAS CASAS: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "01:39",
@@ -1597,7 +1597,7 @@
                 "Position": ""
             },
             {
-                "num": "523",
+                "num": "522",
                 "text": "(HOMS UE MATARÓ - IAF) M. HERNÁNDEZ NAVARRO: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "01:39",
@@ -1623,7 +1623,7 @@
                 "Position": ""
             },
             {
-                "num": "522",
+                "num": "521",
                 "text": "(HOMS UE MATARÓ - IAF) Tiempo muerto",
                 "team": "1",
                 "time": "01:39",
@@ -1649,7 +1649,7 @@
                 "Position": ""
             },
             {
-                "num": "521",
+                "num": "520",
                 "text": "(UNICAJA ANDALUCÍA) M. ZORRILLA DÍAZ: ASISTENCIA (Asistencias: 1)",
                 "team": "2",
                 "time": "01:41",
@@ -1675,7 +1675,7 @@
                 "Position": ""
             },
             {
-                "num": "520",
+                "num": "519",
                 "text": "(UNICAJA ANDALUCÍA) M. ALMARZA GARRIDO: TIRO DE 3 ANOTADO (Puntos: 15)",
                 "team": "2",
                 "time": "01:41",
@@ -1701,7 +1701,7 @@
                 "Position": "10.957834720611572|92.12020630532123"
             },
             {
-                "num": "519",
+                "num": "518",
                 "text": "(UNICAJA ANDALUCÍA) P. COMINO CANO: REBOTE (Rebotes: 8)",
                 "team": "2",
                 "time": "01:54",
@@ -1727,7 +1727,7 @@
                 "Position": ""
             },
             {
-                "num": "518",
+                "num": "517",
                 "text": "(HOMS UE MATARÓ - IAF) C. BONIFACE PONS: TIRO DE 2 FALLADO",
                 "team": "1",
                 "time": "01:54",
@@ -1753,7 +1753,7 @@
                 "Position": "91.05499903361003|54.297115244763965"
             },
             {
-                "num": "517",
+                "num": "516",
                 "text": "(HOMS UE MATARÓ - IAF) C. BONIFACE PONS: REBOTE (Rebotes: 10)",
                 "team": "1",
                 "time": "02:00",
@@ -1779,7 +1779,7 @@
                 "Position": ""
             },
             {
-                "num": "516",
+                "num": "515",
                 "text": "(HOMS UE MATARÓ - IAF) A. ARAGÓN ALBERT: TIRO DE 3 FALLADO",
                 "team": "1",
                 "time": "02:00",
@@ -1805,7 +1805,7 @@
                 "Position": "62.87523905436198|44.50031686336436"
             },
             {
-                "num": "515",
+                "num": "514",
                 "text": "(HOMS UE MATARÓ - IAF) N. POZA CERVANTES: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "02:19",
@@ -1831,7 +1831,7 @@
                 "Position": ""
             },
             {
-                "num": "514",
+                "num": "513",
                 "text": "(HOMS UE MATARÓ - IAF) A. SANZ SANAHUJA: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "02:19",
@@ -1857,7 +1857,7 @@
                 "Position": ""
             },
             {
-                "num": "513",
+                "num": "512",
                 "text": "(HOMS UE MATARÓ - IAF) B. LOPEZ SELLÉS: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "02:19",
@@ -1883,7 +1883,7 @@
                 "Position": ""
             },
             {
-                "num": "512",
+                "num": "511",
                 "text": "(HOMS UE MATARÓ - IAF) M. HERNÁNDEZ NAVARRO: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "02:19",
@@ -1909,7 +1909,7 @@
                 "Position": ""
             },
             {
-                "num": "511",
+                "num": "510",
                 "text": "(HOMS UE MATARÓ - IAF) Tiempo muerto",
                 "team": "1",
                 "time": "02:19",
@@ -1935,7 +1935,7 @@
                 "Position": ""
             },
             {
-                "num": "510",
+                "num": "509",
                 "text": "(UNICAJA ANDALUCÍA) P. COMINO CANO: REBOTE (Rebotes: 7)",
                 "team": "2",
                 "time": "02:38",
@@ -1961,7 +1961,7 @@
                 "Position": ""
             },
             {
-                "num": "509",
+                "num": "508",
                 "text": "(HOMS UE MATARÓ - IAF) A. PONT SALVAT: TIRO DE 3 FALLADO",
                 "team": "1",
                 "time": "02:38",
@@ -1987,7 +1987,7 @@
                 "Position": "73.42529296875|83.19147881041182"
             },
             {
-                "num": "508",
+                "num": "507",
                 "text": "(UNICAJA ANDALUCÍA) C. APARICIO BENITO: TIRO DE 2 ANOTADO (Puntos: 5)",
                 "team": "2",
                 "time": "02:57",
@@ -2013,7 +2013,7 @@
                 "Position": "8.250910441080729|58.88548830722241"
             },
             {
-                "num": "507",
+                "num": "506",
                 "text": "(UNICAJA ANDALUCÍA) C. APARICIO BENITO: REBOTE (Rebotes: 5)",
                 "team": "2",
                 "time": "03:19",
@@ -2039,7 +2039,7 @@
                 "Position": ""
             },
             {
-                "num": "506",
+                "num": "505",
                 "text": "(HOMS UE MATARÓ - IAF) A. ARAGÓN ALBERT: TIRO DE 2 FALLADO",
                 "team": "1",
                 "time": "03:19",
@@ -2065,7 +2065,7 @@
                 "Position": "96.67707443237305|54.793152504778924"
             },
             {
-                "num": "505",
+                "num": "504",
                 "text": "(UNICAJA ANDALUCÍA) M. IKPONMWOSA BOZANO: ROBO (Robos: 2)",
                 "team": "2",
                 "time": "03:32",
@@ -2091,7 +2091,7 @@
                 "Position": ""
             },
             {
-                "num": "504",
+                "num": "503",
                 "text": "(HOMS UE MATARÓ - IAF) N. POZA CERVANTES: PÉRDIDA (Pérdidas: 3)",
                 "team": "1",
                 "time": "03:32",
@@ -2117,7 +2117,7 @@
                 "Position": "60.79299290974935|36.06762662846992"
             },
             {
-                "num": "503",
+                "num": "502",
                 "text": "(HOMS UE MATARÓ - IAF) N. POZA CERVANTES: ROBO (Robos: 2)",
                 "team": "1",
                 "time": "03:37",
@@ -2143,7 +2143,7 @@
                 "Position": ""
             },
             {
-                "num": "502",
+                "num": "501",
                 "text": "(UNICAJA ANDALUCÍA) M. ZORRILLA DÍAZ: PÉRDIDA (Pérdidas: 2)",
                 "team": "2",
                 "time": "03:37",
@@ -2169,7 +2169,7 @@
                 "Position": "73.1476656595866|81.57934635243518"
             },
             {
-                "num": "501",
+                "num": "500",
                 "text": "(UNICAJA ANDALUCÍA) P. COMINO CANO: ROBO (Robos: 5)",
                 "team": "2",
                 "time": "03:41",
@@ -2195,7 +2195,7 @@
                 "Position": ""
             },
             {
-                "num": "500",
+                "num": "499",
                 "text": "(HOMS UE MATARÓ - IAF) C. BONIFACE PONS: PÉRDIDA (Pérdidas: 3)",
                 "team": "1",
                 "time": "03:41",
@@ -2221,7 +2221,7 @@
                 "Position": "84.66944376627605|47.84858541285738"
             },
             {
-                "num": "499",
+                "num": "498",
                 "text": "(HOMS UE MATARÓ - IAF) Tiempo muerto",
                 "team": "1",
                 "time": "03:54",
@@ -2247,7 +2247,7 @@
                 "Position": ""
             },
             {
-                "num": "498",
+                "num": "497",
                 "text": "(UNICAJA ANDALUCÍA) M. ALMARZA GARRIDO: FALTA Personal (Faltas: 4. Faltas de equipo: 21). Tiros libres: 0",
                 "team": "2",
                 "time": "03:54",
@@ -2273,7 +2273,7 @@
                 "Position": "79.74144617716472|35.81960515773043"
             },
             {
-                "num": "497",
+                "num": "496",
                 "text": "(UNICAJA ANDALUCÍA) C. APARICIO BENITO: ASISTENCIA (Asistencias: 3)",
                 "team": "2",
                 "time": "04:13",
@@ -2299,7 +2299,7 @@
                 "Position": ""
             },
             {
-                "num": "496",
+                "num": "495",
                 "text": "(UNICAJA ANDALUCÍA) M. IKPONMWOSA BOZANO: TIRO DE 3 ANOTADO (Puntos: 14)",
                 "team": "2",
                 "time": "04:13",
@@ -2325,7 +2325,7 @@
                 "Position": "7.626234690348308|4.321029997886495"
             },
             {
-                "num": "495",
+                "num": "494",
                 "text": "(HOMS UE MATARÓ - IAF) A. ARAGÓN ALBERT: FALTA Personal (Faltas: 3. Faltas de equipo: 15). Tiros libres: 0",
                 "team": "1",
                 "time": "04:24",
@@ -2351,7 +2351,7 @@
                 "Position": "16.441089312235516|49.088689925822806"
             },
             {
-                "num": "494",
+                "num": "493",
                 "text": "(UNICAJA ANDALUCÍA) P. COMINO CANO: REBOTE (Rebotes: 6)",
                 "team": "2",
                 "time": "04:29",
@@ -2377,7 +2377,7 @@
                 "Position": ""
             },
             {
-                "num": "493",
+                "num": "492",
                 "text": "(UNICAJA ANDALUCÍA) M. IKPONMWOSA BOZANO: TAPÓN (Tapones: 1)",
                 "team": "2",
                 "time": "04:29",
@@ -2403,7 +2403,7 @@
                 "Position": ""
             },
             {
-                "num": "492",
+                "num": "491",
                 "text": "(HOMS UE MATARÓ - IAF) C. BONIFACE PONS: TIRO DE 2 FALLADO",
                 "team": "1",
                 "time": "04:29",
@@ -2429,7 +2429,7 @@
                 "Position": "85.29411315917969|50.08077012731674"
             },
             {
-                "num": "491",
+                "num": "490",
                 "text": "(HOMS UE MATARÓ - IAF) A. FRÍAS CASAS: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "04:47",
@@ -2455,7 +2455,7 @@
                 "Position": ""
             },
             {
-                "num": "490",
+                "num": "489",
                 "text": "(HOMS UE MATARÓ - IAF) A. PONT SALVAT: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "04:47",
@@ -2481,7 +2481,7 @@
                 "Position": ""
             },
             {
-                "num": "489",
+                "num": "488",
                 "text": "(UNICAJA ANDALUCÍA) M. ALMARZA GARRIDO: PÉRDIDA (Pérdidas: 4)",
                 "team": "2",
                 "time": "04:47",
@@ -2507,7 +2507,7 @@
                 "Position": "30.045115152994793|29.4950903222916"
             },
             {
-                "num": "488",
+                "num": "487",
                 "text": "(HOMS UE MATARÓ - IAF) A. ARAGÓN ALBERT: TIRO DE 3 ANOTADO (Puntos: 16)",
                 "team": "1",
                 "time": "05:11",
@@ -2533,7 +2533,7 @@
                 "Position": "68.7749417622884|75.3788408320001"
             },
             {
-                "num": "487",
+                "num": "486",
                 "text": "(HOMS UE MATARÓ - IAF) A. SANZ SANAHUJA: ROBO (Robos: 2)",
                 "team": "1",
                 "time": "05:20",
@@ -2559,7 +2559,7 @@
                 "Position": ""
             },
             {
-                "num": "486",
+                "num": "485",
                 "text": "(UNICAJA ANDALUCÍA) M. ZORRILLA DÍAZ: PÉRDIDA (Pérdidas: 1)",
                 "team": "2",
                 "time": "05:20",
@@ -2585,7 +2585,7 @@
                 "Position": "34.34842745463053|37.18371614496759"
             },
             {
-                "num": "485",
+                "num": "484",
                 "text": "(UNICAJA ANDALUCÍA) M. IKPONMWOSA BOZANO: REBOTE (Rebotes: 8)",
                 "team": "2",
                 "time": "05:37",
@@ -2611,7 +2611,7 @@
                 "Position": ""
             },
             {
-                "num": "484",
+                "num": "483",
                 "text": "(UNICAJA ANDALUCÍA) M. IKPONMWOSA BOZANO: TIRO DE 2 FALLADO",
                 "team": "2",
                 "time": "05:37",
@@ -2637,7 +2637,7 @@
                 "Position": "7.765051523844401|71.53452365956409"
             },
             {
-                "num": "483",
+                "num": "482",
                 "text": "(UNICAJA ANDALUCÍA) M. ALMARZA GARRIDO: REBOTE (Rebotes: 7)",
                 "team": "2",
                 "time": "05:56",
@@ -2663,7 +2663,7 @@
                 "Position": ""
             },
             {
-                "num": "482",
+                "num": "481",
                 "text": "(HOMS UE MATARÓ - IAF) C. BONIFACE PONS: TIRO DE 3 FALLADO",
                 "team": "1",
                 "time": "05:56",
@@ -2689,7 +2689,7 @@
                 "Position": "68.63612492879231|64.34193793763507"
             },
             {
-                "num": "481",
+                "num": "480",
                 "text": "(HOMS UE MATARÓ - IAF) A. SANZ SANAHUJA: REBOTE (Rebotes: 3)",
                 "team": "1",
                 "time": "06:08",
@@ -2715,7 +2715,7 @@
                 "Position": ""
             },
             {
-                "num": "480",
+                "num": "479",
                 "text": "(UNICAJA ANDALUCÍA) P. COMINO CANO: TIRO DE 2 FALLADO",
                 "team": "2",
                 "time": "06:08",
@@ -2741,7 +2741,7 @@
                 "Position": "18.52333704630534|45.492399905590304"
             },
             {
-                "num": "479",
+                "num": "478",
                 "text": "(UNICAJA ANDALUCÍA) M. IKPONMWOSA BOZANO: REBOTE (Rebotes: 7)",
                 "team": "2",
                 "time": "06:25",
@@ -2767,7 +2767,7 @@
                 "Position": ""
             },
             {
-                "num": "478",
+                "num": "477",
                 "text": "(HOMS UE MATARÓ - IAF) A. ARAGÓN ALBERT: TIRO DE 2 FALLADO",
                 "team": "1",
                 "time": "06:25",
@@ -2793,7 +2793,7 @@
                 "Position": "84.53062057495117|49.088689925822806"
             },
             {
-                "num": "477",
+                "num": "476",
                 "text": "(UNICAJA ANDALUCÍA) M. ZORRILLA DÍAZ: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "06:37",
@@ -2819,7 +2819,7 @@
                 "Position": ""
             },
             {
-                "num": "476",
+                "num": "475",
                 "text": "(UNICAJA ANDALUCÍA) A. AGUADO FERNANDEZ: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "06:37",
@@ -2845,7 +2845,7 @@
                 "Position": ""
             },
             {
-                "num": "475",
+                "num": "474",
                 "text": "(UNICAJA ANDALUCÍA) Tiempo muerto",
                 "team": "2",
                 "time": "06:37",
@@ -2871,7 +2871,7 @@
                 "Position": ""
             },
             {
-                "num": "474",
+                "num": "473",
                 "text": "(UNICAJA ANDALUCÍA) M. ALMARZA GARRIDO: PÉRDIDA (Pérdidas: 3)",
                 "team": "2",
                 "time": "06:37",
@@ -2897,7 +2897,7 @@
                 "Position": "28.101682662963867|54.91716750124668"
             },
             {
-                "num": "473",
+                "num": "472",
                 "text": "(HOMS UE MATARÓ - IAF) A. ARAGÓN ALBERT: ASISTENCIA (Asistencias: 1)",
                 "team": "1",
                 "time": "06:48",
@@ -2923,7 +2923,7 @@
                 "Position": ""
             },
             {
-                "num": "472",
+                "num": "471",
                 "text": "(HOMS UE MATARÓ - IAF) C. BONIFACE PONS: TIRO DE 2 ANOTADO (Puntos: 11)",
                 "team": "1",
                 "time": "06:48",
@@ -2949,7 +2949,7 @@
                 "Position": "85.50233840942383|68.80630168508976"
             },
             {
-                "num": "471",
+                "num": "470",
                 "text": "(UNICAJA ANDALUCÍA) A. AGUADO FERNANDEZ: FALTA Personal (Faltas: 3. Faltas de equipo: 20). Tiros libres: 0",
                 "team": "2",
                 "time": "06:50",
@@ -2975,7 +2975,7 @@
                 "Position": "78.83914311726888|47.97260040932514"
             },
             {
-                "num": "470",
+                "num": "469",
                 "text": "(HOMS UE MATARÓ - IAF) A. SANZ SANAHUJA: REBOTE (Rebotes: 2)",
                 "team": "1",
                 "time": "07:08",
@@ -3001,7 +3001,7 @@
                 "Position": ""
             },
             {
-                "num": "469",
+                "num": "468",
                 "text": "(UNICAJA ANDALUCÍA) P. COMINO CANO: TIRO DE 3 FALLADO",
                 "team": "2",
                 "time": "07:08",
@@ -3027,7 +3027,7 @@
                 "Position": "26.71351432800293|87.28380893139129"
             },
             {
-                "num": "468",
+                "num": "467",
                 "text": "(UNICAJA ANDALUCÍA) M. IKPONMWOSA BOZANO: ROBO (Robos: 1)",
                 "team": "2",
                 "time": "07:18",
@@ -3053,7 +3053,7 @@
                 "Position": ""
             },
             {
-                "num": "467",
+                "num": "466",
                 "text": "(HOMS UE MATARÓ - IAF) A. ARAGÓN ALBERT: PÉRDIDA (Pérdidas: 8)",
                 "team": "1",
                 "time": "07:18",
@@ -3079,7 +3079,7 @@
                 "Position": "68.9137585957845|17.218085755693153"
             },
             {
-                "num": "466",
+                "num": "465",
                 "text": "(UNICAJA ANDALUCÍA) M. ALMARZA GARRIDO: PÉRDIDA (Pérdidas: 2)",
                 "team": "2",
                 "time": "07:32",
@@ -3105,7 +3105,7 @@
                 "Position": "26.64410909016927|79.09914300796834"
             },
             {
-                "num": "465",
+                "num": "464",
                 "text": "(HOMS UE MATARÓ - IAF) REBOTE (Rebotes: 27)",
                 "team": "1",
                 "time": "07:37",
@@ -3131,7 +3131,7 @@
                 "Position": ""
             },
             {
-                "num": "464",
+                "num": "463",
                 "text": "(HOMS UE MATARÓ - IAF) C. BONIFACE PONS: TAPÓN (Tapones: 4)",
                 "team": "1",
                 "time": "07:37",
@@ -3157,7 +3157,7 @@
                 "Position": ""
             },
             {
-                "num": "463",
+                "num": "462",
                 "text": "(UNICAJA ANDALUCÍA) A. AGUADO FERNANDEZ: TIRO DE 2 FALLADO",
                 "team": "2",
                 "time": "07:37",
@@ -3183,7 +3183,7 @@
                 "Position": "3.184104561805725|62.35777185318318"
             },
             {
-                "num": "462",
+                "num": "461",
                 "text": "(UNICAJA ANDALUCÍA) A. AGUADO FERNANDEZ: REBOTE (Rebotes: 2)",
                 "team": "2",
                 "time": "07:42",
@@ -3209,7 +3209,7 @@
                 "Position": ""
             },
             {
-                "num": "461",
+                "num": "460",
                 "text": "(UNICAJA ANDALUCÍA) P. COMINO CANO: TIRO DE 3 FALLADO",
                 "team": "2",
                 "time": "07:42",
@@ -3235,7 +3235,7 @@
                 "Position": "31.572097142537434|70.4184341430664"
             },
             {
-                "num": "460",
+                "num": "459",
                 "text": "(HOMS UE MATARÓ - IAF) A. ARAGÓN ALBERT: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "07:58",
@@ -3261,7 +3261,7 @@
                 "Position": ""
             },
             {
-                "num": "459",
+                "num": "458",
                 "text": "(HOMS UE MATARÓ - IAF) M. HERNÁNDEZ NAVARRO: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "07:58",
@@ -3287,7 +3287,7 @@
                 "Position": ""
             },
             {
-                "num": "458",
+                "num": "457",
                 "text": "(HOMS UE MATARÓ - IAF) I. BAGUE RASET: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "07:58",
@@ -3313,7 +3313,7 @@
                 "Position": ""
             },
             {
-                "num": "457",
+                "num": "456",
                 "text": "(HOMS UE MATARÓ - IAF) N. POZA CERVANTES: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "07:58",
@@ -3339,7 +3339,7 @@
                 "Position": ""
             },
             {
-                "num": "456",
+                "num": "455",
                 "text": "(HOMS UE MATARÓ - IAF) M. HERNÁNDEZ NAVARRO: FALTA Personal (Faltas: 4. Faltas de equipo: 14). Tiros libres: 0",
                 "team": "1",
                 "time": "07:58",
@@ -3365,7 +3365,7 @@
                 "Position": "16.232864061991375|54.173105929760226"
             },
             {
-                "num": "455",
+                "num": "454",
                 "text": "(HOMS UE MATARÓ - IAF) A. FRÍAS CASAS: ASISTENCIA (Asistencias: 1)",
                 "team": "1",
                 "time": "08:17",
@@ -3391,7 +3391,7 @@
                 "Position": ""
             },
             {
-                "num": "454",
+                "num": "453",
                 "text": "(HOMS UE MATARÓ - IAF) C. BONIFACE PONS: TIRO DE 2 ANOTADO (Puntos: 9)",
                 "team": "1",
                 "time": "08:17",
@@ -3417,7 +3417,7 @@
                 "Position": "90.70796330769856|43.26021235039894"
             },
             {
-                "num": "453",
+                "num": "452",
                 "text": "(HOMS UE MATARÓ - IAF) I. BAGUE RASET: REBOTE (Rebotes: 2)",
                 "team": "1",
                 "time": "08:34",
@@ -3443,7 +3443,7 @@
                 "Position": ""
             },
             {
-                "num": "452",
+                "num": "451",
                 "text": "(UNICAJA ANDALUCÍA) M. IKPONMWOSA BOZANO: TIRO DE 2 FALLADO",
                 "team": "2",
                 "time": "08:34",
@@ -3469,7 +3469,7 @@
                 "Position": "13.17889928817749|59.629549878708865"
             },
             {
-                "num": "451",
+                "num": "450",
                 "text": "(HOMS UE MATARÓ - IAF) A. SANZ SANAHUJA: PÉRDIDA (Pérdidas: 1)",
                 "team": "1",
                 "time": "08:47",
@@ -3495,7 +3495,7 @@
                 "Position": "88.13985188802083|41.64807705169029"
             },
             {
-                "num": "450",
+                "num": "449",
                 "text": "(HOMS UE MATARÓ - IAF) A. SANZ SANAHUJA: REBOTE (Rebotes: 1)",
                 "team": "1",
                 "time": "08:58",
@@ -3521,7 +3521,7 @@
                 "Position": ""
             },
             {
-                "num": "449",
+                "num": "448",
                 "text": "(UNICAJA ANDALUCÍA) A. AGUADO FERNANDEZ: TIRO DE 2 FALLADO",
                 "team": "2",
                 "time": "08:58",
@@ -3547,7 +3547,7 @@
                 "Position": "10.541384220123291|74.75878857551737"
             },
             {
-                "num": "448",
+                "num": "447",
                 "text": "(HOMS UE MATARÓ - IAF) M. HERNÁNDEZ NAVARRO: FALTA Personal (Faltas: 3. Faltas de equipo: 13). Tiros libres: 0",
                 "team": "1",
                 "time": "09:06",
@@ -3573,7 +3573,7 @@
                 "Position": "15.261147816975912|49.83275149730926"
             },
             {
-                "num": "447",
+                "num": "446",
                 "text": "(UNICAJA ANDALUCÍA) M. ALMARZA GARRIDO: REBOTE (Rebotes: 6)",
                 "team": "2",
                 "time": "09:09",
@@ -3599,7 +3599,7 @@
                 "Position": ""
             },
             {
-                "num": "446",
+                "num": "445",
                 "text": "(UNICAJA ANDALUCÍA) C. APARICIO BENITO: TIRO DE 3 FALLADO",
                 "team": "2",
                 "time": "09:09",
@@ -3625,7 +3625,7 @@
                 "Position": "10.263750553131104|93.73233876329788"
             },
             {
-                "num": "445",
+                "num": "444",
                 "text": "(UNICAJA ANDALUCÍA) C. APARICIO BENITO: REBOTE (Rebotes: 4)",
                 "team": "2",
                 "time": "09:25",
@@ -3651,7 +3651,7 @@
                 "Position": ""
             },
             {
-                "num": "444",
+                "num": "443",
                 "text": "(UNICAJA ANDALUCÍA) M. ALMARZA GARRIDO: TIRO DE 2 FALLADO",
                 "team": "2",
                 "time": "09:25",
@@ -3677,7 +3677,7 @@
                 "Position": "17.829254468282063|63.349852054677115"
             },
             {
-                "num": "443",
+                "num": "442",
                 "text": "(HOMS UE MATARÓ - IAF) I. BAGUE RASET: TIRO DE 2 FALLADO",
                 "team": "1",
                 "time": "09:38",
@@ -3703,85 +3703,7 @@
                 "Position": "89.38920974731445|44.74833265263984"
             },
             {
-                "num": "442",
-                "text": "(UNICAJA ANDALUCÍA) C. APARICIO BENITO: Sustitución (Entra a pista)",
-                "team": "2",
-                "time": "09:44",
-                "deleted": null,
-                "scoreA": null,
-                "scoreB": null,
-                "quarter": "4",
-                "logo": "https://imagenes.feb.es/foto.aspx?c=2420890",
-                "idPlayer": "2420890",
-                "idLicense": "10576459",
-                "idTeam": "965301",
-                "action": "subst",
-                "logParam1": "00000000-0000-0002-0000-000002471463",
-                "logParam2": null,
-                "logParam3": "10576459",
-                "logParam4": "",
-                "logParam5": "",
-                "logParam6": "",
-                "logParam7": "",
-                "logParam8": "",
-                "logParam9": "",
-                "logParam10": "",
-                "Position": ""
-            },
-            {
                 "num": "441",
-                "text": "(UNICAJA ANDALUCÍA) M. ALMARZA GARRIDO: Sustitución (Entra a pista)",
-                "team": "2",
-                "time": "09:44",
-                "deleted": null,
-                "scoreA": null,
-                "scoreB": null,
-                "quarter": "4",
-                "logo": "https://imagenes.feb.es/foto.aspx?c=2413993",
-                "idPlayer": "2413993",
-                "idLicense": "10576315",
-                "idTeam": "965301",
-                "action": "subst",
-                "logParam1": "00000000-0000-0002-0000-000002471463",
-                "logParam2": null,
-                "logParam3": "10576315",
-                "logParam4": "",
-                "logParam5": "",
-                "logParam6": "",
-                "logParam7": "",
-                "logParam8": "",
-                "logParam9": "",
-                "logParam10": "",
-                "Position": ""
-            },
-            {
-                "num": "440",
-                "text": "(UNICAJA ANDALUCÍA) P. COMINO CANO: Sustitución (Entra a pista)",
-                "team": "2",
-                "time": "09:44",
-                "deleted": null,
-                "scoreA": null,
-                "scoreB": null,
-                "quarter": "4",
-                "logo": "https://imagenes.feb.es/foto.aspx?c=2414231",
-                "idPlayer": "2414231",
-                "idLicense": "10576223",
-                "idTeam": "965301",
-                "action": "subst",
-                "logParam1": "00000000-0000-0002-0000-000002471463",
-                "logParam2": null,
-                "logParam3": "10576223",
-                "logParam4": "",
-                "logParam5": "",
-                "logParam6": "",
-                "logParam7": "",
-                "logParam8": "",
-                "logParam9": "",
-                "logParam10": "",
-                "Position": ""
-            },
-            {
-                "num": "439",
                 "text": "(HOMS UE MATARÓ - IAF) A. SANZ SANAHUJA: ROBO (Robos: 1)",
                 "team": "1",
                 "time": "09:44",
@@ -3807,7 +3729,7 @@
                 "Position": ""
             },
             {
-                "num": "438",
+                "num": "440",
                 "text": "(UNICAJA ANDALUCÍA) M. IKPONMWOSA BOZANO: PÉRDIDA (Pérdidas: 1)",
                 "team": "2",
                 "time": "09:44",
@@ -3833,7 +3755,7 @@
                 "Position": "17.829254468282063|54.91716750124668"
             },
             {
-                "num": "437",
+                "num": "439",
                 "text": "(UNICAJA ANDALUCÍA) M. IKPONMWOSA BOZANO: REBOTE (Rebotes: 6)",
                 "team": "2",
                 "time": "09:48",
@@ -3859,7 +3781,7 @@
                 "Position": ""
             },
             {
-                "num": "436",
+                "num": "438",
                 "text": "(HOMS UE MATARÓ - IAF) M. HERNÁNDEZ NAVARRO: TIRO DE 2 FALLADO",
                 "team": "1",
                 "time": "09:48",
@@ -3885,7 +3807,85 @@
                 "Position": "89.38920974731445|54.669143189775184"
             },
             {
+                "num": "437",
+                "text": "(UNICAJA ANDALUCÍA) C. APARICIO BENITO: Sustitución (Entra a pista)",
+                "team": "2",
+                "time": "10:00",
+                "deleted": null,
+                "scoreA": null,
+                "scoreB": null,
+                "quarter": "4",
+                "logo": "https://imagenes.feb.es/foto.aspx?c=2420890",
+                "idPlayer": "2420890",
+                "idLicense": "10576459",
+                "idTeam": "965301",
+                "action": "subst",
+                "logParam1": "00000000-0000-0002-0000-000002471463",
+                "logParam2": null,
+                "logParam3": "10576459",
+                "logParam4": "",
+                "logParam5": "",
+                "logParam6": "",
+                "logParam7": "",
+                "logParam8": "",
+                "logParam9": "",
+                "logParam10": "",
+                "Position": ""
+            },
+            {
+                "num": "436",
+                "text": "(UNICAJA ANDALUCÍA) M. ALMARZA GARRIDO: Sustitución (Entra a pista)",
+                "team": "2",
+                "time": "10:00",
+                "deleted": null,
+                "scoreA": null,
+                "scoreB": null,
+                "quarter": "4",
+                "logo": "https://imagenes.feb.es/foto.aspx?c=2413993",
+                "idPlayer": "2413993",
+                "idLicense": "10576315",
+                "idTeam": "965301",
+                "action": "subst",
+                "logParam1": "00000000-0000-0002-0000-000002471463",
+                "logParam2": null,
+                "logParam3": "10576315",
+                "logParam4": "",
+                "logParam5": "",
+                "logParam6": "",
+                "logParam7": "",
+                "logParam8": "",
+                "logParam9": "",
+                "logParam10": "",
+                "Position": ""
+            },
+            {
                 "num": "435",
+                "text": "(UNICAJA ANDALUCÍA) P. COMINO CANO: Sustitución (Entra a pista)",
+                "team": "2",
+                "time": "10:00",
+                "deleted": null,
+                "scoreA": null,
+                "scoreB": null,
+                "quarter": "4",
+                "logo": "https://imagenes.feb.es/foto.aspx?c=2414231",
+                "idPlayer": "2414231",
+                "idLicense": "10576223",
+                "idTeam": "965301",
+                "action": "subst",
+                "logParam1": "00000000-0000-0002-0000-000002471463",
+                "logParam2": null,
+                "logParam3": "10576223",
+                "logParam4": "",
+                "logParam5": "",
+                "logParam6": "",
+                "logParam7": "",
+                "logParam8": "",
+                "logParam9": "",
+                "logParam10": "",
+                "Position": ""
+            },
+            {
+                "num": "434",
                 "text": "(UNICAJA ANDALUCÍA) R. BAYONA BURGUETE: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "10:00",
@@ -3900,32 +3900,6 @@
                 "action": "subst",
                 "logParam1": "00000000-0000-0002-0000-000002471463",
                 "logParam2": "10576374",
-                "logParam3": null,
-                "logParam4": "",
-                "logParam5": "",
-                "logParam6": "",
-                "logParam7": "",
-                "logParam8": "",
-                "logParam9": "",
-                "logParam10": "",
-                "Position": ""
-            },
-            {
-                "num": "434",
-                "text": "(UNICAJA ANDALUCÍA) L. BERROCAL AGUILERA: Sustitución (Sale de pista)",
-                "team": "2",
-                "time": "10:00",
-                "deleted": null,
-                "scoreA": null,
-                "scoreB": null,
-                "quarter": "4",
-                "logo": "https://imagenes.feb.es/foto.aspx?c=2592422",
-                "idPlayer": "2592422",
-                "idLicense": "10576605",
-                "idTeam": "965301",
-                "action": "subst",
-                "logParam1": "00000000-0000-0002-0000-000002471463",
-                "logParam2": "10576605",
                 "logParam3": null,
                 "logParam4": "",
                 "logParam5": "",
@@ -15725,8 +15699,8 @@
                         "fgm": "1",
                         "fga": "12",
                         "fgp": "8,3",
-                        "min": "1804",
-                        "minFormatted": "30:04",
+                        "min": "1820",
+                        "minFormatted": "30:20",
                         "sta": null,
                         "bs": "1",
                         "tc": "1",
@@ -15801,8 +15775,8 @@
                         "fgm": "7",
                         "fga": "17",
                         "fgp": "41,2",
-                        "min": "1776",
-                        "minFormatted": "29:36",
+                        "min": "1792",
+                        "minFormatted": "29:52",
                         "sta": null,
                         "bs": "0",
                         "tc": "2",
@@ -15915,8 +15889,8 @@
                         "fgm": "2",
                         "fga": "10",
                         "fgp": "20,0",
-                        "min": "1744",
-                        "minFormatted": "29:04",
+                        "min": "1760",
+                        "minFormatted": "29:20",
                         "sta": null,
                         "bs": "0",
                         "tc": "0",
@@ -16042,7 +16016,7 @@
                         "to": "0",
                         "st": "0",
                         "ind": null,
-                        "pllss": "0",
+                        "pllss": "7",
                         "val": "-1",
                         "assist": "2",
                         "reb": "0",
