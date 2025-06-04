@@ -11,7 +11,7 @@
                 "id": "255",
                 "name": "CE Clubes Inf Fem",
                 "gamescount": 24,
-                "nowplaying": 2,
+                "nowplaying": 1,
                 "order": 21,
                 "GAMES": [
                     {
@@ -250,7 +250,7 @@
                         "Place": "PALACIO DE LOS DEPORTES CAROLINA MARÍN",
                         "TeamAID": 956376,
                         "TeamA": "BARÇA CBS",
-                        "ScoreA": 83,
+                        "ScoreA": 85,
                         "TeamACode": "08004219",
                         "TeamAClubCode": "080042",
                         "TeamBID": 963886,
@@ -265,8 +265,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=956376&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=963886&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:36",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -287,7 +287,7 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "28",
+                                "scoreA": "30",
                                 "scoreB": "11"
                             }
                         ],
@@ -356,7 +356,7 @@
                         "Competition": "C ESP CLUBES INF FEM",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2471465,
                         "GameCode": null,
                         "Place": "PALACIO DE LOS DEPORTES CAROLINA MARÍN",
@@ -426,7 +426,7 @@
                 "id": "254",
                 "name": "CE Clubes Inf Masc",
                 "gamescount": 26,
-                "nowplaying": 1,
+                "nowplaying": 0,
                 "order": 22,
                 "GAMES": [
                     {
@@ -665,14 +665,14 @@
                         "Place": "PABELLÓN MUNICIPAL DE ALJARAQUE",
                         "TeamAID": 953274,
                         "TeamA": "CBI ELCHE A",
-                        "ScoreA": 50,
+                        "ScoreA": 51,
                         "TeamACode": "03003101",
                         "TeamAClubCode": "030031",
                         "TeamBID": 964324,
                         "TeamB": "CAJASIETE CANARIAS",
                         "TeamBCode": "38023203",
                         "TeamBClubCode": "380232",
-                        "ScoreB": 58,
+                        "ScoreB": 62,
                         "StartTime": "2025-06-04T17:00:00",
                         "StartTimeUTC": "2025-06-04T15:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -680,8 +680,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=953274&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=964324&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:30",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -702,8 +702,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "6",
-                                "scoreB": "16"
+                                "scoreA": "7",
+                                "scoreB": "20"
                             }
                         ],
                         "Season": null,
@@ -806,7 +806,7 @@
                         "Competition": "C ESP CLUBES INF MASC",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2471667,
                         "GameCode": null,
                         "Place": "PABELLÓN MUNICIPAL DE ALJARAQUE",
