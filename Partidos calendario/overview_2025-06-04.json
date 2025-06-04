@@ -26,7 +26,7 @@
                         "Place": "PALACIO DE LOS DEPORTES CAROLINA MARÍN",
                         "TeamAID": 955643,
                         "TeamA": "JOVENTUT BADALONA A",
-                        "ScoreA": 37,
+                        "ScoreA": 49,
                         "TeamACode": "08130509",
                         "TeamAClubCode": "081305",
                         "TeamBID": 956579,
@@ -41,7 +41,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=955643&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=956579&ti=1",
                         "Quarter": 3,
-                        "Time": "00:21:19",
+                        "Time": "00:26:45",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -58,7 +58,7 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "2",
+                                "scoreA": "14",
                                 "scoreB": "1"
                             }
                         ],
@@ -77,22 +77,22 @@
                         "Place": "COMPLEJO DEPORTIVO HERNÁNDEZ ALBARRACÍN",
                         "TeamAID": 955644,
                         "TeamA": "HOMS UE MATARÓ - IAF",
-                        "ScoreA": 33,
+                        "ScoreA": 42,
                         "TeamACode": "08002725",
                         "TeamAClubCode": "080027",
                         "TeamBID": 965301,
                         "TeamB": "UNICAJA ANDALUCÍA",
                         "TeamBCode": "29000165",
                         "TeamBClubCode": "290001",
-                        "ScoreB": 50,
+                        "ScoreB": 57,
                         "StartTime": "2025-06-04T10:30:00",
                         "StartTimeUTC": "2025-06-04T08:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=955644&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=965301&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:23:53",
+                        "Quarter": 4,
+                        "Time": "00:30:00",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -109,8 +109,13 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "4",
-                                "scoreB": "5"
+                                "scoreA": "13",
+                                "scoreB": "12"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "0",
+                                "scoreB": "0"
                             }
                         ],
                         "Season": null,
@@ -347,7 +352,7 @@
                         "Place": "POLIDEPORTIVO ANDRÉS ESTRADA",
                         "TeamAID": 955053,
                         "TeamA": "BARÇA",
-                        "ScoreA": 69,
+                        "ScoreA": 71,
                         "TeamACode": "08000305",
                         "TeamAClubCode": "080003",
                         "TeamBID": 963874,
@@ -362,7 +367,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=955053&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=963874&ti=1",
                         "Quarter": 3,
-                        "Time": "00:20:00",
+                        "Time": "00:20:09",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -379,7 +384,7 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "0",
+                                "scoreA": "2",
                                 "scoreB": "0"
                             }
                         ],
@@ -398,14 +403,14 @@
                         "Place": "PABELLÓN MUNICIPAL DE ALJARAQUE",
                         "TeamAID": 955052,
                         "TeamA": "JOVENTUT BADALONA  A",
-                        "ScoreA": 54,
+                        "ScoreA": 61,
                         "TeamACode": "08000507",
                         "TeamAClubCode": "080005",
                         "TeamBID": 961579,
                         "TeamB": "FUNDAL ALCOBENDAS \"A\"",
                         "TeamBCode": "28021923",
                         "TeamBClubCode": "280219",
-                        "ScoreB": 37,
+                        "ScoreB": 48,
                         "StartTime": "2025-06-04T10:30:00",
                         "StartTimeUTC": "2025-06-04T08:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -413,7 +418,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=955052&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=961579&ti=1",
                         "Quarter": 3,
-                        "Time": "00:23:24",
+                        "Time": "00:29:04",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -430,8 +435,8 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "12",
-                                "scoreB": "4"
+                                "scoreA": "19",
+                                "scoreB": "15"
                             }
                         ],
                         "Season": null,
