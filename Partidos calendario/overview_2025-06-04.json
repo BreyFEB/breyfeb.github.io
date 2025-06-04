@@ -362,22 +362,22 @@
                         "Place": "PALACIO DE LOS DEPORTES CAROLINA MARÍN",
                         "TeamAID": 957706,
                         "TeamA": "FUNDAL ALCOBENDAS \"A\"",
-                        "ScoreA": 20,
+                        "ScoreA": 28,
                         "TeamACode": "28021936",
                         "TeamAClubCode": "280219",
                         "TeamBID": 976037,
                         "TeamB": "LOINTEK GERNIKA",
                         "TeamBCode": "48035609",
                         "TeamBClubCode": "480356",
-                        "ScoreB": 29,
+                        "ScoreB": 30,
                         "StartTime": "2025-06-04T19:00:00",
                         "StartTimeUTC": "2025-06-04T17:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=957706&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=976037&ti=1",
-                        "Quarter": 2,
-                        "Time": "00:14:05",
+                        "Quarter": 3,
+                        "Time": "00:20:00",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -389,8 +389,13 @@
                             },
                             {
                                 "n": "2",
-                                "scoreA": "6",
-                                "scoreB": "8"
+                                "scoreA": "14",
+                                "scoreB": "9"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "0",
+                                "scoreB": "0"
                             }
                         ],
                         "Season": null,
@@ -408,14 +413,14 @@
                         "Place": "COMPLEJO DEPORTIVO HERNÁNDEZ ALBARRACÍN",
                         "TeamAID": 952711,
                         "TeamA": "VALENCIA BASKET ",
-                        "ScoreA": 36,
+                        "ScoreA": 48,
                         "TeamACode": "46000217",
                         "TeamAClubCode": "460002",
                         "TeamBID": 965647,
                         "TeamB": "GESTIÓN  Y CALOR CORDOBASKET",
                         "TeamBCode": "14300197",
                         "TeamBClubCode": "143001",
-                        "ScoreB": 22,
+                        "ScoreB": 27,
                         "StartTime": "2025-06-04T19:00:00",
                         "StartTimeUTC": "2025-06-04T17:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -423,7 +428,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=952711&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=965647&ti=1",
                         "Quarter": 3,
-                        "Time": "00:20:00",
+                        "Time": "00:26:08",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -440,8 +445,8 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "12",
+                                "scoreB": "5"
                             }
                         ],
                         "Season": null,
@@ -881,15 +886,15 @@
                         "TeamB": "TLSI GODELLA",
                         "TeamBCode": "46049506",
                         "TeamBClubCode": "460495",
-                        "ScoreB": 15,
+                        "ScoreB": 17,
                         "StartTime": "2025-06-04T19:00:00",
                         "StartTimeUTC": "2025-06-04T17:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=958271&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=956584&ti=1",
-                        "Quarter": 2,
-                        "Time": "00:16:07",
+                        "Quarter": 3,
+                        "Time": "00:20:00",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -902,7 +907,12 @@
                             {
                                 "n": "2",
                                 "scoreA": "12",
-                                "scoreB": "4"
+                                "scoreB": "6"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "0",
+                                "scoreB": "0"
                             }
                         ],
                         "Season": null,
@@ -920,22 +930,22 @@
                         "Place": "POLIDEPORTIVO ANDRÉS ESTRADA",
                         "TeamAID": 965290,
                         "TeamA": "UNICAJA ANDALUCÍA",
-                        "ScoreA": 35,
+                        "ScoreA": 40,
                         "TeamACode": "29000130",
                         "TeamAClubCode": "290001",
                         "TeamBID": 963244,
                         "TeamB": "CYD-LEONESA - COL. LEONÉS A",
                         "TeamBCode": "24031003",
                         "TeamBClubCode": "240310",
-                        "ScoreB": 36,
+                        "ScoreB": 42,
                         "StartTime": "2025-06-04T19:00:00",
                         "StartTimeUTC": "2025-06-04T17:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=965290&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=963244&ti=1",
-                        "Quarter": 2,
-                        "Time": "00:18:24",
+                        "Quarter": 3,
+                        "Time": "00:21:03",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -947,8 +957,13 @@
                             },
                             {
                                 "n": "2",
-                                "scoreA": "18",
-                                "scoreB": "15"
+                                "scoreA": "21",
+                                "scoreB": "19"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "2",
+                                "scoreB": "2"
                             }
                         ],
                         "Season": null,
