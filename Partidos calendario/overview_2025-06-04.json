@@ -10,66 +10,10 @@
             {
                 "id": "255",
                 "name": "CE Clubes Inf Fem",
-                "gamescount": 27,
+                "gamescount": 28,
                 "nowplaying": 1,
                 "order": 21,
                 "GAMES": [
-                    {
-                        "CompID": "255",
-                        "CompCode": null,
-                        "Competition": "C ESP CLUBES INF FEM",
-                        "RoundID": 0,
-                        "Round": null,
-                        "Stage": "0",
-                        "ID": 2471460,
-                        "GameCode": null,
-                        "Place": "PALACIO DE LOS DEPORTES CAROLINA MARÍN",
-                        "TeamAID": 955643,
-                        "TeamA": "JOVENTUT BADALONA A",
-                        "ScoreA": 65,
-                        "TeamACode": "08130509",
-                        "TeamAClubCode": "081305",
-                        "TeamBID": 956579,
-                        "TeamB": "MIARCO GODELLA",
-                        "TeamBCode": "46049500",
-                        "TeamBClubCode": "460495",
-                        "ScoreB": 48,
-                        "StartTime": "2025-06-04T10:30:00",
-                        "StartTimeUTC": "2025-06-04T08:30:00Z",
-                        "_GameTime": "0001-01-01T00:00:00",
-                        "GameTime": "00:00",
-                        "LogoA": "https://imagenes.feb.es/imagen.aspx?i=955643&ti=1",
-                        "LogoB": "https://imagenes.feb.es/imagen.aspx?i=956579&ti=1",
-                        "Quarter": 4,
-                        "Time": "FINAL",
-                        "Status": 3,
-                        "Timezone": null,
-                        "Duration": 0,
-                        "Quarters": [
-                            {
-                                "n": "1",
-                                "scoreA": "19",
-                                "scoreB": "8"
-                            },
-                            {
-                                "n": "2",
-                                "scoreA": "16",
-                                "scoreB": "19"
-                            },
-                            {
-                                "n": "3",
-                                "scoreA": "19",
-                                "scoreB": "6"
-                            },
-                            {
-                                "n": "4",
-                                "scoreA": "11",
-                                "scoreB": "15"
-                            }
-                        ],
-                        "Season": null,
-                        "SeasonID": null
-                    },
                     {
                         "CompID": "255",
                         "CompCode": null,
@@ -133,25 +77,25 @@
                         "RoundID": 0,
                         "Round": null,
                         "Stage": "0",
-                        "ID": 2471461,
+                        "ID": 2471460,
                         "GameCode": null,
                         "Place": "PALACIO DE LOS DEPORTES CAROLINA MARÍN",
-                        "TeamAID": 961030,
-                        "TeamA": "C.B. LAS ROZAS \"A\"",
-                        "ScoreA": 63,
-                        "TeamACode": "28001785",
-                        "TeamAClubCode": "280017",
-                        "TeamBID": 964228,
-                        "TeamB": "ARANGUREN MUTILBASKET A",
-                        "TeamBCode": "31015202",
-                        "TeamBClubCode": "310152",
-                        "ScoreB": 40,
-                        "StartTime": "2025-06-04T12:30:00",
-                        "StartTimeUTC": "2025-06-04T10:30:00Z",
+                        "TeamAID": 955643,
+                        "TeamA": "JOVENTUT BADALONA A",
+                        "ScoreA": 65,
+                        "TeamACode": "08130509",
+                        "TeamAClubCode": "081305",
+                        "TeamBID": 956579,
+                        "TeamB": "MIARCO GODELLA",
+                        "TeamBCode": "46049500",
+                        "TeamBClubCode": "460495",
+                        "ScoreB": 48,
+                        "StartTime": "2025-06-04T10:30:00",
+                        "StartTimeUTC": "2025-06-04T08:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
-                        "LogoA": "https://imagenes.feb.es/imagen.aspx?i=961030&ti=1",
-                        "LogoB": "https://imagenes.feb.es/imagen.aspx?i=964228&ti=1",
+                        "LogoA": "https://imagenes.feb.es/imagen.aspx?i=955643&ti=1",
+                        "LogoB": "https://imagenes.feb.es/imagen.aspx?i=956579&ti=1",
                         "Quarter": 4,
                         "Time": "FINAL",
                         "Status": 3,
@@ -160,23 +104,23 @@
                         "Quarters": [
                             {
                                 "n": "1",
-                                "scoreA": "14",
-                                "scoreB": "10"
+                                "scoreA": "19",
+                                "scoreB": "8"
                             },
                             {
                                 "n": "2",
-                                "scoreA": "10",
-                                "scoreB": "10"
+                                "scoreA": "16",
+                                "scoreB": "19"
                             },
                             {
                                 "n": "3",
-                                "scoreA": "15",
-                                "scoreB": "9"
+                                "scoreA": "19",
+                                "scoreB": "6"
                             },
                             {
                                 "n": "4",
-                                "scoreA": "24",
-                                "scoreB": "11"
+                                "scoreA": "11",
+                                "scoreB": "15"
                             }
                         ],
                         "Season": null,
@@ -233,6 +177,62 @@
                                 "n": "4",
                                 "scoreA": "21",
                                 "scoreB": "13"
+                            }
+                        ],
+                        "Season": null,
+                        "SeasonID": null
+                    },
+                    {
+                        "CompID": "255",
+                        "CompCode": null,
+                        "Competition": "C ESP CLUBES INF FEM",
+                        "RoundID": 0,
+                        "Round": null,
+                        "Stage": "0",
+                        "ID": 2471461,
+                        "GameCode": null,
+                        "Place": "PALACIO DE LOS DEPORTES CAROLINA MARÍN",
+                        "TeamAID": 961030,
+                        "TeamA": "C.B. LAS ROZAS \"A\"",
+                        "ScoreA": 63,
+                        "TeamACode": "28001785",
+                        "TeamAClubCode": "280017",
+                        "TeamBID": 964228,
+                        "TeamB": "ARANGUREN MUTILBASKET A",
+                        "TeamBCode": "31015202",
+                        "TeamBClubCode": "310152",
+                        "ScoreB": 40,
+                        "StartTime": "2025-06-04T12:30:00",
+                        "StartTimeUTC": "2025-06-04T10:30:00Z",
+                        "_GameTime": "0001-01-01T00:00:00",
+                        "GameTime": "00:00",
+                        "LogoA": "https://imagenes.feb.es/imagen.aspx?i=961030&ti=1",
+                        "LogoB": "https://imagenes.feb.es/imagen.aspx?i=964228&ti=1",
+                        "Quarter": 4,
+                        "Time": "FINAL",
+                        "Status": 3,
+                        "Timezone": null,
+                        "Duration": 0,
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "14",
+                                "scoreB": "10"
+                            },
+                            {
+                                "n": "2",
+                                "scoreA": "10",
+                                "scoreB": "10"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "15",
+                                "scoreB": "9"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "24",
+                                "scoreB": "11"
                             }
                         ],
                         "Season": null,
@@ -539,6 +539,41 @@
                         "RoundID": 0,
                         "Round": null,
                         "Stage": "1",
+                        "ID": 2471470,
+                        "GameCode": null,
+                        "Place": "COMPLEJO DEPORTIVO HERNÁNDEZ ALBARRACÍN",
+                        "TeamAID": 956376,
+                        "TeamA": "BARÇA CBS",
+                        "ScoreA": 0,
+                        "TeamACode": "08004219",
+                        "TeamAClubCode": "080042",
+                        "TeamBID": 957706,
+                        "TeamB": "FUNDAL ALCOBENDAS \"A\"",
+                        "TeamBCode": "28021936",
+                        "TeamBClubCode": "280219",
+                        "ScoreB": 0,
+                        "StartTime": "2025-06-05T17:00:00",
+                        "StartTimeUTC": "2025-06-05T15:00:00Z",
+                        "_GameTime": "0001-01-01T00:00:00",
+                        "GameTime": "00:00",
+                        "LogoA": "https://imagenes.feb.es/imagen.aspx?i=956376&ti=1",
+                        "LogoB": "https://imagenes.feb.es/imagen.aspx?i=957706&ti=1",
+                        "Quarter": 0,
+                        "Time": "00:00",
+                        "Status": 1,
+                        "Timezone": null,
+                        "Duration": 0,
+                        "Quarters": [],
+                        "Season": null,
+                        "SeasonID": null
+                    },
+                    {
+                        "CompID": "255",
+                        "CompCode": null,
+                        "Competition": "C ESP CLUBES INF FEM",
+                        "RoundID": 0,
+                        "Round": null,
+                        "Stage": "1",
                         "ID": 2471471,
                         "GameCode": null,
                         "Place": "COMPLEJO DEPORTIVO HERNÁNDEZ ALBARRACÍN",
@@ -572,66 +607,10 @@
             {
                 "id": "254",
                 "name": "CE Clubes Inf Masc",
-                "gamescount": 27,
+                "gamescount": 28,
                 "nowplaying": 0,
                 "order": 22,
                 "GAMES": [
-                    {
-                        "CompID": "254",
-                        "CompCode": null,
-                        "Competition": "C ESP CLUBES INF MASC",
-                        "RoundID": 0,
-                        "Round": null,
-                        "Stage": "0",
-                        "ID": 2471660,
-                        "GameCode": null,
-                        "Place": "POLIDEPORTIVO ANDRÉS ESTRADA",
-                        "TeamAID": 955053,
-                        "TeamA": "BARÇA",
-                        "ScoreA": 71,
-                        "TeamACode": "08000305",
-                        "TeamAClubCode": "080003",
-                        "TeamBID": 963874,
-                        "TeamB": "CASADEMONT ZARAGOZA A",
-                        "TeamBCode": "50031313",
-                        "TeamBClubCode": "500313",
-                        "ScoreB": 21,
-                        "StartTime": "2025-06-04T10:30:00",
-                        "StartTimeUTC": "2025-06-04T08:30:00Z",
-                        "_GameTime": "0001-01-01T00:00:00",
-                        "GameTime": "00:00",
-                        "LogoA": "https://imagenes.feb.es/imagen.aspx?i=955053&ti=1",
-                        "LogoB": "https://imagenes.feb.es/imagen.aspx?i=963874&ti=1",
-                        "Quarter": 4,
-                        "Time": "FINAL",
-                        "Status": 3,
-                        "Timezone": null,
-                        "Duration": 0,
-                        "Quarters": [
-                            {
-                                "n": "1",
-                                "scoreA": "43",
-                                "scoreB": "14"
-                            },
-                            {
-                                "n": "2",
-                                "scoreA": "26",
-                                "scoreB": "7"
-                            },
-                            {
-                                "n": "3",
-                                "scoreA": "2",
-                                "scoreB": "0"
-                            },
-                            {
-                                "n": "4",
-                                "scoreA": "0",
-                                "scoreB": "0"
-                            }
-                        ],
-                        "Season": null,
-                        "SeasonID": null
-                    },
                     {
                         "CompID": "254",
                         "CompCode": null,
@@ -683,6 +662,62 @@
                                 "n": "4",
                                 "scoreA": "20",
                                 "scoreB": "22"
+                            }
+                        ],
+                        "Season": null,
+                        "SeasonID": null
+                    },
+                    {
+                        "CompID": "254",
+                        "CompCode": null,
+                        "Competition": "C ESP CLUBES INF MASC",
+                        "RoundID": 0,
+                        "Round": null,
+                        "Stage": "0",
+                        "ID": 2471660,
+                        "GameCode": null,
+                        "Place": "POLIDEPORTIVO ANDRÉS ESTRADA",
+                        "TeamAID": 955053,
+                        "TeamA": "BARÇA",
+                        "ScoreA": 71,
+                        "TeamACode": "08000305",
+                        "TeamAClubCode": "080003",
+                        "TeamBID": 963874,
+                        "TeamB": "CASADEMONT ZARAGOZA A",
+                        "TeamBCode": "50031313",
+                        "TeamBClubCode": "500313",
+                        "ScoreB": 21,
+                        "StartTime": "2025-06-04T10:30:00",
+                        "StartTimeUTC": "2025-06-04T08:30:00Z",
+                        "_GameTime": "0001-01-01T00:00:00",
+                        "GameTime": "00:00",
+                        "LogoA": "https://imagenes.feb.es/imagen.aspx?i=955053&ti=1",
+                        "LogoB": "https://imagenes.feb.es/imagen.aspx?i=963874&ti=1",
+                        "Quarter": 4,
+                        "Time": "FINAL",
+                        "Status": 3,
+                        "Timezone": null,
+                        "Duration": 0,
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "43",
+                                "scoreB": "14"
+                            },
+                            {
+                                "n": "2",
+                                "scoreA": "26",
+                                "scoreB": "7"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "2",
+                                "scoreB": "0"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "0",
+                                "scoreB": "0"
                             }
                         ],
                         "Season": null,
@@ -1120,6 +1155,41 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=964492&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=964324&ti=1",
+                        "Quarter": 0,
+                        "Time": "00:00",
+                        "Status": 1,
+                        "Timezone": null,
+                        "Duration": 0,
+                        "Quarters": [],
+                        "Season": null,
+                        "SeasonID": null
+                    },
+                    {
+                        "CompID": "254",
+                        "CompCode": null,
+                        "Competition": "C ESP CLUBES INF MASC",
+                        "RoundID": 0,
+                        "Round": null,
+                        "Stage": "1",
+                        "ID": 2471671,
+                        "GameCode": null,
+                        "Place": "PALACIO DE LOS DEPORTES CAROLINA MARÍN",
+                        "TeamAID": 965290,
+                        "TeamA": "UNICAJA ANDALUCÍA",
+                        "ScoreA": 0,
+                        "TeamACode": "29000130",
+                        "TeamAClubCode": "290001",
+                        "TeamBID": 958271,
+                        "TeamB": "REAL MADRID ´A´",
+                        "TeamBCode": "28000204",
+                        "TeamBClubCode": "280002",
+                        "ScoreB": 0,
+                        "StartTime": "2025-06-05T19:00:00",
+                        "StartTimeUTC": "2025-06-05T17:00:00Z",
+                        "_GameTime": "0001-01-01T00:00:00",
+                        "GameTime": "00:00",
+                        "LogoA": "https://imagenes.feb.es/imagen.aspx?i=965290&ti=1",
+                        "LogoB": "https://imagenes.feb.es/imagen.aspx?i=958271&ti=1",
                         "Quarter": 0,
                         "Time": "00:00",
                         "Status": 1,
