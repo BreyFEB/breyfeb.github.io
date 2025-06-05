@@ -273,14 +273,14 @@
                         "Place": "COMPLEJO DEPORTIVO HERNÁNDEZ ALBARRACÍN",
                         "TeamAID": 964746,
                         "TeamA": "SPAR GRAN CANARIA",
-                        "ScoreA": 40,
+                        "ScoreA": 51,
                         "TeamACode": "35000102",
                         "TeamAClubCode": "350001",
                         "TeamBID": 952711,
                         "TeamB": "VALENCIA BASKET ",
                         "TeamBCode": "46000217",
                         "TeamBClubCode": "460002",
-                        "ScoreB": 50,
+                        "ScoreB": 64,
                         "StartTime": "2025-06-05T19:00:00",
                         "StartTimeUTC": "2025-06-05T17:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -288,7 +288,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=964746&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952711&ti=1",
                         "Quarter": 4,
-                        "Time": "00:30:10",
+                        "Time": "00:38:18",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -310,8 +310,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "11",
+                                "scoreB": "14"
                             }
                         ],
                         "Season": null,
@@ -541,14 +541,14 @@
                         "Place": "PALACIO DE LOS DEPORTES CAROLINA MARÍN",
                         "TeamAID": 965290,
                         "TeamA": "UNICAJA ANDALUCÍA",
-                        "ScoreA": 57,
+                        "ScoreA": 69,
                         "TeamACode": "29000130",
                         "TeamAClubCode": "290001",
                         "TeamBID": 958271,
                         "TeamB": "REAL MADRID ´A´",
                         "TeamBCode": "28000204",
                         "TeamBClubCode": "280002",
-                        "ScoreB": 65,
+                        "ScoreB": 86,
                         "StartTime": "2025-06-05T19:00:00",
                         "StartTimeUTC": "2025-06-05T17:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -556,7 +556,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=965290&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=958271&ti=1",
                         "Quarter": 4,
-                        "Time": "00:30:00",
+                        "Time": "00:38:13",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -578,8 +578,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "12",
+                                "scoreB": "21"
                             }
                         ],
                         "Season": null,
