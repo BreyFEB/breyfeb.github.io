@@ -105,14 +105,14 @@
                         "Place": "COMPLEJO DEPORTIVO HERNÁNDEZ ALBARRACÍN",
                         "TeamAID": 955643,
                         "TeamA": "JOVENTUT BADALONA A",
-                        "ScoreA": 39,
+                        "ScoreA": 49,
                         "TeamACode": "08130509",
                         "TeamAClubCode": "081305",
                         "TeamBID": 961030,
                         "TeamB": "C.B. LAS ROZAS \"A\"",
                         "TeamBCode": "28001785",
                         "TeamBClubCode": "280017",
-                        "ScoreB": 19,
+                        "ScoreB": 23,
                         "StartTime": "2025-06-05T10:30:00",
                         "StartTimeUTC": "2025-06-05T08:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -120,7 +120,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=955643&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=961030&ti=1",
                         "Quarter": 3,
-                        "Time": "00:21:33",
+                        "Time": "00:26:46",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -137,8 +137,8 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "10",
+                                "scoreB": "4"
                             }
                         ],
                         "Season": null,
@@ -270,14 +270,14 @@
                         "Place": "PALACIO DE LOS DEPORTES CAROLINA MARÍN",
                         "TeamAID": 955053,
                         "TeamA": "BARÇA",
-                        "ScoreA": 60,
+                        "ScoreA": 74,
                         "TeamACode": "08000305",
                         "TeamAClubCode": "080003",
                         "TeamBID": 973110,
                         "TeamB": "FUNDACION ARO REAL BETIS BALONCESTO",
                         "TeamBCode": "41022305",
                         "TeamBClubCode": "410223",
-                        "ScoreB": 21,
+                        "ScoreB": 27,
                         "StartTime": "2025-06-05T10:30:00",
                         "StartTimeUTC": "2025-06-05T08:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -285,7 +285,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=955053&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=973110&ti=1",
                         "Quarter": 3,
-                        "Time": "00:20:00",
+                        "Time": "00:25:59",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -302,8 +302,8 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "14",
+                                "scoreB": "6"
                             }
                         ],
                         "Season": null,
