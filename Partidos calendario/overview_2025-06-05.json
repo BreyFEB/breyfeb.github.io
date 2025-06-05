@@ -90,7 +90,7 @@
                 "id": "255",
                 "name": "CE Clubes Inf Fem",
                 "gamescount": 12,
-                "nowplaying": 1,
+                "nowplaying": 0,
                 "order": 21,
                 "GAMES": [
                     {
@@ -161,7 +161,7 @@
                         "Place": "COMPLEJO DEPORTIVO HERNÁNDEZ ALBARRACÍN",
                         "TeamAID": 959479,
                         "TeamA": "JANSEN BT \"A\"",
-                        "ScoreA": 72,
+                        "ScoreA": 73,
                         "TeamACode": "28013978",
                         "TeamAClubCode": "280139",
                         "TeamBID": 965301,
@@ -176,8 +176,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=959479&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=965301&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:42",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -198,7 +198,7 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "21",
+                                "scoreA": "22",
                                 "scoreB": "28"
                             }
                         ],
@@ -281,7 +281,7 @@
                 "id": "254",
                 "name": "CE Clubes Inf Masc",
                 "gamescount": 12,
-                "nowplaying": 1,
+                "nowplaying": 0,
                 "order": 22,
                 "GAMES": [
                     {
@@ -367,8 +367,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=963406&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=955052&ti=1",
                         "Quarter": 4,
-                        "Time": "00:40:00",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
