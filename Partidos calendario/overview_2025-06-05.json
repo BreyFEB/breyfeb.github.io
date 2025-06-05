@@ -105,7 +105,7 @@
                         "Place": "COMPLEJO DEPORTIVO HERNÁNDEZ ALBARRACÍN",
                         "TeamAID": 955643,
                         "TeamA": "JOVENTUT BADALONA A",
-                        "ScoreA": 23,
+                        "ScoreA": 34,
                         "TeamACode": "08130509",
                         "TeamAClubCode": "081305",
                         "TeamBID": 961030,
@@ -120,7 +120,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=955643&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=961030&ti=1",
                         "Quarter": 2,
-                        "Time": "00:13:09",
+                        "Time": "00:18:55",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -132,7 +132,7 @@
                             },
                             {
                                 "n": "2",
-                                "scoreA": "8",
+                                "scoreA": "19",
                                 "scoreB": "2"
                             }
                         ],
@@ -265,14 +265,14 @@
                         "Place": "PALACIO DE LOS DEPORTES CAROLINA MARÍN",
                         "TeamAID": 955053,
                         "TeamA": "BARÇA",
-                        "ScoreA": 37,
+                        "ScoreA": 55,
                         "TeamACode": "08000305",
                         "TeamAClubCode": "080003",
                         "TeamBID": 973110,
                         "TeamB": "FUNDACION ARO REAL BETIS BALONCESTO",
                         "TeamBCode": "41022305",
                         "TeamBClubCode": "410223",
-                        "ScoreB": 19,
+                        "ScoreB": 21,
                         "StartTime": "2025-06-05T10:30:00",
                         "StartTimeUTC": "2025-06-05T08:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -280,7 +280,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=955053&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=973110&ti=1",
                         "Quarter": 2,
-                        "Time": "00:12:31",
+                        "Time": "00:18:56",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -292,8 +292,8 @@
                             },
                             {
                                 "n": "2",
-                                "scoreA": "2",
-                                "scoreB": "6"
+                                "scoreA": "20",
+                                "scoreB": "8"
                             }
                         ],
                         "Season": null,
