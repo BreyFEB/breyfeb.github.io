@@ -161,14 +161,14 @@
                         "Place": "COMPLEJO DEPORTIVO HERNÁNDEZ ALBARRACÍN",
                         "TeamAID": 959479,
                         "TeamA": "JANSEN BT \"A\"",
-                        "ScoreA": 64,
+                        "ScoreA": 72,
                         "TeamACode": "28013978",
                         "TeamAClubCode": "280139",
                         "TeamBID": 965301,
                         "TeamB": "UNICAJA ANDALUCÍA",
                         "TeamBCode": "29000165",
                         "TeamBClubCode": "290001",
-                        "ScoreB": 53,
+                        "ScoreB": 67,
                         "StartTime": "2025-06-05T12:30:00",
                         "StartTimeUTC": "2025-06-05T10:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -176,7 +176,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=959479&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=965301&ti=1",
                         "Quarter": 4,
-                        "Time": "00:35:55",
+                        "Time": "00:39:42",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -198,8 +198,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "13",
-                                "scoreB": "14"
+                                "scoreA": "21",
+                                "scoreB": "28"
                             }
                         ],
                         "Season": null,
@@ -352,14 +352,14 @@
                         "Place": "PALACIO DE LOS DEPORTES CAROLINA MARÍN",
                         "TeamAID": 963406,
                         "TeamA": "CANTERBURY SCHOOL ",
-                        "ScoreA": 88,
+                        "ScoreA": 92,
                         "TeamACode": "35015103",
                         "TeamAClubCode": "350151",
                         "TeamBID": 955052,
                         "TeamB": "JOVENTUT BADALONA  A",
                         "TeamBCode": "08000507",
                         "TeamBClubCode": "080005",
-                        "ScoreB": 74,
+                        "ScoreB": 77,
                         "StartTime": "2025-06-05T12:30:00",
                         "StartTimeUTC": "2025-06-05T10:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -367,7 +367,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=963406&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=955052&ti=1",
                         "Quarter": 4,
-                        "Time": "00:38:04",
+                        "Time": "00:40:00",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -389,8 +389,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "21",
-                                "scoreB": "11"
+                                "scoreA": "25",
+                                "scoreB": "14"
                             }
                         ],
                         "Season": null,
