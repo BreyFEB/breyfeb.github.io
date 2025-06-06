@@ -90,7 +90,7 @@
                 "id": "255",
                 "name": "CE Clubes Inf Fem",
                 "gamescount": 8,
-                "nowplaying": 0,
+                "nowplaying": 1,
                 "order": 21,
                 "GAMES": [
                     {
@@ -231,12 +231,18 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=957706&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952711&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:00:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -281,7 +287,7 @@
                 "id": "254",
                 "name": "CE Clubes Inf Masc",
                 "gamescount": 8,
-                "nowplaying": 1,
+                "nowplaying": 0,
                 "order": 22,
                 "GAMES": [
                     {
@@ -296,7 +302,7 @@
                         "Place": "PABELLÓN JOSÉ HERNÁNDEZ ALBARRACÍN",
                         "TeamAID": 973110,
                         "TeamA": "FUNDACION ARO REAL BETIS BALONCESTO",
-                        "ScoreA": 78,
+                        "ScoreA": 79,
                         "TeamACode": "41022305",
                         "TeamAClubCode": "410223",
                         "TeamBID": 964324,
@@ -311,8 +317,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=973110&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=964324&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:43",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -333,7 +339,7 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "19",
+                                "scoreA": "20",
                                 "scoreB": "13"
                             }
                         ],
@@ -346,7 +352,7 @@
                         "Competition": "C ESP CLUBES INF MASC",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2471676,
                         "GameCode": null,
                         "Place": "POLIDEPORTIVO JOSÉ HERNÁNDEZ ALBARRACÍN",
