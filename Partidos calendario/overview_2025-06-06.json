@@ -576,22 +576,22 @@
                         "Place": "PALACIO DE LOS DEPORTES CAROLINA MARÍN",
                         "TeamAID": 964492,
                         "TeamA": "PABLO LASO ACADEMY",
-                        "ScoreA": 35,
+                        "ScoreA": 45,
                         "TeamACode": "28297302",
                         "TeamAClubCode": "282973",
                         "TeamBID": 958271,
                         "TeamB": "REAL MADRID ´A´",
                         "TeamBCode": "28000204",
                         "TeamBClubCode": "280002",
-                        "ScoreB": 47,
+                        "ScoreB": 62,
                         "StartTime": "2025-06-06T19:00:00",
                         "StartTimeUTC": "2025-06-06T17:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=964492&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=958271&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:26:32",
+                        "Quarter": 4,
+                        "Time": "00:34:06",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -608,8 +608,13 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "6",
-                                "scoreB": "16"
+                                "scoreA": "9",
+                                "scoreB": "25"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "7",
+                                "scoreB": "6"
                             }
                         ],
                         "Season": null,
