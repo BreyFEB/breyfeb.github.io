@@ -5,6 +5,9 @@ const player_id = queryParams.get('player_id');
 
 console.log(player_id);
 
+// Global variable for player totals
+let player_totals = null;
+
 // Helper functions for minutes handling
 function parseMinutes(minutesStr) {
   if (!minutesStr) return 0;
@@ -98,8 +101,12 @@ async function loadStats() {
   const response = await fetch('rankings_stats.json');
   const data = await response.json();
 
-  // Find player totals
+  // Find player totals and store in global variable
   player_totals = data.players.find(player => player.id === player_id);
+  if (!player_totals) {
+    console.error('Player not found in rankings data');
+    return;
+  }
 
   // Update dorsal and player name
   const player_name_h1 = document.querySelector('.player-name');
@@ -923,6 +930,7 @@ async function loadStats() {
   // Fill stats container with matches table
   const statsContainer = document.getElementById('statsContainer');
   if (statsContainer && player_totals.matches) {
+    statsContainer.innerHTML = '';
     // Create table
     const table = document.createElement('table');
     table.classList.add('stats-table');
@@ -1190,32 +1198,6 @@ async function loadStats() {
         border-color: #125ea7;
         box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.15);
         background: #e3f0ff;
-      }
-      .chart-with-card {
-        display: flex;
-        flex-direction: row;
-        align-items: stretch;
-        gap: 24px;
-        margin-bottom: 32px;
-        height: 400px;
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      .chart-info-card {
-        background: #f9f9f9;
-        border: none;
-        border-radius: 8px;
-        padding: 20px;
-        flex: 0 0 20%;
-        width: 20%;
-        height: 80%;
-        align-self: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-        color: #111C4E;
       }
       #evolutionChartContainer, #scatterChartContainer {
         flex: 0 0 80%;
@@ -1864,3 +1846,606 @@ function setupBurgerMenu() {
     link.addEventListener('click', closeMenu);
   });
 }
+
+// Shot Plot Functionality
+let chart = null;
+let allShots = [];
+let playersData = {};
+
+async function loadShotData() {
+  // Get player_id from URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const playerId = urlParams.get('player_id');
+  if (!playerId) return;
+
+  // Get player's competition from already loaded player_totals
+  if (!player_totals) {
+    console.error('Player data not loaded yet');
+    return;
+  }
+
+  // Map competition name to JSON file name
+  const competitionMappings = {
+    "LF CHALLENGE": "players_shots_lf_challenge.json",
+    "C ESP CLUBES JR MASC": "players_shots_c_esp_clubes_jr_masc.json",
+    "PRIMERA FEB": "players_shots_primera_feb.json",
+    "Fase Final 1ª División Femenin": "players_shots_fase_final_1a_división_femenin.json",
+    "C ESP CLUBES CAD MASC": "players_shots_c_esp_clubes_cad_masc.json",
+    "LF ENDESA": "players_shots_lf_endesa.json",
+    "L.F.-2": "players_shots_lf2.json",
+    "C ESP CLUBES CAD FEM": "players_shots_c_esp_clubes_cad_fem.json",
+    "SEGUNDA FEB": "players_shots_segunda_feb.json",
+    "TERCERA FEB": "players_shots_tercera_feb.json",
+    "C ESP CLUBES INF FEM": "players_shots_c_esp_clubes_inf_fem.json",
+    "C ESP CLUBES INF MASC": "players_shots_c_esp_clubes_inf_masc.json"
+  };
+
+  const jsonFileName = competitionMappings[player_totals.competition.trim()];
+  if (!jsonFileName) {
+    console.error('No shot data available for competition:', player_totals.competition);
+    return;
+  }
+
+  // Load the league-wide JSON file
+  const response = await fetch(`Tiros por liga/${jsonFileName}`);
+  const data = await response.json();
+  
+  // Store all shots data
+  playersData = data;
+  
+  // Only include matches for the selected player
+  let playerShots = [];
+  if (playerId) {
+    playerShots = Object.values(data).flat().filter(shot => shot.player_id === playerId);
+  }
+  const uniqueMatches = [...new Set(playerShots.map(shot => shot.match))];
+  const matchFiltersContainer = document.getElementById('matchFilters');
+  matchFiltersContainer.innerHTML = '';
+  uniqueMatches.forEach(match => {
+    const label = document.createElement('label');
+    label.className = 'option';
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.name = 'match';
+    checkbox.value = match;
+    checkbox.addEventListener('change', updateChart);
+    label.appendChild(checkbox);
+    label.appendChild(document.createTextNode(match));
+    matchFiltersContainer.appendChild(label);
+  });
+
+  // Add event listeners for all checkboxes and inputs
+  document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+    checkbox.addEventListener('change', updateChart);
+  });
+  document.getElementById('quarterTime').addEventListener('input', updateChart);
+  document.getElementById('minDistance').addEventListener('input', updateChart);
+  document.getElementById('maxDistance').addEventListener('input', updateChart);
+
+  // Initial chart render
+  updateChart();
+}
+
+function getSelectedValues(name) {
+  return Array.from(document.querySelectorAll(`input[name="${name}"]:checked`)).map(cb => cb.value);
+}
+
+// Convert MM:SS time string to seconds
+function timeToSeconds(timeStr) {
+  const [minutes, seconds] = timeStr.split(':').map(Number);
+  return minutes * 60 + seconds;
+}
+
+// Determine if a shot is a 3-pointer based on distance
+function isThreePointer(shot) {
+  return shot.desc_tiro && shot.desc_tiro.toUpperCase().includes('TIRO DE 3');
+}
+
+function isTwoPointer(shot) {
+  return shot.desc_tiro && shot.desc_tiro.toUpperCase().includes('TIRO DE 2');
+}
+
+// Get score difference category
+function getScoreDiffCategory(diff) {
+  if (diff === 0) return 'tied';
+  if (diff > 0) {
+    if (diff <= 5) return 'ahead_1_5';
+    if (diff <= 10) return 'ahead_6_10';
+    return 'ahead_10_plus';
+  } else {
+    diff = Math.abs(diff);
+    if (diff <= 5) return 'behind_1_5';
+    if (diff <= 10) return 'behind_6_10';
+    return 'behind_10_plus';
+  }
+}
+
+function filterShots() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const playerId = urlParams.get('player_id');
+  if (!playerId) return [];
+  
+  // Get shots for selected player
+  allShots = Object.values(playersData).flat().filter(shot => shot.player_id === playerId);
+  
+  const selectedMatches = getSelectedValues('match');
+  const selectedQuarters = getSelectedValues('quarter');
+  const selectedResults = getSelectedValues('result');
+  const selectedShotTypes = getSelectedValues('shotType');
+  const selectedScoreDiffs = getSelectedValues('scoreDiff');
+  const selectedCourtSides = getSelectedValues('courtSide');
+  const quarterTime = document.getElementById('quarterTime').value;
+  const minDistance = document.getElementById('minDistance').value;
+  const maxDistance = document.getElementById('maxDistance').value;
+
+  const filteredShots = allShots.filter(shot => {
+    if (selectedMatches.length > 0 && !selectedMatches.includes(shot.match)) return false;
+    if (selectedQuarters.length > 0 && !selectedQuarters.includes(shot.cuarto)) return false;
+    if (selectedResults.length > 0) {
+      if (!selectedResults.includes(shot.made ? 'made' : 'missed')) return false;
+    }
+    if (selectedShotTypes.length > 0) {
+      const isThree = isThreePointer(shot);
+      const isTwo = isTwoPointer(shot);
+      const isRim = shot.dist_al_aro <= 1.5;
+      const isMidrange = shot.dist_al_aro > 1.5 && !isThreePointer(shot);
+      const matchesSelectedType = selectedShotTypes.some(type => {
+        switch(type) {
+          case 'rim': return isRim;
+          case 'midrange': return isMidrange;
+          case '2': return isTwo;
+          case '3': return isThree;
+          default: return false;
+        }
+      });
+      if (!matchesSelectedType) return false;
+    }
+    if (selectedScoreDiffs.length > 0) {
+      const scoreDiffCategory = getScoreDiffCategory(shot.dif_marcador);
+      if (!selectedScoreDiffs.includes(scoreDiffCategory)) return false;
+    }
+    if (selectedCourtSides.length > 0) {
+      const isLeftSide = shot.coord_y > 50;
+      if (!selectedCourtSides.includes(isLeftSide ? 'left' : 'right')) return false;
+    }
+    // Only filter by quarter time if a value is set
+    if (quarterTime) {
+      const shotTimeInSeconds = timeToSeconds(shot.tiempo);
+      if (shotTimeInSeconds > parseFloat(quarterTime) * 60) return false;
+    }
+    if (minDistance && shot.dist_al_aro < parseFloat(minDistance)) return false;
+    if (maxDistance && shot.dist_al_aro > parseFloat(maxDistance)) return false;
+    return true;
+  });
+
+  return filteredShots;
+}
+
+function updateStats(filteredShots) {
+  const urlParams = new URLSearchParams(window.location.search);
+  const playerId = urlParams.get('player_id');
+  if (!playerId) return;
+
+  // Get player's team from the first shot
+  const playerTeam = filteredShots[0]?.equipo_string;
+  if (!playerTeam) {
+    document.getElementById('fgPercentage').innerHTML = `
+      <div style="margin-bottom: 10px;">
+        <div style="font-size: 24px; color: #666;"></div>
+        <div style="font-size: 24px; color: #666; font-style: italic;">No hay tiros que cumplan estos requisitos para el jugador.</div>
+        <div style="font-size: 14px; color: #666;"></div>
+      </div>
+      <div style="margin-bottom: 10px;">
+        <div style="font-size: 24px; color: #666;"></div>
+        <div style="font-size: 36px; font-weight: bold;"></div>
+        <div style="font-size: 14px; color: #666;"></div>
+      </div>
+      <div>
+        <div style="font-size: 24px; color: #666;"></div>
+        <div style="font-size: 36px; font-weight: bold;"></div>
+        <div style="font-size: 14px; color: #666;"></div>
+      </div>
+    `;
+    return;
+  }
+
+  // Calculate player stats
+  const totalShots = filteredShots.length;
+  const madeShots = filteredShots.filter(shot => shot.made).length;
+  const fgPercentage = totalShots > 0 ? (madeShots / totalShots * 100).toFixed(1) : 0;
+  
+  // Calculate league averages for the same filters
+  const selectedMatches = getSelectedValues('match');
+  const selectedQuarters = getSelectedValues('quarter');
+  const selectedResults = getSelectedValues('result');
+  const selectedShotTypes = getSelectedValues('shotType');
+  const selectedScoreDiffs = getSelectedValues('scoreDiff');
+  const selectedCourtSides = getSelectedValues('courtSide');
+  const quarterTime = document.getElementById('quarterTime').value;
+  const minDistance = document.getElementById('minDistance').value;
+  const maxDistance = document.getElementById('maxDistance').value;
+
+  // Get all shots from all players with the same filters
+  let leagueShots = [];
+  let teamShots = [];
+  
+  Object.values(playersData).forEach(playerShots => {
+    playerShots.forEach(shot => {
+      // Apply all filters for league, EXCEPT selectedMatches
+      if (selectedQuarters.length > 0 && !selectedQuarters.includes(shot.cuarto)) return;
+      if (selectedResults.length > 0) {
+        if (!selectedResults.includes(shot.made ? 'made' : 'missed')) return;
+      }
+      if (selectedShotTypes.length > 0) {
+        const isThree = isThreePointer(shot);
+        const isTwo = isTwoPointer(shot);
+        const isRim = shot.dist_al_aro <= 1;
+        const isMidrange = shot.dist_al_aro > 1 && shot.dist_al_aro < 6.75;
+        const matchesSelectedType = selectedShotTypes.some(type => {
+          switch(type) {
+            case 'rim': return isRim;
+            case 'midrange': return isMidrange;
+            case '2': return isTwo;
+            case '3': return isThree;
+            default: return false;
+          }
+        });
+        if (!matchesSelectedType) return;
+      }
+      if (selectedScoreDiffs.length > 0) {
+        const scoreDiffCategory = getScoreDiffCategory(shot.dif_marcador);
+        if (!selectedScoreDiffs.includes(scoreDiffCategory)) return;
+      }
+      if (selectedCourtSides.length > 0) {
+        const isLeftSide = shot.coord_y > 50;
+        if (!selectedCourtSides.includes(isLeftSide ? 'left' : 'right')) return;
+      }
+      const shotTimeInSeconds = timeToSeconds(shot.tiempo);
+      if (quarterTime && shotTimeInSeconds > parseFloat(quarterTime) * 60) return;
+      if (minDistance && shot.dist_al_aro < parseFloat(minDistance)) return;
+      if (maxDistance && shot.dist_al_aro > parseFloat(maxDistance)) return;
+      // Add to appropriate arrays
+      leagueShots.push(shot);
+      // For team, still respect selectedMatches
+      if (
+        shot.equipo_string === playerTeam &&
+        (selectedMatches.length === 0 || selectedMatches.includes(shot.match))
+      ) {
+        teamShots.push(shot);
+      }
+    });
+  });
+
+  // Calculate league stats
+  const leagueTotalShots = leagueShots.length;
+  const leagueMadeShots = leagueShots.filter(shot => shot.made).length;
+  const leagueFgPercentage = leagueTotalShots > 0 ? (leagueMadeShots / leagueTotalShots * 100).toFixed(1) : 0;
+  
+  // Calculate team stats
+  const teamTotalShots = teamShots.length;
+  const teamMadeShots = teamShots.filter(shot => shot.made).length;
+  const teamFgPercentage = teamTotalShots > 0 ? (teamMadeShots / teamTotalShots * 100).toFixed(1) : 0;
+  
+  // Update the stats display
+  const fgPercentageElement = document.getElementById('fgPercentage');
+  
+  fgPercentageElement.innerHTML = `
+    <div style="margin-bottom: 10px;">
+      <div style="font-size: 24px; color: #666;">Jugador</div>
+      ${totalShots > 0 ? `
+        <div style="font-size: 36px; font-weight: bold;">${fgPercentage}%</div>
+        <div style="font-size: 14px; color: #666;">${madeShots}/${totalShots} tiros</div>
+      ` : `
+        <div style="font-size: 24px; color: #666; font-style: italic;">Este jugador no tiene tiros de este tipo</div>
+      `}
+    </div>
+    <hr class="stats-divider">
+    <div style="margin-bottom: 10px;">
+      <div style="font-size: 24px; color: #666;">Equipo</div>
+      <div style="font-size: 36px; font-weight: bold;">${teamFgPercentage}%</div>
+      <div style="font-size: 14px; color: #666;">${teamMadeShots}/${teamTotalShots} tiros</div>
+      ${totalShots > 0 ? `
+        <div style="font-size: 12px; color: #666; margin-top: 5px;">
+          El jugador está <span style="color: ${parseFloat(fgPercentage) > parseFloat(teamFgPercentage) ? '#2e7d32' : '#c62828'}; font-weight: bold;">
+            ${Math.abs(parseFloat(fgPercentage) - parseFloat(teamFgPercentage)).toFixed(1)} puntos porcentuales 
+            ${parseFloat(fgPercentage) > parseFloat(teamFgPercentage) ? 'por encima' : 'por debajo'}
+          </span> del acierto del equipo en este tipo de tiros.
+        </div>
+      ` : ''}
+    </div>
+    <hr class="stats-divider">
+    <div>
+      <div style="font-size: 24px; color: #666;">Liga</div>
+      <div style="font-size: 36px; font-weight: bold;">${leagueFgPercentage}%</div>
+      <div style="font-size: 14px; color: #666;">${leagueMadeShots}/${leagueTotalShots} tiros</div>
+      ${totalShots > 0 ? `
+        <div style="font-size: 12px; color: #666; margin-top: 5px;">
+          El jugador está <span style="color: ${parseFloat(fgPercentage) > parseFloat(leagueFgPercentage) ? '#2e7d32' : '#c62828'}; font-weight: bold;">
+            ${Math.abs(parseFloat(fgPercentage) - parseFloat(leagueFgPercentage)).toFixed(1)} puntos porcentuales 
+            ${parseFloat(fgPercentage) > parseFloat(leagueFgPercentage) ? 'por encima' : 'por debajo'}
+          </span> del acierto de la liga en este tipo de tiros.
+        </div>
+      ` : ''}
+    </div>
+  `;
+  
+  // Color the player's percentage based on comparison to team average
+  if (totalShots > 0) {
+    const playerPercentage = parseFloat(fgPercentage);
+    const teamPercentage = parseFloat(teamFgPercentage);
+    const percentageDiff = playerPercentage - teamPercentage;
+    
+    if (percentageDiff > 5) {
+      fgPercentageElement.style.color = 'rgb(0, 200, 0)'; // Significantly better than team
+    } else if (percentageDiff < -5) {
+      fgPercentageElement.style.color = 'rgb(200, 0, 0)'; // Significantly worse than team
+    } else {
+      fgPercentageElement.style.color = 'rgb(0, 0, 0)'; // Similar to team
+    }
+  } else {
+    fgPercentageElement.style.color = 'rgb(0, 0, 0)'; // Default color when no shots
+  }
+}
+
+function updateSelectedFilters() {
+  const filters = [];
+  // Partido
+  const selectedMatches = getSelectedValues('match');
+  if (selectedMatches.length > 0) {
+    filters.push(`<b>Partido:</b> ${selectedMatches.join(', ')}`);
+  }
+  // Cuartos
+  const selectedQuarters = getSelectedValues('quarter');
+  if (selectedQuarters.length > 0) {
+    filters.push(`<b>Cuartos:</b> ${selectedQuarters.join(', ')}`);
+  }
+  // Resultado
+  const selectedResults = getSelectedValues('result');
+  if (selectedResults.length > 0) {
+    const map = { made: 'Anotado', missed: 'Fallado' };
+    filters.push(`<b>Resultado:</b> ${selectedResults.map(r => map[r] || r).join(', ')}`);
+  }
+  // Tipo de Tiro
+  const selectedShotTypes = getSelectedValues('shotType');
+  if (selectedShotTypes.length > 0) {
+    const map = { rim: 'Cerca del aro', midrange: 'Media distancia', 2: 'Tiros de 2', 3: 'Tiros de 3' };
+    filters.push(`<b>Tipo de Tiro:</b> ${selectedShotTypes.map(t => map[t] || t).join(', ')}`);
+  }
+  // Diferencia de Puntos
+  const selectedScoreDiffs = getSelectedValues('scoreDiff');
+  if (selectedScoreDiffs.length > 0) {
+    const map = {
+      tied: 'Empate',
+      ahead_1_5: 'Ganando por 1-5',
+      ahead_6_10: 'Ganando por 6-10',
+      ahead_10_plus: 'Ganando por +10',
+      behind_1_5: 'Perdiendo por 1-5',
+      behind_6_10: 'Perdiendo por 6-10',
+      behind_10_plus: 'Perdiendo por +10'
+    };
+    filters.push(`<b>Diferencia de Puntos:</b> ${selectedScoreDiffs.map(d => map[d] || d).join(', ')}`);
+  }
+  // Lado de la Cancha
+  const selectedCourtSides = getSelectedValues('courtSide');
+  if (selectedCourtSides.length > 0) {
+    const map = { left: 'Izquierda', right: 'Derecha' };
+    filters.push(`<b>Lado de la Cancha:</b> ${selectedCourtSides.map(s => map[s] || s).join(', ')}`);
+  }
+  // Tiempo restante
+  const quarterTime = document.getElementById('quarterTime').value;
+  if (quarterTime) {
+    filters.push(`<b>Tiempo restante:</b> ${quarterTime} min`);
+  }
+  // Distancia al aro
+  const minDistance = document.getElementById('minDistance').value;
+  const maxDistance = document.getElementById('maxDistance').value;
+  if (minDistance || maxDistance) {
+    filters.push(`<b>Distancia al aro:</b> ${minDistance ? 'Mín ' + minDistance : ''}${minDistance && maxDistance ? ', ' : ''}${maxDistance ? 'Máx ' + maxDistance : ''} m`);
+  }
+  const container = document.getElementById('selectedFilters');
+  if (container) {
+    if (filters.length > 0) {
+      container.innerHTML = `<ul style='margin:0;padding-left:18px;'>${filters.map(f => `<li style='margin-bottom:2px;'>${f}</li>`).join('')}</ul>`;
+    } else {
+      container.innerHTML = `<span style='color:#888;'>Sin filtros seleccionados</span>`;
+    }
+  }
+}
+
+// Call updateSelectedFilters after any filter change and in updateChart
+// ... existing code ...
+function updateChart() {
+  updateSelectedFilters();
+  const filteredShots = filterShots();
+  
+  // Update stats
+  updateStats(filteredShots);
+  
+  // Prepare data for Chart.js scatter plot (only X <= 50)
+  const shotData = filteredShots
+    .filter(shot => shot.coord_x <= 50)
+    .map(shot => ({
+      x: shot.coord_x,
+      y: shot.coord_y,
+      made: shot.made
+    }));
+
+  // Create a canvas if not present
+  let canvas = document.getElementById('shotsChart');
+  if (!canvas) {
+    canvas = document.createElement('canvas');
+    canvas.id = 'shotsChart';
+    document.body.appendChild(canvas);
+  }
+
+  // Load the court image
+  const courtImg = new Image();
+  courtImg.src = 'court.png';
+
+  // Wait for the image to load before rendering the chart
+  courtImg.onload = function() {
+    if (chart) {
+      chart.destroy();
+    }
+
+    chart = new Chart(canvas.getContext('2d'), {
+      type: 'scatter',
+      data: {
+        datasets: [
+          {
+            label: 'Tiros Anotados',
+            data: shotData.filter(shot => shot.made),
+            backgroundColor: 'rgba(0, 255, 0, 0.7)'
+          },
+          {
+            label: 'Tiros Fallados',
+            data: shotData.filter(shot => !shot.made),
+            backgroundColor: 'rgba(255, 0, 0, 0.7)'
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        aspectRatio: 425/474,
+        pointRadius: 6,
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top',
+            labels: {
+              usePointStyle: true,
+              pointStyle: 'circle',
+              padding: 20,
+              font: {
+                size: 14
+              }
+            }
+          }
+        },
+        scales: {
+          x: {
+            type: 'linear',
+            position: 'bottom',
+            title: { display: false },
+            min: 0,
+            max: 50, // Only show left half
+            ticks: { display: false },
+            grid: { display: false }
+          },
+          y: {
+            type: 'linear',
+            title: { display: false },
+            reverse: true,
+            min: 0,
+            max: 100,
+            ticks: { display: false },
+            grid: { display: false }
+          }
+        }
+      },
+      plugins: [{
+        id: 'courtBackground',
+        beforeDraw: (chart) => {
+          const {ctx, chartArea} = chart;
+          if (courtImg.complete && chartArea) {
+            ctx.save();
+            ctx.globalAlpha = 1.0;
+            // Draw only the left half of the image
+            ctx.beginPath();
+            ctx.rect(chartArea.left, chartArea.top, chartArea.width, chartArea.height);
+            ctx.clip();
+            ctx.drawImage(
+              courtImg,
+              0, 0, courtImg.width / 2, courtImg.height, // source: left half
+              chartArea.left, chartArea.top, chartArea.width, chartArea.height // dest: full chart area
+            );
+            ctx.restore();
+          }
+        }
+      }]
+    });
+  };
+}
+
+// Add these functions to handle the dropdown functionality
+function toggleDropdown(id) {
+  const options = document.getElementById(id + 'Options');
+  options.classList.toggle('active');
+}
+
+function selectAll(id) {
+  const options = document.querySelectorAll(`#${id}Options input[type="checkbox"]`);
+  options.forEach(option => option.checked = true);
+  updateChart();
+}
+
+function deselectAll(id) {
+  const options = document.querySelectorAll(`#${id}Options input[type="checkbox"]`);
+  options.forEach(option => option.checked = false);
+  updateChart();
+}
+
+function filterOptions(id) {
+  const input = document.querySelector(`#${id}Options .select-search input`);
+  const filter = input.value.toLowerCase();
+  const options = document.querySelectorAll(`#${id}Options .option`);
+  
+  options.forEach(option => {
+    const text = option.querySelector('span').textContent.toLowerCase();
+    option.style.display = text.includes(filter) ? '' : 'none';
+  });
+}
+
+// Close dropdowns when clicking outside
+document.addEventListener('click', function(event) {
+  const dropdowns = document.querySelectorAll('.select-options');
+  dropdowns.forEach(dropdown => {
+    if (!dropdown.contains(event.target) && !event.target.closest('.select-header')) {
+      dropdown.classList.remove('active');
+    }
+  });
+});
+
+// Initialize shot plot when the page loads
+window.addEventListener('load', async () => {
+  await loadStats();
+  loadShotData();
+});
+
+// Enforce min/max for time and distance filters
+function enforceInputLimits(inputId, min, max) {
+  const input = document.getElementById(inputId);
+  if (!input) return;
+  input.addEventListener('input', function() {
+    let value = parseFloat(this.value);
+    if (isNaN(value)) return;
+    if (value < min) this.value = min;
+    if (value > max) this.value = max;
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  enforceInputLimits('quarterTime', 0, 10);
+  enforceInputLimits('minDistance', 0, 20);
+  enforceInputLimits('maxDistance', 0, 20);
+});
+
+// Add Reset Filters functionality
+function resetFilters() {
+  // Uncheck all checkboxes
+  document.querySelectorAll('#shotsSection input[type="checkbox"]').forEach(cb => { cb.checked = false; });
+  // Clear all number inputs
+  document.querySelectorAll('#shotsSection input[type="number"]').forEach(input => { input.value = ''; });
+  // Update filters and chart
+  updateSelectedFilters();
+  updateChart();
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  // ... existing code ...
+  const resetBtn = document.getElementById('resetFiltersBtn');
+  if (resetBtn) {
+    resetBtn.addEventListener('click', resetFilters);
+  }
+});

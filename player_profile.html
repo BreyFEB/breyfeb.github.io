@@ -4,6 +4,155 @@
   <meta charset="UTF-8">
   <title>Players</title>
   <link rel="stylesheet" href="player_profile.css">
+  <style>
+    /* Filter styles */
+    .filter-controls {
+      margin-bottom: 20px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    
+    .custom-select {
+      position: relative;
+      min-width: 200px;
+    }
+    
+    .select-header {
+      background: #fff;
+      padding: 10px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    
+    .select-header span {
+      color: #333;
+    }
+    
+    .arrow {
+      font-size: 12px;
+      color: #666;
+    }
+    
+    .select-options {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: #fff;
+      border-radius: 4px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      z-index: 1000;
+      margin-top: 5px;
+    }
+    
+    .select-options.active {
+      display: block;
+    }
+    
+    .select-search {
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .select-search input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    
+    .select-all-options {
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      gap: 10px;
+    }
+    
+    .select-all-btn, .deselect-all-btn {
+      padding: 5px 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    
+    .select-all-btn {
+      background: #1976d2 !important;
+      color: #fff !important;
+      font-weight: bold;
+      border: none;
+      transition: background 0.2s;
+    }
+    .select-all-btn:hover {
+      background: #125ea7 !important;
+    }
+    .deselect-all-btn {
+      background: #c62828 !important;
+      color: #fff !important;
+      font-weight: bold;
+      border: none;
+      transition: background 0.2s;
+    }
+    .deselect-all-btn:hover {
+      background: #8b1c1c !important;
+    }
+    
+    .options-list {
+      max-height: 200px;
+      overflow-y: auto;
+      padding: 10px;
+    }
+    
+    label.option {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      white-space: normal;
+      width: 100%;
+      padding: 8px 0 8px 4px;
+      cursor: pointer;
+      user-select: none;
+      line-height: 1.3;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    label.option input[type="checkbox"] {
+      flex-shrink: 0;
+      margin-right: 8px;
+    }
+    label.option span {
+      flex: 1;
+      word-break: break-word;
+      font-size: 14px;
+      color: #333;
+    }
+    
+    .time-range, .distance-range {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding: 10px;
+    }
+    
+    .time-range input, .distance-range input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    .stats-divider {
+      border: none;
+      border-top: 1.5px solid #e0e0e0;
+      margin: 8px 0;
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
 <!-- partial:index.partial.html -->
@@ -145,6 +294,7 @@
 <nav class="match-tabs" id="playerTabs">
     <ul>
         <li><a href="#profileSection" class="tab-link active">Rendimiento</a></li>  
+        <li><a href="#shotsSection" class="tab-link">Mapa de Tiros</a></li>
         <li><a href="#statsSection" class="tab-link">Box Scores</a></li>
         <li><a href="#recordsSection" class="tab-link">Récords</a></li>
         <li><a href="#badgesSection" class="tab-link">Logros</a></li>
@@ -155,6 +305,166 @@
 </nav>
 
 <section id="profileSection" class="player-section">
+  <!-- JS will inject the charts and cards here -->
+</section>
+
+<!-- New section for Mapa de Tiros plot -->
+<section id="shotsSection" class="player-section" style="display:none;">
+  <h3>Mapa de Tiros</h3>
+  <div class="filter-controls">
+    <div class="custom-select">
+      <div class="select-header" onclick="toggleDropdown('match')">
+        <span>Partido</span>
+        <span class="arrow">▼</span>
+      </div>
+      <div class="select-options" id="matchOptions">
+        <div class="select-search">
+          <input type="text" placeholder="Buscar..." onkeyup="filterOptions('match')">
+        </div>
+        <div class="select-all-options">
+          <button onclick="selectAll('match')" class="select-all-btn">Seleccionar todo</button>
+          <button onclick="deselectAll('match')" class="deselect-all-btn">Deseleccionar todo</button>
+        </div>
+        <div class="options-list" id="matchFilters">
+          <!-- Match checkboxes will be populated by JavaScript -->
+        </div>
+      </div>
+    </div>
+
+    <div class="custom-select">
+      <div class="select-header" onclick="toggleDropdown('quarter')">
+        <span>Cuartos</span>
+        <span class="arrow">▼</span>
+      </div>
+      <div class="select-options" id="quarterOptions">
+        <div class="select-all-options">
+          <button onclick="selectAll('quarter')" class="select-all-btn">Seleccionar todo</button>
+          <button onclick="deselectAll('quarter')" class="deselect-all-btn">Deseleccionar todo</button>
+        </div>
+        <div class="options-list">
+          <label class="option"><input type="checkbox" name="quarter" value="1"><span>Cuarto 1</span></label>
+          <label class="option"><input type="checkbox" name="quarter" value="2"><span>Cuarto 2</span></label>
+          <label class="option"><input type="checkbox" name="quarter" value="3"><span>Cuarto 3</span></label>
+          <label class="option"><input type="checkbox" name="quarter" value="4"><span>Cuarto 4</span></label>
+        </div>
+      </div>
+    </div>
+
+    <div class="custom-select">
+      <div class="select-header" onclick="toggleDropdown('result')">
+        <span>Resultado</span>
+        <span class="arrow">▼</span>
+      </div>
+      <div class="select-options" id="resultOptions">
+        <div class="select-all-options">
+          <button onclick="selectAll('result')" class="select-all-btn">Seleccionar todo</button>
+          <button onclick="deselectAll('result')" class="deselect-all-btn">Deseleccionar todo</button>
+        </div>
+        <div class="options-list">
+          <label class="option"><input type="checkbox" name="result" value="made"><span>Anotado</span></label>
+          <label class="option"><input type="checkbox" name="result" value="missed"><span>Fallado</span></label>
+        </div>
+      </div>
+    </div>
+
+    <div class="custom-select">
+      <div class="select-header" onclick="toggleDropdown('shotType')">
+        <span>Tipo de Tiro</span>
+        <span class="arrow">▼</span>
+      </div>
+      <div class="select-options" id="shotTypeOptions">
+        <div class="select-all-options">
+          <button onclick="selectAll('shotType')" class="select-all-btn">Seleccionar todo</button>
+          <button onclick="deselectAll('shotType')" class="deselect-all-btn">Deseleccionar todo</button>
+        </div>
+        <div class="options-list">
+          <label class="option"><input type="checkbox" name="shotType" value="rim"><span>Cerca del aro</span></label>
+          <!-- <label class="option"><input type="checkbox" name="shotType" value="midrange"><span>Media distancia</span></label> -->
+          <label class="option"><input type="checkbox" name="shotType" value="2"><span>Tiros de 2</span></label>
+          <label class="option"><input type="checkbox" name="shotType" value="3"><span>Tiros de 3</span></label>
+        </div>
+      </div>
+    </div>
+
+    <div class="custom-select">
+      <div class="select-header" onclick="toggleDropdown('scoreDiff')">
+        <span>Diferencia de Puntos</span>
+        <span class="arrow">▼</span>
+      </div>
+      <div class="select-options" id="scoreDiffOptions">
+        <div class="select-all-options">
+          <button onclick="selectAll('scoreDiff')" class="select-all-btn">Seleccionar todo</button>
+          <button onclick="deselectAll('scoreDiff')" class="deselect-all-btn">Deseleccionar todo</button>
+        </div>
+        <div class="options-list">
+          <label class="option"><input type="checkbox" name="scoreDiff" value="tied"><span>Empate</span></label>
+          <label class="option"><input type="checkbox" name="scoreDiff" value="ahead_1_5"><span>Ganando por 1-5</span></label>
+          <label class="option"><input type="checkbox" name="scoreDiff" value="ahead_6_10"><span>Ganando por 6-10</span></label>
+          <label class="option"><input type="checkbox" name="scoreDiff" value="ahead_10_plus"><span>Ganando por +10</span></label>
+          <label class="option"><input type="checkbox" name="scoreDiff" value="behind_1_5"><span>Perdiendo por 1-5</span></label>
+          <label class="option"><input type="checkbox" name="scoreDiff" value="behind_6_10"><span>Perdiendo por 6-10</span></label>
+          <label class="option"><input type="checkbox" name="scoreDiff" value="behind_10_plus"><span>Perdiendo por +10</span></label>
+        </div>
+      </div>
+    </div>
+
+    <div class="custom-select">
+      <div class="select-header" onclick="toggleDropdown('courtSide')">
+        <span>Lado de la Cancha</span>
+        <span class="arrow">▼</span>
+      </div>
+      <div class="select-options" id="courtSideOptions">
+        <div class="select-all-options">
+          <button onclick="selectAll('courtSide')" class="select-all-btn">Seleccionar todo</button>
+          <button onclick="deselectAll('courtSide')" class="deselect-all-btn">Deseleccionar todo</button>
+        </div>
+        <div class="options-list">
+          <label class="option"><input type="checkbox" name="courtSide" value="left"><span>Izquierda</span></label>
+          <label class="option"><input type="checkbox" name="courtSide" value="right"><span>Derecha</span></label>
+        </div>
+      </div>
+    </div>
+
+    <div class="custom-select">
+      <div class="select-header" onclick="toggleDropdown('time')">
+        <span>Tiempo restante en el cuarto (minutos)</span>
+        <span class="arrow">▼</span>
+      </div>
+      <div class="select-options" id="timeOptions">
+        <div class="time-range">
+          <label>Tiempo restante: <input type="number" id="quarterTime" placeholder="0-10" min="0" max="10" step="0.1"></label>
+        </div>
+      </div>
+    </div>
+
+    <div class="custom-select">
+      <div class="select-header" onclick="toggleDropdown('distance')">
+        <span>Distancia al aro (metros)</span>
+        <span class="arrow">▼</span>
+      </div>
+      <div class="select-options" id="distanceOptions">
+        <div class="distance-range">
+          <label>Mín: <input type="number" id="minDistance" placeholder="Mín" min="0" max="20" step="0.1"></label>
+          <label>Máx: <input type="number" id="maxDistance" placeholder="Máx" min="0" max="20" step="0.1"></label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; justify-content: center; align-items: center; margin: 12px 0;">
+    <button id="resetFiltersBtn" style="padding: 6px 18px; background: #1976d2; color: #fff; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">Restablecer filtros</button>
+  </div>
+
+  <div id="selectedFilters" style="margin: 10px 0 18px 0;"></div>
+  <div class="chart-with-card horizontal">
+    <div class="chart-container">
+      <canvas id="shotsChart" width="425" height="474"></canvas>
+    </div>
+    <div class="stats-card">
+      <h3>Porcentaje de Acierto</h3>
+      <div id="fgPercentage" class="fg-percentage">-</div>
+    </div>
+  </div>
 </section>
 
   <!-- SECCIÓN: Estadísticas Detalladas -->
@@ -399,5 +709,56 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@4.0.0"></script>
   <script src="player_profile.js"></script>
+
+  <script>
+    // Add these functions to handle the dropdown functionality
+    function toggleDropdown(id) {
+      const options = document.getElementById(id + 'Options');
+      const allDropdowns = document.querySelectorAll('.select-options');
+      
+      // Close all other dropdowns
+      allDropdowns.forEach(dropdown => {
+        if (dropdown.id !== id + 'Options') {
+          dropdown.classList.remove('active');
+        }
+      });
+      
+      // Toggle the clicked dropdown
+      options.classList.toggle('active');
+    }
+
+    function selectAll(id) {
+      const options = document.querySelectorAll(`#${id}Options input[type="checkbox"]`);
+      options.forEach(option => option.checked = true);
+      updateChart();
+    }
+
+    function deselectAll(id) {
+      const options = document.querySelectorAll(`#${id}Options input[type="checkbox"]`);
+      options.forEach(option => option.checked = false);
+      updateChart();
+    }
+
+    function filterOptions(id) {
+      const input = document.querySelector(`#${id}Options .select-search input`);
+      const filter = input.value.toLowerCase();
+      const options = document.querySelectorAll(`#${id}Options .option`);
+      
+      options.forEach(option => {
+        const text = option.querySelector('span').textContent.toLowerCase();
+        option.style.display = text.includes(filter) ? '' : 'none';
+      });
+    }
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function(event) {
+      const dropdowns = document.querySelectorAll('.select-options');
+      dropdowns.forEach(dropdown => {
+        if (!dropdown.contains(event.target) && !event.target.closest('.select-header')) {
+          dropdown.classList.remove('active');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
