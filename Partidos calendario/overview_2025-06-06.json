@@ -90,7 +90,7 @@
                 "id": "255",
                 "name": "CE Clubes Inf Fem",
                 "gamescount": 8,
-                "nowplaying": 1,
+                "nowplaying": 2,
                 "order": 21,
                 "GAMES": [
                     {
@@ -217,14 +217,14 @@
                         "Place": "PALACIO DE LOS DEPORTES CAROLINA MARÍN",
                         "TeamAID": 957706,
                         "TeamA": "FUNDAL ALCOBENDAS \"A\"",
-                        "ScoreA": 0,
+                        "ScoreA": 4,
                         "TeamACode": "28021936",
                         "TeamAClubCode": "280219",
                         "TeamBID": 952711,
                         "TeamB": "VALENCIA BASKET ",
                         "TeamBCode": "46000217",
                         "TeamBClubCode": "460002",
-                        "ScoreB": 0,
+                        "ScoreB": 14,
                         "StartTime": "2025-06-06T12:30:00",
                         "StartTimeUTC": "2025-06-06T10:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -232,15 +232,15 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=957706&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952711&ti=1",
                         "Quarter": 1,
-                        "Time": "00:00:00",
+                        "Time": "00:06:23",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
                             {
                                 "n": "1",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "4",
+                                "scoreB": "14"
                             }
                         ],
                         "Season": null,
@@ -258,26 +258,32 @@
                         "Place": "POLIDEPORTIVO ANDRES ESTRADA",
                         "TeamAID": 964746,
                         "TeamA": "SPAR GRAN CANARIA",
-                        "ScoreA": 0,
+                        "ScoreA": 8,
                         "TeamACode": "35000102",
                         "TeamAClubCode": "350001",
                         "TeamBID": 956376,
                         "TeamB": "BARÇA CBS",
                         "TeamBCode": "08004219",
                         "TeamBClubCode": "080042",
-                        "ScoreB": 0,
+                        "ScoreB": 14,
                         "StartTime": "2025-06-06T12:30:00",
                         "StartTimeUTC": "2025-06-06T10:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=964746&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=956376&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:07:02",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "8",
+                                "scoreB": "14"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     }
@@ -287,7 +293,7 @@
                 "id": "254",
                 "name": "CE Clubes Inf Masc",
                 "gamescount": 8,
-                "nowplaying": 0,
+                "nowplaying": 1,
                 "order": 22,
                 "GAMES": [
                     {
@@ -358,26 +364,32 @@
                         "Place": "POLIDEPORTIVO JOSÉ HERNÁNDEZ ALBARRACÍN",
                         "TeamAID": 955052,
                         "TeamA": "JOVENTUT BADALONA  A",
-                        "ScoreA": 0,
+                        "ScoreA": 2,
                         "TeamACode": "08000507",
                         "TeamAClubCode": "080005",
                         "TeamBID": 965290,
                         "TeamB": "UNICAJA ANDALUCÍA",
                         "TeamBCode": "29000130",
                         "TeamBClubCode": "290001",
-                        "ScoreB": 0,
+                        "ScoreB": 7,
                         "StartTime": "2025-06-06T12:30:00",
                         "StartTimeUTC": "2025-06-06T10:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=955052&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=965290&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:03:11",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "2",
+                                "scoreB": "7"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
