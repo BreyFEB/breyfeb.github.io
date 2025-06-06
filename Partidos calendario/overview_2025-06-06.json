@@ -90,7 +90,7 @@
                 "id": "255",
                 "name": "CE Clubes Inf Fem",
                 "gamescount": 8,
-                "nowplaying": 2,
+                "nowplaying": 0,
                 "order": 21,
                 "GAMES": [
                     {
@@ -105,14 +105,14 @@
                         "Place": "PALACIO DE LOS DEPORTES CAROLINA MARÍN",
                         "TeamAID": 955643,
                         "TeamA": "JOVENTUT BADALONA A",
-                        "ScoreA": 72,
+                        "ScoreA": 76,
                         "TeamACode": "08130509",
                         "TeamAClubCode": "081305",
                         "TeamBID": 959479,
                         "TeamB": "JANSEN BT \"A\"",
                         "TeamBCode": "28013978",
                         "TeamBClubCode": "280139",
-                        "ScoreB": 52,
+                        "ScoreB": 56,
                         "StartTime": "2025-06-06T10:30:00",
                         "StartTimeUTC": "2025-06-06T08:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -120,8 +120,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=955643&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=959479&ti=1",
                         "Quarter": 4,
-                        "Time": "00:36:58",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -142,8 +142,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "13",
-                                "scoreB": "11"
+                                "scoreA": "17",
+                                "scoreB": "15"
                             }
                         ],
                         "Season": null,
@@ -161,7 +161,7 @@
                         "Place": "POLIDEPORTIVO ANDRES ESTRADA",
                         "TeamAID": 965301,
                         "TeamA": "UNICAJA ANDALUCÍA",
-                        "ScoreA": 53,
+                        "ScoreA": 55,
                         "TeamACode": "29000165",
                         "TeamAClubCode": "290001",
                         "TeamBID": 961030,
@@ -176,8 +176,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=965301&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=961030&ti=1",
                         "Quarter": 4,
-                        "Time": "00:38:12",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -198,7 +198,7 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "16",
+                                "scoreA": "18",
                                 "scoreB": "7"
                             }
                         ],
@@ -211,7 +211,7 @@
                         "Competition": "C ESP CLUBES INF FEM",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2471473,
                         "GameCode": null,
                         "Place": "PALACIO DE LOS DEPORTES CAROLINA MARÍN",
@@ -246,7 +246,7 @@
                         "Competition": "C ESP CLUBES INF FEM",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2471476,
                         "GameCode": null,
                         "Place": "POLIDEPORTIVO ANDRES ESTRADA",
@@ -296,14 +296,14 @@
                         "Place": "PABELLÓN JOSÉ HERNÁNDEZ ALBARRACÍN",
                         "TeamAID": 973110,
                         "TeamA": "FUNDACION ARO REAL BETIS BALONCESTO",
-                        "ScoreA": 65,
+                        "ScoreA": 78,
                         "TeamACode": "41022305",
                         "TeamAClubCode": "410223",
                         "TeamBID": 964324,
                         "TeamB": "CAJASIETE CANARIAS",
                         "TeamBCode": "38023203",
                         "TeamBClubCode": "380232",
-                        "ScoreB": 68,
+                        "ScoreB": 71,
                         "StartTime": "2025-06-06T10:30:00",
                         "StartTimeUTC": "2025-06-06T08:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -311,7 +311,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=973110&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=964324&ti=1",
                         "Quarter": 4,
-                        "Time": "00:35:49",
+                        "Time": "00:39:43",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -333,8 +333,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "6",
-                                "scoreB": "10"
+                                "scoreA": "19",
+                                "scoreB": "13"
                             }
                         ],
                         "Season": null,
