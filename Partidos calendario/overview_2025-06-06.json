@@ -90,7 +90,7 @@
                 "id": "255",
                 "name": "CE Clubes Inf Fem",
                 "gamescount": 8,
-                "nowplaying": 2,
+                "nowplaying": 0,
                 "order": 21,
                 "GAMES": [
                     {
@@ -224,7 +224,7 @@
                         "TeamB": "VALENCIA BASKET ",
                         "TeamBCode": "46000217",
                         "TeamBClubCode": "460002",
-                        "ScoreB": 78,
+                        "ScoreB": 81,
                         "StartTime": "2025-06-06T12:30:00",
                         "StartTimeUTC": "2025-06-06T10:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -232,8 +232,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=957706&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952711&ti=1",
                         "Quarter": 4,
-                        "Time": "00:38:46",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -255,7 +255,7 @@
                             {
                                 "n": "4",
                                 "scoreA": "11",
-                                "scoreB": "20"
+                                "scoreB": "23"
                             }
                         ],
                         "Season": null,
@@ -273,7 +273,7 @@
                         "Place": "POLIDEPORTIVO ANDRES ESTRADA",
                         "TeamAID": 964746,
                         "TeamA": "SPAR GRAN CANARIA",
-                        "ScoreA": 60,
+                        "ScoreA": 61,
                         "TeamACode": "35000102",
                         "TeamAClubCode": "350001",
                         "TeamBID": 956376,
@@ -288,8 +288,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=964746&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=956376&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:43",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -310,7 +310,7 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "19",
+                                "scoreA": "20",
                                 "scoreB": "18"
                             }
                         ],
@@ -323,7 +323,7 @@
                 "id": "254",
                 "name": "CE Clubes Inf Masc",
                 "gamescount": 8,
-                "nowplaying": 1,
+                "nowplaying": 0,
                 "order": 22,
                 "GAMES": [
                     {
@@ -394,14 +394,14 @@
                         "Place": "POLIDEPORTIVO JOSÉ HERNÁNDEZ ALBARRACÍN",
                         "TeamAID": 955052,
                         "TeamA": "JOVENTUT BADALONA  A",
-                        "ScoreA": 40,
+                        "ScoreA": 47,
                         "TeamACode": "08000507",
                         "TeamAClubCode": "080005",
                         "TeamBID": 965290,
                         "TeamB": "UNICAJA ANDALUCÍA",
                         "TeamBCode": "29000130",
                         "TeamBClubCode": "290001",
-                        "ScoreB": 59,
+                        "ScoreB": 67,
                         "StartTime": "2025-06-06T12:30:00",
                         "StartTimeUTC": "2025-06-06T10:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -409,8 +409,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=955052&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=965290&ti=1",
                         "Quarter": 4,
-                        "Time": "00:35:23",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -431,8 +431,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "5",
-                                "scoreB": "10"
+                                "scoreA": "12",
+                                "scoreB": "18"
                             }
                         ],
                         "Season": null,
