@@ -591,7 +591,6 @@ async function loadStats() {
     const rivals = player_totals.matches.map(match => match.rival);
     let dataArr;
     if (statKey === 'min') {
-      // Convert minutes string to total minutes as float
       dataArr = player_totals.matches.map(match => parseMinutes(match.minutes));
     } else {
       dataArr = player_totals.matches.map(match => match[statKey]);
@@ -617,6 +616,7 @@ async function loadStats() {
       },
       options: {
         responsive: true,
+        maintainAspectRatio: false,
         plugins: {
           tooltip: {
             callbacks: {
@@ -2321,6 +2321,9 @@ function updateChart() {
                 size: 14
               }
             }
+          },
+          tooltip: {
+            enabled: false
           }
         },
         scales: {
@@ -2329,7 +2332,7 @@ function updateChart() {
             position: 'bottom',
             title: { display: false },
             min: 0,
-            max: 50, // Only show left half
+            max: 50,
             ticks: { display: false },
             grid: { display: false }
           },
@@ -2351,14 +2354,13 @@ function updateChart() {
           if (courtImg.complete && chartArea) {
             ctx.save();
             ctx.globalAlpha = 1.0;
-            // Draw only the left half of the image
             ctx.beginPath();
             ctx.rect(chartArea.left, chartArea.top, chartArea.width, chartArea.height);
             ctx.clip();
             ctx.drawImage(
               courtImg,
-              0, 0, courtImg.width / 2, courtImg.height, // source: left half
-              chartArea.left, chartArea.top, chartArea.width, chartArea.height // dest: full chart area
+              0, 0, courtImg.width / 2, courtImg.height,
+              chartArea.left, chartArea.top, chartArea.width, chartArea.height
             );
             ctx.restore();
           }
