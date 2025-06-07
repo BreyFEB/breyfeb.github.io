@@ -282,14 +282,14 @@
                         "Place": "PALACIO DE LOS DEPORTES CAROLINA MARÍN",
                         "TeamAID": 955053,
                         "TeamA": "BARÇA",
-                        "ScoreA": 34,
+                        "ScoreA": 54,
                         "TeamACode": "08000305",
                         "TeamAClubCode": "080003",
                         "TeamBID": 958271,
                         "TeamB": "REAL MADRID ´A´",
                         "TeamBCode": "28000204",
                         "TeamBClubCode": "280002",
-                        "ScoreB": 19,
+                        "ScoreB": 36,
                         "StartTime": "2025-06-07T13:00:00",
                         "StartTimeUTC": "2025-06-07T11:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -297,7 +297,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=955053&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=958271&ti=1",
                         "Quarter": 3,
-                        "Time": "00:20:00",
+                        "Time": "00:29:05",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -314,8 +314,8 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "20",
+                                "scoreB": "17"
                             }
                         ],
                         "Season": null,
