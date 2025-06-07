@@ -112,7 +112,7 @@
                         "TeamB": "FUNDAL ALCOBENDAS \"A\"",
                         "TeamBCode": "28021936",
                         "TeamBClubCode": "280219",
-                        "ScoreB": 45,
+                        "ScoreB": 46,
                         "StartTime": "2025-06-07T09:30:00",
                         "StartTimeUTC": "2025-06-07T07:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -120,8 +120,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=959479&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=957706&ti=1",
                         "Quarter": 4,
-                        "Time": "00:38:17",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -143,7 +143,7 @@
                             {
                                 "n": "4",
                                 "scoreA": "9",
-                                "scoreB": "9"
+                                "scoreB": "10"
                             }
                         ],
                         "Season": null,
@@ -161,26 +161,32 @@
                         "Place": "PALACIO DE LOS DEPORTES CAROLINA MARÍN",
                         "TeamAID": 955643,
                         "TeamA": "JOVENTUT BADALONA A",
-                        "ScoreA": 0,
+                        "ScoreA": 14,
                         "TeamACode": "08130509",
                         "TeamAClubCode": "081305",
                         "TeamBID": 952711,
                         "TeamB": "VALENCIA BASKET ",
                         "TeamBCode": "46000217",
                         "TeamBClubCode": "460002",
-                        "ScoreB": 0,
+                        "ScoreB": 19,
                         "StartTime": "2025-06-07T11:00:00",
                         "StartTimeUTC": "2025-06-07T09:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=955643&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952711&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:07:39",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "14",
+                                "scoreB": "19"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     }
@@ -199,7 +205,7 @@
                         "Competition": "C ESP CLUBES INF MASC",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2471675,
                         "GameCode": null,
                         "Place": "POLIDEPORTIVO ANDRÉS ESTRADA",
