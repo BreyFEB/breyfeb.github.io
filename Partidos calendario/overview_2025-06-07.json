@@ -226,14 +226,14 @@
                         "Place": "POLIDEPORTIVO ANDRÉS ESTRADA",
                         "TeamAID": 963406,
                         "TeamA": "CANTERBURY SCHOOL ",
-                        "ScoreA": 67,
+                        "ScoreA": 70,
                         "TeamACode": "35015103",
                         "TeamAClubCode": "350151",
                         "TeamBID": 964492,
                         "TeamB": "PABLO LASO ACADEMY",
                         "TeamBCode": "28297302",
                         "TeamBClubCode": "282973",
-                        "ScoreB": 68,
+                        "ScoreB": 75,
                         "StartTime": "2025-06-07T11:30:00",
                         "StartTimeUTC": "2025-06-07T09:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -241,8 +241,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=963406&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=964492&ti=1",
                         "Quarter": 4,
-                        "Time": "00:38:40",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
@@ -263,8 +263,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "21",
-                                "scoreB": "17"
+                                "scoreA": "24",
+                                "scoreB": "24"
                             }
                         ],
                         "Season": null,
@@ -282,26 +282,32 @@
                         "Place": "PALACIO DE LOS DEPORTES CAROLINA MARÍN",
                         "TeamAID": 955053,
                         "TeamA": "BARÇA",
-                        "ScoreA": 0,
+                        "ScoreA": 9,
                         "TeamACode": "08000305",
                         "TeamAClubCode": "080003",
                         "TeamBID": 958271,
                         "TeamB": "REAL MADRID ´A´",
                         "TeamBCode": "28000204",
                         "TeamBClubCode": "280002",
-                        "ScoreB": 0,
+                        "ScoreB": 2,
                         "StartTime": "2025-06-07T13:00:00",
                         "StartTimeUTC": "2025-06-07T11:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=955053&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=958271&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:03:26",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "9",
+                                "scoreB": "2"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     }
