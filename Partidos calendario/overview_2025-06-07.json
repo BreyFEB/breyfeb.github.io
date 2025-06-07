@@ -11,7 +11,7 @@
                 "id": "115",
                 "name": "Primera FEB",
                 "gamescount": 3,
-                "nowplaying": 1,
+                "nowplaying": 0,
                 "order": 1,
                 "GAMES": [
                     {
@@ -97,8 +97,8 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951321&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951848&ti=1",
                         "Quarter": 4,
-                        "Time": "00:39:49",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
