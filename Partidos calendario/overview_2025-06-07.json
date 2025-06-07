@@ -82,14 +82,14 @@
                         "Place": "PABELLÓN CAJA MÁGICA",
                         "TeamAID": 951321,
                         "TeamA": "FLEXICAR FUENLABRADA",
-                        "ScoreA": 59,
+                        "ScoreA": 71,
                         "TeamACode": "28332300",
                         "TeamAClubCode": "283323",
                         "TeamBID": 951848,
                         "TeamB": "SÚPER AGROPAL PALENCIA",
                         "TeamBCode": "34000707",
                         "TeamBClubCode": "340007",
-                        "ScoreB": 67,
+                        "ScoreB": 73,
                         "StartTime": "2025-06-07T20:00:00",
                         "StartTimeUTC": "2025-06-07T18:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -97,7 +97,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951321&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951848&ti=1",
                         "Quarter": 4,
-                        "Time": "00:32:53",
+                        "Time": "00:38:02",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -119,8 +119,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "6",
-                                "scoreB": "3"
+                                "scoreA": "18",
+                                "scoreB": "9"
                             }
                         ],
                         "Season": null,
