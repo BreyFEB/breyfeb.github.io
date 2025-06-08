@@ -118,6 +118,16 @@ async function loadAllStats() {
     competitionSet = new Set(data.competitions);
     teamSet = new Set(data.teams);
 
+    // Collect unique round values from all players' matches
+    roundSet = new Set();
+    allPlayersStats.forEach(player => {
+      player.matches.forEach(match => {
+        if (match.round_) {
+          roundSet.add(match.round_);
+        }
+      });
+    });
+
     // Store phase records for later use
     window.phaseRecords = data.phase_records;
 
@@ -326,6 +336,19 @@ function fillSelects() {
     teamList.appendChild(label);
   });
 
+  // Fill round options
+  const roundList = document.getElementById('roundList');
+  roundList.innerHTML = '';
+  [...roundSet].sort((a, b) => a.localeCompare(b)).forEach(round => {
+    const label = document.createElement('label');
+    label.className = 'option';
+    label.innerHTML = `
+      <input type="checkbox" value="${round}">
+      <span>${round}</span>
+    `;
+    roundList.appendChild(label);
+  });
+
   // Add change event listeners to all checkboxes
   document.querySelectorAll('.option input[type="checkbox"]').forEach(checkbox => {
     checkbox.addEventListener('change', () => {
@@ -345,17 +368,54 @@ function applyFilters() {
   const selectedCompetitions = getSelectedValues('competition');
   const selectedTeams = getSelectedValues('team');
   const selectedGenders = getSelectedValues('gender');
-  const selectedPhases = getSelectedValues('round');
+  const selectedRounds = getSelectedValues('round');
   const modeToggle = document.getElementById("modeToggle");
   const searchInput = document.getElementById("searchPlayerTeam");
   const searchTerm = searchInput.value.toLowerCase();
 
-  // Use phase records if a phase is selected, otherwise use total records
-  let dataToFilter = selectedPhases.length > 0 ? 
-    window.phaseRecords.filter(p => selectedPhases.includes(p.phaseType)) : 
-    allPlayersStats;
+  // Filter data based on selected rounds
+  let filteredData = allPlayersStats.map(player => {
+    if (selectedRounds.length === 0) {
+      return player; // Return all data if no rounds selected
+    }
 
-  let filteredData = dataToFilter.filter(player => {
+    // Create a copy of the player with filtered matches
+    const filteredPlayer = { ...player };
+    filteredPlayer.matches = player.matches.filter(match => 
+      selectedRounds.includes(match.round_)
+    );
+
+    // If no matches after filtering, return null to be filtered out
+    if (filteredPlayer.matches.length === 0) {
+      return null;
+    }
+
+    // Recalculate totals based on filtered matches
+    filteredPlayer.pts = filteredPlayer.matches.reduce((sum, m) => sum + m.pts, 0);
+    filteredPlayer.t2c = filteredPlayer.matches.reduce((sum, m) => sum + m.t2c, 0);
+    filteredPlayer.t2i = filteredPlayer.matches.reduce((sum, m) => sum + m.t2i, 0);
+    filteredPlayer.t3c = filteredPlayer.matches.reduce((sum, m) => sum + m.t3c, 0);
+    filteredPlayer.t3i = filteredPlayer.matches.reduce((sum, m) => sum + m.t3i, 0);
+    filteredPlayer.tlc = filteredPlayer.matches.reduce((sum, m) => sum + m.tlc, 0);
+    filteredPlayer.tli = filteredPlayer.matches.reduce((sum, m) => sum + m.tli, 0);
+    filteredPlayer.ro = filteredPlayer.matches.reduce((sum, m) => sum + m.ro, 0);
+    filteredPlayer.rd = filteredPlayer.matches.reduce((sum, m) => sum + m.rd, 0);
+    filteredPlayer.rt = filteredPlayer.matches.reduce((sum, m) => sum + m.rt, 0);
+    filteredPlayer.as = filteredPlayer.matches.reduce((sum, m) => sum + m.as, 0);
+    filteredPlayer.br = filteredPlayer.matches.reduce((sum, m) => sum + m.br, 0);
+    filteredPlayer.bp = filteredPlayer.matches.reduce((sum, m) => sum + m.bp, 0);
+    filteredPlayer.tp = filteredPlayer.matches.reduce((sum, m) => sum + m.tp, 0);
+    filteredPlayer.fc = filteredPlayer.matches.reduce((sum, m) => sum + m.fc, 0);
+    filteredPlayer.va = filteredPlayer.matches.reduce((sum, m) => sum + m.va, 0);
+    filteredPlayer.pm = filteredPlayer.matches.reduce((sum, m) => sum + m.pm, 0);
+    filteredPlayer.seconds = filteredPlayer.matches.reduce((sum, m) => sum + minutesToSeconds(m.minutes), 0);
+    filteredPlayer.games = filteredPlayer.matches.length;
+
+    return filteredPlayer;
+  }).filter(player => player !== null); // Remove players with no matches
+
+  // Apply other filters
+  filteredData = filteredData.filter(player => {
     const matchesComp = selectedCompetitions.length === 0 || selectedCompetitions.includes(player.competition);
     const matchesTeam = selectedTeams.length === 0 || selectedTeams.includes(player.teamName);
     const matchesGender = selectedGenders.length === 0 || selectedGenders.includes(player.gender);
