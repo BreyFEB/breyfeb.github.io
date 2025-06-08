@@ -33,7 +33,7 @@
                         "TeamB": "REAL BETIS BALONCESTO",
                         "TeamBCode": "41000600",
                         "TeamBClubCode": "410006",
-                        "ScoreB": 81,
+                        "ScoreB": 88,
                         "StartTime": "2025-06-08T17:30:00",
                         "StartTimeUTC": "2025-06-08T15:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -41,7 +41,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951321&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950951&ti=1",
                         "Quarter": 5,
-                        "Time": "00:41:09",
+                        "Time": "00:41:47",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -69,7 +69,7 @@
                             {
                                 "n": "5",
                                 "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreB": "7"
                             }
                         ],
                         "Season": null,
