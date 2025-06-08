@@ -26,14 +26,14 @@
                         "Place": "PABELLÓN CAJA MÁGICA",
                         "TeamAID": 951321,
                         "TeamA": "FLEXICAR FUENLABRADA",
-                        "ScoreA": 63,
+                        "ScoreA": 68,
                         "TeamACode": "28332300",
                         "TeamAClubCode": "283323",
                         "TeamBID": 950951,
                         "TeamB": "REAL BETIS BALONCESTO",
                         "TeamBCode": "41000600",
                         "TeamBClubCode": "410006",
-                        "ScoreB": 69,
+                        "ScoreB": 71,
                         "StartTime": "2025-06-08T17:30:00",
                         "StartTimeUTC": "2025-06-08T15:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -41,7 +41,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951321&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950951&ti=1",
                         "Quarter": 4,
-                        "Time": "00:33:07",
+                        "Time": "00:34:18",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -63,8 +63,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "7",
-                                "scoreB": "4"
+                                "scoreA": "12",
+                                "scoreB": "6"
                             }
                         ],
                         "Season": null,
