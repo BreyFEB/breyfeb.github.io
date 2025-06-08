@@ -26,7 +26,7 @@
                         "Place": "PABELLÓN CAJA MÁGICA",
                         "TeamAID": 951321,
                         "TeamA": "FLEXICAR FUENLABRADA",
-                        "ScoreA": 7,
+                        "ScoreA": 10,
                         "TeamACode": "28332300",
                         "TeamAClubCode": "283323",
                         "TeamBID": 950951,
@@ -41,14 +41,14 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951321&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950951&ti=1",
                         "Quarter": 1,
-                        "Time": "00:05:34",
+                        "Time": "00:06:03",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
                             {
                                 "n": "1",
-                                "scoreA": "7",
+                                "scoreA": "10",
                                 "scoreB": "16"
                             }
                         ],
