@@ -40,8 +40,8 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951321&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=950951&ti=1",
-                        "Quarter": 4,
-                        "Time": "00:39:28",
+                        "Quarter": 5,
+                        "Time": "00:40:00",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -65,6 +65,11 @@
                                 "n": "4",
                                 "scoreA": "25",
                                 "scoreB": "16"
+                            },
+                            {
+                                "n": "5",
+                                "scoreA": "0",
+                                "scoreB": "0"
                             }
                         ],
                         "Season": null,
