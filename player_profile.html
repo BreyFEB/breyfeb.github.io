@@ -13,6 +13,36 @@
       flex-wrap: wrap;
     }
     
+    /* Add styles for filter tags */
+    .filter-tag {
+      display: inline-flex;
+      align-items: center;
+      background: #f0f0f0;
+      padding: 6px 12px;
+      border-radius: 16px;
+      margin: 4px;
+      font-size: 0.9em;
+      color: #333;
+    }
+
+    .filter-tag .filter-name {
+      margin-right: 8px;
+    }
+
+    .filter-tag .delete-filter {
+      cursor: pointer;
+      color: #666;
+      font-size: 1.1em;
+      padding: 0 4px;
+      border-radius: 50%;
+      transition: all 0.2s;
+    }
+
+    .filter-tag .delete-filter:hover {
+      color: #c62828;
+      background: rgba(198, 40, 40, 0.1);
+    }
+    
     .custom-select {
       position: relative;
       min-width: 200px;

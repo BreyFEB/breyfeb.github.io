@@ -2190,67 +2190,130 @@ function updateStats(filteredShots) {
 }
 
 function updateSelectedFilters() {
-  const filters = [];
-  // Partido
+  const selectedFiltersDiv = document.getElementById('selectedFilters');
+  if (!selectedFiltersDiv) return;
+  
+  selectedFiltersDiv.innerHTML = '';
+  
+  // Helper function to create a filter tag
+  function createFilterTag(filterType, value, originalValue) {
+    const tag = document.createElement('div');
+    tag.className = 'filter-tag';
+    tag.dataset.filterType = filterType;
+    tag.dataset.filterValue = originalValue;
+    
+    const nameSpan = document.createElement('span');
+    nameSpan.className = 'filter-name';
+    nameSpan.textContent = value;
+    
+    const deleteBtn = document.createElement('span');
+    deleteBtn.className = 'delete-filter';
+    deleteBtn.innerHTML = '×';
+    deleteBtn.onclick = function(e) {
+      e.stopPropagation();
+      // Find and uncheck the corresponding checkbox
+      const checkbox = document.querySelector(`input[name="${filterType}"][value="${originalValue}"]`);
+      if (checkbox) {
+        checkbox.checked = false;
+        // Remove the tag
+        tag.remove();
+        // Update the chart
+        updateChart();
+      }
+    };
+    
+    tag.appendChild(nameSpan);
+    tag.appendChild(deleteBtn);
+    return tag;
+  }
+  
+  // Add match filters
   const selectedMatches = getSelectedValues('match');
   if (selectedMatches.length > 0) {
-    filters.push(`<b>Partido:</b> ${selectedMatches.join(', ')}`);
+    selectedMatches.forEach(match => {
+      selectedFiltersDiv.appendChild(createFilterTag('match', `Partido: ${match}`, match));
+    });
   }
-  // Cuartos
+  
+  // Add quarter filters
   const selectedQuarters = getSelectedValues('quarter');
   if (selectedQuarters.length > 0) {
-    filters.push(`<b>Cuartos:</b> ${selectedQuarters.join(', ')}`);
+    selectedQuarters.forEach(quarter => {
+      selectedFiltersDiv.appendChild(createFilterTag('quarter', `Cuarto: ${quarter}`, quarter));
+    });
   }
-  // Resultado
+  
+  // Add result filters
   const selectedResults = getSelectedValues('result');
   if (selectedResults.length > 0) {
-    const map = { made: 'Anotado', missed: 'Fallado' };
-    filters.push(`<b>Resultado:</b> ${selectedResults.map(r => map[r] || r).join(', ')}`);
+    selectedResults.forEach(result => {
+      const displayValue = result === 'made' ? 'Anotado' : 'Fallado';
+      selectedFiltersDiv.appendChild(createFilterTag('result', `Resultado: ${displayValue}`, result));
+    });
   }
-  // Tipo de Tiro
+  
+  // Add shot type filters
   const selectedShotTypes = getSelectedValues('shotType');
   if (selectedShotTypes.length > 0) {
-    const map = { rim: 'Cerca del aro', midrange: 'Media distancia', 2: 'Tiros de 2', 3: 'Tiros de 3' };
-    filters.push(`<b>Tipo de Tiro:</b> ${selectedShotTypes.map(t => map[t] || t).join(', ')}`);
+    selectedShotTypes.forEach(type => {
+      let displayName;
+      switch(type) {
+        case 'rim': displayName = 'Cerca del aro'; break;
+        case '2': displayName = 'Tiros de 2'; break;
+        case '3': displayName = 'Tiros de 3'; break;
+        default: displayName = type;
+      }
+      selectedFiltersDiv.appendChild(createFilterTag('shotType', `Tipo de Tiro: ${displayName}`, type));
+    });
   }
-  // Diferencia de Puntos
+  
+  // Add score difference filters
   const selectedScoreDiffs = getSelectedValues('scoreDiff');
   if (selectedScoreDiffs.length > 0) {
-    const map = {
-      tied: 'Empate',
-      ahead_1_5: 'Ganando por 1-5',
-      ahead_6_10: 'Ganando por 6-10',
-      ahead_10_plus: 'Ganando por +10',
-      behind_1_5: 'Perdiendo por 1-5',
-      behind_6_10: 'Perdiendo por 6-10',
-      behind_10_plus: 'Perdiendo por +10'
-    };
-    filters.push(`<b>Diferencia de Puntos:</b> ${selectedScoreDiffs.map(d => map[d] || d).join(', ')}`);
+    selectedScoreDiffs.forEach(diff => {
+      let displayName;
+      switch(diff) {
+        case 'tied': displayName = 'Empate'; break;
+        case 'ahead_1_5': displayName = 'Ganando por 1-5'; break;
+        case 'ahead_6_10': displayName = 'Ganando por 6-10'; break;
+        case 'ahead_10_plus': displayName = 'Ganando por +10'; break;
+        case 'behind_1_5': displayName = 'Perdiendo por 1-5'; break;
+        case 'behind_6_10': displayName = 'Perdiendo por 6-10'; break;
+        case 'behind_10_plus': displayName = 'Perdiendo por +10'; break;
+        default: displayName = diff;
+      }
+      selectedFiltersDiv.appendChild(createFilterTag('scoreDiff', `Diferencia: ${displayName}`, diff));
+    });
   }
-  // Lado de la Cancha
+  
+  // Add court side filters
   const selectedCourtSides = getSelectedValues('courtSide');
   if (selectedCourtSides.length > 0) {
-    const map = { left: 'Izquierda', right: 'Derecha' };
-    filters.push(`<b>Lado de la Cancha:</b> ${selectedCourtSides.map(s => map[s] || s).join(', ')}`);
+    selectedCourtSides.forEach(side => {
+      const displayValue = side === 'left' ? 'Izquierda' : 'Derecha';
+      selectedFiltersDiv.appendChild(createFilterTag('courtSide', `Lado: ${displayValue}`, side));
+    });
   }
-  // Tiempo restante
+  
+  // Add time filter
   const quarterTime = document.getElementById('quarterTime').value;
   if (quarterTime) {
-    filters.push(`<b>Tiempo restante:</b> ${quarterTime} min`);
+    selectedFiltersDiv.appendChild(createFilterTag('time', `Tiempo: ${quarterTime} min`, quarterTime));
   }
-  // Distancia al aro
+  
+  // Add distance filters
   const minDistance = document.getElementById('minDistance').value;
   const maxDistance = document.getElementById('maxDistance').value;
   if (minDistance || maxDistance) {
-    filters.push(`<b>Distancia al aro:</b> ${minDistance ? 'Mín ' + minDistance : ''}${minDistance && maxDistance ? ', ' : ''}${maxDistance ? 'Máx ' + maxDistance : ''} m`);
-  }
-  const container = document.getElementById('selectedFilters');
-  if (container) {
-    if (filters.length > 0) {
-      container.innerHTML = `<ul style='margin:0;padding-left:18px;'>${filters.map(f => `<li style='margin-bottom:2px;'>${f}</li>`).join('')}</ul>`;
+    let distanceText = 'Distancia: ';
+    if (minDistance && maxDistance) {
+      distanceText += `${minDistance}-${maxDistance} m`;
+    } else if (minDistance) {
+      distanceText += `>${minDistance} m`;
     } else {
-      container.innerHTML = `<span style='color:#888;'>Sin filtros seleccionados</span>`;
+      distanceText += `<${maxDistance} m`;
     }
+    selectedFiltersDiv.appendChild(createFilterTag('distance', distanceText, `${minDistance || ''}-${maxDistance || ''}`));
   }
 }
 
