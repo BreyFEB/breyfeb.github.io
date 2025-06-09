@@ -2211,15 +2211,26 @@ function updateSelectedFilters() {
     deleteBtn.innerHTML = '×';
     deleteBtn.onclick = function(e) {
       e.stopPropagation();
-      // Find and uncheck the corresponding checkbox
-      const checkbox = document.querySelector(`input[name="${filterType}"][value="${originalValue}"]`);
-      if (checkbox) {
-        checkbox.checked = false;
-        // Remove the tag
-        tag.remove();
-        // Update the chart
-        updateChart();
+      
+      if (filterType === 'time') {
+        // Clear the time input field
+        document.getElementById('quarterTime').value = '';
+      } else if (filterType === 'distance') {
+        // Clear both distance input fields
+        document.getElementById('minDistance').value = '';
+        document.getElementById('maxDistance').value = '';
+      } else {
+        // For other filters, uncheck the corresponding checkbox
+        const checkbox = document.querySelector(`input[name="${filterType}"][value="${originalValue}"]`);
+        if (checkbox) {
+          checkbox.checked = false;
+        }
       }
+      
+      // Remove the tag
+      tag.remove();
+      // Update the chart
+      updateChart();
     };
     
     tag.appendChild(nameSpan);
