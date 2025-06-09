@@ -273,7 +273,7 @@ function buildPlayerPhotoDictionary(data) {
   data.SCOREBOARD.TEAM.forEach(team => {
     if (!team.PLAYER) return;
     team.PLAYER.forEach(p => {
-      playerPhotos[p.id] = p.logo || "https://via.placeholder.com/50";
+      playerPhotos[p.id] = p.logo || "player_placeholder.png";
     });
   });
 }
@@ -400,10 +400,12 @@ function mapPlayersToRows(players) {
     const p1a = parseInt(p.p1a, 10) || 0;
     const p1m = parseInt(p.p1m, 10) || 0;
     const p1pValue = p1a > 0 ? (p1m / p1a) * 100 : 0;
-    const playerPhoto = p.logo || "https://via.placeholder.com/50";
+    
+    // Use player_placeholder.png as fallback
+    const playerPhoto = p.logo || "player_placeholder.png";
     const playerNameCell = `
       <div class="player-cell">
-        <img src="${playerPhoto}" alt="${p.name}" class="player-photo">
+        <img src="${playerPhoto}" alt="${p.name}" class="player-photo" onerror="this.onerror=null; this.src='player_placeholder.png';">
         <a href="player_profile.html?player_id=${p.id}" style="text-decoration: none; color: inherit;">${p.name}</a>
       </div>
     `;
@@ -595,7 +597,11 @@ function createModernPBPEvent(ev) {
   contentDiv.classList.add("pbp-content");
   if (ev.action.toLowerCase() === "shoot" && ev.text && ev.text.toLowerCase().includes("anotado") && ev.idPlayer && playerPhotos[ev.idPlayer]) {
     const img = document.createElement("img");
-    img.src = playerPhotos[ev.idPlayer];
+    img.src = playerPhotos[ev.idPlayer] || "player_placeholder.png";
+    img.onerror = function() {
+      this.onerror = null;
+      this.src = "player_placeholder.png";
+    };
     img.alt = "Foto Jugador";
     img.classList.add("player-photo", "big");
     contentDiv.appendChild(img);
