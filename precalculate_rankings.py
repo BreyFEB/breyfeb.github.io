@@ -17,11 +17,14 @@ def minutes_to_seconds(min_formatted):
 def is_group_phase(match_round):
     return match_round.strip().upper() in ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
 
-def process_match_data(data):
+def process_match_data(data, filename):
     players_map = {}
     phase_records = {}  # New dictionary for phase-specific records
     competition_set = set()
     team_set = set()
+    
+    # Extract game_id from filename
+    game_id = filename.replace('FullMatch_', '').replace('.json', '')
     
     comp = data['HEADER'].get('competition', '')
     match_round = data['HEADER'].get('round', '')
@@ -185,7 +188,8 @@ def process_match_data(data):
                 'teamPoints': team_points,
                 'rivalPoints': rival_points,
                 'resultado': 'G' if team_points > rival_points else 'P',
-                'marcador': f"{team_points}-{rival_points}"
+                'marcador': f"{team_points}-{rival_points}",
+                'game_id': game_id
             }
             
             # Update both records
@@ -241,7 +245,7 @@ def main():
             try:
                 with open(file_path, 'r', encoding='utf-8') as f:
                     match_data = json.load(f)
-                    stats = process_match_data(match_data)
+                    stats = process_match_data(match_data, filename)
                     
                     # Update total records
                     for player in stats['players']:

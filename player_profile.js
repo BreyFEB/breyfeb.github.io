@@ -921,7 +921,7 @@ async function loadStats() {
         card.querySelector('.record-details').innerHTML = `
           <p>Rival: ${toTitleCase(maxMatch.rival)}</p>
           <p>Fecha: ${maxMatch.matchDate}</p>
-          <a href="#">Ver Video</a>
+          <a href="/ficha.html?gameId=${maxMatch.game_id}">Ir al partido</a>
         `;
       });
     }
@@ -1016,11 +1016,13 @@ async function loadStats() {
       // Extract only the date part (before ' - ')
       const onlyDate = match.matchDate.split(' - ')[0];
 
+      // Get game_id from match
+      const gameId = match.game_id;
       const tr = document.createElement('tr');
       tr.innerHTML = `
         <td>${onlyDate}</td>
         <td title="${match.rival}">${teamAcronym}</td>
-        <td>${formatResult(match.marcador)}</td>
+        <td><a href="/ficha.html?gameId=${gameId}" style="text-decoration: none;">${formatResult(match.marcador)}</a></td>
         <td>${match.minutes}</td>
         <td>${match.pts}</td>
         <td>${match.t2i}</td>

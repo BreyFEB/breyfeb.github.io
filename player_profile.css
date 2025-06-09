@@ -894,9 +894,15 @@ header {
 }
 
 .chart-with-card.horizontal {
+  display: flex;
   flex-direction: row;
+  gap: 20px;
   align-items: center;
   justify-content: center;
+  height: auto;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .chart-container {
@@ -926,8 +932,8 @@ header {
     min-height: 400px;
   }
   .chart-with-card.horizontal {
-    flex-direction: column !important;
-    align-items: stretch;
+    flex-direction: column;
+    height: auto;
   }
   .chart-with-card.horizontal > * {
     width: 100% !important;
@@ -1117,14 +1123,27 @@ header {
 }
 
 /* Shot chart specific styles */
-#shotsSection .chart-container {
-  aspect-ratio: 425/474;
-  width: 425px;
-  max-width: 100%;
+.chart-container-shotChart {
+  width: 100% !important;
+  height: auto !important;
   margin: 0 auto;
+  position: relative;
+  flex: 1;
+  aspect-ratio: 425/474;
 }
 
-#shotsSection .chart-container canvas {
+.chart-container-shotChart canvas {
   width: 100% !important;
   height: 100% !important;
+}
+
+@media (max-width: 900px) {
+  .chart-with-card.horizontal {
+    flex-direction: column;
+  }
+  
+  .chart-container-shotChart {
+    width: 100%;
+    max-width: 800px;
+  }
 }

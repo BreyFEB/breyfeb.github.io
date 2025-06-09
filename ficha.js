@@ -404,7 +404,7 @@ function mapPlayersToRows(players) {
     const playerNameCell = `
       <div class="player-cell">
         <img src="${playerPhoto}" alt="${p.name}" class="player-photo">
-        <span>${p.name}</span>
+        <a href="/player_profile.html?player_id=${p.id}" style="text-decoration: none; color: inherit;">${p.name}</a>
       </div>
     `;
     return [

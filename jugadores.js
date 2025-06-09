@@ -333,6 +333,7 @@ function renderizarJugadores(jugadores) {
       'player_placeholder.png';
     
     return `
+    <a href="player_profile.html?player_id=${jugador.id}">
       <div class="player-card">
         <div class="player-header">
           <div class="team-logo-container">
@@ -360,6 +361,7 @@ function renderizarJugadores(jugadores) {
           </div>
         </div>
       </div>
+      </a>
     `;
   }).join('');
 }
