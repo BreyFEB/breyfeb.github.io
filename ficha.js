@@ -405,7 +405,7 @@ function mapPlayersToRows(players) {
     const playerPhoto = p.logo || "player_placeholder.png";
     const playerNameCell = `
       <div class="player-cell">
-        <img src="${playerPhoto}" alt="${p.name}" class="player-photo" onerror="this.onerror=null; this.src='player_placeholder.png';">
+        <a href="player_profile.html?player_id=${p.id}" style="text-decoration: none; color: inherit;"> <img src="${playerPhoto}" alt="${p.name}" class="player-photo" onerror="this.onerror=null; this.src='player_placeholder.png';"> </a>
         <a href="player_profile.html?player_id=${p.id}" style="text-decoration: none; color: inherit;">${p.name}</a>
       </div>
     `;
@@ -414,11 +414,11 @@ function mapPlayersToRows(players) {
       playerNameCell,
       p.minFormatted || "",
       parseInt(p.pts, 10) || 0,
-      p2a,
       p2m,
+      p2a,
       p2pValue.toFixed(1),
-      p3a,
       p3m,
+      p3a,
       p3pValue.toFixed(1),
       p1m,
       p1a,
@@ -455,16 +455,32 @@ function populateTable(tableId, teamData) {
 function addBoxScoreTotals(tableId, teamData) {
   const tbody = document.querySelector(`#${tableId} tbody`);
   if (!tbody) return;
-  // Inicializar un array de totales con la misma longitud de la fila (usamos la primera fila para contar columnas)
   const numCols = teamData[0].length;
   const totals = new Array(numCols).fill(0);
-  // Recorremos cada fila (cada jugador)
+  
+  // First pass: sum up all the raw numbers
   teamData.forEach(row => {
-    // Suponemos que las columnas numéricas empiezan en la columna 3 (índice 2) en adelante (ajusta según tu caso)
     for (let i = 2; i < numCols; i++) {
       totals[i] += parseFloat(row[i]) || 0;
     }
   });
+
+  // Calculate percentages correctly
+  // 2P% = (total 2PM / total 2PA) * 100
+  const total2PM = totals[4]; // 2PM column
+  const total2PA = totals[5]; // 2PA column
+  totals[6] = total2PA > 0 ? ((total2PM / total2PA) * 100).toFixed(1) : "0.0";
+
+  // 3P% = (total 3PM / total 3PA) * 100
+  const total3PM = totals[7]; // 3PM column
+  const total3PA = totals[8]; // 3PA column
+  totals[9] = total3PA > 0 ? ((total3PM / total3PA) * 100).toFixed(1) : "0.0";
+
+  // FT% = (total FTM / total FTA) * 100
+  const totalFTM = totals[10]; // FTM column
+  const totalFTA = totals[11]; // FTA column
+  totals[12] = totalFTA > 0 ? ((totalFTM / totalFTA) * 100).toFixed(1) : "0.0";
+  
   // Deja vacías o fija las dos primeras columnas (número y nombre)
   totals[0] = "";
   totals[1] = "TOTAL";

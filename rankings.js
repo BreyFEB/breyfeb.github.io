@@ -581,7 +581,7 @@ function toggleMatchDetails(cell, player) {
     detailsRow.className = "details-row";
     
     const detailsCell = document.createElement("td");
-    detailsCell.colSpan = 28;
+    detailsCell.colSpan = 29;
     
     const detailsTable = document.createElement("table");
     detailsTable.className = "match-details-table";
@@ -604,13 +604,15 @@ function toggleMatchDetails(cell, player) {
       tp: Math.max(...player.matches.map(m => m.tp)),
       fc: Math.max(...player.matches.map(m => m.fc)),
       va: Math.max(...player.matches.map(m => m.va)),
-      pm: Math.max(...player.matches.map(m => m.pm))
+      pm: Math.max(...player.matches.map(m => m.pm)),
+      imp: Math.max(...player.matches.map(m => parseFloat(((m.va + m.pm) / (parseInt(m.minutes.split(':')[0]) + (parseInt(m.minutes.split(':')[1]) / 60)) || 1)).toFixed(2)))
     };
     
     const thead = document.createElement("thead");
     thead.innerHTML = `
       <tr>
         <th data-sort="date">Fecha</th>
+        <th data-sort="competition">Competición</th>
         <th data-sort="rival">Rival</th>
         <th data-sort="resultado">Resultado</th>
         <th data-sort="min">MIN</th>
@@ -699,35 +701,37 @@ function toggleMatchDetails(cell, player) {
       
       // Calcular el impacto
       const minutes = parseInt(match.minutes.split(':')[0]);
-      const impact = minutes > 0 ? ((match.va + match.pm) / minutes).toFixed(2) : "0.00";
-      
+
+      // define impact variable
+      const impact = parseFloat(((match.va + match.pm) / (parseInt(match.minutes.split(':')[0]) + (parseInt(match.minutes.split(':')[1]) / 60)) || 1)).toFixed(2);
       const matchRow = document.createElement("tr");
       matchRow.innerHTML = `
         <td data-sort="date" data-value="${match.matchDate}">${match.matchDate}</td>
+        <td data-sort="competition" data-value="${match.competition}">${formatCompetitionName(match.competition)}</td>
         <td data-sort="rival" data-value="${rivalShort}" title="${rivalFull}">${rivalShort}</td>
-        <td data-sort="resultado" data-value="${match.resultado}">${resultadoStr}</td>
+        <td data-sort="resultado" data-value="${match.resultado}"><a href="ficha.html?gameId=${match.game_id}" title="Ver detalles del partido" style="text-decoration: none;">${resultadoStr}</a></td>
         <td data-sort="min" data-value="${minutesToSeconds(match.minutes)}">${match.minutes}</td>
-        <td data-sort="pts" data-value="${match.pts}" ${match.pts === maxValues.pts ? 'class="max-value"' : ''}>${match.pts}</td>
-        <td data-sort="t2c" data-value="${match.t2c}" ${match.t2c === maxValues.t2c ? 'class="max-value"' : ''}>${match.t2c}</td>
-        <td data-sort="t2i" data-value="${match.t2i}" ${match.t2i === maxValues.t2i ? 'class="max-value"' : ''}>${match.t2i}</td>
+        <td data-sort="pts" data-value="${match.pts}" ${match.pts === maxValues.pts && maxValues.pts > 0 ? 'class="max-value"' : ''}>${match.pts}</td>
+        <td data-sort="t2c" data-value="${match.t2c}" ${match.t2c === maxValues.t2c && maxValues.t2c > 0 ? 'class="max-value"' : ''}>${match.t2c}</td>
+        <td data-sort="t2i" data-value="${match.t2i}" ${match.t2i === maxValues.t2i && maxValues.t2i > 0 ? 'class="max-value"' : ''}>${match.t2i}</td>
         <td data-sort="pct2" data-value="${match.pct2}">${match.pct2}</td>
-        <td data-sort="t3c" data-value="${match.t3c}" ${match.t3c === maxValues.t3c ? 'class="max-value"' : ''}>${match.t3c}</td>
-        <td data-sort="t3i" data-value="${match.t3i}" ${match.t3i === maxValues.t3i ? 'class="max-value"' : ''}>${match.t3i}</td>
+        <td data-sort="t3c" data-value="${match.t3c}" ${match.t3c === maxValues.t3c && maxValues.t3c > 0 ? 'class="max-value"' : ''}>${match.t3c}</td>
+        <td data-sort="t3i" data-value="${match.t3i}" ${match.t3i === maxValues.t3i && maxValues.t3i > 0 ? 'class="max-value"' : ''}>${match.t3i}</td>
         <td data-sort="pct3" data-value="${match.pct3}">${match.pct3}</td>
-        <td data-sort="tlc" data-value="${match.tlc}" ${match.tlc === maxValues.tlc ? 'class="max-value"' : ''}>${match.tlc}</td>
-        <td data-sort="tli" data-value="${match.tli}" ${match.tli === maxValues.tli ? 'class="max-value"' : ''}>${match.tli}</td>
+        <td data-sort="tlc" data-value="${match.tlc}" ${match.tlc === maxValues.tlc && maxValues.tlc > 0 ? 'class="max-value"' : ''}>${match.tlc}</td>
+        <td data-sort="tli" data-value="${match.tli}" ${match.tli === maxValues.tli && maxValues.tli > 0 ? 'class="max-value"' : ''}>${match.tli}</td>
         <td data-sort="pctTl" data-value="${match.pctTl}">${match.pctTl}</td>
-        <td data-sort="ro" data-value="${match.ro}" ${match.ro === maxValues.ro ? 'class="max-value"' : ''}>${match.ro}</td>
-        <td data-sort="rd" data-value="${match.rd}" ${match.rd === maxValues.rd ? 'class="max-value"' : ''}>${match.rd}</td>
-        <td data-sort="rt" data-value="${match.rt}" ${match.rt === maxValues.rt ? 'class="max-value"' : ''}>${match.rt}</td>
-        <td data-sort="as" data-value="${match.as}" ${match.as === maxValues.as ? 'class="max-value"' : ''}>${match.as}</td>
-        <td data-sort="br" data-value="${match.br}" ${match.br === maxValues.br ? 'class="max-value"' : ''}>${match.br}</td>
-        <td data-sort="bp" data-value="${match.bp}" ${match.bp === maxValues.bp ? 'class="max-value"' : ''}>${match.bp}</td>
-        <td data-sort="tp" data-value="${match.tp}" ${match.tp === maxValues.tp ? 'class="max-value"' : ''}>${match.tp}</td>
-        <td data-sort="fc" data-value="${match.fc}" ${match.fc === maxValues.fc ? 'class="max-value"' : ''}>${match.fc}</td>
+        <td data-sort="ro" data-value="${match.ro}" ${match.ro === maxValues.ro && maxValues.ro > 0 ? 'class="max-value"' : ''}>${match.ro}</td>
+        <td data-sort="rd" data-value="${match.rd}" ${match.rd === maxValues.rd && maxValues.rd > 0 ? 'class="max-value"' : ''}>${match.rd}</td>
+        <td data-sort="rt" data-value="${match.rt}" ${match.rt === maxValues.rt && maxValues.rt > 0 ? 'class="max-value"' : ''}>${match.rt}</td>
+        <td data-sort="as" data-value="${match.as}" ${match.as === maxValues.as && maxValues.as > 0 ? 'class="max-value"' : ''}>${match.as}</td>
+        <td data-sort="br" data-value="${match.br}" ${match.br === maxValues.br && maxValues.br > 0 ? 'class="max-value"' : ''}>${match.br}</td>
+        <td data-sort="bp" data-value="${match.bp}" ${match.bp === maxValues.bp && maxValues.bp > 0 ? 'class="max-value"' : ''}>${match.bp}</td>
+        <td data-sort="tp" data-value="${match.tp}" ${match.tp === maxValues.tp && maxValues.tp > 0 ? 'class="max-value"' : ''}>${match.tp}</td>
+        <td data-sort="fc" data-value="${match.fc}" ${match.fc === maxValues.fc && maxValues.fc > 0 ? 'class="max-value"' : ''}>${match.fc}</td>
         <td data-sort="va" data-value="${match.va}" ${match.va === maxValues.va ? 'class="max-value"' : ''}>${match.va}</td>
         <td data-sort="pm" data-value="${match.pm}" ${match.pm === maxValues.pm ? 'class="max-value"' : ''}>${match.pm}</td>
-        <td data-sort="imp" data-value="${impact}">${impact}</td>
+        <td data-sort="imp" data-value="${impact}" ${parseFloat(impact) === maxValues.imp ? 'class="max-value"' : ''}>${impact}</td>
       `;
       tbody.appendChild(matchRow);
     });

@@ -944,15 +944,15 @@ async function loadStats() {
         <th data-sort="marcador">Resultado</th>
         <th data-sort="minutes">Min</th>
         <th data-sort="pts">PTS</th>
-        <th data-sort="t2i">T2I</th>
         <th data-sort="t2c">T2C</th>
+        <th data-sort="t2i">T2I</th>
         <th data-sort="t2pct">%T2</th>
-        <th data-sort="t3i">T3I</th>
         <th data-sort="t3c">T3C</th>
+        <th data-sort="t3i">T3I</th>
         <th data-sort="t3pct">%T3</th>
-        <th data-sort="tli">TLI</th>
         <th data-sort="tlc">TLC</th>
-        <th data-sort="t2pct">%TL</th>
+        <th data-sort="tli">TLI</th>
+        <th data-sort="tlpct">%TL</th>
         <th data-sort="ro">RO</th>
         <th data-sort="rd">RD</th>
         <th data-sort="rt">RT</th>
@@ -1025,14 +1025,14 @@ async function loadStats() {
         <td><a href="ficha.html?gameId=${gameId}" style="text-decoration: none;">${formatResult(match.marcador)}</a></td>
         <td>${match.minutes}</td>
         <td>${match.pts}</td>
-        <td>${match.t2i}</td>
         <td>${match.t2c}</td>
+        <td>${match.t2i}</td>
         <td>${t2pct}</td>
-        <td>${match.t3i}</td>
         <td>${match.t3c}</td>
+        <td>${match.t3i}</td>
         <td>${t3pct}</td>
-        <td>${match.tli}</td>
         <td>${match.tlc}</td>
+        <td>${match.tli}</td>
         <td>${tlpct}</td>
         <td>${match.ro}</td>
         <td>${match.rd}</td>
@@ -1256,14 +1256,14 @@ async function loadStats() {
       <td colspan="3">TOTAL</td>
       <td>${formatMinutes(totals.min)}</td>
       <td>${totals.pts}</td>
-      <td>${totals.t2i}</td>
       <td>${totals.t2c}</td>
+      <td>${totals.t2i}</td>
       <td>${totalT2Pct}</td>
-      <td>${totals.t3i}</td>
       <td>${totals.t3c}</td>
+      <td>${totals.t3i}</td>
       <td>${totalT3Pct}</td>
-      <td>${totals.tli}</td>
       <td>${totals.tlc}</td>
+      <td>${totals.tli}</td>
       <td>${totalTLPct}</td>
       <td>${totals.ro}</td>
       <td>${totals.rd}</td>
@@ -1307,14 +1307,14 @@ async function loadStats() {
       <td colspan="3">PROMEDIO</td>
       <td>${formatMinutes(averages.min)}</td>
       <td>${averages.pts}</td>
-      <td>${averages.t2i}</td>
       <td>${averages.t2c}</td>
+      <td>${averages.t2i}</td>
       <td>${totalT2Pct}</td>
-      <td>${averages.t3i}</td>
       <td>${averages.t3c}</td>
+      <td>${averages.t3i}</td>
       <td>${totalT3Pct}</td>
-      <td>${averages.tli}</td>
       <td>${averages.tlc}</td>
+      <td>${averages.tli}</td>
       <td>${totalTLPct}</td>
       <td>${averages.ro}</td>
       <td>${averages.rd}</td>
@@ -1626,11 +1626,11 @@ function createTotalsRow(obj, label) {
     <td>${label}</td>
     <td>${obj.min.toFixed(0)}</td>
     <td>${obj.pts.toFixed(0)}</td>
-    <td>${obj.t2i.toFixed(0)}</td>
     <td>${obj.t2c.toFixed(0)}</td>
+    <td>${obj.t2i.toFixed(0)}</td>
     <td>${t2pct}</td>
-    <td>${obj.t3i.toFixed(0)}</td>
     <td>${obj.t3c.toFixed(0)}</td>
+    <td>${obj.t3i.toFixed(0)}</td>
     <td>${t3pct}</td>
     <td>${obj.tlc.toFixed(0)}</td>
     <td>${obj.tli.toFixed(0)}</td>
@@ -1653,10 +1653,10 @@ function calculateTotals(rows) {
   rows.forEach(r => {
     sum.min += r.min;
     sum.pts += r.pts;
-    sum.t2i += r.t2i;
     sum.t2c += r.t2c;
-    sum.t3i += r.t3i;
+    sum.t2i += r.t2i;
     sum.t3c += r.t3c;
+    sum.t3i += r.t3i;
     sum.tlc += r.tlc;
     sum.tli += r.tli;
     sum.ro += r.ro;

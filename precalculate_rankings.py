@@ -19,7 +19,6 @@ def is_group_phase(match_round):
 
 def process_match_data(data, filename):
     players_map = {}
-    phase_records = {}  # New dictionary for phase-specific records
     competition_set = set()
     team_set = set()
     
@@ -40,6 +39,7 @@ def process_match_data(data, filename):
         "CE SSAA Cadete Fem.",
         "CE SSA Infantil Fem.",
         "C ESP CLUBES CAD FEM",
+        "C ESP CLUBES INF FEM",
         "Fase Final 1ª División Femenin"
     ]
     genero = "M" if any(f.lower() == comp.strip().lower() for f in female_competitions) else "H"
@@ -57,18 +57,14 @@ def process_match_data(data, filename):
         rival_name = rival_header.get('name', f'Equipo {rival_idx+1}')
         rival_points = int(rival_header.get('pts', 0))
         
-        current_phase = "Fase de Grupos" if is_group_phase(match_round) else "Playoffs"
-        
         # Process each player in the team
         for player in team.get('PLAYER', []):
             player_id = player.get('id', '')
             if not player_id:
                 continue
                 
-            # Create unique IDs for total and phase-specific stats
+            # Create unique ID for player
             total_id = f"{player_id}-{team_name}-{comp}"
-            group_phase_id = f"{player_id}-{team_name}-{comp}-grupos"
-            playoffs_id = f"{player_id}-{team_name}-{comp}-playoffs"
             
             # Initialize total record if it doesn't exist
             if total_id not in players_map:
@@ -79,8 +75,6 @@ def process_match_data(data, filename):
                     'playerName': player.get('name', 'Desconocido'),
                     'teamName': team_name,
                     'competition': comp,
-                    'round_': match_round,
-                    'phaseType': "",
                     'gender': genero,
                     'games': 0,
                     'seconds': 0,
@@ -104,44 +98,8 @@ def process_match_data(data, filename):
                     'matches': []
                 }
             
-            # Initialize phase record if it doesn't exist
-            phase_id = group_phase_id if current_phase == "Fase de Grupos" else playoffs_id
-            if phase_id not in phase_records:
-                phase_records[phase_id] = {
-                    'id': player_id,
-                    'dorsal': player.get('no', ''),
-                    'playerPhoto': player.get('logo', 'https://via.placeholder.com/50'),
-                    'playerName': player.get('name', 'Desconocido'),
-                    'teamName': team_name,
-                    'competition': comp,
-                    'round_': match_round,
-                    'phaseType': current_phase,
-                    'gender': genero,
-                    'games': 0,
-                    'seconds': 0,
-                    'pts': 0,
-                    't2i': 0,
-                    't2c': 0,
-                    't3i': 0,
-                    't3c': 0,
-                    'tli': 0,
-                    'tlc': 0,
-                    'ro': 0,
-                    'rd': 0,
-                    'rt': 0,
-                    'as': 0,
-                    'br': 0,
-                    'bp': 0,
-                    'tp': 0,
-                    'fc': 0,
-                    'va': 0,
-                    'pm': 0,
-                    'matches': []
-                }
-            
-            # Get current records
+            # Get current record
             total_record = players_map[total_id]
-            phase_record = phase_records[phase_id]
             
             # Process match statistics
             p2a = int(player.get('p2a', 0))
@@ -160,7 +118,7 @@ def process_match_data(data, filename):
             match_record = {
                 'matchDate': match_date,
                 'round_': match_round,
-                'phaseType': current_phase,
+                'competition': comp,
                 'rival': rival_name,
                 'rivalFull': rival_name,
                 'rivalShort': rival_name[:3].upper(),
@@ -192,38 +150,35 @@ def process_match_data(data, filename):
                 'game_id': game_id
             }
             
-            # Update both records
-            for record in [total_record, phase_record]:
-                record['games'] += 1
-                record['seconds'] += minutes_to_seconds(player.get('minFormatted', '0:00'))
-                record['pts'] += int(player.get('pts', 0))
-                record['t2i'] += p2a
-                record['t2c'] += p2m
-                record['t3i'] += p3a
-                record['t3c'] += p3m
-                record['tli'] += p1a
-                record['tlc'] += p1m
-                record['ro'] += int(player.get('ro', 0))
-                record['rd'] += int(player.get('rd', 0))
-                record['rt'] += int(player.get('rt', 0))
-                record['as'] += int(player.get('assist', 0))
-                record['br'] += int(player.get('st', 0))
-                record['bp'] += int(player.get('to', 0))
-                record['tp'] += int(player.get('bs', 0))
-                record['fc'] += int(player.get('pf', 0))
-                record['va'] += int(player.get('val', 0))
-                record['pm'] += int(player.get('pllss', 0))
-                record['matches'].append(match_record)
+            # Update record
+            total_record['games'] += 1
+            total_record['seconds'] += minutes_to_seconds(player.get('minFormatted', '0:00'))
+            total_record['pts'] += int(player.get('pts', 0))
+            total_record['t2i'] += p2a
+            total_record['t2c'] += p2m
+            total_record['t3i'] += p3a
+            total_record['t3c'] += p3m
+            total_record['tli'] += p1a
+            total_record['tlc'] += p1m
+            total_record['ro'] += int(player.get('ro', 0))
+            total_record['rd'] += int(player.get('rd', 0))
+            total_record['rt'] += int(player.get('rt', 0))
+            total_record['as'] += int(player.get('assist', 0))
+            total_record['br'] += int(player.get('st', 0))
+            total_record['bp'] += int(player.get('to', 0))
+            total_record['tp'] += int(player.get('bs', 0))
+            total_record['fc'] += int(player.get('pf', 0))
+            total_record['va'] += int(player.get('val', 0))
+            total_record['pm'] += int(player.get('pllss', 0))
+            total_record['matches'].append(match_record)
             
-            # Update percentages for both records
-            for record in [total_record, phase_record]:
-                record['pct2'] = round((record['t2c'] / record['t2i']) * 100, 1) if record['t2i'] > 0 else 0.0
-                record['pct3'] = round((record['t3c'] / record['t3i']) * 100, 1) if record['t3i'] > 0 else 0.0
-                record['pctTl'] = round((record['tlc'] / record['tli']) * 100, 1) if record['tli'] > 0 else 0.0
+            # Update percentages
+            total_record['pct2'] = round((total_record['t2c'] / total_record['t2i']) * 100, 1) if total_record['t2i'] > 0 else 0.0
+            total_record['pct3'] = round((total_record['t3c'] / total_record['t3i']) * 100, 1) if total_record['t3i'] > 0 else 0.0
+            total_record['pctTl'] = round((total_record['tlc'] / total_record['tli']) * 100, 1) if total_record['tli'] > 0 else 0.0
     
     return {
         'players': list(players_map.values()),
-        'phase_records': list(phase_records.values()),
         'competitions': list(competition_set),
         'teams': list(team_set)
     }
@@ -234,7 +189,6 @@ def main():
     
     # Use dictionaries to store unique records
     all_players = {}
-    all_phase_records = {}
     all_competitions = set()
     all_teams = set()
     
@@ -276,35 +230,6 @@ def main():
                             existing['pm'] += player['pm']
                             existing['matches'].extend(player['matches'])
                     
-                    # Update phase records
-                    for player in stats['phase_records']:
-                        player_id = f"{player['id']}-{player['teamName']}-{player['competition']}"
-                        if player_id not in all_phase_records:
-                            all_phase_records[player_id] = player
-                        else:
-                            # Update existing record
-                            existing = all_phase_records[player_id]
-                            existing['games'] += player['games']
-                            existing['seconds'] += player['seconds']
-                            existing['pts'] += player['pts']
-                            existing['t2i'] += player['t2i']
-                            existing['t2c'] += player['t2c']
-                            existing['t3i'] += player['t3i']
-                            existing['t3c'] += player['t3c']
-                            existing['tli'] += player['tli']
-                            existing['tlc'] += player['tlc']
-                            existing['ro'] += player['ro']
-                            existing['rd'] += player['rd']
-                            existing['rt'] += player['rt']
-                            existing['as'] += player['as']
-                            existing['br'] += player['br']
-                            existing['bp'] += player['bp']
-                            existing['tp'] += player['tp']
-                            existing['fc'] += player['fc']
-                            existing['va'] += player['va']
-                            existing['pm'] += player['pm']
-                            existing['matches'].extend(player['matches'])
-                    
                     all_competitions.update(stats['competitions'])
                     all_teams.update(stats['teams'])
             except Exception as e:
@@ -313,7 +238,6 @@ def main():
     # Convert dictionaries to lists for JSON serialization
     all_stats = {
         'players': list(all_players.values()),
-        'phase_records': list(all_phase_records.values()),
         'competitions': list(all_competitions),
         'teams': list(all_teams)
     }
@@ -325,7 +249,6 @@ def main():
     
     print(f"Precalculated stats saved to {output_file}")
     print(f"Processed {len(all_stats['players'])} total player records")
-    print(f"Processed {len(all_stats['phase_records'])} phase-specific records")
     print(f"Found {len(all_stats['competitions'])} competitions")
     print(f"Found {len(all_stats['teams'])} teams")
 
