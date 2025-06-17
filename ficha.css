@@ -399,6 +399,12 @@ table tbody td:hover {
   font-weight: bold;
   font-size: 1.1em;
 }
+.total-row:hover {
+  background-color: #111C4E;
+}
+.total-row td:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
 .player-cell {
   display: flex;
   align-items: center;

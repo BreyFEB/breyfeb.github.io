@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estadísticas de Quintetos</title>
+  <link rel="stylesheet" href="barsa_lineups.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Estadísticas de Quintetos</h1>
+        
+        
+
+        <div class="tabs">
+            <button class="tab-button active" data-lineup="five">5 Jugadores</button>
+            <button class="tab-button" data-lineup="four">4 Jugadores</button>
+            <button class="tab-button" data-lineup="three">3 Jugadores</button>
+            <button class="tab-button" data-lineup="two">2 Jugadores</button>
+        </div>
+
+        <div class="filter-section player-filter-section collapsible">
+            <div class="collapsible-header">
+                <h3>Filtrar por jugadores en pista</h3>
+                <span class="collapse-icon">▼</span>
+            </div>
+            <div class="collapsible-content">
+                <div class="player-checkboxes" id="playerCheckboxes">
+                    <!-- Player checkboxes will be added here dynamically -->
+                </div>
+                <span class="filter-info" id="playerFilterInfo"></span>
+            </div>
+        </div>
+        <div class="filter-section player-filter-section collapsible">
+            <div class="collapsible-header">
+                <h3>Filtrar por jugadores fuera de pista</h3>
+                <span class="collapse-icon">▼</span>
+            </div>
+            <div class="collapsible-content">
+                <div class="player-checkboxes" id="playerOffCheckboxes">
+                    <!-- Player checkboxes will be added here dynamically -->
+                </div>
+                <span class="filter-info" id="playerOffFilterInfo"></span>
+            </div>
+        </div>
+
+        <div class="stats-toggle">
+            <label class="switch">
+                <input type="checkbox" id="per100Toggle">
+                <span class="slider round"></span>
+            </label>
+            <span class="toggle-label">Mostrar estadísticas por 100 posesiones</span>
+        </div>
+
+        <div class="column-selector">
+            <div class="dropdown">
+                <button class="dropdown-button">Columnas visibles</button>
+                <div class="dropdown-content">
+                    <div class="dropdown-actions">
+                        <button class="action-button" id="selectAllColumns">Seleccionar todo</button>
+                        <button class="action-button" id="deselectAllColumns">Deseleccionar todo</button>
+                    </div>
+                    <div class="column-checkboxes">
+                        <div class="column-group">
+                            <h4>Puntos</h4>
+                            <div class="checkbox-row">
+                                <label><input type="checkbox" data-column="PTS" checked> PTS</label>
+                                <label><input type="checkbox" data-column="PTSC" checked> PTSC</label>
+                            </div>
+                        </div>
+                        <div class="column-group">
+                            <h4>Tiros</h4>
+                            <div class="checkbox-row">
+                                <label><input type="checkbox" data-column="T2I" checked> T2I</label>
+                                <label><input type="checkbox" data-column="T2C" checked> T2C</label>
+                                <label><input type="checkbox" data-column="T3I" checked> T3I</label>
+                                <label><input type="checkbox" data-column="T3C" checked> T3C</label>
+                                <label><input type="checkbox" data-column="T1I" checked> T1I</label>
+                                <label><input type="checkbox" data-column="T1C" checked> T1C</label>
+                            </div>
+                        </div>
+                        <div class="column-group">
+                            <h4>Otros</h4>
+                            <div class="checkbox-row">
+                                <label><input type="checkbox" data-column="AST" checked> AST</label>
+                                <label><input type="checkbox" data-column="REB" checked> REB</label>
+                                <label><input type="checkbox" data-column="REBD" checked> REBD</label>
+                                <label><input type="checkbox" data-column="REBO" checked> REBO</label>
+                                <label><input type="checkbox" data-column="PER" checked> PER</label>
+                                <label><input type="checkbox" data-column="ROB" checked> ROB</label>
+                                <label><input type="checkbox" data-column="TAP" checked> TAP</label>
+                                <label><input type="checkbox" data-column="TAPC" checked> TAPC</label>
+                                <label><input type="checkbox" data-column="FC" checked> FC</label>
+                                <label><input type="checkbox" data-column="FR" checked> FR</label>
+                                <label><input type="checkbox" data-column="+/-" checked> +/-</label>
+                                <label><input type="checkbox" data-column="Posesiones" checked> Posesiones</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="possession-filter-section">
+            <h3>Filtrar por Posesiones</h3>
+            <div class="possession-filter">
+                <div class="range-inputs">
+                    <div class="range-input">
+                        <label for="minPossessions">Mín:</label>
+                        <input type="number" id="minPossessions" min="0" step="1" placeholder="Min">
+                    </div>
+                    <div class="range-input">
+                        <label for="maxPossessions">Máx:</label>
+                        <input type="number" id="maxPossessions" min="0" step="1" placeholder="Max">
+                    </div>
+                </div>
+                <button id="resetPossessions" class="reset-button">Resetear</button>
+            </div>
+        </div>
+
+        
+    </div>
+    <div class="table-container">
+            <div class="scroll-arrows">
+                <button class="scroll-arrow left" id="scrollLeft">◀</button>
+                <button class="scroll-arrow right" id="scrollRight">▶</button>
+            </div>
+            <div class="table-scroll-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Jugadores en pista</th>
+                            <th>PTS</th>
+                            <th>PTSC</th>
+                            <th>T2I</th>
+                            <th>T2C</th>
+                            <th>T3I</th>
+                            <th>T3C</th>
+                            <th>T1I</th>
+                            <th>T1C</th>
+                            <th>AST</th>
+                            <th>REB</th>
+                            <th>REBD</th>
+                            <th>REBO</th>
+                            <th>PER</th>
+                            <th>ROB</th>
+                            <th>TAP</th>
+                            <th>TAPC</th>
+                            <th>FC</th>
+                            <th>FR</th>
+                            <th>+/-</th>
+                            <th>Posesiones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody"></tbody>
+                </table>
+            </div>
+        </div>
+    <div class="modal" id="errorModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>¡Uy!</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p id="modalMessage"></p>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-button" id="modalCloseButton">Aceptar</button>
+            </div>
+        </div>
+    </div>
+  <script src="barsa_lineups.js"></script>
+</body>
+</html> 
