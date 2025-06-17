@@ -29,7 +29,7 @@
               <span>Inicio</span>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item active">
             <a href="partidos.html">
               <img src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/basketball-outline.svg" alt="Icono Partidos">
               <span>Partidos</span>
@@ -171,14 +171,51 @@
   <!-- NAV SECUNDARIA (tabs) -->
   <nav class="match-tabs" id="matchTabs">
     <ul>
-      <li><a href="#overview" class="tab-link active">Resumen</a></li>
-      <li><a href="#stats" class="tab-link">Estadísticas</a></li>
-      <li><a href="#playbyplay" class="tab-link">Play by Play</a></li>
-      <li><a href="#quarter-summary" class="tab-link">Cuadro Resumen</a></li>
-      <li><a href="#comparisons" class="tab-link">Comparativas</a></li>
-      <li><a href="#photos" class="tab-link">Fotos</a></li>
-      <li><a href="#videos" class="tab-link">Videos</a></li>
-      <li><a href="#news" class="tab-link">Noticias</a></li>
+      <li><a href="#overview" class="tab-link active">
+        <!-- Newspaper Icon for Resumen -->
+        <svg class="tab-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+          <rect x="3" y="4" width="18" height="16" rx="2"/>
+          <line x1="7" y1="8" x2="17" y2="8"/>
+          <line x1="7" y1="12" x2="17" y2="12"/>
+          <line x1="7" y1="16" x2="13" y2="16"/>
+        </svg>
+        <span>Resumen</span>
+      </a></li>
+      <li><a href="#stats" class="tab-link">
+        <!-- Table/Stats Icon -->
+        <svg class="tab-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18m6-18v18"/></svg>
+        <span>Estadísticas</span>
+      </a></li>
+      <li><a href="#playbyplay" class="tab-link">
+        <!-- Play Arrow/Timeline Icon -->
+        <svg class="tab-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        <span>Play by Play</span>
+      </a></li>
+      <li><a href="#quarter-summary" class="tab-link">
+        <!-- Grid/Summary Icon -->
+        <svg class="tab-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        <span>Cuadro Resumen</span>
+      </a></li>
+      <li><a href="#comparisons" class="tab-link">
+        <!-- Bar Chart/Comparison Icon -->
+        <svg class="tab-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
+        <span>Comparativas</span>
+      </a></li>
+      <li><a href="#photos" class="tab-link">
+        <!-- Image/Photo Icon -->
+        <svg class="tab-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        <span>Fotos</span>
+      </a></li>
+      <li><a href="#videos" class="tab-link">
+        <!-- Video Camera Icon -->
+        <svg class="tab-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+        <span>Videos</span>
+      </a></li>
+      <li><a href="#news" class="tab-link">
+        <!-- Newspaper/News Icon (same as player profile) -->
+        <svg class="tab-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M21 5H3a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2z"/><path d="M12 15V7"/><path d="M12 15h5"/><path d="M7 15h-2"/><path d="M7 12h-2"/><path d="M7 9h-2"/></svg>
+        <span>Noticias</span>
+      </a></li>
     </ul>
   </nav>
 

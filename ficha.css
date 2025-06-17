@@ -287,6 +287,9 @@ body {
   justify-content: center;
 }
 .match-tabs a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   color: #fff;
   font-weight: bold;
   text-decoration: none;
@@ -301,6 +304,14 @@ body {
   background-color: #FF9E1B;
   color: #111C4E;
   border-radius: 4px;
+}
+
+.match-tabs .tab-icon {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
 }
 
 /***********************************************
