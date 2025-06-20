@@ -40,6 +40,7 @@ def process_match_data(data, filename):
         "CE SSA Infantil Fem.",
         "C ESP CLUBES CAD FEM",
         "C ESP CLUBES INF FEM",
+        "C ESP CLUBES MINI FEM",
         "Fase Final 1ª División Femenin"
     ]
     genero = "M" if any(f.lower() == comp.strip().lower() for f in female_competitions) else "H"
@@ -74,6 +75,8 @@ def process_match_data(data, filename):
                     'playerPhoto': player.get('logo', 'https://via.placeholder.com/50'),
                     'playerName': player.get('name', 'Desconocido'),
                     'teamName': team_name,
+                    'teamId': team_header.get('id', ''),
+                    'teamLogo': team_header.get('logo', 'https://via.placeholder.com/50'),
                     'competition': comp,
                     'gender': genero,
                     'games': 0,
@@ -147,7 +150,9 @@ def process_match_data(data, filename):
                 'rivalPoints': rival_points,
                 'resultado': 'G' if team_points > rival_points else 'P',
                 'marcador': f"{team_points}-{rival_points}",
-                'game_id': game_id
+                'game_id': game_id,
+                'playerTeamId': team_header.get('id', ''),
+                'rivalTeamId': rival_header.get('id', '')
             }
             
             # Update record
@@ -241,6 +246,16 @@ def main():
         'competitions': list(all_competitions),
         'teams': list(all_teams)
     }
+
+    # After all players processed, add teamId_2, teamId_3, ... if needed
+    for player_ in all_stats['players']:
+        unique_team_ids = list({m.get('playerTeamId') for m in player_['matches']})
+        if len(unique_team_ids) > 1:
+            print(player_['playerName'], unique_team_ids)
+            for idx, tid in enumerate(unique_team_ids, start=1):
+                if tid != player_['teamId']:
+                    print(f"Adding teamId_{idx} {tid} for {player_['playerName']}")
+                    player_[f'teamId_{idx}'] = tid
     
     # Save the precalculated stats
     output_file = 'rankings_stats.json'
@@ -254,3 +269,4 @@ def main():
 
 if __name__ == "__main__":
     main() 
+
