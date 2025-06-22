@@ -11,7 +11,7 @@
                 "id": "256",
                 "name": "CE Clubes Mini Fem",
                 "gamescount": 48,
-                "nowplaying": 2,
+                "nowplaying": 0,
                 "order": 23,
                 "GAMES": [
                     {
@@ -355,38 +355,12 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=969525&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=969651&ti=1",
-                        "Quarter": 5,
-                        "Time": "00:32:00",
-                        "Status": 2,
+                        "Quarter": 0,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [
-                            {
-                                "n": "1",
-                                "scoreA": "2",
-                                "scoreB": "30"
-                            },
-                            {
-                                "n": "2",
-                                "scoreA": "7",
-                                "scoreB": "20"
-                            },
-                            {
-                                "n": "3",
-                                "scoreA": "9",
-                                "scoreB": "12"
-                            },
-                            {
-                                "n": "4",
-                                "scoreA": "0",
-                                "scoreB": "6"
-                            },
-                            {
-                                "n": "5",
-                                "scoreA": "0",
-                                "scoreB": "0"
-                            }
-                        ],
+                        "Quarters": [],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -402,14 +376,14 @@
                         "Place": "POLIDEPORTIVO MUNICIPAL ELOLA 2",
                         "TeamAID": 969205,
                         "TeamA": "MOVISTAR ESTUDIANTES \"JUANA\"",
-                        "ScoreA": 40,
+                        "ScoreA": 44,
                         "TeamACode": "28000170",
                         "TeamAClubCode": "280001",
                         "TeamBID": 958186,
                         "TeamB": "BARÇA CBS",
                         "TeamBCode": "08004222",
                         "TeamBClubCode": "080042",
-                        "ScoreB": 53,
+                        "ScoreB": 65,
                         "StartTime": "2025-06-22T17:00:00",
                         "StartTimeUTC": "2025-06-22T15:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -417,42 +391,11 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=969205&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=958186&ti=1",
                         "Quarter": 6,
-                        "Time": "00:45:35",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [
-                            {
-                                "n": "1",
-                                "scoreA": "3",
-                                "scoreB": "6"
-                            },
-                            {
-                                "n": "2",
-                                "scoreA": "9",
-                                "scoreB": "8"
-                            },
-                            {
-                                "n": "3",
-                                "scoreA": "9",
-                                "scoreB": "8"
-                            },
-                            {
-                                "n": "4",
-                                "scoreA": "6",
-                                "scoreB": "8"
-                            },
-                            {
-                                "n": "5",
-                                "scoreA": "5",
-                                "scoreB": "9"
-                            },
-                            {
-                                "n": "6",
-                                "scoreA": "8",
-                                "scoreB": "14"
-                            }
-                        ],
+                        "Quarters": [],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -1757,7 +1700,7 @@
                 "id": "257",
                 "name": "CE Clubes Mini Masc",
                 "gamescount": 48,
-                "nowplaying": 0,
+                "nowplaying": 4,
                 "order": 24,
                 "GAMES": [
                     {
@@ -2046,32 +1989,43 @@
                         "Competition": "C ESP CLUBES MINI MASC",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2472105,
                         "GameCode": null,
                         "Place": "PALACIO DE DEPORTES VISTALEGRE",
                         "TeamAID": 962259,
                         "TeamA": "SINGIEVALUE BBCA",
-                        "ScoreA": 0,
+                        "ScoreA": 16,
                         "TeamACode": "15028607",
                         "TeamAClubCode": "150286",
                         "TeamBID": 970253,
                         "TeamB": "BASKET SANTA CRUZ",
                         "TeamBCode": "38029087",
                         "TeamBClubCode": "380290",
-                        "ScoreB": 0,
+                        "ScoreB": 21,
                         "StartTime": "2025-06-22T18:30:00",
                         "StartTimeUTC": "2025-06-22T16:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=962259&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=970253&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 2,
+                        "Time": "00:08:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "16",
+                                "scoreB": "21"
+                            },
+                            {
+                                "n": "2",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -2081,32 +2035,38 @@
                         "Competition": "C ESP CLUBES MINI MASC",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2472070,
                         "GameCode": null,
                         "Place": "INSTALACIONES DEPORTIVAS EL NARANJO",
                         "TeamAID": 978958,
                         "TeamA": "SAN PABLO BURGOS AZUL",
-                        "ScoreA": 0,
+                        "ScoreA": 6,
                         "TeamACode": "09018406",
                         "TeamAClubCode": "090184",
                         "TeamBID": 955247,
                         "TeamB": "BARÇA",
                         "TeamBCode": "08000309",
                         "TeamBClubCode": "080003",
-                        "ScoreB": 0,
+                        "ScoreB": 22,
                         "StartTime": "2025-06-22T18:30:00",
                         "StartTimeUTC": "2025-06-22T16:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=978958&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=955247&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:07:33",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "6",
+                                "scoreB": "22"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -2116,32 +2076,43 @@
                         "Competition": "C ESP CLUBES MINI MASC",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2472088,
                         "GameCode": null,
                         "Place": "COLEGIO VIRGEN DEL CARMEN",
                         "TeamAID": 952102,
                         "TeamA": "SESE A",
-                        "ScoreA": 0,
+                        "ScoreA": 14,
                         "TeamACode": "08005611",
                         "TeamAClubCode": "080056",
                         "TeamBID": 953003,
                         "TeamB": "VALENCIA BASKET NARANJA",
                         "TeamBCode": "46000201",
                         "TeamBClubCode": "460002",
-                        "ScoreB": 0,
+                        "ScoreB": 18,
                         "StartTime": "2025-06-22T18:30:00",
                         "StartTimeUTC": "2025-06-22T16:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=952102&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=953003&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 2,
+                        "Time": "00:08:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "14",
+                                "scoreB": "18"
+                            },
+                            {
+                                "n": "2",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -2151,32 +2122,38 @@
                         "Competition": "C ESP CLUBES MINI MASC",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2472099,
                         "GameCode": null,
                         "Place": "PABELLÓN IDM FIDIANA",
                         "TeamAID": 958212,
                         "TeamA": "FORMASPACK-TVGA",
-                        "ScoreA": 0,
+                        "ScoreA": 23,
                         "TeamACode": "39009619",
                         "TeamAClubCode": "390096",
                         "TeamBID": 970769,
                         "TeamB": "EBG MÁLAGA FUNDACIÓN UNICAJA ",
                         "TeamBCode": "29021588",
                         "TeamBClubCode": "290215",
-                        "ScoreB": 0,
+                        "ScoreB": 10,
                         "StartTime": "2025-06-22T18:30:00",
                         "StartTimeUTC": "2025-06-22T16:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=958212&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=970769&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:06:38",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "23",
+                                "scoreB": "10"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
