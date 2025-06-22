@@ -2135,7 +2135,7 @@
                         "Place": "COLEGIO VIRGEN DEL CARMEN",
                         "TeamAID": 966802,
                         "TeamA": "EMB CANDELARIA",
-                        "ScoreA": 84,
+                        "ScoreA": 90,
                         "TeamACode": "38025555",
                         "TeamAClubCode": "380255",
                         "TeamBID": 969334,
@@ -2150,7 +2150,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=966802&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=969334&ti=1",
                         "Quarter": 4,
-                        "Time": "00:28:58",
+                        "Time": "00:30:31",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -2172,7 +2172,7 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "17",
+                                "scoreA": "23",
                                 "scoreB": "8"
                             }
                         ],
@@ -2247,22 +2247,22 @@
                         "Place": "INSTALACIONES DEPORTIVAS EL NARANJO",
                         "TeamAID": 965224,
                         "TeamA": "13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA",
-                        "ScoreA": 44,
+                        "ScoreA": 61,
                         "TeamACode": "14403171",
                         "TeamAClubCode": "144031",
                         "TeamBID": 964972,
                         "TeamB": "MOVISTAR ESTUDIANTES \"SOLA\"",
                         "TeamBCode": "28000131",
                         "TeamBClubCode": "280001",
-                        "ScoreB": 72,
+                        "ScoreB": 92,
                         "StartTime": "2025-06-22T20:30:00",
                         "StartTimeUTC": "2025-06-22T18:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=965224&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=964972&ti=1",
-                        "Quarter": 4,
-                        "Time": "00:27:23",
+                        "Quarter": 5,
+                        "Time": "00:33:55",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -2284,8 +2284,13 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "5",
-                                "scoreB": "9"
+                                "scoreA": "18",
+                                "scoreB": "25"
+                            },
+                            {
+                                "n": "5",
+                                "scoreA": "4",
+                                "scoreB": "4"
                             }
                         ],
                         "Season": null,
@@ -2303,14 +2308,14 @@
                         "Place": "PABELLÓN IDM FIDIANA",
                         "TeamAID": 970570,
                         "TeamA": "A.D. MANUEL PELETEIRO",
-                        "ScoreA": 25,
+                        "ScoreA": 27,
                         "TeamACode": "15000411",
                         "TeamAClubCode": "150004",
                         "TeamBID": 963894,
                         "TeamB": "EM EL OLIVAR A1",
                         "TeamBCode": "50000700",
                         "TeamBClubCode": "500007",
-                        "ScoreB": 66,
+                        "ScoreB": 77,
                         "StartTime": "2025-06-22T20:30:00",
                         "StartTimeUTC": "2025-06-22T18:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -2318,7 +2323,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=970570&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=963894&ti=1",
                         "Quarter": 4,
-                        "Time": "00:24:00",
+                        "Time": "00:28:20",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -2340,8 +2345,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "2",
+                                "scoreB": "11"
                             }
                         ],
                         "Season": null,
