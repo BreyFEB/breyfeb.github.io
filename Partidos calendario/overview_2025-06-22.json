@@ -11,7 +11,7 @@
                 "id": "256",
                 "name": "CE Clubes Mini Fem",
                 "gamescount": 48,
-                "nowplaying": 4,
+                "nowplaying": 0,
                 "order": 23,
                 "GAMES": [
                     {
@@ -41,42 +41,11 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=973454&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=955269&ti=1",
                         "Quarter": 6,
-                        "Time": "00:47:14",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [
-                            {
-                                "n": "1",
-                                "scoreA": "13",
-                                "scoreB": "17"
-                            },
-                            {
-                                "n": "2",
-                                "scoreA": "2",
-                                "scoreB": "13"
-                            },
-                            {
-                                "n": "3",
-                                "scoreA": "9",
-                                "scoreB": "14"
-                            },
-                            {
-                                "n": "4",
-                                "scoreA": "8",
-                                "scoreB": "10"
-                            },
-                            {
-                                "n": "5",
-                                "scoreA": "1",
-                                "scoreB": "8"
-                            },
-                            {
-                                "n": "6",
-                                "scoreA": "11",
-                                "scoreB": "12"
-                            }
-                        ],
+                        "Quarters": [],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -99,7 +68,7 @@
                         "TeamB": "MG CYASA FODEBA GIJON ",
                         "TeamBCode": "33027317",
                         "TeamBClubCode": "330273",
-                        "ScoreB": 48,
+                        "ScoreB": 51,
                         "StartTime": "2025-06-22T10:00:00",
                         "StartTimeUTC": "2025-06-22T08:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -107,42 +76,11 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=959737&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=959371&ti=1",
                         "Quarter": 6,
-                        "Time": "00:47:11",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [
-                            {
-                                "n": "1",
-                                "scoreA": "5",
-                                "scoreB": "7"
-                            },
-                            {
-                                "n": "2",
-                                "scoreA": "5",
-                                "scoreB": "0"
-                            },
-                            {
-                                "n": "3",
-                                "scoreA": "17",
-                                "scoreB": "17"
-                            },
-                            {
-                                "n": "4",
-                                "scoreA": "6",
-                                "scoreB": "8"
-                            },
-                            {
-                                "n": "5",
-                                "scoreA": "19",
-                                "scoreB": "5"
-                            },
-                            {
-                                "n": "6",
-                                "scoreA": "20",
-                                "scoreB": "11"
-                            }
-                        ],
+                        "Quarters": [],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -172,33 +110,12 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=970804&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=955798&ti=1",
-                        "Quarter": 4,
-                        "Time": "00:29:45",
-                        "Status": 2,
+                        "Quarter": 0,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [
-                            {
-                                "n": "1",
-                                "scoreA": "2",
-                                "scoreB": "29"
-                            },
-                            {
-                                "n": "2",
-                                "scoreA": "10",
-                                "scoreB": "17"
-                            },
-                            {
-                                "n": "3",
-                                "scoreA": "11",
-                                "scoreB": "17"
-                            },
-                            {
-                                "n": "4",
-                                "scoreA": "6",
-                                "scoreB": "16"
-                            }
-                        ],
+                        "Quarters": [],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -221,50 +138,19 @@
                         "TeamB": "FUNDAL ALCOBENDAS \"A\"",
                         "TeamBCode": "28021951",
                         "TeamBClubCode": "280219",
-                        "ScoreB": 106,
+                        "ScoreB": 110,
                         "StartTime": "2025-06-22T10:00:00",
                         "StartTimeUTC": "2025-06-22T08:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=970225&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=962458&ti=1",
-                        "Quarter": 6,
-                        "Time": "00:45:03",
-                        "Status": 2,
+                        "Quarter": 0,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [
-                            {
-                                "n": "1",
-                                "scoreA": "8",
-                                "scoreB": "21"
-                            },
-                            {
-                                "n": "2",
-                                "scoreA": "2",
-                                "scoreB": "14"
-                            },
-                            {
-                                "n": "3",
-                                "scoreA": "8",
-                                "scoreB": "24"
-                            },
-                            {
-                                "n": "4",
-                                "scoreA": "20",
-                                "scoreB": "13"
-                            },
-                            {
-                                "n": "5",
-                                "scoreA": "17",
-                                "scoreB": "22"
-                            },
-                            {
-                                "n": "6",
-                                "scoreA": "4",
-                                "scoreB": "12"
-                            }
-                        ],
+                        "Quarters": [],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -1814,7 +1700,7 @@
                 "id": "257",
                 "name": "CE Clubes Mini Masc",
                 "gamescount": 48,
-                "nowplaying": 0,
+                "nowplaying": 4,
                 "order": 24,
                 "GAMES": [
                     {
@@ -1963,32 +1849,43 @@
                         "Competition": "C ESP CLUBES MINI MASC",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2472111,
                         "GameCode": null,
                         "Place": "INSTALACIONES DEPORTIVAS EL NARANJO",
                         "TeamAID": 966511,
                         "TeamA": "JOVENT A J.PALLISER",
-                        "ScoreA": 0,
+                        "ScoreA": 9,
                         "TeamACode": "07012650",
                         "TeamAClubCode": "070126",
                         "TeamBID": 977136,
                         "TeamB": "SOTILLO MASCULINO ",
                         "TeamBCode": "26006401",
                         "TeamBClubCode": "260064",
-                        "ScoreB": 0,
+                        "ScoreB": 19,
                         "StartTime": "2025-06-22T11:30:00",
                         "StartTimeUTC": "2025-06-22T09:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=966511&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=977136&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 2,
+                        "Time": "00:08:02",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "9",
+                                "scoreB": "17"
+                            },
+                            {
+                                "n": "2",
+                                "scoreA": "0",
+                                "scoreB": "2"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -1998,32 +1895,43 @@
                         "Competition": "C ESP CLUBES MINI MASC",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2472076,
                         "GameCode": null,
                         "Place": "PALACIO DE DEPORTES VISTALEGRE",
                         "TeamAID": 956571,
                         "TeamA": "IBERCARGAS GODELLA",
-                        "ScoreA": 0,
+                        "ScoreA": 9,
                         "TeamACode": "46049517",
                         "TeamAClubCode": "460495",
                         "TeamBID": 951906,
                         "TeamB": "JOVENTUT BADALONA  A",
                         "TeamBCode": "08000516",
                         "TeamBClubCode": "080005",
-                        "ScoreB": 0,
+                        "ScoreB": 18,
                         "StartTime": "2025-06-22T11:30:00",
                         "StartTimeUTC": "2025-06-22T09:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=956571&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951906&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 2,
+                        "Time": "00:08:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "9",
+                                "scoreB": "18"
+                            },
+                            {
+                                "n": "2",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -2033,32 +1941,38 @@
                         "Competition": "C ESP CLUBES MINI MASC",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2472094,
                         "GameCode": null,
                         "Place": "PABELLÓN IDM FIDIANA",
                         "TeamAID": 972300,
                         "TeamA": "ADEMAR MERCURY",
-                        "ScoreA": 0,
+                        "ScoreA": 13,
                         "TeamACode": "31018105",
                         "TeamAClubCode": "310181",
                         "TeamBID": 964733,
                         "TeamB": "RENAUTO HOZONO   JAIRIS ",
                         "TeamBCode": "30000809",
                         "TeamBClubCode": "300008",
-                        "ScoreB": 0,
+                        "ScoreB": 13,
                         "StartTime": "2025-06-22T11:30:00",
                         "StartTimeUTC": "2025-06-22T09:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=972300&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=964733&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:07:19",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "13",
+                                "scoreB": "13"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -2068,32 +1982,38 @@
                         "Competition": "C ESP CLUBES MINI MASC",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2472082,
                         "GameCode": null,
                         "Place": "COLEGIO VIRGEN DEL CARMEN",
                         "TeamAID": 961889,
                         "TeamA": "CB RIA DE RIBADEO",
-                        "ScoreA": 0,
+                        "ScoreA": 2,
                         "TeamACode": "27007105",
                         "TeamAClubCode": "270071",
                         "TeamBID": 972881,
                         "TeamB": "MAR DE GAMBAS CB PUERTO REAL",
                         "TeamBCode": "11001420",
                         "TeamBClubCode": "110014",
-                        "ScoreB": 0,
+                        "ScoreB": 3,
                         "StartTime": "2025-06-22T11:30:00",
                         "StartTimeUTC": "2025-06-22T09:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=961889&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=972881&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:01:15",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "2",
+                                "scoreB": "3"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
