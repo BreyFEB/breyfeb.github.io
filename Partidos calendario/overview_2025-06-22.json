@@ -26,14 +26,14 @@
                         "Place": "POLIDEPORTIVO MUNICIPAL EL LIMÓN",
                         "TeamAID": 973454,
                         "TeamA": "HELEN DORON AGUSTINAS BASKET",
-                        "ScoreA": 24,
+                        "ScoreA": 30,
                         "TeamACode": "26008500",
                         "TeamAClubCode": "260085",
                         "TeamBID": 955269,
                         "TeamB": "BASKET ALMEDA 1",
                         "TeamBCode": "08006921",
                         "TeamBClubCode": "080069",
-                        "ScoreB": 44,
+                        "ScoreB": 52,
                         "StartTime": "2025-06-22T10:00:00",
                         "StartTimeUTC": "2025-06-22T08:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -41,7 +41,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=973454&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=955269&ti=1",
                         "Quarter": 4,
-                        "Time": "00:24:00",
+                        "Time": "00:30:39",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -63,8 +63,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "6",
+                                "scoreB": "8"
                             }
                         ],
                         "Season": null,
@@ -82,22 +82,22 @@
                         "Place": "POLIDEPORTIVO MUNICIPAL ELOLA 1",
                         "TeamAID": 959737,
                         "TeamA": "CUMBERS AMARILLO CDSI ",
-                        "ScoreA": 27,
+                        "ScoreA": 31,
                         "TeamACode": "47008607",
                         "TeamAClubCode": "470086",
                         "TeamBID": 959371,
                         "TeamB": "MG CYASA FODEBA GIJON ",
                         "TeamBCode": "33027317",
                         "TeamBClubCode": "330273",
-                        "ScoreB": 24,
+                        "ScoreB": 30,
                         "StartTime": "2025-06-22T10:00:00",
                         "StartTimeUTC": "2025-06-22T08:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=959737&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=959371&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:23:56",
+                        "Quarter": 4,
+                        "Time": "00:29:52",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -116,6 +116,11 @@
                                 "n": "3",
                                 "scoreA": "17",
                                 "scoreB": "17"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "4",
+                                "scoreB": "6"
                             }
                         ],
                         "Season": null,
@@ -133,22 +138,22 @@
                         "Place": "PABELLÓN BLAS INFANTE",
                         "TeamAID": 970804,
                         "TeamA": "COLEGIO VIRGEN DEL MAR TENERIFE",
-                        "ScoreA": 21,
+                        "ScoreA": 23,
                         "TeamACode": "38016796",
                         "TeamAClubCode": "380167",
                         "TeamBID": 955798,
                         "TeamB": "JOVENTUT BADALONA A",
                         "TeamBCode": "08130528",
                         "TeamBClubCode": "081305",
-                        "ScoreB": 50,
+                        "ScoreB": 72,
                         "StartTime": "2025-06-22T10:00:00",
                         "StartTimeUTC": "2025-06-22T08:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=970804&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=955798&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:20:10",
+                        "Quarter": 4,
+                        "Time": "00:25:58",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -165,8 +170,13 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "9",
-                                "scoreB": "4"
+                                "scoreA": "11",
+                                "scoreB": "17"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "0",
+                                "scoreB": "9"
                             }
                         ],
                         "Season": null,
@@ -184,22 +194,22 @@
                         "Place": "POLIDEPORTIVO MUNICIPAL ELOLA 2",
                         "TeamAID": 970225,
                         "TeamA": "EBG MÁLAGA FUNDACIÓN UNICAJA ",
-                        "ScoreA": 18,
+                        "ScoreA": 29,
                         "TeamACode": "29021540",
                         "TeamAClubCode": "290215",
                         "TeamBID": 962458,
                         "TeamB": "FUNDAL ALCOBENDAS \"A\"",
                         "TeamBCode": "28021951",
                         "TeamBClubCode": "280219",
-                        "ScoreB": 59,
+                        "ScoreB": 64,
                         "StartTime": "2025-06-22T10:00:00",
                         "StartTimeUTC": "2025-06-22T08:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=970225&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=962458&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:23:35",
+                        "Quarter": 4,
+                        "Time": "00:27:05",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -218,6 +228,11 @@
                                 "n": "3",
                                 "scoreA": "8",
                                 "scoreB": "24"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "11",
+                                "scoreB": "5"
                             }
                         ],
                         "Season": null,
@@ -1769,7 +1784,7 @@
                 "id": "257",
                 "name": "CE Clubes Mini Masc",
                 "gamescount": 48,
-                "nowplaying": 4,
+                "nowplaying": 3,
                 "order": 24,
                 "GAMES": [
                     {
@@ -1784,22 +1799,22 @@
                         "Place": "COLEGIO VIRGEN DEL CARMEN",
                         "TeamAID": 963536,
                         "TeamA": "CBI ELCHE",
-                        "ScoreA": 53,
+                        "ScoreA": 55,
                         "TeamACode": "03003119",
                         "TeamAClubCode": "030031",
                         "TeamBID": 962046,
                         "TeamB": "CONFFIDENCE MEDICAL C.B. CIUDAD DE MÓSTOLES",
                         "TeamBCode": "28244935",
                         "TeamBClubCode": "282449",
-                        "ScoreB": 78,
+                        "ScoreB": 89,
                         "StartTime": "2025-06-22T09:30:00",
                         "StartTimeUTC": "2025-06-22T07:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=963536&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=962046&ti=1",
-                        "Quarter": 5,
-                        "Time": "00:33:23",
+                        "Quarter": 6,
+                        "Time": "00:42:18",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -1827,7 +1842,12 @@
                             {
                                 "n": "5",
                                 "scoreA": "3",
-                                "scoreB": "7"
+                                "scoreB": "16"
+                            },
+                            {
+                                "n": "6",
+                                "scoreA": "2",
+                                "scoreB": "2"
                             }
                         ],
                         "Season": null,
@@ -1859,38 +1879,12 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=961844&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=968011&ti=1",
-                        "Quarter": 5,
-                        "Time": "00:32:00",
-                        "Status": 2,
+                        "Quarter": 0,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [
-                            {
-                                "n": "1",
-                                "scoreA": "6",
-                                "scoreB": "19"
-                            },
-                            {
-                                "n": "2",
-                                "scoreA": "3",
-                                "scoreB": "24"
-                            },
-                            {
-                                "n": "3",
-                                "scoreA": "8",
-                                "scoreB": "22"
-                            },
-                            {
-                                "n": "4",
-                                "scoreA": "0",
-                                "scoreB": "2"
-                            },
-                            {
-                                "n": "5",
-                                "scoreA": "0",
-                                "scoreB": "0"
-                            }
-                        ],
+                        "Quarters": [],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -1913,7 +1907,7 @@
                         "TeamB": "CULTURAL Y DEPORTIVA LEONESA - COLEGIO LEONÉS A",
                         "TeamBCode": "24031008",
                         "TeamBClubCode": "240310",
-                        "ScoreB": 81,
+                        "ScoreB": 83,
                         "StartTime": "2025-06-22T09:30:00",
                         "StartTimeUTC": "2025-06-22T07:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -1921,7 +1915,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=969670&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=962613&ti=1",
                         "Quarter": 5,
-                        "Time": "00:39:34",
+                        "Time": "00:39:48",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -1949,7 +1943,7 @@
                             {
                                 "n": "5",
                                 "scoreA": "4",
-                                "scoreB": "12"
+                                "scoreB": "14"
                             }
                         ],
                         "Season": null,
@@ -1967,22 +1961,22 @@
                         "Place": "PABELLÓN IDM FIDIANA",
                         "TeamAID": 973829,
                         "TeamA": "R. CLUB MARÍTIMO",
-                        "ScoreA": 54,
+                        "ScoreA": 61,
                         "TeamACode": "52007270",
                         "TeamAClubCode": "520072",
                         "TeamBID": 971246,
                         "TeamB": "VÍTALY LA MAR BCBADAJOZ",
                         "TeamBCode": "06029816",
                         "TeamBClubCode": "060298",
-                        "ScoreB": 42,
+                        "ScoreB": 56,
                         "StartTime": "2025-06-22T09:30:00",
                         "StartTimeUTC": "2025-06-22T07:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=973829&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=971246&ti=1",
-                        "Quarter": 5,
-                        "Time": "00:40:56",
+                        "Quarter": 6,
+                        "Time": "00:45:01",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -2009,8 +2003,13 @@
                             },
                             {
                                 "n": "5",
-                                "scoreA": "4",
-                                "scoreB": "6"
+                                "scoreA": "11",
+                                "scoreB": "18"
+                            },
+                            {
+                                "n": "6",
+                                "scoreA": "0",
+                                "scoreB": "2"
                             }
                         ],
                         "Season": null,
