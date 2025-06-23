@@ -306,22 +306,22 @@
                         "Place": "POLIDEPORTIVO MUNICIPAL ELOLA 1",
                         "TeamAID": 958186,
                         "TeamA": "BARÇA CBS",
-                        "ScoreA": 19,
+                        "ScoreA": 37,
                         "TeamACode": "08004222",
                         "TeamAClubCode": "080042",
                         "TeamBID": 970124,
                         "TeamB": "SAN CERNIN \"AZUL\"",
                         "TeamBCode": "31003522",
                         "TeamBClubCode": "310035",
-                        "ScoreB": 2,
+                        "ScoreB": 11,
                         "StartTime": "2025-06-23T17:00:00",
                         "StartTimeUTC": "2025-06-23T15:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=958186&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=970124&ti=1",
-                        "Quarter": 2,
-                        "Time": "00:08:00",
+                        "Quarter": 3,
+                        "Time": "00:16:15",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -333,7 +333,12 @@
                             },
                             {
                                 "n": "2",
-                                "scoreA": "0",
+                                "scoreA": "16",
+                                "scoreB": "9"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "2",
                                 "scoreB": "0"
                             }
                         ],
@@ -352,7 +357,7 @@
                         "Place": "PABELLÓN BLAS INFANTE",
                         "TeamAID": 961471,
                         "TeamA": "JAECOO SEIS DO NADAL VIGO",
-                        "ScoreA": 7,
+                        "ScoreA": 26,
                         "TeamACode": "36013715",
                         "TeamAClubCode": "360137",
                         "TeamBID": 967512,
@@ -366,8 +371,8 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=961471&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=967512&ti=1",
-                        "Quarter": 1,
-                        "Time": "00:08:00",
+                        "Quarter": 3,
+                        "Time": "00:16:00",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -376,6 +381,16 @@
                                 "n": "1",
                                 "scoreA": "7",
                                 "scoreB": "17"
+                            },
+                            {
+                                "n": "2",
+                                "scoreA": "19",
+                                "scoreB": "0"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "0",
+                                "scoreB": "0"
                             }
                         ],
                         "Season": null,
@@ -393,22 +408,22 @@
                         "Place": "POLIDEPORTIVO MUNICIPAL EL LIMÓN",
                         "TeamAID": 969525,
                         "TeamA": "MINI 6º FEMENINO C.D. ENRIQUE SOLER",
-                        "ScoreA": 1,
+                        "ScoreA": 4,
                         "TeamACode": "52004976",
                         "TeamAClubCode": "520049",
                         "TeamBID": 968539,
                         "TeamB": "SANT JOSEP A ",
                         "TeamBCode": "07000660",
                         "TeamBClubCode": "070006",
-                        "ScoreB": 9,
+                        "ScoreB": 20,
                         "StartTime": "2025-06-23T17:00:00",
                         "StartTimeUTC": "2025-06-23T15:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=969525&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=968539&ti=1",
-                        "Quarter": 1,
-                        "Time": "00:07:02",
+                        "Quarter": 2,
+                        "Time": "00:12:44",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -416,7 +431,12 @@
                             {
                                 "n": "1",
                                 "scoreA": "1",
-                                "scoreB": "9"
+                                "scoreB": "12"
+                            },
+                            {
+                                "n": "2",
+                                "scoreA": "3",
+                                "scoreB": "8"
                             }
                         ],
                         "Season": null,
@@ -434,22 +454,22 @@
                         "Place": "POLIDEPORTIVO MUNICIPAL ELOLA 2",
                         "TeamAID": 971642,
                         "TeamA": "ACADEMIA CELTA SAVINO DEL BENE",
-                        "ScoreA": 15,
+                        "ScoreA": 29,
                         "TeamACode": "36000111",
                         "TeamAClubCode": "360001",
                         "TeamBID": 962981,
                         "TeamB": "XTRATOS-TVGA",
                         "TeamBCode": "39009617",
                         "TeamBClubCode": "390096",
-                        "ScoreB": 6,
+                        "ScoreB": 18,
                         "StartTime": "2025-06-23T17:00:00",
                         "StartTimeUTC": "2025-06-23T15:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=971642&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=962981&ti=1",
-                        "Quarter": 2,
-                        "Time": "00:08:00",
+                        "Quarter": 3,
+                        "Time": "00:16:00",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -461,6 +481,11 @@
                             },
                             {
                                 "n": "2",
+                                "scoreA": "14",
+                                "scoreB": "12"
+                            },
+                            {
+                                "n": "3",
                                 "scoreA": "0",
                                 "scoreB": "0"
                             }
