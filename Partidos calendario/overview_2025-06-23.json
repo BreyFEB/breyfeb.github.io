@@ -11,7 +11,7 @@
                 "id": "256",
                 "name": "CE Clubes Mini Fem",
                 "gamescount": 48,
-                "nowplaying": 0,
+                "nowplaying": 1,
                 "order": 23,
                 "GAMES": [
                     {
@@ -335,7 +335,7 @@
                         "Competition": "C ESP CLUBES MINI FEM",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "2",
+                        "Stage": "0",
                         "ID": 2472174,
                         "GameCode": null,
                         "Place": "PABELLÓN BLAS INFANTE",
@@ -355,12 +355,18 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=961471&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=967512&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:00:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
