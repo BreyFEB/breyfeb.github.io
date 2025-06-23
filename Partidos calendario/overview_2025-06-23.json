@@ -391,42 +391,11 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=969525&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=968539&ti=1",
                         "Quarter": 6,
-                        "Time": "00:47:05",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [
-                            {
-                                "n": "1",
-                                "scoreA": "1",
-                                "scoreB": "12"
-                            },
-                            {
-                                "n": "2",
-                                "scoreA": "7",
-                                "scoreB": "16"
-                            },
-                            {
-                                "n": "3",
-                                "scoreA": "14",
-                                "scoreB": "16"
-                            },
-                            {
-                                "n": "4",
-                                "scoreA": "4",
-                                "scoreB": "13"
-                            },
-                            {
-                                "n": "5",
-                                "scoreA": "6",
-                                "scoreB": "9"
-                            },
-                            {
-                                "n": "6",
-                                "scoreA": "11",
-                                "scoreB": "1"
-                            }
-                        ],
+                        "Quarters": [],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -477,30 +446,35 @@
                         "Place": "PABELLÓN BLAS INFANTE",
                         "TeamAID": 964542,
                         "TeamA": "MARIANISTAS A",
-                        "ScoreA": 5,
+                        "ScoreA": 17,
                         "TeamACode": "50002125",
                         "TeamAClubCode": "500021",
                         "TeamBID": 958237,
                         "TeamB": "ADBA SANFER",
                         "TeamBCode": "33002671",
                         "TeamBClubCode": "330026",
-                        "ScoreB": 6,
+                        "ScoreB": 15,
                         "StartTime": "2025-06-23T19:00:00",
                         "StartTimeUTC": "2025-06-23T17:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=964542&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=958237&ti=1",
-                        "Quarter": 1,
-                        "Time": "00:03:59",
+                        "Quarter": 2,
+                        "Time": "00:12:16",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
                             {
                                 "n": "1",
+                                "scoreA": "12",
+                                "scoreB": "10"
+                            },
+                            {
+                                "n": "2",
                                 "scoreA": "5",
-                                "scoreB": "6"
+                                "scoreB": "5"
                             }
                         ],
                         "Season": null,
@@ -525,7 +499,7 @@
                         "TeamB": "LA SALLE PALMA 3D IMPLANTES A ",
                         "TeamBCode": "07001656",
                         "TeamBClubCode": "070016",
-                        "ScoreB": 30,
+                        "ScoreB": 55,
                         "StartTime": "2025-06-23T19:00:00",
                         "StartTimeUTC": "2025-06-23T17:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -533,7 +507,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=977160&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=964003&ti=1",
                         "Quarter": 2,
-                        "Time": "00:08:00",
+                        "Time": "00:14:17",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -546,7 +520,7 @@
                             {
                                 "n": "2",
                                 "scoreA": "3",
-                                "scoreB": "0"
+                                "scoreB": "25"
                             }
                         ],
                         "Season": null,
@@ -558,32 +532,43 @@
                         "Competition": "C ESP CLUBES MINI FEM",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "2",
+                        "Stage": "0",
                         "ID": 2472168,
                         "GameCode": null,
                         "Place": "POLIDEPORTIVO MUNICIPAL EL LIMÓN",
                         "TeamAID": 969651,
                         "TeamA": "UROS DE RIVAS 'A'",
-                        "ScoreA": 0,
+                        "ScoreA": 9,
                         "TeamACode": "28306552",
                         "TeamAClubCode": "283065",
                         "TeamBID": 969656,
                         "TeamB": "EMB ALCÁZAR GRUPO76-ALKASAR ",
                         "TeamBCode": "13001541",
                         "TeamBClubCode": "130015",
-                        "ScoreB": 0,
+                        "ScoreB": 7,
                         "StartTime": "2025-06-23T19:00:00",
                         "StartTimeUTC": "2025-06-23T17:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=969651&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=969656&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 2,
+                        "Time": "00:08:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "9",
+                                "scoreB": "7"
+                            },
+                            {
+                                "n": "2",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -599,14 +584,14 @@
                         "Place": "POLIDEPORTIVO MUNICIPAL ELOLA 1",
                         "TeamAID": 969205,
                         "TeamA": "MOVISTAR ESTUDIANTES \"JUANA\"",
-                        "ScoreA": 5,
+                        "ScoreA": 7,
                         "TeamACode": "28000170",
                         "TeamAClubCode": "280001",
                         "TeamBID": 952958,
                         "TeamB": "VALENCIA BASKET NARANJA",
                         "TeamBCode": "46000219",
                         "TeamBClubCode": "460002",
-                        "ScoreB": 12,
+                        "ScoreB": 19,
                         "StartTime": "2025-06-23T19:00:00",
                         "StartTimeUTC": "2025-06-23T17:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -614,7 +599,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=969205&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952958&ti=1",
                         "Quarter": 2,
-                        "Time": "00:08:00",
+                        "Time": "00:15:24",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -626,8 +611,8 @@
                             },
                             {
                                 "n": "2",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "2",
+                                "scoreB": "7"
                             }
                         ],
                         "Season": null,
@@ -1494,22 +1479,22 @@
                         "Place": "INSTALACIONES DEPORTIVAS EL NARANJO",
                         "TeamAID": 966802,
                         "TeamA": "EMB CANDELARIA",
-                        "ScoreA": 35,
+                        "ScoreA": 45,
                         "TeamACode": "38025555",
                         "TeamAClubCode": "380255",
                         "TeamBID": 953003,
                         "TeamB": "VALENCIA BASKET NARANJA",
                         "TeamBCode": "46000201",
                         "TeamBClubCode": "460002",
-                        "ScoreB": 37,
+                        "ScoreB": 39,
                         "StartTime": "2025-06-23T18:30:00",
                         "StartTimeUTC": "2025-06-23T16:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=966802&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=953003&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:22:46",
+                        "Quarter": 4,
+                        "Time": "00:25:46",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -1526,8 +1511,13 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "12",
-                                "scoreB": "11"
+                                "scoreA": "16",
+                                "scoreB": "13"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "6",
+                                "scoreB": "0"
                             }
                         ],
                         "Season": null,
@@ -1545,22 +1535,22 @@
                         "Place": "PALACIO DE DEPORTES VISTALEGRE",
                         "TeamAID": 964972,
                         "TeamA": "MOVISTAR ESTUDIANTES \"SOLA\"",
-                        "ScoreA": 54,
+                        "ScoreA": 66,
                         "TeamACode": "28000131",
                         "TeamAClubCode": "280001",
                         "TeamBID": 978958,
                         "TeamB": "SAN PABLO BURGOS AZUL",
                         "TeamBCode": "09018406",
                         "TeamBClubCode": "090184",
-                        "ScoreB": 44,
+                        "ScoreB": 46,
                         "StartTime": "2025-06-23T18:30:00",
                         "StartTimeUTC": "2025-06-23T16:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=964972&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=978958&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:23:17",
+                        "Quarter": 4,
+                        "Time": "00:28:01",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -1579,6 +1569,11 @@
                                 "n": "3",
                                 "scoreA": "23",
                                 "scoreB": "5"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "12",
+                                "scoreB": "2"
                             }
                         ],
                         "Season": null,
@@ -1596,22 +1591,22 @@
                         "Place": "COLEGIO VIRGEN DEL CARMEN",
                         "TeamAID": 958212,
                         "TeamA": "FORMASPACK-TVGA",
-                        "ScoreA": 31,
+                        "ScoreA": 38,
                         "TeamACode": "39009619",
                         "TeamAClubCode": "390096",
                         "TeamBID": 963894,
                         "TeamB": "EM EL OLIVAR A1",
                         "TeamBCode": "50000700",
                         "TeamBClubCode": "500007",
-                        "ScoreB": 50,
+                        "ScoreB": 61,
                         "StartTime": "2025-06-23T18:30:00",
                         "StartTimeUTC": "2025-06-23T16:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=958212&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=963894&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:23:55",
+                        "Quarter": 4,
+                        "Time": "00:28:12",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -1629,7 +1624,12 @@
                             {
                                 "n": "3",
                                 "scoreA": "11",
-                                "scoreB": "14"
+                                "scoreB": "15"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "7",
+                                "scoreB": "10"
                             }
                         ],
                         "Season": null,
@@ -1647,14 +1647,14 @@
                         "Place": "PABELLÓN IDM FIDIANA",
                         "TeamAID": 970253,
                         "TeamA": "BASKET SANTA CRUZ",
-                        "ScoreA": 38,
+                        "ScoreA": 59,
                         "TeamACode": "38029087",
                         "TeamAClubCode": "380290",
                         "TeamBID": 952789,
                         "TeamB": "DÜRER CP LA RODA",
                         "TeamBCode": "02000216",
                         "TeamBClubCode": "020002",
-                        "ScoreB": 26,
+                        "ScoreB": 34,
                         "StartTime": "2025-06-23T18:30:00",
                         "StartTimeUTC": "2025-06-23T16:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -1662,7 +1662,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=970253&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952789&ti=1",
                         "Quarter": 4,
-                        "Time": "00:24:00",
+                        "Time": "00:29:28",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -1684,8 +1684,8 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "21",
+                                "scoreB": "8"
                             }
                         ],
                         "Season": null,
