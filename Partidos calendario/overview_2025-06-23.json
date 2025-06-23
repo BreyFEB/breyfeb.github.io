@@ -11,7 +11,7 @@
                 "id": "256",
                 "name": "CE Clubes Mini Fem",
                 "gamescount": 48,
-                "nowplaying": 1,
+                "nowplaying": 0,
                 "order": 23,
                 "GAMES": [
                     {
@@ -146,42 +146,11 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=967390&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=955798&ti=1",
                         "Quarter": 6,
-                        "Time": "00:48:00",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [
-                            {
-                                "n": "1",
-                                "scoreA": "16",
-                                "scoreB": "12"
-                            },
-                            {
-                                "n": "2",
-                                "scoreA": "2",
-                                "scoreB": "7"
-                            },
-                            {
-                                "n": "3",
-                                "scoreA": "6",
-                                "scoreB": "12"
-                            },
-                            {
-                                "n": "4",
-                                "scoreA": "10",
-                                "scoreB": "20"
-                            },
-                            {
-                                "n": "5",
-                                "scoreA": "6",
-                                "scoreB": "11"
-                            },
-                            {
-                                "n": "6",
-                                "scoreA": "14",
-                                "scoreB": "7"
-                            }
-                        ],
+                        "Quarters": [],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -1361,7 +1330,7 @@
                         "Place": "COLEGIO VIRGEN DEL CARMEN",
                         "TeamAID": 973829,
                         "TeamA": "R. CLUB MARÍTIMO",
-                        "ScoreA": 9,
+                        "ScoreA": 12,
                         "TeamACode": "52007270",
                         "TeamAClubCode": "520072",
                         "TeamBID": 964733,
@@ -1375,8 +1344,8 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=973829&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=964733&ti=1",
-                        "Quarter": 1,
-                        "Time": "00:06:58",
+                        "Quarter": 2,
+                        "Time": "00:08:09",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -1385,6 +1354,11 @@
                                 "n": "1",
                                 "scoreA": "9",
                                 "scoreB": "12"
+                            },
+                            {
+                                "n": "2",
+                                "scoreA": "3",
+                                "scoreB": "0"
                             }
                         ],
                         "Season": null,
@@ -1402,14 +1376,14 @@
                         "Place": "PALACIO DE DEPORTES VISTALEGRE",
                         "TeamAID": 966511,
                         "TeamA": "JOVENT A J.PALLISER",
-                        "ScoreA": 9,
+                        "ScoreA": 15,
                         "TeamACode": "07012650",
                         "TeamAClubCode": "070126",
                         "TeamBID": 962613,
                         "TeamB": "CULTURAL Y DEPORTIVA LEONESA - COLEGIO LEONÉS A",
                         "TeamBCode": "24031008",
                         "TeamBClubCode": "240310",
-                        "ScoreB": 16,
+                        "ScoreB": 18,
                         "StartTime": "2025-06-23T11:30:00",
                         "StartTimeUTC": "2025-06-23T09:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -1417,7 +1391,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=966511&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=962613&ti=1",
                         "Quarter": 2,
-                        "Time": "00:08:00",
+                        "Time": "00:09:52",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -1429,8 +1403,8 @@
                             },
                             {
                                 "n": "2",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "6",
+                                "scoreB": "2"
                             }
                         ],
                         "Season": null,
@@ -1448,7 +1422,7 @@
                         "Place": "INSTALACIONES DEPORTIVAS EL NARANJO",
                         "TeamAID": 962046,
                         "TeamA": "CONFFIDENCE MEDICAL C.B. CIUDAD DE MÓSTOLES",
-                        "ScoreA": 0,
+                        "ScoreA": 4,
                         "TeamACode": "28244935",
                         "TeamAClubCode": "282449",
                         "TeamBID": 961889,
@@ -1463,14 +1437,14 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=962046&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=961889&ti=1",
                         "Quarter": 1,
-                        "Time": "00:00:00",
+                        "Time": "00:00:45",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
                             {
                                 "n": "1",
-                                "scoreA": "0",
+                                "scoreA": "4",
                                 "scoreB": "0"
                             }
                         ],
