@@ -653,7 +653,11 @@ async function loadTeamShotData() {
   }
   
   // Get competition from first match
-  const competition = (teamMatches[0] && teamMatches[0].competition) || (teamPlayers && teamPlayers[0] && teamPlayers[0].competition);
+  // Get first player which teamId matches the teamId in the URL and get the competition from the player
+  const teamPlayer = teamPlayers.find(p => p.teamId === teamId);
+  const competition = teamPlayer.competition;
+
+  // const competition = (teamMatches[0] && teamMatches[0].competition) || (teamPlayers && teamPlayers[0] && teamPlayers[0].competition);
   console.log('Competition:', competition);
   if (!competition) {
     console.log('No competition found');

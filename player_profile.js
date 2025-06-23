@@ -144,10 +144,16 @@ async function loadStats() {
     const team = toTitleCase(player_totals.teamName);
     const competition = formatCompetitionName(player_totals.competition);
     const gender = player_totals.gender === "M" ? "Femenino" : "Masculino";
+    // Team logo and name styled prominently
     player_main_info.innerHTML = `
-      Equipo: ${team}<br>
-      Competición: ${competition}<br>
-      Género: ${gender}
+      <a href="team_profile.html?team_id=${player_totals.teamId}" class="team-link">
+        <img src="${player_totals.teamLogo}" alt="${team} logo">
+        <span class="team-name">${team}</span>
+      </a>
+      <div class="player-meta">
+        Competición: ${competition}<br>
+        Género: ${gender}
+      </div>
     `;
   } else {
     console.log('No se encontró el elemento .player-main-info');

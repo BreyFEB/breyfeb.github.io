@@ -34846,6 +34846,678 @@
     }
   },
   {
+    "id": "2448159",
+    "nombre": "A. JIMENEZ GARRIDO",
+    "equipo": "13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2448159",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=965224&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2571777",
+    "nombre": "I. FERNÁNDEZ SOLÍS",
+    "equipo": "13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2571777",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=965224&ti=1",
+    "estadisticas": {
+      "puntos": 3.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2668724",
+    "nombre": "A. DELGADO CABEZUELO",
+    "equipo": "13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2668724",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=965224&ti=1",
+    "estadisticas": {
+      "puntos": 7.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2574761",
+    "nombre": "F. LÓPEZ LEAL",
+    "equipo": "13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2574761",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=965224&ti=1",
+    "estadisticas": {
+      "puntos": 7.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2642072",
+    "nombre": "P. ROMERO GÓMEZ",
+    "equipo": "13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2642072",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=965224&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2571134",
+    "nombre": "A. VERDEJO BORREGO",
+    "equipo": "13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2571134",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=965224&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2418333",
+    "nombre": "A. FERNÁNDEZ CABALLERO",
+    "equipo": "13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2418333",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=965224&ti=1",
+    "estadisticas": {
+      "puntos": 22.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2734918",
+    "nombre": "J. MORALES MOLINA",
+    "equipo": "13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2734918",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=965224&ti=1",
+    "estadisticas": {
+      "puntos": 6.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2448273",
+    "nombre": "G. LUQUE ANTÚNEZ",
+    "equipo": "13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2448273",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=965224&ti=1",
+    "estadisticas": {
+      "puntos": 20.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2418467",
+    "nombre": "F. AMO BENAVENTE",
+    "equipo": "13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2418467",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=965224&ti=1",
+    "estadisticas": {
+      "puntos": 5.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2734920",
+    "nombre": "Á. CAMARAS ALTAS ZURITA",
+    "equipo": "13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2734920",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=965224&ti=1",
+    "estadisticas": {
+      "puntos": 10.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2734919",
+    "nombre": "Á. CASAS SÁNCHEZ DE MEDINA",
+    "equipo": "13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2734919",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=965224&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2500236",
+    "nombre": "C. PALOMINO ZULOAGA",
+    "equipo": "MOVISTAR ESTUDIANTES \"SOLA\"",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2500236",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=964972&ti=1",
+    "estadisticas": {
+      "puntos": 25.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2746740",
+    "nombre": "J. GIL GARCIA",
+    "equipo": "MOVISTAR ESTUDIANTES \"SOLA\"",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2746740",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=964972&ti=1",
+    "estadisticas": {
+      "puntos": 12.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2757279",
+    "nombre": "L. PEREZ O´SHANAHAN",
+    "equipo": "MOVISTAR ESTUDIANTES \"SOLA\"",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2757279",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=964972&ti=1",
+    "estadisticas": {
+      "puntos": 8.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2546033",
+    "nombre": "M. ESPINOSA BURGUEÑO",
+    "equipo": "MOVISTAR ESTUDIANTES \"SOLA\"",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2546033",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=964972&ti=1",
+    "estadisticas": {
+      "puntos": 3.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2404567",
+    "nombre": "M. MARTINEZ MANSO",
+    "equipo": "MOVISTAR ESTUDIANTES \"SOLA\"",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2404567",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=964972&ti=1",
+    "estadisticas": {
+      "puntos": 7.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2542322",
+    "nombre": "A. JAMES FRUTOS",
+    "equipo": "MOVISTAR ESTUDIANTES \"SOLA\"",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2542322",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=964972&ti=1",
+    "estadisticas": {
+      "puntos": 24.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2551116",
+    "nombre": "P. GARCIA CORVES",
+    "equipo": "MOVISTAR ESTUDIANTES \"SOLA\"",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2551116",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=964972&ti=1",
+    "estadisticas": {
+      "puntos": 11.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2498538",
+    "nombre": "A. APARICIO MURRIETA",
+    "equipo": "MOVISTAR ESTUDIANTES \"SOLA\"",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2498538",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=964972&ti=1",
+    "estadisticas": {
+      "puntos": 11.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2544537",
+    "nombre": "J. MARTÍNEZ LÓPEZ",
+    "equipo": "MOVISTAR ESTUDIANTES \"SOLA\"",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2544537",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=964972&ti=1",
+    "estadisticas": {
+      "puntos": 4.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2546219",
+    "nombre": "J. CAÑEQUE PÉREZ",
+    "equipo": "MOVISTAR ESTUDIANTES \"SOLA\"",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2546219",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=964972&ti=1",
+    "estadisticas": {
+      "puntos": 3.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2549725",
+    "nombre": "A. DEL CAMPO BRIEVA",
+    "equipo": "MOVISTAR ESTUDIANTES \"SOLA\"",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2549725",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=964972&ti=1",
+    "estadisticas": {
+      "puntos": 5.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2551115",
+    "nombre": "A. GIL LINDER",
+    "equipo": "MOVISTAR ESTUDIANTES \"SOLA\"",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2551115",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=964972&ti=1",
+    "estadisticas": {
+      "puntos": 4.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2515638",
+    "nombre": "P. GONZALEZ CUESTA",
+    "equipo": "SAN PABLO BURGOS AZUL",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2515638",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=978958&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2617849",
+    "nombre": "A. BLANCO IZQUIERDO",
+    "equipo": "SAN PABLO BURGOS AZUL",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2617849",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=978958&ti=1",
+    "estadisticas": {
+      "puntos": 4.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2482802",
+    "nombre": "P. GONZALEZ SERRANO",
+    "equipo": "SAN PABLO BURGOS AZUL",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2482802",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=978958&ti=1",
+    "estadisticas": {
+      "puntos": 3.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2487141",
+    "nombre": "J. RIOCEREZO FERNANDEZ",
+    "equipo": "SAN PABLO BURGOS AZUL",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2487141",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=978958&ti=1",
+    "estadisticas": {
+      "puntos": 8.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2487136",
+    "nombre": "R. EPIFANIO CANO",
+    "equipo": "SAN PABLO BURGOS AZUL",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2487136",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=978958&ti=1",
+    "estadisticas": {
+      "puntos": 6.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2634438",
+    "nombre": "S. VEGA FERNÁNDEZ",
+    "equipo": "SAN PABLO BURGOS AZUL",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2634438",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=978958&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2514846",
+    "nombre": "M. CASTILLA RODRÍGUEZ",
+    "equipo": "SAN PABLO BURGOS AZUL",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2514846",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=978958&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2633695",
+    "nombre": "J. ORTIZ CESPEDES",
+    "equipo": "SAN PABLO BURGOS AZUL",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2633695",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=978958&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2487142",
+    "nombre": "D. RUIZ SOLANO",
+    "equipo": "SAN PABLO BURGOS AZUL",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2487142",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=978958&ti=1",
+    "estadisticas": {
+      "puntos": 4.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2509447",
+    "nombre": "B. ORTIZ MARTINEZ",
+    "equipo": "SAN PABLO BURGOS AZUL",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2509447",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=978958&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2503983",
+    "nombre": "M. FUENTE DEL RIO",
+    "equipo": "SAN PABLO BURGOS AZUL",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2503983",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=978958&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2617829",
+    "nombre": "A. CAMINO SANZ",
+    "equipo": "SAN PABLO BURGOS AZUL",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2617829",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=978958&ti=1",
+    "estadisticas": {
+      "puntos": 3.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2452831",
+    "nombre": "E. GARCIA RIDRUEJO",
+    "equipo": "BARÇA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2452831",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=955247&ti=1",
+    "estadisticas": {
+      "puntos": 6.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2520370",
+    "nombre": "T. POE NEIRA",
+    "equipo": "BARÇA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2520370",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=955247&ti=1",
+    "estadisticas": {
+      "puntos": 9.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2360654",
+    "nombre": "N. ARAGÓN ALBERT",
+    "equipo": "BARÇA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2360654",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=955247&ti=1",
+    "estadisticas": {
+      "puntos": 11.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2456334",
+    "nombre": "P. ARRUFAT MARTINEZ",
+    "equipo": "BARÇA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2456334",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=955247&ti=1",
+    "estadisticas": {
+      "puntos": 4.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2532875",
+    "nombre": "M. MASSANA VENTURA",
+    "equipo": "BARÇA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2532875",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=955247&ti=1",
+    "estadisticas": {
+      "puntos": 12.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2392192",
+    "nombre": "I. CRUZ HERNANDEZ",
+    "equipo": "BARÇA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2392192",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=955247&ti=1",
+    "estadisticas": {
+      "puntos": 6.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2456611",
+    "nombre": "G. ALONSO TIO",
+    "equipo": "BARÇA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2456611",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=955247&ti=1",
+    "estadisticas": {
+      "puntos": 6.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2273871",
+    "nombre": "P. MASLLORENS ARIJA",
+    "equipo": "BARÇA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2273871",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=955247&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2466390",
+    "nombre": "M. RODRIGUEZ ESPADA",
+    "equipo": "BARÇA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2466390",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=955247&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2431831",
+    "nombre": "P. RAMIREZ SANZ",
+    "equipo": "BARÇA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2431831",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=955247&ti=1",
+    "estadisticas": {
+      "puntos": 4.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2353084",
+    "nombre": "G. CARPINTERO GOMEZ",
+    "equipo": "BARÇA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2353084",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=955247&ti=1",
+    "estadisticas": {
+      "puntos": 15.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2360703",
+    "nombre": "G. CASAJUANA",
+    "equipo": "BARÇA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2360703",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=955247&ti=1",
+    "estadisticas": {
+      "puntos": 10.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
     "id": "2481346",
     "nombre": "T. HENGESBACH ENTRIALGO",
     "equipo": "REAL GRUPO DE CULTURA COVADONGA \"A\"",
@@ -35022,7 +35694,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2496729",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=968011&ti=1",
     "estadisticas": {
-      "puntos": 0.0,
+      "puntos": 2.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -35036,7 +35708,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2551022",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=968011&ti=1",
     "estadisticas": {
-      "puntos": 9.0,
+      "puntos": 4.5,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -35050,7 +35722,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2606102",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=968011&ti=1",
     "estadisticas": {
-      "puntos": 8.0,
+      "puntos": 6.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -35064,7 +35736,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2496812",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=968011&ti=1",
     "estadisticas": {
-      "puntos": 3.0,
+      "puntos": 1.5,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -35078,7 +35750,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2621053",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=968011&ti=1",
     "estadisticas": {
-      "puntos": 6.0,
+      "puntos": 3.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -35092,7 +35764,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2547347",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=968011&ti=1",
     "estadisticas": {
-      "puntos": 13.0,
+      "puntos": 6.5,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -35106,7 +35778,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2547876",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=968011&ti=1",
     "estadisticas": {
-      "puntos": 8.0,
+      "puntos": 4.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -35120,7 +35792,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2406085",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=968011&ti=1",
     "estadisticas": {
-      "puntos": 4.0,
+      "puntos": 3.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -35134,7 +35806,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2621027",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=968011&ti=1",
     "estadisticas": {
-      "puntos": 6.0,
+      "puntos": 3.5,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -35148,7 +35820,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2496578",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=968011&ti=1",
     "estadisticas": {
-      "puntos": 6.0,
+      "puntos": 3.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -35176,7 +35848,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2549534",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=968011&ti=1",
     "estadisticas": {
-      "puntos": 4.0,
+      "puntos": 2.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -35190,7 +35862,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2441268",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=956571&ti=1",
     "estadisticas": {
-      "puntos": 5.0,
+      "puntos": 2.5,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -35204,7 +35876,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2435547",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=956571&ti=1",
     "estadisticas": {
-      "puntos": 6.0,
+      "puntos": 5.5,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -35218,7 +35890,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2504499",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=956571&ti=1",
     "estadisticas": {
-      "puntos": 19.0,
+      "puntos": 9.5,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -35232,7 +35904,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2469662",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=956571&ti=1",
     "estadisticas": {
-      "puntos": 2.0,
+      "puntos": 1.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -35260,7 +35932,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2425618",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=956571&ti=1",
     "estadisticas": {
-      "puntos": 6.0,
+      "puntos": 3.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -35274,7 +35946,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2469510",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=956571&ti=1",
     "estadisticas": {
-      "puntos": 6.0,
+      "puntos": 3.5,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -35288,7 +35960,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2441275",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=956571&ti=1",
     "estadisticas": {
-      "puntos": 5.0,
+      "puntos": 3.5,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -35302,7 +35974,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2678871",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=956571&ti=1",
     "estadisticas": {
-      "puntos": 0.0,
+      "puntos": 1.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -35316,7 +35988,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2481691",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=956571&ti=1",
     "estadisticas": {
-      "puntos": 1.0,
+      "puntos": 0.5,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -35330,7 +36002,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2531899",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=956571&ti=1",
     "estadisticas": {
-      "puntos": 9.0,
+      "puntos": 4.5,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -35540,7 +36212,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2761285",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=963536&ti=1",
     "estadisticas": {
-      "puntos": 0.0,
+      "puntos": 1.5,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -35554,7 +36226,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2481752",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=963536&ti=1",
     "estadisticas": {
-      "puntos": 8.0,
+      "puntos": 4.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -35568,7 +36240,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2441354",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=963536&ti=1",
     "estadisticas": {
-      "puntos": 0.0,
+      "puntos": 0.5,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -35582,7 +36254,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2434679",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=963536&ti=1",
     "estadisticas": {
-      "puntos": 20.0,
+      "puntos": 15.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -35596,7 +36268,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2788530",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=963536&ti=1",
     "estadisticas": {
-      "puntos": 1.0,
+      "puntos": 0.5,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -35624,7 +36296,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2470020",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=963536&ti=1",
     "estadisticas": {
-      "puntos": 0.0,
+      "puntos": 1.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -35638,7 +36310,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2553322",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=963536&ti=1",
     "estadisticas": {
-      "puntos": 6.0,
+      "puntos": 4.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -35652,7 +36324,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2434515",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=963536&ti=1",
     "estadisticas": {
-      "puntos": 12.0,
+      "puntos": 6.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -35666,7 +36338,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2665430",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=963536&ti=1",
     "estadisticas": {
-      "puntos": 0.0,
+      "puntos": 1.5,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -35680,7 +36352,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2379620",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=963536&ti=1",
     "estadisticas": {
-      "puntos": 19.0,
+      "puntos": 11.5,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -35918,7 +36590,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2439699",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=961889&ti=1",
     "estadisticas": {
-      "puntos": 17.0,
+      "puntos": 20.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -35988,7 +36660,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2439747",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=961889&ti=1",
     "estadisticas": {
-      "puntos": 1.0,
+      "puntos": 3.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -36030,7 +36702,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2594636",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=972881&ti=1",
     "estadisticas": {
-      "puntos": 2.0,
+      "puntos": 1.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -36044,7 +36716,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2575286",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=972881&ti=1",
     "estadisticas": {
-      "puntos": 6.0,
+      "puntos": 4.5,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -36058,7 +36730,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2574742",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=972881&ti=1",
     "estadisticas": {
-      "puntos": 8.0,
+      "puntos": 6.5,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -36072,7 +36744,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2417871",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=972881&ti=1",
     "estadisticas": {
-      "puntos": 10.0,
+      "puntos": 6.5,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -36086,7 +36758,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2417989",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=972881&ti=1",
     "estadisticas": {
-      "puntos": 11.0,
+      "puntos": 6.5,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -36100,7 +36772,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2575275",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=972881&ti=1",
     "estadisticas": {
-      "puntos": 2.0,
+      "puntos": 1.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -36114,7 +36786,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2446962",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=972881&ti=1",
     "estadisticas": {
-      "puntos": 4.0,
+      "puntos": 2.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -36128,7 +36800,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2576637",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=972881&ti=1",
     "estadisticas": {
-      "puntos": 3.0,
+      "puntos": 1.5,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -36142,7 +36814,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2595020",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=972881&ti=1",
     "estadisticas": {
-      "puntos": 8.0,
+      "puntos": 8.5,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -36156,7 +36828,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2448071",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=972881&ti=1",
     "estadisticas": {
-      "puntos": 14.0,
+      "puntos": 12.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -36170,7 +36842,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2575296",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=972881&ti=1",
     "estadisticas": {
-      "puntos": 8.0,
+      "puntos": 5.5,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -36184,7 +36856,679 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2594511",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=972881&ti=1",
     "estadisticas": {
-      "puntos": 19.0,
+      "puntos": 12.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2581394",
+    "nombre": "Y. JOVER MARTIN",
+    "equipo": "EMB CANDELARIA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2581394",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=966802&ti=1",
+    "estadisticas": {
+      "puntos": 7.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2581607",
+    "nombre": "P. ROBAYNA GARCÍA",
+    "equipo": "EMB CANDELARIA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2581607",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=966802&ti=1",
+    "estadisticas": {
+      "puntos": 6.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2581606",
+    "nombre": "M. MORR MACHIN",
+    "equipo": "EMB CANDELARIA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2581606",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=966802&ti=1",
+    "estadisticas": {
+      "puntos": 7.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2619206",
+    "nombre": "Y. GARCIA REDONDO",
+    "equipo": "EMB CANDELARIA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2619206",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=966802&ti=1",
+    "estadisticas": {
+      "puntos": 5.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2581602",
+    "nombre": "E. YANES RAMOS",
+    "equipo": "EMB CANDELARIA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2581602",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=966802&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2581599",
+    "nombre": "R. CABEZAS MORALES",
+    "equipo": "EMB CANDELARIA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2581599",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=966802&ti=1",
+    "estadisticas": {
+      "puntos": 7.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2761154",
+    "nombre": "M. BAEZ GONZALEZ",
+    "equipo": "EMB CANDELARIA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2761154",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=966802&ti=1",
+    "estadisticas": {
+      "puntos": 6.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2581603",
+    "nombre": "D. GARCIA GUANCHE",
+    "equipo": "EMB CANDELARIA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2581603",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=966802&ti=1",
+    "estadisticas": {
+      "puntos": 1.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2580254",
+    "nombre": "I. FERNANDEZ AYATALLAH",
+    "equipo": "EMB CANDELARIA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2580254",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=966802&ti=1",
+    "estadisticas": {
+      "puntos": 9.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2589730",
+    "nombre": "A. AGUIAR SOMERA",
+    "equipo": "EMB CANDELARIA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2589730",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=966802&ti=1",
+    "estadisticas": {
+      "puntos": 6.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2581593",
+    "nombre": "J. QUEVEDO GUILLEN",
+    "equipo": "EMB CANDELARIA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2581593",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=966802&ti=1",
+    "estadisticas": {
+      "puntos": 6.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2581745",
+    "nombre": "R. BORGES GONZALEZ",
+    "equipo": "EMB CANDELARIA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2581745",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=966802&ti=1",
+    "estadisticas": {
+      "puntos": 28.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2438203",
+    "nombre": "M. CASASNOVAS JAUME",
+    "equipo": "CIUSABA BASQUET PLA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2438203",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969334&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2514023",
+    "nombre": "B. MUNAR SÁEZ",
+    "equipo": "CIUSABA BASQUET PLA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2514023",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969334&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2343474",
+    "nombre": "M. GARCIA MOREY",
+    "equipo": "CIUSABA BASQUET PLA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2343474",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969334&ti=1",
+    "estadisticas": {
+      "puntos": 17.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2707461",
+    "nombre": "J. JUAN FIOL",
+    "equipo": "CIUSABA BASQUET PLA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2707461",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969334&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2408702",
+    "nombre": "H. LOPEZ FRIAS",
+    "equipo": "CIUSABA BASQUET PLA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2408702",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969334&ti=1",
+    "estadisticas": {
+      "puntos": 10.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2514071",
+    "nombre": "A. OLIVER LANGA",
+    "equipo": "CIUSABA BASQUET PLA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2514071",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969334&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2513517",
+    "nombre": "M. HIDALGO RECIO",
+    "equipo": "CIUSABA BASQUET PLA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2513517",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969334&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2446268",
+    "nombre": "E. ORELL APARICIO",
+    "equipo": "CIUSABA BASQUET PLA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2446268",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969334&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2513564",
+    "nombre": "J. FERRE DÍAZ",
+    "equipo": "CIUSABA BASQUET PLA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2513564",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969334&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2563125",
+    "nombre": "P. MAYANS TORRES",
+    "equipo": "CIUSABA BASQUET PLA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2563125",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969334&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2513524",
+    "nombre": "C. GARCÍA MATAS ",
+    "equipo": "CIUSABA BASQUET PLA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2513524",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969334&ti=1",
+    "estadisticas": {
+      "puntos": 6.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2622750",
+    "nombre": "Á. JUNYER PERELLÓ",
+    "equipo": "CIUSABA BASQUET PLA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2622750",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969334&ti=1",
+    "estadisticas": {
+      "puntos": 3.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2642078",
+    "nombre": "I. GABARRO CASTELLS",
+    "equipo": "SESE A",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2642078",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952102&ti=1",
+    "estadisticas": {
+      "puntos": 5.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2360019",
+    "nombre": "A. CABANAS CAMACHO",
+    "equipo": "SESE A",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2360019",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952102&ti=1",
+    "estadisticas": {
+      "puntos": 9.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2530162",
+    "nombre": "M. GOMEZ MASCLANS",
+    "equipo": "SESE A",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2530162",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952102&ti=1",
+    "estadisticas": {
+      "puntos": 20.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2516243",
+    "nombre": "T. GALLARDO TIÓ",
+    "equipo": "SESE A",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2516243",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952102&ti=1",
+    "estadisticas": {
+      "puntos": 3.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2457763",
+    "nombre": "E. LÓPEZ REMÓN",
+    "equipo": "SESE A",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2457763",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952102&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2374140",
+    "nombre": "B. MARQUES FERNANDEZ",
+    "equipo": "SESE A",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2374140",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952102&ti=1",
+    "estadisticas": {
+      "puntos": 4.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2360828",
+    "nombre": "S. GRACIA DELGADO",
+    "equipo": "SESE A",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2360828",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952102&ti=1",
+    "estadisticas": {
+      "puntos": 9.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2466331",
+    "nombre": "H. COSTA BORJA",
+    "equipo": "SESE A",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2466331",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952102&ti=1",
+    "estadisticas": {
+      "puntos": 5.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2399484",
+    "nombre": "I. MONTANER GARCÍA",
+    "equipo": "SESE A",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2399484",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952102&ti=1",
+    "estadisticas": {
+      "puntos": 4.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2455300",
+    "nombre": "E. CASQUERO JOVELLANOS",
+    "equipo": "SESE A",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2455300",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952102&ti=1",
+    "estadisticas": {
+      "puntos": 7.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2465382",
+    "nombre": "H. RODERO ESTEVEZ",
+    "equipo": "SESE A",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2465382",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952102&ti=1",
+    "estadisticas": {
+      "puntos": 11.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2516952",
+    "nombre": "O. ACOSTA ROCA",
+    "equipo": "SESE A",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2516952",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952102&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2479275",
+    "nombre": "M. GIMENO LEÓN",
+    "equipo": "VALENCIA BASKET NARANJA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2479275",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=953003&ti=1",
+    "estadisticas": {
+      "puntos": 12.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2469500",
+    "nombre": "M. OLIVER SKROMEDA",
+    "equipo": "VALENCIA BASKET NARANJA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2469500",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=953003&ti=1",
+    "estadisticas": {
+      "puntos": 11.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2503021",
+    "nombre": "A. REGINFO CRUZ",
+    "equipo": "VALENCIA BASKET NARANJA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2503021",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=953003&ti=1",
+    "estadisticas": {
+      "puntos": 14.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2470165",
+    "nombre": "N. CANET MOLINA",
+    "equipo": "VALENCIA BASKET NARANJA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2470165",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=953003&ti=1",
+    "estadisticas": {
+      "puntos": 3.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2378881",
+    "nombre": "G. CID ROMERO",
+    "equipo": "VALENCIA BASKET NARANJA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2378881",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=953003&ti=1",
+    "estadisticas": {
+      "puntos": 26.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2440384",
+    "nombre": " . KENIG",
+    "equipo": "VALENCIA BASKET NARANJA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2440384",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=953003&ti=1",
+    "estadisticas": {
+      "puntos": 4.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2435603",
+    "nombre": "D. FERRER MORALES",
+    "equipo": "VALENCIA BASKET NARANJA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2435603",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=953003&ti=1",
+    "estadisticas": {
+      "puntos": 6.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2469317",
+    "nombre": "J. TAVERNER CABALLERO",
+    "equipo": "VALENCIA BASKET NARANJA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2469317",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=953003&ti=1",
+    "estadisticas": {
+      "puntos": 6.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2765062",
+    "nombre": "P. GEBHARDT",
+    "equipo": "VALENCIA BASKET NARANJA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2765062",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=953003&ti=1",
+    "estadisticas": {
+      "puntos": 7.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2441577",
+    "nombre": "M. BLASCO REY",
+    "equipo": "VALENCIA BASKET NARANJA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2441577",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=953003&ti=1",
+    "estadisticas": {
+      "puntos": 6.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2424174",
+    "nombre": "M. LOPEZ BARREIRO",
+    "equipo": "VALENCIA BASKET NARANJA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2424174",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=953003&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2441364",
+    "nombre": "M. DE SAN PASTOR GOMEZ",
+    "equipo": "VALENCIA BASKET NARANJA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2441364",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=953003&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -36380,7 +37724,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2586241",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=971246&ti=1",
     "estadisticas": {
-      "puntos": 3.0,
+      "puntos": 1.5,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -36394,7 +37738,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2619683",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=971246&ti=1",
     "estadisticas": {
-      "puntos": 0.0,
+      "puntos": 0.5,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -36408,7 +37752,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2407124",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=971246&ti=1",
     "estadisticas": {
-      "puntos": 13.0,
+      "puntos": 7.5,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -36422,7 +37766,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2526248",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=971246&ti=1",
     "estadisticas": {
-      "puntos": 7.0,
+      "puntos": 5.5,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -36436,7 +37780,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2764509",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=971246&ti=1",
     "estadisticas": {
-      "puntos": 8.0,
+      "puntos": 4.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -36450,7 +37794,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2525609",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=971246&ti=1",
     "estadisticas": {
-      "puntos": 4.0,
+      "puntos": 2.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -36464,7 +37808,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2670187",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=971246&ti=1",
     "estadisticas": {
-      "puntos": 8.0,
+      "puntos": 6.5,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -36478,7 +37822,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2525606",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=971246&ti=1",
     "estadisticas": {
-      "puntos": 2.0,
+      "puntos": 1.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -36492,7 +37836,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2763821",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=971246&ti=1",
     "estadisticas": {
-      "puntos": 2.0,
+      "puntos": 1.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -36506,7 +37850,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2526262",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=971246&ti=1",
     "estadisticas": {
-      "puntos": 15.0,
+      "puntos": 9.5,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -36520,7 +37864,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2526029",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=971246&ti=1",
     "estadisticas": {
-      "puntos": 2.0,
+      "puntos": 1.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -36534,7 +37878,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2475755",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=972300&ti=1",
     "estadisticas": {
-      "puntos": 0.0,
+      "puntos": 1.5,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -36548,7 +37892,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2441848",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=972300&ti=1",
     "estadisticas": {
-      "puntos": 0.0,
+      "puntos": 1.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -36562,7 +37906,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2475759",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=972300&ti=1",
     "estadisticas": {
-      "puntos": 15.0,
+      "puntos": 8.5,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -36576,7 +37920,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2475628",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=972300&ti=1",
     "estadisticas": {
-      "puntos": 6.0,
+      "puntos": 3.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -36590,7 +37934,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2475754",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=972300&ti=1",
     "estadisticas": {
-      "puntos": 15.0,
+      "puntos": 11.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -36604,7 +37948,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2562305",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=972300&ti=1",
     "estadisticas": {
-      "puntos": 16.0,
+      "puntos": 10.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -36618,7 +37962,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2475753",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=972300&ti=1",
     "estadisticas": {
-      "puntos": 2.0,
+      "puntos": 1.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -36632,7 +37976,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2475760",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=972300&ti=1",
     "estadisticas": {
-      "puntos": 6.0,
+      "puntos": 3.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -36660,7 +38004,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2492911",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=972300&ti=1",
     "estadisticas": {
-      "puntos": 0.0,
+      "puntos": 1.5,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -36688,7 +38032,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2560660",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=972300&ti=1",
     "estadisticas": {
-      "puntos": 27.0,
+      "puntos": 14.5,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -36857,6 +38201,1350 @@
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=964733&ti=1",
     "estadisticas": {
       "puntos": 7.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2559412",
+    "nombre": "O. RODRIGUEZ FALAGAN",
+    "equipo": "FORMASPACK-TVGA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2559412",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=958212&ti=1",
+    "estadisticas": {
+      "puntos": 1.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2559436",
+    "nombre": "H. CONDE PUERTA",
+    "equipo": "FORMASPACK-TVGA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2559436",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=958212&ti=1",
+    "estadisticas": {
+      "puntos": 5.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2559416",
+    "nombre": "T. QUINTANA BAZO",
+    "equipo": "FORMASPACK-TVGA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2559416",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=958212&ti=1",
+    "estadisticas": {
+      "puntos": 3.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2559410",
+    "nombre": "J. SASTRE EGUSQUIZA",
+    "equipo": "FORMASPACK-TVGA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2559410",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=958212&ti=1",
+    "estadisticas": {
+      "puntos": 5.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2559408",
+    "nombre": "M. MERODIO DE LA FUENTE",
+    "equipo": "FORMASPACK-TVGA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2559408",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=958212&ti=1",
+    "estadisticas": {
+      "puntos": 6.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2559413",
+    "nombre": "E. CHICO CARCOBA",
+    "equipo": "FORMASPACK-TVGA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2559413",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=958212&ti=1",
+    "estadisticas": {
+      "puntos": 6.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2559407",
+    "nombre": "J. LOPEZ COLLADO",
+    "equipo": "FORMASPACK-TVGA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2559407",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=958212&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2559403",
+    "nombre": "L. ALVAREZ ALLENDE",
+    "equipo": "FORMASPACK-TVGA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2559403",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=958212&ti=1",
+    "estadisticas": {
+      "puntos": 19.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2559406",
+    "nombre": "M. GANCEDO ISLA",
+    "equipo": "FORMASPACK-TVGA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2559406",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=958212&ti=1",
+    "estadisticas": {
+      "puntos": 6.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2559404",
+    "nombre": "M. CARCEDO EGUSQUIZA",
+    "equipo": "FORMASPACK-TVGA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2559404",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=958212&ti=1",
+    "estadisticas": {
+      "puntos": 6.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2559405",
+    "nombre": "J. DEL RIO MARTINEZ",
+    "equipo": "FORMASPACK-TVGA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2559405",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=958212&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2441445",
+    "nombre": "M. GARCIA SAÑUDO",
+    "equipo": "FORMASPACK-TVGA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2441445",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=958212&ti=1",
+    "estadisticas": {
+      "puntos": 22.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2450408",
+    "nombre": "N. FERNANDEZ BUENO",
+    "equipo": "EBG MÁLAGA FUNDACIÓN UNICAJA ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2450408",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970769&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2414187",
+    "nombre": "P. LORENTE GONZALEZ",
+    "equipo": "EBG MÁLAGA FUNDACIÓN UNICAJA ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2414187",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970769&ti=1",
+    "estadisticas": {
+      "puntos": 18.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2570862",
+    "nombre": "M. FORTUN FORTES",
+    "equipo": "EBG MÁLAGA FUNDACIÓN UNICAJA ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2570862",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970769&ti=1",
+    "estadisticas": {
+      "puntos": 10.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2332500",
+    "nombre": "J. URBANEJA LUCENA",
+    "equipo": "EBG MÁLAGA FUNDACIÓN UNICAJA ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2332500",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970769&ti=1",
+    "estadisticas": {
+      "puntos": 4.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2450330",
+    "nombre": "M. LOPEZ ORTEGA",
+    "equipo": "EBG MÁLAGA FUNDACIÓN UNICAJA ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2450330",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970769&ti=1",
+    "estadisticas": {
+      "puntos": 3.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2671686",
+    "nombre": "J. FONOLLOSA GARCÍA",
+    "equipo": "EBG MÁLAGA FUNDACIÓN UNICAJA ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2671686",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970769&ti=1",
+    "estadisticas": {
+      "puntos": 5.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2571317",
+    "nombre": "G. GÓMEZ JIMÉNEZ",
+    "equipo": "EBG MÁLAGA FUNDACIÓN UNICAJA ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2571317",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970769&ti=1",
+    "estadisticas": {
+      "puntos": 4.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2450010",
+    "nombre": "I. ZOTANO SÁNCHEZ",
+    "equipo": "EBG MÁLAGA FUNDACIÓN UNICAJA ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2450010",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970769&ti=1",
+    "estadisticas": {
+      "puntos": 3.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2450264",
+    "nombre": "M. SANTOS JIMÉNEZ",
+    "equipo": "EBG MÁLAGA FUNDACIÓN UNICAJA ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2450264",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970769&ti=1",
+    "estadisticas": {
+      "puntos": 16.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2450551",
+    "nombre": "R. SANTOS MARTINEZ",
+    "equipo": "EBG MÁLAGA FUNDACIÓN UNICAJA ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2450551",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970769&ti=1",
+    "estadisticas": {
+      "puntos": 3.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2571210",
+    "nombre": "M. CAMERO PEREZ",
+    "equipo": "EBG MÁLAGA FUNDACIÓN UNICAJA ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2571210",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970769&ti=1",
+    "estadisticas": {
+      "puntos": 4.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2413441",
+    "nombre": "H. CABEZAS LAZORCHYK",
+    "equipo": "EBG MÁLAGA FUNDACIÓN UNICAJA ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2413441",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970769&ti=1",
+    "estadisticas": {
+      "puntos": 12.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2390956",
+    "nombre": "T. BUSTELO BARBEITO",
+    "equipo": "A.D. MANUEL PELETEIRO",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2390956",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970570&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2563672",
+    "nombre": "N. RODRIGUEZ BAÑA",
+    "equipo": "A.D. MANUEL PELETEIRO",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2563672",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970570&ti=1",
+    "estadisticas": {
+      "puntos": 7.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2568748",
+    "nombre": "O. DIAZ MONTES",
+    "equipo": "A.D. MANUEL PELETEIRO",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2568748",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970570&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2681605",
+    "nombre": "M. MIRAMONTES VAZQUEZ",
+    "equipo": "A.D. MANUEL PELETEIRO",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2681605",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970570&ti=1",
+    "estadisticas": {
+      "puntos": 6.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2473086",
+    "nombre": "P. VAZQUEZ GARCIA",
+    "equipo": "A.D. MANUEL PELETEIRO",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2473086",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970570&ti=1",
+    "estadisticas": {
+      "puntos": 7.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2678297",
+    "nombre": "A. PARCERO SUAREZ",
+    "equipo": "A.D. MANUEL PELETEIRO",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2678297",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970570&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2472411",
+    "nombre": "A. PORTO VEIRAS",
+    "equipo": "A.D. MANUEL PELETEIRO",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2472411",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970570&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2562918",
+    "nombre": "A. OTERO BUCETA",
+    "equipo": "A.D. MANUEL PELETEIRO",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2562918",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970570&ti=1",
+    "estadisticas": {
+      "puntos": 3.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2472877",
+    "nombre": "P. MARTINEZ PAZOS",
+    "equipo": "A.D. MANUEL PELETEIRO",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2472877",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970570&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2472710",
+    "nombre": "O. GARCIA GONZALEZ",
+    "equipo": "A.D. MANUEL PELETEIRO",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2472710",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970570&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2678223",
+    "nombre": "J. VAZQUEZ GARCIA",
+    "equipo": "A.D. MANUEL PELETEIRO",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2678223",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970570&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2472881",
+    "nombre": "M. HERMIDA VIEITEZ",
+    "equipo": "A.D. MANUEL PELETEIRO",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2472881",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970570&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2477203",
+    "nombre": "M. FERRUZ TORAL",
+    "equipo": "EM EL OLIVAR A1",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2477203",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=963894&ti=1",
+    "estadisticas": {
+      "puntos": 8.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2405365",
+    "nombre": "A. SORO LOPEZ",
+    "equipo": "EM EL OLIVAR A1",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2405365",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=963894&ti=1",
+    "estadisticas": {
+      "puntos": 11.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2442457",
+    "nombre": "D. SANJUAN SIERRA",
+    "equipo": "EM EL OLIVAR A1",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2442457",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=963894&ti=1",
+    "estadisticas": {
+      "puntos": 5.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2579639",
+    "nombre": "S. NOE BLAS",
+    "equipo": "EM EL OLIVAR A1",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2579639",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=963894&ti=1",
+    "estadisticas": {
+      "puntos": 15.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2385358",
+    "nombre": "D. MARTI FERRER",
+    "equipo": "EM EL OLIVAR A1",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2385358",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=963894&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2351488",
+    "nombre": "M. GRACIA AYLON",
+    "equipo": "EM EL OLIVAR A1",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2351488",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=963894&ti=1",
+    "estadisticas": {
+      "puntos": 4.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2351098",
+    "nombre": "N. PEREZ CALLES",
+    "equipo": "EM EL OLIVAR A1",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2351098",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=963894&ti=1",
+    "estadisticas": {
+      "puntos": 23.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2584720",
+    "nombre": "M. LOPEZ HURTADO",
+    "equipo": "EM EL OLIVAR A1",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2584720",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=963894&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2385362",
+    "nombre": "S. DE BAUTISTA FREILE",
+    "equipo": "EM EL OLIVAR A1",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2385362",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=963894&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2442983",
+    "nombre": "C. CILLA ISAEVA",
+    "equipo": "EM EL OLIVAR A1",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2442983",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=963894&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2582361",
+    "nombre": "S. VAZQUEZ CINCA",
+    "equipo": "EM EL OLIVAR A1",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2582361",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=963894&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2579645",
+    "nombre": "P. SANCHEZ GARCIA",
+    "equipo": "EM EL OLIVAR A1",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2579645",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=963894&ti=1",
+    "estadisticas": {
+      "puntos": 3.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2670692",
+    "nombre": "L. CORRAL PRIETO",
+    "equipo": "SINGIEVALUE BBCA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2670692",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=962259&ti=1",
+    "estadisticas": {
+      "puntos": 4.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2564264",
+    "nombre": "A. FUENTES CUBERO",
+    "equipo": "SINGIEVALUE BBCA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2564264",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=962259&ti=1",
+    "estadisticas": {
+      "puntos": 14.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2477429",
+    "nombre": "E. HENRIQUE SOLIÑO",
+    "equipo": "SINGIEVALUE BBCA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2477429",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=962259&ti=1",
+    "estadisticas": {
+      "puntos": 6.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2564262",
+    "nombre": "M. MIRAZ PICO",
+    "equipo": "SINGIEVALUE BBCA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2564262",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=962259&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2386267",
+    "nombre": "M. GONZALEZ-LLANOS ANDIA",
+    "equipo": "SINGIEVALUE BBCA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2386267",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=962259&ti=1",
+    "estadisticas": {
+      "puntos": 3.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2335238",
+    "nombre": "A. BLANCO LOPEZ",
+    "equipo": "SINGIEVALUE BBCA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2335238",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=962259&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2472276",
+    "nombre": "C. CAMPELLO BARCIA",
+    "equipo": "SINGIEVALUE BBCA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2472276",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=962259&ti=1",
+    "estadisticas": {
+      "puntos": 18.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2472488",
+    "nombre": "A. TENREIRO ROCHA",
+    "equipo": "SINGIEVALUE BBCA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2472488",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=962259&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2385702",
+    "nombre": "G. DIAZ CANEJA CASAS",
+    "equipo": "SINGIEVALUE BBCA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2385702",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=962259&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2471771",
+    "nombre": "A. SILVAR DURAN",
+    "equipo": "SINGIEVALUE BBCA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2471771",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=962259&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2340207",
+    "nombre": "J. GAGO LAMAS",
+    "equipo": "SINGIEVALUE BBCA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2340207",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=962259&ti=1",
+    "estadisticas": {
+      "puntos": 8.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2335236",
+    "nombre": "P. FERNANDEZ MOLINS",
+    "equipo": "SINGIEVALUE BBCA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2335236",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=962259&ti=1",
+    "estadisticas": {
+      "puntos": 18.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2581583",
+    "nombre": "G. DE LA CRUZ ZAMORANO",
+    "equipo": "BASKET SANTA CRUZ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2581583",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970253&ti=1",
+    "estadisticas": {
+      "puntos": 8.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2581587",
+    "nombre": "Á. AMADOR MORINI",
+    "equipo": "BASKET SANTA CRUZ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2581587",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970253&ti=1",
+    "estadisticas": {
+      "puntos": 5.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2590240",
+    "nombre": "I. ALEMÁN SÁNCHEZ",
+    "equipo": "BASKET SANTA CRUZ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2590240",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970253&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2589993",
+    "nombre": "O. TORRES DELGADO",
+    "equipo": "BASKET SANTA CRUZ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2589993",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970253&ti=1",
+    "estadisticas": {
+      "puntos": 21.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2590006",
+    "nombre": "J. GIL RODRIGUEZ",
+    "equipo": "BASKET SANTA CRUZ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2590006",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970253&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2444730",
+    "nombre": "F. NIANG DÍAZ",
+    "equipo": "BASKET SANTA CRUZ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2444730",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970253&ti=1",
+    "estadisticas": {
+      "puntos": 12.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2589972",
+    "nombre": "E. MARTÍNEZ PÉREZ",
+    "equipo": "BASKET SANTA CRUZ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2589972",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970253&ti=1",
+    "estadisticas": {
+      "puntos": 8.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2444483",
+    "nombre": "J. FERRERA GARCÍA",
+    "equipo": "BASKET SANTA CRUZ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2444483",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970253&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2580193",
+    "nombre": "P. CHAVEZ TUDELA",
+    "equipo": "BASKET SANTA CRUZ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2580193",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970253&ti=1",
+    "estadisticas": {
+      "puntos": 7.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2444574",
+    "nombre": "E. EMOS EKEKE",
+    "equipo": "BASKET SANTA CRUZ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2444574",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970253&ti=1",
+    "estadisticas": {
+      "puntos": 10.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2746609",
+    "nombre": "H. DIOP",
+    "equipo": "BASKET SANTA CRUZ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2746609",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970253&ti=1",
+    "estadisticas": {
+      "puntos": 32.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2590004",
+    "nombre": "J. JIMENEZ VELÁZQUEZ",
+    "equipo": "BASKET SANTA CRUZ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2590004",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970253&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2622514",
+    "nombre": "I. MOYA IBAÑEZ",
+    "equipo": "DÜRER CP LA RODA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2622514",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952789&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2622510",
+    "nombre": "H. GATO GASCÓN",
+    "equipo": "DÜRER CP LA RODA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2622510",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952789&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2622506",
+    "nombre": "M. ALARCÓN BAUTISTA",
+    "equipo": "DÜRER CP LA RODA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2622506",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952789&ti=1",
+    "estadisticas": {
+      "puntos": 3.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2695602",
+    "nombre": "D. LOPEZ VALVERDE",
+    "equipo": "DÜRER CP LA RODA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2695602",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952789&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2622503",
+    "nombre": "G. RUBIO CORTIJO",
+    "equipo": "DÜRER CP LA RODA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2622503",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952789&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2622499",
+    "nombre": "N. BERRUGA SAEZ",
+    "equipo": "DÜRER CP LA RODA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2622499",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952789&ti=1",
+    "estadisticas": {
+      "puntos": 5.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2622502",
+    "nombre": "M. MARTIN DE LA VEGA CARRETERO",
+    "equipo": "DÜRER CP LA RODA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2622502",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952789&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2622505",
+    "nombre": "D. AROCA AGUILAR",
+    "equipo": "DÜRER CP LA RODA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2622505",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952789&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2622504",
+    "nombre": "A. CEBRIAN LOZANO",
+    "equipo": "DÜRER CP LA RODA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2622504",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952789&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2784854",
+    "nombre": "N. CEBRIAN BAUTISTA",
+    "equipo": "DÜRER CP LA RODA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2784854",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952789&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2796675",
+    "nombre": "B. NGATCHA HEULEU",
+    "equipo": "DÜRER CP LA RODA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2796675",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952789&ti=1",
+    "estadisticas": {
+      "puntos": 4.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2443524",
+    "nombre": "A. GARCIA GARCIA DE LEON GONZALEZ",
+    "equipo": "DÜRER CP LA RODA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2443524",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952789&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2446448",
+    "nombre": "I. SERRA RAMÍREZ",
+    "equipo": "SA POBLA BC GAROL PROJECTES EN VIDRE I ALUMINI A ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2446448",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970983&ti=1",
+    "estadisticas": {
+      "puntos": 6.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2408644",
+    "nombre": "M. ALBERTÍ MATEU",
+    "equipo": "SA POBLA BC GAROL PROJECTES EN VIDRE I ALUMINI A ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2408644",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970983&ti=1",
+    "estadisticas": {
+      "puntos": 11.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2408645",
+    "nombre": "G. ALBERTÍ MATEU",
+    "equipo": "SA POBLA BC GAROL PROJECTES EN VIDRE I ALUMINI A ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2408645",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970983&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2446031",
+    "nombre": "P. PONS PONS",
+    "equipo": "SA POBLA BC GAROL PROJECTES EN VIDRE I ALUMINI A ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2446031",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970983&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2523654",
+    "nombre": "M. SERRA LÓPEZ",
+    "equipo": "SA POBLA BC GAROL PROJECTES EN VIDRE I ALUMINI A ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2523654",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970983&ti=1",
+    "estadisticas": {
+      "puntos": 4.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2446080",
+    "nombre": "J. LLOBERA  MATEU",
+    "equipo": "SA POBLA BC GAROL PROJECTES EN VIDRE I ALUMINI A ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2446080",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970983&ti=1",
+    "estadisticas": {
+      "puntos": 7.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2445972",
+    "nombre": "P. POL PAYERAS",
+    "equipo": "SA POBLA BC GAROL PROJECTES EN VIDRE I ALUMINI A ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2445972",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970983&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2446295",
+    "nombre": "C. PASCUAL MESTRE",
+    "equipo": "SA POBLA BC GAROL PROJECTES EN VIDRE I ALUMINI A ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2446295",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970983&ti=1",
+    "estadisticas": {
+      "puntos": 17.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2446073",
+    "nombre": "X. CLADERA PARETS",
+    "equipo": "SA POBLA BC GAROL PROJECTES EN VIDRE I ALUMINI A ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2446073",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970983&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2446079",
+    "nombre": "D. ALZINA BENNASAR",
+    "equipo": "SA POBLA BC GAROL PROJECTES EN VIDRE I ALUMINI A ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2446079",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970983&ti=1",
+    "estadisticas": {
+      "puntos": 13.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2446438",
+    "nombre": "Q. GIL CUENCA",
+    "equipo": "SA POBLA BC GAROL PROJECTES EN VIDRE I ALUMINI A ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2446438",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970983&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2565916",
+    "nombre": "M. SÁNCHEZ BUADES",
+    "equipo": "SA POBLA BC GAROL PROJECTES EN VIDRE I ALUMINI A ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI MASC",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2565916",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970983&ti=1",
+    "estadisticas": {
+      "puntos": 10.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -37052,7 +39740,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2794494",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=977136&ti=1",
     "estadisticas": {
-      "puntos": 9.0,
+      "puntos": 5.5,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -37066,7 +39754,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2794617",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=977136&ti=1",
     "estadisticas": {
-      "puntos": 1.0,
+      "puntos": 0.5,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -37080,7 +39768,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2792372",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=977136&ti=1",
     "estadisticas": {
-      "puntos": 1.0,
+      "puntos": 0.5,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -37094,7 +39782,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2405783",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=977136&ti=1",
     "estadisticas": {
-      "puntos": 7.0,
+      "puntos": 3.5,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -37108,7 +39796,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2796123",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=977136&ti=1",
     "estadisticas": {
-      "puntos": 16.0,
+      "puntos": 10.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -37122,7 +39810,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2405786",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=977136&ti=1",
     "estadisticas": {
-      "puntos": 10.0,
+      "puntos": 8.5,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -37164,7 +39852,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2796159",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=977136&ti=1",
     "estadisticas": {
-      "puntos": 4.0,
+      "puntos": 4.5,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -37178,7 +39866,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2708114",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=977136&ti=1",
     "estadisticas": {
-      "puntos": 25.0,
+      "puntos": 15.5,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -37192,7 +39880,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2793293",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=977136&ti=1",
     "estadisticas": {
-      "puntos": 5.0,
+      "puntos": 2.5,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -37206,7 +39894,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2788912",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969670&ti=1",
     "estadisticas": {
-      "puntos": 0.0,
+      "puntos": 0.5,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -37248,7 +39936,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2788913",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969670&ti=1",
     "estadisticas": {
-      "puntos": 4.0,
+      "puntos": 3.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -37290,7 +39978,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2788911",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969670&ti=1",
     "estadisticas": {
-      "puntos": 6.0,
+      "puntos": 4.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -37304,7 +39992,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2697169",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969670&ti=1",
     "estadisticas": {
-      "puntos": 2.0,
+      "puntos": 1.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -37332,7 +40020,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2582045",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969670&ti=1",
     "estadisticas": {
-      "puntos": 4.0,
+      "puntos": 3.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -37346,7 +40034,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2698084",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969670&ti=1",
     "estadisticas": {
-      "puntos": 12.0,
+      "puntos": 7.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -37360,7 +40048,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2582652",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969670&ti=1",
     "estadisticas": {
-      "puntos": 3.0,
+      "puntos": 3.5,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -37542,7 +40230,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2741291",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=967390&ti=1",
     "estadisticas": {
-      "puntos": 4.0,
+      "puntos": 6.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -37584,7 +40272,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2595138",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=967390&ti=1",
     "estadisticas": {
-      "puntos": 9.0,
+      "puntos": 11.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -37598,7 +40286,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2596171",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=967390&ti=1",
     "estadisticas": {
-      "puntos": 10.0,
+      "puntos": 12.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -37626,7 +40314,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2571108",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=967390&ti=1",
     "estadisticas": {
-      "puntos": 10.0,
+      "puntos": 24.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -37668,7 +40356,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2741289",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=967390&ti=1",
     "estadisticas": {
-      "puntos": 6.0,
+      "puntos": 8.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -37682,7 +40370,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2741290",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=967390&ti=1",
     "estadisticas": {
-      "puntos": 0.0,
+      "puntos": 3.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -37724,7 +40412,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2443116",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=963899&ti=1",
     "estadisticas": {
-      "puntos": 5.0,
+      "puntos": 7.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -37738,7 +40426,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2476228",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=963899&ti=1",
     "estadisticas": {
-      "puntos": 0.0,
+      "puntos": 2.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -37766,7 +40454,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2480065",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=963899&ti=1",
     "estadisticas": {
-      "puntos": 2.0,
+      "puntos": 5.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -37780,7 +40468,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2416078",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=963899&ti=1",
     "estadisticas": {
-      "puntos": 2.0,
+      "puntos": 3.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -37794,7 +40482,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2415963",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=963899&ti=1",
     "estadisticas": {
-      "puntos": 5.0,
+      "puntos": 16.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -37836,7 +40524,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2480210",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=963899&ti=1",
     "estadisticas": {
-      "puntos": 0.0,
+      "puntos": 3.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -38192,6 +40880,678 @@
     }
   },
   {
+    "id": "2545907",
+    "nombre": "C. CID MORA",
+    "equipo": "MOVISTAR ESTUDIANTES \"JUANA\"",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2545907",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969205&ti=1",
+    "estadisticas": {
+      "puntos": 8.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2624511",
+    "nombre": "M. DORADO VALVERDE",
+    "equipo": "MOVISTAR ESTUDIANTES \"JUANA\"",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2624511",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969205&ti=1",
+    "estadisticas": {
+      "puntos": 3.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2500911",
+    "nombre": "I. GARCÍA BAUTISTA",
+    "equipo": "MOVISTAR ESTUDIANTES \"JUANA\"",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2500911",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969205&ti=1",
+    "estadisticas": {
+      "puntos": 3.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2550476",
+    "nombre": "E. APARICIO SANZ",
+    "equipo": "MOVISTAR ESTUDIANTES \"JUANA\"",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2550476",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969205&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2756273",
+    "nombre": "J. DOMINGUEZ LITUBA",
+    "equipo": "MOVISTAR ESTUDIANTES \"JUANA\"",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2756273",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969205&ti=1",
+    "estadisticas": {
+      "puntos": 5.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2606046",
+    "nombre": "M. GRANADOS SEVILLANO",
+    "equipo": "MOVISTAR ESTUDIANTES \"JUANA\"",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2606046",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969205&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2541317",
+    "nombre": "L. POLVORINOS GASPAR",
+    "equipo": "MOVISTAR ESTUDIANTES \"JUANA\"",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2541317",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969205&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2495865",
+    "nombre": "C. SANTOS SANTOS",
+    "equipo": "MOVISTAR ESTUDIANTES \"JUANA\"",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2495865",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969205&ti=1",
+    "estadisticas": {
+      "puntos": 11.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2648512",
+    "nombre": "A. LOPEZ DE LA REINA BOHACEC",
+    "equipo": "MOVISTAR ESTUDIANTES \"JUANA\"",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2648512",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969205&ti=1",
+    "estadisticas": {
+      "puntos": 6.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2546239",
+    "nombre": "J. DE LA FUENTE LLORENTE",
+    "equipo": "MOVISTAR ESTUDIANTES \"JUANA\"",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2546239",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969205&ti=1",
+    "estadisticas": {
+      "puntos": 3.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2548444",
+    "nombre": "N. ALARCÓN SÁNCHEZ",
+    "equipo": "MOVISTAR ESTUDIANTES \"JUANA\"",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2548444",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969205&ti=1",
+    "estadisticas": {
+      "puntos": 3.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2605990",
+    "nombre": "V. JIMENEZ PEREZ",
+    "equipo": "MOVISTAR ESTUDIANTES \"JUANA\"",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2605990",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969205&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2522413",
+    "nombre": "L. LIZ DIEGUEZ",
+    "equipo": "BARÇA CBS",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2522413",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=958186&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2397872",
+    "nombre": "A. MORENO SANCHEZ",
+    "equipo": "BARÇA CBS",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2397872",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=958186&ti=1",
+    "estadisticas": {
+      "puntos": 4.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2457624",
+    "nombre": "N. LLORENS RANGIL",
+    "equipo": "BARÇA CBS",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2457624",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=958186&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2463971",
+    "nombre": "C. LOPEZ PINO",
+    "equipo": "BARÇA CBS",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2463971",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=958186&ti=1",
+    "estadisticas": {
+      "puntos": 10.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2465231",
+    "nombre": "M. BALCELLS SORIANO",
+    "equipo": "BARÇA CBS",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2465231",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=958186&ti=1",
+    "estadisticas": {
+      "puntos": 13.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2522061",
+    "nombre": "A. CERDÀ MATÉ",
+    "equipo": "BARÇA CBS",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2522061",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=958186&ti=1",
+    "estadisticas": {
+      "puntos": 5.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2463790",
+    "nombre": "C. VIDAL MARIANA",
+    "equipo": "BARÇA CBS",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2463790",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=958186&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2314698",
+    "nombre": "C. BARCELO ANGULO",
+    "equipo": "BARÇA CBS",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2314698",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=958186&ti=1",
+    "estadisticas": {
+      "puntos": 12.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2399052",
+    "nombre": "I. CARRO PERNI",
+    "equipo": "BARÇA CBS",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2399052",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=958186&ti=1",
+    "estadisticas": {
+      "puntos": 4.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2649605",
+    "nombre": "C. MIRO MORA",
+    "equipo": "BARÇA CBS",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2649605",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=958186&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2358632",
+    "nombre": "J. BAIGET ROBLES",
+    "equipo": "BARÇA CBS",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2358632",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=958186&ti=1",
+    "estadisticas": {
+      "puntos": 3.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2458182",
+    "nombre": "E. MARTINEZ DOMINGO",
+    "equipo": "BARÇA CBS",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2458182",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=958186&ti=1",
+    "estadisticas": {
+      "puntos": 8.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2566273",
+    "nombre": "A. SALDISE ZORZANO",
+    "equipo": "SAN CERNIN \"AZUL\"",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2566273",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970124&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2566996",
+    "nombre": "A. CILVETI MELLADO",
+    "equipo": "SAN CERNIN \"AZUL\"",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2566996",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970124&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2474723",
+    "nombre": "I. GONZALEZ TOME",
+    "equipo": "SAN CERNIN \"AZUL\"",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2474723",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970124&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2474762",
+    "nombre": "L. REY AMEZCUA",
+    "equipo": "SAN CERNIN \"AZUL\"",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2474762",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970124&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2474758",
+    "nombre": "P. RODRIGUEZ BATALLA",
+    "equipo": "SAN CERNIN \"AZUL\"",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2474758",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970124&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2475771",
+    "nombre": "V. AGUIRRE VILLAR",
+    "equipo": "SAN CERNIN \"AZUL\"",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2475771",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970124&ti=1",
+    "estadisticas": {
+      "puntos": 5.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2475025",
+    "nombre": "A. RECALDE ECHALECU",
+    "equipo": "SAN CERNIN \"AZUL\"",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2475025",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970124&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2474756",
+    "nombre": "M. VIRTO AMEZCUA",
+    "equipo": "SAN CERNIN \"AZUL\"",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2474756",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970124&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2475506",
+    "nombre": "A. VIEDMA GILA",
+    "equipo": "SAN CERNIN \"AZUL\"",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2475506",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970124&ti=1",
+    "estadisticas": {
+      "puntos": 1.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2474757",
+    "nombre": "N. SOLE GOYEN",
+    "equipo": "SAN CERNIN \"AZUL\"",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2474757",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970124&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2767660",
+    "nombre": "S. ROMERO MARTIN",
+    "equipo": "SAN CERNIN \"AZUL\"",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2767660",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970124&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2681829",
+    "nombre": "I. GAVARI LECUMBERRI",
+    "equipo": "SAN CERNIN \"AZUL\"",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2681829",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=970124&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2470478",
+    "nombre": "C. SANCHEZ MAÑO",
+    "equipo": "VALENCIA BASKET NARANJA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2470478",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952958&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2470153",
+    "nombre": "A. QUILES LOPEZ",
+    "equipo": "VALENCIA BASKET NARANJA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2470153",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952958&ti=1",
+    "estadisticas": {
+      "puntos": 6.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2467769",
+    "nombre": "A. MINGUEZ NAJAR",
+    "equipo": "VALENCIA BASKET NARANJA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2467769",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952958&ti=1",
+    "estadisticas": {
+      "puntos": 13.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2556059",
+    "nombre": "M. SIRERA TARAZON",
+    "equipo": "VALENCIA BASKET NARANJA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2556059",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952958&ti=1",
+    "estadisticas": {
+      "puntos": 9.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2470171",
+    "nombre": "L. ESQUIBEL GUARDIA",
+    "equipo": "VALENCIA BASKET NARANJA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2470171",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952958&ti=1",
+    "estadisticas": {
+      "puntos": 5.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2467768",
+    "nombre": "A. OHIA SYLLA",
+    "equipo": "VALENCIA BASKET NARANJA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2467768",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952958&ti=1",
+    "estadisticas": {
+      "puntos": 7.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2423283",
+    "nombre": "C. GARCIA MUÑOZ",
+    "equipo": "VALENCIA BASKET NARANJA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2423283",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952958&ti=1",
+    "estadisticas": {
+      "puntos": 4.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2470173",
+    "nombre": "Á. LOZANO GIMENEZ",
+    "equipo": "VALENCIA BASKET NARANJA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2470173",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952958&ti=1",
+    "estadisticas": {
+      "puntos": 5.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2467848",
+    "nombre": "A. COHEN HERNANDEZ",
+    "equipo": "VALENCIA BASKET NARANJA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2467848",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952958&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2434846",
+    "nombre": "C. LOPEZ VALLS",
+    "equipo": "VALENCIA BASKET NARANJA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2434846",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952958&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2555762",
+    "nombre": "V. HERNANDEZ MARTINEZ",
+    "equipo": "VALENCIA BASKET NARANJA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2555762",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952958&ti=1",
+    "estadisticas": {
+      "puntos": 3.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2651628",
+    "nombre": "L. KOVACIK",
+    "equipo": "VALENCIA BASKET NARANJA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2651628",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=952958&ti=1",
+    "estadisticas": {
+      "puntos": 6.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
     "id": "2763793",
     "nombre": "L. LOPEZ ACHA",
     "equipo": "HELEN DORON AGUSTINAS BASKET",
@@ -38536,7 +41896,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2511888",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=966480&ti=1",
     "estadisticas": {
-      "puntos": 0.0,
+      "puntos": 2.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -38592,7 +41952,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2506951",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=966480&ti=1",
     "estadisticas": {
-      "puntos": 7.0,
+      "puntos": 12.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -38606,7 +41966,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2633817",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=966480&ti=1",
     "estadisticas": {
-      "puntos": 0.0,
+      "puntos": 3.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -38620,7 +41980,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2501004",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=966480&ti=1",
     "estadisticas": {
-      "puntos": 0.0,
+      "puntos": 1.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -38648,7 +42008,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2511887",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=966480&ti=1",
     "estadisticas": {
-      "puntos": 7.0,
+      "puntos": 11.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -38690,7 +42050,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2501002",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=966480&ti=1",
     "estadisticas": {
-      "puntos": 3.0,
+      "puntos": 6.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -38732,7 +42092,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2501258",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=953203&ti=1",
     "estadisticas": {
-      "puntos": 5.0,
+      "puntos": 16.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -38760,7 +42120,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2434172",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=953203&ti=1",
     "estadisticas": {
-      "puntos": 3.0,
+      "puntos": 10.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -38788,7 +42148,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2539544",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=953203&ti=1",
     "estadisticas": {
-      "puntos": 8.0,
+      "puntos": 17.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -38886,7 +42246,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2408875",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=968098&ti=1",
     "estadisticas": {
-      "puntos": 11.0,
+      "puntos": 13.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -38914,7 +42274,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2443023",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=968098&ti=1",
     "estadisticas": {
-      "puntos": 12.0,
+      "puntos": 24.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -38970,7 +42330,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2704235",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=968098&ti=1",
     "estadisticas": {
-      "puntos": 3.0,
+      "puntos": 5.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -39012,7 +42372,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2482130",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=968098&ti=1",
     "estadisticas": {
-      "puntos": 2.0,
+      "puntos": 4.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -39054,7 +42414,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2662048",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=961137&ti=1",
     "estadisticas": {
-      "puntos": 8.0,
+      "puntos": 10.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -39082,7 +42442,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2470882",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=961137&ti=1",
     "estadisticas": {
-      "puntos": 2.0,
+      "puntos": 3.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -39124,7 +42484,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2470883",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=961137&ti=1",
     "estadisticas": {
-      "puntos": 2.0,
+      "puntos": 4.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -39166,7 +42526,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2482713",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=961137&ti=1",
     "estadisticas": {
-      "puntos": 3.0,
+      "puntos": 6.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -39180,7 +42540,7 @@
     "foto": "https://imagenes.feb.es/foto.aspx?c=2563770",
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=961137&ti=1",
     "estadisticas": {
-      "puntos": 3.0,
+      "puntos": 5.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }
@@ -39531,6 +42891,1994 @@
     "team_logo": "https://imagenes.feb.es/imagen.aspx?i=962458&ti=1",
     "estadisticas": {
       "puntos": 13.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2796507",
+    "nombre": "C. VAZQUEZ ATIENZA",
+    "equipo": "COLEGIO SAN AGUSTIN",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2796507",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=977160&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2796396",
+    "nombre": "R. RODRÍGUEZ LÓPEZ",
+    "equipo": "COLEGIO SAN AGUSTIN",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2796396",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=977160&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2701080",
+    "nombre": "J. AYALA SEGLAR",
+    "equipo": "COLEGIO SAN AGUSTIN",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2701080",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=977160&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2701074",
+    "nombre": "A. ARRAZUELA BLANCO",
+    "equipo": "COLEGIO SAN AGUSTIN",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2701074",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=977160&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2701079",
+    "nombre": "C. CELAYA ASENJO",
+    "equipo": "COLEGIO SAN AGUSTIN",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2701079",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=977160&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2796395",
+    "nombre": "I. MOHAMED HOSSAIN",
+    "equipo": "COLEGIO SAN AGUSTIN",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2796395",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=977160&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2701075",
+    "nombre": "C. MIRANDA GALINDO",
+    "equipo": "COLEGIO SAN AGUSTIN",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2701075",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=977160&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2796509",
+    "nombre": "L. PONS PEREZ",
+    "equipo": "COLEGIO SAN AGUSTIN",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2796509",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=977160&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2796397",
+    "nombre": "S. FERNANDEZ CORTINA",
+    "equipo": "COLEGIO SAN AGUSTIN",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2796397",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=977160&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2796394",
+    "nombre": "A. VAZQUEZ OLIVEIRA",
+    "equipo": "COLEGIO SAN AGUSTIN",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2796394",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=977160&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2701073",
+    "nombre": "A. GARCIA GALVAN",
+    "equipo": "COLEGIO SAN AGUSTIN",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2701073",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=977160&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2796426",
+    "nombre": "C. BECERRA GOMEZ",
+    "equipo": "COLEGIO SAN AGUSTIN",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2796426",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=977160&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2387382",
+    "nombre": "O. ACUÑA LAMILLA",
+    "equipo": "ACADEMIA CELTA SAVINO DEL BENE",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2387382",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=971642&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2756698",
+    "nombre": "A. MARTINEZ GULIAS",
+    "equipo": "ACADEMIA CELTA SAVINO DEL BENE",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2756698",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=971642&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2442586",
+    "nombre": "V. FERNANDEZ SIMON",
+    "equipo": "ACADEMIA CELTA SAVINO DEL BENE",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2442586",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=971642&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2437403",
+    "nombre": "C. WILSON VALVERDE",
+    "equipo": "ACADEMIA CELTA SAVINO DEL BENE",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2437403",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=971642&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2387396",
+    "nombre": "C. RODRIGUEZ MOSTEIRO",
+    "equipo": "ACADEMIA CELTA SAVINO DEL BENE",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2387396",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=971642&ti=1",
+    "estadisticas": {
+      "puntos": 15.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2387446",
+    "nombre": "C. ALONSO MARTIN",
+    "equipo": "ACADEMIA CELTA SAVINO DEL BENE",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2387446",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=971642&ti=1",
+    "estadisticas": {
+      "puntos": 8.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2387452",
+    "nombre": "A. VERDERA RICO",
+    "equipo": "ACADEMIA CELTA SAVINO DEL BENE",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2387452",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=971642&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2387351",
+    "nombre": "M. GONZALEZ DOCAMPO",
+    "equipo": "ACADEMIA CELTA SAVINO DEL BENE",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2387351",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=971642&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2387464",
+    "nombre": "R. GOMEZ AMAT",
+    "equipo": "ACADEMIA CELTA SAVINO DEL BENE",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2387464",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=971642&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2442593",
+    "nombre": "S. SAEZ SANDOVAL",
+    "equipo": "ACADEMIA CELTA SAVINO DEL BENE",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2442593",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=971642&ti=1",
+    "estadisticas": {
+      "puntos": 5.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2442581",
+    "nombre": "S. ALVAREZ PRIETO",
+    "equipo": "ACADEMIA CELTA SAVINO DEL BENE",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2442581",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=971642&ti=1",
+    "estadisticas": {
+      "puntos": 8.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2563336",
+    "nombre": "S. GOMEZ RIVEIRO",
+    "equipo": "ACADEMIA CELTA SAVINO DEL BENE",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2563336",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=971642&ti=1",
+    "estadisticas": {
+      "puntos": 7.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2560086",
+    "nombre": "P. ROSALES GARCIA",
+    "equipo": "XTRATOS-TVGA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2560086",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=962981&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2560088",
+    "nombre": "M. BUSTAMANTE IZA",
+    "equipo": "XTRATOS-TVGA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2560088",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=962981&ti=1",
+    "estadisticas": {
+      "puntos": 3.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2560090",
+    "nombre": "A. GUTIERREZ ESTEBANEZ",
+    "equipo": "XTRATOS-TVGA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2560090",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=962981&ti=1",
+    "estadisticas": {
+      "puntos": 4.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2560095",
+    "nombre": "L. CAYON FERNANDEZ",
+    "equipo": "XTRATOS-TVGA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2560095",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=962981&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2560092",
+    "nombre": "A. FUENTES IBAÑEZ",
+    "equipo": "XTRATOS-TVGA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2560092",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=962981&ti=1",
+    "estadisticas": {
+      "puntos": 3.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2560096",
+    "nombre": "A. CASTRO ESTEBAN",
+    "equipo": "XTRATOS-TVGA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2560096",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=962981&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2661658",
+    "nombre": "S. SORDO INGUANZO",
+    "equipo": "XTRATOS-TVGA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2661658",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=962981&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2559620",
+    "nombre": "V. TORRES POLANCO",
+    "equipo": "XTRATOS-TVGA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2559620",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=962981&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2560085",
+    "nombre": "S. JALLOH UZURIAGA",
+    "equipo": "XTRATOS-TVGA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2560085",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=962981&ti=1",
+    "estadisticas": {
+      "puntos": 29.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2560091",
+    "nombre": "D. SAN JUAN RUIZ",
+    "equipo": "XTRATOS-TVGA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2560091",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=962981&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2560093",
+    "nombre": "N. PERNIA BENGOCHEA",
+    "equipo": "XTRATOS-TVGA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2560093",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=962981&ti=1",
+    "estadisticas": {
+      "puntos": 8.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2560094",
+    "nombre": "E. GUTIERREZ MIER",
+    "equipo": "XTRATOS-TVGA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2560094",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=962981&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2438225",
+    "nombre": "M. RUESCAS OSTOS",
+    "equipo": "LA SALLE PALMA 3D IMPLANTES A ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2438225",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=964003&ti=1",
+    "estadisticas": {
+      "puntos": 10.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2652088",
+    "nombre": "L. GONZÁLEZ ANTUÑA",
+    "equipo": "LA SALLE PALMA 3D IMPLANTES A ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2652088",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=964003&ti=1",
+    "estadisticas": {
+      "puntos": 28.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2513637",
+    "nombre": "C. ELU MENA",
+    "equipo": "LA SALLE PALMA 3D IMPLANTES A ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2513637",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=964003&ti=1",
+    "estadisticas": {
+      "puntos": 6.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2446317",
+    "nombre": "D. MOYA CEREZUELA",
+    "equipo": "LA SALLE PALMA 3D IMPLANTES A ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2446317",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=964003&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2514540",
+    "nombre": "P. ARRANZ SORIA",
+    "equipo": "LA SALLE PALMA 3D IMPLANTES A ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2514540",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=964003&ti=1",
+    "estadisticas": {
+      "puntos": 5.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2438178",
+    "nombre": "N. MARTÍNEZ GARCÍA",
+    "equipo": "LA SALLE PALMA 3D IMPLANTES A ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2438178",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=964003&ti=1",
+    "estadisticas": {
+      "puntos": 5.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2558861",
+    "nombre": "G. CAPÓ CALDENTEY",
+    "equipo": "LA SALLE PALMA 3D IMPLANTES A ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2558861",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=964003&ti=1",
+    "estadisticas": {
+      "puntos": 13.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2513986",
+    "nombre": "A. FIGUEROLA ROBLES",
+    "equipo": "LA SALLE PALMA 3D IMPLANTES A ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2513986",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=964003&ti=1",
+    "estadisticas": {
+      "puntos": 4.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2514500",
+    "nombre": "M. GENÉ DOMÍNGUEZ",
+    "equipo": "LA SALLE PALMA 3D IMPLANTES A ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2514500",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=964003&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2513345",
+    "nombre": "A. MARISTANY MENA",
+    "equipo": "LA SALLE PALMA 3D IMPLANTES A ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2513345",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=964003&ti=1",
+    "estadisticas": {
+      "puntos": 4.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2514527",
+    "nombre": "N. MUÑOZ OLIVA",
+    "equipo": "LA SALLE PALMA 3D IMPLANTES A ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2514527",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=964003&ti=1",
+    "estadisticas": {
+      "puntos": 7.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2584771",
+    "nombre": "E. ABDELKADER YAFRANI",
+    "equipo": "MINI 6º FEMENINO C.D. ENRIQUE SOLER",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2584771",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969525&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2377654",
+    "nombre": "C. AZNAR PEREZ",
+    "equipo": "MINI 6º FEMENINO C.D. ENRIQUE SOLER",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2377654",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969525&ti=1",
+    "estadisticas": {
+      "puntos": 3.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2377646",
+    "nombre": "M. DOMINGUEZ RUIZ",
+    "equipo": "MINI 6º FEMENINO C.D. ENRIQUE SOLER",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2377646",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969525&ti=1",
+    "estadisticas": {
+      "puntos": 7.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2584776",
+    "nombre": "N. FAD DAD BOUTANAACH",
+    "equipo": "MINI 6º FEMENINO C.D. ENRIQUE SOLER",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2584776",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969525&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2701829",
+    "nombre": "M. GONZALEZ PINAZO",
+    "equipo": "MINI 6º FEMENINO C.D. ENRIQUE SOLER",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2701829",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969525&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2584793",
+    "nombre": "M. LOPEZ  MOTA",
+    "equipo": "MINI 6º FEMENINO C.D. ENRIQUE SOLER",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2584793",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969525&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2380950",
+    "nombre": "A. MUÑOZ ARANDA",
+    "equipo": "MINI 6º FEMENINO C.D. ENRIQUE SOLER",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2380950",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969525&ti=1",
+    "estadisticas": {
+      "puntos": 4.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2701828",
+    "nombre": "J. SERRANO TERREZ",
+    "equipo": "MINI 6º FEMENINO C.D. ENRIQUE SOLER",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2701828",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969525&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2377650",
+    "nombre": "L. TOME VINUESA",
+    "equipo": "MINI 6º FEMENINO C.D. ENRIQUE SOLER",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2377650",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969525&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2380396",
+    "nombre": "A. ZARAGOZA PORTILLO",
+    "equipo": "MINI 6º FEMENINO C.D. ENRIQUE SOLER",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2380396",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969525&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2383037",
+    "nombre": "M. BERRUEZO CABELLO",
+    "equipo": "MINI 6º FEMENINO C.D. ENRIQUE SOLER",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2383037",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969525&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2611051",
+    "nombre": "A. ARTEAGA VALDEZ",
+    "equipo": "UROS DE RIVAS ´A´",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2611051",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969651&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2499434",
+    "nombre": "C. VICTORIANO PALOMARES",
+    "equipo": "UROS DE RIVAS ´A´",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2499434",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969651&ti=1",
+    "estadisticas": {
+      "puntos": 10.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2499684",
+    "nombre": "V. MEJIAS JIMENEZ",
+    "equipo": "UROS DE RIVAS ´A´",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2499684",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969651&ti=1",
+    "estadisticas": {
+      "puntos": 7.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2497317",
+    "nombre": "L. AVILA AGUIRRE",
+    "equipo": "UROS DE RIVAS ´A´",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2497317",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969651&ti=1",
+    "estadisticas": {
+      "puntos": 10.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2547197",
+    "nombre": "N. FERNANDEZ FAMILIAR",
+    "equipo": "UROS DE RIVAS ´A´",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2547197",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969651&ti=1",
+    "estadisticas": {
+      "puntos": 5.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2547509",
+    "nombre": "L. MUÑOZ MARTIN",
+    "equipo": "UROS DE RIVAS ´A´",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2547509",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969651&ti=1",
+    "estadisticas": {
+      "puntos": 3.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2641503",
+    "nombre": "N. DURÁN FERNÁNDEZ",
+    "equipo": "UROS DE RIVAS ´A´",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2641503",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969651&ti=1",
+    "estadisticas": {
+      "puntos": 6.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2543028",
+    "nombre": "A. ALMENDROS PERNAS",
+    "equipo": "UROS DE RIVAS ´A´",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2543028",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969651&ti=1",
+    "estadisticas": {
+      "puntos": 10.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2542359",
+    "nombre": "A. FOGUE CEBRIAN",
+    "equipo": "UROS DE RIVAS ´A´",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2542359",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969651&ti=1",
+    "estadisticas": {
+      "puntos": 4.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2497270",
+    "nombre": "S. BADENAS DIAZ",
+    "equipo": "UROS DE RIVAS ´A´",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2497270",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969651&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2496575",
+    "nombre": "E. CROCHE BORJA",
+    "equipo": "UROS DE RIVAS ´A´",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2496575",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969651&ti=1",
+    "estadisticas": {
+      "puntos": 5.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2624498",
+    "nombre": "J. VILLAESCUSA MAXIMIANO",
+    "equipo": "UROS DE RIVAS ´A´",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2624498",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969651&ti=1",
+    "estadisticas": {
+      "puntos": 4.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2622433",
+    "nombre": "A. LÓPEZ MARÍN",
+    "equipo": "EMB ALCÁZAR GRUPO76-ALKASAR ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2622433",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969656&ti=1",
+    "estadisticas": {
+      "puntos": 3.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2735133",
+    "nombre": "M. GARCÍA-VAQUERO CEDENILLA",
+    "equipo": "EMB ALCÁZAR GRUPO76-ALKASAR ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2735133",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969656&ti=1",
+    "estadisticas": {
+      "puntos": 6.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2641219",
+    "nombre": "M. CUADRA MORENO",
+    "equipo": "EMB ALCÁZAR GRUPO76-ALKASAR ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2641219",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969656&ti=1",
+    "estadisticas": {
+      "puntos": 9.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2699811",
+    "nombre": "V. LIZCANO UBEDA",
+    "equipo": "EMB ALCÁZAR GRUPO76-ALKASAR ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2699811",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969656&ti=1",
+    "estadisticas": {
+      "puntos": 4.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2622599",
+    "nombre": "A. PACHECO ROMERO",
+    "equipo": "EMB ALCÁZAR GRUPO76-ALKASAR ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2622599",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969656&ti=1",
+    "estadisticas": {
+      "puntos": 6.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2699812",
+    "nombre": "J. RAMOS ORTIZ",
+    "equipo": "EMB ALCÁZAR GRUPO76-ALKASAR ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2699812",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969656&ti=1",
+    "estadisticas": {
+      "puntos": 9.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2784442",
+    "nombre": "N. RUIZ ABENGOZAR",
+    "equipo": "EMB ALCÁZAR GRUPO76-ALKASAR ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2784442",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969656&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2733852",
+    "nombre": "M. GONZÁLEZ DE LA ALEJA SÁNCHEZ",
+    "equipo": "EMB ALCÁZAR GRUPO76-ALKASAR ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2733852",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969656&ti=1",
+    "estadisticas": {
+      "puntos": 4.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2784443",
+    "nombre": "P. SERRANO GALÁN",
+    "equipo": "EMB ALCÁZAR GRUPO76-ALKASAR ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2784443",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969656&ti=1",
+    "estadisticas": {
+      "puntos": 8.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2622602",
+    "nombre": "R. MARTÍNEZ -MECO MORENO",
+    "equipo": "EMB ALCÁZAR GRUPO76-ALKASAR ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2622602",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969656&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2622607",
+    "nombre": "G. QUEVEDO SÁNCHEZ-PAULETE",
+    "equipo": "EMB ALCÁZAR GRUPO76-ALKASAR ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2622607",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969656&ti=1",
+    "estadisticas": {
+      "puntos": 8.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2622428",
+    "nombre": "N. LAVEDA NAVARRO",
+    "equipo": "EMB ALCÁZAR GRUPO76-ALKASAR ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2622428",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=969656&ti=1",
+    "estadisticas": {
+      "puntos": 5.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2663878",
+    "nombre": "A. CRESPO QUIROGAS",
+    "equipo": "SANT JOSEP A ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2663878",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=968539&ti=1",
+    "estadisticas": {
+      "puntos": 3.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2514007",
+    "nombre": "A. SUÁREZ SASTRE ",
+    "equipo": "SANT JOSEP A ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2514007",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=968539&ti=1",
+    "estadisticas": {
+      "puntos": 10.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2446390",
+    "nombre": "L. CREGO ANDREU",
+    "equipo": "SANT JOSEP A ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2446390",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=968539&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2445932",
+    "nombre": "C. UWAGBA GUAL",
+    "equipo": "SANT JOSEP A ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2445932",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=968539&ti=1",
+    "estadisticas": {
+      "puntos": 6.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2523676",
+    "nombre": "M. FIOL ALCARAZ",
+    "equipo": "SANT JOSEP A ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2523676",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=968539&ti=1",
+    "estadisticas": {
+      "puntos": 13.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2513999",
+    "nombre": "B. MOYA ALBORNOZ",
+    "equipo": "SANT JOSEP A ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2513999",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=968539&ti=1",
+    "estadisticas": {
+      "puntos": 14.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2558721",
+    "nombre": "S. NAVARRO SABARIEGO",
+    "equipo": "SANT JOSEP A ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2558721",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=968539&ti=1",
+    "estadisticas": {
+      "puntos": 11.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2558720",
+    "nombre": "L. FERRIOL DURAN",
+    "equipo": "SANT JOSEP A ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2558720",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=968539&ti=1",
+    "estadisticas": {
+      "puntos": 7.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2446302",
+    "nombre": "N. JOFRE DALIA",
+    "equipo": "SANT JOSEP A ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2446302",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=968539&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2514471",
+    "nombre": "S. OSTO TULUC",
+    "equipo": "SANT JOSEP A ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2514471",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=968539&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2513994",
+    "nombre": "P. CORBACHO GONZÁLEZ",
+    "equipo": "SANT JOSEP A ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2513994",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=968539&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2563466",
+    "nombre": "A. PONS AVECILLAS",
+    "equipo": "SANT JOSEP A ",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2563466",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=968539&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2579739",
+    "nombre": "P. MARTINEZ TABUENCA",
+    "equipo": "MARIANISTAS A",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2579739",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=964542&ti=1",
+    "estadisticas": {
+      "puntos": 4.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2702996",
+    "nombre": "J. ROYO GONZALVO",
+    "equipo": "MARIANISTAS A",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2702996",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=964542&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2479290",
+    "nombre": "A. ARA ARRIBAS",
+    "equipo": "MARIANISTAS A",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2479290",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=964542&ti=1",
+    "estadisticas": {
+      "puntos": 8.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2776278",
+    "nombre": "C. ORTILLES GARCIA",
+    "equipo": "MARIANISTAS A",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2776278",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=964542&ti=1",
+    "estadisticas": {
+      "puntos": 7.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2405501",
+    "nombre": "I. ALONSO PLANILLO",
+    "equipo": "MARIANISTAS A",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2405501",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=964542&ti=1",
+    "estadisticas": {
+      "puntos": 6.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2479287",
+    "nombre": "Y. SESE RUIZ",
+    "equipo": "MARIANISTAS A",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2479287",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=964542&ti=1",
+    "estadisticas": {
+      "puntos": 21.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2479286",
+    "nombre": "C. DELGADO DELSO",
+    "equipo": "MARIANISTAS A",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2479286",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=964542&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2443086",
+    "nombre": "C. LAJUSTICIA GARCIA",
+    "equipo": "MARIANISTAS A",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2443086",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=964542&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2480052",
+    "nombre": "V. ANDRES DOMINGUEZ",
+    "equipo": "MARIANISTAS A",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2480052",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=964542&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2479984",
+    "nombre": "A. POLO GARCIA",
+    "equipo": "MARIANISTAS A",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2479984",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=964542&ti=1",
+    "estadisticas": {
+      "puntos": 9.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2479289",
+    "nombre": "L. ARAGON VILLARO",
+    "equipo": "MARIANISTAS A",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2479289",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=964542&ti=1",
+    "estadisticas": {
+      "puntos": 19.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2702994",
+    "nombre": "V. NAVARRO POLO",
+    "equipo": "MARIANISTAS A",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2702994",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=964542&ti=1",
+    "estadisticas": {
+      "puntos": 3.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2742203",
+    "nombre": "E. CADAVEDO VILLAVERDE",
+    "equipo": "JAECOO SEIS DO NADAL VIGO",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2742203",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=961471&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2742204",
+    "nombre": "C. PÉREZ EIRIZ",
+    "equipo": "JAECOO SEIS DO NADAL VIGO",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2742204",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=961471&ti=1",
+    "estadisticas": {
+      "puntos": 3.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2437136",
+    "nombre": "L. ALONSO ALCAZAR",
+    "equipo": "JAECOO SEIS DO NADAL VIGO",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2437136",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=961471&ti=1",
+    "estadisticas": {
+      "puntos": 8.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2439762",
+    "nombre": "P. GONZÁLEZ RODRÍGUEZ",
+    "equipo": "JAECOO SEIS DO NADAL VIGO",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2439762",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=961471&ti=1",
+    "estadisticas": {
+      "puntos": 4.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2493776",
+    "nombre": "X. SÁNCHEZ ESCUDEIRO",
+    "equipo": "JAECOO SEIS DO NADAL VIGO",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2493776",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=961471&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2621768",
+    "nombre": "A. GONZÁLEZ LAGE",
+    "equipo": "JAECOO SEIS DO NADAL VIGO",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2621768",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=961471&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2579263",
+    "nombre": "T. FRADE LAGOS",
+    "equipo": "JAECOO SEIS DO NADAL VIGO",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2579263",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=961471&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2564296",
+    "nombre": "E. LOYOLA SANTOS",
+    "equipo": "JAECOO SEIS DO NADAL VIGO",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2564296",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=961471&ti=1",
+    "estadisticas": {
+      "puntos": 8.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2740713",
+    "nombre": "V. VÁZQUEZ COMESAÑA",
+    "equipo": "JAECOO SEIS DO NADAL VIGO",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2740713",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=961471&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2493817",
+    "nombre": "I. SEARA CARBALLO",
+    "equipo": "JAECOO SEIS DO NADAL VIGO",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2493817",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=961471&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2670721",
+    "nombre": "C. PÉREZ FERNÁNDEZ",
+    "equipo": "JAECOO SEIS DO NADAL VIGO",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2670721",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=961471&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2473097",
+    "nombre": "S. TABOADA BERNÁRDEZ",
+    "equipo": "JAECOO SEIS DO NADAL VIGO",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2473097",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=961471&ti=1",
+    "estadisticas": {
+      "puntos": 3.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2585663",
+    "nombre": "V. PEREZ MONEO PONCE",
+    "equipo": "SUPERDUMBO MARISTAS MURCIA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2585663",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=967512&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2618504",
+    "nombre": "H. PEREZ MONEO PONCE",
+    "equipo": "SUPERDUMBO MARISTAS MURCIA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2618504",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=967512&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2618514",
+    "nombre": "M. LOPEZ VALERO",
+    "equipo": "SUPERDUMBO MARISTAS MURCIA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2618514",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=967512&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2527661",
+    "nombre": "P. GUILLEN CUENCA",
+    "equipo": "SUPERDUMBO MARISTAS MURCIA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2527661",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=967512&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2585638",
+    "nombre": "F. ABELLAN ALEMAN",
+    "equipo": "SUPERDUMBO MARISTAS MURCIA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2585638",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=967512&ti=1",
+    "estadisticas": {
+      "puntos": 5.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2527753",
+    "nombre": "I. ABELLAN GARCIA",
+    "equipo": "SUPERDUMBO MARISTAS MURCIA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2527753",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=967512&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2476317",
+    "nombre": "C.  GARCÍA MARTÍNEZ",
+    "equipo": "SUPERDUMBO MARISTAS MURCIA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2476317",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=967512&ti=1",
+    "estadisticas": {
+      "puntos": 4.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2476401",
+    "nombre": "M. CECILIA YUSA",
+    "equipo": "SUPERDUMBO MARISTAS MURCIA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2476401",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=967512&ti=1",
+    "estadisticas": {
+      "puntos": 2.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2476445",
+    "nombre": "S. MARTOS SANCHEZ",
+    "equipo": "SUPERDUMBO MARISTAS MURCIA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2476445",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=967512&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2749897",
+    "nombre": "M. GARCÍA CERON",
+    "equipo": "SUPERDUMBO MARISTAS MURCIA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2749897",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=967512&ti=1",
+    "estadisticas": {
+      "puntos": 3.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2790378",
+    "nombre": "E. FERNÁNDEZ VILLANUEVA",
+    "equipo": "SUPERDUMBO MARISTAS MURCIA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2790378",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=967512&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2442245",
+    "nombre": "S. VIVANCOS HURTADO",
+    "equipo": "SUPERDUMBO MARISTAS MURCIA",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2442245",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=967512&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2501169",
+    "nombre": "C. GARCÍA SANDE",
+    "equipo": "ADBA SANFER",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2501169",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=958237&ti=1",
+    "estadisticas": {
+      "puntos": 8.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2501663",
+    "nombre": "L. ROMERO GALA",
+    "equipo": "ADBA SANFER",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2501663",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=958237&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2501142",
+    "nombre": "E. SAN SEBASTIÁN MODROÑO",
+    "equipo": "ADBA SANFER",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2501142",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=958237&ti=1",
+    "estadisticas": {
+      "puntos": 6.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2501144",
+    "nombre": "E. ROGERO LÓPEZ",
+    "equipo": "ADBA SANFER",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2501144",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=958237&ti=1",
+    "estadisticas": {
+      "puntos": 5.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2501130",
+    "nombre": "I. JORGE ARGÜELLES",
+    "equipo": "ADBA SANFER",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2501130",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=958237&ti=1",
+    "estadisticas": {
+      "puntos": 5.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2428201",
+    "nombre": "A. CASTAÑO VILLASTRIGO",
+    "equipo": "ADBA SANFER",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2428201",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=958237&ti=1",
+    "estadisticas": {
+      "puntos": 8.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2426950",
+    "nombre": "A. SÁNCHEZ FOLGUEIRAS",
+    "equipo": "ADBA SANFER",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2426950",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=958237&ti=1",
+    "estadisticas": {
+      "puntos": 27.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2428173",
+    "nombre": "P. ALONSO SANCHÍS",
+    "equipo": "ADBA SANFER",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2428173",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=958237&ti=1",
+    "estadisticas": {
+      "puntos": 6.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2428176",
+    "nombre": "N. GARCÍA VÁZQUEZ",
+    "equipo": "ADBA SANFER",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2428176",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=958237&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2628719",
+    "nombre": "L. MARTIN DA CRUZ",
+    "equipo": "ADBA SANFER",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2628719",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=958237&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2628717",
+    "nombre": "P. GONZALEZ GARCIA",
+    "equipo": "ADBA SANFER",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2628717",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=958237&ti=1",
+    "estadisticas": {
+      "puntos": 3.0,
+      "rebotes": 0.0,
+      "asistencias": 0.0
+    }
+  },
+  {
+    "id": "2501145",
+    "nombre": "A. VILLABRILLE SÁNCHEZ",
+    "equipo": "ADBA SANFER",
+    "genero": "femenino",
+    "competicion": "C ESP CLUBES MINI FEM",
+    "foto": "https://imagenes.feb.es/foto.aspx?c=2501145",
+    "team_logo": "https://imagenes.feb.es/imagen.aspx?i=958237&ti=1",
+    "estadisticas": {
+      "puntos": 0.0,
       "rebotes": 0.0,
       "asistencias": 0.0
     }

@@ -235,7 +235,7 @@ function createMatchCard(match) {
   card.className = "match-card";
   const dateStr = `${match.day}-${match.month}-${match.year}`;
   card.setAttribute("data-match-date", dateStr);
-  card.setAttribute("data-competition", match.competition);
+  card.setAttribute("data-competition", formatCompetitionName(match.competition));
   // Añadir el atributo data-gender para el filtrado
   if (match.gender) {
     card.setAttribute("data-gender", match.gender);
@@ -260,15 +260,9 @@ function createMatchCard(match) {
 
   // Cambiar el nombre de la competición SOLO para la cabecera de la tarjeta
   let competitionName = match.competition;
-  if (competitionName === 'C ESP CLUBES JR FEM') {
-    competitionName = 'CEC JR Femenino';
-  }
-  if (competitionName === 'C ESP CLUBES JR MASC') {
-    competitionName = 'CEC JR Masculino';
-  }
   const headerDiv = document.createElement("div");
   headerDiv.className = "match-header";
-  headerDiv.textContent = `${formattedDate} | ${competitionName}`;
+  headerDiv.textContent = `${formattedDate} | ${formatCompetitionName(competitionName)}`;
 
   // Equipos
   const teamsDiv = document.createElement("div");
