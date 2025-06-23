@@ -1575,22 +1575,22 @@
                         "Place": "COLEGIO VIRGEN DEL CARMEN",
                         "TeamAID": 970769,
                         "TeamA": "EBG MÁLAGA FUNDACIÓN UNICAJA ",
-                        "ScoreA": 55,
+                        "ScoreA": 67,
                         "TeamACode": "29021588",
                         "TeamAClubCode": "290215",
                         "TeamBID": 970570,
                         "TeamB": "A.D. MANUEL PELETEIRO",
                         "TeamBCode": "15000411",
                         "TeamBClubCode": "150004",
-                        "ScoreB": 30,
+                        "ScoreB": 36,
                         "StartTime": "2025-06-23T20:30:00",
                         "StartTimeUTC": "2025-06-23T18:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=970769&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=970570&ti=1",
-                        "Quarter": 4,
-                        "Time": "00:24:00",
+                        "Quarter": 5,
+                        "Time": "00:32:00",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -1612,6 +1612,11 @@
                             },
                             {
                                 "n": "4",
+                                "scoreA": "12",
+                                "scoreB": "6"
+                            },
+                            {
+                                "n": "5",
                                 "scoreA": "0",
                                 "scoreB": "0"
                             }
@@ -1631,14 +1636,14 @@
                         "Place": "INSTALACIONES DEPORTIVAS EL NARANJO",
                         "TeamAID": 969334,
                         "TeamA": "CIUSABA BASQUET PLA",
-                        "ScoreA": 37,
+                        "ScoreA": 38,
                         "TeamACode": "07006350",
                         "TeamAClubCode": "070063",
                         "TeamBID": 952102,
                         "TeamB": "SESE A",
                         "TeamBCode": "08005611",
                         "TeamBClubCode": "080056",
-                        "ScoreB": 55,
+                        "ScoreB": 71,
                         "StartTime": "2025-06-23T20:30:00",
                         "StartTimeUTC": "2025-06-23T18:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -1646,7 +1651,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=969334&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952102&ti=1",
                         "Quarter": 5,
-                        "Time": "00:32:00",
+                        "Time": "00:39:16",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -1673,8 +1678,8 @@
                             },
                             {
                                 "n": "5",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "1",
+                                "scoreB": "16"
                             }
                         ],
                         "Season": null,
@@ -1699,7 +1704,7 @@
                         "TeamB": "BARÇA",
                         "TeamBCode": "08000309",
                         "TeamBClubCode": "080003",
-                        "ScoreB": 84,
+                        "ScoreB": 86,
                         "StartTime": "2025-06-23T20:30:00",
                         "StartTimeUTC": "2025-06-23T18:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -1707,7 +1712,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=965224&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=955247&ti=1",
                         "Quarter": 4,
-                        "Time": "00:28:02",
+                        "Time": "00:29:56",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -1730,7 +1735,7 @@
                             {
                                 "n": "4",
                                 "scoreA": "3",
-                                "scoreB": "10"
+                                "scoreB": "12"
                             }
                         ],
                         "Season": null,
@@ -1748,22 +1753,22 @@
                         "Place": "PABELLÓN IDM FIDIANA",
                         "TeamAID": 962259,
                         "TeamA": "SINGIEVALUE BBCA",
-                        "ScoreA": 42,
+                        "ScoreA": 47,
                         "TeamACode": "15028607",
                         "TeamAClubCode": "150286",
                         "TeamBID": 970983,
                         "TeamB": "SA POBLA BC GAROL PROJECTES EN VIDRE I ALUMINI A ",
                         "TeamBCode": "07002652",
                         "TeamBClubCode": "070026",
-                        "ScoreB": 53,
+                        "ScoreB": 71,
                         "StartTime": "2025-06-23T20:30:00",
                         "StartTimeUTC": "2025-06-23T18:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=962259&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=970983&ti=1",
-                        "Quarter": 4,
-                        "Time": "00:30:17",
+                        "Quarter": 5,
+                        "Time": "00:37:23",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -1785,8 +1790,13 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "13",
-                                "scoreB": "18"
+                                "scoreA": "15",
+                                "scoreB": "21"
+                            },
+                            {
+                                "n": "5",
+                                "scoreA": "3",
+                                "scoreB": "15"
                             }
                         ],
                         "Season": null,
