@@ -558,7 +558,9 @@ function formatCompetitionName(comp) {
     'CE Clubes Inf Fem': 'Clubes Infantil Femenino',
     'CE Clubes Inf Masc': 'Clubes Infantil Masculino',  
     'Liga Cadete Femenina': 'Liga Cadete Femenina',
-    'F.Ascenso Lf2': 'Fase de ascenso a LF2'
+    'F.Ascenso Lf2': 'Fase de ascenso a LF2',
+    'CE Clubes Mini Masc': 'Clubes Mini Masculino',
+    'CE Clubes Mini Fem': 'Clubes Mini Femenino'
   };
 
   // If we have a mapping for this competition, use it
