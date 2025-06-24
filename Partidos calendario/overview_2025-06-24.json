@@ -11,7 +11,7 @@
                 "id": "256",
                 "name": "CE Clubes Mini Fem",
                 "gamescount": 32,
-                "nowplaying": 3,
+                "nowplaying": 4,
                 "order": 23,
                 "GAMES": [
                     {
@@ -166,22 +166,22 @@
                         "Place": "POLIDEPORTIVO MUNICIPAL ELOLA 1",
                         "TeamAID": 955798,
                         "TeamA": "JOVENTUT BADALONA A",
-                        "ScoreA": 33,
+                        "ScoreA": 41,
                         "TeamACode": "08130528",
                         "TeamAClubCode": "081305",
                         "TeamBID": 963899,
                         "TeamB": "EM EL OLIVAR A1",
                         "TeamBCode": "50000795",
                         "TeamBClubCode": "500007",
-                        "ScoreB": 20,
+                        "ScoreB": 24,
                         "StartTime": "2025-06-24T12:00:00",
                         "StartTimeUTC": "2025-06-24T10:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=955798&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=963899&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:20:11",
+                        "Quarter": 4,
+                        "Time": "00:24:00",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -198,8 +198,13 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "8",
-                                "scoreB": "7"
+                                "scoreA": "16",
+                                "scoreB": "11"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "0",
+                                "scoreB": "0"
                             }
                         ],
                         "Season": null,
@@ -211,32 +216,38 @@
                         "Competition": "C ESP CLUBES MINI FEM",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "3",
+                        "Stage": "0",
                         "ID": 2472181,
                         "GameCode": null,
                         "Place": "POLIDEPORTIVO MUNICIPAL EL LIMÓN",
                         "TeamAID": 959737,
                         "TeamA": "CUMBERS AMARILLO CDSI ",
-                        "ScoreA": 0,
+                        "ScoreA": 5,
                         "TeamACode": "47008607",
                         "TeamAClubCode": "470086",
                         "TeamBID": 973967,
                         "TeamB": "ÓPTICA DÍAZ MIRALVALLE",
                         "TeamBCode": "10008513",
                         "TeamBClubCode": "100085",
-                        "ScoreB": 0,
+                        "ScoreB": 2,
                         "StartTime": "2025-06-24T12:00:00",
                         "StartTimeUTC": "2025-06-24T10:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=959737&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=973967&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:01:59",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "5",
+                                "scoreB": "2"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -259,15 +270,15 @@
                         "TeamB": "BASKET ALMEDA 1",
                         "TeamBCode": "08006921",
                         "TeamBClubCode": "080069",
-                        "ScoreB": 12,
+                        "ScoreB": 20,
                         "StartTime": "2025-06-24T12:00:00",
                         "StartTimeUTC": "2025-06-24T10:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=953203&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=955269&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:17:42",
+                        "Quarter": 4,
+                        "Time": "00:24:00",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -285,6 +296,11 @@
                             {
                                 "n": "3",
                                 "scoreA": "2",
+                                "scoreB": "8"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "0",
                                 "scoreB": "0"
                             }
                         ],
@@ -303,22 +319,22 @@
                         "Place": "PABELLÓN BLAS INFANTE",
                         "TeamAID": 962458,
                         "TeamA": "FUNDAL ALCOBENDAS \"A\"",
-                        "ScoreA": 27,
+                        "ScoreA": 35,
                         "TeamACode": "28021951",
                         "TeamAClubCode": "280219",
                         "TeamBID": 961137,
                         "TeamB": "PICKEN CLARET A",
                         "TeamBCode": "46005521",
                         "TeamBClubCode": "460055",
-                        "ScoreB": 28,
+                        "ScoreB": 32,
                         "StartTime": "2025-06-24T12:00:00",
                         "StartTimeUTC": "2025-06-24T10:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=962458&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=961137&ti=1",
-                        "Quarter": 3,
-                        "Time": "00:21:54",
+                        "Quarter": 4,
+                        "Time": "00:27:08",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -335,8 +351,13 @@
                             },
                             {
                                 "n": "3",
-                                "scoreA": "2",
-                                "scoreB": "7"
+                                "scoreA": "9",
+                                "scoreB": "11"
+                            },
+                            {
+                                "n": "4",
+                                "scoreA": "1",
+                                "scoreB": "0"
                             }
                         ],
                         "Season": null,
@@ -628,7 +649,7 @@
                 "id": "257",
                 "name": "CE Clubes Mini Masc",
                 "gamescount": 32,
-                "nowplaying": 4,
+                "nowplaying": 3,
                 "order": 24,
                 "GAMES": [
                     {
@@ -783,22 +804,22 @@
                         "Place": "PALACIO DE DEPORTES VISTALEGRE",
                         "TeamAID": 972881,
                         "TeamA": "MAR DE GAMBAS CB PUERTO REAL",
-                        "ScoreA": 37,
+                        "ScoreA": 42,
                         "TeamACode": "11001420",
                         "TeamAClubCode": "110014",
                         "TeamBID": 962046,
                         "TeamB": "CONFFIDENCE MEDICAL C.B. CIUDAD DE MÓSTOLES",
                         "TeamBCode": "28244935",
                         "TeamBClubCode": "282449",
-                        "ScoreB": 72,
+                        "ScoreB": 87,
                         "StartTime": "2025-06-24T11:30:00",
                         "StartTimeUTC": "2025-06-24T09:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=972881&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=962046&ti=1",
-                        "Quarter": 4,
-                        "Time": "00:29:17",
+                        "Quarter": 5,
+                        "Time": "00:34:55",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -820,8 +841,13 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "5",
-                                "scoreB": "16"
+                                "scoreA": "9",
+                                "scoreB": "24"
+                            },
+                            {
+                                "n": "5",
+                                "scoreA": "1",
+                                "scoreB": "7"
                             }
                         ],
                         "Season": null,
@@ -839,22 +865,22 @@
                         "Place": "COLEGIO VIRGEN DEL CARMEN",
                         "TeamAID": 951906,
                         "TeamA": "JOVENTUT BADALONA  A",
-                        "ScoreA": 77,
+                        "ScoreA": 90,
                         "TeamACode": "08000516",
                         "TeamAClubCode": "080005",
                         "TeamBID": 968011,
                         "TeamB": "FUNDAL ALCOBENDAS \"A\"",
                         "TeamBCode": "28021952",
                         "TeamBClubCode": "280219",
-                        "ScoreB": 47,
+                        "ScoreB": 64,
                         "StartTime": "2025-06-24T11:30:00",
                         "StartTimeUTC": "2025-06-24T09:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951906&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=968011&ti=1",
-                        "Quarter": 5,
-                        "Time": "00:37:39",
+                        "Quarter": 6,
+                        "Time": "00:45:05",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -881,8 +907,13 @@
                             },
                             {
                                 "n": "5",
-                                "scoreA": "13",
-                                "scoreB": "11"
+                                "scoreA": "17",
+                                "scoreB": "12"
+                            },
+                            {
+                                "n": "6",
+                                "scoreA": "9",
+                                "scoreB": "16"
                             }
                         ],
                         "Season": null,
@@ -900,22 +931,22 @@
                         "Place": "INSTALACIONES DEPORTIVAS EL NARANJO",
                         "TeamAID": 964733,
                         "TeamA": "RENAUTO HOZONO   JAIRIS ",
-                        "ScoreA": 53,
+                        "ScoreA": 58,
                         "TeamACode": "30000809",
                         "TeamAClubCode": "300008",
                         "TeamBID": 971246,
                         "TeamB": "VÍTALY LA MAR BCBADAJOZ",
                         "TeamBCode": "06029816",
                         "TeamBClubCode": "060298",
-                        "ScoreB": 36,
+                        "ScoreB": 48,
                         "StartTime": "2025-06-24T11:30:00",
                         "StartTimeUTC": "2025-06-24T09:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=964733&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=971246&ti=1",
-                        "Quarter": 4,
-                        "Time": "00:31:11",
+                        "Quarter": 5,
+                        "Time": "00:37:43",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -938,7 +969,12 @@
                             {
                                 "n": "4",
                                 "scoreA": "9",
-                                "scoreB": "17"
+                                "scoreB": "19"
+                            },
+                            {
+                                "n": "5",
+                                "scoreA": "5",
+                                "scoreB": "10"
                             }
                         ],
                         "Season": null,
@@ -956,14 +992,14 @@
                         "Place": "PABELLÓN IDM FIDIANA",
                         "TeamAID": 969670,
                         "TeamA": "EBA ",
-                        "ScoreA": 64,
+                        "ScoreA": 73,
                         "TeamACode": "02012843",
                         "TeamAClubCode": "020128",
                         "TeamBID": 966511,
                         "TeamB": "JOVENT A J.PALLISER",
                         "TeamBCode": "07012650",
                         "TeamBClubCode": "070126",
-                        "ScoreB": 39,
+                        "ScoreB": 49,
                         "StartTime": "2025-06-24T11:30:00",
                         "StartTimeUTC": "2025-06-24T09:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -971,42 +1007,11 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=969670&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=966511&ti=1",
                         "Quarter": 6,
-                        "Time": "00:40:00",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [
-                            {
-                                "n": "1",
-                                "scoreA": "20",
-                                "scoreB": "4"
-                            },
-                            {
-                                "n": "2",
-                                "scoreA": "14",
-                                "scoreB": "13"
-                            },
-                            {
-                                "n": "3",
-                                "scoreA": "10",
-                                "scoreB": "5"
-                            },
-                            {
-                                "n": "4",
-                                "scoreA": "14",
-                                "scoreB": "8"
-                            },
-                            {
-                                "n": "5",
-                                "scoreA": "6",
-                                "scoreB": "9"
-                            },
-                            {
-                                "n": "6",
-                                "scoreA": "0",
-                                "scoreB": "0"
-                            }
-                        ],
+                        "Quarters": [],
                         "Season": null,
                         "SeasonID": null
                     },
