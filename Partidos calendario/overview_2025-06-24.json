@@ -11,7 +11,7 @@
                 "id": "256",
                 "name": "CE Clubes Mini Fem",
                 "gamescount": 32,
-                "nowplaying": 4,
+                "nowplaying": 1,
                 "order": 23,
                 "GAMES": [
                     {
@@ -306,14 +306,14 @@
                         "Place": "PABELLÓN BLAS INFANTE",
                         "TeamAID": 970124,
                         "TeamA": "SAN CERNIN \"AZUL\"",
-                        "ScoreA": 42,
+                        "ScoreA": 46,
                         "TeamACode": "31003522",
                         "TeamAClubCode": "310035",
                         "TeamBID": 969205,
                         "TeamB": "MOVISTAR ESTUDIANTES \"JUANA\"",
                         "TeamBCode": "28000170",
                         "TeamBClubCode": "280001",
-                        "ScoreB": 74,
+                        "ScoreB": 80,
                         "StartTime": "2025-06-24T17:00:00",
                         "StartTimeUTC": "2025-06-24T15:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -321,42 +321,11 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=970124&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=969205&ti=1",
                         "Quarter": 6,
-                        "Time": "00:43:03",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [
-                            {
-                                "n": "1",
-                                "scoreA": "8",
-                                "scoreB": "13"
-                            },
-                            {
-                                "n": "2",
-                                "scoreA": "6",
-                                "scoreB": "11"
-                            },
-                            {
-                                "n": "3",
-                                "scoreA": "9",
-                                "scoreB": "22"
-                            },
-                            {
-                                "n": "4",
-                                "scoreA": "6",
-                                "scoreB": "6"
-                            },
-                            {
-                                "n": "5",
-                                "scoreA": "9",
-                                "scoreB": "18"
-                            },
-                            {
-                                "n": "6",
-                                "scoreA": "4",
-                                "scoreB": "4"
-                            }
-                        ],
+                        "Quarters": [],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -372,22 +341,22 @@
                         "Place": "POLIDEPORTIVO MUNICIPAL ELOLA 1",
                         "TeamAID": 968539,
                         "TeamA": "SANT JOSEP A ",
-                        "ScoreA": 26,
+                        "ScoreA": 41,
                         "TeamACode": "07000660",
                         "TeamAClubCode": "070006",
                         "TeamBID": 969651,
                         "TeamB": "UROS DE RIVAS 'A'",
                         "TeamBCode": "28306552",
                         "TeamBClubCode": "283065",
-                        "ScoreB": 49,
+                        "ScoreB": 53,
                         "StartTime": "2025-06-24T17:00:00",
                         "StartTimeUTC": "2025-06-24T15:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=968539&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=969651&ti=1",
-                        "Quarter": 5,
-                        "Time": "00:33:45",
+                        "Quarter": 6,
+                        "Time": "00:42:58",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -414,8 +383,13 @@
                             },
                             {
                                 "n": "5",
-                                "scoreA": "0",
-                                "scoreB": "6"
+                                "scoreA": "7",
+                                "scoreB": "8"
+                            },
+                            {
+                                "n": "6",
+                                "scoreA": "8",
+                                "scoreB": "2"
                             }
                         ],
                         "Season": null,
@@ -447,38 +421,12 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=967512&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=964542&ti=1",
-                        "Quarter": 5,
-                        "Time": "00:39:27",
-                        "Status": 2,
+                        "Quarter": 0,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [
-                            {
-                                "n": "1",
-                                "scoreA": "8",
-                                "scoreB": "17"
-                            },
-                            {
-                                "n": "2",
-                                "scoreA": "7",
-                                "scoreB": "20"
-                            },
-                            {
-                                "n": "3",
-                                "scoreA": "11",
-                                "scoreB": "14"
-                            },
-                            {
-                                "n": "4",
-                                "scoreA": "12",
-                                "scoreB": "23"
-                            },
-                            {
-                                "n": "5",
-                                "scoreA": "6",
-                                "scoreB": "21"
-                            }
-                        ],
+                        "Quarters": [],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -508,38 +456,12 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=962981&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=977160&ti=1",
-                        "Quarter": 5,
-                        "Time": "00:34:49",
-                        "Status": 2,
+                        "Quarter": 0,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [
-                            {
-                                "n": "1",
-                                "scoreA": "8",
-                                "scoreB": "0"
-                            },
-                            {
-                                "n": "2",
-                                "scoreA": "10",
-                                "scoreB": "5"
-                            },
-                            {
-                                "n": "3",
-                                "scoreA": "16",
-                                "scoreB": "3"
-                            },
-                            {
-                                "n": "4",
-                                "scoreA": "16",
-                                "scoreB": "2"
-                            },
-                            {
-                                "n": "5",
-                                "scoreA": "10",
-                                "scoreB": "0"
-                            }
-                        ],
+                        "Quarters": [],
                         "Season": null,
                         "SeasonID": null
                     },
