@@ -306,22 +306,22 @@
                         "Place": "PABELLÓN BLAS INFANTE",
                         "TeamAID": 970124,
                         "TeamA": "SAN CERNIN \"AZUL\"",
-                        "ScoreA": 29,
+                        "ScoreA": 42,
                         "TeamACode": "31003522",
                         "TeamAClubCode": "310035",
                         "TeamBID": 969205,
                         "TeamB": "MOVISTAR ESTUDIANTES \"JUANA\"",
                         "TeamBCode": "28000170",
                         "TeamBClubCode": "280001",
-                        "ScoreB": 58,
+                        "ScoreB": 74,
                         "StartTime": "2025-06-24T17:00:00",
                         "StartTimeUTC": "2025-06-24T15:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=970124&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=969205&ti=1",
-                        "Quarter": 5,
-                        "Time": "00:34:27",
+                        "Quarter": 6,
+                        "Time": "00:43:03",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -348,8 +348,13 @@
                             },
                             {
                                 "n": "5",
-                                "scoreA": "0",
-                                "scoreB": "6"
+                                "scoreA": "9",
+                                "scoreB": "18"
+                            },
+                            {
+                                "n": "6",
+                                "scoreA": "4",
+                                "scoreB": "4"
                             }
                         ],
                         "Season": null,
@@ -374,15 +379,15 @@
                         "TeamB": "UROS DE RIVAS 'A'",
                         "TeamBCode": "28306552",
                         "TeamBClubCode": "283065",
-                        "ScoreB": 42,
+                        "ScoreB": 49,
                         "StartTime": "2025-06-24T17:00:00",
                         "StartTimeUTC": "2025-06-24T15:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=968539&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=969651&ti=1",
-                        "Quarter": 4,
-                        "Time": "00:27:09",
+                        "Quarter": 5,
+                        "Time": "00:33:45",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -405,7 +410,12 @@
                             {
                                 "n": "4",
                                 "scoreA": "0",
-                                "scoreB": "4"
+                                "scoreB": "5"
+                            },
+                            {
+                                "n": "5",
+                                "scoreA": "0",
+                                "scoreB": "6"
                             }
                         ],
                         "Season": null,
@@ -423,14 +433,14 @@
                         "Place": "POLIDEPORTIVO MUNICIPAL ELOLA 2",
                         "TeamAID": 967512,
                         "TeamA": "SUPERDUMBO MARISTAS MURCIA",
-                        "ScoreA": 38,
+                        "ScoreA": 44,
                         "TeamACode": "30019207",
                         "TeamAClubCode": "300192",
                         "TeamBID": 964542,
                         "TeamB": "MARIANISTAS A",
                         "TeamBCode": "50002125",
                         "TeamBClubCode": "500021",
-                        "ScoreB": 74,
+                        "ScoreB": 95,
                         "StartTime": "2025-06-24T17:00:00",
                         "StartTimeUTC": "2025-06-24T15:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -438,7 +448,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=967512&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=964542&ti=1",
                         "Quarter": 5,
-                        "Time": "00:32:00",
+                        "Time": "00:39:27",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -465,8 +475,8 @@
                             },
                             {
                                 "n": "5",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "6",
+                                "scoreB": "21"
                             }
                         ],
                         "Season": null,
@@ -484,7 +494,7 @@
                         "Place": "POLIDEPORTIVO MUNICIPAL EL LIMÓN",
                         "TeamAID": 962981,
                         "TeamA": "XTRATOS-TVGA",
-                        "ScoreA": 50,
+                        "ScoreA": 60,
                         "TeamACode": "39009617",
                         "TeamAClubCode": "390096",
                         "TeamBID": 977160,
@@ -499,7 +509,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=962981&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=977160&ti=1",
                         "Quarter": 5,
-                        "Time": "00:32:00",
+                        "Time": "00:34:49",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -526,7 +536,7 @@
                             },
                             {
                                 "n": "5",
-                                "scoreA": "0",
+                                "scoreA": "10",
                                 "scoreB": "0"
                             }
                         ],
