@@ -860,7 +860,7 @@
                 "id": "257",
                 "name": "CE Clubes Mini Masc",
                 "gamescount": 36,
-                "nowplaying": 1,
+                "nowplaying": 0,
                 "order": 24,
                 "GAMES": [
                     {
@@ -1295,14 +1295,14 @@
                         "Place": "COLEGIO VIRGEN DEL CARMEN",
                         "TeamAID": 970983,
                         "TeamA": "SA POBLA BC GAROL PROJECTES EN VIDRE I ALUMINI A ",
-                        "ScoreA": 89,
+                        "ScoreA": 91,
                         "TeamACode": "07002652",
                         "TeamAClubCode": "070026",
                         "TeamBID": 970253,
                         "TeamB": "BASKET SANTA CRUZ",
                         "TeamBCode": "38029087",
                         "TeamBClubCode": "380290",
-                        "ScoreB": 113,
+                        "ScoreB": 116,
                         "StartTime": "2025-06-24T20:30:00",
                         "StartTimeUTC": "2025-06-24T18:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -1310,42 +1310,11 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=970983&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=970253&ti=1",
                         "Quarter": 6,
-                        "Time": "00:45:46",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [
-                            {
-                                "n": "1",
-                                "scoreA": "13",
-                                "scoreB": "20"
-                            },
-                            {
-                                "n": "2",
-                                "scoreA": "23",
-                                "scoreB": "23"
-                            },
-                            {
-                                "n": "3",
-                                "scoreA": "15",
-                                "scoreB": "13"
-                            },
-                            {
-                                "n": "4",
-                                "scoreA": "21",
-                                "scoreB": "23"
-                            },
-                            {
-                                "n": "5",
-                                "scoreA": "5",
-                                "scoreB": "18"
-                            },
-                            {
-                                "n": "6",
-                                "scoreA": "12",
-                                "scoreB": "16"
-                            }
-                        ],
+                        "Quarters": [],
                         "Season": null,
                         "SeasonID": null
                     },
