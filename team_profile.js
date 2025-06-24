@@ -48,12 +48,16 @@ const statOptions = [
   { value: 'va', label: 'Valoración' },
   { value: 't2c', label: 'T2 Convertidos' },
   { value: 't2i', label: 'T2 Intentados' },
+  { value: 't2pct', label: '% T2' },
   { value: 't3c', label: 'T3 Convertidos' },
   { value: 't3i', label: 'T3 Intentados' },
+  { value: 't3pct', label: '% T3' },
   { value: 'tlc', label: 'TL Convertidos' },
   { value: 'tli', label: 'TL Intentados' },
+  { value: 'tlpct', label: '% TL' },
   { value: 'tp', label: 'Tapones' },
   { value: 'fc', label: 'Faltas personales' },
+  { value: 'min', label: 'Minutos' },
   { value: 'pm', label: '+/-' }
 ];
 
@@ -85,6 +89,14 @@ function toTitleCase(str) {
 }
 
 let teamMatches = []; // aggregated matches
+
+// Global ranking object to store current team rankings
+let currentTeamRankings = {
+  total: {},
+  pergame: {},
+  teamId: null,
+  totalTeams: 0
+};
 
 // ---------- MAIN LOAD ----------
 async function loadTeamInfo() {
@@ -163,7 +175,7 @@ async function loadTeamInfo() {
             rival: match.rival,
             matchDate: match.matchDate,
             pts: 0, rt: 0, as: 0, ro: 0, rd: 0, br: 0, bp: 0, va: 0,
-            t2c: 0, t2i: 0, t3c: 0, t3i: 0, tlc: 0, tli: 0, tp: 0, fc: 0, pm: 0
+            t2c: 0, t2i: 0, t3c: 0, t3i: 0, tlc: 0, tli: 0, tp: 0, fc: 0, minutes: 0, pm: 0
           });
         }
 
@@ -185,6 +197,7 @@ async function loadTeamInfo() {
         aggMatch.tli += match.tli;
         aggMatch.tp += match.tp;
         aggMatch.fc += match.fc;
+        aggMatch.minutes += parseMinutes(match.minutes) || 0;
         aggMatch.pm += match.pm;
       }
     });
@@ -201,7 +214,8 @@ async function loadTeamInfo() {
       allTeamsStats.push({
         teamId: tid,
         teamName: teamName,
-        stats: stats
+        stats: stats,
+        games: uniqueMatches.length
       });
       allTeamsMatches.push(...uniqueMatches);
     }
@@ -258,14 +272,24 @@ async function loadTeamInfo() {
   // Calculate and update team rankings
   updateTeamRankings(data.players, teamCompetition, teamId, teamStats);
 
+  // Calculate all team rankings globally
+  calculateAllTeamRankings(teamId);
+
   // Insert shooting bar chart
   insertShootingBarChart(data.players, teamPlayers, teamCompetition);
 
-  // Load shot data after team info is loaded
-  console.log('Team info loaded, now loading shot data...');
-  await loadTeamShotData();
+  // Add separator
+  const separator = document.createElement('hr');
+  separator.style.border = 'none';
+  separator.style.borderTop = '1px solid #e0e0e0';
+  separator.style.margin = '32px 0 32px 0';
+  profileSection.appendChild(separator);
 
-  console.log(allTeamsStats);
+  // Insert horizontal bar chart for team points comparison using HTML/CSS
+  insertTeamPointsBarHtml();
+
+  // Load shot data after team info is loaded
+  await loadTeamShotData();
 }
 
 
@@ -273,19 +297,50 @@ async function loadTeamInfo() {
 function calculateTeamStatsFromMatches(matches){
   const totals = matches.reduce((acc,m)=>{
     acc.pts+=m.pts;
-    acc.reb+=m.rt;
-    acc.ast+=m.as;
+    acc.rt+=m.rt;
+    acc.ro+=m.ro;
+    acc.rd+=m.rd;
+    acc.as+=m.as;
+    acc.br+=m.br;
+    acc.bp+=m.bp;
+    acc.va+=m.va;
+    acc.t2c+=m.t2c;
+    acc.t2i+=m.t2i;
+    acc.t3c+=m.t3c;
+    acc.t3i+=m.t3i;
+    acc.tlc+=m.tlc;
+    acc.tli+=m.tli;
+    acc.tp+=m.tp;
+    acc.fc+=m.fc;
+    acc.minutes+=m.minutes || 0;
     // Calculate point differential for each game
     const [teamPts, rivalPts] = m.marcador.split('-').map(Number);
     acc.pm += (teamPts - rivalPts);
     return acc;
-  },{pts:0,reb:0,ast:0,pm:0});
+  },{pts:0,rt:0,ro:0,rd:0,as:0,br:0,bp:0,va:0,t2c:0,t2i:0,t3c:0,t3i:0,tlc:0,tli:0,tp:0,fc:0,minutes:0,pm:0});
   const games = matches.length||1;
   return {
     ptsPerGame: totals.pts/games,
-    rebPerGame: totals.reb/games,
-    astPerGame: totals.ast/games,
-    pmPerGame: totals.pm/games
+    rtPerGame: totals.rt/games,
+    roPerGame: totals.ro/games,
+    rdPerGame: totals.rd/games,
+    asPerGame: totals.as/games,
+    brPerGame: totals.br/games,
+    bpPerGame: totals.bp/games,
+    vaPerGame: totals.va/games,
+    t2cPerGame: totals.t2c/games,
+    t2iPerGame: totals.t2i/games,
+    t3cPerGame: totals.t3c/games,
+    t3iPerGame: totals.t3i/games,
+    tlcPerGame: totals.tlc/games,
+    tliPerGame: totals.tli/games,
+    tpPerGame: totals.tp/games,
+    fcPerGame: totals.fc/games,
+    minPerGame: totals.minutes/games,
+    pmPerGame: totals.pm/games,
+    // Keep legacy names for compatibility
+    rebPerGame: totals.rt/games,
+    astPerGame: totals.as/games
   };
 }
 
@@ -308,9 +363,9 @@ function calculateTeamStats(players) {
   // Sum up stats from all players
   players.forEach(player => {
     totalPts += player.pts;
-    totalReb += player.rt; // Total rebounds (ro + rd)
-    totalAst += player.as;
-    totalPm += player.pm;
+    totalReb += player.rt || 0; // Total rebounds (ro + rd)
+    totalAst += player.as || 0;
+    totalPm += player.pm || 0;
   });
 
   return {
@@ -346,6 +401,106 @@ function getTeamRankForStat(statKey, teamId) {
   return rankIndex !== -1 ? rankIndex + 1 : 0;
 }
 
+// Global function to get team rank for any stat (total or per game)
+function getGlobalTeamRank(statKey, type = 'pergame', teamId = null) {
+  if (!teamId) teamId = getTeamParams().teamId;
+  if (allTeamsStats.length === 0) {
+    return { rank: 0, total: 0 };
+  }
+
+  const isPerGame = type === 'pergame';
+  
+  // Calculate values for all teams
+  const teamValues = allTeamsStats.map(t => {
+    let value;
+    if (statKey === 'pm') {
+      value = isPerGame ? t.stats.pmPerGame : (t.stats.pmPerGame * t.games);
+    } else if (statKey === 'min') {
+      value = isPerGame ? t.stats.minPerGame : (t.stats.minPerGame * t.games);
+    } else if (statKey === 't2pct') {
+      // Calculate 2P percentage
+      const t2c = isPerGame ? t.stats.t2cPerGame : (t.stats.t2cPerGame * t.games);
+      const t2i = isPerGame ? t.stats.t2iPerGame : (t.stats.t2iPerGame * t.games);
+      value = t2i > 0 ? (t2c / t2i) * 100 : 0;
+    } else if (statKey === 't3pct') {
+      // Calculate 3P percentage
+      const t3c = isPerGame ? t.stats.t3cPerGame : (t.stats.t3cPerGame * t.games);
+      const t3i = isPerGame ? t.stats.t3iPerGame : (t.stats.t3iPerGame * t.games);
+      value = t3i > 0 ? (t3c / t3i) * 100 : 0;
+    } else if (statKey === 'tlpct') {
+      // Calculate TL percentage
+      const tlc = isPerGame ? t.stats.tlcPerGame : (t.stats.tlcPerGame * t.games);
+      const tli = isPerGame ? t.stats.tliPerGame : (t.stats.tliPerGame * t.games);
+      value = tli > 0 ? (tlc / tli) * 100 : 0;
+    } else {
+      const perGameStatKey = statKey + 'PerGame';
+      const perGameStat = t.stats[perGameStatKey] || 0;
+      value = isPerGame ? perGameStat : (perGameStat * t.games);
+    }
+    
+    return {
+      teamId: t.teamId,
+      value: value,
+      games: t.games
+    };
+  });
+
+  // Sort by value (descending for most stats, but could be customized)
+  const sorted = teamValues.sort((a, b) => {
+    // For some stats like losses (bp), lower might be better, but generally higher is better
+    return b.value - a.value;
+  });
+
+  // Find rank
+  const rankIndex = sorted.findIndex(team => team.teamId === teamId);
+  return {
+    rank: rankIndex !== -1 ? rankIndex + 1 : 0,
+    total: allTeamsStats.length,
+    value: rankIndex !== -1 ? sorted[rankIndex].value : 0,
+    teamValues: sorted // Include all team values for reference
+  };
+}
+
+// Function to calculate and store all rankings for current team
+function calculateAllTeamRankings(teamId = null) {
+  if (!teamId) teamId = getTeamParams().teamId;
+  if (!teamId || allTeamsStats.length === 0) return;
+
+  currentTeamRankings.teamId = teamId;
+  currentTeamRankings.totalTeams = allTeamsStats.length;
+  currentTeamRankings.total = {};
+  currentTeamRankings.pergame = {};
+
+  // Calculate rankings for all stats
+  statOptions.forEach(stat => {
+    const totalRank = getGlobalTeamRank(stat.value, 'total', teamId);
+    const perGameRank = getGlobalTeamRank(stat.value, 'pergame', teamId);
+    
+    currentTeamRankings.total[stat.value] = totalRank;
+    currentTeamRankings.pergame[stat.value] = perGameRank;
+  });
+
+  return currentTeamRankings;
+}
+
+// Convenience functions to get specific ranking info
+function getCurrentTeamRank(statKey, type = 'pergame') {
+  if (!currentTeamRankings.teamId) return { rank: 0, total: 0 };
+  
+  const rankings = type === 'total' ? currentTeamRankings.total : currentTeamRankings.pergame;
+  return rankings[statKey] || { rank: 0, total: 0 };
+}
+
+function getCurrentTeamRankText(statKey, type = 'pergame') {
+  const rankInfo = getCurrentTeamRank(statKey, type);
+  return `${rankInfo.rank} de ${rankInfo.total}`;
+}
+
+function isCurrentTeamTopRanked(statKey, type = 'pergame', topN = 1) {
+  const rankInfo = getCurrentTeamRank(statKey, type);
+  return rankInfo.rank <= topN && rankInfo.rank > 0;
+}
+
 // Helper to interpolate between two hex colors
 function lerpColor(a, b, t) {
   const ah = parseInt(a.replace('#', ''), 16),
@@ -376,6 +531,29 @@ function updateRankPill(statId, rank, totalTeams, competitionName) {
   rankPill.textContent = `${rank} de ${totalTeams}`;
   rankPill.style.background = getRankColor(rank, totalTeams);
   rankPill.title = `Ranking del equipo en la competición: ${competitionName}`;
+}
+
+// Helper function to create rank pill HTML for stats table
+function createRankPillHtml(statKey, type = 'pergame') {
+  // Check if rankings have been calculated
+  if (!allTeamsStats.length) {
+    return '';
+  }
+  
+  const teamId = getTeamParams().teamId;
+  if (!teamId) {
+    return '';
+  }
+  
+  // Use the working getGlobalTeamRank function directly
+  const rankInfo = getGlobalTeamRank(statKey, type, teamId);
+  
+  if (!rankInfo || rankInfo.rank === 0) return '';
+  
+  const color = getRankColor(rankInfo.rank, rankInfo.total);
+  const competitionName = formatCompetitionName(teamCompetition);
+  
+  return `<span class="stats-rank-pill" style="background: ${color}; color: white; padding: 2px 6px; border-radius: 10px; font-size: 0.75em; font-weight: bold; white-space: nowrap;" title="Ranking del equipo en la competición: ${competitionName}">${rankInfo.rank} de ${rankInfo.total}</span>`;
 }
 
 function aggregateTeamMatches(players, competitionFilter, teamIdFilter) {
@@ -595,6 +773,276 @@ function insertShootingBarChart(allTeamsPlayers, teamPlayers, competition) {
   new Chart(ctx,{type:'bar',data:{labels:['2P%','3P%','TL%'],datasets:[{label:'Equipo',data:[t2pct,t3pct,tlpct],backgroundColor:['rgba(25,118,210,0.7)','rgba(255,158,27,0.7)','rgba(200,16,46,0.7)'],borderColor:['#1976d2','#FF9E1B','#C8102E'],borderWidth:2,borderRadius:8,maxBarThickness:60},{label:'Media liga',data:[l2,l3,lft],backgroundColor:['rgba(25,118,210,0.2)','rgba(255,158,27,0.2)','rgba(200,16,46,0.2)'],borderColor:['#1976d2','#FF9E1B','#C8102E'],borderWidth:2,borderRadius:8,maxBarThickness:60}]},options:{responsive:true,plugins:{legend:{display:true,position:'top'},tooltip:{callbacks:{label:ctx=>`${ctx.dataset.label}: ${ctx.parsed.y.toFixed(1)}%`}},title:{display:true,text:'Porcentajes de tiro',font:{size:16,weight:'bold'}}},scales:{x:{grid:{display:false}},y:{beginAtZero:true,max:100,ticks:{callback:v=>v+'%',stepSize:20},grid:{color:'rgba(0,0,0,0.07)'}}}}});
 }
 
+// Insert horizontal bar chart for team comparison using HTML/CSS with dropdown
+function insertTeamPointsBarHtml() {
+  const profileSection = document.getElementById('profileSection');
+  if (!profileSection || document.getElementById('teamComparisonSection')) return;
+
+  // Create main section container
+  const sectionContainer = document.createElement('div');
+  sectionContainer.id = 'teamComparisonSection';
+
+  const header = document.createElement('h3');
+  header.id = 'teamComparisonTitle';
+  header.textContent = 'Comparación de equipos en la competición';
+  header.style.textAlign = 'center';
+  header.style.margin = '32px 0 20px 0';
+  sectionContainer.appendChild(header);
+
+  // Create dropdown container
+  const dropdownContainer = document.createElement('div');
+  dropdownContainer.style.display = 'flex';
+  dropdownContainer.style.justifyContent = 'center';
+  dropdownContainer.style.alignItems = 'center';
+  dropdownContainer.style.gap = '20px';
+  dropdownContainer.style.marginBottom = '20px';
+  dropdownContainer.style.flexWrap = 'wrap';
+
+  // First dropdown - Stat selection
+  const statDropdownGroup = document.createElement('div');
+  statDropdownGroup.style.display = 'flex';
+  statDropdownGroup.style.alignItems = 'center';
+  statDropdownGroup.style.gap = '8px';
+
+  const statLabel = document.createElement('label');
+  statLabel.textContent = 'Estadística:';
+  statLabel.style.fontWeight = '600';
+  statLabel.style.fontSize = '0.9em';
+  statLabel.style.color = '#333';
+
+  const statDropdown = document.createElement('select');
+  statDropdown.id = 'teamComparisonStatSelector';
+  statDropdown.style.padding = '8px 12px';
+  statDropdown.style.border = '1.5px solid #1976d2';
+  statDropdown.style.borderRadius = '6px';
+  statDropdown.style.background = '#f5faff';
+  statDropdown.style.color = '#1976d2';
+  statDropdown.style.fontWeight = '500';
+  statDropdown.style.minWidth = '160px';
+
+  // Add stat options
+  statOptions.forEach(opt => {
+    const option = document.createElement('option');
+    option.value = opt.value;
+    option.textContent = opt.label;
+    if (opt.value === 'pts') {
+      option.selected = true;
+    }
+    statDropdown.appendChild(option);
+  });
+
+  statDropdownGroup.appendChild(statLabel);
+  statDropdownGroup.appendChild(statDropdown);
+
+  // Second dropdown - Total vs Per Game
+  const typeDropdownGroup = document.createElement('div');
+  typeDropdownGroup.style.display = 'flex';
+  typeDropdownGroup.style.alignItems = 'center';
+  typeDropdownGroup.style.gap = '8px';
+
+  const typeLabel = document.createElement('label');
+  typeLabel.textContent = 'Tipo:';
+  typeLabel.style.fontWeight = '600';
+  typeLabel.style.fontSize = '0.9em';
+  typeLabel.style.color = '#333';
+
+  const typeDropdown = document.createElement('select');
+  typeDropdown.id = 'teamComparisonTypeSelector';
+  typeDropdown.style.padding = '8px 12px';
+  typeDropdown.style.border = '1.5px solid #1976d2';
+  typeDropdown.style.borderRadius = '6px';
+  typeDropdown.style.background = '#f5faff';
+  typeDropdown.style.color = '#1976d2';
+  typeDropdown.style.fontWeight = '500';
+  typeDropdown.style.minWidth = '140px';
+
+  // Add type options
+  const typeOptions = [
+    { value: 'total', label: 'Total' },
+    { value: 'pergame', label: 'Por partido' }
+  ];
+
+  typeOptions.forEach(opt => {
+    const option = document.createElement('option');
+    option.value = opt.value;
+    option.textContent = opt.label;
+    if (opt.value === 'total') {
+      option.selected = true;
+    }
+    typeDropdown.appendChild(option);
+  });
+
+  typeDropdownGroup.appendChild(typeLabel);
+  typeDropdownGroup.appendChild(typeDropdown);
+
+  dropdownContainer.appendChild(statDropdownGroup);
+  dropdownContainer.appendChild(typeDropdownGroup);
+  sectionContainer.appendChild(dropdownContainer);
+
+  // Create chart container
+  const chartWrapper = document.createElement('div');
+  chartWrapper.id = 'dynamicTeamChart';
+  chartWrapper.className = 'points-chart';
+  sectionContainer.appendChild(chartWrapper);
+
+  profileSection.appendChild(sectionContainer);
+
+  // Add event listeners for dropdown changes
+  const updateChart = () => {
+    const selectedStat = statDropdown.value;
+    const selectedType = typeDropdown.value;
+    updateTeamComparisonChart(selectedStat, selectedType);
+  };
+
+  statDropdown.addEventListener('change', updateChart);
+  typeDropdown.addEventListener('change', updateChart);
+
+  // Initial chart render
+  updateTeamComparisonChart('pts', 'total');
+}
+
+// Function to update the team comparison chart based on selected stat
+function updateTeamComparisonChart(statKey, statType) {
+  const chartWrapper = document.getElementById('dynamicTeamChart');
+  const titleElement = document.getElementById('teamComparisonTitle');
+  if (!chartWrapper || !titleElement) return;
+
+  const isPerGame = statType === 'pergame';
+  
+  // Find the stat label
+  const statInfo = statOptions.find(opt => opt.value === statKey);
+  const statLabel = statInfo ? statInfo.label : statKey;
+
+  // Update title
+  // titleElement.textContent = `${statLabel} ${isPerGame ? 'por partido' : 'totales'} por equipo`;
+
+  // Clear previous chart
+  chartWrapper.innerHTML = '';
+
+  // Get current team ID
+  const currentId = getTeamParams().teamId;
+
+  // Calculate data based on selected stat
+  const chartData = allTeamsStats.map(t => {
+    let value;
+    if (statKey === 'pm') {
+      // Special handling for +/- (point differential)
+      value = isPerGame ? t.stats.pmPerGame : (t.stats.pmPerGame * t.games);
+    } else if (statKey === 'min') {
+      // Special handling for minutes
+      value = isPerGame ? t.stats.minPerGame : (t.stats.minPerGame * t.games);
+    } else if (statKey === 't2pct') {
+      // Calculate 2P percentage
+      const t2c = isPerGame ? t.stats.t2cPerGame : (t.stats.t2cPerGame * t.games);
+      const t2i = isPerGame ? t.stats.t2iPerGame : (t.stats.t2iPerGame * t.games);
+      value = t2i > 0 ? (t2c / t2i) * 100 : 0;
+    } else if (statKey === 't3pct') {
+      // Calculate 3P percentage
+      const t3c = isPerGame ? t.stats.t3cPerGame : (t.stats.t3cPerGame * t.games);
+      const t3i = isPerGame ? t.stats.t3iPerGame : (t.stats.t3iPerGame * t.games);
+      value = t3i > 0 ? (t3c / t3i) * 100 : 0;
+    } else if (statKey === 'tlpct') {
+      // Calculate TL percentage
+      const tlc = isPerGame ? t.stats.tlcPerGame : (t.stats.tlcPerGame * t.games);
+      const tli = isPerGame ? t.stats.tliPerGame : (t.stats.tliPerGame * t.games);
+      value = tli > 0 ? (tlc / tli) * 100 : 0;
+    } else {
+      // Regular stats
+      const perGameStat = t.stats[statKey + 'PerGame'] || 0;
+      value = isPerGame ? perGameStat : (perGameStat * t.games);
+    }
+
+    return {
+      id: t.teamId,
+      name: t.teamName,
+      value: value,
+      games: t.games,
+      logo: getTeamLogo(t.teamId),
+      isCurrent: t.teamId === currentId
+    };
+  }).sort((a, b) => b.value - a.value);
+
+  const maxValue = Math.max(...chartData.map(d => Math.abs(d.value)));
+  const totalTeams = chartData.length;
+
+  chartData.forEach((d, idx) => {
+    const row = document.createElement('div');
+    row.className = 'points-row';
+
+    // Rank text (e.g., "3 de 32")
+    const rankSpan = document.createElement('span');
+    rankSpan.className = 'team-rank';
+    rankSpan.textContent = `${idx + 1} de ${totalTeams}`;
+    
+    // Make current team's rank bold, others lighter
+    if (d.isCurrent) {
+      rankSpan.style.fontWeight = 'bold';
+      rankSpan.style.color = '#333';
+    } else {
+      rankSpan.style.fontWeight = '400';
+      rankSpan.style.color = '#666';
+    }
+    
+    row.appendChild(rankSpan);
+
+    const img = document.createElement('img');
+    img.src = d.logo;
+    img.alt = d.name;
+    img.onerror = function(){ this.src='team_icon.png'; };
+    img.className = 'team-logo';
+    row.appendChild(img);
+
+    const barContainer = document.createElement('div');
+    barContainer.className = 'points-bar-container';
+    
+    // Create tooltip
+    const compName = formatCompetitionName(teamCompetition);
+    let formattedValue;
+    if (statKey === 'min') {
+      formattedValue = formatMinutes(d.value);
+    } else if (statKey === 't2pct' || statKey === 't3pct' || statKey === 'tlpct') {
+      formattedValue = d.value.toFixed(1) + '%';
+    } else if (isPerGame) {
+      formattedValue = d.value.toFixed(1);
+    } else {
+      formattedValue = Math.round(d.value).toString();
+    }
+    const tooltipText = `${toTitleCase(d.name)}\n${statLabel}: ${formattedValue}${isPerGame ? ' por partido' : ' total'}\nPartidos: ${d.games}\n${compName}`;
+    row.title = tooltipText;
+
+    const bar = document.createElement('div');
+    bar.className = 'points-bar';
+    
+    // Handle negative values for +/- stat
+    if (d.value < 0) {
+      bar.style.width = ((Math.abs(d.value) / maxValue) * 100).toFixed(1) + '%';
+      bar.style.background = d.isCurrent ? '#FF6B6B' : '#E57373'; // Red for negative values
+    } else {
+      bar.style.width = ((d.value / maxValue) * 100).toFixed(1) + '%';
+      bar.style.background = d.isCurrent ? '#FF9E1B' : '#1976d2'; // Normal colors for positive values
+    }
+
+    const value = document.createElement('span');
+    value.className = 'points-value';
+    
+    if (statKey === 'min') {
+      value.textContent = formatMinutes(d.value);
+    } else if (statKey === 't2pct' || statKey === 't3pct' || statKey === 'tlpct') {
+      value.textContent = d.value.toFixed(1) + '%';
+    } else if (isPerGame) {
+      value.textContent = d.value.toFixed(1);
+    } else {
+      value.textContent = Math.round(d.value).toString();
+    }
+
+    barContainer.appendChild(bar);
+    row.appendChild(barContainer);
+    bar.appendChild(value);
+
+    chartWrapper.appendChild(row);
+  });
+}
+
 // -------- TAB NAVIGATION ---------
 document.addEventListener('DOMContentLoaded',()=>{
   const tabLinks=document.querySelectorAll('#teamTabs .tab-link');
@@ -643,12 +1091,8 @@ function getTeamId() {
 
 async function loadTeamShotData() {
   const teamId = getTeamId();
-  console.log('Team ID:', teamId);
-  console.log('Team matches length:', teamMatches.length);
-  console.log('Team players length:', teamPlayers.length);
   
   if (!teamId || !teamMatches.length || !teamPlayers.length) {
-    console.log('Early return - missing data');
     return;
   }
   
@@ -658,39 +1102,29 @@ async function loadTeamShotData() {
   const competition = teamPlayer.competition;
 
   // const competition = (teamMatches[0] && teamMatches[0].competition) || (teamPlayers && teamPlayers[0] && teamPlayers[0].competition);
-  console.log('Competition:', competition);
-  if (!competition) {
-    console.log('No competition found');
-    return;
-  }
-  
-  const jsonFileName = competitionMappings[competition.trim()];
-  console.log('JSON filename:', jsonFileName);
-  if (!jsonFileName) {
-    console.log('No JSON file mapping found');
-    return;
-  }
+      if (!competition) {
+      return;
+    }
+    
+    const jsonFileName = competitionMappings[competition.trim()];
+    if (!jsonFileName) {
+      return;
+    }
   
   try {
     // Load league-wide JSON
     const response = await fetch(`Tiros por liga/${jsonFileName}`);
-    console.log('Fetch response status:', response.status);
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     const leagueShots = await response.json();
-    console.log('League shots loaded:', leagueShots);
     allLeagueShots = Object.values(leagueShots).flat();
-    console.log('All league shots flattened:', allLeagueShots.length);
     
     // Get team name from the first player
     const teamName = teamPlayers[0].teamName;
-    console.log('Team name:', teamName);
     
     // Filter shots by team name using equipo_string
     allTeamShots = allLeagueShots.filter(s => s.equipo_string === teamName);
-    console.log('Team shots filtered:', allTeamShots.length);
-    console.log('Sample team shot:', allTeamShots[0]);
     
     buildTeamShotFiltersUI(allTeamShots);
     updateTeamShotChart();
@@ -700,16 +1134,13 @@ async function loadTeamShotData() {
 }
 
 function buildTeamShotFiltersUI(shots) {
-  console.log('buildTeamShotFiltersUI called with shots:', shots.length);
   const container = document.getElementById('shotsFiltersContainer');
-  console.log('Container found:', container);
   if (!container) {
     console.error('shotsFiltersContainer not found!');
     return;
   }
   
   container.innerHTML = '';
-  console.log('Container cleared, building filters...');
 
   // Create filter controls container
   const filterControls = document.createElement('div');
@@ -730,7 +1161,6 @@ function buildTeamShotFiltersUI(shots) {
 
   // Get unique matches for this team
   const uniqueMatches = [...new Set(shots.map(shot => shot.match))];
-  console.log('Unique matches:', uniqueMatches);
 
   // Match filter
   const matchSelect = createCustomSelect('match', 'Partido', uniqueMatches);
@@ -783,7 +1213,6 @@ function buildTeamShotFiltersUI(shots) {
   filterControls.appendChild(distanceSelect);
 
   container.appendChild(filterControls);
-  console.log('Filter controls added to container');
 
   // Reset button
   const resetBtn = document.createElement('button');
@@ -814,7 +1243,6 @@ function buildTeamShotFiltersUI(shots) {
 
   // Add event listeners for all filters
   addTeamFilterEventListeners();
-  console.log('Team shot filters UI built successfully');
 }
 
 function createCustomSelect(name, label, options) {
@@ -1839,9 +2267,95 @@ function renderTeamStatsTable() {
   const totalTLPct = totals.tli?((totals.tlc/totals.tli)*100).toFixed(1):0;
   const totalRow = document.createElement('tr');
   totalRow.className='total-row';
-  totalRow.innerHTML=`<td colspan="3">TOTAL</td><td>${totals.pts}</td><td>${totals.t2c}</td><td>${totals.t2i}</td><td>${totalT2Pct}</td><td>${totals.t3c}</td><td>${totals.t3i}</td><td>${totalT3Pct}</td><td>${totals.tlc}</td><td>${totals.tli}</td><td>${totalTLPct}</td><td>${totals.ro}</td><td>${totals.rd}</td><td>${totals.rt}</td><td>${totals.as}</td><td>${totals.br}</td><td>${totals.bp}</td><td>${totals.tp}</td><td>${totals.fc}</td><td>${totals.va}</td><td>${totals.pm}</td>`;
+  totalRow.innerHTML=`<td colspan="3">TOTAL</td>
+  <td><p>${totals.pts}</p>  
+      ${createRankPillHtml('pts', 'total')}</td>
+  <td><p>${totals.t2c}</p>
+      ${createRankPillHtml('t2c', 'total')}</td>
+  <td><p>${totals.t2i}</p>
+      ${createRankPillHtml('t2i', 'total')}</td>
+  <td><p>${totalT2Pct}</p>
+      ${createRankPillHtml('t2pct', 'total')}</td>
+  <td><p>${totals.t3c}</p>
+      ${createRankPillHtml('t3c', 'total')}</td>
+  <td><p>${totals.t3i}</p>
+      ${createRankPillHtml('t3i', 'total')}</td>
+  <td><p>${totalT3Pct}</p>
+      ${createRankPillHtml('t3pct', 'total')}</td>
+  <td><p>${totals.tlc}</p>
+      ${createRankPillHtml('tlc', 'total')}</td>
+  <td><p>${totals.tli}</p>
+      ${createRankPillHtml('tli', 'total')}</td>
+  <td><p>${totalTLPct}</p>
+      ${createRankPillHtml('tlpct', 'total')}</td>
+  <td><p>${totals.ro}</p>
+      ${createRankPillHtml('ro', 'total')}</td>
+  <td><p>${totals.rd}</p>
+      ${createRankPillHtml('rd', 'total')}</td>
+  <td><p>${totals.rt}</p>
+      ${createRankPillHtml('rt', 'total')}</td>
+  <td><p>${totals.as}</p>
+      ${createRankPillHtml('as', 'total')}</td>
+  <td><p>${totals.br}</p>
+      ${createRankPillHtml('br', 'total')}</td>
+  <td><p>${totals.bp}</p>
+      ${createRankPillHtml('bp', 'total')}</td>
+  <td><p>${totals.tp}</p>
+      ${createRankPillHtml('tp', 'total')}</td>
+  <td><p>${totals.fc}</p>
+      ${createRankPillHtml('fc', 'total')}</td>
+  <td><p>${totals.va}</p>
+      ${createRankPillHtml('va', 'total')}</td>
+  <td style="text-align:center;">
+  <p>${totals.pm}</p>
+      ${createRankPillHtml('pm', 'total')}</td>`;
   tbody.appendChild(totalRow);
-  const avgRow=document.createElement('tr'); avgRow.className='prom-row'; avgRow.innerHTML=`<td colspan="3">PROMEDIO</td><td>${(totals.pts/games).toFixed(1)}</td><td>${(totals.t2c/games).toFixed(1)}</td><td>${(totals.t2i/games).toFixed(1)}</td><td>${totalT2Pct}</td><td>${(totals.t3c/games).toFixed(1)}</td><td>${(totals.t3i/games).toFixed(1)}</td><td>${totalT3Pct}</td><td>${(totals.tlc/games).toFixed(1)}</td><td>${(totals.tli/games).toFixed(1)}</td><td>${totalTLPct}</td><td>${(totals.ro/games).toFixed(1)}</td><td>${(totals.rd/games).toFixed(1)}</td><td>${(totals.rt/games).toFixed(1)}</td><td>${(totals.as/games).toFixed(1)}</td><td>${(totals.br/games).toFixed(1)}</td><td>${(totals.bp/games).toFixed(1)}</td><td>${(totals.tp/games).toFixed(1)}</td><td>${(totals.fc/games).toFixed(1)}</td><td>${(totals.va/games).toFixed(1)}</td><td>${(totals.pm/games).toFixed(1)}</td>`; tbody.appendChild(avgRow);
+  const avgRow=document.createElement('tr'); 
+  avgRow.className='prom-row'; 
+  
+  avgRow.innerHTML=`<td colspan="3">PROMEDIO</td>
+  <td><p style="text-align:center;">${(totals.pts/games).toFixed(1)}</p>
+      ${createRankPillHtml('pts', 'pergame')}</td>
+  <td><p style="text-align:center;">${(totals.t2c/games).toFixed(1)}</p>
+      ${createRankPillHtml('t2c', 'pergame')}</td>
+  <td><p style="text-align:center;">${(totals.t2i/games).toFixed(1)}</p>
+      ${createRankPillHtml('t2i', 'pergame')}</td>
+  <td><p>${totalT2Pct}</p>
+      ${createRankPillHtml('t2pct', 'pergame')}</td>
+  <td><p>${(totals.t3c/games).toFixed(1)}</p>
+      ${createRankPillHtml('t3c', 'pergame')}</td>
+  <td><p>${(totals.t3i/games).toFixed(1)}</p>
+      ${createRankPillHtml('t3i', 'pergame')}</td>
+  <td><p>${totalT3Pct}</p>
+      ${createRankPillHtml('t3pct', 'pergame')}</td>
+  <td><p>${(totals.tlc/games).toFixed(1)}</p>
+      ${createRankPillHtml('tlc', 'pergame')}</td>
+  <td><p>${(totals.tli/games).toFixed(1)}</p>
+      ${createRankPillHtml('tli', 'pergame')}</td>
+  <td><p>${totalTLPct}</p>
+      ${createRankPillHtml('tlpct', 'pergame')}</td>
+  <td><p>${(totals.ro/games).toFixed(1)}</p>
+      ${createRankPillHtml('ro', 'pergame')}</td>
+  <td><p>${(totals.rd/games).toFixed(1)}</p>
+      ${createRankPillHtml('rd', 'pergame')}</td>
+  <td><p>${(totals.rt/games).toFixed(1)}</p>
+      ${createRankPillHtml('rt', 'pergame')}</td>
+  <td><p>${(totals.as/games).toFixed(1)}</p>
+      ${createRankPillHtml('as', 'pergame')}</td>
+  <td><p>${(totals.br/games).toFixed(1)}</p>
+      ${createRankPillHtml('br', 'pergame')}</td>
+  <td><p>${(totals.bp/games).toFixed(1)}</p>
+      ${createRankPillHtml('bp', 'pergame')}</td>
+  <td><p>${(totals.tp/games).toFixed(1)}</p>
+      ${createRankPillHtml('tp', 'pergame')}</td>
+  <td><p>${(totals.fc/games).toFixed(1)}</p>
+      ${createRankPillHtml('fc', 'pergame')}</td>
+  <td><p>${(totals.va/games).toFixed(1)}</p>
+      ${createRankPillHtml('va', 'pergame')}</td>
+  <td><p>${(totals.pm/games).toFixed(1)}</p>
+      ${createRankPillHtml('pm', 'pergame')}</td>`; 
+  
+  tbody.appendChild(avgRow);
 
   table.appendChild(tbody);
   container.appendChild(table);
@@ -1854,14 +2368,14 @@ function renderTeamStatsTable() {
   function updateSortIndicators(column, direction) {
     // Remove all existing indicators
     thead.querySelectorAll('th[data-sort]').forEach(th => {
-      th.innerHTML = th.innerHTML.replace(/[▼▲]$/, ''); // Remove existing arrows
+      th.innerHTML = th.innerHTML.replace(/[\u25BC\u25B2]$/, ''); // Remove existing arrows
     });
     
     // Add indicator to current sort column
     if (column) {
       const currentHeader = thead.querySelector(`th[data-sort="${column}"]`);
       if (currentHeader) {
-        const arrow = direction === 'asc' ? ' ▲' : ' ▼';
+        const arrow = direction === 'asc' ? ' \u25B2' : ' \u25BC';
         currentHeader.innerHTML += arrow;
       }
     }
@@ -2171,3 +2685,17 @@ function setupTeamSearchBar(players) {
 }
 
 window.addEventListener('DOMContentLoaded', loadTeamInfo); 
+
+// ------------------- HELPER: OBTENER LOGO DE EQUIPO -------------------
+function getTeamLogo(teamId) {
+  if (!window.allPlayersData) return 'team_icon.png';
+  const player = window.allPlayersData.find(p => {
+    if (p.teamId === teamId) return true;
+    for (let i = 1; i < 10; i++) {
+      if (p[`teamId_${i}`] === teamId) return true;
+    }
+    return false;
+  });
+  if (!player) return 'team_icon.png';
+  return (player.teamLogo && player.teamLogo.trim() !== '') ? player.teamLogo : 'team_icon.png';
+}
