@@ -201,14 +201,14 @@
                         "Place": "POLIDEPORTIVO MUNICIPAL EL LIMÓN",
                         "TeamAID": 959737,
                         "TeamA": "CUMBERS AMARILLO CDSI ",
-                        "ScoreA": 80,
+                        "ScoreA": 86,
                         "TeamACode": "47008607",
                         "TeamAClubCode": "470086",
                         "TeamBID": 973967,
                         "TeamB": "ÓPTICA DÍAZ MIRALVALLE",
                         "TeamBCode": "10008513",
                         "TeamBClubCode": "100085",
-                        "ScoreB": 45,
+                        "ScoreB": 53,
                         "StartTime": "2025-06-24T12:00:00",
                         "StartTimeUTC": "2025-06-24T10:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -216,7 +216,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=959737&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=973967&ti=1",
                         "Quarter": 6,
-                        "Time": "00:43:22",
+                        "Time": "00:47:48",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -248,8 +248,8 @@
                             },
                             {
                                 "n": "6",
-                                "scoreA": "9",
-                                "scoreB": "2"
+                                "scoreA": "15",
+                                "scoreB": "10"
                             }
                         ],
                         "Season": null,
