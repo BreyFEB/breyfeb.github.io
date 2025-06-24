@@ -11,7 +11,7 @@
                 "id": "256",
                 "name": "CE Clubes Mini Fem",
                 "gamescount": 32,
-                "nowplaying": 0,
+                "nowplaying": 4,
                 "order": 23,
                 "GAMES": [
                     {
@@ -20,7 +20,7 @@
                         "Competition": "C ESP CLUBES MINI FEM",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "3",
+                        "Stage": "0",
                         "ID": 2472157,
                         "GameCode": null,
                         "Place": "PABELLÓN BLAS INFANTE",
@@ -40,12 +40,18 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=970225&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=968098&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:00:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -55,7 +61,7 @@
                         "Competition": "C ESP CLUBES MINI FEM",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "3",
+                        "Stage": "0",
                         "ID": 2472151,
                         "GameCode": null,
                         "Place": "POLIDEPORTIVO MUNICIPAL ELOLA 2",
@@ -75,12 +81,18 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=966480&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=973454&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:00:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -90,7 +102,7 @@
                         "Competition": "C ESP CLUBES MINI FEM",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "3",
+                        "Stage": "0",
                         "ID": 2472139,
                         "GameCode": null,
                         "Place": "POLIDEPORTIVO MUNICIPAL ELOLA 1",
@@ -110,12 +122,18 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=970804&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=967390&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:00:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -125,7 +143,7 @@
                         "Competition": "C ESP CLUBES MINI FEM",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "3",
+                        "Stage": "0",
                         "ID": 2472182,
                         "GameCode": null,
                         "Place": "POLIDEPORTIVO MUNICIPAL EL LIMÓN",
@@ -145,12 +163,18 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=959371&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=970429&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:00:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -595,30 +619,35 @@
                         "Place": "INSTALACIONES DEPORTIVAS EL NARANJO",
                         "TeamAID": 972300,
                         "TeamA": "ADEMAR MERCURY",
-                        "ScoreA": 6,
+                        "ScoreA": 21,
                         "TeamACode": "31018105",
                         "TeamAClubCode": "310181",
                         "TeamBID": 973829,
                         "TeamB": "R. CLUB MARÍTIMO",
                         "TeamBCode": "52007270",
                         "TeamBClubCode": "520072",
-                        "ScoreB": 15,
+                        "ScoreB": 25,
                         "StartTime": "2025-06-24T09:30:00",
                         "StartTimeUTC": "2025-06-24T07:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=972300&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=973829&ti=1",
-                        "Quarter": 1,
-                        "Time": "00:06:35",
+                        "Quarter": 2,
+                        "Time": "00:13:21",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
                             {
                                 "n": "1",
-                                "scoreA": "6",
-                                "scoreB": "15"
+                                "scoreA": "11",
+                                "scoreB": "20"
+                            },
+                            {
+                                "n": "2",
+                                "scoreA": "10",
+                                "scoreB": "5"
                             }
                         ],
                         "Season": null,
@@ -636,22 +665,22 @@
                         "Place": "PABELLÓN IDM FIDIANA",
                         "TeamAID": 962613,
                         "TeamA": "CULTURAL Y DEPORTIVA LEONESA - COLEGIO LEONÉS A",
-                        "ScoreA": 25,
+                        "ScoreA": 44,
                         "TeamACode": "24031008",
                         "TeamAClubCode": "240310",
                         "TeamBID": 977136,
                         "TeamB": "SOTILLO MASCULINO ",
                         "TeamBCode": "26006401",
                         "TeamBClubCode": "260064",
-                        "ScoreB": 11,
+                        "ScoreB": 22,
                         "StartTime": "2025-06-24T09:30:00",
                         "StartTimeUTC": "2025-06-24T07:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=962613&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=977136&ti=1",
-                        "Quarter": 2,
-                        "Time": "00:08:44",
+                        "Quarter": 3,
+                        "Time": "00:17:55",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -663,8 +692,13 @@
                             },
                             {
                                 "n": "2",
-                                "scoreA": "3",
-                                "scoreB": "1"
+                                "scoreA": "22",
+                                "scoreB": "8"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "0",
+                                "scoreB": "4"
                             }
                         ],
                         "Season": null,
@@ -682,22 +716,22 @@
                         "Place": "PALACIO DE DEPORTES VISTALEGRE",
                         "TeamAID": 961889,
                         "TeamA": "CB RIA DE RIBADEO",
-                        "ScoreA": 10,
+                        "ScoreA": 22,
                         "TeamACode": "27007105",
                         "TeamAClubCode": "270071",
                         "TeamBID": 963536,
                         "TeamB": "CBI ELCHE",
                         "TeamBCode": "03003119",
                         "TeamBClubCode": "030031",
-                        "ScoreB": 28,
+                        "ScoreB": 45,
                         "StartTime": "2025-06-24T09:30:00",
                         "StartTimeUTC": "2025-06-24T07:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=961889&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=963536&ti=1",
-                        "Quarter": 2,
-                        "Time": "00:08:00",
+                        "Quarter": 3,
+                        "Time": "00:16:38",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -709,8 +743,13 @@
                             },
                             {
                                 "n": "2",
+                                "scoreA": "12",
+                                "scoreB": "13"
+                            },
+                            {
+                                "n": "3",
                                 "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreB": "4"
                             }
                         ],
                         "Season": null,
@@ -728,22 +767,22 @@
                         "Place": "COLEGIO VIRGEN DEL CARMEN",
                         "TeamAID": 956571,
                         "TeamA": "IBERCARGAS GODELLA",
-                        "ScoreA": 18,
+                        "ScoreA": 32,
                         "TeamACode": "46049517",
                         "TeamAClubCode": "460495",
                         "TeamBID": 961844,
                         "TeamB": "REAL GRUPO DE CULTURA COVADONGA \"A\"",
                         "TeamBCode": "33000365",
                         "TeamBClubCode": "330003",
-                        "ScoreB": 13,
+                        "ScoreB": 18,
                         "StartTime": "2025-06-24T09:30:00",
                         "StartTimeUTC": "2025-06-24T07:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=956571&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=961844&ti=1",
-                        "Quarter": 2,
-                        "Time": "00:08:44",
+                        "Quarter": 3,
+                        "Time": "00:16:00",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -755,7 +794,12 @@
                             },
                             {
                                 "n": "2",
-                                "scoreA": "2",
+                                "scoreA": "16",
+                                "scoreB": "5"
+                            },
+                            {
+                                "n": "3",
+                                "scoreA": "0",
                                 "scoreB": "0"
                             }
                         ],
