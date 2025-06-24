@@ -11,7 +11,7 @@
                 "id": "256",
                 "name": "CE Clubes Mini Fem",
                 "gamescount": 32,
-                "nowplaying": 3,
+                "nowplaying": 4,
                 "order": 23,
                 "GAMES": [
                     {
@@ -306,30 +306,35 @@
                         "Place": "PABELLÓN BLAS INFANTE",
                         "TeamAID": 970124,
                         "TeamA": "SAN CERNIN \"AZUL\"",
-                        "ScoreA": 0,
+                        "ScoreA": 10,
                         "TeamACode": "31003522",
                         "TeamAClubCode": "310035",
                         "TeamBID": 969205,
                         "TeamB": "MOVISTAR ESTUDIANTES \"JUANA\"",
                         "TeamBCode": "28000170",
                         "TeamBClubCode": "280001",
-                        "ScoreB": 0,
+                        "ScoreB": 16,
                         "StartTime": "2025-06-24T17:00:00",
                         "StartTimeUTC": "2025-06-24T15:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=970124&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=969205&ti=1",
-                        "Quarter": 1,
-                        "Time": "00:00:00",
+                        "Quarter": 2,
+                        "Time": "00:08:39",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
                             {
                                 "n": "1",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "8",
+                                "scoreB": "13"
+                            },
+                            {
+                                "n": "2",
+                                "scoreA": "2",
+                                "scoreB": "3"
                             }
                         ],
                         "Season": null,
@@ -341,32 +346,43 @@
                         "Competition": "C ESP CLUBES MINI FEM",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "3",
+                        "Stage": "0",
                         "ID": 2472170,
                         "GameCode": null,
                         "Place": "POLIDEPORTIVO MUNICIPAL ELOLA 1",
                         "TeamAID": 968539,
                         "TeamA": "SANT JOSEP A ",
-                        "ScoreA": 0,
+                        "ScoreA": 7,
                         "TeamACode": "07000660",
                         "TeamAClubCode": "070006",
                         "TeamBID": 969651,
                         "TeamB": "UROS DE RIVAS 'A'",
                         "TeamBCode": "28306552",
                         "TeamBClubCode": "283065",
-                        "ScoreB": 0,
+                        "ScoreB": 11,
                         "StartTime": "2025-06-24T17:00:00",
                         "StartTimeUTC": "2025-06-24T15:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=968539&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=969651&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 2,
+                        "Time": "00:08:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "7",
+                                "scoreB": "11"
+                            },
+                            {
+                                "n": "2",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -382,28 +398,33 @@
                         "Place": "POLIDEPORTIVO MUNICIPAL ELOLA 2",
                         "TeamAID": 967512,
                         "TeamA": "SUPERDUMBO MARISTAS MURCIA",
-                        "ScoreA": 0,
+                        "ScoreA": 8,
                         "TeamACode": "30019207",
                         "TeamAClubCode": "300192",
                         "TeamBID": 964542,
                         "TeamB": "MARIANISTAS A",
                         "TeamBCode": "50002125",
                         "TeamBClubCode": "500021",
-                        "ScoreB": 0,
+                        "ScoreB": 17,
                         "StartTime": "2025-06-24T17:00:00",
                         "StartTimeUTC": "2025-06-24T15:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=967512&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=964542&ti=1",
-                        "Quarter": 1,
-                        "Time": "00:00:00",
+                        "Quarter": 2,
+                        "Time": "00:08:28",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
                             {
                                 "n": "1",
+                                "scoreA": "8",
+                                "scoreB": "17"
+                            },
+                            {
+                                "n": "2",
                                 "scoreA": "0",
                                 "scoreB": "0"
                             }
@@ -423,7 +444,7 @@
                         "Place": "POLIDEPORTIVO MUNICIPAL EL LIMÓN",
                         "TeamAID": 962981,
                         "TeamA": "XTRATOS-TVGA",
-                        "ScoreA": 0,
+                        "ScoreA": 8,
                         "TeamACode": "39009617",
                         "TeamAClubCode": "390096",
                         "TeamBID": 977160,
@@ -437,14 +458,19 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=962981&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=977160&ti=1",
-                        "Quarter": 1,
-                        "Time": "00:00:00",
+                        "Quarter": 2,
+                        "Time": "00:08:00",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
                             {
                                 "n": "1",
+                                "scoreA": "8",
+                                "scoreB": "0"
+                            },
+                            {
+                                "n": "2",
                                 "scoreA": "0",
                                 "scoreB": "0"
                             }
