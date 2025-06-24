@@ -11,7 +11,7 @@
                 "id": "256",
                 "name": "CE Clubes Mini Fem",
                 "gamescount": 32,
-                "nowplaying": 1,
+                "nowplaying": 0,
                 "order": 23,
                 "GAMES": [
                     {
@@ -216,42 +216,11 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=959737&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=973967&ti=1",
                         "Quarter": 6,
-                        "Time": "00:47:48",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [
-                            {
-                                "n": "1",
-                                "scoreA": "13",
-                                "scoreB": "10"
-                            },
-                            {
-                                "n": "2",
-                                "scoreA": "5",
-                                "scoreB": "6"
-                            },
-                            {
-                                "n": "3",
-                                "scoreA": "19",
-                                "scoreB": "5"
-                            },
-                            {
-                                "n": "4",
-                                "scoreA": "11",
-                                "scoreB": "11"
-                            },
-                            {
-                                "n": "5",
-                                "scoreA": "23",
-                                "scoreB": "11"
-                            },
-                            {
-                                "n": "6",
-                                "scoreA": "15",
-                                "scoreB": "10"
-                            }
-                        ],
+                        "Quarters": [],
                         "Season": null,
                         "SeasonID": null
                     },
