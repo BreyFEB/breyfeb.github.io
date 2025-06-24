@@ -860,7 +860,7 @@
                 "id": "257",
                 "name": "CE Clubes Mini Masc",
                 "gamescount": 36,
-                "nowplaying": 3,
+                "nowplaying": 1,
                 "order": 24,
                 "GAMES": [
                     {
@@ -1295,22 +1295,22 @@
                         "Place": "COLEGIO VIRGEN DEL CARMEN",
                         "TeamAID": 970983,
                         "TeamA": "SA POBLA BC GAROL PROJECTES EN VIDRE I ALUMINI A ",
-                        "ScoreA": 77,
+                        "ScoreA": 89,
                         "TeamACode": "07002652",
                         "TeamAClubCode": "070026",
                         "TeamBID": 970253,
                         "TeamB": "BASKET SANTA CRUZ",
                         "TeamBCode": "38029087",
                         "TeamBClubCode": "380290",
-                        "ScoreB": 97,
+                        "ScoreB": 113,
                         "StartTime": "2025-06-24T20:30:00",
                         "StartTimeUTC": "2025-06-24T18:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=970983&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=970253&ti=1",
-                        "Quarter": 5,
-                        "Time": "00:39:57",
+                        "Quarter": 6,
+                        "Time": "00:45:46",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -1339,6 +1339,11 @@
                                 "n": "5",
                                 "scoreA": "5",
                                 "scoreB": "18"
+                            },
+                            {
+                                "n": "6",
+                                "scoreA": "12",
+                                "scoreB": "16"
                             }
                         ],
                         "Season": null,
@@ -1391,14 +1396,14 @@
                         "Place": "PABELLÓN IDM FIDIANA",
                         "TeamAID": 978958,
                         "TeamA": "SAN PABLO BURGOS AZUL",
-                        "ScoreA": 80,
+                        "ScoreA": 88,
                         "TeamACode": "09018406",
                         "TeamAClubCode": "090184",
                         "TeamBID": 965224,
                         "TeamB": "13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA",
                         "TeamBCode": "14403171",
                         "TeamBClubCode": "144031",
-                        "ScoreB": 93,
+                        "ScoreB": 101,
                         "StartTime": "2025-06-24T20:30:00",
                         "StartTimeUTC": "2025-06-24T18:30:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -1406,42 +1411,11 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=978958&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=965224&ti=1",
                         "Quarter": 6,
-                        "Time": "00:45:04",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [
-                            {
-                                "n": "1",
-                                "scoreA": "19",
-                                "scoreB": "17"
-                            },
-                            {
-                                "n": "2",
-                                "scoreA": "15",
-                                "scoreB": "8"
-                            },
-                            {
-                                "n": "3",
-                                "scoreA": "13",
-                                "scoreB": "12"
-                            },
-                            {
-                                "n": "4",
-                                "scoreA": "13",
-                                "scoreB": "23"
-                            },
-                            {
-                                "n": "5",
-                                "scoreA": "16",
-                                "scoreB": "21"
-                            },
-                            {
-                                "n": "6",
-                                "scoreA": "4",
-                                "scoreB": "12"
-                            }
-                        ],
+                        "Quarters": [],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -1472,42 +1446,11 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=970570&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=958212&ti=1",
                         "Quarter": 6,
-                        "Time": "00:47:24",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [
-                            {
-                                "n": "1",
-                                "scoreA": "12",
-                                "scoreB": "24"
-                            },
-                            {
-                                "n": "2",
-                                "scoreA": "11",
-                                "scoreB": "9"
-                            },
-                            {
-                                "n": "3",
-                                "scoreA": "16",
-                                "scoreB": "22"
-                            },
-                            {
-                                "n": "4",
-                                "scoreA": "4",
-                                "scoreB": "7"
-                            },
-                            {
-                                "n": "5",
-                                "scoreA": "15",
-                                "scoreB": "16"
-                            },
-                            {
-                                "n": "6",
-                                "scoreA": "15",
-                                "scoreB": "12"
-                            }
-                        ],
+                        "Quarters": [],
                         "Season": null,
                         "SeasonID": null
                     },
