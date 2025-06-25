@@ -440,7 +440,7 @@
                 "id": "257",
                 "name": "CE Clubes Mini Masc",
                 "gamescount": 24,
-                "nowplaying": 2,
+                "nowplaying": 1,
                 "order": 24,
                 "GAMES": [
                     {
@@ -575,42 +575,11 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=966802&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=965224&ti=1",
                         "Quarter": 6,
-                        "Time": "00:47:35",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [
-                            {
-                                "n": "1",
-                                "scoreA": "29",
-                                "scoreB": "22"
-                            },
-                            {
-                                "n": "2",
-                                "scoreA": "8",
-                                "scoreB": "9"
-                            },
-                            {
-                                "n": "3",
-                                "scoreA": "28",
-                                "scoreB": "19"
-                            },
-                            {
-                                "n": "4",
-                                "scoreA": "15",
-                                "scoreB": "16"
-                            },
-                            {
-                                "n": "5",
-                                "scoreA": "30",
-                                "scoreB": "14"
-                            },
-                            {
-                                "n": "6",
-                                "scoreA": "11",
-                                "scoreB": "16"
-                            }
-                        ],
+                        "Quarters": [],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -626,22 +595,22 @@
                         "Place": "PALACIO DE DEPORTES VISTALEGREº",
                         "TeamAID": 962046,
                         "TeamA": "CONFFIDENCE MEDICAL C.B. CIUDAD DE MÓSTOLES",
-                        "ScoreA": 47,
+                        "ScoreA": 58,
                         "TeamACode": "28244935",
                         "TeamAClubCode": "282449",
                         "TeamBID": 956571,
                         "TeamB": "IBERCARGAS GODELLA",
                         "TeamBCode": "46049517",
                         "TeamBClubCode": "460495",
-                        "ScoreB": 35,
+                        "ScoreB": 44,
                         "StartTime": "2025-06-25T16:00:00",
                         "StartTimeUTC": "2025-06-25T14:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=962046&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=956571&ti=1",
-                        "Quarter": 4,
-                        "Time": "00:24:53",
+                        "Quarter": 5,
+                        "Time": "00:32:07",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -663,8 +632,13 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "2",
-                                "scoreB": "4"
+                                "scoreA": "13",
+                                "scoreB": "13"
+                            },
+                            {
+                                "n": "5",
+                                "scoreA": "0",
+                                "scoreB": "0"
                             }
                         ],
                         "Season": null,
