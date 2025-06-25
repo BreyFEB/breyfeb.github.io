@@ -11,7 +11,7 @@
                 "id": "256",
                 "name": "CE Clubes Mini Fem",
                 "gamescount": 24,
-                "nowplaying": 0,
+                "nowplaying": 3,
                 "order": 23,
                 "GAMES": [
                     {
@@ -20,7 +20,7 @@
                         "Competition": "C ESP CLUBES MINI FEM",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2472190,
                         "GameCode": null,
                         "Place": "POLIDEPORTIVO MUNICIPAL ELOLA 2",
@@ -40,12 +40,18 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=952958&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=953203&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:00:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -55,7 +61,7 @@
                         "Competition": "C ESP CLUBES MINI FEM",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2472184,
                         "GameCode": null,
                         "Place": "PABELLÓN BLAS INFANTE",
@@ -75,12 +81,18 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=955269&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=970429&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:00:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -90,7 +102,7 @@
                         "Competition": "C ESP CLUBES MINI FEM",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2472188,
                         "GameCode": null,
                         "Place": "POLIDEPORTIVO MUNICIPAL ELOLA 1",
@@ -110,12 +122,18 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=967390&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=969651&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:00:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
