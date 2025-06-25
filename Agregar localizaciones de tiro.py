@@ -10,7 +10,7 @@ import os
 import math
 import re
 
-os.chdir("C:\\Users\\bsanchez\\Downloads\\Cadete2025\\cadete2025\\JSONs fichas")
+os.chdir("C:\\Users\\bsanchez\\Documents\\cadete2025\\JSONs fichas")
 
 # Find all unique players
 player_ids = []
