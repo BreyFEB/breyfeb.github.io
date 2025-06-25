@@ -630,22 +630,22 @@
                         "Place": "PALACIO DE DEPORTES VISTALEGRE",
                         "TeamAID": 964972,
                         "TeamA": "MOVISTAR ESTUDIANTES \"SOLA\"",
-                        "ScoreA": 74,
+                        "ScoreA": 97,
                         "TeamACode": "28000131",
                         "TeamAClubCode": "280001",
                         "TeamBID": 963894,
                         "TeamB": "EM EL OLIVAR A1",
                         "TeamBCode": "50000700",
                         "TeamBClubCode": "500007",
-                        "ScoreB": 65,
+                        "ScoreB": 72,
                         "StartTime": "2025-06-25T18:00:00",
                         "StartTimeUTC": "2025-06-25T16:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=964972&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=963894&ti=1",
-                        "Quarter": 5,
-                        "Time": "00:34:39",
+                        "Quarter": 6,
+                        "Time": "00:42:18",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -672,8 +672,13 @@
                             },
                             {
                                 "n": "5",
-                                "scoreA": "3",
-                                "scoreB": "6"
+                                "scoreA": "17",
+                                "scoreB": "11"
+                            },
+                            {
+                                "n": "6",
+                                "scoreA": "9",
+                                "scoreB": "2"
                             }
                         ],
                         "Season": null,
