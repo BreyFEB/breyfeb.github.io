@@ -56,7 +56,7 @@ const statOptions = [
   { value: 'tli', label: 'TL Intentados' },
   { value: 'tlpct', label: '% TL' },
   { value: 'tp', label: 'Tapones' },
-  { value: 'fc', label: 'Faltas personales' },
+  { value: 'fc', label: 'Faltas cometidas' },
   { value: 'min', label: 'Minutos' },
   { value: 'pm', label: '+/-' }
 ];
