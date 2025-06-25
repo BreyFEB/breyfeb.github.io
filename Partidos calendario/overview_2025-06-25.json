@@ -595,22 +595,22 @@
                         "Place": "PALACIO DE DEPORTES VISTALEGREº",
                         "TeamAID": 962046,
                         "TeamA": "CONFFIDENCE MEDICAL C.B. CIUDAD DE MÓSTOLES",
-                        "ScoreA": 58,
+                        "ScoreA": 69,
                         "TeamACode": "28244935",
                         "TeamAClubCode": "282449",
                         "TeamBID": 956571,
                         "TeamB": "IBERCARGAS GODELLA",
                         "TeamBCode": "46049517",
                         "TeamBClubCode": "460495",
-                        "ScoreB": 44,
+                        "ScoreB": 57,
                         "StartTime": "2025-06-25T16:00:00",
                         "StartTimeUTC": "2025-06-25T14:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=962046&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=956571&ti=1",
-                        "Quarter": 5,
-                        "Time": "00:32:07",
+                        "Quarter": 6,
+                        "Time": "00:40:00",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -637,6 +637,11 @@
                             },
                             {
                                 "n": "5",
+                                "scoreA": "11",
+                                "scoreB": "13"
+                            },
+                            {
+                                "n": "6",
                                 "scoreA": "0",
                                 "scoreB": "0"
                             }
