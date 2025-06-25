@@ -665,30 +665,35 @@
                         "Place": "PABELLÓN IDM FIDIANA",
                         "TeamAID": 951906,
                         "TeamA": "JOVENTUT BADALONA  A",
-                        "ScoreA": 16,
+                        "ScoreA": 37,
                         "TeamACode": "08000516",
                         "TeamAClubCode": "080005",
                         "TeamBID": 972881,
                         "TeamB": "MAR DE GAMBAS CB PUERTO REAL",
                         "TeamBCode": "11001420",
                         "TeamBClubCode": "110014",
-                        "ScoreB": 13,
+                        "ScoreB": 17,
                         "StartTime": "2025-06-25T20:00:00",
                         "StartTimeUTC": "2025-06-25T18:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951906&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=972881&ti=1",
-                        "Quarter": 1,
-                        "Time": "00:07:15",
+                        "Quarter": 2,
+                        "Time": "00:15:32",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
                             {
                                 "n": "1",
-                                "scoreA": "16",
-                                "scoreB": "13"
+                                "scoreA": "19",
+                                "scoreB": "15"
+                            },
+                            {
+                                "n": "2",
+                                "scoreA": "18",
+                                "scoreB": "2"
                             }
                         ],
                         "Season": null,
@@ -706,30 +711,35 @@
                         "Place": "PALACIO DE DEPORTES VISTALEGRE",
                         "TeamAID": 953003,
                         "TeamA": "VALENCIA BASKET NARANJA",
-                        "ScoreA": 13,
+                        "ScoreA": 36,
                         "TeamACode": "46000201",
                         "TeamAClubCode": "460002",
                         "TeamBID": 970253,
                         "TeamB": "BASKET SANTA CRUZ",
                         "TeamBCode": "38029087",
                         "TeamBClubCode": "380290",
-                        "ScoreB": 2,
+                        "ScoreB": 12,
                         "StartTime": "2025-06-25T20:00:00",
                         "StartTimeUTC": "2025-06-25T18:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=953003&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=970253&ti=1",
-                        "Quarter": 1,
-                        "Time": "00:06:15",
+                        "Quarter": 2,
+                        "Time": "00:14:52",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
                         "Quarters": [
                             {
                                 "n": "1",
-                                "scoreA": "13",
-                                "scoreB": "2"
+                                "scoreA": "17",
+                                "scoreB": "5"
+                            },
+                            {
+                                "n": "2",
+                                "scoreA": "19",
+                                "scoreB": "7"
                             }
                         ],
                         "Season": null,
