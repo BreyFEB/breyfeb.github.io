@@ -4,7 +4,7 @@
         "competition": "C ESP CLUBES MINI MASC",
         "round": "1/8 Final           ",
         "quarter": 6,
-        "time": "00:00",
+        "time": "FINAL",
         "logo": null,
         "duration": null,
         "starttime": "25-06-2025 - 14:00",
@@ -602,7 +602,7 @@
                         "to": "0",
                         "st": "0",
                         "ind": null,
-                        "pllss": "0",
+                        "pllss": "-16",
                         "val": "2",
                         "assist": "0",
                         "reb": "0",
@@ -855,8 +855,8 @@
                         "fgm": "8",
                         "fga": "8",
                         "fgp": "100,0",
-                        "min": "1549",
-                        "minFormatted": "25:49",
+                        "min": "1440",
+                        "minFormatted": "24:00",
                         "sta": null,
                         "bs": "0",
                         "tc": "0",
@@ -868,7 +868,7 @@
                         "to": "0",
                         "st": "0",
                         "ind": null,
-                        "pllss": "12",
+                        "pllss": "0",
                         "val": "20",
                         "assist": "0",
                         "reb": "0",
@@ -1099,7 +1099,33 @@
         "hasExtension": false,
         "LINES": [
             {
-                "num": "322",
+                "num": "318",
+                "text": "Fin del Cuarto 6",
+                "team": null,
+                "time": "00:00",
+                "deleted": null,
+                "scoreA": null,
+                "scoreB": null,
+                "quarter": "6",
+                "logo": null,
+                "idPlayer": null,
+                "idLicense": null,
+                "idTeam": null,
+                "action": "period",
+                "logParam1": "6",
+                "logParam2": "1",
+                "logParam3": "",
+                "logParam4": "",
+                "logParam5": "",
+                "logParam6": "",
+                "logParam7": "",
+                "logParam8": "",
+                "logParam9": "",
+                "logParam10": "",
+                "Position": ""
+            },
+            {
+                "num": "317",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) G. LUQUE ANTÚNEZ: TIRO DE 2 ANOTADO (Puntos: 20)",
                 "team": "2",
                 "time": "00:25",
@@ -1125,7 +1151,7 @@
                 "Position": ""
             },
             {
-                "num": "321",
+                "num": "316",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) Á. CAMARAS ALTAS ZURITA: FALTA Personal (Faltas: 4. Faltas de equipo: 24). Tiros libres: 0",
                 "team": "2",
                 "time": "00:38",
@@ -1151,7 +1177,7 @@
                 "Position": ""
             },
             {
-                "num": "320",
+                "num": "315",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) G. LUQUE ANTÚNEZ: TIRO DE 2 ANOTADO (Puntos: 18)",
                 "team": "2",
                 "time": "00:49",
@@ -1177,7 +1203,7 @@
                 "Position": ""
             },
             {
-                "num": "319",
+                "num": "314",
                 "text": "(EMB CANDELARIA) J. QUEVEDO GUILLEN: FALTA Personal (Faltas: 4. Faltas de equipo: 24). Tiros libres: 0",
                 "team": "1",
                 "time": "00:49",
@@ -1203,7 +1229,7 @@
                 "Position": ""
             },
             {
-                "num": "318",
+                "num": "313",
                 "text": "(EMB CANDELARIA) M. BAEZ GONZALEZ: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "01:35",
@@ -1229,7 +1255,7 @@
                 "Position": ""
             },
             {
-                "num": "317",
+                "num": "312",
                 "text": "(EMB CANDELARIA) R. CABEZAS MORALES: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "01:35",
@@ -1255,7 +1281,7 @@
                 "Position": ""
             },
             {
-                "num": "316",
+                "num": "311",
                 "text": "(EMB CANDELARIA) E. YANES RAMOS: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "01:35",
@@ -1281,7 +1307,7 @@
                 "Position": ""
             },
             {
-                "num": "315",
+                "num": "310",
                 "text": "(EMB CANDELARIA) A. AGUIAR SOMERA: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "01:35",
@@ -1307,7 +1333,7 @@
                 "Position": ""
             },
             {
-                "num": "314",
+                "num": "309",
                 "text": "(EMB CANDELARIA) D. GARCIA GUANCHE: TIRO DE 3 ANOTADO (Puntos: 8)",
                 "team": "1",
                 "time": "02:01",
@@ -1333,7 +1359,7 @@
                 "Position": ""
             },
             {
-                "num": "313",
+                "num": "308",
                 "text": "(EMB CANDELARIA) D. GARCIA GUANCHE: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "02:04",
@@ -1359,7 +1385,7 @@
                 "Position": ""
             },
             {
-                "num": "312",
+                "num": "307",
                 "text": "(EMB CANDELARIA) I. FERNANDEZ AYATALLAH: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "02:04",
@@ -1385,7 +1411,7 @@
                 "Position": ""
             },
             {
-                "num": "311",
+                "num": "306",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) F. AMO BENAVENTE: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "02:04",
@@ -1411,7 +1437,7 @@
                 "Position": ""
             },
             {
-                "num": "310",
+                "num": "305",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) A. VERDEJO BORREGO: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "02:04",
@@ -1437,7 +1463,7 @@
                 "Position": ""
             },
             {
-                "num": "309",
+                "num": "304",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) A. FERNÁNDEZ CABALLERO: TIRO DE 1 FALLADO",
                 "team": "2",
                 "time": "02:18",
@@ -1463,7 +1489,7 @@
                 "Position": ""
             },
             {
-                "num": "308",
+                "num": "303",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) A. FERNÁNDEZ CABALLERO: TIRO DE 1 FALLADO",
                 "team": "2",
                 "time": "02:18",
@@ -1489,7 +1515,7 @@
                 "Position": ""
             },
             {
-                "num": "307",
+                "num": "302",
                 "text": "(EMB CANDELARIA) R. CABEZAS MORALES: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "02:18",
@@ -1515,7 +1541,7 @@
                 "Position": ""
             },
             {
-                "num": "306",
+                "num": "301",
                 "text": "(EMB CANDELARIA) Y. JOVER MARTIN: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "02:18",
@@ -1541,7 +1567,7 @@
                 "Position": ""
             },
             {
-                "num": "305",
+                "num": "300",
                 "text": "(EMB CANDELARIA) R. CABEZAS MORALES: FALTA Personal (Faltas: 2. Faltas de equipo: 23). Tiros libres: 2",
                 "team": "1",
                 "time": "02:18",
@@ -1567,7 +1593,7 @@
                 "Position": ""
             },
             {
-                "num": "304",
+                "num": "299",
                 "text": "(EMB CANDELARIA) Y. GARCIA REDONDO: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "02:33",
@@ -1593,7 +1619,7 @@
                 "Position": ""
             },
             {
-                "num": "303",
+                "num": "298",
                 "text": "(EMB CANDELARIA) R. CABEZAS MORALES: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "02:33",
@@ -1619,7 +1645,7 @@
                 "Position": ""
             },
             {
-                "num": "302",
+                "num": "297",
                 "text": "(EMB CANDELARIA) J. QUEVEDO GUILLEN: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "02:54",
@@ -1645,7 +1671,7 @@
                 "Position": ""
             },
             {
-                "num": "301",
+                "num": "296",
                 "text": "(EMB CANDELARIA) M. MORR MACHIN: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "02:54",
@@ -1671,7 +1697,7 @@
                 "Position": ""
             },
             {
-                "num": "300",
+                "num": "295",
                 "text": "(EMB CANDELARIA) I. FERNANDEZ AYATALLAH: FALTA Personal (Faltas: 2. Faltas de equipo: 22). Tiros libres: 0",
                 "team": "1",
                 "time": "02:54",
@@ -1697,7 +1723,7 @@
                 "Position": ""
             },
             {
-                "num": "299",
+                "num": "294",
                 "text": "(EMB CANDELARIA) A. AGUIAR SOMERA: TIRO DE 2 ANOTADO (Puntos: 19)",
                 "team": "1",
                 "time": "03:09",
@@ -1723,7 +1749,7 @@
                 "Position": ""
             },
             {
-                "num": "298",
+                "num": "293",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) Á. CAMARAS ALTAS ZURITA: TIRO DE 3 ANOTADO (Puntos: 17)",
                 "team": "2",
                 "time": "03:19",
@@ -1749,7 +1775,7 @@
                 "Position": ""
             },
             {
-                "num": "297",
+                "num": "292",
                 "text": "(EMB CANDELARIA) M. MORR MACHIN: TIRO DE 2 ANOTADO (Puntos: 12)",
                 "team": "1",
                 "time": "03:58",
@@ -1775,7 +1801,7 @@
                 "Position": ""
             },
             {
-                "num": "296",
+                "num": "291",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) A. VERDEJO BORREGO: TIRO DE 2 ANOTADO (Puntos: 4)",
                 "team": "2",
                 "time": "04:07",
@@ -1801,7 +1827,7 @@
                 "Position": ""
             },
             {
-                "num": "295",
+                "num": "290",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) P. ROMERO GÓMEZ: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "04:29",
@@ -1827,7 +1853,7 @@
                 "Position": ""
             },
             {
-                "num": "294",
+                "num": "289",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) A. DELGADO CABEZUELO: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "04:29",
@@ -1853,7 +1879,7 @@
                 "Position": ""
             },
             {
-                "num": "293",
+                "num": "288",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) Á. CAMARAS ALTAS ZURITA: TIRO DE 2 ANOTADO (Puntos: 14)",
                 "team": "2",
                 "time": "04:56",
@@ -1879,7 +1905,7 @@
                 "Position": ""
             },
             {
-                "num": "292",
+                "num": "287",
                 "text": "(EMB CANDELARIA) R. CABEZAS MORALES: TIRO DE 2 ANOTADO (Puntos: 16)",
                 "team": "1",
                 "time": "05:09",
@@ -1905,7 +1931,7 @@
                 "Position": ""
             },
             {
-                "num": "291",
+                "num": "286",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) A. FERNÁNDEZ CABALLERO: TIRO DE 2 ANOTADO (Puntos: 28)",
                 "team": "2",
                 "time": "06:08",
@@ -1931,7 +1957,7 @@
                 "Position": ""
             },
             {
-                "num": "290",
+                "num": "285",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) Á. CAMARAS ALTAS ZURITA: TIRO DE 3 ANOTADO (Puntos: 12)",
                 "team": "2",
                 "time": "07:14",
@@ -1957,7 +1983,7 @@
                 "Position": ""
             },
             {
-                "num": "289",
+                "num": "284",
                 "text": "(EMB CANDELARIA) A. AGUIAR SOMERA: TIRO DE 1 FALLADO",
                 "team": "1",
                 "time": "07:23",
@@ -1983,7 +2009,7 @@
                 "Position": ""
             },
             {
-                "num": "288",
+                "num": "283",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) A. VERDEJO BORREGO: FALTA Personal (Faltas: 1. Faltas de equipo: 23). Tiros libres: 1",
                 "team": "2",
                 "time": "07:23",
@@ -2009,7 +2035,7 @@
                 "Position": ""
             },
             {
-                "num": "287",
+                "num": "282",
                 "text": "(EMB CANDELARIA) A. AGUIAR SOMERA: TIRO DE 2 ANOTADO (Puntos: 17)",
                 "team": "1",
                 "time": "07:25",
@@ -2035,7 +2061,7 @@
                 "Position": ""
             },
             {
-                "num": "286",
+                "num": "281",
                 "text": "(EMB CANDELARIA) A. AGUIAR SOMERA: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "08:00",
@@ -2061,7 +2087,7 @@
                 "Position": ""
             },
             {
-                "num": "285",
+                "num": "280",
                 "text": "(EMB CANDELARIA) M. MORR MACHIN: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "08:00",
@@ -2087,7 +2113,7 @@
                 "Position": ""
             },
             {
-                "num": "284",
+                "num": "279",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) F. AMO BENAVENTE: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "08:00",
@@ -2113,7 +2139,7 @@
                 "Position": ""
             },
             {
-                "num": "283",
+                "num": "278",
                 "text": "(EMB CANDELARIA) E. YANES RAMOS: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "08:00",
@@ -2139,7 +2165,7 @@
                 "Position": ""
             },
             {
-                "num": "282",
+                "num": "277",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) G. LUQUE ANTÚNEZ: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "08:00",
@@ -2165,7 +2191,7 @@
                 "Position": ""
             },
             {
-                "num": "281",
+                "num": "276",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) A. DELGADO CABEZUELO: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "08:00",
@@ -2191,7 +2217,7 @@
                 "Position": ""
             },
             {
-                "num": "280",
+                "num": "275",
                 "text": "(EMB CANDELARIA) Y. JOVER MARTIN: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "08:00",
@@ -2217,7 +2243,7 @@
                 "Position": ""
             },
             {
-                "num": "279",
+                "num": "274",
                 "text": "(EMB CANDELARIA) D. GARCIA GUANCHE: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "08:00",
@@ -2243,7 +2269,7 @@
                 "Position": ""
             },
             {
-                "num": "278",
+                "num": "273",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) J. MORALES MOLINA: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "08:00",
@@ -2269,7 +2295,7 @@
                 "Position": ""
             },
             {
-                "num": "277",
+                "num": "272",
                 "text": "(EMB CANDELARIA) R. BORGES GONZALEZ: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "08:00",
@@ -2295,7 +2321,7 @@
                 "Position": ""
             },
             {
-                "num": "276",
+                "num": "271",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) A. JIMENEZ GARRIDO: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "08:00",
@@ -2321,7 +2347,7 @@
                 "Position": ""
             },
             {
-                "num": "275",
+                "num": "270",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) A. VERDEJO BORREGO: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "08:00",
@@ -2347,7 +2373,7 @@
                 "Position": ""
             },
             {
-                "num": "274",
+                "num": "269",
                 "text": "Comienzo del Cuarto 6",
                 "team": null,
                 "time": "08:00",
@@ -2373,7 +2399,7 @@
                 "Position": ""
             },
             {
-                "num": "273",
+                "num": "268",
                 "text": "Fin del Cuarto 5",
                 "team": null,
                 "time": "00:00",
@@ -2399,7 +2425,7 @@
                 "Position": ""
             },
             {
-                "num": "272",
+                "num": "267",
                 "text": "(EMB CANDELARIA) E. YANES RAMOS: FALTA Personal (Faltas: 4. Faltas de equipo: 21). Tiros libres: 0",
                 "team": "1",
                 "time": "00:00",
@@ -2425,7 +2451,7 @@
                 "Position": ""
             },
             {
-                "num": "271",
+                "num": "266",
                 "text": "(EMB CANDELARIA) R. CABEZAS MORALES: TIRO DE 2 ANOTADO (Puntos: 14)",
                 "team": "1",
                 "time": "00:13",
@@ -2451,7 +2477,7 @@
                 "Position": ""
             },
             {
-                "num": "270",
+                "num": "265",
                 "text": "(EMB CANDELARIA) D. GARCIA GUANCHE: TIRO DE 2 ANOTADO (Puntos: 5)",
                 "team": "1",
                 "time": "00:36",
@@ -2477,7 +2503,7 @@
                 "Position": ""
             },
             {
-                "num": "269",
+                "num": "264",
                 "text": "(EMB CANDELARIA) P. ROBAYNA GARCÍA: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "00:52",
@@ -2503,7 +2529,7 @@
                 "Position": ""
             },
             {
-                "num": "268",
+                "num": "263",
                 "text": "(EMB CANDELARIA) I. FERNANDEZ AYATALLAH: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "00:52",
@@ -2529,7 +2555,7 @@
                 "Position": ""
             },
             {
-                "num": "267",
+                "num": "262",
                 "text": "(EMB CANDELARIA) P. ROBAYNA GARCÍA: FALTA Personal (Faltas: 5. Faltas de equipo: 20). Tiros libres: 0",
                 "team": "1",
                 "time": "00:52",
@@ -2555,7 +2581,7 @@
                 "Position": ""
             },
             {
-                "num": "266",
+                "num": "261",
                 "text": "(EMB CANDELARIA) P. ROBAYNA GARCÍA: TIRO DE 1 ANOTADO (Puntos: 14)",
                 "team": "1",
                 "time": "01:01",
@@ -2581,7 +2607,7 @@
                 "Position": ""
             },
             {
-                "num": "265",
+                "num": "260",
                 "text": "(EMB CANDELARIA) P. ROBAYNA GARCÍA: TIRO DE 1 ANOTADO (Puntos: 13)",
                 "team": "1",
                 "time": "01:01",
@@ -2607,7 +2633,7 @@
                 "Position": ""
             },
             {
-                "num": "264",
+                "num": "259",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) Á. CAMARAS ALTAS ZURITA: FALTA Personal (Faltas: 3. Faltas de equipo: 22). Tiros libres: 0",
                 "team": "2",
                 "time": "01:01",
@@ -2633,7 +2659,7 @@
                 "Position": ""
             },
             {
-                "num": "263",
+                "num": "258",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) A. FERNÁNDEZ CABALLERO: TIRO DE 2 ANOTADO (Puntos: 26)",
                 "team": "2",
                 "time": "01:13",
@@ -2659,7 +2685,7 @@
                 "Position": ""
             },
             {
-                "num": "262",
+                "num": "257",
                 "text": "(EMB CANDELARIA) R. CABEZAS MORALES: TIRO DE 2 ANOTADO (Puntos: 12)",
                 "team": "1",
                 "time": "01:30",
@@ -2685,7 +2711,7 @@
                 "Position": ""
             },
             {
-                "num": "261",
+                "num": "256",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) Tiempo muerto",
                 "team": "2",
                 "time": "01:45",
@@ -2711,7 +2737,7 @@
                 "Position": ""
             },
             {
-                "num": "260",
+                "num": "255",
                 "text": "(EMB CANDELARIA) P. ROBAYNA GARCÍA: TIRO DE 3 ANOTADO (Puntos: 12)",
                 "team": "1",
                 "time": "01:45",
@@ -2737,7 +2763,7 @@
                 "Position": ""
             },
             {
-                "num": "259",
+                "num": "254",
                 "text": "(EMB CANDELARIA) R. BORGES GONZALEZ: TIRO DE 2 ANOTADO (Puntos: 35)",
                 "team": "1",
                 "time": "02:14",
@@ -2763,7 +2789,7 @@
                 "Position": ""
             },
             {
-                "num": "258",
+                "num": "253",
                 "text": "(EMB CANDELARIA) E. YANES RAMOS: TIRO DE 1 FALLADO",
                 "team": "1",
                 "time": "02:46",
@@ -2789,7 +2815,7 @@
                 "Position": ""
             },
             {
-                "num": "257",
+                "num": "252",
                 "text": "(EMB CANDELARIA) E. YANES RAMOS: TIRO DE 1 FALLADO",
                 "team": "1",
                 "time": "02:46",
@@ -2815,7 +2841,7 @@
                 "Position": ""
             },
             {
-                "num": "256",
+                "num": "251",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) A. JIMENEZ GARRIDO: FALTA Personal (Faltas: 2. Faltas de equipo: 21). Tiros libres: 2",
                 "team": "2",
                 "time": "02:46",
@@ -2841,7 +2867,7 @@
                 "Position": ""
             },
             {
-                "num": "255",
+                "num": "250",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) A. JIMENEZ GARRIDO: TIRO DE 3 ANOTADO (Puntos: 6)",
                 "team": "2",
                 "time": "03:05",
@@ -2867,7 +2893,7 @@
                 "Position": ""
             },
             {
-                "num": "254",
+                "num": "249",
                 "text": "(EMB CANDELARIA) P. ROBAYNA GARCÍA: FALTA Personal (Faltas: 4. Faltas de equipo: 19). Tiros libres: 0",
                 "team": "1",
                 "time": "03:19",
@@ -2893,7 +2919,7 @@
                 "Position": ""
             },
             {
-                "num": "253",
+                "num": "248",
                 "text": "(EMB CANDELARIA) R. CABEZAS MORALES: TIRO DE 1 ANOTADO (Puntos: 10)",
                 "team": "1",
                 "time": "03:28",
@@ -2919,7 +2945,7 @@
                 "Position": ""
             },
             {
-                "num": "252",
+                "num": "247",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) F. AMO BENAVENTE: FALTA Personal (Faltas: 1. Faltas de equipo: 20). Tiros libres: 1",
                 "team": "2",
                 "time": "03:28",
@@ -2945,7 +2971,7 @@
                 "Position": ""
             },
             {
-                "num": "251",
+                "num": "246",
                 "text": "(EMB CANDELARIA) R. CABEZAS MORALES: TIRO DE 2 ANOTADO (Puntos: 9)",
                 "team": "1",
                 "time": "03:35",
@@ -2971,7 +2997,7 @@
                 "Position": ""
             },
             {
-                "num": "250",
+                "num": "245",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) F. AMO BENAVENTE: TIRO DE 1 FALLADO",
                 "team": "2",
                 "time": "03:55",
@@ -2997,7 +3023,7 @@
                 "Position": ""
             },
             {
-                "num": "249",
+                "num": "244",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) F. AMO BENAVENTE: TIRO DE 1 ANOTADO (Puntos: 5)",
                 "team": "2",
                 "time": "03:55",
@@ -3023,7 +3049,7 @@
                 "Position": ""
             },
             {
-                "num": "248",
+                "num": "243",
                 "text": "(EMB CANDELARIA) E. YANES RAMOS: FALTA Personal (Faltas: 3. Faltas de equipo: 18). Tiros libres: 2",
                 "team": "1",
                 "time": "03:55",
@@ -3049,7 +3075,7 @@
                 "Position": ""
             },
             {
-                "num": "247",
+                "num": "242",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) A. JIMENEZ GARRIDO: TIRO DE 3 ANOTADO (Puntos: 3)",
                 "team": "2",
                 "time": "04:18",
@@ -3075,7 +3101,7 @@
                 "Position": ""
             },
             {
-                "num": "246",
+                "num": "241",
                 "text": "(EMB CANDELARIA) P. ROBAYNA GARCÍA: TIRO DE 1 ANOTADO (Puntos: 9)",
                 "team": "1",
                 "time": "04:42",
@@ -3101,7 +3127,7 @@
                 "Position": ""
             },
             {
-                "num": "245",
+                "num": "240",
                 "text": "(EMB CANDELARIA) P. ROBAYNA GARCÍA: TIRO DE 1 ANOTADO (Puntos: 8)",
                 "team": "1",
                 "time": "04:42",
@@ -3127,7 +3153,7 @@
                 "Position": ""
             },
             {
-                "num": "244",
+                "num": "239",
                 "text": "(EMB CANDELARIA) P. ROBAYNA GARCÍA: TIRO DE 1 ANOTADO (Puntos: 7)",
                 "team": "1",
                 "time": "04:42",
@@ -3153,7 +3179,7 @@
                 "Position": ""
             },
             {
-                "num": "243",
+                "num": "238",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) F. LÓPEZ LEAL: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "04:42",
@@ -3179,7 +3205,7 @@
                 "Position": ""
             },
             {
-                "num": "242",
+                "num": "237",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) Á. CAMARAS ALTAS ZURITA: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "04:42",
@@ -3205,7 +3231,7 @@
                 "Position": ""
             },
             {
-                "num": "241",
+                "num": "236",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) F. LÓPEZ LEAL: FALTA Personal (Faltas: 5. Faltas de equipo: 19). Tiros libres: 3",
                 "team": "2",
                 "time": "04:42",
@@ -3231,7 +3257,7 @@
                 "Position": ""
             },
             {
-                "num": "240",
+                "num": "235",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) A. FERNÁNDEZ CABALLERO: TIRO DE 3 ANOTADO (Puntos: 24)",
                 "team": "2",
                 "time": "05:03",
@@ -3257,7 +3283,7 @@
                 "Position": ""
             },
             {
-                "num": "239",
+                "num": "234",
                 "text": "(EMB CANDELARIA) D. GARCIA GUANCHE: TIRO DE 3 ANOTADO (Puntos: 3)",
                 "team": "1",
                 "time": "05:33",
@@ -3283,7 +3309,7 @@
                 "Position": ""
             },
             {
-                "num": "238",
+                "num": "233",
                 "text": "(EMB CANDELARIA) R. BORGES GONZALEZ: TIRO DE 2 ANOTADO (Puntos: 33)",
                 "team": "1",
                 "time": "06:06",
@@ -3309,7 +3335,7 @@
                 "Position": ""
             },
             {
-                "num": "237",
+                "num": "232",
                 "text": "(EMB CANDELARIA) R. BORGES GONZALEZ: TIRO DE 1 ANOTADO (Puntos: 31)",
                 "team": "1",
                 "time": "06:14",
@@ -3335,7 +3361,7 @@
                 "Position": ""
             },
             {
-                "num": "236",
+                "num": "231",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) F. LÓPEZ LEAL: FALTA Personal (Faltas: 4. Faltas de equipo: 18). Tiros libres: 1",
                 "team": "2",
                 "time": "06:14",
@@ -3361,7 +3387,7 @@
                 "Position": ""
             },
             {
-                "num": "235",
+                "num": "230",
                 "text": "(EMB CANDELARIA) R. BORGES GONZALEZ: TIRO DE 2 ANOTADO (Puntos: 30)",
                 "team": "1",
                 "time": "06:14",
@@ -3387,7 +3413,7 @@
                 "Position": ""
             },
             {
-                "num": "234",
+                "num": "229",
                 "text": "(EMB CANDELARIA) E. YANES RAMOS: TIRO DE 3 ANOTADO (Puntos: 7)",
                 "team": "1",
                 "time": "07:20",
@@ -3413,7 +3439,7 @@
                 "Position": ""
             },
             {
-                "num": "233",
+                "num": "228",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) J. MORALES MOLINA: TIRO DE 2 ANOTADO (Puntos: 3)",
                 "team": "2",
                 "time": "07:29",
@@ -3439,7 +3465,7 @@
                 "Position": ""
             },
             {
-                "num": "232",
+                "num": "227",
                 "text": "(EMB CANDELARIA) I. FERNANDEZ AYATALLAH: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "08:00",
@@ -3465,7 +3491,7 @@
                 "Position": ""
             },
             {
-                "num": "231",
+                "num": "226",
                 "text": "(EMB CANDELARIA) R. BORGES GONZALEZ: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "08:00",
@@ -3491,7 +3517,7 @@
                 "Position": ""
             },
             {
-                "num": "230",
+                "num": "225",
                 "text": "(EMB CANDELARIA) A. AGUIAR SOMERA: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "08:00",
@@ -3517,7 +3543,7 @@
                 "Position": ""
             },
             {
-                "num": "229",
+                "num": "224",
                 "text": "(EMB CANDELARIA) D. GARCIA GUANCHE: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "08:00",
@@ -3543,7 +3569,7 @@
                 "Position": ""
             },
             {
-                "num": "228",
+                "num": "223",
                 "text": "(EMB CANDELARIA) P. ROBAYNA GARCÍA: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "08:00",
@@ -3569,7 +3595,7 @@
                 "Position": ""
             },
             {
-                "num": "227",
+                "num": "222",
                 "text": "(EMB CANDELARIA) E. YANES RAMOS: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "08:00",
@@ -3595,7 +3621,7 @@
                 "Position": ""
             },
             {
-                "num": "226",
+                "num": "221",
                 "text": "(EMB CANDELARIA) R. CABEZAS MORALES: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "08:00",
@@ -3621,7 +3647,7 @@
                 "Position": ""
             },
             {
-                "num": "225",
+                "num": "220",
                 "text": "(EMB CANDELARIA) Y. GARCIA REDONDO: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "08:00",
@@ -3647,7 +3673,7 @@
                 "Position": ""
             },
             {
-                "num": "224",
+                "num": "219",
                 "text": "(EMB CANDELARIA) M. BAEZ GONZALEZ: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "08:00",
@@ -3673,7 +3699,7 @@
                 "Position": ""
             },
             {
-                "num": "223",
+                "num": "218",
                 "text": "(EMB CANDELARIA) J. QUEVEDO GUILLEN: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "08:00",
@@ -3699,7 +3725,7 @@
                 "Position": ""
             },
             {
-                "num": "222",
+                "num": "217",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) Á. CAMARAS ALTAS ZURITA: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "08:00",
@@ -3725,7 +3751,7 @@
                 "Position": ""
             },
             {
-                "num": "221",
+                "num": "216",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) F. AMO BENAVENTE: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "08:00",
@@ -3751,7 +3777,7 @@
                 "Position": ""
             },
             {
-                "num": "220",
+                "num": "215",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) A. FERNÁNDEZ CABALLERO: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "08:00",
@@ -3777,7 +3803,7 @@
                 "Position": ""
             },
             {
-                "num": "219",
+                "num": "214",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) P. ROMERO GÓMEZ: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "08:00",
@@ -3803,7 +3829,7 @@
                 "Position": ""
             },
             {
-                "num": "218",
+                "num": "213",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) A. VERDEJO BORREGO: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "08:00",
@@ -3829,7 +3855,7 @@
                 "Position": ""
             },
             {
-                "num": "217",
+                "num": "212",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) A. JIMENEZ GARRIDO: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "08:00",
@@ -3855,7 +3881,7 @@
                 "Position": ""
             },
             {
-                "num": "216",
+                "num": "211",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) F. LÓPEZ LEAL: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "08:00",
@@ -3881,7 +3907,7 @@
                 "Position": ""
             },
             {
-                "num": "215",
+                "num": "210",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) J. MORALES MOLINA: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "08:00",
@@ -3907,7 +3933,7 @@
                 "Position": ""
             },
             {
-                "num": "214",
+                "num": "209",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) A. DELGADO CABEZUELO: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "08:00",
@@ -3933,7 +3959,7 @@
                 "Position": ""
             },
             {
-                "num": "213",
+                "num": "208",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) G. LUQUE ANTÚNEZ: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "08:00",
@@ -3959,7 +3985,7 @@
                 "Position": ""
             },
             {
-                "num": "212",
+                "num": "207",
                 "text": "Comienzo del Cuarto 5",
                 "team": null,
                 "time": "08:00",
@@ -3985,7 +4011,7 @@
                 "Position": ""
             },
             {
-                "num": "211",
+                "num": "206",
                 "text": "Fin del Cuarto 4",
                 "team": null,
                 "time": "00:00",
@@ -4011,7 +4037,7 @@
                 "Position": ""
             },
             {
-                "num": "210",
+                "num": "205",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) P. ROMERO GÓMEZ: TIRO DE 2 ANOTADO (Puntos: 6)",
                 "team": "2",
                 "time": "00:21",
@@ -4037,7 +4063,7 @@
                 "Position": ""
             },
             {
-                "num": "209",
+                "num": "204",
                 "text": "(EMB CANDELARIA) Y. GARCIA REDONDO: FALTA Personal (Faltas: 1. Faltas de equipo: 17). Tiros libres: 0",
                 "team": "1",
                 "time": "00:53",
@@ -4063,7 +4089,7 @@
                 "Position": ""
             },
             {
-                "num": "208",
+                "num": "203",
                 "text": "(EMB CANDELARIA) I. FERNANDEZ AYATALLAH: TIRO DE 2 ANOTADO (Puntos: 3)",
                 "team": "1",
                 "time": "01:16",
@@ -4089,7 +4115,7 @@
                 "Position": ""
             },
             {
-                "num": "207",
+                "num": "202",
                 "text": "(EMB CANDELARIA) A. AGUIAR SOMERA: TIRO DE 2 ANOTADO (Puntos: 15)",
                 "team": "1",
                 "time": "01:40",
@@ -4115,7 +4141,7 @@
                 "Position": ""
             },
             {
-                "num": "206",
+                "num": "201",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) G. LUQUE ANTÚNEZ: FALTA Personal (Faltas: 2. Faltas de equipo: 17). Tiros libres: 0",
                 "team": "2",
                 "time": "02:21",
@@ -4141,7 +4167,7 @@
                 "Position": ""
             },
             {
-                "num": "205",
+                "num": "200",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) G. LUQUE ANTÚNEZ: TIRO DE 1 FALLADO",
                 "team": "2",
                 "time": "02:34",
@@ -4167,7 +4193,7 @@
                 "Position": ""
             },
             {
-                "num": "204",
+                "num": "199",
                 "text": "(EMB CANDELARIA) A. AGUIAR SOMERA: FALTA Personal (Faltas: 1. Faltas de equipo: 16). Tiros libres: 2",
                 "team": "1",
                 "time": "02:34",
@@ -4193,7 +4219,7 @@
                 "Position": ""
             },
             {
-                "num": "203",
+                "num": "198",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) G. LUQUE ANTÚNEZ: TIRO DE 2 ANOTADO (Puntos: 16)",
                 "team": "2",
                 "time": "02:34",
@@ -4219,7 +4245,7 @@
                 "Position": ""
             },
             {
-                "num": "202",
+                "num": "197",
                 "text": "(EMB CANDELARIA) A. AGUIAR SOMERA: TIRO DE 3 ANOTADO (Puntos: 13)",
                 "team": "1",
                 "time": "02:47",
@@ -4245,7 +4271,7 @@
                 "Position": ""
             },
             {
-                "num": "201",
+                "num": "196",
                 "text": "(EMB CANDELARIA) A. AGUIAR SOMERA: TIRO DE 2 ANOTADO (Puntos: 10)",
                 "team": "1",
                 "time": "03:23",
@@ -4271,7 +4297,7 @@
                 "Position": ""
             },
             {
-                "num": "200",
+                "num": "195",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) Á. CAMARAS ALTAS ZURITA: TIRO DE 3 ANOTADO (Puntos: 9)",
                 "team": "2",
                 "time": "03:53",
@@ -4297,7 +4323,7 @@
                 "Position": ""
             },
             {
-                "num": "199",
+                "num": "194",
                 "text": "(EMB CANDELARIA) J. QUEVEDO GUILLEN: FALTA Personal (Faltas: 3. Faltas de equipo: 15). Tiros libres: 0",
                 "team": "1",
                 "time": "04:03",
@@ -4323,7 +4349,7 @@
                 "Position": ""
             },
             {
-                "num": "198",
+                "num": "193",
                 "text": "(EMB CANDELARIA) A. AGUIAR SOMERA: TIRO DE 2 ANOTADO (Puntos: 8)",
                 "team": "1",
                 "time": "04:28",
@@ -4349,7 +4375,7 @@
                 "Position": ""
             },
             {
-                "num": "197",
+                "num": "192",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) Á. CAMARAS ALTAS ZURITA: TIRO DE 3 ANOTADO (Puntos: 6)",
                 "team": "2",
                 "time": "04:44",
@@ -4375,7 +4401,7 @@
                 "Position": ""
             },
             {
-                "num": "196",
+                "num": "191",
                 "text": "(EMB CANDELARIA) A. AGUIAR SOMERA: TIRO DE 2 ANOTADO (Puntos: 6)",
                 "team": "1",
                 "time": "05:05",
@@ -4401,7 +4427,7 @@
                 "Position": ""
             },
             {
-                "num": "195",
+                "num": "190",
                 "text": "(EMB CANDELARIA) Tiempo muerto",
                 "team": "1",
                 "time": "05:13",
@@ -4427,7 +4453,7 @@
                 "Position": ""
             },
             {
-                "num": "194",
+                "num": "189",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) G. LUQUE ANTÚNEZ: TIRO DE 3 ANOTADO (Puntos: 14)",
                 "team": "2",
                 "time": "06:10",
@@ -4453,7 +4479,7 @@
                 "Position": ""
             },
             {
-                "num": "193",
+                "num": "188",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) Á. CAMARAS ALTAS ZURITA: TIRO DE 3 ANOTADO (Puntos: 3)",
                 "team": "2",
                 "time": "06:43",
@@ -4479,7 +4505,7 @@
                 "Position": ""
             },
             {
-                "num": "192",
+                "num": "187",
                 "text": "(EMB CANDELARIA) J. QUEVEDO GUILLEN: TIRO DE 2 ANOTADO (Puntos: 4)",
                 "team": "1",
                 "time": "07:02",
@@ -4505,7 +4531,7 @@
                 "Position": ""
             },
             {
-                "num": "191",
+                "num": "186",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) Á. CAMARAS ALTAS ZURITA: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "08:00",
@@ -4531,7 +4557,7 @@
                 "Position": ""
             },
             {
-                "num": "190",
+                "num": "185",
                 "text": "(EMB CANDELARIA) A. AGUIAR SOMERA: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "08:00",
@@ -4557,7 +4583,7 @@
                 "Position": ""
             },
             {
-                "num": "189",
+                "num": "184",
                 "text": "(EMB CANDELARIA) I. FERNANDEZ AYATALLAH: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "08:00",
@@ -4583,7 +4609,7 @@
                 "Position": ""
             },
             {
-                "num": "188",
+                "num": "183",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) A. VERDEJO BORREGO: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "08:00",
@@ -4609,7 +4635,7 @@
                 "Position": ""
             },
             {
-                "num": "187",
+                "num": "182",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) A. DELGADO CABEZUELO: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "08:00",
@@ -4635,7 +4661,7 @@
                 "Position": ""
             },
             {
-                "num": "186",
+                "num": "181",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) G. LUQUE ANTÚNEZ: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "08:00",
@@ -4661,7 +4687,7 @@
                 "Position": ""
             },
             {
-                "num": "185",
+                "num": "180",
                 "text": "(EMB CANDELARIA) Y. GARCIA REDONDO: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "08:00",
@@ -4687,7 +4713,7 @@
                 "Position": ""
             },
             {
-                "num": "184",
+                "num": "179",
                 "text": "(EMB CANDELARIA) M. BAEZ GONZALEZ: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "08:00",
@@ -4713,7 +4739,7 @@
                 "Position": ""
             },
             {
-                "num": "183",
+                "num": "178",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) P. ROMERO GÓMEZ: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "08:00",
@@ -4739,7 +4765,7 @@
                 "Position": ""
             },
             {
-                "num": "182",
+                "num": "177",
                 "text": "(EMB CANDELARIA) J. QUEVEDO GUILLEN: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "08:00",
@@ -4765,7 +4791,7 @@
                 "Position": ""
             },
             {
-                "num": "181",
+                "num": "176",
                 "text": "(EMB CANDELARIA) R. BORGES GONZALEZ: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "08:00",
@@ -4791,7 +4817,7 @@
                 "Position": ""
             },
             {
-                "num": "180",
+                "num": "175",
                 "text": "(EMB CANDELARIA) M. MORR MACHIN: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "08:00",
@@ -4817,7 +4843,7 @@
                 "Position": ""
             },
             {
-                "num": "179",
+                "num": "174",
                 "text": "(EMB CANDELARIA) D. GARCIA GUANCHE: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "08:00",
@@ -4843,7 +4869,7 @@
                 "Position": ""
             },
             {
-                "num": "178",
+                "num": "173",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) A. FERNÁNDEZ CABALLERO: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "08:00",
@@ -4869,7 +4895,7 @@
                 "Position": ""
             },
             {
-                "num": "177",
+                "num": "172",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) J. MORALES MOLINA: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "08:00",
@@ -4895,7 +4921,7 @@
                 "Position": ""
             },
             {
-                "num": "176",
+                "num": "171",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) I. FERNÁNDEZ SOLÍS: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "08:00",
@@ -4921,7 +4947,7 @@
                 "Position": ""
             },
             {
-                "num": "175",
+                "num": "170",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) G. LUQUE ANTÚNEZ: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "08:00",
@@ -4947,7 +4973,7 @@
                 "Position": ""
             },
             {
-                "num": "174",
+                "num": "169",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) A. JIMENEZ GARRIDO: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "08:00",
@@ -4973,7 +4999,7 @@
                 "Position": ""
             },
             {
-                "num": "173",
+                "num": "168",
                 "text": "(EMB CANDELARIA) P. ROBAYNA GARCÍA: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "08:00",
@@ -4999,7 +5025,7 @@
                 "Position": ""
             },
             {
-                "num": "172",
+                "num": "167",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) Á. CASAS SÁNCHEZ DE MEDINA: Sustitución (Sale de pista)",
                 "team": "2",
                 "time": "08:00",
@@ -5025,7 +5051,7 @@
                 "Position": ""
             },
             {
-                "num": "171",
+                "num": "166",
                 "text": "(EMB CANDELARIA) Y. JOVER MARTIN: Sustitución (Sale de pista)",
                 "team": "1",
                 "time": "08:00",
@@ -5051,7 +5077,7 @@
                 "Position": ""
             },
             {
-                "num": "170",
+                "num": "165",
                 "text": "Comienzo del Cuarto 4",
                 "team": null,
                 "time": "08:00",
@@ -5077,7 +5103,7 @@
                 "Position": ""
             },
             {
-                "num": "169",
+                "num": "164",
                 "text": "Fin del Cuarto 3",
                 "team": null,
                 "time": "00:00",
@@ -5103,7 +5129,7 @@
                 "Position": ""
             },
             {
-                "num": "168",
+                "num": "163",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) J. MORALES MOLINA: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "00:00",
@@ -5129,7 +5155,7 @@
                 "Position": ""
             },
             {
-                "num": "167",
+                "num": "162",
                 "text": "(EMB CANDELARIA) D. GARCIA GUANCHE: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "00:00",
@@ -5155,7 +5181,7 @@
                 "Position": ""
             },
             {
-                "num": "166",
+                "num": "161",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) A. FERNÁNDEZ CABALLERO: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "00:00",
@@ -5181,7 +5207,7 @@
                 "Position": ""
             },
             {
-                "num": "165",
+                "num": "160",
                 "text": "(EMB CANDELARIA) R. BORGES GONZALEZ: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "00:00",
@@ -5207,7 +5233,7 @@
                 "Position": ""
             },
             {
-                "num": "164",
+                "num": "159",
                 "text": "(EMB CANDELARIA) P. ROBAYNA GARCÍA: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "00:00",
@@ -5233,7 +5259,7 @@
                 "Position": ""
             },
             {
-                "num": "163",
+                "num": "158",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) A. JIMENEZ GARRIDO: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "00:00",
@@ -5259,7 +5285,7 @@
                 "Position": ""
             },
             {
-                "num": "162",
+                "num": "157",
                 "text": "(EMB CANDELARIA) Y. JOVER MARTIN: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "00:00",
@@ -5285,7 +5311,7 @@
                 "Position": ""
             },
             {
-                "num": "161",
+                "num": "156",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) I. FERNÁNDEZ SOLÍS: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "00:00",
@@ -5311,7 +5337,7 @@
                 "Position": ""
             },
             {
-                "num": "160",
+                "num": "155",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) Á. CASAS SÁNCHEZ DE MEDINA: Sustitución (Entra a pista)",
                 "team": "2",
                 "time": "00:00",
@@ -5337,7 +5363,7 @@
                 "Position": ""
             },
             {
-                "num": "159",
+                "num": "154",
                 "text": "(EMB CANDELARIA) M. MORR MACHIN: Sustitución (Entra a pista)",
                 "team": "1",
                 "time": "00:00",
@@ -5363,7 +5389,7 @@
                 "Position": ""
             },
             {
-                "num": "158",
+                "num": "153",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) A. FERNÁNDEZ CABALLERO: TIRO DE 2 ANOTADO (Puntos: 21)",
                 "team": "2",
                 "time": "00:22",
@@ -5389,7 +5415,7 @@
                 "Position": ""
             },
             {
-                "num": "157",
+                "num": "152",
                 "text": "(EMB CANDELARIA) R. BORGES GONZALEZ: TIRO DE 1 ANOTADO (Puntos: 28)",
                 "team": "1",
                 "time": "00:31",
@@ -5415,7 +5441,7 @@
                 "Position": ""
             },
             {
-                "num": "156",
+                "num": "151",
                 "text": "(EMB CANDELARIA) R. BORGES GONZALEZ: TIRO DE 1 FALLADO",
                 "team": "1",
                 "time": "00:31",
@@ -5441,7 +5467,7 @@
                 "Position": ""
             },
             {
-                "num": "155",
+                "num": "150",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) G. LUQUE ANTÚNEZ: FALTA Personal (Faltas: 1. Faltas de equipo: 16). Tiros libres: 2",
                 "team": "2",
                 "time": "00:31",
@@ -5467,7 +5493,7 @@
                 "Position": ""
             },
             {
-                "num": "154",
+                "num": "149",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) G. LUQUE ANTÚNEZ: TIRO DE 3 ANOTADO (Puntos: 11)",
                 "team": "2",
                 "time": "00:46",
@@ -5493,59 +5519,7 @@
                 "Position": ""
             },
             {
-                "num": "153",
-                "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) I. FERNÁNDEZ SOLÍS: Sustitución (Sale de pista)",
-                "team": "2",
-                "time": "00:50",
-                "deleted": null,
-                "scoreA": null,
-                "scoreB": null,
-                "quarter": "3",
-                "logo": "https://imagenes.feb.es/foto.aspx?c=2571777",
-                "idPlayer": "2571777",
-                "idLicense": "10575635",
-                "idTeam": "965224",
-                "action": "subst",
-                "logParam1": "00000000-0000-0002-0000-000002472120",
-                "logParam2": "10575635",
-                "logParam3": null,
-                "logParam4": "",
-                "logParam5": "",
-                "logParam6": "",
-                "logParam7": "",
-                "logParam8": "",
-                "logParam9": "",
-                "logParam10": "",
-                "Position": ""
-            },
-            {
-                "num": "152",
-                "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) I. FERNÁNDEZ SOLÍS: Sustitución (Sale de pista)",
-                "team": "2",
-                "time": "00:50",
-                "deleted": null,
-                "scoreA": null,
-                "scoreB": null,
-                "quarter": "3",
-                "logo": "https://imagenes.feb.es/foto.aspx?c=2571777",
-                "idPlayer": "2571777",
-                "idLicense": "10575635",
-                "idTeam": "965224",
-                "action": "subst",
-                "logParam1": "00000000-0000-0002-0000-000002472120",
-                "logParam2": "10575635",
-                "logParam3": null,
-                "logParam4": "",
-                "logParam5": "",
-                "logParam6": "",
-                "logParam7": "",
-                "logParam8": "",
-                "logParam9": "",
-                "logParam10": "",
-                "Position": ""
-            },
-            {
-                "num": "151",
+                "num": "148",
                 "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) G. LUQUE ANTÚNEZ: TIRO DE 3 ANOTADO (Puntos: 8)",
                 "team": "2",
                 "time": "00:53",
@@ -5571,7 +5545,7 @@
                 "Position": ""
             },
             {
-                "num": "150",
+                "num": "147",
                 "text": "(EMB CANDELARIA) R. BORGES GONZALEZ: TIRO DE 2 ANOTADO (Puntos: 27)",
                 "team": "1",
                 "time": "01:12",
@@ -5597,59 +5571,7 @@
                 "Position": ""
             },
             {
-                "num": "149",
-                "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) G. LUQUE ANTÚNEZ: Sustitución (Entra a pista)",
-                "team": "2",
-                "time": "01:49",
-                "deleted": null,
-                "scoreA": null,
-                "scoreB": null,
-                "quarter": "3",
-                "logo": "https://imagenes.feb.es/foto.aspx?c=2448273",
-                "idPlayer": "2448273",
-                "idLicense": "10575609",
-                "idTeam": "965224",
-                "action": "subst",
-                "logParam1": "00000000-0000-0002-0000-000002472120",
-                "logParam2": null,
-                "logParam3": "10575609",
-                "logParam4": "",
-                "logParam5": "",
-                "logParam6": "",
-                "logParam7": "",
-                "logParam8": "",
-                "logParam9": "",
-                "logParam10": "",
-                "Position": ""
-            },
-            {
-                "num": "148",
-                "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) I. FERNÁNDEZ SOLÍS: Sustitución (Sale de pista)",
-                "team": "2",
-                "time": "01:49",
-                "deleted": null,
-                "scoreA": null,
-                "scoreB": null,
-                "quarter": "3",
-                "logo": "https://imagenes.feb.es/foto.aspx?c=2571777",
-                "idPlayer": "2571777",
-                "idLicense": "10575635",
-                "idTeam": "965224",
-                "action": "subst",
-                "logParam1": "00000000-0000-0002-0000-000002472120",
-                "logParam2": "10575635",
-                "logParam3": null,
-                "logParam4": "",
-                "logParam5": "",
-                "logParam6": "",
-                "logParam7": "",
-                "logParam8": "",
-                "logParam9": "",
-                "logParam10": "",
-                "Position": ""
-            },
-            {
-                "num": "147",
+                "num": "146",
                 "text": "(EMB CANDELARIA) R. BORGES GONZALEZ: TIRO DE 1 ANOTADO (Puntos: 25)",
                 "team": "1",
                 "time": "01:51",
@@ -5668,32 +5590,6 @@
                 "logParam4": "1",
                 "logParam5": "",
                 "logParam6": "1",
-                "logParam7": "",
-                "logParam8": "",
-                "logParam9": "",
-                "logParam10": "",
-                "Position": ""
-            },
-            {
-                "num": "146",
-                "text": "(13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA) I. FERNÁNDEZ SOLÍS: Sustitución (Sale de pista)",
-                "team": "2",
-                "time": "01:51",
-                "deleted": null,
-                "scoreA": null,
-                "scoreB": null,
-                "quarter": "3",
-                "logo": "https://imagenes.feb.es/foto.aspx?c=2571777",
-                "idPlayer": "2571777",
-                "idLicense": "10575635",
-                "idTeam": "965224",
-                "action": "subst",
-                "logParam1": "00000000-0000-0002-0000-000002472120",
-                "logParam2": "10575635",
-                "logParam3": null,
-                "logParam4": "",
-                "logParam5": "",
-                "logParam6": "",
                 "logParam7": "",
                 "logParam8": "",
                 "logParam9": "",
@@ -10014,7 +9910,7 @@
                         "to": "0",
                         "st": "0",
                         "ind": null,
-                        "pllss": "0",
+                        "pllss": "-16",
                         "val": "2",
                         "assist": "0",
                         "reb": "0",
@@ -10267,8 +10163,8 @@
                         "fgm": "8",
                         "fga": "8",
                         "fgp": "100,0",
-                        "min": "1549",
-                        "minFormatted": "25:49",
+                        "min": "1440",
+                        "minFormatted": "24:00",
                         "sta": null,
                         "bs": "0",
                         "tc": "0",
@@ -10280,7 +10176,7 @@
                         "to": "0",
                         "st": "0",
                         "ind": null,
-                        "pllss": "12",
+                        "pllss": "0",
                         "val": "20",
                         "assist": "0",
                         "reb": "0",
