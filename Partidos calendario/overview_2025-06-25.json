@@ -560,22 +560,22 @@
                         "Place": "PALACIO DE DEPORTES VISTALEGRE",
                         "TeamAID": 966802,
                         "TeamA": "EMB CANDELARIA",
-                        "ScoreA": 83,
+                        "ScoreA": 110,
                         "TeamACode": "38025555",
                         "TeamAClubCode": "380255",
                         "TeamBID": 965224,
                         "TeamB": "13-RVG DISTRIBUCIONES CIUDAD DE CÓRDOBA",
                         "TeamBCode": "14403171",
                         "TeamBClubCode": "144031",
-                        "ScoreB": 68,
+                        "ScoreB": 80,
                         "StartTime": "2025-06-25T14:00:00",
                         "StartTimeUTC": "2025-06-25T12:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=966802&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=965224&ti=1",
-                        "Quarter": 5,
-                        "Time": "00:32:40",
+                        "Quarter": 6,
+                        "Time": "00:40:00",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -602,8 +602,13 @@
                             },
                             {
                                 "n": "5",
-                                "scoreA": "3",
-                                "scoreB": "2"
+                                "scoreA": "30",
+                                "scoreB": "14"
+                            },
+                            {
+                                "n": "6",
+                                "scoreA": "0",
+                                "scoreB": "0"
                             }
                         ],
                         "Season": null,
