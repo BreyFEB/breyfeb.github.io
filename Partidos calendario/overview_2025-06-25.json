@@ -726,22 +726,22 @@
                         "Place": "PALACIO DE DEPORTES VISTALEGRE",
                         "TeamAID": 953003,
                         "TeamA": "VALENCIA BASKET NARANJA",
-                        "ScoreA": 71,
+                        "ScoreA": 86,
                         "TeamACode": "46000201",
                         "TeamAClubCode": "460002",
                         "TeamBID": 970253,
                         "TeamB": "BASKET SANTA CRUZ",
                         "TeamBCode": "38029087",
                         "TeamBClubCode": "380290",
-                        "ScoreB": 47,
+                        "ScoreB": 55,
                         "StartTime": "2025-06-25T20:00:00",
                         "StartTimeUTC": "2025-06-25T18:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=953003&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=970253&ti=1",
-                        "Quarter": 5,
-                        "Time": "00:32:00",
+                        "Quarter": 6,
+                        "Time": "00:41:04",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -768,8 +768,13 @@
                             },
                             {
                                 "n": "5",
+                                "scoreA": "15",
+                                "scoreB": "4"
+                            },
+                            {
+                                "n": "6",
                                 "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreB": "4"
                             }
                         ],
                         "Season": null,
