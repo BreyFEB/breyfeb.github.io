@@ -440,7 +440,7 @@
                 "id": "257",
                 "name": "CE Clubes Mini Masc",
                 "gamescount": 26,
-                "nowplaying": 1,
+                "nowplaying": 2,
                 "order": 24,
                 "GAMES": [
                     {
@@ -645,42 +645,11 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=964972&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=963894&ti=1",
                         "Quarter": 6,
-                        "Time": "00:47:59",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [
-                            {
-                                "n": "1",
-                                "scoreA": "18",
-                                "scoreB": "21"
-                            },
-                            {
-                                "n": "2",
-                                "scoreA": "17",
-                                "scoreB": "14"
-                            },
-                            {
-                                "n": "3",
-                                "scoreA": "11",
-                                "scoreB": "16"
-                            },
-                            {
-                                "n": "4",
-                                "scoreA": "25",
-                                "scoreB": "8"
-                            },
-                            {
-                                "n": "5",
-                                "scoreA": "17",
-                                "scoreB": "11"
-                            },
-                            {
-                                "n": "6",
-                                "scoreA": "20",
-                                "scoreB": "13"
-                            }
-                        ],
+                        "Quarters": [],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -690,7 +659,7 @@
                         "Competition": "C ESP CLUBES MINI MASC",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2472124,
                         "GameCode": null,
                         "Place": "PABELLÓN IDM FIDIANA",
@@ -710,12 +679,18 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=951906&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=972881&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:00:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -725,7 +700,7 @@
                         "Competition": "C ESP CLUBES MINI MASC",
                         "RoundID": 0,
                         "Round": null,
-                        "Stage": "1",
+                        "Stage": "0",
                         "ID": 2472123,
                         "GameCode": null,
                         "Place": "PALACIO DE DEPORTES VISTALEGRE",
@@ -745,12 +720,18 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=953003&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=970253&ti=1",
-                        "Quarter": 0,
-                        "Time": "00:00",
-                        "Status": 1,
+                        "Quarter": 1,
+                        "Time": "00:00:00",
+                        "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [],
+                        "Quarters": [
+                            {
+                                "n": "1",
+                                "scoreA": "0",
+                                "scoreB": "0"
+                            }
+                        ],
                         "Season": null,
                         "SeasonID": null
                     },
