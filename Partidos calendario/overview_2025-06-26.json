@@ -11,7 +11,7 @@
                 "id": "256",
                 "name": "CE Clubes Mini Fem",
                 "gamescount": 12,
-                "nowplaying": 1,
+                "nowplaying": 0,
                 "order": 23,
                 "GAMES": [
                     {
@@ -26,7 +26,7 @@
                         "Place": "POLIDEPORTIVO MUNICIPAL EL LIMON",
                         "TeamAID": 955798,
                         "TeamA": "JOVENTUT BADALONA A",
-                        "ScoreA": 79,
+                        "ScoreA": 87,
                         "TeamACode": "08130528",
                         "TeamAClubCode": "081305",
                         "TeamBID": 955269,
@@ -41,42 +41,11 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=955798&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=955269&ti=1",
                         "Quarter": 6,
-                        "Time": "00:46:46",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [
-                            {
-                                "n": "1",
-                                "scoreA": "9",
-                                "scoreB": "9"
-                            },
-                            {
-                                "n": "2",
-                                "scoreA": "11",
-                                "scoreB": "5"
-                            },
-                            {
-                                "n": "3",
-                                "scoreA": "18",
-                                "scoreB": "3"
-                            },
-                            {
-                                "n": "4",
-                                "scoreA": "17",
-                                "scoreB": "8"
-                            },
-                            {
-                                "n": "5",
-                                "scoreA": "14",
-                                "scoreB": "14"
-                            },
-                            {
-                                "n": "6",
-                                "scoreA": "10",
-                                "scoreB": "9"
-                            }
-                        ],
+                        "Quarters": [],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -191,7 +160,7 @@
                 "id": "257",
                 "name": "CE Clubes Mini Masc",
                 "gamescount": 12,
-                "nowplaying": 1,
+                "nowplaying": 0,
                 "order": 24,
                 "GAMES": [
                     {
@@ -206,14 +175,14 @@
                         "Place": "PALACIO DE DEPORTES VISTALEGRE",
                         "TeamAID": 955247,
                         "TeamA": "BARÇA",
-                        "ScoreA": 95,
+                        "ScoreA": 105,
                         "TeamACode": "08000309",
                         "TeamAClubCode": "080003",
                         "TeamBID": 963536,
                         "TeamB": "CBI ELCHE",
                         "TeamBCode": "03003119",
                         "TeamBClubCode": "030031",
-                        "ScoreB": 74,
+                        "ScoreB": 79,
                         "StartTime": "2025-06-26T10:00:00",
                         "StartTimeUTC": "2025-06-26T08:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -221,42 +190,11 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=955247&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=963536&ti=1",
                         "Quarter": 6,
-                        "Time": "00:43:03",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [
-                            {
-                                "n": "1",
-                                "scoreA": "14",
-                                "scoreB": "7"
-                            },
-                            {
-                                "n": "2",
-                                "scoreA": "18",
-                                "scoreB": "13"
-                            },
-                            {
-                                "n": "3",
-                                "scoreA": "20",
-                                "scoreB": "21"
-                            },
-                            {
-                                "n": "4",
-                                "scoreA": "20",
-                                "scoreB": "16"
-                            },
-                            {
-                                "n": "5",
-                                "scoreA": "16",
-                                "scoreB": "9"
-                            },
-                            {
-                                "n": "6",
-                                "scoreA": "7",
-                                "scoreB": "8"
-                            }
-                        ],
+                        "Quarters": [],
                         "Season": null,
                         "SeasonID": null
                     },
