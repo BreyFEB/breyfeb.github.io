@@ -131,11 +131,7 @@ async function loadStats() {
       player_photo.src = 'player_placeholder.png';
     }
     // Add error handler to fallback to placeholder if image fails to load
-    player_photo.onerror = function() {
-      if (this.src.indexOf('player_placeholder.png') === -1) {
-        this.src = 'player_placeholder.png';
-      }
-    };
+    player_photo.onerror = function() { this.src = 'player_placeholder.png'; };
   }
 
   // Update player main info with team, competition, and gender
@@ -432,8 +428,9 @@ async function loadStats() {
     scatterChartContainer.id = 'scatterChartContainer';
     const scatterCanvas = document.createElement('canvas');
     scatterCanvas.id = 'pointsScatterChart';
-    scatterCanvas.height = '100%';
-    scatterCanvas.width = '100%';
+    scatterCanvas.style.width = '100%';
+    scatterCanvas.style.height = '100%';
+    scatterCanvas.style.minHeight = '300px';
     scatterChartContainer.appendChild(scatterCanvas);
     // Assemble flex container
     scatterFlex.appendChild(scatterCard);
@@ -481,9 +478,11 @@ async function loadStats() {
       barChartContainer.style.display = 'flex';
       barChartContainer.style.alignItems = 'center';
       barChartContainer.style.justifyContent = 'center';
+      barChartContainer.style.minHeight = '200px';
       const barCanvas = document.createElement('canvas');
       barCanvas.id = 'shootingPercentagesChart';
-      barCanvas.height = 120;
+      barCanvas.style.width = '100%';
+      barCanvas.style.height = '100%';
       barChartContainer.appendChild(barCanvas);
 
       // Assemble
@@ -510,7 +509,34 @@ async function loadStats() {
 
       // Draw bar chart
       const ctxBar = barCanvas.getContext('2d');
-      new Chart(ctxBar, {
+      
+      // Get screen width for responsive sizing
+      const screenWidth = window.innerWidth;
+      let titleFontSize, legendFontSize, barThickness, borderRadius, tickFontSize;
+      
+      // Responsive sizing based on screen width
+      if (screenWidth < 768) { // Mobile
+        titleFontSize = 14;
+        legendFontSize = 12;
+        barThickness = 40;
+        borderRadius = 6;
+        tickFontSize = 10;
+      } else if (screenWidth < 1024) { // Tablet
+        titleFontSize = 15;
+        legendFontSize = 13;
+        barThickness = 50;
+        borderRadius = 7;
+        tickFontSize = 11;
+      } else { // Desktop
+        titleFontSize = 16;
+        legendFontSize = 14;
+        barThickness = 60;
+        borderRadius = 8;
+        tickFontSize = 12;
+      }
+      
+      // Create and store the chart instance
+      window.shootingPercentagesChart = new Chart(ctxBar, {
         type: 'bar',
         data: {
           labels: ['2P%', '3P%', 'TL%'],
@@ -528,9 +554,9 @@ async function loadStats() {
                 '#FF9E1B',
                 '#C8102E'
               ],
-              borderWidth: 2,
-              borderRadius: 8,
-              maxBarThickness: 60
+              borderWidth: screenWidth < 768 ? 1 : 2,
+              borderRadius: borderRadius,
+              maxBarThickness: barThickness
             },
             {
               label: 'Media liga',
@@ -545,17 +571,31 @@ async function loadStats() {
                 '#FF9E1B',
                 '#C8102E'
               ],
-              borderWidth: 2,
-              borderRadius: 8,
-              maxBarThickness: 60
+              borderWidth: screenWidth < 768 ? 1 : 2,
+              borderRadius: borderRadius,
+              maxBarThickness: barThickness
             }
           ]
         },
         options: {
           responsive: true,
+          maintainAspectRatio: false,
           plugins: {
-            legend: { display: true, position: 'top' },
+            legend: { 
+              display: true, 
+              position: screenWidth < 768 ? 'bottom' : 'top',
+              labels: {
+                font: {
+                  size: legendFontSize
+                },
+                padding: screenWidth < 768 ? 15 : 20,
+                boxWidth: screenWidth < 768 ? 15 : 20
+              }
+            },
             tooltip: {
+              enabled: true,
+              mode: 'index',
+              intersect: false,
               callbacks: {
                 label: function(context) {
                   return `${context.dataset.label}: ${context.parsed.y.toFixed(1)}%`;
@@ -565,13 +605,25 @@ async function loadStats() {
             title: {
               display: true,
               text: 'Porcentajes de tiro',
-              font: { size: 16, weight: 'bold' }
+              font: { 
+                size: titleFontSize, 
+                weight: 'bold' 
+              },
+              padding: {
+                top: screenWidth < 768 ? 10 : 20,
+                bottom: screenWidth < 768 ? 10 : 20
+              }
             }
           },
           scales: {
             x: {
               title: { display: false },
-              grid: { display: false }
+              grid: { display: false },
+              ticks: {
+                font: {
+                  size: tickFontSize
+                }
+              }
             },
             y: {
               beginAtZero: true,
@@ -580,10 +632,25 @@ async function loadStats() {
                 callback: function(value) {
                   return value + '%';
                 },
-                stepSize: 20
+                stepSize: screenWidth < 768 ? 25 : 20,
+                font: {
+                  size: tickFontSize
+                }
               },
               title: { display: false },
-              grid: { color: 'rgba(0,0,0,0.07)' }
+              grid: { 
+                color: 'rgba(0,0,0,0.07)',
+                drawBorder: false
+              }
+            }
+          },
+          interaction: {
+            mode: 'index',
+            intersect: false
+          },
+          elements: {
+            bar: {
+              borderWidth: screenWidth < 768 ? 1 : 2
             }
           }
         }
@@ -718,6 +785,28 @@ async function loadStats() {
     // Calculate average minutes for the competition
     const avgMinutes = compPlayers.length > 0 ? compPlayers.reduce((sum, p) => sum + (p.seconds || 0), 0) / 60 / compPlayers.length : 0;
     
+    // Get screen width for responsive sizing
+    const screenWidth = window.innerWidth;
+    let pointRadius, pointHoverRadius, legendFontSize, titleFontSize;
+    
+    // Responsive sizing based on screen width
+    if (screenWidth < 768) { // Mobile
+      pointRadius = 4;
+      pointHoverRadius = 6;
+      legendFontSize = 12;
+      titleFontSize = 14;
+    } else if (screenWidth < 1024) { // Tablet
+      pointRadius = 5;
+      pointHoverRadius = 7;
+      legendFontSize = 13;
+      titleFontSize = 15;
+    } else { // Desktop
+      pointRadius = 6;
+      pointHoverRadius = 8;
+      legendFontSize = 14;
+      titleFontSize = 16;
+    }
+    
     // Destroy previous chart if exists
     if (window.pointsScatterChart && typeof window.pointsScatterChart.destroy === 'function') {
       window.pointsScatterChart.destroy();
@@ -733,8 +822,8 @@ async function loadStats() {
             backgroundColor: 'rgba(25, 118, 210, 0.15)',
             borderColor: 'rgba(25, 118, 210, 0.3)',
             borderWidth: 1,
-            pointRadius: 6,
-            pointHoverRadius: 8,
+            pointRadius: pointRadius,
+            pointHoverRadius: pointHoverRadius,
             showLine: false
           },
           {
@@ -743,24 +832,25 @@ async function loadStats() {
             backgroundColor: 'rgba(255, 158, 27, 1)', // fully opaque
             borderColor: '#C8102E', // contrasting border
             borderWidth: 1,
-            pointRadius: 14,
-            pointHoverRadius: 18,
+            pointRadius: screenWidth < 768 ? 10 : 14, // Smaller current player point on mobile
+            pointHoverRadius: screenWidth < 768 ? 14 : 18,
             showLine: false
           }
         ]
       },
       options: {
         responsive: true,
+        maintainAspectRatio: false, // Allow chart to resize freely
         plugins: {
           legend: { 
             display: true,
-            position: 'top',
+            position: screenWidth < 768 ? 'bottom' : 'top', // Move legend to bottom on mobile
             align: 'start',
             labels: {
-              boxWidth: 20,
-              padding: 20,
+              boxWidth: screenWidth < 768 ? 15 : 20,
+              padding: screenWidth < 768 ? 15 : 20,
               font: {
-                size: 14,
+                size: legendFontSize,
                 weight: 'bold'
               },
               generateLabels: function(chart) {
@@ -769,7 +859,9 @@ async function loadStats() {
                   const currentPlayer = dataset.data[0];
                   if (i === 1) { // Current player dataset
                     return {
-                      text: `${dataset.label}: ${Math.round(currentPlayer.stat)} ${statLabel}${showAverages ? '/partido' : ''}`,
+                      text: screenWidth < 768 ? 
+                        `${dataset.label}: ${Math.round(currentPlayer.stat)}` : 
+                        `${dataset.label}: ${Math.round(currentPlayer.stat)} ${statLabel}${showAverages ? '/partido' : ''}`,
                       fillStyle: dataset.backgroundColor,
                       strokeStyle: dataset.borderColor,
                       lineWidth: dataset.borderWidth,
@@ -790,6 +882,9 @@ async function loadStats() {
             }
           },
           tooltip: {
+            enabled: true,
+            mode: 'nearest',
+            intersect: false,
             callbacks: {
               label: function(context) {
                 const d = context.raw;
@@ -820,14 +915,17 @@ async function loadStats() {
                 xMin: avgMinutes,
                 xMax: avgMinutes,
                 borderColor: '#1976d2',
-                borderWidth: 2,
+                borderWidth: screenWidth < 768 ? 1 : 2,
                 borderDash: [6, 6],
                 label: {
                   content: 'Media',
-                  enabled: true,
+                  enabled: screenWidth >= 768, // Hide label on mobile to save space
                   position: 'start',
                   color: '#1976d2',
-                  font: { weight: 'bold' }
+                  font: { 
+                    weight: 'bold',
+                    size: screenWidth < 1024 ? 12 : 14
+                  }
                 }
               }
             }
@@ -835,18 +933,34 @@ async function loadStats() {
         },
         scales: {
           x: {
-            title: { display: true, text: 'Minutos jugados' },
+            title: { 
+              display: true, 
+              text: 'Minutos jugados',
+              font: {
+                size: titleFontSize
+              }
+            },
             beginAtZero: true,
             ticks: {
               callback: function(value) {
                 return Math.round(value);
+              },
+              font: {
+                size: screenWidth < 768 ? 10 : 12
               }
+            },
+            grid: {
+              color: 'rgba(0,0,0,0.1)',
+              drawBorder: false
             }
           },
           y: {
             title: { 
               display: true, 
-              text: showAverages ? `${statLabel} por partido` : statLabel 
+              text: showAverages ? `${statLabel} por partido` : statLabel,
+              font: {
+                size: titleFontSize
+              }
             },
             beginAtZero: true,
             ticks: {
@@ -859,8 +973,25 @@ async function loadStats() {
                 } else {
                   return Number.isInteger(value) ? value : '';
                 }
+              },
+              font: {
+                size: screenWidth < 768 ? 10 : 12
               }
+            },
+            grid: {
+              color: 'rgba(0,0,0,0.1)',
+              drawBorder: false
             }
+          }
+        },
+        interaction: {
+          mode: 'nearest',
+          axis: 'xy',
+          intersect: false
+        },
+        elements: {
+          point: {
+            hoverRadius: pointHoverRadius
           }
         }
       }
@@ -891,6 +1022,195 @@ async function loadStats() {
         drawPointsScatter(document.getElementById('scatterStatSelector').value);
       });
     }
+    
+    // Add window resize listener for responsive chart updates
+    let resizeTimeout;
+    window.addEventListener('resize', function() {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(function() {
+        // Redraw scatter chart with new responsive settings
+        const currentStatKey = document.getElementById('scatterStatSelector')?.value || 'pts';
+        drawPointsScatter(currentStatKey);
+        
+        // Redraw bar chart with new responsive settings
+        redrawShootingPercentagesChart();
+      }, 250); // Debounce resize events
+    });
+  }
+
+  // Function to redraw the shooting percentages chart
+  function redrawShootingPercentagesChart() {
+    const barCanvas = document.getElementById('shootingPercentagesChart');
+    if (!barCanvas || !player_totals) return;
+    
+    // Destroy existing chart if it exists
+    if (window.shootingPercentagesChart && typeof window.shootingPercentagesChart.destroy === 'function') {
+      window.shootingPercentagesChart.destroy();
+    }
+    
+    const ctxBar = barCanvas.getContext('2d');
+    
+    // Get screen width for responsive sizing
+    const screenWidth = window.innerWidth;
+    let titleFontSize, legendFontSize, barThickness, borderRadius, tickFontSize;
+    
+    // Responsive sizing based on screen width
+    if (screenWidth < 768) { // Mobile
+      titleFontSize = 14;
+      legendFontSize = 12;
+      barThickness = 40;
+      borderRadius = 6;
+      tickFontSize = 10;
+    } else if (screenWidth < 1024) { // Tablet
+      titleFontSize = 15;
+      legendFontSize = 13;
+      barThickness = 50;
+      borderRadius = 7;
+      tickFontSize = 11;
+    } else { // Desktop
+      titleFontSize = 16;
+      legendFontSize = 14;
+      barThickness = 60;
+      borderRadius = 8;
+      tickFontSize = 12;
+    }
+    
+    // Calculate percentages
+    const t2pct = player_totals.t2i > 0 ? (player_totals.t2c / player_totals.t2i) * 100 : 0;
+    const t3pct = player_totals.t3i > 0 ? (player_totals.t3c / player_totals.t3i) * 100 : 0;
+    const tlpct = player_totals.tli > 0 ? (player_totals.tlc / player_totals.tli) * 100 : 0;
+
+    // Calculate league averages for the same competition
+    let leagueT2Pct = 0, leagueT3Pct = 0, leagueTLPct = 0;
+    if (data && data.players && player_totals.competition) {
+      const compPlayers = data.players.filter(p => p.competition === player_totals.competition);
+      const t2s = compPlayers.filter(p => p.t2i > 0);
+      const t3s = compPlayers.filter(p => p.t3i > 0);
+      const tls = compPlayers.filter(p => p.tli > 0);
+      leagueT2Pct = t2s.length > 0 ? t2s.reduce((sum, p) => sum + (p.t2c / p.t2i) * 100, 0) / t2s.length : 0;
+      leagueT3Pct = t3s.length > 0 ? t3s.reduce((sum, p) => sum + (p.t3c / p.t3i) * 100, 0) / t3s.length : 0;
+      leagueTLPct = tls.length > 0 ? tls.reduce((sum, p) => sum + (p.tlc / p.tli) * 100, 0) / tls.length : 0;
+    }
+    
+    window.shootingPercentagesChart = new Chart(ctxBar, {
+      type: 'bar',
+      data: {
+        labels: ['2P%', '3P%', 'TL%'],
+        datasets: [
+          {
+            label: 'Jugador',
+            data: [t2pct, t3pct, tlpct],
+            backgroundColor: [
+              'rgba(25, 118, 210, 0.7)',
+              'rgba(255, 158, 27, 0.7)',
+              'rgba(200, 16, 46, 0.7)'
+            ],
+            borderColor: [
+              '#1976d2',
+              '#FF9E1B',
+              '#C8102E'
+            ],
+            borderWidth: screenWidth < 768 ? 1 : 2,
+            borderRadius: borderRadius,
+            maxBarThickness: barThickness
+          },
+          {
+            label: 'Media liga',
+            data: [leagueT2Pct, leagueT3Pct, leagueTLPct],
+            backgroundColor: [
+              'rgba(25, 118, 210, 0.2)',
+              'rgba(255, 158, 27, 0.2)',
+              'rgba(200, 16, 46, 0.2)'
+            ],
+            borderColor: [
+              '#1976d2',
+              '#FF9E1B',
+              '#C8102E'
+            ],
+            borderWidth: screenWidth < 768 ? 1 : 2,
+            borderRadius: borderRadius,
+            maxBarThickness: barThickness
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { 
+            display: true, 
+            position: screenWidth < 768 ? 'bottom' : 'top',
+            labels: {
+              font: {
+                size: legendFontSize
+              },
+              padding: screenWidth < 768 ? 15 : 20,
+              boxWidth: screenWidth < 768 ? 15 : 20
+            }
+          },
+          tooltip: {
+            enabled: true,
+            mode: 'index',
+            intersect: false,
+            callbacks: {
+              label: function(context) {
+                return `${context.dataset.label}: ${context.parsed.y.toFixed(1)}%`;
+              }
+            }
+          },
+          title: {
+            display: true,
+            text: 'Porcentajes de tiro',
+            font: { 
+              size: titleFontSize, 
+              weight: 'bold' 
+            },
+            padding: {
+              top: screenWidth < 768 ? 10 : 20,
+              bottom: screenWidth < 768 ? 10 : 20
+            }
+          }
+        },
+        scales: {
+          x: {
+            title: { display: false },
+            grid: { display: false },
+            ticks: {
+              font: {
+                size: tickFontSize
+              }
+            }
+          },
+          y: {
+            beginAtZero: true,
+            max: 100,
+            ticks: {
+              callback: function(value) {
+                return value + '%';
+              },
+              stepSize: screenWidth < 768 ? 25 : 20,
+              font: {
+                size: tickFontSize
+              }
+            },
+            title: { display: false },
+            grid: { 
+              color: 'rgba(0,0,0,0.07)',
+              drawBorder: false
+            }
+          }
+        },
+        interaction: {
+          mode: 'index',
+          intersect: false
+        },
+        elements: {
+          bar: {
+            borderWidth: screenWidth < 768 ? 1 : 2
+          }
+        }
+      }
+    });
   }
 
   // Fill record cards dynamically
@@ -1216,6 +1536,77 @@ async function loadStats() {
         display: flex;
         align-items: center;
         justify-content: center;
+        min-height: 300px;
+      }
+      
+      #barChartContainer {
+        flex: 0 0 80%;
+        width: 80%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 200px;
+      }
+      
+      /* Responsive adjustments for mobile and tablet */
+      @media (max-width: 1024px) {
+        #evolutionChartContainer, #scatterChartContainer {
+          flex: 0 0 75%;
+          width: 75%;
+          min-height: 250px;
+        }
+        
+        #barChartContainer {
+          flex: 0 0 75%;
+          width: 75%;
+          min-height: 180px;
+        }
+      }
+      
+      @media (max-width: 768px) {
+        #evolutionChartContainer, #scatterChartContainer {
+          flex: 0 0 100%;
+          width: 100%;
+          min-height: 200px;
+          margin-top: 15px;
+        }
+        
+        #barChartContainer {
+          flex: 0 0 100%;
+          width: 100%;
+          min-height: 150px;
+          margin-top: 15px;
+        }
+        
+        .chart-with-card {
+          flex-direction: column;
+          gap: 15px;
+        }
+        
+        .chart-info-card {
+          flex: 0 0 auto;
+          width: 100%;
+          margin-bottom: 10px;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        #evolutionChartContainer, #scatterChartContainer {
+          min-height: 180px;
+        }
+        
+        #barChartContainer {
+          min-height: 120px;
+        }
+        
+        .chart-info-card {
+          padding: 15px;
+        }
+        
+        .card-explanation {
+          font-size: 0.9em;
+        }
       }
       .card-icon {
         margin-bottom: 10px;
@@ -1225,6 +1616,33 @@ async function loadStats() {
         color: #111C4E;
         text-align: center;
         margin-top: 8px;
+      }
+      
+      /* Responsive styling for selectors */
+      @media (max-width: 768px) {
+        #statSelector, #scatterStatSelector, #valueTypeSelector {
+          width: 100% !important;
+          max-width: 250px;
+          font-size: 14px;
+          padding: 8px 12px;
+        }
+        
+        .statSelectorRow, .selectorContainer {
+          margin-bottom: 15px;
+        }
+        
+        .statLabel, .scatterStatLabel, .valueTypeLabel {
+          font-size: 0.8em !important;
+          margin-bottom: 6px !important;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        #statSelector, #scatterStatSelector, #valueTypeSelector {
+          max-width: 200px;
+          font-size: 13px;
+          padding: 6px 10px;
+        }
       }
     `;
     document.head.appendChild(style);

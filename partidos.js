@@ -715,7 +715,7 @@ function applyAllFilters() {
     // 2) Filtro por competición
     if (selectedCompetition) {
       const comp = card.getAttribute("data-competition") || "";
-      if (selectedCompetition !== "" && comp !== selectedCompetition) {
+      if (selectedCompetition !== "" && comp !== formatCompetitionName(selectedCompetition)) {
         show = false;
       }
     }
@@ -746,7 +746,7 @@ function applyAllFilters() {
   if (visibleCards.length === 0) {
     let msg = "Este día no hay partidos";
     if (selectedCompetition && selectedCompetition !== "") {
-      msg += ` en \"${selectedCompetition}\"`;
+      msg += ` en \"${formatCompetitionName(selectedCompetition)}\"`;
     }
     if (selectedVenue && selectedVenue !== "") {
       msg += ` en \"${selectedVenue}\"`;
