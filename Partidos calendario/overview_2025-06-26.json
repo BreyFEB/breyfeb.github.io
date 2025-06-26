@@ -11,7 +11,7 @@
                 "id": "256",
                 "name": "CE Clubes Mini Fem",
                 "gamescount": 12,
-                "nowplaying": 1,
+                "nowplaying": 0,
                 "order": 23,
                 "GAMES": [
                     {
@@ -111,42 +111,11 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=969205&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=969651&ti=1",
                         "Quarter": 6,
-                        "Time": "00:47:39",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [
-                            {
-                                "n": "1",
-                                "scoreA": "17",
-                                "scoreB": "10"
-                            },
-                            {
-                                "n": "2",
-                                "scoreA": "4",
-                                "scoreB": "7"
-                            },
-                            {
-                                "n": "3",
-                                "scoreA": "12",
-                                "scoreB": "3"
-                            },
-                            {
-                                "n": "4",
-                                "scoreA": "6",
-                                "scoreB": "8"
-                            },
-                            {
-                                "n": "5",
-                                "scoreA": "17",
-                                "scoreB": "0"
-                            },
-                            {
-                                "n": "6",
-                                "scoreA": "12",
-                                "scoreB": "7"
-                            }
-                        ],
+                        "Quarters": [],
                         "Season": null,
                         "SeasonID": null
                     },
@@ -276,14 +245,14 @@
                         "Place": "PALACIO DE DEPORTES VISTALEGRE",
                         "TeamAID": 962046,
                         "TeamA": "CONFFIDENCE MEDICAL C.B. CIUDAD DE MÓSTOLES",
-                        "ScoreA": 82,
+                        "ScoreA": 91,
                         "TeamACode": "28244935",
                         "TeamAClubCode": "282449",
                         "TeamBID": 964972,
                         "TeamB": "MOVISTAR ESTUDIANTES \"SOLA\"",
                         "TeamBCode": "28000131",
                         "TeamBClubCode": "280001",
-                        "ScoreB": 57,
+                        "ScoreB": 67,
                         "StartTime": "2025-06-26T17:00:00",
                         "StartTimeUTC": "2025-06-26T15:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -291,7 +260,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=962046&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=964972&ti=1",
                         "Quarter": 6,
-                        "Time": "00:42:02",
+                        "Time": "00:47:36",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -323,8 +292,8 @@
                             },
                             {
                                 "n": "6",
-                                "scoreA": "2",
-                                "scoreB": "5"
+                                "scoreA": "11",
+                                "scoreB": "15"
                             }
                         ],
                         "Season": null,
