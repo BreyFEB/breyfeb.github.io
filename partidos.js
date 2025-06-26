@@ -25,7 +25,7 @@ let venueSet = new Set();
  * 1) OBTENER LA LISTA DE ARCHIVOS JSON DESDE GITHUB
  *********************************/
 async function fetchMatchFiles() {
-  const apiUrl = "https://api.github.com/repos/emebullon/cadete2025/contents/Partidos%20calendario";
+  const apiUrl = "https://api.github.com/repos/BreyFEB/breyfeb.github.io/contents/Partidos%20calendario";
   try {
     // Intentar con el API de GitHub primero
     const response = await fetch(apiUrl, {

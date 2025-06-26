@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
   // URL del JSON (ajusta a la versión que necesites)
-  const jsonURL = `https://raw.githubusercontent.com/emebullon/cadete2025/refs/heads/main/JSONs%20fichas/FullMatch_${gameId}.json`;
+  const jsonURL = `https://raw.githubusercontent.com/BreyFEB/breyfeb.github.io/refs/heads/main/JSONs%20fichas/FullMatch_${gameId}.json`;
 
   fetch(jsonURL)
     .then(resp => {
@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
       herophaseDiv.textContent =  `${fase} • ${competicion} • ${pabellon}`;
 
       // Meter resumen de ChatGPT
-      fetch(`https://raw.githubusercontent.com/emebullon/cadete2025/main/JSONs%20fichas/FullMatch_${gameId}_cronica_chatgpt.html`)
+      fetch(`https://raw.githubusercontent.com/BreyFEB/breyfeb.github.io/main/JSONs%20fichas/FullMatch_${gameId}_cronica_chatgpt.html`)
         .then(res => {
           if (!res.ok) {
             throw new Error('Crónica no encontrada');
