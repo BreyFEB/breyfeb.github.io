@@ -131,14 +131,14 @@
                         "Place": "POLIDEPORTIVO MUNICIPAL EL LIMON",
                         "TeamAID": 961137,
                         "TeamA": "PICKEN CLARET A",
-                        "ScoreA": 26,
+                        "ScoreA": 33,
                         "TeamACode": "46005521",
                         "TeamAClubCode": "460055",
                         "TeamBID": 952958,
                         "TeamB": "VALENCIA BASKET NARANJA",
                         "TeamBCode": "46000219",
                         "TeamBClubCode": "460002",
-                        "ScoreB": 53,
+                        "ScoreB": 60,
                         "StartTime": "2025-06-26T19:00:00",
                         "StartTimeUTC": "2025-06-26T17:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -146,7 +146,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=961137&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952958&ti=1",
                         "Quarter": 5,
-                        "Time": "00:32:00",
+                        "Time": "00:39:56",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -173,8 +173,8 @@
                             },
                             {
                                 "n": "5",
-                                "scoreA": "0",
-                                "scoreB": "0"
+                                "scoreA": "7",
+                                "scoreB": "7"
                             }
                         ],
                         "Season": null,
@@ -341,22 +341,22 @@
                         "Place": "PALACIO DE DEPORTES VISTALEGRE",
                         "TeamAID": 953003,
                         "TeamA": "VALENCIA BASKET NARANJA",
-                        "ScoreA": 52,
+                        "ScoreA": 65,
                         "TeamACode": "46000201",
                         "TeamAClubCode": "460002",
                         "TeamBID": 951906,
                         "TeamB": "JOVENTUT BADALONA  A",
                         "TeamBCode": "08000516",
                         "TeamBClubCode": "080005",
-                        "ScoreB": 71,
+                        "ScoreB": 82,
                         "StartTime": "2025-06-26T19:00:00",
                         "StartTimeUTC": "2025-06-26T17:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=953003&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951906&ti=1",
-                        "Quarter": 5,
-                        "Time": "00:34:19",
+                        "Quarter": 6,
+                        "Time": "00:41:42",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -383,8 +383,13 @@
                             },
                             {
                                 "n": "5",
+                                "scoreA": "13",
+                                "scoreB": "12"
+                            },
+                            {
+                                "n": "6",
                                 "scoreA": "3",
-                                "scoreB": "5"
+                                "scoreB": "4"
                             }
                         ],
                         "Season": null,
