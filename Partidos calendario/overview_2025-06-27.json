@@ -11,7 +11,7 @@
                 "id": "256",
                 "name": "CE Clubes Mini Fem",
                 "gamescount": 8,
-                "nowplaying": 2,
+                "nowplaying": 1,
                 "order": 23,
                 "GAMES": [
                     {
@@ -96,22 +96,22 @@
                         "Place": "POLIDEPORTIVO MUNICIPAL EL LIMON",
                         "TeamAID": 969205,
                         "TeamA": "MOVISTAR ESTUDIANTES \"JUANA\"",
-                        "ScoreA": 37,
+                        "ScoreA": 42,
                         "TeamACode": "28000170",
                         "TeamAClubCode": "280001",
                         "TeamBID": 952958,
                         "TeamB": "VALENCIA BASKET NARANJA",
                         "TeamBCode": "46000219",
                         "TeamBClubCode": "460002",
-                        "ScoreB": 50,
+                        "ScoreB": 62,
                         "StartTime": "2025-06-27T12:00:00",
                         "StartTimeUTC": "2025-06-27T10:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=969205&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952958&ti=1",
-                        "Quarter": 4,
-                        "Time": "00:28:16",
+                        "Quarter": 5,
+                        "Time": "00:34:21",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -133,8 +133,13 @@
                             },
                             {
                                 "n": "4",
-                                "scoreA": "9",
-                                "scoreB": "10"
+                                "scoreA": "12",
+                                "scoreB": "17"
+                            },
+                            {
+                                "n": "5",
+                                "scoreA": "2",
+                                "scoreB": "5"
                             }
                         ],
                         "Season": null,
@@ -166,33 +171,12 @@
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=962458&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=955269&ti=1",
-                        "Quarter": 4,
-                        "Time": "00:27:33",
-                        "Status": 2,
+                        "Quarter": 0,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [
-                            {
-                                "n": "1",
-                                "scoreA": "19",
-                                "scoreB": "15"
-                            },
-                            {
-                                "n": "2",
-                                "scoreA": "21",
-                                "scoreB": "5"
-                            },
-                            {
-                                "n": "3",
-                                "scoreA": "24",
-                                "scoreB": "1"
-                            },
-                            {
-                                "n": "4",
-                                "scoreA": "12",
-                                "scoreB": "4"
-                            }
-                        ],
+                        "Quarters": [],
                         "Season": null,
                         "SeasonID": null
                     }
@@ -252,22 +236,22 @@
                         "Place": "PALACIO DE DEPORTES VISTALEGRE",
                         "TeamAID": 953003,
                         "TeamA": "VALENCIA BASKET NARANJA",
-                        "ScoreA": 84,
+                        "ScoreA": 92,
                         "TeamACode": "46000201",
                         "TeamAClubCode": "460002",
                         "TeamBID": 968011,
                         "TeamB": "FUNDAL ALCOBENDAS \"A\"",
                         "TeamBCode": "28021952",
                         "TeamBClubCode": "280219",
-                        "ScoreB": 63,
+                        "ScoreB": 77,
                         "StartTime": "2025-06-27T12:00:00",
                         "StartTimeUTC": "2025-06-27T10:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=953003&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=968011&ti=1",
-                        "Quarter": 5,
-                        "Time": "00:39:05",
+                        "Quarter": 6,
+                        "Time": "00:46:52",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -295,7 +279,12 @@
                             {
                                 "n": "5",
                                 "scoreA": "18",
-                                "scoreB": "12"
+                                "scoreB": "13"
+                            },
+                            {
+                                "n": "6",
+                                "scoreA": "8",
+                                "scoreB": "13"
                             }
                         ],
                         "Season": null,
