@@ -61,14 +61,14 @@
                         "Place": "POLIDEPORTIVO MUNICIPAL EL LIMON",
                         "TeamAID": 958186,
                         "TeamA": "BARÇA CBS",
-                        "ScoreA": 67,
+                        "ScoreA": 77,
                         "TeamACode": "08004222",
                         "TeamAClubCode": "080042",
                         "TeamBID": 952958,
                         "TeamB": "VALENCIA BASKET NARANJA",
                         "TeamBCode": "46000219",
                         "TeamBClubCode": "460002",
-                        "ScoreB": 53,
+                        "ScoreB": 66,
                         "StartTime": "2025-06-28T12:00:00",
                         "StartTimeUTC": "2025-06-28T10:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
@@ -76,7 +76,7 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=958186&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952958&ti=1",
                         "Quarter": 6,
-                        "Time": "00:42:06",
+                        "Time": "00:47:53",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -108,8 +108,8 @@
                             },
                             {
                                 "n": "6",
-                                "scoreA": "0",
-                                "scoreB": "3"
+                                "scoreA": "10",
+                                "scoreB": "16"
                             }
                         ],
                         "Season": null,
