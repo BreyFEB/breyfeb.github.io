@@ -61,22 +61,22 @@
                         "Place": "POLIDEPORTIVO MUNICIPAL EL LIMON",
                         "TeamAID": 958186,
                         "TeamA": "BARÇA CBS",
-                        "ScoreA": 50,
+                        "ScoreA": 57,
                         "TeamACode": "08004222",
                         "TeamAClubCode": "080042",
                         "TeamBID": 952958,
                         "TeamB": "VALENCIA BASKET NARANJA",
                         "TeamBCode": "46000219",
                         "TeamBClubCode": "460002",
-                        "ScoreB": 32,
+                        "ScoreB": 44,
                         "StartTime": "2025-06-28T12:00:00",
                         "StartTimeUTC": "2025-06-28T10:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=958186&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952958&ti=1",
-                        "Quarter": 4,
-                        "Time": "00:28:40",
+                        "Quarter": 5,
+                        "Time": "00:35:22",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -99,7 +99,12 @@
                             {
                                 "n": "4",
                                 "scoreA": "3",
-                                "scoreB": "6"
+                                "scoreB": "15"
+                            },
+                            {
+                                "n": "5",
+                                "scoreA": "7",
+                                "scoreB": "3"
                             }
                         ],
                         "Season": null,
@@ -161,22 +166,22 @@
                         "Place": "PALACIO DE DEPORTES VISTALEGRE",
                         "TeamAID": 955247,
                         "TeamA": "BARÇA",
-                        "ScoreA": 66,
+                        "ScoreA": 80,
                         "TeamACode": "08000309",
                         "TeamAClubCode": "080003",
                         "TeamBID": 951906,
                         "TeamB": "JOVENTUT BADALONA  A",
                         "TeamBCode": "08000516",
                         "TeamBClubCode": "080005",
-                        "ScoreB": 51,
+                        "ScoreB": 68,
                         "StartTime": "2025-06-28T12:00:00",
                         "StartTimeUTC": "2025-06-28T10:00:00Z",
                         "_GameTime": "0001-01-01T00:00:00",
                         "GameTime": "00:00",
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=955247&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=951906&ti=1",
-                        "Quarter": 5,
-                        "Time": "00:37:26",
+                        "Quarter": 6,
+                        "Time": "00:46:15",
                         "Status": 2,
                         "Timezone": null,
                         "Duration": 0,
@@ -203,8 +208,13 @@
                             },
                             {
                                 "n": "5",
-                                "scoreA": "5",
-                                "scoreB": "8"
+                                "scoreA": "13",
+                                "scoreB": "13"
+                            },
+                            {
+                                "n": "6",
+                                "scoreA": "6",
+                                "scoreB": "12"
                             }
                         ],
                         "Season": null,
