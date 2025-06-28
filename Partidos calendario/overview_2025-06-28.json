@@ -11,7 +11,7 @@
                 "id": "256",
                 "name": "CE Clubes Mini Fem",
                 "gamescount": 6,
-                "nowplaying": 1,
+                "nowplaying": 0,
                 "order": 23,
                 "GAMES": [
                     {
@@ -61,7 +61,7 @@
                         "Place": "POLIDEPORTIVO MUNICIPAL EL LIMON",
                         "TeamAID": 958186,
                         "TeamA": "BARÇA CBS",
-                        "ScoreA": 77,
+                        "ScoreA": 79,
                         "TeamACode": "08004222",
                         "TeamAClubCode": "080042",
                         "TeamBID": 952958,
@@ -76,42 +76,11 @@
                         "LogoA": "https://imagenes.feb.es/imagen.aspx?i=958186&ti=1",
                         "LogoB": "https://imagenes.feb.es/imagen.aspx?i=952958&ti=1",
                         "Quarter": 6,
-                        "Time": "00:47:53",
-                        "Status": 2,
+                        "Time": "FINAL",
+                        "Status": 3,
                         "Timezone": null,
                         "Duration": 0,
-                        "Quarters": [
-                            {
-                                "n": "1",
-                                "scoreA": "15",
-                                "scoreB": "12"
-                            },
-                            {
-                                "n": "2",
-                                "scoreA": "13",
-                                "scoreB": "3"
-                            },
-                            {
-                                "n": "3",
-                                "scoreA": "19",
-                                "scoreB": "11"
-                            },
-                            {
-                                "n": "4",
-                                "scoreA": "3",
-                                "scoreB": "15"
-                            },
-                            {
-                                "n": "5",
-                                "scoreA": "17",
-                                "scoreB": "9"
-                            },
-                            {
-                                "n": "6",
-                                "scoreA": "10",
-                                "scoreB": "16"
-                            }
-                        ],
+                        "Quarters": [],
                         "Season": null,
                         "SeasonID": null
                     }
