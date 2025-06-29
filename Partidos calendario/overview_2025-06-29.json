@@ -1,0 +1,16 @@
+{
+    "HEADER": null,
+    "SCOREBOARD": null,
+    "TEAMSTATS": null,
+    "TICKER": null,
+    "OVERVIEW": {
+        "activeCompID": null,
+        "duration": null,
+        "COMPETITIONS": []
+    },
+    "PLAYBYPLAY": null,
+    "BANNER": null,
+    "BOXSCORE": null,
+    "SHOTCHART": null,
+    "RANKING": null
+}
