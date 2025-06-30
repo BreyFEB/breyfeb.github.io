@@ -1392,9 +1392,10 @@ async function loadStats() {
 
     function sortTable(column) {
       const tbody = table.querySelector('tbody');
-      const rows = Array.from(tbody.querySelectorAll('tr:not(.total-row):not(.prom-row)'));
+      const rows = Array.from(tbody.querySelectorAll('tr:not(.total-row):not(.prom-row):not(.per40-row)'));
       const totalRow = tbody.querySelector('.total-row');
       const promRow = tbody.querySelector('.prom-row');
+      const per40Row = tbody.querySelector('.per40-row');
 
       // Remove sort indicators
       thead.querySelectorAll('th').forEach(th => {
@@ -1486,6 +1487,7 @@ async function loadStats() {
       // Reattach total and average rows
       if (totalRow) tbody.appendChild(totalRow);
       if (promRow) tbody.appendChild(promRow);
+      if (per40Row) tbody.appendChild(per40Row);
     }
 
     function getColumnIndex(column) {
@@ -1644,6 +1646,71 @@ async function loadStats() {
           padding: 6px 10px;
         }
       }
+      
+      /* Styling for percentile pills in table */
+      .percentile-pill {
+        display: inline-block;
+        background: #1976d2;
+        color: white;
+        font-size: 0.7em;
+        padding: 2px 6px;
+        border-radius: 10px;
+        margin-top: 2px;
+        font-weight: bold;
+        text-align: center;
+        min-width: 30px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+      }
+      
+      /* Table styling for totals and averages rows */
+      .total-row, .prom-row, .per40-row {
+        background-color: #f8f9fa !important;
+        font-weight: bold;
+      }
+      
+      .total-row td, .prom-row td, .per40-row td {
+        text-align: center;
+        vertical-align: top;
+        padding: 8px 4px;
+      }
+      
+      .total-row td:first-child, .prom-row td:first-child, .per40-row td:first-child {
+        text-align: center;
+        font-weight: bold;
+        background-color: #e9ecef;
+      }
+      
+      /* Hover effects for game rows based on win/loss */
+      tr[style*="rgba(0, 255, 0, 0.1)"]:hover {
+        background-color: rgba(0, 255, 0, 0.25) !important;
+      }
+      
+      tr[style*="rgba(255, 0, 0, 0.1)"]:hover {
+        background-color: rgba(255, 0, 0, 0.25) !important;
+      }
+      
+      /* Individual cell hover effects */
+      tr[style*="rgba(0, 255, 0, 0.1)"] td:hover {
+        background-color: rgba(0, 255, 0, 0.6) !important;
+      }
+      
+      tr[style*="rgba(255, 0, 0, 0.1)"] td:hover {
+        background-color: rgba(255, 0, 0, 0.6) !important;
+      }
+      
+      /* Responsive table styling */
+      @media (max-width: 768px) {
+        .percentile-pill {
+          font-size: 0.6em;
+          padding: 1px 4px;
+          min-width: 25px;
+        }
+        
+        .total-row td, .prom-row td, .per40-row td {
+          padding: 6px 2px;
+          font-size: 0.9em;
+        }
+      }
     `;
     document.head.appendChild(style);
 
@@ -1676,31 +1743,165 @@ async function loadStats() {
     const totalT3Pct = totals.t3i > 0 ? ((totals.t3c / totals.t3i) * 100).toFixed(1) : 0;
     const totalTLPct = totals.tli > 0 ? ((totals.tlc / totals.tli) * 100).toFixed(1) : 0;
 
+    // Function to create percentile pill for table cells
+    function createPercentilePill(value, statKey, isTotal = true) {
+      // Get all players in the same competition
+      const compPlayers = data.players.filter(p => p.competition === player_totals.competition);
+      
+      let comparisonValue, comparisonArray;
+      
+      if (isTotal === true) {
+        // For totals, compare against total values of other players
+        comparisonArray = compPlayers.map(p => {
+          switch(statKey) {
+            case 'min': return p.seconds ? p.seconds / 60 : 0;
+            case 'pts': return p.pts;
+            case 't2c': return p.t2c;
+            case 't2i': return p.t2i;
+            case 't3c': return p.t3c;
+            case 't3i': return p.t3i;
+            case 'tlc': return p.tlc;
+            case 'tli': return p.tli;
+            case 'ro': return p.ro;
+            case 'rd': return p.rd;
+            case 'rt': return p.rt;
+            case 'as': return p.as;
+            case 'br': return p.br;
+            case 'bp': return p.bp;
+            case 'tp': return p.tp;
+            case 'fc': return p.fc;
+            case 'va': return p.va;
+            case 'pm': return p.pm;
+            case 't2pct': return p.t2i > 0 ? (p.t2c / p.t2i) * 100 : 0;
+            case 't3pct': return p.t3i > 0 ? (p.t3c / p.t3i) * 100 : 0;
+            case 'tlpct': return p.tli > 0 ? (p.tlc / p.tli) * 100 : 0;
+            default: return 0;
+          }
+        });
+        comparisonValue = value;
+      } else if (isTotal === false) {
+        // For averages, compare against average values of other players
+        comparisonArray = compPlayers.map(p => {
+          switch(statKey) {
+            case 'min': return p.seconds ? (p.seconds / 60) / p.games : 0;
+            case 'pts': return p.pts / p.games;
+            case 't2c': return p.t2c / p.games;
+            case 't2i': return p.t2i / p.games;
+            case 't3c': return p.t3c / p.games;
+            case 't3i': return p.t3i / p.games;
+            case 'tlc': return p.tlc / p.games;
+            case 'tli': return p.tli / p.games;
+            case 'ro': return p.ro / p.games;
+            case 'rd': return p.rd / p.games;
+            case 'rt': return p.rt / p.games;
+            case 'as': return p.as / p.games;
+            case 'br': return p.br / p.games;
+            case 'bp': return p.bp / p.games;
+            case 'tp': return p.tp / p.games;
+            case 'fc': return p.fc / p.games;
+            case 'va': return p.va / p.games;
+            case 'pm': return p.pm / p.games;
+            case 't2pct': return p.t2i > 0 ? (p.t2c / p.t2i) * 100 : 0;
+            case 't3pct': return p.t3i > 0 ? (p.t3c / p.t3i) * 100 : 0;
+            case 'tlpct': return p.tli > 0 ? (p.tlc / p.tli) * 100 : 0;
+            default: return 0;
+          }
+        });
+        comparisonValue = value;
+      } else if (isTotal === 'per40') {
+        // For per 40 minutes, compare against per 40 minutes values of other players
+        comparisonArray = compPlayers.map(p => {
+          const playerMinutes = p.seconds ? p.seconds / 60 : 0;
+          switch(statKey) {
+            case 'min': return 40; // Always 40 for per 40 minutes
+            case 'pts': return playerMinutes > 0 ? (p.pts / playerMinutes) * 40 : 0;
+            case 't2c': return playerMinutes > 0 ? (p.t2c / playerMinutes) * 40 : 0;
+            case 't2i': return playerMinutes > 0 ? (p.t2i / playerMinutes) * 40 : 0;
+            case 't3c': return playerMinutes > 0 ? (p.t3c / playerMinutes) * 40 : 0;
+            case 't3i': return playerMinutes > 0 ? (p.t3i / playerMinutes) * 40 : 0;
+            case 'tlc': return playerMinutes > 0 ? (p.tlc / playerMinutes) * 40 : 0;
+            case 'tli': return playerMinutes > 0 ? (p.tli / playerMinutes) * 40 : 0;
+            case 'ro': return playerMinutes > 0 ? (p.ro / playerMinutes) * 40 : 0;
+            case 'rd': return playerMinutes > 0 ? (p.rd / playerMinutes) * 40 : 0;
+            case 'rt': return playerMinutes > 0 ? (p.rt / playerMinutes) * 40 : 0;
+            case 'as': return playerMinutes > 0 ? (p.as / playerMinutes) * 40 : 0;
+            case 'br': return playerMinutes > 0 ? (p.br / playerMinutes) * 40 : 0;
+            case 'bp': return playerMinutes > 0 ? (p.bp / playerMinutes) * 40 : 0;
+            case 'tp': return playerMinutes > 0 ? (p.tp / playerMinutes) * 40 : 0;
+            case 'fc': return playerMinutes > 0 ? (p.fc / playerMinutes) * 40 : 0;
+            case 'va': return playerMinutes > 0 ? (p.va / playerMinutes) * 40 : 0;
+            case 'pm': return playerMinutes > 0 ? (p.pm / playerMinutes) * 40 : 0;
+            case 't2pct': return p.t2i > 0 ? (p.t2c / p.t2i) * 100 : 0;
+            case 't3pct': return p.t3i > 0 ? (p.t3c / p.t3i) * 100 : 0;
+            case 'tlpct': return p.tli > 0 ? (p.tlc / p.tli) * 100 : 0;
+            default: return 0;
+          }
+        });
+        comparisonValue = value;
+      }
+      
+      // Calculate percentile
+      const { percentile, color } = getPercentileAndColor(comparisonValue, comparisonArray);
+      
+      return `<div class="percentile-pill" style="
+        display: inline-block;
+        background: ${color};
+        color: white;
+        font-size: 0.7em;
+        padding: 2px 6px;
+        border-radius: 10px;
+        margin-top: 2px;
+        font-weight: bold;
+        text-align: center;
+        min-width: 30px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+      " title="El jugador supera al ${percentile}% de los jugadores de la competición en esta estadística.">${percentile} pct</div>`;
+    }
+
+    // Function to create table cell with value and percentile
+    function createTableCell(value, statKey, isTotal = true) {
+      const percentilePill = createPercentilePill(value, statKey, isTotal);
+      return `<td style="text-align: center; vertical-align: top;">
+        <div style="font-weight: bold;">${value}</div>
+        ${percentilePill}
+      </td>`;
+    }
+
+    // Function to create table cell for minutes with proper formatting
+    function createMinutesTableCell(rawMinutes, statKey, isTotal = true) {
+      const formattedMinutes = formatMinutes(rawMinutes);
+      const percentilePill = createPercentilePill(rawMinutes, statKey, isTotal);
+      return `<td style="text-align: center; vertical-align: top;">
+        <div style="font-weight: bold;">${formattedMinutes}</div>
+        ${percentilePill}
+      </td>`;
+    }
+
     const totalRow = document.createElement('tr');
     totalRow.classList.add('total-row');
     totalRow.innerHTML = `
-      <td colspan="3">TOTAL</td>
-      <td>${formatMinutes(totals.min)}</td>
-      <td>${totals.pts}</td>
-      <td>${totals.t2c}</td>
-      <td>${totals.t2i}</td>
-      <td>${totalT2Pct}</td>
-      <td>${totals.t3c}</td>
-      <td>${totals.t3i}</td>
-      <td>${totalT3Pct}</td>
-      <td>${totals.tlc}</td>
-      <td>${totals.tli}</td>
-      <td>${totalTLPct}</td>
-      <td>${totals.ro}</td>
-      <td>${totals.rd}</td>
-      <td>${totals.rt}</td>
-      <td>${totals.as}</td>
-      <td>${totals.br}</td>
-      <td>${totals.bp}</td>
-      <td>${totals.tp}</td>
-      <td>${totals.fc}</td>
-      <td>${totals.va}</td>
-      <td>${totals.pm}</td>
+      <td colspan="3" style="text-align: center; font-weight: bold;">TOTAL</td>
+      ${createMinutesTableCell(totals.min, 'min', true)}
+      ${createTableCell(totals.pts, 'pts', true)}
+      ${createTableCell(totals.t2c, 't2c', true)}
+      ${createTableCell(totals.t2i, 't2i', true)}
+      ${createTableCell(parseFloat(totalT2Pct), 't2pct', true)}
+      ${createTableCell(totals.t3c, 't3c', true)}
+      ${createTableCell(totals.t3i, 't3i', true)}
+      ${createTableCell(parseFloat(totalT3Pct), 't3pct', true)}
+      ${createTableCell(totals.tlc, 'tlc', true)}
+      ${createTableCell(totals.tli, 'tli', true)}
+      ${createTableCell(parseFloat(totalTLPct), 'tlpct', true)}
+      ${createTableCell(totals.ro, 'ro', true)}
+      ${createTableCell(totals.rd, 'rd', true)}
+      ${createTableCell(totals.rt, 'rt', true)}
+      ${createTableCell(totals.as, 'as', true)}
+      ${createTableCell(totals.br, 'br', true)}
+      ${createTableCell(totals.bp, 'bp', true)}
+      ${createTableCell(totals.tp, 'tp', true)}
+      ${createTableCell(totals.fc, 'fc', true)}
+      ${createTableCell(totals.va, 'va', true)}
+      ${createTableCell(totals.pm, 'pm', true)}
     `;
     tbody.appendChild(totalRow);
 
@@ -1730,30 +1931,127 @@ async function loadStats() {
     const avgRow = document.createElement('tr');
     avgRow.classList.add('prom-row');
     avgRow.innerHTML = `
-      <td colspan="3">PROMEDIO</td>
-      <td>${formatMinutes(averages.min)}</td>
-      <td>${averages.pts}</td>
-      <td>${averages.t2c}</td>
-      <td>${averages.t2i}</td>
-      <td>${totalT2Pct}</td>
-      <td>${averages.t3c}</td>
-      <td>${averages.t3i}</td>
-      <td>${totalT3Pct}</td>
-      <td>${averages.tlc}</td>
-      <td>${averages.tli}</td>
-      <td>${totalTLPct}</td>
-      <td>${averages.ro}</td>
-      <td>${averages.rd}</td>
-      <td>${averages.rt}</td>
-      <td>${averages.as}</td>
-      <td>${averages.br}</td>
-      <td>${averages.bp}</td>
-      <td>${averages.tp}</td>
-      <td>${averages.fc}</td>
-      <td>${averages.va}</td>
-      <td>${averages.pm}</td>
+      <td colspan="3" style="text-align: center; font-weight: bold;">POR PARTIDO</td>
+      ${createMinutesTableCell(averages.min, 'min', false)}
+      ${createTableCell(averages.pts, 'pts', false)}
+      ${createTableCell(averages.t2c, 't2c', false)}
+      ${createTableCell(averages.t2i, 't2i', false)}
+      ${createTableCell(parseFloat(totalT2Pct), 't2pct', false)}
+      ${createTableCell(averages.t3c, 't3c', false)}
+      ${createTableCell(averages.t3i, 't3i', false)}
+      ${createTableCell(parseFloat(totalT3Pct), 't3pct', false)}
+      ${createTableCell(averages.tlc, 'tlc', false)}
+      ${createTableCell(averages.tli, 'tli', false)}
+      ${createTableCell(parseFloat(totalTLPct), 'tlpct', false)}
+      ${createTableCell(averages.ro, 'ro', false)}
+      ${createTableCell(averages.rd, 'rd', false)}
+      ${createTableCell(averages.rt, 'rt', false)}
+      ${createTableCell(averages.as, 'as', false)}
+      ${createTableCell(averages.br, 'br', false)}
+      ${createTableCell(averages.bp, 'bp', false)}
+      ${createTableCell(averages.tp, 'tp', false)}
+      ${createTableCell(averages.fc, 'fc', false)}
+      ${createTableCell(averages.va, 'va', false)}
+      ${createTableCell(averages.pm, 'pm', false)}
     `;
     tbody.appendChild(avgRow);
+
+    // Calculate and add per 40 minutes row
+    const per40Minutes = {
+      min: 40, // Always 40 minutes
+      pts: totals.min > 0 ? (totals.pts / totals.min) * 40 : 0,
+      t2i: totals.min > 0 ? (totals.t2i / totals.min) * 40 : 0,
+      t2c: totals.min > 0 ? (totals.t2c / totals.min) * 40 : 0,
+      t3i: totals.min > 0 ? (totals.t3i / totals.min) * 40 : 0,
+      t3c: totals.min > 0 ? (totals.t3c / totals.min) * 40 : 0,
+      tli: totals.min > 0 ? (totals.tli / totals.min) * 40 : 0,
+      tlc: totals.min > 0 ? (totals.tlc / totals.min) * 40 : 0,
+      ro: totals.min > 0 ? (totals.ro / totals.min) * 40 : 0,
+      rd: totals.min > 0 ? (totals.rd / totals.min) * 40 : 0,
+      rt: totals.min > 0 ? (totals.rt / totals.min) * 40 : 0,
+      as: totals.min > 0 ? (totals.as / totals.min) * 40 : 0,
+      br: totals.min > 0 ? (totals.br / totals.min) * 40 : 0,
+      bp: totals.min > 0 ? (totals.bp / totals.min) * 40 : 0,
+      tp: totals.min > 0 ? (totals.tp / totals.min) * 40 : 0,
+      fc: totals.min > 0 ? (totals.fc / totals.min) * 40 : 0,
+      va: totals.min > 0 ? (totals.va / totals.min) * 40 : 0,
+      pm: totals.min > 0 ? (totals.pm / totals.min) * 40 : 0
+    };
+
+    // Format per 40 minutes values
+    const per40Formatted = {
+      min: '40:00',
+      pts: per40Minutes.pts.toFixed(1),
+      t2i: per40Minutes.t2i.toFixed(1),
+      t2c: per40Minutes.t2c.toFixed(1),
+      t3i: per40Minutes.t3i.toFixed(1),
+      t3c: per40Minutes.t3c.toFixed(1),
+      tli: per40Minutes.tli.toFixed(1),
+      tlc: per40Minutes.tlc.toFixed(1),
+      ro: per40Minutes.ro.toFixed(1),
+      rd: per40Minutes.rd.toFixed(1),
+      rt: per40Minutes.rt.toFixed(1),
+      as: per40Minutes.as.toFixed(1),
+      br: per40Minutes.br.toFixed(1),
+      bp: per40Minutes.bp.toFixed(1),
+      tp: per40Minutes.tp.toFixed(1),
+      fc: per40Minutes.fc.toFixed(1),
+      va: per40Minutes.va.toFixed(1),
+      pm: per40Minutes.pm.toFixed(1)
+    };
+
+    // Function to create table cell with value and percentile for per 40 minutes
+    function createPer40TableCell(value, statKey) {
+      const percentilePill = createPercentilePill(value, statKey, 'per40');
+      return `<td style="text-align: center; vertical-align: top;">
+        <div style="font-weight: bold;">${value}</div>
+        ${percentilePill}
+      </td>`;
+    }
+
+    // Function to create table cell for per 40 minutes without percentile pill for minutes
+    function createPer40MinutesTableCell(value, statKey) {
+      // Don't show percentile pill for minutes in per 40 minutes row
+      if (statKey === 'min') {
+        return `<td style="text-align: center; vertical-align: top;">
+          <div style="font-weight: bold;">${value}</div>
+        </td>`;
+      } else {
+        const percentilePill = createPercentilePill(value, statKey, 'per40');
+        return `<td style="text-align: center; vertical-align: top;">
+          <div style="font-weight: bold;">${value}</div>
+          ${percentilePill}
+        </td>`;
+      }
+    }
+
+    const per40Row = document.createElement('tr');
+    per40Row.classList.add('per40-row');
+    per40Row.innerHTML = `
+      <td colspan="3" style="text-align: center; font-weight: bold;">POR 40 MINUTOS</td>
+      ${createPer40MinutesTableCell(per40Formatted.min, 'min')}
+      ${createPer40TableCell(per40Formatted.pts, 'pts')}
+      ${createPer40TableCell(per40Formatted.t2c, 't2c')}
+      ${createPer40TableCell(per40Formatted.t2i, 't2i')}
+      ${createPer40TableCell(parseFloat(totalT2Pct), 't2pct')}
+      ${createPer40TableCell(per40Formatted.t3c, 't3c')}
+      ${createPer40TableCell(per40Formatted.t3i, 't3i')}
+      ${createPer40TableCell(parseFloat(totalT3Pct), 't3pct')}
+      ${createPer40TableCell(per40Formatted.tlc, 'tlc')}
+      ${createPer40TableCell(per40Formatted.tli, 'tli')}
+      ${createPer40TableCell(parseFloat(totalTLPct), 'tlpct')}
+      ${createPer40TableCell(per40Formatted.ro, 'ro')}
+      ${createPer40TableCell(per40Formatted.rd, 'rd')}
+      ${createPer40TableCell(per40Formatted.rt, 'rt')}
+      ${createPer40TableCell(per40Formatted.as, 'as')}
+      ${createPer40TableCell(per40Formatted.br, 'br')}
+      ${createPer40TableCell(per40Formatted.bp, 'bp')}
+      ${createPer40TableCell(per40Formatted.tp, 'tp')}
+      ${createPer40TableCell(per40Formatted.fc, 'fc')}
+      ${createPer40TableCell(per40Formatted.va, 'va')}
+      ${createPer40TableCell(per40Formatted.pm, 'pm')}
+    `;
+    tbody.appendChild(per40Row);
 
     table.appendChild(tbody);
     statsContainer.appendChild(table);
