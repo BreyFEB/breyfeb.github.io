@@ -6,6 +6,16 @@
   <title>Equipo - FEB</title>
   <link rel="stylesheet" href="player_profile.css" />
   <style>
+    #teamLogo {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    #lineupsSection h2 {
+      margin-bottom: 20px;
+    }
     /* Rival logo styles for record cards */
     .rival-logo-container {
       position: absolute;
@@ -114,6 +124,11 @@
       color: #333;
       margin: 0 0 4px 0;
       line-height: 1.3;
+      white-space: normal;
+      overflow: visible;
+      text-overflow: unset;
+      max-width: none;
+      text-align: left;
     }
     
     .player-dorsal {
@@ -184,10 +199,6 @@
       .player-photo-container {
         width: 70px;
         height: 70px;
-      }
-      
-      .player-name {
-        font-size: 1.1em;
       }
       
       .player-stats {
@@ -318,6 +329,887 @@
       font-weight: 600;
       margin-bottom: 10px;
     }
+
+    /* Lineups Section Styles */
+    .lineup-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .lineup-tab-button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #e9ecef;
+      color: #495057;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: all 0.3s ease;
+    }
+
+    .lineup-tab-button:hover {
+      background-color: #dee2e6;
+    }
+
+    .lineup-tab-button.active {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .lineup-filter-section {
+      background: #f8f9fa;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .lineup-filter-section h3 {
+      margin: 0 0 10px 0;
+      color: #333;
+    }
+
+    .player-checkboxes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      max-height: 150px;
+      overflow-y: auto;
+      padding: 10px;
+      background: white;
+      border-radius: 4px;
+      border: 1px solid #dee2e6;
+    }
+
+    .player-checkbox-container {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 8px;
+      background: #f8f9fa;
+      border-radius: 4px;
+      transition: background-color 0.2s;
+    }
+
+    .player-checkbox-container:hover {
+      background: #e9ecef;
+    }
+
+    .player-checkbox-container input[type="checkbox"] {
+      margin: 0;
+    }
+
+    .player-checkbox-container label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .filter-player-photo {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #dee2e6;
+    }
+
+    .filter-info {
+      font-size: 0.9em;
+      color: #666;
+      margin-top: 10px;
+    }
+
+    .lineup-stats-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: .4s;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      transition: .4s;
+    }
+
+    input:checked + .slider {
+      background-color: #2196F3;
+    }
+
+    input:focus + .slider {
+      box-shadow: 0 0 1px #2196F3;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    .slider.round {
+      border-radius: 34px;
+    }
+
+    .slider.round:before {
+      border-radius: 50%;
+    }
+
+    .toggle-label {
+      font-weight: 500;
+      color: #333;
+    }
+
+    .lineup-column-selector {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px 0;
+    }
+
+    .lineup-column-selector .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .lineup-column-selector .dropdown-button {
+      background: #1976d2;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 8px rgba(25, 118, 210, 0.2);
+    }
+
+    .lineup-column-selector .dropdown-button:hover {
+      background: #1565c0;
+      box-shadow: 0 4px 12px rgba(25, 118, 210, 0.3);
+      transform: translateY(-1px);
+    }
+
+    .lineup-column-selector .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: white;
+      min-width: 320px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+      border-radius: 12px;
+      z-index: 1000;
+      margin-top: 8px;
+      border: 1px solid #e0e0e0;
+      overflow: hidden;
+    }
+
+    .lineup-column-selector .dropdown.active .dropdown-content {
+      display: block;
+    }
+
+    .column-selector-header {
+      display: flex;
+      gap: 8px;
+      padding: 16px;
+      border-bottom: 1px solid #f0f0f0;
+      background: #f8f9fa;
+    }
+
+    .column-selector-header button {
+      flex: 1;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .column-selector-header button:first-child {
+      background: #1976d2;
+      color: white;
+    }
+
+    .column-selector-header button:first-child:hover {
+      background: #1565c0;
+    }
+
+    .column-selector-header button:last-child {
+      background: #dc3545;
+      color: white;
+    }
+
+    .column-selector-header button:last-child:hover {
+      background: #c82333;
+    }
+
+    .column-options {
+      max-height: 300px;
+      overflow-y: auto;
+      padding: 8px 0;
+    }
+
+    .column-options label {
+      display: flex;
+      align-items: center;
+      padding: 10px 16px;
+      cursor: pointer;
+      border-bottom: 1px solid #f8f8f8;
+      position: relative;
+      transition: background-color 0.2s ease;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .column-options label:hover {
+      background-color: #f5f5f5;
+    }
+
+    .column-options label:last-child {
+      border-bottom: none;
+    }
+
+    .column-options input[type="checkbox"] {
+      margin-right: 12px;
+      width: 16px;
+      height: 16px;
+      accent-color: #1976d2;
+    }
+
+    .column-tooltip {
+      position: absolute;
+      left: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #333;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      white-space: nowrap;
+      z-index: 1001;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.2s, visibility 0.2s;
+      margin-left: 12px;
+      max-width: 200px;
+      word-wrap: break-word;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .column-tooltip::before {
+      content: '';
+      position: absolute;
+      right: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      border: 6px solid transparent;
+      border-right-color: #333;
+    }
+
+    .column-options label:hover .column-tooltip {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .lineup-possession-filter-section {
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .lineup-possession-filter-section h3 {
+      margin: 0 0 10px 0;
+      color: #333;
+      text-align: center;
+    }
+
+    .possession-filter {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .range-inputs {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .range-input {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .range-input label {
+      font-weight: 500;
+      color: #333;
+    }
+
+    .range-input input {
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      width: 80px;
+    }
+
+    .reset-button {
+      padding: 8px 16px;
+      background-color: #6c757d;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.9em;
+      transition: background-color 0.3s;
+    }
+
+    .reset-button:hover {
+      background-color: #545b62;
+    }
+
+    .lineup-table-container {
+      position: relative;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      max-height: 80vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .table-scroll-wrapper {
+      overflow: auto;
+      position: relative;
+      flex: 1;
+    }
+
+    .scroll-arrows {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      background: #f8f9fa;
+      border-bottom: 1px solid #dee2e6;
+    }
+
+    .scroll-arrow {
+      padding: 8px 12px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background-color 0.3s;
+    }
+
+    .scroll-arrow:hover {
+      background: #0056b3;
+    }
+
+    .scroll-arrow:active {
+      transform: scale(0.95);
+    }
+
+    .lineup-table-container table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0;
+    }
+
+    .lineup-table-container th,
+    .lineup-table-container td {
+      padding: 12px 15px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .lineup-table-container th:first-child,
+    .lineup-table-container td:first-child {
+      position: sticky;
+      left: 0;
+      background: white;
+      z-index: 2;
+      border-right: 2px solid #ddd;
+    }
+
+    .lineup-table-container thead th {
+      position: sticky;
+      top: 0;
+      background: #f8f9fa;
+      z-index: 1;
+    }
+
+    .lineup-table-container thead th:first-child {
+      z-index: 3;
+    }
+
+    .lineup-table-container th {
+      background-color: #f8f9fa;
+      font-weight: 600;
+      color: #333;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .lineup-table-container th:hover {
+      background-color: #e9ecef;
+    }
+
+    .lineup-table-container th.sorted::after {
+      content: '↕';
+      margin-left: 5px;
+      color: #666;
+    }
+
+    .lineup-table-container th.sorted.asc::after {
+      content: '↑';
+      color: #007bff;
+    }
+
+    .lineup-table-container th.sorted.desc::after {
+      content: '↓';
+      color: #007bff;
+    }
+
+    .player-photos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .player-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 6px;
+      text-align: center;
+      min-width: 0;
+    }
+
+    .player-photo {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #FF9E1B;
+      flex-shrink: 0;
+    }
+
+    .lineup-table-container tr:hover {
+      background-color: #f8f9fa;
+    }
+
+    .lineup-table-container tr:hover td:first-child {
+      background-color: #f8f9fa;
+    }
+
+    .lineup-modal {
+      display: none;
+      position: fixed;
+      z-index: 10000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+    }
+
+    .lineup-modal.show {
+      display: block;
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 0;
+      border-radius: 8px;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      animation: modalSlideIn 0.3s ease-out;
+    }
+
+    @keyframes modalSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .lineup-modal.show .modal-content {
+      animation: modalSlideIn 0.3s ease-out;
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      border-bottom: 1px solid #dee2e6;
+      background-color: #f8f9fa;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .modal-header h3 {
+      margin: 0;
+      color: #333;
+      font-size: 1.2em;
+    }
+
+    .close-modal {
+      background: none;
+      border: none;
+      font-size: 1.5em;
+      cursor: pointer;
+      color: #666;
+      padding: 0;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: background-color 0.2s;
+    }
+
+    .close-modal:hover {
+      background-color: #e9ecef;
+      color: #333;
+    }
+
+    .modal-body {
+      padding: 20px;
+      color: #333;
+    }
+
+    .modal-footer {
+      padding: 15px 20px;
+      border-top: 1px solid #dee2e6;
+      text-align: right;
+    }
+
+    .modal-button {
+      padding: 8px 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.9em;
+      transition: background-color 0.3s;
+    }
+
+    .modal-button:hover {
+      background-color: #0056b3;
+    }
+
+    .collapsible {
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .collapsible-header {
+      background: #f8f9fa;
+      padding: 15px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color 0.2s;
+    }
+
+    .collapsible-header:hover {
+      background: #e9ecef;
+    }
+
+    .collapsible-header h3 {
+      margin: 0;
+      color: #333;
+      font-size: 1em;
+    }
+
+    .collapse-icon {
+      font-size: 0.8em;
+      color: #666;
+      transition: transform 0.3s;
+    }
+
+    .collapsible.collapsed .collapse-icon {
+      transform: rotate(-90deg);
+    }
+
+    .collapsible-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+    }
+
+    .collapsible:not(.collapsed) .collapsible-content {
+      max-height: 500px;
+    }
+
+    /* Responsive design for lineups */
+    @media (max-width: 768px) {
+      .lineup-tabs {
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .lineup-tab-button {
+        padding: 8px 16px;
+        font-size: 0.9em;
+      }
+
+      .player-checkboxes {
+        max-height: 120px;
+      }
+
+      .player-checkbox-container {
+        padding: 3px 6px;
+      }
+
+      .lineup-table-container th,
+      .lineup-table-container td {
+        padding: 8px 10px;
+        font-size: 0.9em;
+      }
+
+      .player-photos {
+        gap: 3px;
+      }
+
+      .player-container {
+        padding: 1px 4px;
+        font-size: 0.7em;
+      }
+
+      .player-photo {
+        width: 16px;
+        height: 16px;
+      }
+
+      .lineup-table-container {
+        max-height: 60vh;
+      }
+
+      .dropdown-content {
+        min-width: 250px;
+      }
+
+      .checkbox-row {
+        gap: 6px;
+      }
+
+      .checkbox-row label {
+        font-size: 0.8em;
+        padding: 3px 6px;
+      }
+    }
+
+    /* Make the Jugadores en pista column width flexible */
+    .lineup-table-container th:first-child,
+    .lineup-table-container td:first-child {
+      width: auto;
+      min-width: 200px;
+      max-width: 400px;
+      white-space: nowrap;
+    }
+
+    /* Desktop layout - single row with names underneath */
+    @media (min-width: 1024px) {
+      .player-photos {
+        flex-wrap: nowrap;
+        gap: 12px;
+        justify-content: center;
+      }
+
+      .player-container {
+        flex-direction: column;
+        gap: 4px;
+        text-align: center;
+        min-width: 60px;
+      }
+    }
+
+    /* Tablet layout - keep current row layout */
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .player-photos {
+        flex-wrap: wrap;
+        gap: 8px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+      }
+
+      .player-container {
+        flex-direction: row;
+        gap: 6px;
+      }
+    }
+
+    /* Mobile layout - keep current row layout */
+    @media (max-width: 767px) {
+      .player-photos {
+        flex-wrap: wrap;
+        gap: 8px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+      }
+
+      .player-container {
+        flex-direction: row;
+        gap: 6px;
+      }
+    }
+
+    .column-options label {
+      display: flex;
+      align-items: center;
+      padding: 8px 12px;
+      cursor: pointer;
+      border-bottom: 1px solid #eee;
+      position: relative;
+    }
+
+    .column-options label:hover {
+      background-color: #f5f5f5;
+    }
+
+    .column-options input[type="checkbox"] {
+      margin-right: 8px;
+    }
+
+    .column-tooltip {
+      position: absolute;
+      left: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #333;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 4px;
+      font-size: 12px;
+      white-space: nowrap;
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.2s, visibility 0.2s;
+      margin-left: 10px;
+      max-width: 200px;
+      word-wrap: break-word;
+    }
+
+    .column-tooltip::before {
+      content: '';
+      position: absolute;
+      right: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      border: 5px solid transparent;
+      border-right-color: #333;
+    }
+
+    .column-options label:hover .column-tooltip {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* Centered heading above lineup table */
+    .lineup-table-title {
+      text-align: center;
+      margin: 20px 0 10px 0;
+      font-size: 1.2em;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .lineup-player-name {
+      font-size: 0.75em;
+      color: #333;
+      font-weight: 500;
+      max-width: 80px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      text-align: left;
+    }
+
+    /* Desktop layout adjustments */
+    @media (min-width: 1024px) {
+      .lineup-player-name {
+        text-align: center;
+        max-width: 60px;
+        font-size: 0.7em;
+      }
+    }
+
+    /* Tablet layout adjustments */
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .lineup-player-name {
+        text-align: left;
+        max-width: 80px;
+        font-size: 0.75em;
+      }
+    }
+
+    /* Mobile layout adjustments */
+    @media (max-width: 767px) {
+      .lineup-player-name {
+        text-align: left;
+        max-width: 80px;
+        font-size: 0.75em;
+      }
+    }
   </style>
 </head>
 <body>
@@ -395,6 +1287,7 @@
       <li><a href="#playersSection" class="tab-link active"><svg xmlns="http://www.w3.org/2000/svg" class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="4"/><circle cx="16" cy="8" r="4"/><rect x="2" y="14" width="20" height="6" rx="3"/></svg><span>Plantilla</span></a></li>
       <li><a href="#profileSection" class="tab-link"><img src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/stats-chart-outline.svg" alt="Rendimiento" class="tab-icon"><span>Rendimiento</span></a></li>
       <li><a href="#shotsSection" class="tab-link"><svg xmlns="http://www.w3.org/2000/svg" class="tab-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="22"/><path d="M24 2c6 8 6 36 0 44"/><path d="M8 14c10 4 22 4 32 0"/><path d="M8 34c10-4 22-4 32 0"/></svg><span>Mapa de Tiros</span></a></li>
+      <li><a href="#lineupsSection" class="tab-link"><svg xmlns="http://www.w3.org/2000/svg" class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg><span>Quintetos</span></a></li>
       <li><a href="#statsSection" class="tab-link"><svg xmlns="http://www.w3.org/2000/svg" class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3zM3 9h18M3 15h18M9 3v18m6-18v18"></path></svg><span>Estadísticas</span></a></li>
       <li><a href="#recordsSection" class="tab-link">
         <svg xmlns="http://www.w3.org/2000/svg" class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
@@ -408,7 +1301,6 @@
       </li>
       <li><a href="#photosSection" class="tab-link"><svg xmlns="http://www.w3.org/2000/svg" class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Fotos</span></a></li>
       <li><a href="#videosSection" class="tab-link"><svg xmlns="http://www.w3.org/2000/svg" class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg><span>Videos</span></a></li>
-      <li><a href="#newsSection" class="tab-link"><svg xmlns="http://www.w3.org/2000/svg" class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 5H3a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2z"/><path d="M12 15V7"/><path d="M12 15h5"/><path d="M7 15h-2"/><path d="M7 12h-2"/><path d="M7 9h-2"/></svg><span>Noticias</span></a></li>
     </ul>
   </nav>
 
@@ -439,12 +1331,6 @@
       <!-- Videos -->
     </div>
   </section>
-  <section id="newsSection" class="player-section" style="display:none;">
-    <h2>Noticias del Equipo</h2>
-    <div class="news-container">
-      <!-- Noticias -->
-    </div>
-  </section>
   <section id="shotsSection" class="player-section" style="display:none;">
     <h3>Mapa de Tiros del Equipo</h3>
     <!-- reuse player filters UI -->
@@ -452,6 +1338,174 @@
     <div class="chart-with-card horizontal">
       <div class="chart-container chart-container-shotChart"><canvas id="teamShotsChart"></canvas></div>
       <div class="stats-card"><h3>Porcentaje de Acierto</h3><div id="teamFgPercentage" class="fg-percentage">-</div></div>
+    </div>
+  </section>
+
+  <section id="lineupsSection" class="player-section" style="display:none;">
+    <h2>Estadísticas de Quintetos y Subquintetos</h2>
+    
+    <!-- Lineup type tabs -->
+    <div class="lineup-tabs">
+      <button class="lineup-tab-button active" data-lineup="five">5 Jugadores</button>
+      <button class="lineup-tab-button" data-lineup="four">4 Jugadores</button>
+      <button class="lineup-tab-button" data-lineup="three">3 Jugadores</button>
+      <button class="lineup-tab-button" data-lineup="two">2 Jugadores</button>
+    </div>
+
+    <!-- Player filters -->
+    <div class="lineup-filter-section player-filter-section collapsible collapsed">
+      <div class="collapsible-header">
+        <h3>Filtrar por jugadores en pista</h3>
+        <span class="collapse-icon">▼</span>
+      </div>
+      <div class="collapsible-content">
+        <div class="player-checkboxes" id="lineupPlayerCheckboxes">
+          <!-- Player checkboxes will be added here dynamically -->
+        </div>
+        <span class="filter-info" id="lineupPlayerFilterInfo"></span>
+      </div>
+    </div>
+
+    <div class="lineup-filter-section player-filter-section collapsible collapsed">
+      <div class="collapsible-header">
+        <h3>Filtrar por jugadores fuera de pista</h3>
+        <span class="collapse-icon">▼</span>
+      </div>
+      <div class="collapsible-content">
+        <div class="player-checkboxes" id="lineupPlayerOffCheckboxes">
+          <!-- Player checkboxes will be added here dynamically -->
+        </div>
+        <span class="filter-info" id="lineupPlayerOffFilterInfo"></span>
+      </div>
+    </div>
+
+    <!-- Stats toggle -->
+    <div class="lineup-stats-toggle">
+      <label class="switch">
+        <input type="checkbox" id="lineupPer100Toggle">
+        <span class="slider round"></span>
+      </label>
+      <span class="toggle-label">Mostrar estadísticas por 100 posesiones</span>
+    </div>
+
+    <!-- Column selector -->
+    <div class="lineup-column-selector">
+      <div class="dropdown">
+        <button class="dropdown-button">Columnas visibles</button>
+        <div class="dropdown-content">
+          <div class="column-selector-header">
+            <button id="lineupSelectAllColumns">Seleccionar todo</button>
+            <button id="lineupDeselectAllColumns">Deseleccionar todo</button>
+          </div>
+          <div class="column-options">
+            <label><input type="checkbox" data-column="PTS" checked> PTS <span class="column-tooltip">Puntos totales anotados por el equipo</span></label>
+            <label><input type="checkbox" data-column="PTSC" checked> PTSC <span class="column-tooltip">Puntos recibidos</span></label>
+            <label><input type="checkbox" data-column="T2I" checked> T2I <span class="column-tooltip">Tiros de 2 puntos intentados</span></label>
+            <label><input type="checkbox" data-column="T2C" checked> T2C <span class="column-tooltip">Tiros de 2 puntos convertidos</span></label>
+            <label><input type="checkbox" data-column="T3I" checked> T3I <span class="column-tooltip">Tiros de 3 puntos intentados</span></label>
+            <label><input type="checkbox" data-column="T3C" checked> T3C <span class="column-tooltip">Tiros de 3 puntos convertidos</span></label>
+            <label><input type="checkbox" data-column="T1I" checked> T1I <span class="column-tooltip">Tiros libres intentados</span></label>
+            <label><input type="checkbox" data-column="T1C" checked> T1C <span class="column-tooltip">Tiros libres convertidos</span></label>
+            <label><input type="checkbox" data-column="AST" checked> AST <span class="column-tooltip">Asistencias</span></label>
+            <label><input type="checkbox" data-column="REB" checked> REB <span class="column-tooltip">Rebotes totales</span></label>
+            <label><input type="checkbox" data-column="REBD" checked> REBD <span class="column-tooltip">Rebotes defensivos</span></label>
+            <label><input type="checkbox" data-column="REBO" checked> REBO <span class="column-tooltip">Rebotes ofensivos</span></label>
+            <label><input type="checkbox" data-column="PER" checked> PER <span class="column-tooltip">Pérdidas</span></label>
+            <label><input type="checkbox" data-column="ROB" checked> ROB <span class="column-tooltip">Robos de balón</span></label>
+            <label><input type="checkbox" data-column="TAP" checked> TAP <span class="column-tooltip">Tapones a favor</span></label>
+            <label><input type="checkbox" data-column="TAPC" checked> TAPC <span class="column-tooltip">Tapones en contra</span></label>
+            <label><input type="checkbox" data-column="FC" checked> FC <span class="column-tooltip">Faltas cometidas</span></label>
+            <label><input type="checkbox" data-column="FR" checked> FR <span class="column-tooltip">Faltas recibidas</span></label>
+            <label><input type="checkbox" data-column="T2CC" checked> T2CC <span class="column-tooltip">Tiros de 2 convertidos del rival</span></label>
+            <label><input type="checkbox" data-column="T3CC" checked> T3CC <span class="column-tooltip">Tiros de 3 convertidos del rival</span></label>
+            <label><input type="checkbox" data-column="T1CC" checked> T1CC <span class="column-tooltip">Tiros libres convertidos del rival</span></label>
+            <label><input type="checkbox" data-column="REBDC" checked> REBDC <span class="column-tooltip">Rebotes defensivos del rival</span></label>
+            <label><input type="checkbox" data-column="REBOC" checked> REBOC <span class="column-tooltip">Rebotes ofensivos concedidos</span></label>
+            <label><input type="checkbox" data-column="+/-" checked> +/- <span class="column-tooltip">Diferencia de puntos con el rival</span></label>
+            <label><input type="checkbox" data-column="Posesiones" checked> Posesiones <span class="column-tooltip">Número de posesiones</span></label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Possession filter -->
+    <div class="lineup-possession-filter-section">
+      <h3>Filtrar por Posesiones</h3>
+      <div class="possession-filter">
+        <div class="range-inputs">
+          <div class="range-input">
+            <label for="lineupMinPossessions">Mín:</label>
+            <input type="number" id="lineupMinPossessions" min="0" step="1" placeholder="Min">
+          </div>
+          <div class="range-input">
+            <label for="lineupMaxPossessions">Máx:</label>
+            <input type="number" id="lineupMaxPossessions" min="0" step="1" placeholder="Max">
+          </div>
+        </div>
+        <button id="lineupResetPossessions" class="reset-button">Resetear</button>
+      </div>
+    </div>
+
+    <!-- Table container -->
+    <h3 class="lineup-table-title">Estadísticas del equipo con jugadores en pista</h3>
+    <div class="lineup-table-container">
+      <div class="scroll-arrows">
+        <button class="scroll-arrow left" id="lineupScrollLeft">◀</button>
+        <button class="scroll-arrow right" id="lineupScrollRight">▶</button>
+      </div>
+      <div class="table-scroll-wrapper">
+        <table class="lineup-table">
+          <thead>
+            <tr>
+              <th title="Jugadores que forman el quinteto">Jugadores en pista</th>
+              <th title="Puntos totales anotados por el equipo">PTS</th>
+              <th title="Puntos recibidos">PTSC</th>
+              <th title="Tiros de 2 puntos intentados">T2I</th>
+              <th title="Tiros de 2 puntos convertidos">T2C</th>
+              <th title="Tiros de 3 puntos intentados">T3I</th>
+              <th title="Tiros de 3 puntos convertidos">T3C</th>
+              <th title="Tiros libres intentados">T1I</th>
+              <th title="Tiros libres convertidos">T1C</th>
+              <th title="Asistencias">AST</th>
+              <th title="Rebotes totales">REB</th>
+              <th title="Rebotes defensivos">REBD</th>
+              <th title="Rebotes ofensivos">REBO</th>
+              <th title="Pérdidas">PER</th>
+              <th title="Robos de balón">ROB</th>
+              <th title="Tapones a favor">TAP</th>
+              <th title="Tapones en contra">TAPC</th>
+              <th title="Faltas cometidas">FC</th>
+              <th title="Faltas recibidas">FR</th>
+              <th title="Tiros de 2 convertidos del rival">T2CC</th>
+              <th title="Tiros de 3 convertidos del rival">T3CC</th>
+              <th title="Tiros libres convertidos del rival">T1CC</th>
+              <th title="Rebotes defensivos del rival">REBDC</th>
+              <th title="Rebotes ofensivos concedidos">REBOC</th>
+              <th title="Diferencia de puntos con el rival">+/-</th>
+              <th title="Número de posesiones">Posesiones</th>
+            </tr>
+          </thead>
+          <tbody id="lineupTableBody">
+            <!-- Table data will be populated by JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Error modal -->
+    <div class="lineup-modal" id="lineupErrorModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>¡Uy!</h3>
+          <button class="close-modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p id="lineupModalMessage"></p>
+        </div>
+        <div class="modal-footer">
+          <button class="modal-button" id="lineupModalCloseButton">Aceptar</button>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -593,6 +1647,7 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
   <script src="team_profile.js"></script>
 </body>
 </html> 

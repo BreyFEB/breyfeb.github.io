@@ -290,6 +290,9 @@ async function loadTeamInfo() {
 
   // Load shot data after team info is loaded
   await loadTeamShotData();
+
+  // Initialize lineups functionality
+  initializeLineupsAfterTeamLoad();
 }
 
 
@@ -2699,3 +2702,807 @@ function getTeamLogo(teamId) {
   if (!player) return 'team_icon.png';
   return (player.teamLogo && player.teamLogo.trim() !== '') ? player.teamLogo : 'team_icon.png';
 }
+
+// ------------------- LINEUPS FUNCTIONALITY -------------------
+let lineupPlayerPhotos = {};
+let lineupTableData = {};
+let currentLineupType = 'five';
+let selectedLineupPlayers = new Set();
+let selectedLineupPlayersOff = new Set();
+let allLineupPlayers = new Set();
+let showLineupPer100 = false;
+let minLineupPossessions = null;
+let maxLineupPossessions = null;
+let visibleLineupColumns = new Set(['PTS', 'PTSC', 'T2I', 'T2C', 'T3I', 'T3C', 'T1I', 'T1C', 
+                            'AST', 'REB', 'REBD', 'REBO', 'PER', 'ROB', 'TAP', 'TAPC', 
+                            'FC', 'FR', 'T2CC', 'T3CC', 'T1CC', 'REBDC', 'REBOC', '+/-', 'Posesiones']);
+let currentLineupSort = {
+    column: null,
+    direction: 'desc'
+};
+
+// Competition mapping for lineup files (similar to shots mapping)
+const lineupCompetitionMappings = {
+  "LF CHALLENGE": "lineups_lf_challenge.json.csv",
+  "C ESP CLUBES JR MASC": "lineups_c_esp_clubes_jr_masc.json.csv",
+  "PRIMERA FEB": "lineups_primera_feb.json.csv",
+  "Fase Final 1ª División Femenin": "lineups_fase_final_1a_división_femenin.json.csv",
+  "C ESP CLUBES CAD MASC": "lineups_c_esp_clubes_cad_masc.json.csv",
+  "LF ENDESA": "lineups_lf_endesa.json.csv",
+  "L.F.-2": "lineups_lf2.json.csv",
+  "C ESP CLUBES CAD FEM": "lineups_c_esp_clubes_cad_fem.json.csv",
+  "SEGUNDA FEB": "lineups_segunda_feb.json.csv",
+  "TERCERA FEB": "lineups_tercera_feb.json.csv",
+  "C ESP CLUBES INF FEM": "lineups_c_esp_clubes_inf_fem.json.csv",
+  "C ESP CLUBES INF MASC": "lineups_c_esp_clubes_inf_masc.json.csv",
+  "C ESP CLUBES MINI MASC": "lineups_c_esp_clubes_mini_masc.json.csv",
+  "C ESP CLUBES MINI FEM": "lineups_c_esp_clubes_mini_fem.json.csv"
+};
+
+// Initialize lineups functionality
+async function initializeLineups() {
+  // Load player photos for lineups
+  await loadLineupPlayerPhotos();
+  
+  // Set up event listeners
+  setupLineupEventListeners();
+  
+  // Load lineup data
+  await loadAllLineupData();
+}
+
+async function loadLineupPlayerPhotos() {
+  try {
+    const response = await fetch('Lineups/player_photos.json');
+    const photosData = await response.json();
+    
+    // Convert the data structure to a more usable format
+    lineupPlayerPhotos = {};
+    Object.keys(photosData).forEach(playerId => {
+      const playerInfo = photosData[playerId];
+      if (Array.isArray(playerInfo) && playerInfo.length >= 2) {
+        lineupPlayerPhotos[playerId] = {
+          photo: playerInfo[0],
+          name: playerInfo[1]
+        };
+      }
+    });
+  } catch (error) {
+    console.error('Error loading player photos:', error);
+    lineupPlayerPhotos = {};
+  }
+}
+
+function setupLineupEventListeners() {
+  // Lineup type tabs
+  document.querySelectorAll('.lineup-tab-button').forEach(button => {
+    button.addEventListener('click', () => {
+      document.querySelectorAll('.lineup-tab-button').forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+      currentLineupType = button.dataset.lineup;
+      // Reset selected players when changing lineup type
+      selectedLineupPlayers.clear();
+      selectedLineupPlayersOff.clear();
+      updateLineupPlayerCheckboxes();
+      if (lineupTableData[currentLineupType]) {
+        // Reset sort to default (PTS descending) when switching tabs
+        currentLineupSort = {
+          column: 'PTS',
+          direction: 'desc'
+        };
+        renderLineupTable(lineupTableData[currentLineupType]);
+      }
+      updateLineupTableHeaders();
+    });
+  });
+
+  // Per 100 toggle
+  const per100Toggle = document.getElementById('lineupPer100Toggle');
+  if (per100Toggle) {
+    per100Toggle.addEventListener('change', () => {
+      showLineupPer100 = per100Toggle.checked;
+      if (lineupTableData[currentLineupType]) {
+        renderLineupTable(lineupTableData[currentLineupType]);
+      }
+    });
+  }
+
+  // Column selector dropdown
+  const dropdownButton = document.querySelector('.lineup-column-selector .dropdown-button');
+  const dropdownContent = document.querySelector('.lineup-column-selector .dropdown-content');
+  if (dropdownButton && dropdownContent) {
+    dropdownButton.addEventListener('click', () => {
+      dropdownContent.parentElement.classList.toggle('active');
+    });
+  }
+
+  // Select all/deselect all columns
+  const selectAllBtn = document.getElementById('lineupSelectAllColumns');
+  const deselectAllBtn = document.getElementById('lineupDeselectAllColumns');
+  if (selectAllBtn) {
+    selectAllBtn.addEventListener('click', () => {
+      document.querySelectorAll('.lineup-column-selector input[type="checkbox"]').forEach(cb => {
+        cb.checked = true;
+        visibleLineupColumns.add(cb.dataset.column);
+      });
+      updateLineupTableHeaders();
+      if (lineupTableData[currentLineupType]) {
+        renderLineupTable(lineupTableData[currentLineupType]);
+      }
+    });
+  }
+  if (deselectAllBtn) {
+    deselectAllBtn.addEventListener('click', () => {
+      document.querySelectorAll('.lineup-column-selector input[type="checkbox"]').forEach(cb => {
+        cb.checked = false;
+        visibleLineupColumns.delete(cb.dataset.column);
+      });
+      updateLineupTableHeaders();
+      if (lineupTableData[currentLineupType]) {
+        renderLineupTable(lineupTableData[currentLineupType]);
+      }
+    });
+  }
+
+  // Column visibility checkboxes
+  document.querySelectorAll('.lineup-column-selector input[type="checkbox"]').forEach(cb => {
+    cb.addEventListener('change', () => {
+      if (cb.checked) {
+        visibleLineupColumns.add(cb.dataset.column);
+      } else {
+        visibleLineupColumns.delete(cb.dataset.column);
+      }
+      updateLineupTableHeaders();
+      if (lineupTableData[currentLineupType]) {
+        renderLineupTable(lineupTableData[currentLineupType]);
+      }
+    });
+  });
+
+  // Possession filters
+  const minPossessionsInput = document.getElementById('lineupMinPossessions');
+  const maxPossessionsInput = document.getElementById('lineupMaxPossessions');
+  const resetPossessionsBtn = document.getElementById('lineupResetPossessions');
+
+  if (minPossessionsInput) {
+    minPossessionsInput.addEventListener('input', () => {
+      minLineupPossessions = minPossessionsInput.value ? parseInt(minPossessionsInput.value) : null;
+      if (lineupTableData[currentLineupType]) {
+        renderLineupTable(lineupTableData[currentLineupType]);
+      }
+    });
+  }
+
+  if (maxPossessionsInput) {
+    maxPossessionsInput.addEventListener('input', () => {
+      maxLineupPossessions = maxPossessionsInput.value ? parseInt(maxPossessionsInput.value) : null;
+      if (lineupTableData[currentLineupType]) {
+        renderLineupTable(lineupTableData[currentLineupType]);
+      }
+    });
+  }
+
+  if (resetPossessionsBtn) {
+    resetPossessionsBtn.addEventListener('click', () => {
+      minLineupPossessions = null;
+      maxLineupPossessions = null;
+      minPossessionsInput.value = '';
+      maxPossessionsInput.value = '';
+      if (lineupTableData[currentLineupType]) {
+        renderLineupTable(lineupTableData[currentLineupType]);
+      }
+    });
+  }
+
+  // Collapsible sections
+  document.querySelectorAll('.lineup-filter-section .collapsible-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const section = header.parentElement;
+      section.classList.toggle('collapsed');
+    });
+  });
+
+  // Scroll arrows
+  const scrollLeftBtn = document.getElementById('lineupScrollLeft');
+  const scrollRightBtn = document.getElementById('lineupScrollRight');
+  const tableWrapper = document.querySelector('.lineup-table-container .table-scroll-wrapper');
+
+  if (scrollLeftBtn && tableWrapper) {
+    scrollLeftBtn.addEventListener('click', () => {
+      tableWrapper.scrollBy({ left: -200, behavior: 'smooth' });
+    });
+  }
+
+  if (scrollRightBtn && tableWrapper) {
+    scrollRightBtn.addEventListener('click', () => {
+      tableWrapper.scrollBy({ left: 200, behavior: 'smooth' });
+    });
+  }
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.lineup-column-selector')) {
+      document.querySelector('.lineup-column-selector .dropdown').classList.remove('active');
+    }
+  });
+}
+
+async function loadAllLineupData() {
+  const { teamId } = getTeamParams();
+  if (!teamId || !teamCompetition) {
+    console.error('No team ID or competition found for lineups');
+    return;
+  }
+
+  const csvFileName = lineupCompetitionMappings[teamCompetition.trim()];
+  if (!csvFileName) {
+    console.error('No lineup file found for competition:', teamCompetition);
+    return;
+  }
+
+  try {
+    const response = await fetch(`Lineups/${csvFileName}`);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    
+    const csvText = await response.text();
+    const csvData = Papa.parse(csvText, { header: true });
+    
+    // Filter data by team_id
+    const teamLineups = csvData.data.filter(row => row.team_id === teamId);
+    
+    // Group by n_jug (number of players)
+    lineupTableData = {
+      'five': [],
+      'four': [],
+      'three': [],
+      'two': []
+    };
+
+    teamLineups.forEach(row => {
+      const numPlayers = parseInt(row.n_jug);
+      let lineupType;
+      
+      switch (numPlayers) {
+        case 5: lineupType = 'five'; break;
+        case 4: lineupType = 'four'; break;
+        case 3: lineupType = 'three'; break;
+        case 2: lineupType = 'two'; break;
+        default: return; // Skip invalid lineup sizes
+      }
+      
+      // Convert lineup string to player names
+      const playerIds = row.lineup.split(' - ');
+      const playerNames = playerIds.map(id => {
+        const playerInfo = lineupPlayerPhotos[id];
+        return playerInfo ? playerInfo.name : id;
+      }).join(' - ');
+      
+      // Create lineup row with converted data
+      const lineupRow = {
+        Quinteto: playerNames,
+        PTS: parseFloat(row.PTS) || 0,
+        PTSC: parseFloat(row.PTSC) || 0,
+        T2I: parseFloat(row.T2I) || 0,
+        T2C: parseFloat(row.T2C) || 0,
+        T3I: parseFloat(row.T3I) || 0,
+        T3C: parseFloat(row.T3C) || 0,
+        T1I: parseFloat(row.T1I) || 0,
+        T1C: parseFloat(row.T1C) || 0,
+        AST: parseFloat(row.AST) || 0,
+        REB: parseFloat(row.REB) || 0,
+        REBD: parseFloat(row.REBD) || 0,
+        REBO: parseFloat(row.REBO) || 0,
+        PER: parseFloat(row.PER) || 0,
+        ROB: parseFloat(row.ROB) || 0,
+        TAP: parseFloat(row.TAP) || 0,
+        TAPC: parseFloat(row.TAPC) || 0,
+        FC: parseFloat(row.FC) || 0,
+        FR: parseFloat(row.FR) || 0,
+        T2CC: parseFloat(row.T2CC) || 0,
+        T3CC: parseFloat(row.T3CC) || 0,
+        T1CC: parseFloat(row.T1CC) || 0,
+        REBDC: parseFloat(row.REBDC) || 0,
+        REBOC: parseFloat(row.REBOC) || 0,
+        '+/-': parseFloat(row['+/-']) || 0,
+        Posesiones: parseFloat(row.Posesiones) || 0,
+        // Store original player IDs for filtering
+        playerIds: playerIds
+      };
+      
+      lineupTableData[lineupType].push(lineupRow);
+    });
+    
+    // Collect all unique players from the data
+    Object.values(lineupTableData).forEach(data => {
+      data.forEach(row => {
+        if (row.playerIds) {
+          row.playerIds.forEach(playerId => allLineupPlayers.add(playerId));
+        }
+      });
+    });
+    
+    updateLineupPlayerCheckboxes();
+    if (lineupTableData[currentLineupType]) {
+      // Set default sort to PTS descending
+      currentLineupSort = {
+        column: 'PTS',
+        direction: 'desc'
+      };
+      renderLineupTable(lineupTableData[currentLineupType]);
+    }
+    updateLineupTableHeaders();
+    
+  } catch (error) {
+    console.error('Error loading lineup data:', error);
+    // Fallback to sample data if loading fails
+    createSampleLineupData();
+  }
+}
+
+function createSampleLineupData() {
+  // Create sample data for demonstration (fallback)
+  const samplePlayers = teamPlayers ? teamPlayers.slice(0, 8).map(p => p.playerName) : ['Player 1', 'Player 2', 'Player 3', 'Player 4', 'Player 5'];
+  
+  lineupTableData = {
+    'five': [],
+    'four': [],
+    'three': [],
+    'two': []
+  };
+}
+
+function calculateLineupPer100(value, possessions) {
+  if (!possessions || possessions === 0) return 0;
+  return (value / possessions) * 100;
+}
+
+function formatLineupNumber(value, column) {
+  if (showLineupPer100 && column !== 'Posesiones') {
+    return value.toFixed(1);
+  }
+  
+  const num = parseFloat(value) || 0;
+  
+  // For Posesiones column, always show as integer
+  if (column === 'Posesiones') {
+    return Math.round(num).toString();
+  }
+  
+  // For other columns in 5-player lineups, show as is
+  if (currentLineupType === 'five') {
+    return value || '0';
+  }
+  
+  // For sub-lineups, round to integer
+  return Math.round(num).toString();
+}
+
+function showLineupErrorModal(message) {
+  const modal = document.getElementById('lineupErrorModal');
+  const modalMessage = document.getElementById('lineupModalMessage');
+  const closeButton = modal.querySelector('.close-modal');
+  const modalCloseButton = document.getElementById('lineupModalCloseButton');
+  
+  modalMessage.textContent = message;
+  modal.classList.add('show');
+  
+  const closeModal = () => {
+    modal.classList.remove('show');
+  };
+  
+  closeButton.onclick = closeModal;
+  modalCloseButton.onclick = closeModal;
+  modal.onclick = (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  };
+}
+
+function updateLineupPlayerCheckboxes() {
+  const playerCheckboxes = document.getElementById('lineupPlayerCheckboxes');
+  const playerOffCheckboxes = document.getElementById('lineupPlayerOffCheckboxes');
+  const filterInfo = document.getElementById('lineupPlayerFilterInfo');
+  const filterOffInfo = document.getElementById('lineupPlayerOffFilterInfo');
+  
+  if (!playerCheckboxes || !playerOffCheckboxes) return;
+  
+  // Clear existing checkboxes
+  playerCheckboxes.innerHTML = '';
+  playerOffCheckboxes.innerHTML = '';
+  
+  const maxPlayers = {
+    'five': 5,
+    'four': 4,
+    'three': 3,
+    'two': 2
+  }[currentLineupType];
+  
+  // Add checkboxes for each player
+  Array.from(allLineupPlayers).sort().forEach(playerId => {
+    const playerInfo = lineupPlayerPhotos[playerId];
+    const playerName = playerInfo ? playerInfo.name : playerId;
+    const playerPhoto = playerInfo ? playerInfo.photo : 'player_placeholder.png';
+    
+    // On-court player checkbox
+    const checkboxContainer = document.createElement('div');
+    checkboxContainer.className = 'player-checkbox-container';
+    
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.id = `lineup-player-${playerId}`;
+    checkbox.value = playerId;
+    checkbox.checked = selectedLineupPlayers.has(playerId);
+    checkbox.disabled = !checkbox.checked && selectedLineupPlayers.size >= maxPlayers;
+    
+    const label = document.createElement('label');
+    label.htmlFor = `lineup-player-${playerId}`;
+    
+    // Add player photo
+    const photo = document.createElement('img');
+    photo.className = 'filter-player-photo';
+    photo.src = playerPhoto;
+    photo.alt = playerName;
+    photo.title = playerName;
+    photo.onerror = function() { this.src = 'player_placeholder.png'; };
+    
+    // Add player name
+    const name = document.createElement('span');
+    name.textContent = playerName;
+    
+    label.appendChild(photo);
+    label.appendChild(name);
+    
+    checkboxContainer.appendChild(checkbox);
+    checkboxContainer.appendChild(label);
+    playerCheckboxes.appendChild(checkboxContainer);
+    
+    checkbox.addEventListener('change', () => {
+      if (checkbox.checked) {
+        if (selectedLineupPlayers.size < maxPlayers) {
+          if (selectedLineupPlayersOff.has(playerId)) {
+            showLineupErrorModal(`No se puede seleccionar a ${playerName} en pista y fuera de pista al mismo tiempo. ¡Eso sería una paradoja de la física!`);
+            checkbox.checked = false;
+            return;
+          }
+          selectedLineupPlayers.add(playerId);
+        }
+      } else {
+        selectedLineupPlayers.delete(playerId);
+      }
+      updateLineupPlayerCheckboxes();
+      updateLineupFilterInfo();
+      if (lineupTableData[currentLineupType]) {
+        renderLineupTable(lineupTableData[currentLineupType]);
+      }
+    });
+
+    // Off-court player checkbox
+    const checkboxContainerOff = document.createElement('div');
+    checkboxContainerOff.className = 'player-checkbox-container';
+    
+    const checkboxOff = document.createElement('input');
+    checkboxOff.type = 'checkbox';
+    checkboxOff.id = `lineup-player-off-${playerId}`;
+    checkboxOff.value = playerId;
+    checkboxOff.checked = selectedLineupPlayersOff.has(playerId);
+    
+    const labelOff = document.createElement('label');
+    labelOff.htmlFor = `lineup-player-off-${playerId}`;
+    
+    // Add player photo
+    const photoOff = document.createElement('img');
+    photoOff.className = 'filter-player-photo';
+    photoOff.src = playerPhoto;
+    photoOff.alt = playerName;
+    photoOff.title = playerName;
+    photoOff.onerror = function() { this.src = 'player_placeholder.png'; };
+    
+    // Add player name
+    const nameSpanOff = document.createElement('span');
+    nameSpanOff.textContent = playerName;
+    
+    labelOff.appendChild(photoOff);
+    labelOff.appendChild(nameSpanOff);
+    
+    checkboxContainerOff.appendChild(checkboxOff);
+    checkboxContainerOff.appendChild(labelOff);
+    playerOffCheckboxes.appendChild(checkboxContainerOff);
+    
+    checkboxOff.addEventListener('change', () => {
+      if (checkboxOff.checked) {
+        if (selectedLineupPlayers.has(playerId)) {
+          showLineupErrorModal(`No se puede seleccionar a ${playerName} en pista y fuera de pista al mismo tiempo. ¡Eso sería una paradoja de la física!`);
+          checkboxOff.checked = false;
+          return;
+        }
+        selectedLineupPlayersOff.add(playerId);
+      } else {
+        selectedLineupPlayersOff.delete(playerId);
+      }
+      updateLineupPlayerCheckboxes();
+      updateLineupFilterOffInfo();
+      if (lineupTableData[currentLineupType]) {
+        renderLineupTable(lineupTableData[currentLineupType]);
+      }
+    });
+  });
+  
+  updateLineupFilterInfo();
+  updateLineupFilterOffInfo();
+}
+
+function updateLineupFilterInfo() {
+  const filterInfo = document.getElementById('lineupPlayerFilterInfo');
+  if (!filterInfo) return;
+  
+  const maxPlayers = {
+    'five': 5,
+    'four': 4,
+    'three': 3,
+    'two': 2
+  }[currentLineupType];
+  
+  if (selectedLineupPlayers.size === 0) {
+    filterInfo.textContent = `Selecciona hasta ${maxPlayers} jugadores para filtrar los quintetos/subquintetos`;
+  } else {
+    const selectedNames = Array.from(selectedLineupPlayers).map(playerId => {
+      const playerInfo = lineupPlayerPhotos[playerId];
+      return playerInfo ? playerInfo.name : playerId;
+    });
+    filterInfo.textContent = `Mostrando quintetos/subquintetos con ${selectedNames.join(', ')} (${selectedLineupPlayers.size}/${maxPlayers})`;
+  }
+}
+
+function updateLineupFilterOffInfo() {
+  const filterOffInfo = document.getElementById('lineupPlayerOffFilterInfo');
+  if (!filterOffInfo) return;
+  
+  if (selectedLineupPlayersOff.size === 0) {
+    filterOffInfo.textContent = 'Selecciona jugadores que NO deben estar en pista';
+  } else {
+    const selectedNames = Array.from(selectedLineupPlayersOff).map(playerId => {
+      const playerInfo = lineupPlayerPhotos[playerId];
+      return playerInfo ? playerInfo.name : playerId;
+    });
+    filterOffInfo.textContent = `Excluyendo quintetos/subquintetos con ${selectedNames.join(', ')}`;
+  }
+}
+
+function filterLineups(data) {
+  return data.filter(row => {
+    if (!row.playerIds) return false;
+    
+    // Check if all selected on-court players are in the lineup
+    if (selectedLineupPlayers.size > 0) {
+      const hasAllSelected = Array.from(selectedLineupPlayers).every(playerId => 
+        row.playerIds.includes(playerId)
+      );
+      if (!hasAllSelected) return false;
+    }
+    
+    // Check if any selected off-court players are in the lineup
+    if (selectedLineupPlayersOff.size > 0) {
+      const hasOffCourtPlayer = Array.from(selectedLineupPlayersOff).some(playerId => 
+        row.playerIds.includes(playerId)
+      );
+      if (hasOffCourtPlayer) return false;
+    }
+    
+    // Check possession filter
+    if (minLineupPossessions && row.Posesiones < minLineupPossessions) return false;
+    if (maxLineupPossessions && row.Posesiones > maxLineupPossessions) return false;
+    
+    return true;
+  });
+}
+
+function getLineupColumnStats(data, column) {
+  const values = data.map(row => parseFloat(row[column]) || 0);
+  return {
+    min: Math.min(...values),
+    max: Math.max(...values)
+  };
+}
+
+function getLineupColorForValue(value, min, max) {
+  if (max === min) return 'rgba(0, 123, 255, 0.1)';
+  const normalized = (value - min) / (max - min);
+  const hue = 200 + normalized * 60; // Blue to green
+  return `hsla(${hue}, 70%, 50%, 0.1)`;
+}
+
+function renderLineupTable(data) {
+  const tableBody = document.getElementById('lineupTableBody');
+  if (!tableBody) return;
+  
+  const filteredData = filterLineups(data);
+  
+  // Sort by PTS in descending order by default
+  filteredData.sort((a, b) => (b.PTS || 0) - (a.PTS || 0));
+  
+  tableBody.innerHTML = '';
+  
+  filteredData.forEach(row => {
+    const tr = document.createElement('tr');
+    
+    // Players column
+    const playersCell = document.createElement('td');
+    const players = row.Quinteto.split(' - ');
+    const playerPhotosDiv = document.createElement('div');
+    playerPhotosDiv.className = 'player-photos';
+    
+    players.forEach(playerName => {
+      const playerContainer = document.createElement('div');
+      playerContainer.className = 'player-container';
+      
+      // Find player ID by name
+      const playerId = Object.keys(lineupPlayerPhotos).find(id => 
+        lineupPlayerPhotos[id] && lineupPlayerPhotos[id].name === playerName
+      );
+      
+      const photo = document.createElement('img');
+      photo.className = 'player-photo';
+      if (playerId && lineupPlayerPhotos[playerId]) {
+        photo.src = lineupPlayerPhotos[playerId].photo;
+      } else {
+        photo.src = 'player_placeholder.png';
+      }
+      photo.alt = playerName;
+      photo.title = playerName;
+      photo.onerror = function() { this.src = 'player_placeholder.png'; };
+      
+      const name = document.createElement('span');
+      name.className = 'lineup-player-name';
+      // Show only the last name
+      // trim name first
+      const trimmedName = playerName.trim();
+      const nameParts = trimmedName.split(' ');
+      const lastName = nameParts[nameParts.length - 1];
+      name.textContent = lastName;
+      name.title = playerName; // Full name as tooltip
+      
+      playerContainer.appendChild(photo);
+      playerContainer.appendChild(name);
+      playerPhotosDiv.appendChild(playerContainer);
+    });
+    
+    playersCell.appendChild(playerPhotosDiv);
+    tr.appendChild(playersCell);
+    
+    // Stats columns
+    const columns = ['PTS', 'PTSC', 'T2I', 'T2C', 'T3I', 'T3C', 'T1I', 'T1C', 'AST', 'REB', 'REBD', 'REBO', 'PER', 'ROB', 'TAP', 'TAPC', 'FC', 'FR', 'T2CC', 'T3CC', 'T1CC', 'REBDC', 'REBOC', '+/-', 'Posesiones'];
+    
+    columns.forEach(column => {
+      if (!visibleLineupColumns.has(column)) return;
+      
+      const td = document.createElement('td');
+      let value = parseFloat(row[column]) || 0;
+      
+      if (showLineupPer100 && column !== 'Posesiones') {
+        value = calculateLineupPer100(value, row.Posesiones);
+      }
+      
+      td.textContent = formatLineupNumber(value, column);
+      
+      // Add color coding for numeric columns
+      if (column !== 'Posesiones' && !isNaN(value)) {
+        const stats = getLineupColumnStats(filteredData, column);
+        const color = getLineupColorForValue(value, stats.min, stats.max);
+        td.style.backgroundColor = color;
+      }
+      
+      tr.appendChild(td);
+    });
+    
+    tableBody.appendChild(tr);
+  });
+  
+  // Add sorting functionality
+  addLineupTableSorting();
+}
+
+function addLineupTableSorting() {
+  const headers = document.querySelectorAll('.lineup-table-container th');
+  headers.forEach((header) => {
+    // Avoid attaching multiple listeners
+    if (header.dataset.sortListener === 'true') return;
+    header.dataset.sortListener = 'true';
+    header.addEventListener('click', () => {
+      const column = header.textContent.trim();
+      sortLineupTable(column, header);
+    });
+  });
+}
+
+function sortLineupTable(column, headerElement) {
+  const tableBody = document.getElementById('lineupTableBody');
+  if (!tableBody) return;
+
+  const rows = Array.from(tableBody.querySelectorAll('tr'));
+
+  if (currentLineupSort.column === column) {
+    currentLineupSort.direction = currentLineupSort.direction === 'asc' ? 'desc' : 'asc';
+  } else {
+    currentLineupSort.column = column;
+    currentLineupSort.direction = 'desc';
+  }
+
+  // Update sort indicators
+  document.querySelectorAll('.lineup-table-container th').forEach(th => {
+    th.classList.remove('sorted', 'asc', 'desc');
+  });
+  if (headerElement) {
+    headerElement.classList.add('sorted', currentLineupSort.direction);
+  }
+
+  // Build the array of currently visible columns (excluding the first one which is always visible)
+  const allStatColumns = ['PTS', 'PTSC', 'T2I', 'T2C', 'T3I', 'T3C', 'T1I', 'T1C', 'AST', 'REB', 'REBD', 'REBO', 'PER', 'ROB', 'TAP', 'TAPC', 'FC', 'FR', 'T2CC', 'T3CC', 'T1CC', 'REBDC', 'REBOC', '+/-', 'Posesiones'];
+  const visibleStatColumns = allStatColumns.filter(col => visibleLineupColumns.has(col));
+
+  // Determine the actual cell index for the column in the current visible table
+  let cellIndex;
+  if (column === 'Jugadores en pista') {
+    cellIndex = 0; // The first column is always the players on court
+  } else {
+    const idxInVisible = visibleStatColumns.indexOf(column);
+    if (idxInVisible === -1) return; // Column not visible, nothing to sort
+    cellIndex = 1 + idxInVisible; // +1 to account for the players column
+  }
+
+  // Sort rows based on the determined cell index
+  rows.sort((a, b) => {
+    let aValue, bValue;
+
+    if (cellIndex === 0) {
+      // Sort alphabetically by lineup when sorting the players column
+      aValue = a.cells[0].textContent;
+      bValue = b.cells[0].textContent;
+    } else {
+      aValue = parseFloat(a.cells[cellIndex]?.textContent) || 0;
+      bValue = parseFloat(b.cells[cellIndex]?.textContent) || 0;
+    }
+
+    if (currentLineupSort.direction === 'asc') {
+      return aValue > bValue ? 1 : -1;
+    } else {
+      return aValue < bValue ? 1 : -1;
+    }
+  });
+
+  // Reorder rows in the DOM
+  rows.forEach(row => tableBody.appendChild(row));
+}
+
+function updateLineupTableHeaders() {
+  const headers = document.querySelectorAll('.lineup-table-container th');
+  const columns = ['Jugadores en pista', 'PTS', 'PTSC', 'T2I', 'T2C', 'T3I', 'T3C', 'T1I', 'T1C', 'AST', 'REB', 'REBD', 'REBO', 'PER', 'ROB', 'TAP', 'TAPC', 'FC', 'FR', 'T2CC', 'T3CC', 'T1CC', 'REBDC', 'REBOC', '+/-', 'Posesiones'];
+  
+  headers.forEach((header, index) => {
+    if (index === 0) return; // Always show first column
+    
+    const column = columns[index];
+    if (visibleLineupColumns.has(column)) {
+      header.style.display = '';
+    } else {
+      header.style.display = 'none';
+    }
+  });
+  
+  // Update column checkboxes to match
+  document.querySelectorAll('.lineup-column-selector input[type="checkbox"]').forEach(cb => {
+    const column = cb.dataset.column;
+    cb.checked = visibleLineupColumns.has(column);
+  });
+}
+
+// Initialize lineups when team info is loaded
+function initializeLineupsAfterTeamLoad() {
+  if (teamPlayers && teamPlayers.length > 0) {
+    initializeLineups();
+  }
+}
+
+window.addEventListener('DOMContentLoaded', loadTeamInfo);
