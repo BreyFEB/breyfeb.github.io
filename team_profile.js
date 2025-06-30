@@ -3310,7 +3310,7 @@ function getLineupColumnStats(data, column) {
 function getLineupColorForValue(value, min, max) {
   if (max === min) return 'rgba(0, 123, 255, 0.1)';
   const normalized = (value - min) / (max - min);
-  const hue = 200 + normalized * 60; // Blue to green
+  const hue = 0 + normalized * 120; // Red (0°) to green (120°)
   return `hsla(${hue}, 70%, 50%, 0.1)`;
 }
 
