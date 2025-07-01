@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tournament Bracket</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #fff;
+      margin: 0;
+      padding: 40px 0;
+    }
+    .bracket {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 48px;
+      position: relative;
+    }
+    .round {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+      position: relative;
+    }
+    .match {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 8px #0001;
+      padding: 20px 28px;
+      min-width: 220px;
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .stage {
+      font-size: 0.9em;
+      color: #888;
+      font-weight: 600;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+    }
+    .teams {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .team {
+      display: flex;
+      align-items: center;
+      font-size: 1.1em;
+      font-weight: 600;
+      gap: 10px;
+    }
+    .team img {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid #eee;
+    }
+    .score {
+      margin-left: auto;
+      font-size: 1.1em;
+      font-weight: bold;
+      color: #222;
+    }
+    .final-label {
+      font-size: 0.9em;
+      color: #888;
+      font-weight: 600;
+      margin-top: 8px;
+      text-align: right;
+    }
+
+    /* Bracket lines using CSS */
+    .match:not(.final):before {
+      content: "";
+      position: absolute;
+      left: -24px;
+      top: 50%;
+      width: 24px;
+      height: 0;
+      border-top: 4px solid #ccc;
+      transform: translateY(-50%);
+      z-index: 0;
+    }
+    .round:not(:first-child) .match:after {
+      content: "";
+      position: absolute;
+      left: -24px;
+      width: 0;
+      height: calc(100% + 48px);
+      top: 50%;
+      border-left: 4px solid #ccc;
+      z-index: 0;
+      transform: translateY(-50%);
+    }
+    .round:not(:first-child) .match:first-child:after,
+    .round:not(:first-child) .match:last-child:after {
+      height: calc(50% + 24px);
+      top: 50%;
+    }
+    .round:not(:first-child) .match:first-child:after {
+      top: 50%;
+      transform: translateY(0);
+    }
+    .round:not(:first-child) .match:last-child:after {
+      top: auto;
+      bottom: 50%;
+      transform: translateY(0);
+    }
+    .final:before, .final:after {
+      display: none !important;
+    }
+    @media (max-width: 900px) {
+      .bracket { flex-direction: column; align-items: center; gap: 0; }
+      .round { flex-direction: row; gap: 20px; }
+      .match { min-width: 140px; }
+      .match:before, .match:after { display: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bracket">
+    <!-- Quarter Finals -->
+    <div class="round">
+      <div class="match">
+        <div class="stage">Quarter-Finals</div>
+        <div class="teams">
+          <div class="team"><img src="https://flagcdn.com/fr.svg">FRA <span class="score">83</span></div>
+          <div class="team"><img src="https://flagcdn.com/lt.svg">LTU <span class="score">61</span></div>
+        </div>
+        <div class="final-label">Final</div>
+      </div>
+      <div class="match">
+        <div class="stage">Quarter-Finals</div>
+        <div class="teams">
+          <div class="team"><img src="https://flagcdn.com/es.svg">ESP <span class="score">88</span></div>
+          <div class="team"><img src="https://flagcdn.com/cz.svg">CZE <span class="score">81</span></div>
+        </div>
+        <div class="final-label">Final</div>
+      </div>
+      <div class="match">
+        <div class="stage">Quarter-Finals</div>
+        <div class="teams">
+          <div class="team"><img src="https://flagcdn.com/it.svg">ITA <span class="score">76</span></div>
+          <div class="team"><img src="https://flagcdn.com/tr.svg">TUR <span class="score">74</span></div>
+        </div>
+        <div class="final-label">Final</div>
+      </div>
+      <div class="match">
+        <div class="stage">Quarter-Finals</div>
+        <div class="teams">
+          <div class="team"><img src="https://flagcdn.com/be.svg">BEL <span class="score">83</span></div>
+          <div class="team"><img src="https://flagcdn.com/de.svg">GER <span class="score">59</span></div>
+        </div>
+        <div class="final-label">Final</div>
+      </div>
+    </div>
+    <!-- Semi Finals -->
+    <div class="round">
+      <div class="match">
+        <div class="stage">Semi-Finals</div>
+        <div class="teams">
+          <div class="team"><img src="https://flagcdn.com/fr.svg">FRA <span class="score">64</span></div>
+          <div class="team"><img src="https://flagcdn.com/es.svg">ESP <span class="score">65</span></div>
+        </div>
+        <div class="final-label">Final</div>
+      </div>
+      <div class="match">
+        <div class="stage">Semi-Finals</div>
+        <div class="teams">
+          <div class="team"><img src="https://flagcdn.com/it.svg">ITA <span class="score">64</span></div>
+          <div class="team"><img src="https://flagcdn.com/be.svg">BEL <span class="score">66</span></div>
+        </div>
+        <div class="final-label">Final</div>
+      </div>
+    </div>
+    <!-- Finals & 3rd Place -->
+    <div class="round">
+      <div class="match final">
+        <div class="stage">Final</div>
+        <div class="teams">
+          <div class="team"><img src="https://flagcdn.com/es.svg">ESP <span class="score">65</span></div>
+          <div class="team"><img src="https://flagcdn.com/be.svg">BEL <span class="score">67</span></div>
+        </div>
+        <div class="final-label">Final</div>
+      </div>
+      <div class="match final">
+        <div class="stage">Third Place Game</div>
+        <div class="teams">
+          <div class="team"><img src="https://flagcdn.com/fr.svg">FRA <span class="score">54</span></div>
+          <div class="team"><img src="https://flagcdn.com/it.svg">ITA <span class="score">69</span></div>
+        </div>
+        <div class="final-label">Final</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
