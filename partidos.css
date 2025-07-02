@@ -405,9 +405,9 @@
     position: fixed;
     top: 0;
     right: 0;
-    width: 340px;
+    width: 500px;
     height: 100%;
-    background: #1D296F;
+    background: #2C3967;
     border-left: 1px solid #53565A;
     z-index: 9999;
     display: flex;
@@ -419,13 +419,21 @@
   }
   .filters-overlay.open { transform: translateX(0); }
   
+  /* Filtros overlay responsive para móviles */
+  @media (max-width: 768px) {
+    .filters-overlay {
+      width: 100%;
+      border-left: none;
+    }
+  }
+  
   .filters-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
   }
-  .filters-header h3 { color: #fff; font-size: 1.3em; }
+  .filters-header h3 { color: #FF9E1B; font-size: 1.8em; }
   .close-filters {
     background: none; color: #fff; font-size: 1.5em; border: none; cursor: pointer;
   }
@@ -446,7 +454,7 @@
   }
   
   .filter-section { margin-bottom: 18px; }
-  .filter-section h4 { color: #FFD700; margin-bottom: 8px; font-size: 1em; }
+  .filter-section h4 { color: #FF9E1B; margin-bottom: 8px; font-size: 1em; }
   .filter-section ul { list-style: none; padding: 0; }
   .filter-section li { margin-bottom: 6px; }
   .filter-section label { color: #fff; cursor: pointer; }
@@ -458,16 +466,16 @@
   }
   .btn-clear, .btn-apply {
     padding: 8px 18px;
-    border-radius: 20px;
+    border-radius: 4px;
     border: none;
     font-weight: bold;
     font-size: 1em;
     cursor: pointer;
   }
-  .btn-clear { background: #53565A; color: #fff; }
-  .btn-clear:hover { background: #C8102E; }
-  .btn-apply { background: #FF9E1B; color: #111C4E; }
-  .btn-apply:hover { opacity: 0.85; }
+  .btn-clear { background: #B0B8D1; color: #1D296F; }
+  .btn-clear:hover { background: #1D296F; color: white; }
+  .btn-apply { background: #FF9E1B; color: #1D296F; }
+  .btn-apply:hover { background: #FF7D07; }
   
   /* ===========================
      9) RESPONSIVE
@@ -520,8 +528,8 @@
     margin: 0 auto;
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     gap: 40px;
     flex-wrap: wrap;
   }
@@ -532,7 +540,7 @@
     flex: 1 1 300px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 18px;
   }
   .footer-logo {
@@ -555,11 +563,11 @@
     flex: 2 1 500px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 18px;
   }
   .footer-right h3 {
-    color: #FF9E1B;
+    color: white;
     margin-bottom: 12px;
     font-size: 1.1em;
     font-weight: bold;
@@ -630,7 +638,7 @@
     background-color: #1D296F;
     color: #fff;
     border: 1px solid #53565A;
-    border-radius: 20px;
+    border-radius: 4px;
     padding: 8px 16px;
     white-space: nowrap;
     font-size: 0.95em;
@@ -657,7 +665,7 @@
     background-color: #1D296F;
     color: #fff;
     border: 1px solid #53565A;
-    border-radius: 20px;
+    border-radius: 4px;
     padding: 8px 16px;
     white-space: nowrap;
     font-size: 0.95em;
@@ -666,16 +674,16 @@
   }
   .competition-btn:hover {
     background-color: #FF9E1B;
-    color: #111C4E;
+    color: #1D296F;
   }
   .competition-btn.active {
     background-color: #FF9E1B;
-    color: #111C4E;
+    color: #1D296F;
     font-weight: bold;
   }
   
   .filter-section { margin-bottom: 18px; }
-  .filter-section h4 { color: #FFD700; margin-bottom: 8px; font-size: 1em; }
+  .filter-section h4 { color: white; margin-bottom: 8px; font-size: 1em; }
   .filter-section ul { list-style: none; padding: 0; }
   .filter-section li { margin-bottom: 6px; }
   .filter-section label { color: #fff; cursor: pointer; }
@@ -762,14 +770,23 @@
     width: 100%;
     padding: 8px 12px;
     border-radius: 8px;
-    border: 1px solid #53565A;
+    border: 1px solid #D7DAE3;
     margin-bottom: 8px;
     font-size: 1em;
-    background: #fff;
-    color: #111C4E;
+    background: #3D4B76;
+    color: #D7DAE3;
+  }
+  .venue-search::placeholder {
+    color: #D7DAE3;
+    opacity: 0.7;
   }
   .venue-filter {
     margin-bottom: 0;
+    color: #D7DAE3;
+  }
+  .venue-filter option {
+    color: #D7DAE3;
+    background: #3D4B76;
   }
 
   .header-inner .footer-logo {
