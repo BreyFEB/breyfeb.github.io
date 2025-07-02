@@ -1075,3 +1075,137 @@ button:focus-visible {
   align-items: center;
   justify-content: center;
 }
+
+/* ===========================
+   NAVEGACIÓN INFERIOR MÓVIL
+   =========================== */
+.mobile-bottom-nav {
+  display: none; /* Oculta por defecto */
+  position: fixed !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  background: linear-gradient(to right, #2F4170, #111C4E) !important;
+  border-top: 1px solid #53565A;
+  padding: 12px 0 calc(12px + env(safe-area-inset-bottom));
+  z-index: 9999 !important;
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.15);
+  transform: none !important;
+}
+
+.bottom-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 12px 2px;
+  min-height: 60px;
+  transition: all 0.2s ease;
+}
+
+.bottom-nav-item img,
+.bottom-nav-item svg {
+  width: 32px;
+  height: 32px;
+  filter: brightness(0) invert(1);
+  transition: filter 0.2s ease;
+}
+
+.bottom-nav-item span {
+  display: none; /* Ocultar los nombres de los iconos */
+}
+
+/* Estado activo */
+.bottom-nav-item.active {
+  color: #FF9E1B;
+}
+
+.bottom-nav-item.active img,
+.bottom-nav-item.active svg {
+  filter: brightness(0) saturate(20%) invert(49%) sepia(100%) saturate(1200%) hue-rotate(358deg) brightness(102%) contrast(101%);
+}
+
+/* Hover en móviles (para tablets) */
+.bottom-nav-item:hover {
+  color: #FF9E1B;
+  background-color: rgba(255, 158, 27, 0.1);
+}
+
+.bottom-nav-item:hover img,
+.bottom-nav-item:hover svg {
+  filter: brightness(0) saturate(20%) invert(49%) sepia(100%) saturate(1200%) hue-rotate(358deg) brightness(102%) contrast(101%);
+}
+
+/* Efecto de tap/click para feedback táctil */
+.bottom-nav-item:active {
+  transform: scale(0.95);
+  background-color: rgba(255, 158, 27, 0.2);
+}
+
+/* Animación de entrada desde abajo - Deshabilitada para evitar problemas de posicionamiento */
+@keyframes slideUpNav {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.mobile-bottom-nav {
+  /* animation: slideUpNav 0.3s ease-out; Deshabilitada temporalmente */
+}
+
+/* Mostrar solo en dispositivos móviles */
+@media (max-width: 900px) {
+  .mobile-bottom-nav {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  /* Añadir padding inferior al body para evitar solapamiento */
+  body {
+    padding-bottom: 85px !important;
+    position: relative !important;
+  }
+  
+  /* Asegurar que html también tenga la configuración correcta */
+  html {
+    position: relative !important;
+  }
+  
+  /* Ocultar el menú hamburguesa cuando hay barra inferior */
+  .menu-toggle {
+    display: none;
+  }
+  
+  /* Hacer el main-nav invisible en móviles */
+  .main-nav {
+    display: none;
+  }
+}
+
+/* Ajustar para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .bottom-nav-item img,
+  .bottom-nav-item svg {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .bottom-nav-item {
+    min-height: 55px;
+    padding: 10px 1px;
+  }
+  
+  .mobile-bottom-nav {
+    padding: 8px 0 calc(8px + env(safe-area-inset-bottom));
+  }
+}

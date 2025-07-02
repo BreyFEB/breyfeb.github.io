@@ -1321,3 +1321,219 @@ input:checked + .slider:before {
   cursor: not-allowed;
   box-shadow: none;
 }
+
+/* ===========================
+   ESTILOS DE LA PÁGINA DE INICIO
+   =========================== */
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('foto_portada.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+/* Features Grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 1rem;
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.feature-description {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* CTA Button */
+.cta-button {
+  display: inline-block;
+  background: #FF9E1B;
+  color: #1D296F;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #FF7D07;
+}
+
+/* ===========================
+   NAVEGACIÓN INFERIOR MÓVIL
+   =========================== */
+.mobile-bottom-nav {
+  display: none; /* Oculta por defecto */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to right, #2F4170, #111C4E);
+  border-top: 1px solid #53565A;
+  padding: 12px 0 calc(12px + env(safe-area-inset-bottom));
+  z-index: 1000;
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.15);
+}
+
+.bottom-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 12px 2px;
+  min-height: 60px;
+  transition: all 0.2s ease;
+}
+
+.bottom-nav-item img,
+.bottom-nav-item svg {
+  width: 32px;
+  height: 32px;
+  filter: brightness(0) invert(1);
+  transition: filter 0.2s ease;
+}
+
+.bottom-nav-item span {
+  display: none; /* Ocultar los nombres de los iconos */
+}
+
+/* Estado activo */
+.bottom-nav-item.active {
+  color: #FF9E1B;
+}
+
+.bottom-nav-item.active img,
+.bottom-nav-item.active svg {
+  filter: brightness(0) saturate(20%) invert(49%) sepia(100%) saturate(1200%) hue-rotate(358deg) brightness(102%) contrast(101%);
+}
+
+/* Hover en móviles (para tablets) */
+.bottom-nav-item:hover {
+  color: #FF9E1B;
+  background-color: rgba(255, 158, 27, 0.1);
+}
+
+.bottom-nav-item:hover img,
+.bottom-nav-item:hover svg {
+  filter: brightness(0) saturate(20%) invert(49%) sepia(100%) saturate(1200%) hue-rotate(358deg) brightness(102%) contrast(101%);
+}
+
+/* Efecto de tap/click para feedback táctil */
+.bottom-nav-item:active {
+  transform: scale(0.95);
+  background-color: rgba(255, 158, 27, 0.2);
+}
+
+/* Animación de entrada desde abajo */
+@keyframes slideUpNav {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.mobile-bottom-nav {
+  animation: slideUpNav 0.3s ease-out;
+}
+
+/* Mostrar solo en dispositivos móviles */
+@media (max-width: 900px) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+  
+  /* Añadir padding inferior al body para evitar solapamiento */
+  body {
+    padding-bottom: 85px;
+  }
+  
+  /* Ocultar el menú hamburguesa cuando hay barra inferior */
+  .menu-toggle {
+    display: none;
+  }
+  
+  /* Hacer el main-nav invisible en móviles */
+  .main-nav {
+    display: none;
+  }
+}
+
+/* Ajustar para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .bottom-nav-item img,
+  .bottom-nav-item svg {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .bottom-nav-item {
+    min-height: 55px;
+    padding: 10px 1px;
+  }
+  
+  .mobile-bottom-nav {
+    padding: 8px 0 calc(8px + env(safe-area-inset-bottom));
+  }
+}

@@ -241,6 +241,39 @@
   </div>
 
   <!-- FOOTER -->
+  <!-- Script para resetear scroll al navegar desde navegación móvil -->
+  <script>
+    // Resetear scroll al navegar desde cualquier elemento de navegación
+    document.addEventListener('DOMContentLoaded', function() {
+      // Resetear scroll al cargar la página
+      window.scrollTo(0, 0);
+      
+      // Seleccionar todos los elementos de navegación (header y móvil)
+      const allNavItems = document.querySelectorAll('.nav-item a, .bottom-nav-item');
+      
+      allNavItems.forEach(function(item) {
+        item.addEventListener('click', function(e) {
+          // Solo resetear scroll si el enlace lleva a otra página
+          const href = this.getAttribute('href');
+          if (href && href !== '#' && href !== window.location.pathname) {
+            // Resetear scroll a la parte superior antes de navegar
+            window.scrollTo(0, 0);
+            
+            // Pequeño delay para asegurar que el scroll se resetee antes de navegar
+            setTimeout(function() {
+              // El navegador seguirá con la navegación normal
+            }, 50);
+          }
+        });
+      });
+    });
+
+    // También resetear scroll cuando se carga la página desde el historial del navegador
+    window.addEventListener('pageshow', function(event) {
+      window.scrollTo(0, 0);
+    });
+  </script>
+
   <script src="rankings.js"></script>
 <!-- FOOTER -->
 <footer class="feb-footer">

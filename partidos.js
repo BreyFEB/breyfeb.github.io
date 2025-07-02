@@ -153,6 +153,9 @@ async function loadMatchesFromRepo() {
   applyAllFilters();
 
   generateVenueFilter(Array.from(venueSet));
+  
+  // Añadir funcionalidad de drag para scroll en escritorio
+  addDragScrollFunctionality();
 }
 
 /*********************************
@@ -409,6 +412,9 @@ function generateDays2025() {
 }
 generateDays2025();
 
+// Añadir funcionalidad de drag scroll después de generar los días
+addDragScrollFunctionality();
+
 /*********************************
  * 6) ACTUALIZAR TÍTULO DEL MES SEGÚN FECHA ACTIVA
  *********************************/
@@ -467,9 +473,28 @@ arrowRight.addEventListener("click", () => {
 /*********************************
  * 9) SELECCIÓN DE DÍA Y FILTRADO (combinado)
  *********************************/
+let dragDistance = 0; // Variable para detectar si se hizo drag
+
+document.getElementById("datesList").addEventListener("mousedown", (e) => {
+  dragDistance = 0; // Resetear distancia de drag
+});
+
+document.getElementById("datesList").addEventListener("mousemove", (e) => {
+  if (e.buttons === 1) { // Si el botón izquierdo está presionado
+    dragDistance += Math.abs(e.movementX || 0) + Math.abs(e.movementY || 0);
+  }
+});
+
 document.getElementById("datesList").addEventListener("click", (e) => {
   const clickedItem = e.target.closest(".date-item");
   if (!clickedItem) return;
+  
+  // Solo procesar click si no hubo drag significativo (menos de 5px)
+  if (dragDistance > 5) {
+    dragDistance = 0;
+    return;
+  }
+  
   [...document.querySelectorAll(".date-item")].forEach(item => item.classList.remove("active"));
   clickedItem.classList.add("active");
   updateMonthTitle();
@@ -478,6 +503,8 @@ document.getElementById("datesList").addEventListener("click", (e) => {
   selectedDate = clickedItem.dataset.date;
   // Aplicamos todos los filtros (fecha, competición, género)
   applyAllFilters();
+  
+  dragDistance = 0; // Resetear después del click
 });
 
 /*********************************
@@ -695,6 +722,9 @@ applyFiltersBtn.addEventListener("click", () => {
 // Al cargar, generar los filtros de competición iniciales tras cargar partidos
 setTimeout(() => {
   generateCompetitionFilters(getFilteredCompetitions());
+  // Activar el botón "Todos" por defecto
+  const todosBtn = document.querySelector('.gender-btn[data-gender="todos"]');
+  if (todosBtn) todosBtn.classList.add('active');
 }, 1000);
 
 /*********************************
@@ -738,6 +768,10 @@ function applyAllFilters() {
 
     card.style.display = show ? "flex" : "none";
   });
+  
+  // Actualizar el breadcrumb de filtros activos
+  updateFiltersBreadcrumb();
+  
   // Actualizar los puntitos del calendario según los partidos visibles
   markDatesWithMatches();
   // Mostrar mensaje si no hay partidos visibles
@@ -759,7 +793,146 @@ function applyAllFilters() {
 }
 
 /*********************************
- * 14) MARCAR EN EL CALENDARIO LOS DÍAS QUE TIENEN PARTIDOS
+ * 14) ACTUALIZAR BREADCRUMB DE FILTROS ACTIVOS
+ *********************************/
+function updateFiltersBreadcrumb() {
+  const filtersBreadcrumb = document.getElementById('filtersBreadcrumb');
+  const breadcrumbChips = document.getElementById('breadcrumbChips');
+  
+  if (!filtersBreadcrumb || !breadcrumbChips) return;
+  
+  // Limpiar chips existentes
+  breadcrumbChips.innerHTML = '';
+  
+  // Recolectar filtros activos
+  const activeFilters = [];
+  
+  // Filtro de género
+  if (selectedGender && selectedGender !== "todos") {
+    activeFilters.push({
+      type: 'gender',
+      label: selectedGender === 'masculino' ? 'Masculino' : 'Femenino',
+      value: selectedGender
+    });
+  }
+  
+  // Filtro de competición
+  if (selectedCompetition && selectedCompetition !== "") {
+    activeFilters.push({
+      type: 'competition',
+      label: formatCompetitionName(selectedCompetition),
+      value: selectedCompetition
+    });
+  }
+  
+  // Filtro de pabellón
+  if (selectedVenue && selectedVenue !== "") {
+    activeFilters.push({
+      type: 'venue',
+      label: toTitleCase(selectedVenue),
+      value: selectedVenue
+    });
+  }
+  
+  // Mostrar/ocultar breadcrumb según si hay filtros activos
+  if (activeFilters.length === 0) {
+    filtersBreadcrumb.style.display = 'none';
+    return;
+  }
+  
+  filtersBreadcrumb.style.display = 'block';
+  
+  // Crear chips para cada filtro activo
+  activeFilters.forEach(filter => {
+    const chip = document.createElement('div');
+    chip.className = 'breadcrumb-chip';
+    chip.innerHTML = `
+      ${filter.label}
+      <button class="breadcrumb-chip-remove" data-filter-type="${filter.type}" data-filter-value="${filter.value}">
+        ×
+      </button>
+    `;
+    breadcrumbChips.appendChild(chip);
+  });
+}
+
+/*********************************
+ * 15) ELIMINAR FILTRO INDIVIDUAL
+ *********************************/
+function removeFilter(filterType, filterValue) {
+  switch (filterType) {
+    case 'gender':
+      selectedGender = 'todos';
+      // Actualizar botón activo en el panel de filtros
+      const genderBtns = document.querySelectorAll('.gender-btn');
+      genderBtns.forEach(btn => btn.classList.remove('active'));
+      const todosBtn = document.querySelector('.gender-btn[data-gender="todos"]');
+      if (todosBtn) todosBtn.classList.add('active');
+      break;
+      
+    case 'competition':
+      selectedCompetition = null;
+      // Actualizar botones de competición
+      const compBtns = document.querySelectorAll('.competition-btn');
+      compBtns.forEach(btn => btn.classList.remove('active'));
+      break;
+      
+    case 'venue':
+      selectedVenue = '';
+      // Actualizar select de pabellón
+      const venueSelect = document.getElementById('venueFilter');
+      if (venueSelect) venueSelect.value = '';
+      // Limpiar búsqueda de pabellón
+      const venueSearch = document.getElementById('venueSearch');
+      if (venueSearch) venueSearch.value = '';
+      break;
+  }
+  
+  // Actualizar competiciones y pabellones disponibles
+  generateCompetitionFilters(getFilteredCompetitions());
+  updateVenueFilterOptions();
+  
+  // Aplicar filtros
+  applyAllFilters();
+}
+
+/*********************************
+ * 16) LIMPIAR TODOS LOS FILTROS
+ *********************************/
+function clearAllFilters() {
+  // Resetear todas las variables de filtro
+  selectedGender = 'todos';
+  selectedCompetition = null;
+  selectedVenue = '';
+  
+  // Actualizar botones de género
+  const genderBtns = document.querySelectorAll('.gender-btn');
+  genderBtns.forEach(btn => btn.classList.remove('active'));
+  const todosBtn = document.querySelector('.gender-btn[data-gender="todos"]');
+  if (todosBtn) todosBtn.classList.add('active');
+  
+  // Actualizar botones de competición
+  const compBtns = document.querySelectorAll('.competition-btn');
+  compBtns.forEach(btn => btn.classList.remove('active'));
+  
+  // Actualizar select de pabellón
+  const venueSelect = document.getElementById('venueFilter');
+  if (venueSelect) venueSelect.value = '';
+  
+  // Limpiar búsqueda de pabellón
+  const venueSearch = document.getElementById('venueSearch');
+  if (venueSearch) venueSearch.value = '';
+  
+  // Actualizar competiciones y pabellones disponibles
+  generateCompetitionFilters(getFilteredCompetitions());
+  updateVenueFilterOptions();
+  
+  // Aplicar filtros
+  applyAllFilters();
+}
+
+/*********************************
+ * 17) MARCAR EN EL CALENDARIO LOS DÍAS QUE TIENEN PARTIDOS
  *********************************/
 function markDatesWithMatches() {
   const dateItems = document.querySelectorAll(".date-item");
@@ -802,7 +975,63 @@ function markDatesWithMatches() {
 }
 
 /*********************************
- * 15) INICIAR CARGA DE PARTIDOS
+ * 15) FUNCIONALIDAD DE DRAG PARA SCROLL DE FECHAS
+ *********************************/
+function addDragScrollFunctionality() {
+  const datesList = document.getElementById('datesList');
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  // Función para obtener posición X unificada (mouse/touch)
+  function getClientX(e) {
+    return e.touches ? e.touches[0].clientX : e.clientX;
+  }
+
+  // Función para iniciar drag (mouse/touch)
+  function startDrag(e) {
+    isDown = true;
+    datesList.style.cursor = 'grabbing';
+    startX = getClientX(e) - datesList.offsetLeft;
+    scrollLeft = datesList.scrollLeft;
+    e.preventDefault(); // Prevenir selección de texto y scroll nativo
+  }
+
+  // Función para terminar drag
+  function endDrag() {
+    isDown = false;
+    datesList.style.cursor = 'grab';
+  }
+
+  // Función para mover durante drag
+  function moveDrag(e) {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = getClientX(e) - datesList.offsetLeft;
+    const walk = (x - startX) * 2; // Multiplicar por 2 para más sensibilidad
+    datesList.scrollLeft = scrollLeft - walk;
+  }
+
+  // Eventos de mouse
+  datesList.addEventListener('mousedown', startDrag);
+  datesList.addEventListener('mouseleave', endDrag);
+  datesList.addEventListener('mouseup', endDrag);
+  datesList.addEventListener('mousemove', moveDrag);
+
+  // Eventos de touch para tablets/móviles
+  datesList.addEventListener('touchstart', startDrag, { passive: false });
+  datesList.addEventListener('touchend', endDrag);
+  datesList.addEventListener('touchmove', moveDrag, { passive: false });
+
+  // Añadir cursor grab por defecto
+  datesList.style.cursor = 'grab';
+  
+  // Añadir clase para indicar que es draggable
+  datesList.classList.add('draggable-scroll');
+}
+
+/*********************************
+ * 16) INICIAR CARGA DE PARTIDOS
  *********************************/
 const matchesList = document.getElementById("matchesList");
 loadMatchesFromRepo();
@@ -835,6 +1064,22 @@ openFiltersBtn.addEventListener("click", () => {
 closeFiltersBtn.addEventListener("click", () => {
   filtersOverlay.classList.remove("open");
 });
+
+// Event listeners para el breadcrumb de filtros
+document.addEventListener("click", (e) => {
+  // Manejar clicks en los botones de eliminar filtros individuales
+  if (e.target.classList.contains("breadcrumb-chip-remove")) {
+    const filterType = e.target.getAttribute("data-filter-type");
+    const filterValue = e.target.getAttribute("data-filter-value");
+    removeFilter(filterType, filterValue);
+  }
+});
+
+// Event listener para el botón de limpiar todos los filtros
+const clearAllFiltersBtn = document.getElementById("clearAllFilters");
+if (clearAllFiltersBtn) {
+  clearAllFiltersBtn.addEventListener("click", clearAllFilters);
+}
 
 /*********************************
  * 16) GENERAR FILTRO DE PABELLÓN
