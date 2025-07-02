@@ -89,7 +89,7 @@ header {
 }
 /* Icono activo en naranja #FF9E1B */
 .nav-item.active img {
-  filter: brightness(0) saturate(100%) invert(49%) sepia(100%) saturate(2637%) hue-rotate(358deg) brightness(102%) contrast(101%);
+  filter: brightness(0) saturate(20%) invert(49%) sepia(100%) saturate(1200%) hue-rotate(358deg) brightness(102%) contrast(101%);
 }
 .nav-item.active span {
   color: #FF9E1B;
@@ -444,8 +444,8 @@ input:checked + .slider:before {
   margin: 0 auto;
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   gap: 40px;
   flex-wrap: wrap;
 }
@@ -479,7 +479,7 @@ input:checked + .slider:before {
   flex: 2 1 500px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 18px;
 }
 .footer-right h3 {
@@ -493,6 +493,7 @@ input:checked + .slider:before {
   flex-wrap: wrap;
   gap: 24px;
   align-items: center;
+  justify-content: center;
 }
 .partner-logo {
   height: 64px;
