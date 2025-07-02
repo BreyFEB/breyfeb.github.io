@@ -464,7 +464,7 @@ button:focus-visible {
 .stat-value {
   font-size: 0.7em;
   font-weight: bold;
-  color: var(--color-primary);
+  color: white;
 }
 
 .stat-label {
