@@ -6,196 +6,7 @@
   <title>Equipos - FEB</title>
   <link rel="stylesheet" href="partidos.css">
   <link rel="stylesheet" href="jugadores.css">
-  <style>
-    .teams-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 24px;
-      margin-top: 24px;
-    }
-    .team-card {
-      background-color: var(--color-card-bg, rgba(255,255,255,0.05));
-      border-radius: var(--radius-lg, 8px);
-      overflow: hidden;
-      transition: transform 0.2s;
-      cursor: pointer;
-      box-shadow: 0 2px 8px rgba(25, 118, 210, 0.07);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 24px 16px 18px 16px;
-      text-align: center;
-    }
-    .team-card:hover {
-      transform: translateY(-5px) scale(1.03);
-      box-shadow: 0 6px 24px rgba(25, 118, 210, 0.13);
-    }
-    .team-logo {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #FF9E1B;
-      background: #fff;
-      margin-bottom: 12px;
-    }
-    .team-name {
-      font-size: 1.1em;
-      font-weight: bold;
-      color: #FF9E1B;
-      margin-bottom: 4px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      max-width: 100%;
-    }
-    .team-league {
-      color: #fff;
-      font-size: 0.95em;
-      margin-bottom: 10px;
-      opacity: 0.85;
-    }
-    .team-stats {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      margin-top: 8px;
-    }
-    .team-stat-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background: rgba(255,255,255,0.08);
-      border-radius: 8px;
-      padding: 8px 10px;
-      min-width: 48px;
-    }
-    .team-stat-value {
-      font-size: 1.1em;
-      font-weight: bold;
-      color: #FF9E1B;
-    }
-    .team-stat-label {
-      font-size: 0.7em;
-      color: #fff;
-      opacity: 0.7;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      font-weight: 500;
-    }
-    .stats-title {
-      text-align: center;
-      color: #fff;
-      font-size: 1em;
-      font-weight: 600;
-      margin-bottom: 6px;
-      letter-spacing: 1px;
-      opacity: 0.85;
-    }
-    /* Search Bar Styles */
-    .search-container-equipos {
-      padding: 16px 0 0 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      z-index: 10100;
-      width: 100%;
-    }
-    .search-bar-wrapper {
-      width: 100%;
-      max-width: 500px;
-      display: flex;
-      justify-content: center;
-      position: relative;
-    }
-    #teamSearchInput {
-      width: 100%;
-      max-width: 500px;
-      padding: 12px 20px;
-      font-size: 1em;
-      border-radius: 25px;
-      border: 1px solid #ccc;
-      outline: none;
-      transition: all 0.3s ease;
-    }
-    #teamSearchInput:focus {
-      border-color: #1976d2;
-      box-shadow: 0 0 8px rgba(25, 118, 210, 0.3);
-    }
-    .search-results {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background: white;
-      border: 1px solid #ddd;
-      border-top: none;
-      border-radius: 0 0 8px 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      display: none;
-      z-index: 10100;
-      max-height: 300px;
-      overflow-y: auto;
-    }
-    .search-result-item {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      padding: 12px 20px;
-      text-decoration: none;
-      color: #333;
-      border-bottom: 1px solid #f4f4f4;
-      transition: background-color 0.2s ease;
-    }
-    .search-result-item:hover {
-      background-color: #f8f9fa;
-    }
-    .search-result-logo-container {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      border: 2px solid #FFD700; /* Gold */
-      overflow: hidden;
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #f0f0f0;
-    }
-    .search-result-logo {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .search-result-info {
-        display: flex;
-        flex-direction: column;
-    }
-    .search-result-item:last-child {
-      border-bottom: none;
-    }
-    .search-result-name {
-      font-weight: 600;
-    }
-    .search-result-context {
-      font-size: 0.9em;
-      color: #666;
-    }
-    @media (max-width: 900px) {
-      .teams-grid {
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-        gap: 16px;
-      }
-      .team-card {
-        padding: 18px 8px 14px 8px;
-      }
-      .team-logo {
-        width: 60px;
-        height: 60px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="equipos.css">
 </head>
 <body>
    <!-- HEADER -->
@@ -261,7 +72,12 @@
     </div>
   </header>
 
-  <!-- SEARCH BAR -->
+  
+
+ <!-- CONTENEDOR PRINCIPAL -->
+  <div class="container">
+    <h1>Equipos</h1> 
+    <!-- SEARCH BAR -->
   <div class="search-container-equipos">
     <div class="search-bar-wrapper">
       <input type="text" id="teamSearchInput" placeholder="Buscar un equipo...">
@@ -269,9 +85,7 @@
     </div>
   </div>
 
-  <!-- CONTENEDOR PRINCIPAL -->
-  <div class="container">
-    <h1 style="color:#FF9E1B; text-align:center; margin: 32px 0 18px 0; font-size:2.2em;">Equipos</h1>
+    
     <div class="teams-grid" id="teamsGrid">
       <!-- Las tarjetas de equipos se insertarán aquí con JS -->
     </div>
@@ -309,6 +123,41 @@
       </p>
     </div>
   </footer>
+
+  <!-- NAVEGACIÓN INFERIOR PARA MÓVILES -->
+  <nav class="mobile-bottom-nav">
+    <a href="index.html" class="bottom-nav-item">
+      <img src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/home-outline.svg" alt="Inicio">
+      <span>Inicio</span>
+    </a>
+    <a href="partidos.html" class="bottom-nav-item">
+      <img src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/basketball-outline.svg" alt="Partidos">
+      <span>Partidos</span>
+    </a>
+    <a href="clasificacion.html" class="bottom-nav-item">
+      <img src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/calendar-outline.svg" alt="Clasificación">
+      <span>Clasificación</span>
+    </a>
+    <a href="jugadores.html" class="bottom-nav-item">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 64 64" role="img" aria-label="Jugadores">
+        <path d="M24 6 L20 6 L14 14 L14 44 L18 54 L46 54 L50 44 L50 14 L44 6 L40 6 L40 16 L24 16 Z" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round"/>
+        <circle cx="32" cy="34" r="9" fill="none" stroke="#FFFFFF" stroke-width="3"/>
+        <path d="M23 34 h18" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+        <path d="M32 25 v18" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+        <path d="M26 28 a9 9 0 0 0 0 12" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+        <path d="M38 28 a9 9 0 0 1 0 12" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+      </svg>
+      <span>Jugadores</span>
+    </a>
+    <a href="equipos.html" class="bottom-nav-item active">
+      <img src="team_icon.png" alt="Equipos">
+      <span>Equipos</span>
+    </a>
+    <a href="rankings.html" class="bottom-nav-item">
+      <img src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/stats-chart-outline.svg" alt="Rankings">
+      <span>Rankings</span>
+    </a>
+  </nav>
 
   <!-- Script para resetear scroll al navegar desde navegación móvil -->
   <script>

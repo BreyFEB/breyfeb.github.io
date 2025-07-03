@@ -441,7 +441,7 @@ function setDefaultActiveDate() {
     if (first) {
       first.classList.add("active");
       updateMonthTitle();
-      first.scrollIntoView({ behavior: "smooth", inline: "center" });
+      //first.scrollIntoView({ behavior: "smooth", inline: "center" });
     }
     return;
   }
@@ -453,7 +453,7 @@ function setDefaultActiveDate() {
   if (targetItem) {
     targetItem.classList.add("active");
     updateMonthTitle();
-    targetItem.scrollIntoView({ behavior: "smooth", inline: "center" });
+    //targetItem.scrollIntoView({ behavior: "smooth", inline: "center" });
   }
 }
 setDefaultActiveDate();
@@ -541,7 +541,7 @@ flatpickr("#modalDatePicker", {
 
     const targetItem = document.querySelector(`.date-item[data-date="${dateStr}"]`);
     if (targetItem) {
-      targetItem.scrollIntoView({ behavior: "smooth", inline: "center" });
+     // targetItem.scrollIntoView({ behavior: "smooth", inline: "center" });
       [...document.querySelectorAll(".date-item")].forEach(item => item.classList.remove("active"));
       targetItem.classList.add("active");
       updateMonthTitle();
