@@ -482,7 +482,7 @@ input:checked + .slider:before {
   gap: 18px;
 }
 .footer-right h3 {
-  color: #FF9E1B;
+  color: white;
   margin-bottom: 12px;
   font-size: 1.1em;
   font-weight: bold;
@@ -1504,7 +1504,7 @@ input:checked + .slider:before {
   
   /* Añadir padding inferior al body para evitar solapamiento */
   body {
-    padding-bottom: 85px;
+    padding-bottom: 65px;
   }
   
   /* Ocultar el menú hamburguesa cuando hay barra inferior */

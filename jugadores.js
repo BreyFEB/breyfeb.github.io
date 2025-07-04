@@ -64,6 +64,13 @@ async function init() {
   try {
     await loadAllStats();
     setupEventListeners();
+    initializeCollapsedFilters();
+    
+    // Asegurar que los botones de toggle se configuren después de todo
+    setTimeout(() => {
+      setupToggleButtons();
+    }, 100);
+    
   } catch (error) {
     console.error('Error loading statistics:', error);
     document.querySelector('.loader-text').textContent = 'Cargando...';
@@ -101,7 +108,15 @@ function setupEventListeners() {
     if (e.target.classList.contains('gender-btn')) {
       const genero = e.target.dataset.gender;
       state.filtros.genero = genero;
+      
+      // Actualizar los estilos de los botones
+      elementos.generoFiltros.querySelectorAll('.gender-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      e.target.classList.add('active');
+      
       actualizarFiltrosActivos();
+      actualizarVista();
     }
   });
 
@@ -191,12 +206,100 @@ function setupEventListeners() {
 
   // Limpiar el filtro de equipo cuando se cierra el panel
   elementos.btnCerrarFiltros.addEventListener('click', () => {
-    console.log('Limpiando filtro de equipo');
     teamFilter.value = '';
     state.filtros.equipo = '';
     teamFilterDropdown.classList.remove('show');
     elementos.filtrosOverlay.classList.remove('open');
   });
+
+  // Event delegation para filtros desplegables como respaldo
+  elementos.filtrosOverlay.addEventListener('click', (e) => {
+    const header = e.target.closest('.filter-section-header');
+    if (header && header.dataset.section) {
+      e.preventDefault();
+      e.stopPropagation();
+      toggleFilterSection(header.dataset.section);
+    }
+  });
+
+}
+
+// Configurar botones de toggle para filtros desplegables
+function setupToggleButtons() {
+  // Configurar todos los headers de filtros para que sean clicables
+  document.querySelectorAll('.filter-section-header').forEach(header => {
+    const section = header.dataset.section;
+    
+    // Hacer que toda la cabecera sea clickeable
+    header.style.cursor = 'pointer';
+    
+    // Configurar el event listener directamente en la cabecera
+    header.onclick = function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      console.log('Click detectado en filtro:', section);
+      toggleFilterSection(section);
+    };
+  });
+}
+
+// Inicializar el estado visual de los filtros colapsados
+function initializeCollapsedFilters() {
+  // Configurar todos los íconos de chevron para que estén rotados por defecto
+  document.querySelectorAll('.stats-toggle-btn.collapsed').forEach(btn => {
+    const chevronIcon = btn.querySelector('.chevron-icon');
+    if (chevronIcon) {
+      chevronIcon.style.transform = 'rotate(-90deg)';
+    }
+  });
+}
+
+// Función para alternar la visibilidad de una sección de filtros
+function toggleFilterSection(section) {
+  const sectionElement = document.querySelector(`[data-section="${section}"]`);
+  if (!sectionElement) {
+    console.log('Error: No se encontró sectionElement para:', section);
+    return;
+  }
+  
+  const toggleBtn = sectionElement.querySelector('.stats-toggle-btn');
+  const chevronIcon = toggleBtn ? toggleBtn.querySelector('.chevron-icon') : null;
+  
+  let contentElement;
+  switch (section) {
+    case 'gender':
+      contentElement = document.getElementById('genderFilters');
+      break;
+    case 'competition':
+      contentElement = document.getElementById('competitionFilters');
+      break;
+    case 'team':
+      contentElement = document.querySelector('.team-filter-container');
+      break;
+    case 'stats':
+      contentElement = document.querySelector('.stats-filters');
+      break;
+  }
+  
+  if (contentElement) {
+    const isCollapsed = contentElement.classList.contains('collapsed');
+    
+    if (isCollapsed) {
+      // Expandir
+      console.log('✅ Expandiendo filtro:', section);
+      contentElement.classList.remove('collapsed');
+      if (toggleBtn) toggleBtn.classList.remove('collapsed');
+      if (chevronIcon) chevronIcon.style.transform = 'rotate(0deg)';
+    } else {
+      // Colapsar
+      console.log('📁 Colapsando filtro:', section);
+      contentElement.classList.add('collapsed');
+      if (toggleBtn) toggleBtn.classList.add('collapsed');
+      if (chevronIcon) chevronIcon.style.transform = 'rotate(-90deg)';
+    }
+  } else {
+    console.log('Error: No se encontró contentElement para:', section);
+  }
 }
 
 // Actualizar la vista con los jugadores filtrados y paginados
@@ -540,6 +643,10 @@ async function loadAllStats() {
     setTimeout(() => {
       loaderContainer.style.display = 'none';
       actualizarVista();
+      // Configurar botones de toggle después de cargar
+      setupToggleButtons();
+      // Asegurar que los filtros estén colapsados después de cargar
+      initializeCollapsedFilters();
     }, 500);
 
   } catch (error) {
@@ -550,12 +657,20 @@ async function loadAllStats() {
     state.jugadoresFiltrados = [...jugadores];
     loaderContainer.style.display = 'none';
     actualizarVista();
+    // Configurar botones de toggle después de cargar datos de fallback
+    setupToggleButtons();
+    // Asegurar que los filtros estén colapsados después de cargar datos de fallback
+    initializeCollapsedFilters();
   }
 }
 
 // Función para actualizar los filtros de competición
 function actualizarFiltrosCompeticion() {
   const competiciones = [...new Set(state.allPlayersStats.map(j => j.competicion))].sort();
+  
+  // Verificar si el contenedor está colapsado para mantener el estado
+  const wasCollapsed = elementos.competicionFiltros.classList.contains('collapsed');
+  
   elementos.competicionFiltros.innerHTML = `
     <button class="competition-btn active" data-competition="todas">Todas</button>
     ${competiciones.map(comp => `
@@ -563,15 +678,30 @@ function actualizarFiltrosCompeticion() {
     `).join('')}
   `;
 
+  // Mantener el estado colapsado si estaba colapsado
+  if (wasCollapsed) {
+    elementos.competicionFiltros.classList.add('collapsed');
+  }
+
   // Añadir event listeners a los botones de competición
   elementos.competicionFiltros.querySelectorAll('.competition-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
       const competicion = e.target.dataset.competition;
       state.filtros.competicion = competicion;
+      
+      // Actualizar los estilos de los botones
+      elementos.competicionFiltros.querySelectorAll('.competition-btn').forEach(b => {
+        b.classList.remove('active');
+      });
+      e.target.classList.add('active');
+      
       actualizarFiltrosActivos();
       actualizarVista();
     });
   });
+
+  // Reconfigurar los botones de toggle después de actualizar los filtros
+  setupToggleButtons();
 }
 
 // Función para actualizar los filtros de equipo

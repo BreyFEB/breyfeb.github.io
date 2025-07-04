@@ -1110,7 +1110,7 @@ header {
 }
 
 .footer-right h3 {
-  color: #FF9E1B;
+  color: white;
   margin-bottom: 12px;
   font-size: 1.1em;
   font-weight: bold;
@@ -2001,7 +2001,7 @@ header {
   
   /* Añadir padding inferior al body para evitar solapamiento */
   body {
-    padding-bottom: 85px;
+    padding-bottom: 65px;
   }
   
   /* Ocultar el menú hamburguesa cuando hay barra inferior */

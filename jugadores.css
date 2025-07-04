@@ -294,7 +294,7 @@ button:focus-visible {
   width: 100%;
   padding: 8px 12px;
   border: 1px solid #D7DAE3;
-  border-radius: var(--radius-md);
+  border-radius: 4px;
   background-color:  #3D4B76;
   color: #D7DAE3;
   font-size: 1em;
@@ -479,7 +479,7 @@ button:focus-visible {
   height: 100%;
   background: #2C3967;
   border-left: 1px solid #53565A;
-  z-index: 9999;
+  z-index: 10200;
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -502,8 +502,12 @@ button:focus-visible {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
+  background-color: #4859AA;
+  padding: 10px;
+  border-radius: 4px;
+  border-bottom: 3px solid #FF9E1B;
 }
-.filters-header h3 { color: #FF9E1B; font-size: 1.8em; }
+.filters-header h3 { color: white; font-size: 1.8em; }
 .close-filters {
   background: none; color: #fff; font-size: 1.5em; border: none; cursor: pointer;
 }
@@ -513,18 +517,145 @@ button:focus-visible {
   min-height: 28px;
 }
 .filter-chip {
-  display: inline-block;
-  background: #FF9E1B;
-  color: #111C4E;
-  border-radius: 16px;
-  padding: 4px 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #3D4B76;
+  color: #D7DAE3;
+  border-radius: 4px;
+  padding: 4px 8px 4px 12px;
   margin-right: 6px;
+  margin-bottom: 6px;
   font-size: 0.95em;
   font-weight: bold;
+  border: 1px solid #D7DAE3;
+}
+
+.remove-filter {
+  background: none;
+  border: none;
+  color: #D7DAE3;
+  font-size: 1.2em;
+  font-weight: bold;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
+  margin: 0;
+}
+
+.remove-filter:hover {
+  color: #FF9E1B;
+  transform: scale(1.1);
+}
+
+.remove-filter:focus {
+  outline: none;
+  color: #FF9E1B;
 }
 
 .filter-section { margin-bottom: 18px; }
 .filter-section h4 { color: #FF9E1B; margin-bottom: 8px; font-size: 1em; }
+
+.filter-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  cursor: pointer;
+  border-bottom: 1px solid #ff9c1b8f;
+}
+
+.filter-section-header h4 {
+  margin: 0;
+  color: white;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.stats-toggle-btn {
+  background: none;
+  border: none;
+  color: #FF9E1B;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.stats-toggle-btn:hover {
+  background: rgba(255, 158, 27, 0.1);
+}
+
+.stats-toggle-btn:focus {
+  outline: none;
+  background: rgba(255, 158, 27, 0.1);
+}
+
+.chevron-icon {
+  transition: transform 0.2s ease;
+}
+
+.stats-toggle-btn.collapsed .chevron-icon {
+  transform: rotate(-90deg);
+}
+
+.stats-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: visible;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  max-height: 800px;
+  opacity: 1;
+}
+
+.stats-filters.collapsed {
+  max-height: 0;
+  opacity: 0;
+  margin-top: 0;
+}
+
+.stat-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stat-filter label {
+  color: #FF9E1B;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.stat-filter input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #53565A;
+  border-radius: 4px;
+  background-color: #3D4B76;
+  color: #D7DAE3;
+  font-size: 0.9em;
+  margin-bottom: 4px;
+}
+
+.stat-filter input:focus {
+  border-color: #FF9E1B;
+  outline: none;
+}
+
+.stat-filter input::placeholder {
+  color: #D7DAE3;
+  opacity: 0.7;
+}
 .filter-section ul { list-style: none; padding: 0; }
 .filter-section li { margin-bottom: 6px; }
 .filter-section label { color: #fff; cursor: pointer; }
@@ -551,6 +682,17 @@ button:focus-visible {
   display: flex;
   gap: 10px;
   margin-bottom: 10px;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  max-height: 200px;
+  opacity: 1;
+}
+
+.gender-btn-group.collapsed {
+  max-height: 0;
+  opacity: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .gender-btn {
   background-color: #1D296F;
@@ -578,6 +720,17 @@ button:focus-visible {
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 10px;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  max-height: 400px;
+  opacity: 1;
+}
+
+.competition-btn-group.collapsed {
+  max-height: 0;
+  opacity: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .competition-btn {
   background-color: #1D296F;
@@ -645,13 +798,6 @@ button:focus-visible {
   .footer-container {
     width: 100%;
   }
-  .footer-left {
-    flex: 1 1 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 18px;
-  }
   .footer-logo {
     height: 52px;
   }
@@ -671,11 +817,11 @@ button:focus-visible {
     flex: 2 1 500px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 18px;
   }
   .footer-right h3 {
-    color: #FF9E1B;
+    color: white;
     margin-bottom: 12px;
     font-size: 1.1em;
     font-weight: bold;
@@ -770,6 +916,45 @@ button:focus-visible {
   .footer-right {
     text-align: left;
   }
+
+  .filters-overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  .filter-chip {
+    font-size: 0.9em;
+    padding: 3px 6px 3px 10px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    gap: 6px;
+  }
+
+  .remove-filter {
+    width: 18px;
+    height: 18px;
+    font-size: 1.1em;
+  }
+
+  .stats-toggle-btn {
+    padding: 6px;
+  }
+
+  .chevron-icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .filter-section-header {
+    margin-bottom: 6px;
+  }
+
+  .filter-section-header h4 {
+    font-size: 0.95em;
+  }
 }
 
 @media (max-width: 768px) {
@@ -815,6 +1000,79 @@ button:focus-visible {
   }
 }
 
+/* Ajustar para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .filter-chip {
+    font-size: 0.85em;
+    padding: 2px 4px 2px 8px;
+    margin-right: 3px;
+    margin-bottom: 3px;
+    gap: 4px;
+  }
+
+  .remove-filter {
+    width: 16px;
+    height: 16px;
+    font-size: 1em;
+  }
+
+  .filters-active {
+    margin-bottom: 10px;
+  }
+
+  .stats-toggle-btn {
+    padding: 4px;
+  }
+
+  .chevron-icon {
+    width: 12px;
+    height: 12px;
+  }
+
+  .filter-section-header {
+    margin-bottom: 4px;
+  }
+
+  .filter-section-header h4 {
+    font-size: 0.9em;
+  }
+
+  .stats-filters {
+    gap: 8px;
+  }
+
+  .stat-filter {
+    gap: 4px;
+  }
+
+  .stat-filter label {
+    font-size: 0.85em;
+  }
+
+  .stat-filter input {
+    padding: 6px 8px;
+    font-size: 0.85em;
+  }
+  
+  .gender-btn-group {
+    gap: 8px;
+  }
+
+  .gender-btn {
+    padding: 6px 12px;
+    font-size: 0.9em;
+  }
+
+  .competition-btn-group {
+    gap: 8px;
+  }
+
+  .competition-btn {
+    padding: 6px 12px;
+    font-size: 0.9em;
+  }
+}
+
 /* ===========================
    UTILITIES
    =========================== */
@@ -839,10 +1097,10 @@ button:focus-visible {
 #teamFilter {
   width: 100%;
   padding: 8px 12px;
-  border: 1px solid #ddd;
+  border: 1px solid #D7DAE3;
   border-radius: 4px;
-  background-color: #1a1a1a;
-  color: #fff;
+  background-color: #3D4B76;
+  color: #D7DAE3;
   font-size: 14px;
   cursor: pointer;
   appearance: none;
@@ -852,26 +1110,27 @@ button:focus-visible {
   background-repeat: no-repeat;
   background-position: right 8px center;
   background-size: 16px;
+  margin-top: 10px;
 }
 
-#teamFilter:hover {
-  border-color: #666;
-}
 
 #teamFilter:focus {
   outline: none;
-  border-color: #666;
-  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+  border-color: #FF9E1B;
 }
 
 #teamFilter option {
-  background-color: #1a1a1a;
-  color: #fff;
+  background-color: #3D4B76;
+  color: #D7DAE3;
   padding: 8px;
 }
 
 #teamFilter option:hover {
-  background-color: #333;
+  background-color: #D7DAE3;
+}
+
+#teamFilter option{
+  color: #D7DAE3;
 }
 
 /* Estilos para el filtro de equipo */
@@ -879,6 +1138,17 @@ button:focus-visible {
   position: relative;
   width: 100%;
   z-index: 1001;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  max-height: 200px;
+  opacity: 1;
+}
+
+.team-filter-container.collapsed {
+  max-height: 0;
+  opacity: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .team-filter {
@@ -1129,7 +1399,7 @@ button:focus-visible {
   
   /* Añadir padding inferior al body para evitar solapamiento */
   body {
-    padding-bottom: 85px !important;
+    padding-bottom: 65px !important;
     position: relative !important;
     overflow-x: hidden !important; /* Evita scroll horizontal */
   }

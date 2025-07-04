@@ -28,6 +28,18 @@ let filteredTeams = [];
 let currentPage = 1;
 const teamsPerPage = 50;
 
+// Estado global de filtros
+const filters = {
+  gender: "todos",
+  competition: "todas",
+  search: "",
+  stats: {
+    pts: { min: null, max: null },
+    ptsc: { min: null, max: null },
+    pm: { min: null, max: null }
+  }
+};
+
 async function loadTeams() {
   const response = await fetch('rankings_stats.json');
   const data = await response.json();
@@ -96,6 +108,7 @@ async function loadTeams() {
   renderTeamsGrid();
   renderPagination();
   setupTeamSearchBar();
+  setupFilters();
 }
 
 function renderTeamsGrid() {
@@ -213,19 +226,8 @@ function setupTeamSearchBar() {
       }
     }
     // Filter grid as you type
-    if (!query) {
-      filteredTeams = allTeams.slice();
-      currentPage = 1;
-      renderTeamsGrid();
-      renderPagination();
-      return;
-    }
-    filteredTeams = allTeams.filter(team =>
-      team.teamName.toLowerCase().includes(query)
-    );
-    currentPage = 1;
-    renderTeamsGrid();
-    renderPagination();
+    filters.search = query;
+    applyFilters();
   });
 
   document.addEventListener('click', (e) => {
@@ -233,6 +235,304 @@ function setupTeamSearchBar() {
       searchResults.style.display = 'none';
     }
   });
+}
+
+// Sistema de filtros
+function setupFilters() {
+  initializeGenderFilters();
+  initializeCompetitionFilters();
+  setupFilterEventListeners();
+  setupAllToggleButtons();
+}
+
+function initializeGenderFilters() {
+  // Marcar "Todos" como activo por defecto
+  const todosBtn = document.querySelector('.gender-btn[data-gender="todos"]');
+  if (todosBtn) todosBtn.classList.add('active');
+}
+
+function setupFilterEventListeners() {
+  const openFiltersBtn = document.getElementById('openFiltersBtn');
+  const closeFiltersBtn = document.getElementById('closeFiltersBtn');
+  const filtersOverlay = document.getElementById('filtersOverlay');
+  const clearFiltersBtn = document.getElementById('clearFiltersBtn');
+  const applyFiltersBtn = document.getElementById('applyFiltersBtn');
+
+  // Abrir/cerrar overlay
+  openFiltersBtn?.addEventListener('click', () => {
+    filtersOverlay.classList.add('open');
+  });
+
+  closeFiltersBtn?.addEventListener('click', () => {
+    filtersOverlay.classList.remove('open');
+  });
+
+  // Filtros de género
+  const genderFilters = document.getElementById('genderFilters');
+  genderFilters?.addEventListener('click', (e) => {
+    if (e.target.classList.contains('gender-btn')) {
+      document.querySelectorAll('.gender-btn').forEach(btn => btn.classList.remove('active'));
+      e.target.classList.add('active');
+      filters.gender = e.target.dataset.gender;
+      updateActiveFilters();
+    }
+  });
+
+  // Filtros de competición
+  const competitionFilters = document.getElementById('competitionFilters');
+  competitionFilters?.addEventListener('click', (e) => {
+    if (e.target.classList.contains('competition-btn')) {
+      document.querySelectorAll('.competition-btn').forEach(btn => btn.classList.remove('active'));
+      e.target.classList.add('active');
+      filters.competition = e.target.dataset.competition;
+      updateActiveFilters();
+    }
+  });
+
+  // Limpiar filtros
+  clearFiltersBtn?.addEventListener('click', () => {
+    clearAllFilters();
+  });
+
+  // Aplicar filtros
+  applyFiltersBtn?.addEventListener('click', () => {
+    applyFilters();
+    filtersOverlay.classList.remove('open');
+  });
+}
+
+function initializeCompetitionFilters() {
+  const competitionFilters = document.getElementById('competitionFilters');
+  if (!competitionFilters) return;
+
+  const competitions = [...new Set(allTeams.map(team => team.competition))].sort();
+  
+  let html = '<button type="button" class="competition-btn active" data-competition="todas">Todas</button>';
+  competitions.forEach(comp => {
+    html += `<button type="button" class="competition-btn" data-competition="${comp}">${formatCompetitionName(comp)}</button>`;
+  });
+  
+  competitionFilters.innerHTML = html;
+}
+
+function getGenderFromCompetition(competition) {
+  if (competition.toLowerCase().includes('fem')) return 'femenino';
+  if (competition.toLowerCase().includes('masc')) return 'masculino';
+  if (competition.toLowerCase().includes('femenin')) return 'femenino';
+  if (competition.toLowerCase().includes('masculin')) return 'masculino';
+  return 'mixto';
+}
+
+function applyFilters() {
+  // Obtener valores de estadísticas
+  const statsInputs = document.querySelectorAll('.stat-filter input');
+  statsInputs.forEach(input => {
+    const statLabel = input.closest('.stat-filter').querySelector('label').textContent.toLowerCase();
+    const isMin = input.placeholder.toLowerCase() === 'mín';
+    const value = input.value ? parseFloat(input.value) : null;
+    
+    let statKey;
+    if (statLabel === 'pts') statKey = 'pts';
+    else if (statLabel === 'ptsc') statKey = 'ptsc';
+    else if (statLabel === '+/-') statKey = 'pm';
+    
+    if (statKey) {
+      filters.stats[statKey][isMin ? 'min' : 'max'] = value;
+    }
+  });
+
+  filteredTeams = allTeams.filter(team => {
+    // Filtro de género
+    if (filters.gender !== 'todos') {
+      const teamGender = getGenderFromCompetition(team.competition);
+      if (teamGender !== filters.gender && teamGender !== 'mixto') {
+        return false;
+      }
+    }
+
+    // Filtro de competición
+    if (filters.competition !== 'todas' && team.competition !== filters.competition) {
+      return false;
+    }
+
+    // Filtro de búsqueda
+    if (filters.search && !team.teamName.toLowerCase().includes(filters.search.toLowerCase())) {
+      return false;
+    }
+
+    // Filtros de estadísticas
+    const pts = parseFloat(team.avgPts);
+    const ptsc = parseFloat(team.avgPtsAgainst);
+    const pm = parseFloat(team.avgPm);
+
+    if (filters.stats.pts.min !== null && pts < filters.stats.pts.min) return false;
+    if (filters.stats.pts.max !== null && pts > filters.stats.pts.max) return false;
+    if (filters.stats.ptsc.min !== null && ptsc < filters.stats.ptsc.min) return false;
+    if (filters.stats.ptsc.max !== null && ptsc > filters.stats.ptsc.max) return false;
+    if (filters.stats.pm.min !== null && pm < filters.stats.pm.min) return false;
+    if (filters.stats.pm.max !== null && pm > filters.stats.pm.max) return false;
+
+    return true;
+  });
+
+  currentPage = 1;
+  renderTeamsGrid();
+  renderPagination();
+  updateActiveFilters();
+}
+
+function clearAllFilters() {
+  filters.gender = "todos";
+  filters.competition = "todas";
+  filters.search = "";
+  filters.stats = {
+    pts: { min: null, max: null },
+    ptsc: { min: null, max: null },
+    pm: { min: null, max: null }
+  };
+
+  // Limpiar UI
+  document.querySelectorAll('.gender-btn').forEach(btn => {
+    btn.classList.remove('active');
+    if (btn.dataset.gender === 'todos') btn.classList.add('active');
+  });
+
+  document.querySelectorAll('.competition-btn').forEach(btn => {
+    btn.classList.remove('active');
+    if (btn.dataset.competition === 'todas') btn.classList.add('active');
+  });
+
+  document.querySelectorAll('.stat-filter input').forEach(input => {
+    input.value = '';
+  });
+
+  const searchInput = document.getElementById('teamSearchInput');
+  if (searchInput) searchInput.value = '';
+
+  filteredTeams = allTeams.slice();
+  currentPage = 1;
+  renderTeamsGrid();
+  renderPagination();
+  updateActiveFilters();
+}
+
+function updateActiveFilters() {
+  const filtersActive = document.getElementById('filtersActive');
+  if (!filtersActive) return;
+
+  let activeFilters = [];
+
+  if (filters.gender !== 'todos') {
+    activeFilters.push({
+      tipo: 'gender',
+      valor: filters.gender,
+      label: `Género: ${filters.gender}`
+    });
+  }
+
+  if (filters.competition !== 'todas') {
+    activeFilters.push({
+      tipo: 'competition',
+      valor: filters.competition,
+      label: `Competición: ${formatCompetitionName(filters.competition)}`
+    });
+  }
+
+  if (filters.search) {
+    activeFilters.push({
+      tipo: 'search',
+      valor: filters.search,
+      label: `Búsqueda: ${filters.search}`
+    });
+  }
+
+  // Filtros de estadísticas
+  Object.keys(filters.stats).forEach(stat => {
+    const { min, max } = filters.stats[stat];
+    if (min !== null || max !== null) {
+      let label = stat.toUpperCase();
+      if (stat === 'pm') label = '+/-';
+      
+      let range = '';
+      if (min !== null && max !== null) {
+        range = `${min} - ${max}`;
+      } else if (min !== null) {
+        range = `≥ ${min}`;
+      } else if (max !== null) {
+        range = `≤ ${max}`;
+      }
+      
+      activeFilters.push({
+        tipo: 'stats',
+        valor: stat,
+        label: `${label}: ${range}`
+      });
+    }
+  });
+
+  filtersActive.innerHTML = activeFilters.map(filter => 
+    `<div class="filter-chip" data-tipo="${filter.tipo}" data-valor="${filter.valor}">
+      ${filter.label}
+      <button class="remove-filter">&times;</button>
+    </div>`
+  ).join('');
+
+  // Añadir event listeners a los botones de eliminar filtro
+  document.querySelectorAll('.remove-filter').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const chip = e.target.parentElement;
+      const tipo = chip.dataset.tipo;
+      const valor = chip.dataset.valor;
+      eliminarFiltro(tipo, valor);
+    });
+  });
+}
+
+// Eliminar un filtro específico
+function eliminarFiltro(tipo, valor) {
+  switch (tipo) {
+    case 'gender':
+      filters.gender = 'todos';
+      // Actualizar UI
+      document.querySelectorAll('.gender-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.dataset.gender === 'todos') btn.classList.add('active');
+      });
+      break;
+    case 'competition':
+      filters.competition = 'todas';
+      // Actualizar UI
+      document.querySelectorAll('.competition-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.dataset.competition === 'todas') btn.classList.add('active');
+      });
+      break;
+    case 'search':
+      filters.search = '';
+      // Limpiar input de búsqueda
+      const searchInput = document.getElementById('teamSearchInput');
+      if (searchInput) searchInput.value = '';
+      break;
+    case 'stats':
+      filters.stats[valor] = { min: null, max: null };
+      // Limpiar inputs de estadísticas
+      document.querySelectorAll('.stat-filter').forEach(statFilter => {
+        const label = statFilter.querySelector('label').textContent.toLowerCase();
+        let statKey = label;
+        if (label === '+/-') statKey = 'pm';
+        if (statKey === valor) {
+          statFilter.querySelectorAll('input').forEach(input => {
+            input.value = '';
+          });
+        }
+      });
+      break;
+  }
+
+  // Aplicar filtros y actualizar vista
+  currentPage = 1;
+  applyFilters();
 }
 
 // Helper copied (simplified) from team_profile.js
@@ -258,6 +558,72 @@ function aggregateTeamMatchesDir(players, competitionFilter, teamIdFilter) {
     });
   });
   return Array.from(matchMap.values());
+}
+
+function setupAllToggleButtons() {
+  // Configurar toggle para género
+  setupSectionToggle('genderToggleBtn', 'genderFilters', 'gender');
+  
+  // Configurar toggle para competición
+  setupSectionToggle('competitionToggleBtn', 'competitionFilters', 'competition');
+  
+  // Configurar toggle para estadísticas
+  setupSectionToggle('statsToggleBtn', 'statsFilters', 'stats');
+}
+
+function setupSectionToggle(toggleBtnId, filtersId, sectionType) {
+  const toggleBtn = document.getElementById(toggleBtnId);
+  const filtersContent = document.getElementById(filtersId);
+  
+  if (!toggleBtn || !filtersContent) return;
+
+  // Encontrar el header correspondiente
+  const filterSectionHeader = toggleBtn.closest('.filter-section').querySelector('.filter-section-header');
+  
+  if (!filterSectionHeader) return;
+
+  // Estado inicial: colapsado
+  let isCollapsed = true;
+
+  // Aplicar estado inicial colapsado
+  toggleBtn.classList.add('collapsed');
+  filtersContent.classList.add('collapsed');
+
+  // Función para alternar el estado
+  function toggleSection() {
+    isCollapsed = !isCollapsed;
+    
+    if (isCollapsed) {
+      toggleBtn.classList.add('collapsed');
+      filtersContent.classList.add('collapsed');
+    } else {
+      toggleBtn.classList.remove('collapsed');
+      filtersContent.classList.remove('collapsed');
+    }
+  }
+
+  // Event listeners para el botón y el header
+  toggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleSection();
+  });
+
+  filterSectionHeader.addEventListener('click', (e) => {
+    // Solo activar si el click fue en el header pero no en el botón
+    if (e.target === filterSectionHeader || e.target.tagName === 'H4') {
+      toggleSection();
+    }
+  });
+
+  // Evitar que clicks en contenido activen el toggle
+  filtersContent.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
+}
+
+function setupStatsToggle() {
+  // Esta función ya no es necesaria, se reemplaza por setupAllToggleButtons
+  // La mantengo vacía para evitar errores
 }
 
 document.addEventListener('DOMContentLoaded', loadTeams); 

@@ -947,7 +947,7 @@ function markDatesWithMatches() {
     // Filtro por competición
     if (selectedCompetition && selectedCompetition !== "") {
       const comp = card.getAttribute('data-competition') || '';
-      if (comp !== selectedCompetition) return false;
+      if (comp !== formatCompetitionName(selectedCompetition)) return false;
     }
     // Filtro por género
     if (selectedGender && selectedGender !== "todos") {
@@ -1150,7 +1150,7 @@ function getFilteredVenues() {
     // Filtro por competición
     if (selectedCompetition && selectedCompetition !== "") {
       const comp = card.getAttribute('data-competition') || '';
-      if (selectedCompetition !== comp) return false;
+      if (formatCompetitionName(selectedCompetition) !== comp) return false;
     }
     return true;
   });

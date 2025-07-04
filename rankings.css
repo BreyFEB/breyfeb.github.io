@@ -1257,7 +1257,7 @@ input:checked + .slider:before {
   
   /* Añadir padding inferior al body para evitar solapamiento */
   body {
-    padding-bottom: 85px;
+    padding-bottom: 65px;
   }
   
   /* Ocultar el menú hamburguesa cuando hay barra inferior */
