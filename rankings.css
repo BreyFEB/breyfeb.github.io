@@ -703,14 +703,14 @@ input:checked + .slider:before {
 .pagination-controls button {
   padding: 8px 16px;
   background-color: #FF9E1B;
-  color: #111C4E;
+  color: #1D296F;
   font-weight: bold;
   border: none;
-  border-radius: 20px;
+  border-radius: 4px;
   cursor: pointer;
 }
 .pagination-controls button:hover {
-  background-color: #C8102E;
+  background-color: #FF7D07;
   color: #fff;
 }
 #pageInfo {
@@ -821,7 +821,7 @@ input:checked + .slider:before {
   gap: 18px;
 }
 .footer-right h3 {
-  color: #FF9E1B;
+  color: white;
   margin-bottom: 12px;
   font-size: 1.1em;
   font-weight: bold;
@@ -1050,6 +1050,11 @@ input:checked + .slider:before {
 @media screen and (max-width: 768px) {
   .menu-toggle {
     display: block;
+  }
+
+  /* Ocultar las flechas de scroll en móviles */
+  .table-scroll-arrows {
+    display: none;
   }
 
   .main-nav {
