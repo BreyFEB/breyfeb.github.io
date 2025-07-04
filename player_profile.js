@@ -76,6 +76,60 @@ function toTitleCase(str) {
   }).join(' ');
 }
 
+// Calculate stats for a specific competition
+function calculateCompetitionStats(originalPlayer, competitionMatches, targetCompetition) {
+  if (!competitionMatches || competitionMatches.length === 0) {
+    return null;
+  }
+  
+  // Calculate totals from the competition matches
+  const totals = competitionMatches.reduce((acc, match) => ({
+    pts: acc.pts + (match.pts || 0),
+    t2i: acc.t2i + (match.t2i || 0),
+    t2c: acc.t2c + (match.t2c || 0),
+    t3i: acc.t3i + (match.t3i || 0),
+    t3c: acc.t3c + (match.t3c || 0),
+    tli: acc.tli + (match.tli || 0),
+    tlc: acc.tlc + (match.tlc || 0),
+    ro: acc.ro + (match.ro || 0),
+    rd: acc.rd + (match.rd || 0),
+    rt: acc.rt + (match.rt || 0),
+    as: acc.as + (match.as || 0),
+    br: acc.br + (match.br || 0),
+    bp: acc.bp + (match.bp || 0),
+    tp: acc.tp + (match.tp || 0),
+    fc: acc.fc + (match.fc || 0),
+    va: acc.va + (match.va || 0),
+    pm: acc.pm + (match.pm || 0),
+    seconds: acc.seconds + (parseMinutes(match.minutes) * 60)
+  }), {
+    pts: 0, t2i: 0, t2c: 0, t3i: 0, t3c: 0, tli: 0, tlc: 0,
+    ro: 0, rd: 0, rt: 0, as: 0, br: 0, bp: 0, tp: 0, fc: 0, va: 0, pm: 0, seconds: 0
+  });
+  
+  // Get team info from the first match of the selected competition
+  const firstMatch = competitionMatches[0];
+  
+  // For multi-competition players, we need to determine the team name for this competition
+  // We can try to find it from the original data or use the first match's team info
+  let competitionTeamName = originalPlayer.teamName;
+  let competitionTeamId = firstMatch.playerTeamId || originalPlayer.teamId;
+  
+  // If the player has a different team in this competition, we might need to get it from match data
+  // For now, we'll use the original team name as it's likely consistent
+  
+  return {
+    ...originalPlayer,
+    ...totals,
+    games: competitionMatches.length,
+    competition: targetCompetition,
+    matches: competitionMatches,
+    teamId: competitionTeamId,
+    teamName: competitionTeamName,
+    // Keep original player photo and other info
+  };
+}
+
 // Load precalculated stats
 async function loadStats() {
   // Define available stats at the top so all functions can access
@@ -104,9 +158,37 @@ async function loadStats() {
   const data = await response.json();
 
   // Find player totals and store in global variable
-  player_totals = data.players.find(player => player.id === player_id);
-  if (!player_totals) {
+  const originalPlayer = data.players.find(player => player.id === player_id);
+  if (!originalPlayer) {
     console.error('Player not found in rankings data');
+    return;
+  }
+
+  // Check if a specific competition is selected via URL parameter
+  const urlParams = new URLSearchParams(window.location.search);
+  const selectedCompetition = urlParams.get('competition');
+  
+  // Get all competitions the player has played in
+  const playerCompetitions = [...new Set(originalPlayer.matches.map(match => match.competition))];
+  
+  // Determine which competition to use
+  let targetCompetition = selectedCompetition;
+  if (!targetCompetition || !playerCompetitions.includes(targetCompetition)) {
+    // Default to the main competition from the player data
+    targetCompetition = originalPlayer.competition;
+  }
+  
+  // Filter matches for the selected competition
+  const competitionMatches = originalPlayer.matches.filter(match => match.competition === targetCompetition);
+  
+  // Get all competitions the player has played in from the original data
+  const availablePlayerCompetitions = [...new Set(originalPlayer.matches.map(match => match.competition))];
+  
+  // Calculate stats for the selected competition
+  player_totals = calculateCompetitionStats(originalPlayer, competitionMatches, targetCompetition);
+  
+  if (!player_totals) {
+    console.error('Could not calculate player stats for selected competition');
     return;
   }
 
@@ -133,24 +215,58 @@ async function loadStats() {
     // Add error handler to fallback to placeholder if image fails to load
     player_photo.onerror = function() { this.src = 'player_placeholder.png'; };
   }
-
+  
   // Update player main info with team, competition, and gender
   const player_main_info = document.querySelector('.player-main-info');
   if (player_main_info) {
     const team = toTitleCase(player_totals.teamName);
     const competition = formatCompetitionName(player_totals.competition);
     const gender = player_totals.gender === "M" ? "Femenino" : "Masculino";
+    
+    // Create competition selector if player has multiple competitions
+    let competitionSelector = '';
+    if (availablePlayerCompetitions.length > 1) {
+      competitionSelector = `
+        <div style="margin-bottom: 8px;">
+          <label for="competitionSelector" style="font-size: 0.9em; color: #ccc; margin-right: 8px;">Competición:</label>
+          <select id="competitionSelector" style="padding: 4px 8px; border: 1px solid #FF9E1B; border-radius: 4px; background: #fff; color: #111C4E; font-size: 0.9em;">
+            ${availablePlayerCompetitions.map(comp => 
+              `<option value="${comp}" ${comp === player_totals.competition ? 'selected' : ''}>${formatCompetitionName(comp)}</option>`
+            ).join('')}
+          </select>
+        </div>
+      `;
+    } else {
+      competitionSelector = `Competición: ${competition}<br>`;
+    }
+    
+    // Get team info for the current competition
+    const currentTeamId = player_totals.teamId;
+    const currentTeamLogo = player_totals.teamLogo;
+    
     // Team logo and name styled prominently
     player_main_info.innerHTML = `
-      <a href="team_profile.html?team_id=${player_totals.teamId}" class="team-link">
-        <img src="${player_totals.teamLogo}" alt="${team} logo">
+      <a href="team_profile.html?team_id=${currentTeamId}" class="team-link">
+        <img src="${currentTeamLogo}" alt="${team} logo">
         <span class="team-name">${team}</span>
       </a>
       <div class="player-meta">
-        Competición: ${competition}<br>
+        ${competitionSelector}
         Género: ${gender}
       </div>
     `;
+    
+    // Add event listener for competition selector if it exists
+    const competitionSelectorElement = document.getElementById('competitionSelector');
+    if (competitionSelectorElement) {
+      competitionSelectorElement.addEventListener('change', function() {
+        const selectedCompetition = this.value;
+        // Reload the page with the selected competition
+        const urlParams = new URLSearchParams(window.location.search);
+        urlParams.set('competition', selectedCompetition);
+        window.location.search = urlParams.toString();
+      });
+    }
   } else {
     console.log('No se encontró el elemento .player-main-info');
   }
@@ -406,6 +522,7 @@ async function loadStats() {
     valueTypeSelector.innerHTML = `
       <option value="total">Valores totales</option>
       <option value="average">Valores por partido</option>
+      <option value="per40">Por 40 minutos</option>
     `;
     valueTypeRow.appendChild(valueTypeSelector);
     selectorContainer.appendChild(valueTypeRow);
@@ -673,6 +790,7 @@ async function loadStats() {
     const statLabel = statOptions.find(opt => opt.value === statKey)?.label || statKey;
     if (window.pointsEvolutionChart && typeof window.pointsEvolutionChart.destroy === 'function') {
       window.pointsEvolutionChart.destroy();
+      window.pointsEvolutionChart = null;
     }
     window.pointsEvolutionChart = new Chart(ctx, {
       type: 'line',
@@ -752,33 +870,144 @@ async function loadStats() {
     if (!(profileSection && player_totals && player_totals.competition)) return;
     const scatterCtx = document.getElementById('pointsScatterChart').getContext('2d');
     const valueTypeSelector = document.getElementById('valueTypeSelector');
-    const showAverages = valueTypeSelector ? valueTypeSelector.value === 'average' : false;
+    const valueType = valueTypeSelector ? valueTypeSelector.value : 'total';
     
     // Get all players in the same competition
     const allPlayers = Array.isArray(data.players) ? data.players : [];
-    const compPlayers = allPlayers.filter(p => p.competition === player_totals.competition);
+    
+    // For multi-competition scenarios, we need to filter players who have played in this competition
+    // This is more complex because the original data structure has one entry per player with their primary competition
+    let compPlayers = allPlayers.filter(p => p.competition === player_totals.competition);
+    
+    // If we don't find many players, it might be because this is a secondary competition
+    // In that case, we should look for players who have matches in this competition
+    if (compPlayers.length < 5) {
+      console.log(`Found only ${compPlayers.length} players for competition ${player_totals.competition}, looking for players with matches in this competition`);
+      
+      compPlayers = allPlayers.filter(p => {
+        // Check if player has matches in the target competition
+        return p.matches && p.matches.some(match => match.competition === player_totals.competition);
+      }).map(p => {
+        // If this player has matches in our target competition but it's not their primary competition,
+        // we need to calculate their stats for just this competition
+        if (p.competition !== player_totals.competition) {
+          const competitionMatches = p.matches.filter(match => match.competition === player_totals.competition);
+          return calculateCompetitionStats(p, competitionMatches, player_totals.competition);
+        }
+        return p;
+      }).filter(p => p !== null);
+    }
+    
+    console.log(`Found ${compPlayers.length} players for competition: ${player_totals.competition}`);
+    
+    // Debug: Check if current player is in the competition players list
+    const currentPlayerInCompPlayers = compPlayers.find(p => p.id === player_totals.id);
+    console.log('Current player found in competition players:', currentPlayerInCompPlayers ? 'YES' : 'NO');
+
+    
+    // If still no players found for this competition, return early
+    if (compPlayers.length === 0) {
+      console.warn('No players found for competition:', player_totals.competition);
+      return;
+    }
     
     // Prepare scatter data
     const scatterData = compPlayers.map((p, i) => {
       const isCurrent = p.id === player_totals.id;
-      // Use p.seconds for total minutes played
-      const xVal = p.seconds ? p.seconds / 60 : 0;
-      let yVal;
-      if (statKey === 'min') {
-        yVal = xVal;
-      } else {
-        yVal = showAverages ? p[statKey] / p.games : p[statKey];
+      
+      // If this is the current player, use the filtered player_totals data instead
+      let playerData = p;
+      if (isCurrent) {
+        playerData = player_totals;
       }
+      
+      // Use playerData.seconds for total minutes played
+      const xVal = playerData.seconds ? playerData.seconds / 60 : 0;
+      let yVal = 0;
+      
+      try {
+        if (statKey === 'min') {
+          yVal = xVal;
+        } else {
+          const statValue = playerData[statKey] || 0;
+          const games = playerData.games || 1;
+          
+          if (valueType === 'average') {
+            yVal = statValue / games;
+          } else if (valueType === 'per40') {
+            // Calculate per 40 minutes values
+            const playerMinutes = playerData.seconds ? playerData.seconds / 60 : 0;
+            yVal = playerMinutes > 0 ? (statValue / playerMinutes) * 40 : 0;
+          } else {
+            // Default to total values
+            yVal = statValue;
+          }
+        }
+      } catch (error) {
+        console.warn('Error calculating stat for player:', playerData.playerName, error);
+        yVal = 0;
+      }
+      
       return {
         x: xVal,
         y: yVal,
-        playerName: p.playerName,
+        playerName: playerData.playerName || 'Unknown Player',
         isCurrent,
         stat: yVal,
         min: xVal,
-        games: p.games
+        games: playerData.games || 0
       };
+    }).filter(data => data.x >= 0 && data.y >= 0); // Filter out invalid data
+    
+    // Debug: Check current player data
+    console.log('Current player data for scatter chart:', {
+      id: player_totals.id,
+      name: player_totals.playerName,
+      competition: player_totals.competition,
+      games: player_totals.games,
+      seconds: player_totals.seconds,
+      statValue: player_totals[statKey]
     });
+    
+    // Ensure the current player is included even if not found in compPlayers
+    const currentPlayerInData = scatterData.find(d => d.isCurrent);
+    console.log('Current player found in scatter data:', currentPlayerInData);
+    
+    if (!currentPlayerInData && player_totals) {
+      const xVal = player_totals.seconds ? player_totals.seconds / 60 : 0;
+      let yVal = 0;
+      
+      try {
+        if (statKey === 'min') {
+          yVal = xVal;
+        } else {
+          const statValue = player_totals[statKey] || 0;
+          const games = player_totals.games || 1;
+          
+          if (valueType === 'average') {
+            yVal = statValue / games;
+          } else if (valueType === 'per40') {
+            const playerMinutes = player_totals.seconds ? player_totals.seconds / 60 : 0;
+            yVal = playerMinutes > 0 ? (statValue / playerMinutes) * 40 : 0;
+          } else {
+            yVal = statValue;
+          }
+        }
+      } catch (error) {
+        console.warn('Error calculating stat for current player:', error);
+        yVal = 0;
+      }
+      
+      scatterData.push({
+        x: xVal,
+        y: yVal,
+        playerName: player_totals.playerName || 'Jugador Actual',
+        isCurrent: true,
+        stat: yVal,
+        min: xVal,
+        games: player_totals.games || 0
+      });
+    }
     
     // Get stat label
     const statLabel = statOptions.find(opt => opt.value === statKey)?.label || statKey;
@@ -810,6 +1039,7 @@ async function loadStats() {
     // Destroy previous chart if exists
     if (window.pointsScatterChart && typeof window.pointsScatterChart.destroy === 'function') {
       window.pointsScatterChart.destroy();
+      window.pointsScatterChart = null;
     }
     
     window.pointsScatterChart = new Chart(scatterCtx, {
@@ -827,7 +1057,7 @@ async function loadStats() {
             showLine: false
           },
           {
-            label: player_totals.playerName,
+            label: player_totals.playerName || 'Jugador Actual',
             data: scatterData.filter(d => d.isCurrent),
             backgroundColor: 'rgba(255, 158, 27, 1)', // fully opaque
             borderColor: '#C8102E', // contrasting border
@@ -853,21 +1083,23 @@ async function loadStats() {
                 size: legendFontSize,
                 weight: 'bold'
               },
-              generateLabels: function(chart) {
+                            generateLabels: function(chart) {
                 const datasets = chart.data.datasets;
                 return datasets.map((dataset, i) => {
-                  const currentPlayer = dataset.data[0];
-                  if (i === 1) { // Current player dataset
-                    return {
-                      text: screenWidth < 768 ? 
-                        `${dataset.label}: ${Math.round(currentPlayer.stat)}` : 
-                        `${dataset.label}: ${Math.round(currentPlayer.stat)} ${statLabel}${showAverages ? '/partido' : ''}`,
-                      fillStyle: dataset.backgroundColor,
-                      strokeStyle: dataset.borderColor,
-                      lineWidth: dataset.borderWidth,
-                      hidden: false,
-                      index: i
-                    };
+                  if (i === 1 && dataset.data && dataset.data.length > 0) { // Current player dataset
+                    const currentPlayer = dataset.data[0];
+                    if (currentPlayer && typeof currentPlayer.stat !== 'undefined') {
+                      return {
+                        text: screenWidth < 768 ? 
+                          `${dataset.label}: ${Math.round(currentPlayer.stat || 0)}` : 
+                          `${dataset.label}: ${Math.round(currentPlayer.stat || 0)} ${statLabel}${valueType === 'average' ? '/partido' : valueType === 'per40' ? '/40min' : ''}`,
+                        fillStyle: dataset.backgroundColor,
+                        strokeStyle: dataset.borderColor,
+                        lineWidth: dataset.borderWidth,
+                        hidden: false,
+                        index: i
+                      };
+                    }
                   }
                   return {
                     text: dataset.label,
@@ -901,9 +1133,9 @@ async function loadStats() {
                 }
                 return [
                   `Jugador: ${d.playerName}`,
-                  `${yLabel}: ${yValue}${showAverages ? '/partido' : ''}`,
+                  `${yLabel}: ${yValue}${valueType === 'average' ? '/partido' : valueType === 'per40' ? '/40min' : ''}`,
                   `${xLabel}: ${xValue}`,
-                  showAverages ? `Partidos jugados: ${d.games}` : ''
+                  valueType === 'average' ? `Partidos jugados: ${d.games}` : ''
                 ].filter(Boolean);
               }
             }
@@ -957,7 +1189,7 @@ async function loadStats() {
           y: {
             title: { 
               display: true, 
-              text: showAverages ? `${statLabel} por partido` : statLabel,
+              text: valueType === 'average' ? `${statLabel} por partido` : valueType === 'per40' ? `${statLabel} por 40 minutos` : statLabel,
               font: {
                 size: titleFontSize
               }
@@ -968,7 +1200,7 @@ async function loadStats() {
                 if (statKey === 'min') {
                   return formatMinutes(value);
                 }
-                if (showAverages) {
+                if (valueType === 'average' || valueType === 'per40') {
                   return value % 1 === 0 ? value : value.toFixed(1);
                 } else {
                   return Number.isInteger(value) ? value : '';
@@ -999,27 +1231,33 @@ async function loadStats() {
   }
 
   // Initial draw (default to points)
-  if (document.getElementById('statSelector') && document.getElementById('scatterStatSelector')) {
-    const statKey = document.getElementById('statSelector').value;
-    const scatterStatKey = document.getElementById('scatterStatSelector').value;
+  const statSelector = document.getElementById('statSelector');
+  const scatterStatSelector = document.getElementById('scatterStatSelector');
+  const valueTypeSelector = document.getElementById('valueTypeSelector');
+  
+  if (statSelector && scatterStatSelector) {
+    const statKey = statSelector.value;
+    const scatterStatKey = scatterStatSelector.value;
     drawStatChart(statKey);
     drawPointsScatter(scatterStatKey);
 
     // Add event listener for stat selector (line chart)
-    document.getElementById('statSelector').addEventListener('change', function() {
+    statSelector.addEventListener('change', function() {
       drawStatChart(this.value);
     });
 
     // Add event listener for scatter stat selector (scatter chart)
-    document.getElementById('scatterStatSelector').addEventListener('change', function() {
+    scatterStatSelector.addEventListener('change', function() {
       drawPointsScatter(this.value);
     });
 
     // Add event listener for value type selector (scatter chart)
-    const valueTypeSelector = document.getElementById('valueTypeSelector');
     if (valueTypeSelector) {
       valueTypeSelector.addEventListener('change', function() {
-        drawPointsScatter(document.getElementById('scatterStatSelector').value);
+        const currentScatterStatSelector = document.getElementById('scatterStatSelector');
+        if (currentScatterStatSelector) {
+          drawPointsScatter(currentScatterStatSelector.value);
+        }
       });
     }
     
@@ -1046,6 +1284,7 @@ async function loadStats() {
     // Destroy existing chart if it exists
     if (window.shootingPercentagesChart && typeof window.shootingPercentagesChart.destroy === 'function') {
       window.shootingPercentagesChart.destroy();
+      window.shootingPercentagesChart = null;
     }
     
     const ctxBar = barCanvas.getContext('2d');

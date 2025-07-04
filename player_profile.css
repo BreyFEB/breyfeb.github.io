@@ -216,6 +216,24 @@ header {
   color: #ddd;
 }
 
+.player-main-info #competitionSelector {
+  padding: 4px 8px;
+  border: 1px solid #FF9E1B;
+  border-radius: 4px;
+  background: #fff;
+  color: #111C4E;
+  font-size: 0.9em;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.player-main-info #competitionSelector:focus,
+.player-main-info #competitionSelector:hover {
+  border-color: #e68900;
+  box-shadow: 0 0 0 2px rgba(255, 158, 27, 0.2);
+}
+
 /* Fichas de estadísticas (summary cards) */
 .summary-cards {
   display: flex;
