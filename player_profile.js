@@ -215,7 +215,7 @@ async function loadStats() {
     // Add error handler to fallback to placeholder if image fails to load
     player_photo.onerror = function() { this.src = 'player_placeholder.png'; };
   }
-  
+
   // Update player main info with team, competition, and gender
   const player_main_info = document.querySelector('.player-main-info');
   if (player_main_info) {
@@ -926,9 +926,9 @@ async function loadStats() {
       let yVal = 0;
       
       try {
-        if (statKey === 'min') {
-          yVal = xVal;
-        } else {
+      if (statKey === 'min') {
+        yVal = xVal;
+      } else {
           const statValue = playerData[statKey] || 0;
           const games = playerData.games || 1;
           
@@ -1083,22 +1083,22 @@ async function loadStats() {
                 size: legendFontSize,
                 weight: 'bold'
               },
-                            generateLabels: function(chart) {
+              generateLabels: function(chart) {
                 const datasets = chart.data.datasets;
                 return datasets.map((dataset, i) => {
                   if (i === 1 && dataset.data && dataset.data.length > 0) { // Current player dataset
-                    const currentPlayer = dataset.data[0];
+                  const currentPlayer = dataset.data[0];
                     if (currentPlayer && typeof currentPlayer.stat !== 'undefined') {
-                      return {
-                        text: screenWidth < 768 ? 
+                    return {
+                      text: screenWidth < 768 ? 
                           `${dataset.label}: ${Math.round(currentPlayer.stat || 0)}` : 
                           `${dataset.label}: ${Math.round(currentPlayer.stat || 0)} ${statLabel}${valueType === 'average' ? '/partido' : valueType === 'per40' ? '/40min' : ''}`,
-                        fillStyle: dataset.backgroundColor,
-                        strokeStyle: dataset.borderColor,
-                        lineWidth: dataset.borderWidth,
-                        hidden: false,
-                        index: i
-                      };
+                      fillStyle: dataset.backgroundColor,
+                      strokeStyle: dataset.borderColor,
+                      lineWidth: dataset.borderWidth,
+                      hidden: false,
+                      index: i
+                    };
                     }
                   }
                   return {
@@ -2995,20 +2995,8 @@ function updateStats(filteredShots) {
   const playerTeam = filteredShots[0]?.equipo_string;
   if (!playerTeam) {
     document.getElementById('fgPercentage').innerHTML = `
-      <div style="margin-bottom: 10px;">
-        <div style="font-size: 24px; color: #666;"></div>
-        <div style="font-size: 24px; color: #666; font-style: italic;">No hay tiros que cumplan estos requisitos para el jugador.</div>
-        <div style="font-size: 14px; color: #666;"></div>
-      </div>
-      <div style="margin-bottom: 10px;">
-        <div style="font-size: 24px; color: #666;"></div>
-        <div style="font-size: 36px; font-weight: bold;"></div>
-        <div style="font-size: 14px; color: #666;"></div>
-      </div>
-      <div>
-        <div style="font-size: 24px; color: #666;"></div>
-        <div style="font-size: 36px; font-weight: bold;"></div>
-        <div style="font-size: 14px; color: #666;"></div>
+      <div style="text-align: center; padding: 20px; color: #666; font-style: italic;">
+        No hay tiros que cumplan estos requisitos para el jugador.
       </div>
     `;
     return;
@@ -3017,9 +3005,9 @@ function updateStats(filteredShots) {
   // Calculate player stats
   const totalShots = filteredShots.length;
   const madeShots = filteredShots.filter(shot => shot.made).length;
-  const fgPercentage = totalShots > 0 ? (madeShots / totalShots * 100).toFixed(1) : 0;
+  const fgPercentage = totalShots > 0 ? (madeShots / totalShots * 100) : 0;
   
-  // Calculate league averages for the same filters
+  // Get filter values for calculations
   const selectedMatches = getSelectedValues('match');
   const selectedQuarters = getSelectedValues('quarter');
   const selectedResults = getSelectedValues('result');
@@ -3030,16 +3018,11 @@ function updateStats(filteredShots) {
   const minDistance = document.getElementById('minDistance').value;
   const maxDistance = document.getElementById('maxDistance').value;
 
-  // Get all shots from all players with the same filters
-  let leagueShots = [];
-  let teamShots = [];
-  
-  Object.values(playersData).forEach(playerShots => {
-    playerShots.forEach(shot => {
-      // Apply all filters for league, EXCEPT selectedMatches
-      if (selectedQuarters.length > 0 && !selectedQuarters.includes(shot.cuarto)) return;
+  // Helper function to check if shot matches filters
+  function shotMatchesFilters(shot, includeMatches = false) {
+    if (selectedQuarters.length > 0 && !selectedQuarters.includes(shot.cuarto)) return false;
       if (selectedResults.length > 0) {
-        if (!selectedResults.includes(shot.made ? 'made' : 'missed')) return;
+      if (!selectedResults.includes(shot.made ? 'made' : 'missed')) return false;
       }
       if (selectedShotTypes.length > 0) {
         const isThree = isThreePointer(shot);
@@ -3055,101 +3038,269 @@ function updateStats(filteredShots) {
             default: return false;
           }
         });
-        if (!matchesSelectedType) return;
+      if (!matchesSelectedType) return false;
       }
       if (selectedScoreDiffs.length > 0) {
         const scoreDiffCategory = getScoreDiffCategory(shot.dif_marcador);
-        if (!selectedScoreDiffs.includes(scoreDiffCategory)) return;
+      if (!selectedScoreDiffs.includes(scoreDiffCategory)) return false;
       }
       if (selectedCourtSides.length > 0) {
         const isLeftSide = shot.coord_y > 50;
-        if (!selectedCourtSides.includes(isLeftSide ? 'left' : 'right')) return;
+      if (!selectedCourtSides.includes(isLeftSide ? 'left' : 'right')) return false;
       }
       const shotTimeInSeconds = timeToSeconds(shot.tiempo);
-      if (quarterTime && shotTimeInSeconds > parseFloat(quarterTime) * 60) return;
-      if (minDistance && shot.dist_al_aro < parseFloat(minDistance)) return;
-      if (maxDistance && shot.dist_al_aro > parseFloat(maxDistance)) return;
-      // Add to appropriate arrays
-      leagueShots.push(shot);
-      // For team, still respect selectedMatches
-      if (
-        shot.equipo_string === playerTeam &&
-        (selectedMatches.length === 0 || selectedMatches.includes(shot.match))
-      ) {
-        teamShots.push(shot);
+    if (quarterTime && shotTimeInSeconds > parseFloat(quarterTime) * 60) return false;
+    if (minDistance && shot.dist_al_aro < parseFloat(minDistance)) return false;
+    if (maxDistance && shot.dist_al_aro > parseFloat(maxDistance)) return false;
+    
+    if (includeMatches && selectedMatches.length > 0 && !selectedMatches.includes(shot.match)) return false;
+    
+    return true;
+  }
+
+  // Calculate team and league player rankings
+  const teamPlayerStats = {};
+  const leaguePlayerStats = {};
+  
+  Object.values(playersData).forEach(playerShots => {
+    playerShots.forEach(shot => {
+      if (!shotMatchesFilters(shot)) return;
+      
+      const shotPlayerId = shot.player_id;
+      const shotPlayerTeam = shot.equipo_string;
+      
+      // Initialize player stats if not exists
+      if (!leaguePlayerStats[shotPlayerId]) {
+        leaguePlayerStats[shotPlayerId] = { made: 0, total: 0, team: shotPlayerTeam };
+      }
+      
+      // Add to league stats
+      leaguePlayerStats[shotPlayerId].total++;
+      if (shot.made) leaguePlayerStats[shotPlayerId].made++;
+      
+      // Add to team stats if same team
+      if (shotPlayerTeam === playerTeam) {
+        if (!teamPlayerStats[shotPlayerId]) {
+          teamPlayerStats[shotPlayerId] = { made: 0, total: 0 };
+        }
+        
+        // For team stats, also check match filters
+        if (shotMatchesFilters(shot, true)) {
+          teamPlayerStats[shotPlayerId].total++;
+          if (shot.made) teamPlayerStats[shotPlayerId].made++;
+        }
       }
     });
   });
 
-  // Calculate league stats
-  const leagueTotalShots = leagueShots.length;
-  const leagueMadeShots = leagueShots.filter(shot => shot.made).length;
-  const leagueFgPercentage = leagueTotalShots > 0 ? (leagueMadeShots / leagueTotalShots * 100).toFixed(1) : 0;
+  // Calculate percentages and rankings
+  const teamPlayers = Object.entries(teamPlayerStats)
+    .filter(([id, stats]) => stats.total > 0)
+    .map(([id, stats]) => ({
+      id,
+      percentage: (stats.made / stats.total) * 100,
+      made: stats.made,
+      total: stats.total
+    }))
+    .sort((a, b) => b.percentage - a.percentage);
+
+  const leaguePlayers = Object.entries(leaguePlayerStats)
+    .filter(([id, stats]) => stats.total > 0)
+    .map(([id, stats]) => ({
+      id,
+      percentage: (stats.made / stats.total) * 100,
+      made: stats.made,
+      total: stats.total
+    }))
+    .sort((a, b) => b.percentage - a.percentage);
+
+  // Find current player rankings
+  const teamRank = teamPlayers.findIndex(p => p.id === playerId) + 1;
+  const leagueRank = leaguePlayers.findIndex(p => p.id === playerId) + 1;
   
-  // Calculate team stats
-  const teamTotalShots = teamShots.length;
-  const teamMadeShots = teamShots.filter(shot => shot.made).length;
-  const teamFgPercentage = teamTotalShots > 0 ? (teamMadeShots / teamTotalShots * 100).toFixed(1) : 0;
+  const teamTotal = teamPlayers.length;
+  const leagueTotal = leaguePlayers.length;
   
-  // Update the stats display
+  // Calculate team and league averages
+  const teamFgPercentage = teamPlayers.length > 0 ? 
+    teamPlayers.reduce((sum, p) => sum + (p.made / p.total) * 100, 0) / teamPlayers.length : 0;
+  const leagueFgPercentage = leaguePlayers.length > 0 ? 
+    leaguePlayers.reduce((sum, p) => sum + (p.made / p.total) * 100, 0) / leaguePlayers.length : 0;
+
+  // Helper functions for labels and progress
+  function getPerformanceLabel(rank, total) {
+    if (total === 0) return 'N/A';
+    if (rank === 1) return 'EL MEJOR';
+    const percentile = ((total - rank + 1) / total) * 100;
+    if (percentile >= 90) return 'ÉLITE';
+    if (percentile >= 80) return 'MUY BUENO';
+    if (percentile >= 60) return 'BUENO';
+    if (percentile >= 40) return 'PROMEDIO';
+    if (percentile >= 20) return 'BAJO';
+    return 'MUY BAJO';
+  }
+
+  function getProgressBarColor(rank, total) {
+    if (total === 0) return '#ccc';
+    if (rank === 1) return '#1b5e20'; // Even darker green for first rank
+    const percentile = ((total - rank + 1) / total) * 100;
+    if (percentile >= 90) return '#2e7d32'; // Darker green for elite
+    if (percentile >= 80) return '#2e7d32'; // Dark green for very good
+    if (percentile >= 60) return '#4caf50'; // Green for good
+    if (percentile >= 40) return '#ff9800'; // Orange for average
+    if (percentile >= 20) return '#f44336'; // Red for low
+    return '#d32f2f'; // Dark red for very low
+  }
+
+  function getProgressBarWidth(rank, total) {
+    if (total === 0) return 0;
+    return Math.max(10, ((total - rank + 1) / total) * 100); // Minimum 10% width for visibility
+  }
+
+  // Helper function to get text color based on background color
+  function getTextColor(backgroundColor) {
+    // For dark colors, use white text; for light colors, use black text
+    const darkColors = ['#2e7d32', '#d32f2f', '#1976d2'];
+    // Use gold text for first rank EL MEJOR
+    if (backgroundColor === '#1b5e20') return 'white';
+    return darkColors.includes(backgroundColor) ? 'white' : 'black';
+  }
+
+  // Helper function to calculate percentile
+  function calculatePercentile(playerPercentage, allPercentages) {
+    if (allPercentages.length === 0) return 0;
+    const betterCount = allPercentages.filter(p => p < playerPercentage).length;
+    return Math.round((betterCount / allPercentages.length) * 100);
+  }
+
+  // Helper function to get progress bar color based on percentile
+  function getPercentileColor(percentile) {
+    if (percentile >= 90) return '#2e7d32'; // Darker green for elite
+    if (percentile >= 80) return '#2e7d32'; // Dark green for very good (80-89)
+    if (percentile >= 60) return '#4caf50'; // Green for good (60-79)
+    if (percentile >= 40) return '#ff9800'; // Orange for average (40-59)
+    if (percentile >= 20) return '#f44336'; // Red for low (20-39)
+    return '#d32f2f'; // Dark red for very low (0-19)
+  }
+
+  // Helper function to get color based on ranking (for consistency between pills and progress bars)
+  function getColorFromRank(rank, total) {
+    if (total === 0) return '#ccc';
+    if (rank === 1) return '#1b5e20'; // Even darker green for first rank (EL MEJOR)
+    const percentile = ((total - rank + 1) / total) * 100;
+    return getPercentileColor(percentile);
+  }
+
+  // Calculate percentiles for team and league comparisons
+  const teamPercentages = teamPlayers.map(p => p.percentage);
+  const leaguePercentages = leaguePlayers.map(p => p.percentage);
+  
+  const teamPercentile = calculatePercentile(fgPercentage, teamPercentages);
+  const leaguePercentile = calculatePercentile(fgPercentage, leaguePercentages);
+
+  // Calculate relative percentages
+  const teamRelativePercentage = fgPercentage - teamFgPercentage;
+  const leagueRelativePercentage = fgPercentage - leagueFgPercentage;
+  
+  // Helper function to get color and sign for relative percentage
+  function getRelativePercentageDisplay(difference) {
+    if (difference > 0) {
+      return {
+        color: '#4caf50', // Light green
+        text: `+${difference.toFixed(1)}%`
+      };
+    } else if (difference < 0) {
+      return {
+        color: '#f44336', // Light red
+        text: `${difference.toFixed(1)}%`
+      };
+    } else {
+      return {
+        color: '#666', // Gray for no difference
+        text: '0.0%'
+      };
+    }
+  }
+  
+  const teamRelativeDisplay = getRelativePercentageDisplay(teamRelativePercentage);
+  const leagueRelativeDisplay = getRelativePercentageDisplay(leagueRelativePercentage);
+
+  // Create the cards grid
   const fgPercentageElement = document.getElementById('fgPercentage');
   
   fgPercentageElement.innerHTML = `
-    <div style="margin-bottom: 10px;">
-      <div style="font-size: 24px; color: #666;">Jugador</div>
-      ${totalShots > 0 ? `
-        <div style="font-size: 36px; font-weight: bold;">${fgPercentage}%</div>
-        <div style="font-size: 14px; color: #666;">${madeShots}/${totalShots} tiros</div>
-      ` : `
-        <div style="font-size: 24px; color: #666; font-style: italic;">Este jugador no tiene tiros de este tipo</div>
-      `}
-    </div>
-    <hr class="stats-divider">
-    <div style="margin-bottom: 10px;">
-      <div style="font-size: 24px; color: #666;">Equipo</div>
-      <div style="font-size: 36px; font-weight: bold;">${teamFgPercentage}%</div>
-      <div style="font-size: 14px; color: #666;">${teamMadeShots}/${teamTotalShots} tiros</div>
-      ${totalShots > 0 ? `
-        <div style="font-size: 12px; color: #666; margin-top: 5px;">
-          El jugador está <span style="color: ${parseFloat(fgPercentage) > parseFloat(teamFgPercentage) ? '#2e7d32' : '#c62828'}; font-weight: bold;">
-            ${Math.abs(parseFloat(fgPercentage) - parseFloat(teamFgPercentage)).toFixed(1)} puntos porcentuales 
-            ${parseFloat(fgPercentage) > parseFloat(teamFgPercentage) ? 'por encima' : 'por debajo'}
-          </span> del acierto del equipo en este tipo de tiros.
+    <div class="fg-cards-grid">
+      <!-- Player Card -->
+      <div class="fg-card player-card">
+        <div class="fg-card-header">
+          <h4>Jugador</h4>
         </div>
-      ` : ''}
-    </div>
-    <hr class="stats-divider">
-    <div>
-      <div style="font-size: 24px; color: #666;">Liga</div>
-      <div style="font-size: 36px; font-weight: bold;">${leagueFgPercentage}%</div>
-      <div style="font-size: 14px; color: #666;">${leagueMadeShots}/${leagueTotalShots} tiros</div>
-      ${totalShots > 0 ? `
-        <div style="font-size: 12px; color: #666; margin-top: 5px;">
-          El jugador está <span style="color: ${parseFloat(fgPercentage) > parseFloat(leagueFgPercentage) ? '#2e7d32' : '#c62828'}; font-weight: bold;">
-            ${Math.abs(parseFloat(fgPercentage) - parseFloat(leagueFgPercentage)).toFixed(1)} puntos porcentuales 
-            ${parseFloat(fgPercentage) > parseFloat(leagueFgPercentage) ? 'por encima' : 'por debajo'}
-          </span> del acierto de la liga en este tipo de tiros.
+        <div class="fg-card-body">
+          <div class="fg-stat-row">
+            <span class="fg-stat-label">%TC</span>
+            <span class="fg-stat-value">${fgPercentage.toFixed(1)}% </span>
+            <span class="fg-stat-detail">(${madeShots}/${totalShots})</span>
+          </div>
         </div>
-      ` : ''}
+      </div>
+
+      <!-- Team Card -->
+      <div class="fg-card team-card">
+        <div class="fg-card-header">
+          <h4>Equipo</h4>
+        </div>
+        <div class="fg-card-body">
+          <div class="fg-stat-row">
+            <span class="fg-stat-label">%TC</span>
+            <span class="fg-stat-value">${teamFgPercentage.toFixed(1)}% </span>
+            <span class="fg-stat-detail">(${teamPlayers.reduce((sum, p) => sum + p.made, 0)}/${teamPlayers.reduce((sum, p) => sum + p.total, 0)})</span>
+          </div>
+          <div class="fg-stat-row">
+            <span class="fg-stat-label">%TC relativo del jugador</span>
+            <span class="fg-stat-value" style="color: ${teamRelativeDisplay.color}; font-weight: bold;">${teamRelativeDisplay.text}</span>
+          </div>
+          <div class="fg-stat-row">
+            <div class="fg-performance-container" title="Equipo: Ranking ${teamRank} de ${teamTotal} en su equipo (Percentil ${Math.round(((teamTotal - teamRank + 1) / teamTotal) * 100)})">
+              <span class="fg-performance-pill" style="background-color: ${getColorFromRank(teamRank, teamTotal)}; color: ${getTextColor(getColorFromRank(teamRank, teamTotal))};">${getPerformanceLabel(teamRank, teamTotal)}</span>
+              <div class="fg-progress-bar-container">
+                <div class="fg-progress-bar" style="background-color: ${getColorFromRank(teamRank, teamTotal)}; width: ${teamRank === 1 ? 100 : Math.round(((teamTotal - teamRank + 1) / teamTotal) * 100)}%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- League Card -->
+      <div class="fg-card league-card">
+        <div class="fg-card-header">
+          <h4>Liga</h4>
+        </div>
+        <div class="fg-card-body">
+          <div class="fg-stat-row">
+            <span class="fg-stat-label">%TC</span>
+            <span class="fg-stat-value">${leagueFgPercentage.toFixed(1)}%</span>
+            <span class="fg-stat-detail">(${leaguePlayers.reduce((sum, p) => sum + p.made, 0)}/${leaguePlayers.reduce((sum, p) => sum + p.total, 0)})</span>
+          </div>
+          <div class="fg-stat-row">
+            <span class="fg-stat-label">%TC relativo del jugador</span>
+            <span class="fg-stat-value" style="color: ${leagueRelativeDisplay.color}; font-weight: bold;">${leagueRelativeDisplay.text}</span>
+          </div>
+          <div class="fg-stat-row">
+            <div class="fg-performance-container" title="Liga: Ranking ${leagueRank} de ${leagueTotal} en la liga (Percentil ${Math.round(((leagueTotal - leagueRank + 1) / leagueTotal) * 100)})">
+              <span class="fg-performance-pill" style="background-color: ${getColorFromRank(leagueRank, leagueTotal)}; color: ${getTextColor(getColorFromRank(leagueRank, leagueTotal))};">${getPerformanceLabel(leagueRank, leagueTotal)}</span>
+              <div class="fg-progress-bar-container">
+                <div class="fg-progress-bar" style="background-color: ${getColorFromRank(leagueRank, leagueTotal)}; width: ${leagueRank === 1 ? 100 : Math.round(((leagueTotal - leagueRank + 1) / leagueTotal) * 100)}%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Empty Card for 2x2 grid balance -->
+      <div class="fg-card empty-card" style="visibility: hidden;">
+      </div>
     </div>
   `;
-  
-  // Color the player's percentage based on comparison to team average
-  if (totalShots > 0) {
-    const playerPercentage = parseFloat(fgPercentage);
-    const teamPercentage = parseFloat(teamFgPercentage);
-    const percentageDiff = playerPercentage - teamPercentage;
-    
-    if (percentageDiff > 5) {
-      fgPercentageElement.style.color = 'rgb(0, 200, 0)'; // Significantly better than team
-    } else if (percentageDiff < -5) {
-      fgPercentageElement.style.color = 'rgb(200, 0, 0)'; // Significantly worse than team
-    } else {
-      fgPercentageElement.style.color = 'rgb(0, 0, 0)'; // Similar to team
-    }
-  } else {
-    fgPercentageElement.style.color = 'rgb(0, 0, 0)'; // Default color when no shots
-  }
 }
 
 function updateSelectedFilters() {

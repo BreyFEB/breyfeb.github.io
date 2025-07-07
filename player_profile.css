@@ -1086,14 +1086,267 @@ header {
   background: white;
   border-radius: 8px;
   padding: 20px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   text-align: center;
 }
 
 .fg-percentage {
-  font-size: 36px;
-  font-weight: bold;
+  font-size: 16px;
+  font-weight: normal;
   margin-bottom: 10px;
+  overflow-x: auto;
+  padding: 10px;
+}
+
+.fg-percentage table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Roboto', Arial, sans-serif;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.fg-percentage table thead tr {
+  background-color: #f5f5f5;
+}
+
+.fg-percentage table th {
+  padding: 12px;
+  font-weight: bold;
+  color: #333;
+  border-bottom: 2px solid #ddd;
+}
+
+.fg-percentage table th:first-child {
+  text-align: left;
+}
+
+.fg-percentage table th:not(:first-child) {
+  text-align: center;
+}
+
+.fg-percentage table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.fg-percentage table td:first-child {
+  text-align: left;
+}
+
+.fg-percentage table td:not(:first-child) {
+  text-align: center;
+}
+
+.fg-percentage .category-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 12px;
+  color: white;
+}
+
+.fg-percentage .performance-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.fg-percentage .performance-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fg-percentage .performance-label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.fg-percentage .performance-rank {
+  font-size: 12px;
+  color: #666;
+}
+
+.fg-percentage .progress-bar-container {
+  background-color: #e0e0e0;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.fg-percentage .progress-bar {
+  height: 100%;
+  transition: width 0.3s ease;
+  border-radius: 4px;
+}
+
+/* Responsive styles for the table */
+@media (max-width: 768px) {
+  .fg-percentage table {
+    font-size: 14px;
+  }
+  
+  .fg-percentage table th,
+  .fg-percentage table td {
+    padding: 8px 6px;
+  }
+  
+  .fg-percentage .category-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    font-size: 12px;
+  }
+  
+  .fg-percentage .performance-label {
+    font-size: 12px;
+  }
+  
+  .fg-percentage .performance-rank {
+    font-size: 10px;
+  }
+  
+  .fg-percentage .progress-bar-container {
+    height: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .fg-percentage {
+    overflow-x: auto;
+  }
+  
+  .fg-percentage table th,
+  .fg-percentage table td {
+    padding: 8px 4px;
+    font-size: 12px;
+  }
+  
+  .fg-percentage .category-icon {
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+    margin-right: 8px;
+  }
+  
+  .fg-percentage .performance-label {
+    font-size: 10px;
+    padding: 2px 8px;
+  }
+  
+  .fg-percentage .performance-rank {
+    font-size: 10px;
+  }
+  
+  /* Mobile responsive table */
+  .fg-percentage table,
+  .fg-percentage table thead,
+  .fg-percentage table tbody,
+  .fg-percentage table th,
+  .fg-percentage table td,
+  .fg-percentage table tr {
+    display: block;
+  }
+  
+  .fg-percentage table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  
+  .fg-percentage table tr {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: white;
+  }
+  
+  .fg-percentage table td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    text-align: left !important;
+  }
+  
+  .fg-percentage table td:before {
+    content: attr(data-label) ": ";
+    position: absolute;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .fg-percentage table td:last-child {
+    border-bottom: none;
+  }
+}
+
+/* Points bar chart */
+.points-chart {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+}
+.points-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.team-logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  object-fit: cover;
+  border: 2px solid #FF9E1B;
+}
+.team-rank {
+  width: 70px;
+  text-align: right;
+  font-weight: 600;
+  color: #111C4E;
+  flex-shrink: 0;
+}
+.points-bar-container {
+  flex: 1;
+  background: #e0e0e0;
+  height: 36px;
+  border-radius: 18px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+.points-row:hover {
+  transform: scale(1.08);
+}
+.points-bar {
+  height: 100%;
+  border-radius: 18px 0 0 18px;
+  display: flex;
+  justify-content: end;
+  align-content: center;
+  flex-wrap: wrap;
+}
+.points-value {
+  margin-right: 2px;
+  font-weight: bold;
+  font-size: 0.95em;
+  color: white; /* Contraste sobre fondo blanco */
+  min-width: 38px;
+  text-align: left;
 }
 
 .shot-counts {
@@ -1269,59 +1522,219 @@ header {
   }
 }
 
-/* Points bar chart */
-.points-chart {
-  width: 90%;
-  max-width: 800px;
-  margin: 0 auto 40px auto;
+/* Field Goal Percentage Cards Grid */
+.fg-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  width: 100%;
+  font-family: 'Roboto', Arial, sans-serif;
 }
-.points-row {
+
+.player-card .fg-stat-row {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 8px;
+  gap: 20px;
 }
-.team-logo {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  flex-shrink: 0;
-  object-fit: cover;
-  border: 2px solid #FF9E1B;
-}
-.team-rank {
-  width: 70px;
-  text-align: right;
-  font-weight: 600;
-  color: #111C4E;
-  flex-shrink: 0;
-}
-.points-bar-container {
-  flex: 1;
-  background: #e0e0e0;
-  height: 36px;
-  border-radius: 18px;
-  position: relative;
+
+.fg-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
   overflow: hidden;
-  transition: transform 0.2s ease;
-  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.points-row:hover {
-  transform: scale(1.08);
+
+.fg-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
-.points-bar {
-  height: 100%;
-  border-radius: 18px 0 0 18px;
-  display: flex;
-  justify-content: end;
-  align-content: center;
-  flex-wrap: wrap;
+
+.fg-card-header {
+  background: linear-gradient(135deg, #1976d2, #1565c0);
+  color: white;
+  padding: 16px 20px;
+  text-align: center;
 }
-.points-value {
-  margin-right: 2px;
+
+.fg-card-header h4 {
+  margin: 0;
+  font-size: 16px;
   font-weight: bold;
-  font-size: 0.95em;
-  color: white; /* Contraste sobre fondo blanco */
-  min-width: 38px;
-  text-align: left;
+  letter-spacing: 0.5px;
+}
+
+.fg-card-body {
+  padding: 10px;
+}
+
+.fg-stat-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0px;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+  gap: 6px;
+}
+
+.fg-stat-row:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.fg-stat-label {
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+  flex: 0 0 auto;
+}
+
+.fg-stat-value {
+  font-weight: bold;
+  color: #111;
+  font-size: 14px;
+  text-align: right;
+  flex: 1 1 auto;
+}
+
+.fg-stat-detail {
+  font-size: 12px;
+  color: #666;
+  font-weight: normal;
+}
+
+.fg-stat-na {
+  color: #999;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.fg-performance-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  align-items: center;
+  width: 100%;
+}
+
+.fg-performance-pill {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  display: inline-block;
+  text-align: center;
+  min-width: 80px;
+}
+
+.fg-progress-bar-container {
+  width: 100%;
+  background-color: #e0e0e0;
+  height: 6px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.fg-progress-bar {
+  height: 100%;
+  transition: width 0.3s ease;
+  border-radius: 3px;
+}
+
+/* Special styling for different card types */
+.fg-card-header {
+  background: #f8f9fa;
+  color: #111C4E;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .fg-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .fg-card-header {
+    padding: 12px 16px;
+  }
+  
+  .fg-card-header h4 {
+    font-size: 14px;
+  }
+  
+  .fg-card-body {
+    padding: 16px;
+  }
+  
+  .fg-stat-row {
+    margin-bottom: 10px;
+    padding: 6px 0;
+  }
+  
+  .fg-stat-label,
+  .fg-stat-value {
+    font-size: 13px;
+  }
+  
+  .fg-stat-detail {
+    font-size: 11px;
+  }
+  
+  .fg-performance-pill {
+    font-size: 11px;
+    padding: 3px 10px;
+    min-width: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .fg-cards-grid {
+    gap: 10px;
+  }
+  
+  .fg-card-header {
+    padding: 10px 12px;
+  }
+  
+  .fg-card-header h4 {
+    font-size: 13px;
+  }
+  
+  .fg-card-body {
+    padding: 12px;
+  }
+  
+  .fg-stat-row {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    margin-bottom: 8px;
+  }
+  
+  .fg-stat-label {
+    font-size: 12px;
+  }
+  
+  .fg-stat-value {
+    font-size: 12px;
+    text-align: left;
+  }
+  
+  .fg-performance-container {
+    align-items: flex-start;
+    width: 100%;
+  }
+  
+  .fg-performance-pill {
+    font-size: 10px;
+    padding: 2px 8px;
+    min-width: 60px;
+  }
 }
