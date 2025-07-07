@@ -94,8 +94,15 @@
   <div class="container">
     <h1 class="section-title" style="text-align: center; margin-bottom: 20px;">Rankings</h1>
 
+    <!-- BOTÓN FILTROS Y BREADCRUMB -->
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+      <button id="toggleFiltersBtn" style="padding: 8px 16px; background-color: #FF9E1B; color: #1D296F; font-weight: bold; border: none; border-radius: 4px; cursor: pointer;">Filtros</button>
+      <nav id="filtersBreadcrumb" style="display:none; margin-left: 20px; font-size: 1em; color: #FF9E1B;"></nav>
+    </div>
+
     <!-- FILTROS -->
-    <div class="stats-filters">
+    <div class="stats-filters" id="statsFilters">
+      <input type="text" id="searchPlayerTeam" placeholder="Buscar equipo o jugador...">
       <div class="custom-select">
         <div class="select-header" onclick="toggleDropdown('competition')">
           <span>Competición</span>
@@ -173,7 +180,6 @@
         </div>
       </div>
 
-      <input type="text" id="searchPlayerTeam" placeholder="Buscar equipo o jugador...">
       <div class="toggle-container">
         <span>Totales</span>
         <label class="switch">
@@ -186,12 +192,16 @@
       <button id="btnResetFilters" type="button">Resetear Filtros</button>
     </div>
 
-    <!-- TABLA -->
-    <div class="table-scroll-arrows">
-      <button id="scrollLeftBtn" class="scroll-arrow">&#8592;</button>
-      <button id="scrollRightBtn" class="scroll-arrow">&#8594;</button>
+    <!-- NOTA Y BOTONES DE NAVEGACIÓN EN LÍNEA -->
+    <div class="table-nav-row">
+      <div class="table-note" id="tableNote">Haz clic sobre la tabla para navegar y hacer scroll</div>
+      <div class="table-scroll-arrows">
+        <button id="scrollLeftBtn" class="scroll-arrow">&#8592;</button>
+        <button id="scrollRightBtn" class="scroll-arrow">&#8594;</button>
+      </div>
     </div>
-    <div class="stats-table-container">
+    <!-- TABLA -->
+    <div class="stats-table-container" id="statsTableContainer" style="position:relative;">
       <button class="mobile-columns-toggle" id="toggleColumns">Mostrar más columnas</button>
       <table class="stats-table" id="statsTable">
         <thead>

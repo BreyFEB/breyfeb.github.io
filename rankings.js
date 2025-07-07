@@ -438,6 +438,7 @@ function applyFilters() {
 
   renderTable(paginatedData, modeToggle.checked ? "promedios" : "totales");
   updatePaginationInfo(filteredData.length);
+  updateFiltersBreadcrumb();
 }
 
 function limitName(name, maxChars = 15) {
@@ -532,6 +533,23 @@ function renderTable(data, mode = "totales") {
     const teamName = player.teamName;
     const shortTeamName = teamName.length > 3 ? teamName.substring(0, 3) : teamName;
 
+    // Formato para nombre en móvil: dos filas (abreviatura del nombre + primer apellido | segundo apellido)
+    let playerNameHtml = formattedName;
+    if (window.innerWidth <= 768) {
+      const parts = formattedName.split(' ');
+      if (parts.length > 2) {
+        // Ejemplo: "Oscar Torrado Serrano" => "O. Torrado" (1ª fila), "Serrano" (2ª fila)
+        const firstName = parts[0];
+        const firstSurname = parts[1];
+        const secondSurname = parts.slice(2).join(' ');
+        playerNameHtml = `<span class='player-name-mobile-1'>${firstName.charAt(0)}. ${firstSurname}</span><br><span class='player-name-mobile-2'>${secondSurname}</span>`;
+      } else if (parts.length === 2) {
+        // Ejemplo: "Oscar Torrado" => "O. Torrado" (1ª fila), "" (2ª fila)
+        const firstName = parts[0];
+        const firstSurname = parts[1];
+        playerNameHtml = `<span class='player-name-mobile-1'>${firstName.charAt(0)}. ${firstSurname}</span>`;
+      }
+    }
     row.innerHTML = `
       <td>${rank}</td>
       <td>${player.dorsal}</td>
@@ -541,7 +559,7 @@ function renderTable(data, mode = "totales") {
         </a>
       </td>
       <td class="player-name" onclick='showPlayerMatches(${JSON.stringify(player).replace(/'/g, "\\'")})'
-          title="${formattedName}">${formattedName}</td>
+          title="${formattedName}" data-col="playerName">${playerNameHtml}</td>
       <td class="team-name" data-fullname="${teamName}">${shortTeamName}</td>
       <td data-col="min">${minutes}</td>
       <td data-col="pts">${pts}</td>
@@ -989,4 +1007,82 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   });
+});
+
+// Mostrar/ocultar filtros al pulsar el botón
+window.addEventListener('DOMContentLoaded', () => {
+  const toggleBtn = document.getElementById('toggleFiltersBtn');
+  const filtersDiv = document.getElementById('statsFilters');
+  if (toggleBtn && filtersDiv) {
+    toggleBtn.addEventListener('click', () => {
+      filtersDiv.classList.toggle('active');
+      if (filtersDiv.classList.contains('active')) {
+        toggleBtn.textContent = 'Ocultar filtros';
+      } else {
+        toggleBtn.textContent = 'Filtros';
+      }
+    });
+  }
+});
+
+// Breadcrumb de filtros aplicados
+function updateFiltersBreadcrumb() {
+  const breadcrumb = document.getElementById('filtersBreadcrumb');
+  const comps = getSelectedValues('competition');
+  const teams = getSelectedValues('team');
+  const rounds = getSelectedValues('round');
+  const genders = getSelectedValues('gender');
+  const search = document.getElementById('searchPlayerTeam').value.trim();
+  let items = [];
+  if (comps.length > 0) items.push(`<span class='breadcrumb-item'>Competición: ${comps.map(formatCompetitionName).join(', ')}</span>`);
+  if (rounds.length > 0) items.push(`<span class='breadcrumb-item'>Fase: ${rounds.join(', ')}</span>`);
+  if (teams.length > 0) items.push(`<span class='breadcrumb-item'>Equipo: ${teams.join(', ')}</span>`);
+  if (genders.length > 0) items.push(`<span class='breadcrumb-item'>Género: ${genders.map(g => g === 'H' ? 'Hombres' : 'Mujeres').join(', ')}</span>`);
+  if (search) items.push(`<span class='breadcrumb-item'>Búsqueda: ${search}</span>`);
+  if (items.length > 0) {
+    breadcrumb.innerHTML = items.join('');
+    breadcrumb.style.display = 'flex';
+  } else {
+    breadcrumb.innerHTML = '';
+    breadcrumb.style.display = 'none';
+  }
+}
+
+// Llamar a updateFiltersBreadcrumb tras aplicar filtros
+const originalApplyFilters = applyFilters;
+applyFilters = function() {
+  originalApplyFilters.apply(this, arguments);
+  updateFiltersBreadcrumb();
+};
+
+// También actualizar breadcrumb al resetear filtros
+window.addEventListener('DOMContentLoaded', () => {
+  const resetBtn = document.getElementById('btnResetFilters');
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      setTimeout(updateFiltersBreadcrumb, 100); // tras resetear
+    });
+  }
+});
+
+// --- Activar/desactivar navegación en la tabla con borde naranja ---
+document.addEventListener('DOMContentLoaded', () => {
+  const tableContainer = document.getElementById('statsTableContainer');
+  if (tableContainer) {
+    // Inicialmente desactivada
+    tableContainer.classList.remove('table-active');
+    tableContainer.style.overflow = 'hidden';
+    // Al hacer clic en la tabla, activar navegación
+    tableContainer.addEventListener('mousedown', (e) => {
+      tableContainer.classList.add('table-active');
+      tableContainer.style.overflow = 'auto';
+    });
+    // Al hacer clic fuera de la tabla, desactivar navegación
+    document.addEventListener('mousedown', (e) => {
+      if (!tableContainer.contains(e.target) && tableContainer.classList.contains('table-active')) {
+        tableContainer.classList.remove('table-active');
+        tableContainer.style.overflow = 'hidden';
+      }
+    });
+  }
 }); 
