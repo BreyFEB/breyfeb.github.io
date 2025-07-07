@@ -448,16 +448,19 @@ header {
 .total-row {
   font-weight: bold;
   background-color: #eee;
+  vertical-align: middle;
 }
 .prom-row {
   font-weight: bold;
   background-color: #ddd;
   font-size: 1em;
+  vertical-align: middle;
 }
 .grand-total-row {
   font-weight: bold;
   background-color: #CDE2FF;
   color: #111C4E;
+  vertical-align: middle;
 }
 
 /***********************************************

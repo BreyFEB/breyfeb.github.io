@@ -1921,7 +1921,7 @@ async function loadStats() {
       
       .total-row td, .prom-row td, .per40-row td {
         text-align: center;
-        vertical-align: top;
+        vertical-align: middle;
         padding: 8px 4px;
       }
       
@@ -3273,6 +3273,7 @@ function updateStats(filteredShots) {
           </div>
           <div class="fg-stat-row">
             <div class="fg-performance-container" title="Equipo: Ranking ${teamRank} de ${teamTotal} en su equipo (Percentil ${Math.round(((teamTotal - teamRank + 1) / teamTotal) * 100)})">
+              <span class="fg-stat-label">Rendimiento con respecto al equipo</span>
               <span class="fg-performance-pill" style="background-color: ${getColorFromRank(teamRank, teamTotal)}; color: ${getTextColor(getColorFromRank(teamRank, teamTotal))};">${getPerformanceLabel(teamRank, teamTotal)}</span>
               <div class="fg-progress-bar-container">
                 <div class="fg-progress-bar" style="background-color: ${getColorFromRank(teamRank, teamTotal)}; width: ${teamRank === 1 ? 100 : Math.round(((teamTotal - teamRank + 1) / teamTotal) * 100)}%;"></div>
@@ -3299,6 +3300,7 @@ function updateStats(filteredShots) {
           </div>
           <div class="fg-stat-row">
             <div class="fg-performance-container" title="Liga: Ranking ${leagueRank} de ${leagueTotal} en la liga (Percentil ${Math.round(((leagueTotal - leagueRank + 1) / leagueTotal) * 100)})">
+              <span class="fg-stat-label">Rendimiento con respecto a la liga</span>
               <span class="fg-performance-pill" style="background-color: ${getColorFromRank(leagueRank, leagueTotal)}; color: ${getTextColor(getColorFromRank(leagueRank, leagueTotal))};">${getPerformanceLabel(leagueRank, leagueTotal)}</span>
               <div class="fg-progress-bar-container">
                 <div class="fg-progress-bar" style="background-color: ${getColorFromRank(leagueRank, leagueTotal)}; width: ${leagueRank === 1 ? 100 : Math.round(((leagueTotal - leagueRank + 1) / leagueTotal) * 100)}%;"></div>

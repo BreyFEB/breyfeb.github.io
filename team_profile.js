@@ -2304,6 +2304,7 @@ function updateTeamShotStats(filteredShots) {
             </div>
             <div class="fg-stat-row">
               <div class="fg-performance-container" title="Liga: Ranking ${teamRank} de ${totalTeams} en la liga">
+                <span class="fg-stat-label">Rendimiento con respecto a la liga</span>
                 <span class="fg-performance-pill" style="background-color: ${getProgressBarColor(teamRank, totalTeams)}; color: ${getTextColor(getProgressBarColor(teamRank, totalTeams))};">${getPerformanceLabel(teamRank, totalTeams)}</span>
                 <div class="fg-progress-bar-container">
                   <div class="fg-progress-bar" style="background-color: ${getProgressBarColor(teamRank, totalTeams)}; width: ${teamRank === 1 ? 100 : Math.round(((totalTeams - teamRank + 1) / totalTeams) * 100)}%;"></div>
