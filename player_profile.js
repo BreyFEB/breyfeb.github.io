@@ -1465,6 +1465,9 @@ async function loadStats() {
     { type: 'val', label: 'Valoración', field: 'va' }
   ];
 
+  // Get all players data to find rival team logos
+  const allPlayers = data.players || [];
+
   recordTypes.forEach(record => {
     const recordCards = document.querySelectorAll(`.record-card-${record.type}`);
     if (recordCards.length > 0) {
@@ -1481,14 +1484,23 @@ async function loadStats() {
           return;
         }
 
+        // Get rival team logo
+        const rivalLogo = getRivalTeamLogo(maxMatch.rival, allPlayers);
+
         // Update record value
         card.querySelector('.record-value').textContent = maxMatch[record.field];
         
-        // Update record details
+        // Update record details with rival logo
         card.querySelector('.record-details').innerHTML = `
           <p>Rival: ${toTitleCase(maxMatch.rival)}</p>
           <p>Fecha: ${maxMatch.matchDate}</p>
           <a href="ficha.html?gameId=${maxMatch.game_id}">Ir al partido</a>
+          <div class="rival-logo-container">
+            <span class="vs-text">vs</span>
+            <div class="rival-logo-circle">
+              <img src="${rivalLogo || 'team_icon.png'}" alt="Logo ${toTitleCase(maxMatch.rival)}" class="rival-logo" onerror="this.src='team_icon.png'">
+            </div>
+          </div>
         `;
       });
     }
@@ -3641,3 +3653,10 @@ document.addEventListener('DOMContentLoaded', function() {
     resetBtn.addEventListener('click', resetFilters);
   }
 });
+
+// Add the getRivalTeamLogo function (add this after the existing helper functions)
+function getRivalTeamLogo(rivalTeamName, allPlayers) {
+  // Find a player from the rival team to get their team logo
+  const rivalPlayer = allPlayers.find(p => p.teamName === rivalTeamName);
+  return rivalPlayer ? rivalPlayer.teamLogo : null;
+}

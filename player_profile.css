@@ -817,6 +817,7 @@ header {
     display: flex;
     flex-direction: column;
     min-height: 180px; /* Asegura una altura mínima consistente */
+    position: relative;
 }
 
 .record-header {
@@ -1737,4 +1738,52 @@ header {
     padding: 2px 8px;
     min-width: 60px;
   }
+}
+
+/* Rival logo styles for record cards */
+.rival-logo-container {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vs-text {
+  font-size: 0.9em;
+  color: #666;
+  font-weight: 500;
+}
+
+.rival-logo-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #e0e0e0;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rival-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Ensure record cards have relative positioning for absolute positioning of rival logo */
+.record-card-pts, 
+.record-card-reb, 
+.record-card-ast, 
+.record-card-rob, 
+.record-card-tap, 
+.record-card-3pm, 
+.record-card-tla, 
+.record-card-t2c, 
+.record-card-val {
+  position: relative;
 }

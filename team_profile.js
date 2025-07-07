@@ -3299,8 +3299,14 @@ function filterLineups(data) {
   });
 }
 
-function getLineupColumnStats(data, column) {
-  const values = data.map(row => parseFloat(row[column]) || 0);
+function getLineupColumnStats(data, column, usePer100 = false) {
+  const values = data.map(row => {
+    let value = parseFloat(row[column]) || 0;
+    if (usePer100 && column !== 'Posesiones') {
+      value = calculateLineupPer100(value, row.Posesiones);
+    }
+    return value;
+  });
   return {
     min: Math.min(...values),
     max: Math.max(...values)
@@ -3360,7 +3366,7 @@ function renderLineupTable(data) {
       // trim name first
       const trimmedName = playerName.trim();
       const nameParts = trimmedName.split(' ');
-      const lastName = nameParts[nameParts.length - 1];
+      const lastName = nameParts[1];
       name.textContent = lastName;
       name.title = playerName; // Full name as tooltip
       
@@ -3389,7 +3395,7 @@ function renderLineupTable(data) {
       
       // Add color coding for numeric columns
       if (column !== 'Posesiones' && !isNaN(value)) {
-        const stats = getLineupColumnStats(filteredData, column);
+        const stats = getLineupColumnStats(filteredData, column, showLineupPer100);
         const color = getLineupColorForValue(value, stats.min, stats.max);
         td.style.backgroundColor = color;
       }
