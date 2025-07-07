@@ -3246,21 +3246,21 @@ function updateStats(filteredShots) {
       <div class="fg-card player-card">
         <div class="fg-card-header">
           <h4>Jugador</h4>
-        </div>
+    </div>
         <div class="fg-card-body">
           <div class="fg-stat-row">
             <span class="fg-stat-label">%TC</span>
             <span class="fg-stat-value">${fgPercentage.toFixed(1)}% </span>
             <span class="fg-stat-detail">(${madeShots}/${totalShots})</span>
-          </div>
         </div>
-      </div>
+    </div>
+        </div>
 
       <!-- Team Card -->
       <div class="fg-card team-card">
         <div class="fg-card-header">
           <h4>Equipo</h4>
-        </div>
+    </div>
         <div class="fg-card-body">
           <div class="fg-stat-row">
             <span class="fg-stat-label">%TC</span>
