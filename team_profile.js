@@ -2180,32 +2180,139 @@ function updateTeamShotStats(filteredShots) {
   const leagueMadeShots = leagueShotsFiltered.filter(shot => shot.made).length;
   const leagueFgPercentage = leagueTotalShots > 0 ? (leagueMadeShots / leagueTotalShots * 100).toFixed(1) : 0;
   
-  // Update the stats display
+  // Helper functions for performance labels and colors
+  function getPerformanceLabel(rank, total) {
+    if (total === 0) return 'N/A';
+    if (rank === 1) return 'EL MEJOR';
+    const percentile = ((total - rank + 1) / total) * 100;
+    if (percentile >= 90) return 'ÉLITE';
+    if (percentile >= 80) return 'MUY BUENO';
+    if (percentile >= 60) return 'BUENO';
+    if (percentile >= 40) return 'PROMEDIO';
+    if (percentile >= 20) return 'BAJO';
+    return 'MUY BAJO';
+  }
+
+  function getProgressBarColor(rank, total) {
+    if (total === 0) return '#ccc';
+    if (rank === 1) return '#1b5e20'; // Even darker green for first rank
+    const percentile = ((total - rank + 1) / total) * 100;
+    if (percentile >= 90) return '#2e7d32'; // Darker green for elite
+    if (percentile >= 80) return '#2e7d32'; // Dark green for very good
+    if (percentile >= 60) return '#4caf50'; // Green for good
+    if (percentile >= 40) return '#ff9800'; // Orange for average
+    if (percentile >= 20) return '#f44336'; // Red for low
+    return '#d32f2f'; // Dark red for very low
+  }
+
+  function getTextColor(backgroundColor) {
+    // For dark colors, use white text; for light colors, use black text
+    if (backgroundColor === '#1b5e20') return 'white';
+    const darkColors = ['#2e7d32', '#d32f2f', '#1976d2'];
+    return darkColors.includes(backgroundColor) ? 'white' : 'black';
+  }
+
+  function getRelativePercentageDisplay(difference) {
+    if (difference > 0) {
+      return {
+        color: '#4caf50', // Light green
+        text: `+${difference.toFixed(1)}%`
+      };
+    } else if (difference < 0) {
+      return {
+        color: '#f44336', // Light red
+        text: `${difference.toFixed(1)}%`
+      };
+    } else {
+      return {
+        color: '#666', // Gray for no difference
+        text: '0.0%'
+      };
+    }
+  }
+
+  // Calculate team rank in league
+  const leagueTeamPercentages = [];
+  const processedTeams = new Set();
+  
+  allLeagueShots.forEach(shot => {
+    if (!processedTeams.has(shot.equipo_string)) {
+      const teamShots = allLeagueShots.filter(s => s.equipo_string === shot.equipo_string);
+      const teamMade = teamShots.filter(s => s.made).length;
+      const teamTotal = teamShots.length;
+      const teamPct = teamTotal > 0 ? (teamMade / teamTotal) * 100 : 0;
+      
+      leagueTeamPercentages.push({
+        team: shot.equipo_string,
+        percentage: teamPct
+      });
+      processedTeams.add(shot.equipo_string);
+    }
+  });
+
+  // Sort teams by percentage (descending) and find current team rank
+  leagueTeamPercentages.sort((a, b) => b.percentage - a.percentage);
+  const currentTeamName = teamPlayers[0]?.teamName;
+  const teamRankIndex = leagueTeamPercentages.findIndex(t => t.team === currentTeamName);
+  const teamRank = teamRankIndex !== -1 ? teamRankIndex + 1 : leagueTeamPercentages.length;
+  const totalTeams = leagueTeamPercentages.length;
+
+  // Calculate relative percentage
+  const leagueRelativePercentage = parseFloat(fgPercentage) - parseFloat(leagueFgPercentage);
+  const leagueRelativeDisplay = getRelativePercentageDisplay(leagueRelativePercentage);
+
+  // Update the stats display with card-based design
   const fgPercentageElement = document.getElementById('teamFgPercentage');
   
   fgPercentageElement.innerHTML = `
-    <div style="margin-bottom: 10px;">
-      <div style="font-size: 24px; color: #666;">Equipo</div>
-      ${totalShots > 0 ? `
-        <div style="font-size: 36px; font-weight: bold;">${fgPercentage}%</div>
-        <div style="font-size: 14px; color: #666;">${madeShots}/${totalShots} tiros</div>
-      ` : `
-        <div style="font-size: 24px; color: #666; font-style: italic;">Este equipo no tiene tiros de este tipo</div>
-      `}
-    </div>
-    <hr class="stats-divider">
-    <div>
-      <div style="font-size: 24px; color: #666;">Liga</div>
-      <div style="font-size: 36px; font-weight: bold;">${leagueFgPercentage}%</div>
-      <div style="font-size: 14px; color: #666;">${leagueMadeShots}/${leagueTotalShots} tiros</div>
-      ${totalShots > 0 ? `
-        <div style="font-size: 12px; color: #666; margin-top: 5px;">
-          El equipo está <span style="color: ${parseFloat(fgPercentage) > parseFloat(leagueFgPercentage) ? '#2e7d32' : '#c62828'}; font-weight: bold;">
-            ${Math.abs(parseFloat(fgPercentage) - parseFloat(leagueFgPercentage)).toFixed(1)} puntos porcentuales 
-            ${parseFloat(fgPercentage) > parseFloat(leagueFgPercentage) ? 'por encima' : 'por debajo'}
-          </span> del acierto de la liga en este tipo de tiros.
+    <div class="fg-cards-grid">
+      <!-- Team Card -->
+      <div class="fg-card team-card">
+        <div class="fg-card-header">
+          <h4>Equipo</h4>
         </div>
-      ` : ''}
+        <div class="fg-card-body">
+          ${totalShots > 0 ? `
+            <div class="fg-stat-row">
+              <span class="fg-stat-label">%TC</span>
+              <span class="fg-stat-value">${fgPercentage}%</span>
+              <span class="fg-stat-detail">(${madeShots}/${totalShots})</span>
+            </div>
+          ` : `
+            <div class="fg-stat-row">
+              <span class="fg-stat-value fg-stat-na">Sin tiros de este tipo</span>
+            </div>
+          `}
+        </div>
+      </div>
+
+      <!-- League Card -->
+      <div class="fg-card league-card">
+        <div class="fg-card-header">
+          <h4>Liga</h4>
+        </div>
+        <div class="fg-card-body">
+          <div class="fg-stat-row">
+            <span class="fg-stat-label">%TC</span>
+            <span class="fg-stat-value">${leagueFgPercentage}%</span>
+            <span class="fg-stat-detail">(${leagueMadeShots}/${leagueTotalShots})</span>
+          </div>
+          ${totalShots > 0 ? `
+            <div class="fg-stat-row">
+              <span class="fg-stat-label">%TC relativo del equipo</span>
+              <span class="fg-stat-value" style="color: ${leagueRelativeDisplay.color}; font-weight: bold;">${leagueRelativeDisplay.text}</span>
+            </div>
+            <div class="fg-stat-row">
+              <div class="fg-performance-container" title="Liga: Ranking ${teamRank} de ${totalTeams} en la liga">
+                <span class="fg-performance-pill" style="background-color: ${getProgressBarColor(teamRank, totalTeams)}; color: ${getTextColor(getProgressBarColor(teamRank, totalTeams))};">${getPerformanceLabel(teamRank, totalTeams)}</span>
+                <div class="fg-progress-bar-container">
+                  <div class="fg-progress-bar" style="background-color: ${getProgressBarColor(teamRank, totalTeams)}; width: ${teamRank === 1 ? 100 : Math.round(((totalTeams - teamRank + 1) / totalTeams) * 100)}%;"></div>
+                </div>
+              </div>
+            </div>
+          ` : ''}
+        </div>
+      </div>
     </div>
   `;
 }
