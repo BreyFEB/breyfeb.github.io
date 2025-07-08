@@ -28,6 +28,21 @@ function formatCompetitionName(comp) {
   return formatted;
 }
 
+// Helper function to create team acronym
+function createTeamAcronym(teamName) {
+  const words = teamName.replace(/[^a-zA-Z0-9\s]/g, '').split(/\s+/);
+  let acronym = '';
+  // Take first three valid characters of first word with 3 or more characters
+  for (const w of words) {
+    if (w.length >= 3) {
+      acronym = w.substring(0, 3).toUpperCase();
+      break;
+    }
+  }
+
+  return acronym;
+}
+
 // Get URL params for team_id
 function getTeamParams() {
   const params = new URLSearchParams(window.location.search);
@@ -787,7 +802,7 @@ function insertTeamPointsBarHtml() {
 
   const header = document.createElement('h3');
   header.id = 'teamComparisonTitle';
-  header.textContent = 'Comparación de equipos en la competición';
+  header.textContent = 'Comparación con equipos de la competición';
   header.style.textAlign = 'center';
   header.style.margin = '32px 0 20px 0';
   sectionContainer.appendChild(header);
@@ -965,39 +980,50 @@ function updateTeamComparisonChart(statKey, statType) {
     };
   }).sort((a, b) => b.value - a.value);
 
-  const maxValue = Math.max(...chartData.map(d => Math.abs(d.value)));
+  // For +/- stat, we need to handle the full range from min to max
+  let maxValue, minValue;
+  if (statKey === 'pm') {
+    minValue = Math.min(...chartData.map(d => d.value));
+    maxValue = Math.max(...chartData.map(d => d.value));
+  } else {
+    maxValue = Math.max(...chartData.map(d => Math.abs(d.value)));
+    minValue = 0;
+  }
   const totalTeams = chartData.length;
 
+  // Create legend
+  const legend = document.createElement('div');
+  legend.className = 'team-comparison-legend';
+  legend.style.textAlign = 'center';
+  legend.style.marginBottom = '16px';
+  legend.style.padding = '12px';
+  legend.style.background = '#f8f9fa';
+  legend.style.borderRadius = '8px';
+  legend.style.border = '1px solid #e9ecef';
+  legend.style.fontSize = '0.9em';
+  legend.style.color = '#666';
+  
+  // Find current team name
+  const currentTeam = chartData.find(d => d.isCurrent);
+  const currentTeamName = currentTeam ? toTitleCase(currentTeam.name) : 'Este equipo';
+  
+  legend.innerHTML = `<strong>${currentTeamName}</strong> resaltado en <span style="color: #FF9E1B; font-weight: bold;">naranja</span>`;
+  
+  chartWrapper.appendChild(legend);
+
+  // Create grid container
+  const gridContainer = document.createElement('div');
+  gridContainer.className = 'team-comparison-grid';
+  // Let CSS handle the responsive grid layout
+  gridContainer.style.fontSize = 'small';
+
   chartData.forEach((d, idx) => {
-    const row = document.createElement('div');
-    row.className = 'points-row';
-
-    // Rank text (e.g., "3 de 32")
-    const rankSpan = document.createElement('span');
-    rankSpan.className = 'team-rank';
-    rankSpan.textContent = `${idx + 1} de ${totalTeams}`;
-    
-    // Make current team's rank bold, others lighter
+    const card = document.createElement('div');
+    card.className = 'team-comparison-card';
     if (d.isCurrent) {
-      rankSpan.style.fontWeight = 'bold';
-      rankSpan.style.color = '#333';
-    } else {
-      rankSpan.style.fontWeight = '400';
-      rankSpan.style.color = '#666';
+      card.classList.add('current-team');
     }
-    
-    row.appendChild(rankSpan);
 
-    const img = document.createElement('img');
-    img.src = d.logo;
-    img.alt = d.name;
-    img.onerror = function(){ this.src='team_icon.png'; };
-    img.className = 'team-logo';
-    row.appendChild(img);
-
-    const barContainer = document.createElement('div');
-    barContainer.className = 'points-bar-container';
-    
     // Create tooltip
     const compName = formatCompetitionName(teamCompetition);
     let formattedValue;
@@ -1011,39 +1037,110 @@ function updateTeamComparisonChart(statKey, statType) {
       formattedValue = Math.round(d.value).toString();
     }
     const tooltipText = `${toTitleCase(d.name)}\n${statLabel}: ${formattedValue}${isPerGame ? ' por partido' : ' total'}\nPartidos: ${d.games}\n${compName}`;
-    row.title = tooltipText;
+    card.title = tooltipText;
 
-    const bar = document.createElement('div');
-    bar.className = 'points-bar';
-    
-    // Handle negative values for +/- stat
-    if (d.value < 0) {
-      bar.style.width = ((Math.abs(d.value) / maxValue) * 100).toFixed(1) + '%';
-      bar.style.background = d.isCurrent ? '#FF6B6B' : '#E57373'; // Red for negative values
-    } else {
-      bar.style.width = ((d.value / maxValue) * 100).toFixed(1) + '%';
-      bar.style.background = d.isCurrent ? '#FF9E1B' : '#1976d2'; // Normal colors for positive values
+    // Rank badge
+    const rankBadge = document.createElement('div');
+    rankBadge.className = 'team-rank-badge';
+    if (d.isCurrent) {
+      rankBadge.classList.add('current-team');
     }
+    rankBadge.textContent = `${idx + 1} de ${totalTeams}`;
+    card.appendChild(rankBadge);
 
-    const value = document.createElement('span');
-    value.className = 'points-value';
+    // Team logo and name container
+    const teamInfoContainer = document.createElement('div');
+    teamInfoContainer.style.display = 'flex';
+    teamInfoContainer.style.flexDirection = 'column';
+    teamInfoContainer.style.alignItems = 'center';
+    teamInfoContainer.style.gap = '8px';
+    teamInfoContainer.style.marginBottom = '12px';
+
+    // Team logo
+    const logo = document.createElement('img');
+    logo.src = d.logo;
+    logo.alt = d.name;
+    logo.onerror = function(){ this.src='team_icon.png'; };
+    logo.style.width = '40px';
+    logo.style.height = '40px';
+    logo.style.objectFit = 'contain';
+    logo.style.borderRadius = '4px';
+    teamInfoContainer.appendChild(logo);
+
+    // Team abbreviation
+    const teamAbbr = document.createElement('div');
+    teamAbbr.className = 'team-abbreviation';
+    if (d.isCurrent) {
+      teamAbbr.classList.add('current-team');
+    }
+    teamAbbr.textContent = createTeamAcronym(d.name);
+    teamAbbr.title = toTitleCase(d.name); // Full name as tooltip
+    teamInfoContainer.appendChild(teamAbbr);
+
+    card.appendChild(teamInfoContainer);
+
+    // Stat value
+    const statValue = document.createElement('div');
+    statValue.className = 'team-stat-value';
+    if (d.isCurrent) {
+      statValue.classList.add('current-team');
+    }
     
     if (statKey === 'min') {
-      value.textContent = formatMinutes(d.value);
+      statValue.textContent = formatMinutes(d.value);
     } else if (statKey === 't2pct' || statKey === 't3pct' || statKey === 'tlpct') {
-      value.textContent = d.value.toFixed(1) + '%';
+      statValue.textContent = d.value.toFixed(1) + '%';
     } else if (isPerGame) {
-      value.textContent = d.value.toFixed(1);
+      statValue.textContent = d.value.toFixed(1);
     } else {
-      value.textContent = Math.round(d.value).toString();
+      statValue.textContent = Math.round(d.value).toString();
     }
+    card.appendChild(statValue);
 
-    barContainer.appendChild(bar);
-    row.appendChild(barContainer);
-    bar.appendChild(value);
+    // Progress bar container
+    const progressContainer = document.createElement('div');
+    progressContainer.className = 'team-progress-container';
 
-    chartWrapper.appendChild(row);
+    // Progress bar
+    const progressBar = document.createElement('div');
+    progressBar.className = 'team-progress-bar';
+    
+    // Calculate progress percentage
+    let progressPercent;
+    if (statKey === 'pm') {
+      // For +/- stat, calculate percentage based on the full range
+      const range = maxValue - minValue;
+      if (range === 0) {
+        progressPercent = 100; // If all values are the same, show full bar
+      } else {
+        progressPercent = ((d.value - minValue) / range) * 100;
+      }
+      // Use red for negative values, orange for positive
+      if (d.value < 0) {
+        progressBar.style.background = d.isCurrent ? '#FF6B6B' : '#BDBDBD';
+      } else {
+        progressBar.style.background = d.isCurrent ? '#FF9E1B' : '#9E9E9E';
+      }
+    } else {
+      // For other stats, use the original logic
+      if (d.value < 0) {
+        // For negative values, use absolute value but show red
+        progressPercent = (Math.abs(d.value) / maxValue) * 100;
+        progressBar.style.background = d.isCurrent ? '#FF6B6B' : '#BDBDBD';
+      } else {
+        progressPercent = (d.value / maxValue) * 100;
+        progressBar.style.background = d.isCurrent ? '#FF9E1B' : '#9E9E9E';
+      }
+    }
+    
+    progressBar.style.width = `${Math.min(progressPercent, 100)}%`;
+    progressContainer.appendChild(progressBar);
+    card.appendChild(progressContainer);
+
+    gridContainer.appendChild(card);
   });
+
+  chartWrapper.appendChild(gridContainer);
 }
 
 // -------- TAB NAVIGATION ---------
@@ -2083,32 +2180,140 @@ function updateTeamShotStats(filteredShots) {
   const leagueMadeShots = leagueShotsFiltered.filter(shot => shot.made).length;
   const leagueFgPercentage = leagueTotalShots > 0 ? (leagueMadeShots / leagueTotalShots * 100).toFixed(1) : 0;
   
-  // Update the stats display
+  // Helper functions for performance labels and colors
+  function getPerformanceLabel(rank, total) {
+    if (total === 0) return 'N/A';
+    if (rank === 1) return 'EL MEJOR';
+    const percentile = ((total - rank + 1) / total) * 100;
+    if (percentile >= 90) return 'ÉLITE';
+    if (percentile >= 80) return 'MUY BUENO';
+    if (percentile >= 60) return 'BUENO';
+    if (percentile >= 40) return 'PROMEDIO';
+    if (percentile >= 20) return 'BAJO';
+    return 'MUY BAJO';
+  }
+
+  function getProgressBarColor(rank, total) {
+    if (total === 0) return '#ccc';
+    if (rank === 1) return '#1b5e20'; // Even darker green for first rank
+    const percentile = ((total - rank + 1) / total) * 100;
+    if (percentile >= 90) return '#2e7d32'; // Darker green for elite
+    if (percentile >= 80) return '#2e7d32'; // Dark green for very good
+    if (percentile >= 60) return '#4caf50'; // Green for good
+    if (percentile >= 40) return '#ff9800'; // Orange for average
+    if (percentile >= 20) return '#f44336'; // Red for low
+    return '#d32f2f'; // Dark red for very low
+  }
+
+  function getTextColor(backgroundColor) {
+    // For dark colors, use white text; for light colors, use black text
+    if (backgroundColor === '#1b5e20') return 'white';
+    const darkColors = ['#2e7d32', '#d32f2f', '#1976d2'];
+    return darkColors.includes(backgroundColor) ? 'white' : 'black';
+  }
+
+  function getRelativePercentageDisplay(difference) {
+    if (difference > 0) {
+      return {
+        color: '#4caf50', // Light green
+        text: `+${difference.toFixed(1)}%`
+      };
+    } else if (difference < 0) {
+      return {
+        color: '#f44336', // Light red
+        text: `${difference.toFixed(1)}%`
+      };
+    } else {
+      return {
+        color: '#666', // Gray for no difference
+        text: '0.0%'
+      };
+    }
+  }
+
+  // Calculate team rank in league
+  const leagueTeamPercentages = [];
+  const processedTeams = new Set();
+  
+  allLeagueShots.forEach(shot => {
+    if (!processedTeams.has(shot.equipo_string)) {
+      const teamShots = allLeagueShots.filter(s => s.equipo_string === shot.equipo_string);
+      const teamMade = teamShots.filter(s => s.made).length;
+      const teamTotal = teamShots.length;
+      const teamPct = teamTotal > 0 ? (teamMade / teamTotal) * 100 : 0;
+      
+      leagueTeamPercentages.push({
+        team: shot.equipo_string,
+        percentage: teamPct
+      });
+      processedTeams.add(shot.equipo_string);
+    }
+  });
+
+  // Sort teams by percentage (descending) and find current team rank
+  leagueTeamPercentages.sort((a, b) => b.percentage - a.percentage);
+  const currentTeamName = teamPlayers[0]?.teamName;
+  const teamRankIndex = leagueTeamPercentages.findIndex(t => t.team === currentTeamName);
+  const teamRank = teamRankIndex !== -1 ? teamRankIndex + 1 : leagueTeamPercentages.length;
+  const totalTeams = leagueTeamPercentages.length;
+
+  // Calculate relative percentage
+  const leagueRelativePercentage = parseFloat(fgPercentage) - parseFloat(leagueFgPercentage);
+  const leagueRelativeDisplay = getRelativePercentageDisplay(leagueRelativePercentage);
+
+  // Update the stats display with card-based design
   const fgPercentageElement = document.getElementById('teamFgPercentage');
   
   fgPercentageElement.innerHTML = `
-    <div style="margin-bottom: 10px;">
-      <div style="font-size: 24px; color: #666;">Equipo</div>
-      ${totalShots > 0 ? `
-        <div style="font-size: 36px; font-weight: bold;">${fgPercentage}%</div>
-        <div style="font-size: 14px; color: #666;">${madeShots}/${totalShots} tiros</div>
-      ` : `
-        <div style="font-size: 24px; color: #666; font-style: italic;">Este equipo no tiene tiros de este tipo</div>
-      `}
-    </div>
-    <hr class="stats-divider">
-    <div>
-      <div style="font-size: 24px; color: #666;">Liga</div>
-      <div style="font-size: 36px; font-weight: bold;">${leagueFgPercentage}%</div>
-      <div style="font-size: 14px; color: #666;">${leagueMadeShots}/${leagueTotalShots} tiros</div>
-      ${totalShots > 0 ? `
-        <div style="font-size: 12px; color: #666; margin-top: 5px;">
-          El equipo está <span style="color: ${parseFloat(fgPercentage) > parseFloat(leagueFgPercentage) ? '#2e7d32' : '#c62828'}; font-weight: bold;">
-            ${Math.abs(parseFloat(fgPercentage) - parseFloat(leagueFgPercentage)).toFixed(1)} puntos porcentuales 
-            ${parseFloat(fgPercentage) > parseFloat(leagueFgPercentage) ? 'por encima' : 'por debajo'}
-          </span> del acierto de la liga en este tipo de tiros.
+    <div class="fg-cards-grid">
+      <!-- Team Card -->
+      <div class="fg-card team-card">
+        <div class="fg-card-header">
+          <h4>Equipo</h4>
         </div>
-      ` : ''}
+        <div class="fg-card-body">
+          ${totalShots > 0 ? `
+            <div class="fg-stat-row">
+              <span class="fg-stat-label">%TC</span>
+              <span class="fg-stat-value">${fgPercentage}%</span>
+              <span class="fg-stat-detail">(${madeShots}/${totalShots})</span>
+            </div>
+          ` : `
+            <div class="fg-stat-row">
+              <span class="fg-stat-value fg-stat-na">Sin tiros de este tipo</span>
+            </div>
+          `}
+        </div>
+      </div>
+
+      <!-- League Card -->
+      <div class="fg-card league-card">
+        <div class="fg-card-header">
+          <h4>Liga</h4>
+        </div>
+        <div class="fg-card-body">
+          <div class="fg-stat-row">
+            <span class="fg-stat-label">%TC</span>
+            <span class="fg-stat-value">${leagueFgPercentage}%</span>
+            <span class="fg-stat-detail">(${leagueMadeShots}/${leagueTotalShots})</span>
+          </div>
+          ${totalShots > 0 ? `
+            <div class="fg-stat-row">
+              <span class="fg-stat-label">%TC relativo del equipo</span>
+              <span class="fg-stat-value" style="color: ${leagueRelativeDisplay.color}; font-weight: bold;">${leagueRelativeDisplay.text}</span>
+            </div>
+            <div class="fg-stat-row">
+              <div class="fg-performance-container" title="Liga: Ranking ${teamRank} de ${totalTeams} en la liga">
+                <span class="fg-stat-label">Rendimiento con respecto a la liga</span>
+                <span class="fg-performance-pill" style="background-color: ${getProgressBarColor(teamRank, totalTeams)}; color: ${getTextColor(getProgressBarColor(teamRank, totalTeams))};">${getPerformanceLabel(teamRank, totalTeams)}</span>
+                <div class="fg-progress-bar-container">
+                  <div class="fg-progress-bar" style="background-color: ${getProgressBarColor(teamRank, totalTeams)}; width: ${teamRank === 1 ? 100 : Math.round(((totalTeams - teamRank + 1) / totalTeams) * 100)}%;"></div>
+                </div>
+              </div>
+            </div>
+          ` : ''}
+        </div>
+      </div>
     </div>
   `;
 }
@@ -2147,18 +2352,7 @@ function renderTeamStatsTable() {
   if (!container || !Array.isArray(teamMatches) || teamMatches.length === 0) return;
   container.innerHTML = '';
   
-  // Helper functions
-  function createTeamAcronym(teamName) {
-    const words = teamName.replace(/[^a-zA-Z0-9\s]/g, '').split(/\s+/);
-    let acronym = '';
-    for (const w of words) {
-      if (w.length > 0) {
-        acronym += w[0].toUpperCase();
-        if (acronym.length === 3) break;
-      }
-    }
-    return acronym;
-  }
+
 
   function didTeamWin(marcador) {
     if (!marcador) return false;
