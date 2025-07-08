@@ -134,7 +134,6 @@ header {
 
 /* COMPETITION SELECTOR */
 .competition-selector {
-  background: linear-gradient(to right, #4859AA, #2F4170);
   padding: 20px 0;
 }
 
@@ -380,7 +379,9 @@ header {
   gap: 15px;
   margin: 20px 0;
   padding: 0 20px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* Fuerza una sola línea */
+  flex-direction: row; /* Siempre horizontal */
+  overflow-x: auto; /* Permite scroll si no cabe */
 }
 
 .clasificacion-tab {
@@ -1206,30 +1207,91 @@ header {
   }
 
   .grupos-nav {
-    gap: 8px;
-    padding: 15px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 20px 0 10px 0;
+    padding: 0 10px;
+    position: relative;
   }
-
-  .grupo-tab {
-    width: 45px;
-    height: 45px;
-    font-size: 0.85em;
+  .grupos-dropdown-inner {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
-
-  .clasificacion-container {
-    padding: 15px;
-  }
-
-  .content-section {
-    padding: 20px;
-  }
-
-  .content-section h2 {
-    font-size: 1.5em;
-  }
-
-  .content-section p {
+  .grupo-dropdown-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #FF9E1B;
+    color: #222c4e;
+    border-radius: 4px;
+    padding: 7px 16px;
     font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    min-width: 60px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    transition: background 0.15s, color 0.15s;
+    position: relative;
+    z-index: 2;
+  }
+  .grupo-dropdown-btn .dropdown-arrow {
+    font-size: 0.95em;
+    color: #111C4E;
+    margin-left: 4px;
+    transition: transform 0.15s;
+  }
+  .grupos-dropdown-inner.open .grupo-dropdown-btn .dropdown-arrow {
+    transform: rotate(180deg);
+  }
+  .grupos-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    min-width: 90px;
+    background: #2C3967;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    z-index: 10;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #e0e0e0;
+    border-top: none;
+    flex-direction: column;
+    width: 100%;
+  }
+  .grupos-dropdown-inner.open .grupos-dropdown-menu {
+    display: flex;
+  }
+  .grupos-dropdown-menu .grupo-tab {
+    display: flex;
+    width: 100%;
+    background: none;
+    border: none;
+    color: white;
+    padding: 8px 14px;
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: 0;
+    text-align: left;
+    justify-content: flex-start;
+    transition: background 0.15s, color 0.15s;
+    cursor: pointer;
+  }
+  .grupos-dropdown-menu .grupo-tab.active {
+    background: #181D37;
+    color: #FF9E1B;
+  }
+  .grupos-dropdown-menu .grupo-tab:hover {
+    background: #fff3e0;
+    color: #FF9E1B;
+  }
+  /* Oculta los botones de grupo fuera del dropdown en móvil */
+  .grupos-nav > .grupo-tab {
+    display: none !important;
   }
 }
 
@@ -1309,8 +1371,11 @@ header {
   }
 
   .clasificacion-nav {
-    flex-direction: column;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
     gap: 8px;
+    overflow-x: auto;
+    width: 100%;
   }
 
   .clasificacion-tab {
@@ -1319,13 +1384,13 @@ header {
   }
 
   .grupos-nav {
+    /* Elimina display:grid o display:flex aquí para que solo la clase .active controle la visibilidad */
     grid-template-columns: repeat(4, 1fr);
-    display: grid;
     gap: 10px;
+    /* NO poner display:grid ni display:flex aquí */
   }
-
   .grupos-nav.active {
-    display: grid;
+    /* NO poner display:grid ni display:flex aquí */
   }
 
   .grupo-tab {
@@ -1340,15 +1405,13 @@ header {
 }
 
 @media screen and (max-width: 600px) {
-
   .grupos-nav {
     grid-template-columns: repeat(2, 1fr);
     gap: 8px;
+    /* NO poner display:grid ni display:flex aquí */
   }
-
-  .grupo-tab {
-    font-size: 0.8em;
-    height: 35px;
+  .grupos-nav.active {
+    /* NO poner display:grid ni display:flex aquí */
   }
 }
 
@@ -2026,5 +2089,167 @@ header {
   .bottom-nav-item {
     min-height: 55px;
     padding: 10px 1px;
+  }
+}
+
+.competition-dropdown {
+  position: relative;
+  display: inline-block;
+  width: 320px;
+  max-width: 100%;
+}
+
+.competition-dropdown-btn {
+  width: 100%;
+  background: rgba(255,255,255,0.1);
+  border: 2px solid rgba(255,255,255,0.2);
+  border-radius: 12px;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #fff;
+  font-size: 1.1em;
+  transition: all 0.3s;
+  position: relative;
+  z-index: 2;
+}
+
+.competition-dropdown-btn .dropdown-arrow {
+  margin-left: auto;
+  font-size: 1.2em;
+  color: #FF9E1B;
+  transition: transform 0.2s;
+}
+
+.competition-dropdown.open .competition-dropdown-btn .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.competition-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #222c4e;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  z-index: 10;
+  padding: 0;
+  margin: 0;
+  border: 2px solid rgba(255,255,255,0.2);
+  border-top: none;
+  animation: fadeIn 0.2s;
+}
+
+.competition-dropdown.open .competition-dropdown-menu {
+  display: block;
+}
+
+.competition-dropdown-option {
+  width: 100%;
+  background: none;
+  border: none;
+  color: #fff;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.competition-dropdown-option:hover {
+  background: rgba(255,158,27,0.15);
+  color: #FF9E1B;
+}
+
+.competition-dropdown-option.active {
+  background: rgba(255,158,27,0.25);
+  color: #FF9E1B;
+}
+
+.competition-dropdown-option:last-child {
+  border-bottom: none;
+}
+
+.competition-dropdown-option img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.competition-dropdown-option span {
+  color: #fff;
+  font-size: 1em;
+  font-weight: bold;
+  font-family: 'Manifold', Arial, sans-serif;
+}
+
+/* --- ESTILOS DROPDOWN DE GRUPOS SOLO EN MÓVIL --- */
+.grupo-dropdown-btn,
+.grupos-dropdown-menu,
+.grupos-dropdown-inner {
+  display: none;
+}
+
+/* En escritorio, los botones de grupo se ven como antes */
+@media (min-width: 901px) {
+  .grupos-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 35px 0 5px 0;
+    flex-wrap: wrap;
+    padding: 0 5px 0 5px;
+    position: static;
+  }
+  .grupos-nav > .grupo-tab {
+    display: flex !important;
+    background-color: #2F4170;
+    color: #fff;
+    border: 1px solid #53565A;
+    border-radius: 8px;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9em;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+  .grupos-dropdown-inner,
+  .grupo-dropdown-btn,
+  .grupos-dropdown-menu {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .grupos-dropdown-inner {
+    display: flex;
+  }
+  .grupo-dropdown-btn {
+    display: flex;
+  }
+  .grupos-dropdown-menu {
+    display: none;
+  }
+  .grupos-dropdown-inner.open .grupos-dropdown-menu {
+    display: flex;
+  }
+  /* Oculta los botones de grupo fuera del dropdown en móvil */
+  .grupos-nav > .grupo-tab {
+    display: none !important;
   }
 }

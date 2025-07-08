@@ -3660,3 +3660,17 @@ function getRivalTeamLogo(rivalTeamName, allPlayers) {
   const rivalPlayer = allPlayers.find(p => p.teamName === rivalTeamName);
   return rivalPlayer ? rivalPlayer.teamLogo : null;
 }
+
+function buscarJugador() {
+  const input = document.getElementById('playerSearchInput');
+  const query = input.value.trim().toLowerCase();
+  // Aquí deberías filtrar la lista de jugadores según el query
+  // Si ya tienes una función de búsqueda, llama a esa función aquí
+  if (typeof filtrarJugadores === 'function') {
+    filtrarJugadores(query);
+  } else {
+    // Si no existe, puedes implementar el filtrado aquí
+    // Por ejemplo, ocultar/mostrar elementos de la lista de jugadores
+    // ...
+  }
+}

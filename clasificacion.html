@@ -98,17 +98,24 @@
         <!-- COMPETITION SELECTOR -->
         <div class="competition-selector">
           <div class="competition-selector-inner">
-              <h3 class="selector-title">Seleccionar Competición</h3>
-              <div class="competition-buttons">
-                  <button class="competition-btn active" data-competition="C ESP CLUBES CAD MASC">
-                      <img src="Clasificacion/cadetelogo.svg" alt="Cadete Masculino" class="competition-selector-logo">
-                      <span>Clubes Cadete Masculino</span>
-                  </button>
-                  <button class="competition-btn" data-competition="C ESP CLUBES CAD FEM">
-                      <img src="Clasificacion/logo-cadete-fem.svg" alt="Cadete Femenino" class="competition-selector-logo">
-                      <span>Clubes Cadete Femenino</span>
-                  </button>
+            <h3 class="selector-title">Seleccionar Competición</h3>
+            <div class="competition-dropdown">
+              <button class="competition-dropdown-btn" id="competitionDropdownBtn">
+                <img src="Clasificacion/cadetelogo.svg" alt="Cadete Masculino" class="competition-selector-logo" id="selectedCompetitionLogo">
+                <span id="selectedCompetitionText">Clubes Cadete Masculino</span>
+                <span class="dropdown-arrow">&#9662;</span>
+              </button>
+              <div class="competition-dropdown-menu" id="competitionDropdownMenu">
+                <button class="competition-dropdown-option active" data-competition="C ESP CLUBES CAD MASC" data-logo="Clasificacion/cadetelogo.svg">
+                  <img src="Clasificacion/cadetelogo.svg" alt="Cadete Masculino" class="competition-selector-logo">
+                  <span>Clubes Cadete Masculino</span>
+                </button>
+                <button class="competition-dropdown-option" data-competition="C ESP CLUBES CAD FEM" data-logo="Clasificacion/logo-cadete-fem.svg">
+                  <img src="Clasificacion/logo-cadete-fem.svg" alt="Cadete Femenino" class="competition-selector-logo">
+                  <span>Clubes Cadete Femenino</span>
+                </button>
               </div>
+            </div>
           </div>
       </div>
 
@@ -123,14 +130,22 @@
 
             <!-- Navegación de grupos (se muestra solo cuando "Fase de Grupos" está activa) -->
             <nav class="grupos-nav active" id="gruposNav">
-                <button class="grupo-tab active" data-grupo="A">A</button>
-                <button class="grupo-tab" data-grupo="B">B</button>
-                <button class="grupo-tab" data-grupo="C">C</button>
-                <button class="grupo-tab" data-grupo="D">D</button>
-                <button class="grupo-tab" data-grupo="E">E</button>
-                <button class="grupo-tab" data-grupo="F">F</button>
-                <button class="grupo-tab" data-grupo="G">G</button>
-                <button class="grupo-tab" data-grupo="H">H</button>
+              <div class="grupos-dropdown-inner">
+                <button class="grupo-dropdown-btn" id="grupoDropdownBtn">
+                  <span id="grupoDropdownText">A</span>
+                  <span class="dropdown-arrow">&#9662;</span>
+                </button>
+                <div class="grupos-dropdown-menu" id="gruposDropdownMenu">
+                  <button class="grupo-tab active" data-grupo="A">A</button>
+                  <button class="grupo-tab" data-grupo="B">B</button>
+                  <button class="grupo-tab" data-grupo="C">C</button>
+                  <button class="grupo-tab" data-grupo="D">D</button>
+                  <button class="grupo-tab" data-grupo="E">E</button>
+                  <button class="grupo-tab" data-grupo="F">F</button>
+                  <button class="grupo-tab" data-grupo="G">G</button>
+                  <button class="grupo-tab" data-grupo="H">H</button>
+                </div>
+              </div>
             </nav>
 
             <!-- Contenido de la clasificación -->
@@ -150,7 +165,7 @@
                                 <option value="3">Jornada 3</option>
                             </select>
                         </div>
-                        <button id="applyFilters" class="apply-filters-btn">Aplicar Filtros</button>
+                        
                     </div>
 
                     <!-- Tabla de Resultados de la Jornada -->

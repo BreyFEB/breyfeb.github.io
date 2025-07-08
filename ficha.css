@@ -1172,3 +1172,142 @@ body {
   color: #FF9E1B !important;
   font-weight: bold;
 }
+
+/* ===========================
+   NAVEGACIÓN INFERIOR MÓVIL
+   =========================== */
+.mobile-bottom-nav {
+  display: none; /* Oculta por defecto */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to right, #2F4170, #111C4E);
+  border-top: 1px solid #53565A;
+  padding: 0 0 calc(12px + env(safe-area-inset-bottom));
+  z-index: 1000;
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.15);
+}
+
+.bottom-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 12px 2px;
+  min-height: 60px;
+  transition: all 0.2s ease;
+}
+
+.bottom-nav-item img,
+.bottom-nav-item svg {
+  width: 36px;
+  height: 36px;
+  filter: brightness(0) invert(1);
+  transition: filter 0.2s ease;
+}
+
+.bottom-nav-item span {
+  display: none; /* Ocultar los nombres de los iconos */
+}
+
+.bottom-nav-item.active {
+  color: #FF9E1B;
+  border-top: 3px solid #FF9E1B;
+}
+
+.bottom-nav-item.active img,
+.bottom-nav-item.active svg {
+  filter: brightness(0) saturate(20%) invert(49%) sepia(100%) saturate(1200%) hue-rotate(358deg) brightness(102%) contrast(101%);
+}
+
+.bottom-nav-item:hover {
+  color: #FF9E1B;
+  background-color: rgba(255, 158, 27, 0.1);
+}
+
+.bottom-nav-item:hover img,
+.bottom-nav-item:hover svg {
+  filter: brightness(0) saturate(20%) invert(49%) sepia(100%) saturate(1200%) hue-rotate(358deg) brightness(102%) contrast(101%);
+}
+
+.bottom-nav-item:active {
+  transform: scale(0.95);
+  background-color: rgba(255, 158, 27, 0.2);
+}
+
+@media (max-width: 900px) {
+  .mobile-bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    animation: slideUpNav 0.3s ease;
+  }
+  body {
+    padding-bottom: 70px !important;
+  }
+  .main-nav {
+    display: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .bottom-nav-item img,
+  .bottom-nav-item svg {
+    width: 28px;
+    height: 28px;
+  }
+  .bottom-nav-item {
+    min-height: 48px;
+    padding: 8px 0;
+  }
+}
+
+@keyframes slideUpNav {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .scoreboard {
+    gap: 2px !important;
+    padding: 0 !important;
+  }
+  .team-row {
+    flex-direction: column !important;
+    gap: 4px !important;
+    align-items: center !important;
+    margin-bottom: 4px !important;
+  }
+  .team-logo {
+    width: 36px !important;
+    height: 36px !important;
+    margin-bottom: 2px !important;
+    box-shadow: none !important;
+  }
+  .team-name {
+    font-size: 0.85em !important;
+    max-width: 80px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    text-align: center !important;
+  }
+  .score-value {
+    font-size: 1.2rem !important;
+    margin-bottom: 0 !important;
+  }
+  .score-status, .match-datetime {
+    font-size: 0.85em !important;
+    margin-top: 0 !important;
+  }
+}

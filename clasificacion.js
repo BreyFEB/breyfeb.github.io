@@ -741,23 +741,62 @@ document.addEventListener('DOMContentLoaded', async function() {
         }
     }
     
-    // Event listeners para selector de competición
-    const competitionButtons = document.querySelectorAll('.competition-btn');
-    competitionButtons.forEach(button => {
-        button.addEventListener('click', async function() {
-            const competition = this.getAttribute('data-competition');
-            
-            // Actualizar botones activos
-            competitionButtons.forEach(btn => btn.classList.remove('active'));
-            this.classList.add('active');
-            
-            // Cambiar competición
-            await cambiarCompeticion(competition);
-        });
+    // --- COMPETITION DROPDOWN LOGIC ---
+    const dropdown = document.querySelector('.competition-dropdown');
+    const dropdownBtn = document.getElementById('competitionDropdownBtn');
+    const dropdownMenu = document.getElementById('competitionDropdownMenu');
+    const selectedText = document.getElementById('selectedCompetitionText');
+    const selectedLogo = document.getElementById('selectedCompetitionLogo');
+    const options = dropdownMenu.querySelectorAll('.competition-dropdown-option');
+
+    // Abrir/cerrar menú
+    dropdownBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      dropdown.classList.toggle('open');
     });
+
+    // Seleccionar opción
+    options.forEach(option => {
+      option.addEventListener('click', async function(e) {
+        e.stopPropagation();
+        // Actualiza el texto y logo
+        selectedText.textContent = this.querySelector('span').textContent;
+        selectedLogo.src = this.getAttribute('data-logo');
+        selectedLogo.alt = this.querySelector('span').textContent;
+        // Marca como activa
+        options.forEach(opt => opt.classList.remove('active'));
+        this.classList.add('active');
+        // Cierra el menú
+        dropdown.classList.remove('open');
+        // Cambia la competición (usa tu función existente)
+        const competition = this.getAttribute('data-competition');
+        await cambiarCompeticion(competition);
+      });
+    });
+
+    // Cerrar menú al hacer click fuera
+    document.addEventListener('click', function(e) {
+      if (!dropdown.contains(e.target)) {
+        dropdown.classList.remove('open');
+      }
+    });
+
+    // Eliminar el event listener de los antiguos competition-btn (si existe)
+    // const competitionButtons = document.querySelectorAll('.competition-btn');
+    // competitionButtons.forEach(button => {
+    //     button.addEventListener('click', async function() {
+    //         const competition = this.getAttribute('data-competition');
+            
+    //         // Actualizar botones activos
+    //         competitionButtons.forEach(btn => btn.classList.remove('active'));
+    //         this.classList.add('active');
+            
+    //         // Cambiar competición
+    //         await cambiarCompeticion(competition);
+    //     });
+    // });
     
     const clasificacionTabs = document.querySelectorAll('.clasificacion-tab');
-    const grupoTabs = document.querySelectorAll('.grupo-tab');
     const gruposNav = document.getElementById('gruposNav');
     const contentSections = document.querySelectorAll('.content-section');
     const tableContainer = document.getElementById('tableContainer');
@@ -1253,6 +1292,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     });
 
     // Manejar clics en tabs de grupos
+    const grupoTabs = document.querySelectorAll('.grupo-tab');
     grupoTabs.forEach(tab => {
         tab.addEventListener('click', function() {
             // Remover clase active de todos los tabs de grupo
@@ -1311,4 +1351,55 @@ document.addEventListener('DOMContentLoaded', async function() {
     });
     // Al cargar, inicializar jornadas para el grupo inicial
     actualizarDropdownJornadas('A');
+
+    // --- GRUPOS DROPDOWN LOGIC (MÓVIL) ---
+    const gruposDropdownInner = document.querySelector('.grupos-dropdown-inner');
+    const grupoDropdownBtn = document.getElementById('grupoDropdownBtn');
+    const gruposDropdownMenu = document.getElementById('gruposDropdownMenu');
+    const grupoDropdownText = document.getElementById('grupoDropdownText');
+    const grupoTabsDropdown = gruposDropdownMenu ? gruposDropdownMenu.querySelectorAll('.grupo-tab') : [];
+
+    // Inicializa el texto del botón con el grupo activo
+    function updateGrupoDropdownText() {
+      const activeTab = gruposDropdownMenu ? gruposDropdownMenu.querySelector('.grupo-tab.active') : null;
+      if (activeTab) {
+        grupoDropdownText.textContent = activeTab.textContent;
+      }
+    }
+    updateGrupoDropdownText();
+
+    // Abrir/cerrar menú
+    if (grupoDropdownBtn) {
+      grupoDropdownBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        gruposDropdownInner.classList.toggle('open');
+      });
+    }
+
+    // Seleccionar grupo en el dropdown
+    if (grupoTabsDropdown.length) {
+      grupoTabsDropdown.forEach(tab => {
+        tab.addEventListener('click', function(e) {
+          e.stopPropagation();
+          grupoTabsDropdown.forEach(t => t.classList.remove('active'));
+          this.classList.add('active');
+          updateGrupoDropdownText();
+          gruposDropdownInner.classList.remove('open');
+          // Dispara el evento de cambio de grupo (simula click en el tab original)
+          // Busca el tab correspondiente fuera del dropdown y haz click si existe
+          const grupo = this.getAttribute('data-grupo');
+          const mainGrupoTab = document.querySelector('.grupos-nav > .grupo-tab[data-grupo="' + grupo + '"]');
+          if (mainGrupoTab) mainGrupoTab.click();
+        });
+      });
+    }
+
+    // Cerrar menú al hacer click fuera
+    if (gruposDropdownInner) {
+      document.addEventListener('click', function(e) {
+        if (!gruposDropdownInner.contains(e.target)) {
+          gruposDropdownInner.classList.remove('open');
+        }
+      });
+    }
 });

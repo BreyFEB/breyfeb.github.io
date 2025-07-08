@@ -463,10 +463,11 @@ input:checked + .slider:before {
 }
 
 .stats-table thead th {
-  position: sticky;
-  top: 0;
-  z-index: 200;
-  background-color: #f2f2f2;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 4000 !important;
+  background: #fff !important;
+  box-shadow: 0 2px 4px -2px #0001;
   padding: 12px 4px;
   padding-left: 12px;
   font-weight: bold;
@@ -1504,4 +1505,37 @@ input:checked + .slider:before {
 .stats-table tbody tr.active td,
 .stats-table tbody tr.selected td {
   z-index: 10 !important;
+}
+
+.stats-table th[data-col="playerPhoto"] {
+  left: 0 !important;
+  z-index: 3500 !important;
+}
+.stats-table th[data-col="playerName"] {
+  left: 60px !important;
+  z-index: 3499 !important;
+}
+.stats-table td[data-col="playerName"],
+.stats-table td.player-name {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  max-width: 130px !important;
+  min-width: 100px !important;
+  width: 130px !important;
+}
+
+.page-header{
+  width: 100vw;
+  height: 100px;
+  background-color: #4859AA;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-bottom: 2px solid #FF9E1B;
+  display: flex;
+}
+
+.page-header h1{
+  margin: 0 auto;
 }
