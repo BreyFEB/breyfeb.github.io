@@ -1023,7 +1023,7 @@ function updateTeamComparisonChart(statKey, statType) {
     if (d.isCurrent) {
       card.classList.add('current-team');
     }
-
+    
     // Create tooltip
     const compName = formatCompetitionName(teamCompetition);
     let formattedValue;
@@ -1256,10 +1256,132 @@ async function loadTeamShotData() {
     allTeamShots = allLeagueShots.filter(s => s.equipo_string === teamName);
     
     buildTeamShotFiltersUI(allTeamShots);
-    updateTeamShotChart();
+    
+    // Display all shots by default when first loading the shot data
+    displayAllTeamShots();
   } catch (error) {
     console.error('Error loading shot data:', error);
   }
+}
+
+// New function to display all shots without any filters applied
+function displayAllTeamShots() {
+  // Clear any existing filter tags
+  const selectedFiltersDiv = document.getElementById('selectedTeamFilters');
+  if (selectedFiltersDiv) selectedFiltersDiv.innerHTML = '';
+  
+  // Update the chart with all shots
+  updateTeamShotChartWithShots(allTeamShots);
+}
+
+// Modified function to update chart with specific shots
+function updateTeamShotChartWithShots(shotsToDisplay) {
+  // Update stats with the provided shots
+  updateTeamShotStats(shotsToDisplay);
+  
+  // Prepare data for Chart.js scatter plot (only X <= 50)
+  const shotData = shotsToDisplay
+    .filter(shot => shot.coord_x <= 50)
+    .map(shot => ({
+      x: shot.coord_x,
+      y: shot.coord_y,
+      made: shot.made
+    }));
+
+  // Create a canvas if not present
+  let canvas = document.getElementById('teamShotsChart');
+  if (!canvas) {
+    canvas = document.createElement('canvas');
+    canvas.id = 'teamShotsChart';
+    document.body.appendChild(canvas);
+  }
+
+  // Load the court image
+  const courtImg = new Image();
+  courtImg.src = 'court.png';
+
+  // Wait for the image to load before rendering the chart
+  courtImg.onload = function() {
+    if (window.teamShotsChart && typeof window.teamShotsChart.destroy === 'function') {
+      window.teamShotsChart.destroy();
+    }
+
+    window.teamShotsChart = new Chart(canvas.getContext('2d'), {
+      type: 'scatter',
+      data: {
+        datasets: [
+          {
+            label: 'Tiros Anotados',
+            data: shotData.filter(shot => shot.made),
+            backgroundColor: 'rgba(0, 255, 0, 0.7)'
+          },
+          {
+            label: 'Tiros Fallados',
+            data: shotData.filter(shot => !shot.made),
+            backgroundColor: 'rgba(255, 0, 0, 0.7)'
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        aspectRatio: 425/474,
+        pointRadius: 6,
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top',
+            labels: {
+              usePointStyle: true,
+              pointStyle: 'circle',
+              padding: 20,
+              font: { size: 14 }
+            }
+          },
+          tooltip: { enabled: false }
+        },
+        scales: {
+          x: {
+            type: 'linear',
+            position: 'bottom',
+            title: { display: false },
+            min: 0,
+            max: 50,
+            ticks: { display: false },
+            grid: { display: false }
+          },
+          y: {
+            type: 'linear',
+            title: { display: false },
+            reverse: true,
+            min: 0,
+            max: 100,
+            ticks: { display: false },
+            grid: { display: false }
+          }
+        }
+      },
+      plugins: [{
+        id: 'courtBackground',
+        beforeDraw: (chart) => {
+          const {ctx, chartArea} = chart;
+          if (courtImg.complete && chartArea) {
+            ctx.save();
+            ctx.globalAlpha = 1.0;
+            ctx.beginPath();
+            ctx.rect(chartArea.left, chartArea.top, chartArea.width, chartArea.height);
+            ctx.clip();
+            ctx.drawImage(
+              courtImg,
+              0, 0, courtImg.width / 2, courtImg.height,
+              chartArea.left, chartArea.top, chartArea.width, chartArea.height
+            );
+            ctx.restore();
+          }
+        }
+      }]
+    });
+  };
 }
 
 function buildTeamShotFiltersUI(shots) {
@@ -1345,15 +1467,17 @@ function buildTeamShotFiltersUI(shots) {
   container.appendChild(filterControls);
 
   // Reset button
-
-  resetBtn.onclick = resetTeamFilters;
-  // Create a container to center the button
-  const resetContainer = document.createElement('div');
-  resetContainer.style.display = 'flex';
-  resetContainer.style.justifyContent = 'center';
-  resetContainer.style.alignItems = 'center';
-  resetContainer.appendChild(resetBtn);
-  container.appendChild(resetContainer);
+  const resetBtn = document.getElementById('resetTeamFiltersBtn');
+  if (resetBtn) {
+    resetBtn.onclick = resetTeamFilters;
+    // Create a container to center the button
+    const resetContainer = document.createElement('div');
+    resetContainer.style.display = 'flex';
+    resetContainer.style.justifyContent = 'center';
+    resetContainer.style.alignItems = 'center';
+    resetContainer.appendChild(resetBtn);
+    container.appendChild(resetContainer);
+  }
 
   // Los tags de filtro se renderizan fuera del contenedor de filtros
   const selectedFiltersDiv = document.getElementById('selectedTeamFilters');
@@ -1808,7 +1932,7 @@ function updateSelectedTeamFilters() {
   const selectedFiltersDiv = document.getElementById('selectedTeamFilters');
   if (!selectedFiltersDiv) return;
   selectedFiltersDiv.innerHTML = '';
-
+  
   // Helper para crear el tag visual
   function createFilterTag(name, label, value) {
     const tag = document.createElement('span');
@@ -1827,13 +1951,13 @@ function updateSelectedTeamFilters() {
       const input = document.querySelector(selector);
       if (input) {
         input.checked = false;
-        updateTeamShotChart();
+      updateTeamShotChart();
       }
     };
     tag.appendChild(del);
     return tag;
   }
-
+  
   // Jugadores
   const selectedPlayers = getSelectedTeamValues('player');
   if (selectedPlayers.length > 0) {
@@ -1929,112 +2053,8 @@ function updateTeamShotChart() {
   updateSelectedTeamFilters();
   const filteredShots = filterTeamShots();
   
-  // Update stats
-  updateTeamShotStats(filteredShots);
-  
-  // Prepare data for Chart.js scatter plot (only X <= 50)
-  const shotData = filteredShots
-    .filter(shot => shot.coord_x <= 50)
-    .map(shot => ({
-      x: shot.coord_x,
-      y: shot.coord_y,
-      made: shot.made
-    }));
-
-  // Create a canvas if not present
-  let canvas = document.getElementById('teamShotsChart');
-  if (!canvas) {
-    canvas = document.createElement('canvas');
-    canvas.id = 'teamShotsChart';
-    document.body.appendChild(canvas);
-  }
-
-  // Load the court image
-  const courtImg = new Image();
-  courtImg.src = 'court.png';
-
-  // Wait for the image to load before rendering the chart
-  courtImg.onload = function() {
-    if (window.teamShotsChart && typeof window.teamShotsChart.destroy === 'function') {
-      window.teamShotsChart.destroy();
-    }
-
-    window.teamShotsChart = new Chart(canvas.getContext('2d'), {
-      type: 'scatter',
-      data: {
-        datasets: [
-          {
-            label: 'Tiros Anotados',
-            data: shotData.filter(shot => shot.made),
-            backgroundColor: 'rgba(0, 255, 0, 0.7)'
-          },
-          {
-            label: 'Tiros Fallados',
-            data: shotData.filter(shot => !shot.made),
-            backgroundColor: 'rgba(255, 0, 0, 0.7)'
-          }
-        ]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: true,
-        aspectRatio: 425/474,
-        pointRadius: 6,
-        plugins: {
-          legend: {
-            display: true,
-            position: 'top',
-            labels: {
-              usePointStyle: true,
-              pointStyle: 'circle',
-              padding: 20,
-              font: { size: 14 }
-            }
-          },
-          tooltip: { enabled: false }
-        },
-        scales: {
-          x: {
-            type: 'linear',
-            position: 'bottom',
-            title: { display: false },
-            min: 0,
-            max: 50,
-            ticks: { display: false },
-            grid: { display: false }
-          },
-          y: {
-            type: 'linear',
-            title: { display: false },
-            reverse: true,
-            min: 0,
-            max: 100,
-            ticks: { display: false },
-            grid: { display: false }
-          }
-        }
-      },
-      plugins: [{
-        id: 'courtBackground',
-        beforeDraw: (chart) => {
-          const {ctx, chartArea} = chart;
-          if (courtImg.complete && chartArea) {
-            ctx.save();
-            ctx.globalAlpha = 1.0;
-            ctx.beginPath();
-            ctx.rect(chartArea.left, chartArea.top, chartArea.width, chartArea.height);
-            ctx.clip();
-            ctx.drawImage(
-              courtImg,
-              0, 0, courtImg.width / 2, courtImg.height,
-              chartArea.left, chartArea.top, chartArea.width, chartArea.height
-            );
-            ctx.restore();
-          }
-        }
-      }]
-    });
-  };
+  // Update the chart with filtered shots
+  updateTeamShotChartWithShots(filteredShots);
 }
 
 function filterTeamShots() {
@@ -2109,46 +2129,57 @@ function updateTeamShotStats(filteredShots) {
   const minDistance = document.getElementById('teamMinDistance')?.value;
   const maxDistance = document.getElementById('teamMaxDistance')?.value;
 
+  // Check if any filters are applied
+  const hasFilters = selectedQuarters.length > 0 || selectedResults.length > 0 || 
+                    selectedShotTypes.length > 0 || selectedScoreDiffs.length > 0 || 
+                    selectedCourtSides.length > 0 || quarterTime || minDistance || maxDistance;
+
   // Get all shots from all players with the same filters
   let leagueShots = [];
   
-  allLeagueShots.forEach(shot => {
-    // Apply all filters for league, EXCEPT selectedMatches
-    if (selectedQuarters.length > 0 && !selectedQuarters.includes(shot.cuarto)) return;
-    if (selectedResults.length > 0) {
-      if (!selectedResults.includes(shot.made ? 'made' : 'missed')) return;
-    }
-    if (selectedShotTypes.length > 0) {
-      const isThree = isThreePointer(shot);
-      const isTwo = isTwoPointer(shot);
-      const isRim = shot.dist_al_aro <= 1;
-      const isMidrange = shot.dist_al_aro > 1 && shot.dist_al_aro < 6.75;
-      const matchesSelectedType = selectedShotTypes.some(type => {
-        switch(type) {
-          case 'rim': return isRim;
-          case 'midrange': return isMidrange;
-          case '2': return isTwo;
-          case '3': return isThree;
-          default: return false;
-        }
-      });
-      if (!matchesSelectedType) return;
-    }
-    if (selectedScoreDiffs.length > 0) {
-      const scoreDiffCategory = getScoreDiffCategory(shot.dif_marcador);
-      if (!selectedScoreDiffs.includes(scoreDiffCategory)) return;
-    }
-    if (selectedCourtSides.length > 0) {
-      const isLeftSide = shot.coord_y > 50;
-      if (!selectedCourtSides.includes(isLeftSide ? 'left' : 'right')) return;
-    }
-    const shotTimeInSeconds = timeToSeconds(shot.tiempo);
-    if (quarterTime && shotTimeInSeconds > parseFloat(quarterTime) * 60) return;
-    if (minDistance && shot.dist_al_aro < parseFloat(minDistance)) return;
-    if (maxDistance && shot.dist_al_aro > parseFloat(maxDistance)) return;
-    // Add to league shots
-    leagueShots.push(shot);
-  });
+  if (hasFilters) {
+    // Apply filters to league shots
+    allLeagueShots.forEach(shot => {
+      // Apply all filters for league, EXCEPT selectedMatches
+      if (selectedQuarters.length > 0 && !selectedQuarters.includes(shot.cuarto)) return;
+      if (selectedResults.length > 0) {
+        if (!selectedResults.includes(shot.made ? 'made' : 'missed')) return;
+      }
+      if (selectedShotTypes.length > 0) {
+        const isThree = isThreePointer(shot);
+        const isTwo = isTwoPointer(shot);
+        const isRim = shot.dist_al_aro <= 1;
+        const isMidrange = shot.dist_al_aro > 1 && shot.dist_al_aro < 6.75;
+        const matchesSelectedType = selectedShotTypes.some(type => {
+          switch(type) {
+            case 'rim': return isRim;
+            case 'midrange': return isMidrange;
+            case '2': return isTwo;
+            case '3': return isThree;
+            default: return false;
+          }
+        });
+        if (!matchesSelectedType) return;
+      }
+      if (selectedScoreDiffs.length > 0) {
+        const scoreDiffCategory = getScoreDiffCategory(shot.dif_marcador);
+        if (!selectedScoreDiffs.includes(scoreDiffCategory)) return;
+      }
+      if (selectedCourtSides.length > 0) {
+        const isLeftSide = shot.coord_y > 50;
+        if (!selectedCourtSides.includes(isLeftSide ? 'left' : 'right')) return;
+      }
+      const shotTimeInSeconds = timeToSeconds(shot.tiempo);
+      if (quarterTime && shotTimeInSeconds > parseFloat(quarterTime) * 60) return;
+      if (minDistance && shot.dist_al_aro < parseFloat(minDistance)) return;
+      if (maxDistance && shot.dist_al_aro > parseFloat(maxDistance)) return;
+      // Add to league shots
+      leagueShots.push(shot);
+    });
+  } else {
+    // No filters applied, use all league shots
+    leagueShots = allLeagueShots;
+  }
 
   // Calculate league stats
   const leagueShotsFiltered = leagueShots.filter(shot => shot.coord_x <= 50);
@@ -2248,7 +2279,7 @@ function updateTeamShotStats(filteredShots) {
           <h4>Equipo</h4>
         </div>
         <div class="fg-card-body">
-          ${totalShots > 0 ? `
+      ${totalShots > 0 ? `
             <div class="fg-stat-row">
               <span class="fg-stat-label">%TC</span>
               <span class="fg-stat-value">${fgPercentage}%</span>
@@ -2258,8 +2289,8 @@ function updateTeamShotStats(filteredShots) {
             <div class="fg-stat-row">
               <span class="fg-stat-value fg-stat-na">Sin tiros de este tipo</span>
             </div>
-          `}
-        </div>
+      `}
+    </div>
       </div>
 
       <!-- League Card -->
@@ -2273,7 +2304,7 @@ function updateTeamShotStats(filteredShots) {
             <span class="fg-stat-value">${leagueFgPercentage}%</span>
             <span class="fg-stat-detail">(${leagueMadeShots}/${leagueTotalShots})</span>
           </div>
-          ${totalShots > 0 ? `
+      ${totalShots > 0 ? `
             <div class="fg-stat-row">
               <span class="fg-stat-label">%TC relativo del equipo</span>
               <span class="fg-stat-value" style="color: ${leagueRelativeDisplay.color}; font-weight: bold;">${leagueRelativeDisplay.text}</span>
@@ -2286,8 +2317,8 @@ function updateTeamShotStats(filteredShots) {
                   <div class="fg-progress-bar" style="background-color: ${getProgressBarColor(teamRank, totalTeams)}; width: ${teamRank === 1 ? 100 : Math.round(((totalTeams - teamRank + 1) / totalTeams) * 100)}%;"></div>
                 </div>
               </div>
-            </div>
-          ` : ''}
+        </div>
+      ` : ''}
         </div>
       </div>
     </div>
