@@ -38,7 +38,10 @@
   <!-- HERO EQUIPO -->
   <section class="player-hero">
     <div class="player-hero-content">
-      <!-- Logo equipo -->
+      <!-- Botón para volver a equipos -->
+      <a href="equipos.html" class="back-to-players-btn">< EQUIPOS</a>
+      <!-- Logo y datos básicos equipo -->
+      <div class="team-header"><!-- Logo equipo -->
       <div class="player-photo-box">
         <img class="player-photo" id="teamLogo" alt="Logo Equipo">
       </div>
@@ -49,6 +52,7 @@
           <!-- Liga, grupo, ciudad, etc. -->
         </p>
       </div>
+    </div>
       <!-- Fichas de stats equipo -->
       <div class="summary-cards">
         <div class="summary-card-pts">
@@ -122,8 +126,13 @@
     </div>
   </section>
   <section id="shotsSection" class="player-section" style="display:none;">
-    <h3>Mapa de Tiros del Equipo</h3>
-    <!-- reuse player filters UI -->
+    <h2>Mapa de Tiros del Equipo</h2>
+    <div class="shots-filters-btns">
+      <button id="toggleTeamFiltersBtn" class="reset-filters-btn">Mostrar filtros</button>
+      <button id="resetTeamFiltersBtn" class="reset-filters-btn">Restablecer filtros</button>
+    </div>
+    <div id="selectedTeamFilters" class="selected-filters"></div>
+    <div class="filter-controls" id="teamFilterControls"></div>
     <div id="shotsFiltersContainer"></div>
     <div class="chart-with-card horizontal">
       <div class="chart-container chart-container-shotChart"><canvas id="teamShotsChart"></canvas></div>
@@ -407,13 +416,6 @@
   <!-- FOOTER -->
   <footer class="feb-footer">
     <div class="footer-inner">
-      <div class="footer-left">
-        <img 
-          src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/logofeb.svg" 
-          alt="Logo FEB" 
-          class="footer-logo"
-        >
-      </div>
       <div class="footer-right">
         <h3>Patrocinadores Oficiales</h3>
         <div class="partner-logos">

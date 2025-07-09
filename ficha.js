@@ -251,6 +251,25 @@ document.addEventListener("DOMContentLoaded", () => {
       photoModal.style.display = "none";
     }
   });
+
+  // Filtro para mostrar box score de un equipo u otro
+  const teamStatsFilter = document.getElementById("teamStatsFilter");
+  const teamABox = document.querySelector('.team-box-score:nth-of-type(1)');
+  const teamBBox = document.querySelector('.team-box-score:nth-of-type(2)');
+  if (teamStatsFilter && teamABox && teamBBox) {
+    teamStatsFilter.addEventListener('change', () => {
+      if (teamStatsFilter.value === 'a') {
+        teamABox.style.display = '';
+        teamBBox.style.display = 'none';
+      } else if (teamStatsFilter.value === 'b') {
+        teamABox.style.display = 'none';
+        teamBBox.style.display = '';
+      } else {
+        teamABox.style.display = '';
+        teamBBox.style.display = '';
+      }
+    });
+  }
 });
 
 /***********************************************
@@ -341,13 +360,21 @@ function setupMiniHeader(data) {
       miniHeader.style.display = "flex";
       const tA = data.HEADER.TEAM[0];
       const tB = data.HEADER.TEAM[1];
+      // Determinar el ganador
+      let scoreAClass = "";
+      let scoreBClass = "";
+      if (parseInt(tA.pts) > parseInt(tB.pts)) {
+        scoreAClass = " score-winner";
+      } else if (parseInt(tB.pts) > parseInt(tA.pts)) {
+        scoreBClass = " score-winner";
+      }
       miniHeader.querySelector(".mini-score").innerHTML = `
         <div class="mini-score-team mini-score-team-left">
           <img src="${tA.logo}" alt="${tA.name}" class="mini-team-logo">
           <span class="mini-team-name">${tA.name}</span>
         </div>
         <div class="mini-score-info">
-          <span class="mini-score-text">${tA.pts} - ${tB.pts}</span>
+          <span class="mini-score-text"><span class="mini-score-a${scoreAClass}">${tA.pts}</span> - <span class="mini-score-b${scoreBClass}">${tB.pts}</span></span>
           <span class="mini-match-status">${data.HEADER.status || "LIVE"}</span>
         </div>
         <div class="mini-score-team mini-score-team-right">

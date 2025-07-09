@@ -102,8 +102,6 @@
           <span>/</span>
           <span></span>
         </div>
-        <div class="hero-phase">
-        </div>
         <div class="scoreboard">
           <div class="team-row">
             <div class="team-box">
@@ -119,7 +117,9 @@
               <div class="score-value"><span class="score-a"></span> - <span class="score-b"></span></div>
               <div class="score-status"></div>
               <div class="match-datetime"></div>
+              <div class="hero-phase"></div>
             </div>
+            
 
             <div class="team-box">
               <img
@@ -131,12 +131,6 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="hero-video">
-        <iframe
-          src=""
-          allowfullscreen
-        ></iframe>
       </div>
     </div>
   </header>
@@ -201,6 +195,14 @@
   <!-- Sección: Estadísticas (Box Score) -->
   <section id="stats" class="match-section">
     <h2>Estadísticas</h2>
+    <div style="text-align:center; margin-bottom: 16px;">
+      <label for="teamStatsFilter" style="font-weight:bold; margin-right:8px;">Ver estadísticas de:</label>
+      <select id="teamStatsFilter" style="padding:6px 12px; border-radius:5px; font-size:1em;">
+        <option value="both">Ambos equipos</option>
+        <option value="a">Equipo A</option>
+        <option value="b">Equipo B</option>
+      </select>
+    </div>
     <div class="box-score-container">
       <!-- BOX SCORE EQUIPO A -->
       <div class="team-box-score">
@@ -406,13 +408,6 @@
   <!-- FOOTER -->
   <footer class="feb-footer">
     <div class="footer-inner">
-      <div class="footer-left">
-        <img 
-          src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/logofeb.svg" 
-          alt="Logo FEB" 
-          class="footer-logo"
-        >
-      </div>
       <div class="footer-right">
         <h3>Patrocinadores Oficiales</h3>
         <div class="partner-logos">

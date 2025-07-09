@@ -113,6 +113,8 @@ body {
   padding: 20px;
   display: flex;             /* 💡 required for justify-content to work */
   justify-content: center;
+  background: linear-gradient(to right, #4859AA, #2F4170);
+  border-bottom: 3px solid #FF9E1B;
 }
 
 /***********************************************
@@ -123,7 +125,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background: linear-gradient(to right, #EFE34C, #B62929);
+  background: linear-gradient(to right, #4859AA, #2F4170);
   color: white;
   padding: 15px 0;
   font-size: 1.2em;
@@ -271,54 +273,133 @@ body {
 /***********************************************
  * NAV SECUNDARIA (tabs)
  ***********************************************/
-.match-tabs {
+ .match-tabs {
   position: sticky;
   top: 0;
   background-image: linear-gradient(to right, #2F4170, #111C4E);
   z-index: 9998;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
+
+.match-tabs li{
+    display: list-item;
+    text-align: -webkit-match-parent;
+    unicode-bidi: isolate;
+
+}
+
 .match-tabs ul {
   display: flex;
-  gap: 20px;
+  gap: 8px;
   max-width: 1200px;
   margin: 0 auto;
   list-style: none;
   padding: 10px;
-  justify-content: center;
+  justify-content: flex-start;
+  min-width: min-content;
+  overflow-x: auto;
+  scrollbar-gutter: stable both-edges;
 }
+
 .match-tabs a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
   color: #fff;
   font-weight: bold;
   text-decoration: none;
-  padding: 5px 10px;
-  transition: background-color 0.2s;
-}
-.match-tabs a:hover {
-  background-color: #FF9E1B;
-  color: #111C4E;
-}
-.match-tabs .active {
-  background-color: #FF9E1B;
-  color: #111C4E;
+  padding: 8px 16px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
   border-radius: 4px;
 }
 
 .match-tabs .tab-icon {
   width: 20px;
   height: 20px;
-  display: inline-block;
-  vertical-align: middle;
-  flex-shrink: 0;
+  filter: brightness(0) invert(1);
+  transition: filter 0.2s;
+}
+
+.match-tabs a:hover {
+ background-color: rgba(255, 158, 27, 0.1);
+ color: #FF9E1B;
+}
+
+.match-tabs a:hover .tab-icon {
+  filter: none;
+  color: #FF9E1B;
+  stroke: #FF9E1B;
+}
+
+.match-tabs .active {
+  background-color: transparent;
+  color: #FF9E1B;
+  border-bottom: 3px solid #FF9E1B;
+  border-radius: 0;
+}
+
+.match-tabs .active .tab-icon {
+  filter: none;
+  color: #FF9E1B;
+  stroke: #FF9E1B;
+}
+
+/* Responsive styles for tabs */
+@media (max-width: 768px) {
+  .match-tabs ul {
+      padding: 10px 5px;
+      gap: 10px;
+  }
+  
+  .match-tabs a {
+      padding: 6px 12px;
+      font-size: 0.9em;
+  }
+  
+  .match-tabs .tab-icon {
+      width: 18px;
+      height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .match-tabs a {
+      padding: 6px 8px;
+      font-size: 0.85em;
+  }
+  
+  .match-tabs .tab-icon {
+      width: 16px;
+      height: 16px;
+  }
+}
+
+/* Scrollbar siempre visible y personalizada para navegadores Webkit */
+.match-tabs ul::-webkit-scrollbar {
+height: 8px;
+background: #222b4e;
+}
+.match-tabs ul::-webkit-scrollbar-thumb {
+background: #D7DAE3;
+border-radius: 4px;
+}
+.match-tabs ul::-webkit-scrollbar-track {
+background: #222b4e;
+}
+
+/* Scrollbar para Firefox */
+.match-tabs ul {
+scrollbar-color: #D7DAE3 #222b4e;
+scrollbar-width: thin;
 }
 
 /***********************************************
  * SECCIONES (match-section)
  ***********************************************/
 .match-section {
-  width: 90%;
+  width: 1200px;
   margin: 20px auto;
   background-color: #fff;
   color: #111C4E;
@@ -365,6 +446,7 @@ body {
 
 .match-section h2 {
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .team-heading {
@@ -442,7 +524,7 @@ table tbody td:hover {
   margin: 0 auto;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
   gap: 40px;
   flex-wrap: wrap;
@@ -450,15 +532,9 @@ table tbody td:hover {
 .footer-container {
   width: 100%;
 }
-.footer-left {
-  flex: 1 1 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 18px;
-}
+
 .footer-logo {
-  height: 72px;
+  height: 52px;
   margin-bottom: 10px;
 }
 .footer-text {
@@ -477,11 +553,13 @@ table tbody td:hover {
   flex: 2 1 500px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  justify-items: center;
   gap: 18px;
+  justify-content: center;
 }
 .footer-right h3 {
-  color: #FF9E1B;
+  color: #fff;
   margin-bottom: 12px;
   font-size: 1.1em;
   font-weight: bold;
@@ -535,11 +613,26 @@ table tbody td:hover {
     justify-content: center;
   }
   .footer-logo {
-    height: 70px;
+    height: 52px;
   }
   .main-nav ul {
     justify-content: center;
     width: 100%;
+  }
+  
+  .match-tabs ul::-webkit-scrollbar {
+    height: 6px;
+  }
+  .match-tabs ul::-webkit-scrollbar-thumb {
+    background: #FF9E1B;
+    border-radius: 4px;
+  }
+  .match-tabs ul::-webkit-scrollbar-track {
+    background: #2F4170;
+  }
+  .match-tabs li {
+    flex: 0 0 auto;
+    white-space: nowrap;
   }
 }
 
@@ -884,7 +977,7 @@ body {
 /* Subtítulo de la fase y estadio */
 .hero-phase {
     font-size: 0.9rem;
-    color: #ddd;
+    color: #D7DAE3;
     margin-bottom: 20px;
     text-transform: uppercase;
 }
@@ -953,13 +1046,13 @@ body {
 .score-status {
     font-size: 1.1rem;
     font-weight: bold;
-    color: #ccc;
+    color: #fff;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 .match-datetime {
     font-size: 0.9rem;
-    color: #aaa;
+    color: #D7DAE3;
     margin-top: 5px;
 }
 
@@ -1161,14 +1254,29 @@ body {
 
 .hero-breadcrumb {
   color: #fff;
+  font-size: 0.6em;
 }
 
 .hero-breadcrumb a {
-  color: #fff;
+  color: #FF9E1B;
   text-decoration: none;
 }
 
 .score-winner {
+  color: #FF9E1B !important;
+  font-weight: bold;
+}
+
+/* Estilos para puntuaciones ganadoras y perdedoras */
+.score-winner {
+  color: #FF9E1B;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+/* Para sticky-mini-header */
+.mini-score-a.score-winner,
+.mini-score-b.score-winner {
   color: #FF9E1B !important;
   font-weight: bold;
 }
@@ -1283,14 +1391,14 @@ body {
     padding: 0 !important;
   }
   .team-row {
-    flex-direction: column !important;
+    flex-direction: row !important;
     gap: 4px !important;
     align-items: center !important;
     margin-bottom: 4px !important;
   }
   .team-logo {
-    width: 36px !important;
-    height: 36px !important;
+    width: 50px !important;
+    height: 50px !important;
     margin-bottom: 2px !important;
     box-shadow: none !important;
   }
@@ -1309,5 +1417,169 @@ body {
   .score-status, .match-datetime {
     font-size: 0.85em !important;
     margin-top: 0 !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .match-header {
+    padding: 10px 0;
+  }
+  .hero-content {
+    flex-direction: column;
+    gap: 18px;
+    width: 100%;
+    padding: 0 8px;
+  }
+  .hero-left {
+    width: 100%;
+    align-items: center;
+    padding: 0;
+  }
+  .scoreboard {
+    gap: 4px;
+    padding: 0;
+  }
+  .team-row {
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
+    margin-bottom: 4px;
+  }
+  .team-logo {
+    width: 48px !important;
+    height: 48px !important;
+    margin-bottom: 2px !important;
+    box-shadow: none !important;
+  }
+  .team-name {
+    font-size: 0.9em !important;
+    max-width: 90px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    text-align: center !important;
+  }
+  .score-value {
+    font-size: 1.3em !important;
+    margin-bottom: 0 !important;
+  }
+  .score-status, .match-datetime {
+    font-size: 0.8em !important;
+    margin-top: 0 !important;
+    text-align: center !important;
+  }
+
+  .hero-phase{
+    font-size: 0.5em !important;
+  }
+
+  .hero-video {
+    margin-left: 0;
+    width: 100%;
+    max-width: 500px;
+    height: 220px;
+  }
+  .match-section {
+    width: 98%;
+    padding: 10px;
+    margin: 10px auto;
+  }
+  .box-score-container {
+    padding: 0 2px;
+  }
+  .team-box-score {
+    padding: 10px 2px;
+    font-size: 0.95em;
+  }
+  .news-list {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .news-card img {
+    height: 120px;
+  }
+  .photo-gallery img {
+    width: 48%;
+  }
+  .modal-content {
+    max-width: 95%;
+    max-height: 65%;
+  }
+}
+@media (max-width: 600px) {
+  .hero-content {
+    padding: 0 2px;
+  }
+  .team-logo {
+    width: 70px !important;
+    height: 70px !important;
+  }
+  .team-name {
+    font-size: 0.85em !important;
+    max-width: 70px !important;
+  }
+  .score-value {
+    font-size: 2em !important;
+  }
+  .match-section {
+    width: 98%;
+    padding: 4px 0;
+  }
+  .team-box-score {
+    padding: 6px 0;
+    font-size: 0.9em;
+  }
+  .news-card img {
+    height: 90px;
+  }
+  .photo-gallery img {
+    width: 98%;
+  }
+}
+
+@media (max-width: 900px) {
+  .sticky-mini-header {
+    padding: 8px 0;
+    font-size: 1em;
+    height: 70px;;
+  }
+  .mini-score {
+    gap: 8px;
+    padding: 0 6px;
+  }
+  .mini-team-logo {
+    width: 28px;
+    height: 28px;
+  }
+  .mini-team-name {
+    font-size: 0.9em;
+    max-width: 60px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .mini-score-text {
+    font-size: 1.1em;
+  }
+}
+@media (max-width: 600px) {
+  .sticky-mini-header {
+    padding: 4px 0;
+    font-size: 1.3em;
+  }
+  .mini-score {
+    gap: 4px;
+    padding: 0 2px;
+  }
+  .mini-team-logo {
+    width: 40px;
+    height: 40px;
+  }
+  .mini-team-name {
+    font-size: 0.4em;
+    max-width: 40px;
+  }
+  .mini-score-text {
+    font-size: 1.5em;
   }
 }

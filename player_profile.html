@@ -196,9 +196,13 @@
 </section>
 
 <!-- New section for Mapa de Tiros plot -->
-<section id="shotsSection" class="player-section" style="display:none;">
-  <h3>Mapa de Tiros</h3>
-  <div class="filter-controls">
+<section id="shotsSection" class="player-section shots-section-hidden">
+  <h2>Mapa de Tiros</h2>
+  <div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 10px;">
+    <button id="toggleFiltersBtn" class="reset-filters-btn" style="margin-right: 0;">Mostrar filtros</button>
+    <button id="resetFiltersBtn" class="reset-filters-btn">Restablecer filtros</button>
+  </div>
+  <div class="filter-controls" id="filterControls" style="display: none;">
     <div class="custom-select">
       <div class="select-header" onclick="toggleDropdown('match')">
         <span>Partido</span>
@@ -338,17 +342,13 @@
     </div>
   </div>
 
-  <div style="display: flex; justify-content: center; align-items: center; margin: 12px 0;">
-    <button id="resetFiltersBtn" style="padding: 6px 18px; background: #1976d2; color: #fff; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">Restablecer filtros</button>
-  </div>
-
-  <div id="selectedFilters" style="margin: 10px 0 18px 0;"></div>
+  <div id="selectedFilters" class="selected-filters"></div>
   <div class="chart-with-card horizontal">
     <div class="chart-container chart-container-shotChart">
       <canvas id="shotsChart"></canvas>
     </div>
     <div class="stats-card">
-      <h3 style="margin-bottom: 10px;">Porcentajes de Acierto Relativos</h3>
+      <h3 class="mb-10">Porcentajes de Acierto Relativos</h3>
       <div id="fgPercentage" class="fg-percentage">-</div>
     </div>
   </div>
@@ -356,32 +356,32 @@
 
   <!-- SECCIÓN: Estadísticas Detalladas -->
   <section id="statsSection" class="player-section">
-    <h2 style="margin-bottom: 16px;">Estadísticas Detalladas</h2>
+    <h2 class="mb-16">Estadísticas Detalladas</h2>
     <div class="stats-container" id="statsContainer">
       <!-- Se inyectarán las tablas dinámicamente -->
     </div>
   </section>
 
   <!-- SECCIÓN: Fotos (Galería) -->
-  <section id="photosSection" class="player-section" style="display:none;">
+  <section id="photosSection" class="player-section section-hidden">
     <h2>Galería de Fotos</h2>
     <p>Todavía no hay contenido disponible para esta sección.</p>
   </section>
 
   <!-- SECCIÓN: Videos -->
-  <section id="videosSection" class="player-section" style="display:none;">
+  <section id="videosSection" class="player-section section-hidden">
     <h2>Videos</h2>
     <p>Todavía no hay contenido disponible para esta sección.</p>
   </section>
 
-  <section id="newsSection" class="player-section" style="display:none;">
+  <section id="newsSection" class="player-section section-hidden">
     <h2>Noticias</h2>
     <p>Todavía no hay contenido disponible para esta sección.</p>
   </section>
 
   <!-- SECCIÓN: Récords -->
 
-<section id="recordsSection" class="player-section" style="display:none;">
+<section id="recordsSection" class="player-section section-hidden">
     <h2>Récords Personales</h2>
     <div class="records-container">
         <div class="record-card-pts">
@@ -489,10 +489,10 @@
     <!-- SECCIÓN: Badges -->
 
   
-<section id="badgesSection" class="player-section" style="display:none;">
+<section id="badgesSection" class="player-section section-hidden">
     <h2>Logros</h2>
     <div class="badges-container">
-        <div class="badge-card", style="display: none;">
+        <div class="badge-card badge-card-hidden">
             <img src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/badge2.svg" alt="Titular Frecuente" class="badge-icon">
             <div class="badge-details">
                 <span class="badge-title">Titular Frecuente</span>
@@ -541,7 +541,7 @@
                 <p>Promedia 2 o más tapones por partido.</p>
             </div>
         </div>
-        <div class="badge-card", style="display: none;">
+        <div class="badge-card badge-card-hidden">
             <img src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/badge1.svg" alt="Clutch Player" class="badge-icon">
             <div class="badge-details">
                 <span class="badge-title">Clutch Player</span>
@@ -639,6 +639,20 @@
         }
       });
     });
+
+    // Mostrar/Ocultar filtros del mapa de tiros
+    const toggleFiltersBtn = document.getElementById('toggleFiltersBtn');
+    const filterControls = document.getElementById('filterControls');
+    let filtersVisible = false;
+    if (toggleFiltersBtn && filterControls) {
+      toggleFiltersBtn.addEventListener('click', function() {
+        filtersVisible = !filtersVisible;
+        filterControls.style.display = filtersVisible ? '' : 'none';
+        toggleFiltersBtn.textContent = filtersVisible ? 'Ocultar filtros' : 'Mostrar filtros';
+      });
+      // Inicializa el texto del botón
+      toggleFiltersBtn.textContent = 'Mostrar filtros';
+    }
   </script>
   <!-- NAVEGACIÓN INFERIOR MÓVIL -->
   <nav class="mobile-bottom-nav">

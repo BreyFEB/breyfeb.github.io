@@ -1184,6 +1184,35 @@ const competitionMappings = {
 let allTeamShots = [];
 let allLeagueShots = [];
 
+// --- NUEVO: Mostrar/Ocultar filtros y reset ---
+document.addEventListener('DOMContentLoaded', function() {
+  const toggleBtn = document.getElementById('toggleTeamFiltersBtn');
+  const filterControls = document.getElementById('teamFilterControls');
+  const resetBtn = document.getElementById('resetTeamFiltersBtn');
+  let filtersVisible = false;
+
+  if (toggleBtn && filterControls) {
+    toggleBtn.addEventListener('click', function() {
+      filtersVisible = !filtersVisible;
+      filterControls.style.display = filtersVisible ? 'flex' : 'none';
+      toggleBtn.textContent = filtersVisible ? 'Ocultar filtros' : 'Mostrar filtros';
+    });
+    // Inicializa el texto del botón
+    toggleBtn.textContent = 'Mostrar filtros';
+  }
+  if (resetBtn) {
+    resetBtn.addEventListener('click', function() {
+      if (typeof resetTeamFilters === 'function') {
+        resetTeamFilters();
+      }
+    });
+  }
+  // Oculta los filtros al cargar
+  if (filterControls) {
+    filterControls.style.display = 'none';
+  }
+});
+
 function getTeamId() {
   const params = new URLSearchParams(window.location.search);
   return params.get('team_id');
@@ -1234,12 +1263,13 @@ async function loadTeamShotData() {
 }
 
 function buildTeamShotFiltersUI(shots) {
-  const container = document.getElementById('shotsFiltersContainer');
+  // Usar el nuevo contenedor visual si existe
+  const filterControlsEl = document.getElementById('teamFilterControls');
+  const container = filterControlsEl || document.getElementById('shotsFiltersContainer');
   if (!container) {
     console.error('shotsFiltersContainer not found!');
     return;
   }
-  
   container.innerHTML = '';
 
   // Create filter controls container
@@ -1315,18 +1345,8 @@ function buildTeamShotFiltersUI(shots) {
   container.appendChild(filterControls);
 
   // Reset button
-  const resetBtn = document.createElement('button');
-  resetBtn.textContent = 'Restablecer filtros';
-  resetBtn.style.padding = '6px 18px';
-  resetBtn.style.background = '#1976d2';
-  resetBtn.style.color = '#fff';
-  resetBtn.style.border = 'none';
-  resetBtn.style.borderRadius = '4px';
-  resetBtn.style.fontWeight = 'bold';
-  resetBtn.style.cursor = 'pointer';
-  resetBtn.style.margin = '12px 0';
+
   resetBtn.onclick = resetTeamFilters;
-  
   // Create a container to center the button
   const resetContainer = document.createElement('div');
   resetContainer.style.display = 'flex';
@@ -1335,11 +1355,9 @@ function buildTeamShotFiltersUI(shots) {
   resetContainer.appendChild(resetBtn);
   container.appendChild(resetContainer);
 
-  // Selected filters display
-  const selectedFiltersDiv = document.createElement('div');
-  selectedFiltersDiv.id = 'selectedTeamFilters';
-  selectedFiltersDiv.style.margin = '10px 0 18px 0';
-  container.appendChild(selectedFiltersDiv);
+  // Los tags de filtro se renderizan fuera del contenedor de filtros
+  const selectedFiltersDiv = document.getElementById('selectedTeamFilters');
+  if (selectedFiltersDiv) selectedFiltersDiv.innerHTML = '';
 
   // Add event listeners for all filters
   addTeamFilterEventListeners();
@@ -1789,159 +1807,117 @@ function resetTeamFilters() {
 function updateSelectedTeamFilters() {
   const selectedFiltersDiv = document.getElementById('selectedTeamFilters');
   if (!selectedFiltersDiv) return;
-  
   selectedFiltersDiv.innerHTML = '';
-  
-  // Helper function to create a filter tag
-  function createFilterTag(filterType, value, originalValue) {
-    const tag = document.createElement('div');
+
+  // Helper para crear el tag visual
+  function createFilterTag(name, label, value) {
+    const tag = document.createElement('span');
     tag.className = 'filter-tag';
-    tag.dataset.filterType = filterType;
-    tag.dataset.filterValue = originalValue;
-    tag.style.display = 'inline-flex';
-    tag.style.alignItems = 'center';
-    tag.style.background = '#f0f0f0';
-    tag.style.padding = '6px 12px';
-    tag.style.borderRadius = '16px';
-    tag.style.margin = '4px';
-    tag.style.fontSize = '0.9em';
-    tag.style.color = '#333';
-    
     const nameSpan = document.createElement('span');
     nameSpan.className = 'filter-name';
-    nameSpan.textContent = value;
-    nameSpan.style.marginRight = '8px';
-    
-    const deleteBtn = document.createElement('span');
-    deleteBtn.className = 'delete-filter';
-    deleteBtn.innerHTML = '×';
-    deleteBtn.style.cursor = 'pointer';
-    deleteBtn.style.color = '#666';
-    deleteBtn.style.fontSize = '1.1em';
-    deleteBtn.style.padding = '0 4px';
-    deleteBtn.style.borderRadius = '50%';
-    deleteBtn.style.transition = 'all 0.2s';
-    deleteBtn.onclick = function(e) {
-      e.stopPropagation();
-      
-      if (filterType === 'time') {
-        document.getElementById('teamQuarterTime').value = '';
-      } else if (filterType === 'distance') {
-        document.getElementById('teamMinDistance').value = '';
-        document.getElementById('teamMaxDistance').value = '';
-      } else {
-        const checkbox = document.querySelector(`input[name="${filterType}"][value="${originalValue}"]`);
-        if (checkbox) {
-          checkbox.checked = false;
-        }
-      }
-      
-      tag.remove();
-      updateTeamShotChart();
-    };
-    
+    nameSpan.textContent = label;
     tag.appendChild(nameSpan);
-    tag.appendChild(deleteBtn);
+    const del = document.createElement('span');
+    del.className = 'delete-filter';
+    del.innerHTML = '&times;';
+    del.title = 'Quitar filtro';
+    del.onclick = function() {
+      // Desmarca el filtro correspondiente
+      const selector = `input[name="${name}"][value="${value}"]`;
+      const input = document.querySelector(selector);
+      if (input) {
+        input.checked = false;
+        updateTeamShotChart();
+      }
+    };
+    tag.appendChild(del);
     return tag;
   }
-  
-  // --- NEW: Player filter tags ---
+
+  // Jugadores
   const selectedPlayers = getSelectedTeamValues('player');
   if (selectedPlayers.length > 0) {
     selectedPlayers.forEach(pid => {
-      const player = teamPlayers.find(p => p.id === pid);
-      const playerName = player ? player.playerName : pid;
-      selectedFiltersDiv.appendChild(createFilterTag('player', `Jugador: ${playerName}`, pid));
+      const player = teamPlayers.find(p => p.id == pid);
+      const label = player ? `Jugador: ${player.playerName}` : `Jugador: ${pid}`;
+      selectedFiltersDiv.appendChild(createFilterTag('player', label, pid));
     });
   }
-
-  // Add match filters
+  // Partido
   const selectedMatches = getSelectedTeamValues('match');
   if (selectedMatches.length > 0) {
     selectedMatches.forEach(match => {
       selectedFiltersDiv.appendChild(createFilterTag('match', `Partido: ${match}`, match));
     });
   }
-  
-  // Add quarter filters
+  // Cuarto
   const selectedQuarters = getSelectedTeamValues('quarter');
   if (selectedQuarters.length > 0) {
-    selectedQuarters.forEach(quarter => {
-      selectedFiltersDiv.appendChild(createFilterTag('quarter', `Cuarto: ${quarter}`, quarter));
+    selectedQuarters.forEach(q => {
+      selectedFiltersDiv.appendChild(createFilterTag('quarter', `Cuarto: ${q}`, q));
     });
   }
-  
-  // Add result filters
+  // Resultado
   const selectedResults = getSelectedTeamValues('result');
   if (selectedResults.length > 0) {
     selectedResults.forEach(result => {
-      const displayValue = result === 'made' ? 'Anotado' : 'Fallado';
-      selectedFiltersDiv.appendChild(createFilterTag('result', `Resultado: ${displayValue}`, result));
+      const display = result === 'made' ? 'Anotado' : 'Fallado';
+      selectedFiltersDiv.appendChild(createFilterTag('result', `Resultado: ${display}`, result));
     });
   }
-  
-  // Add shot type filters
+  // Tipo de tiro
   const selectedShotTypes = getSelectedTeamValues('shotType');
   if (selectedShotTypes.length > 0) {
     selectedShotTypes.forEach(type => {
-      let displayName;
+      let display;
       switch(type) {
-        case 'rim': displayName = 'Cerca del aro'; break;
-        case '2': displayName = 'Tiros de 2'; break;
-        case '3': displayName = 'Tiros de 3'; break;
-        default: displayName = type;
+        case 'rim': display = 'Cerca del aro'; break;
+        case '2': display = 'Tiros de 2'; break;
+        case '3': display = 'Tiros de 3'; break;
+        default: display = type;
       }
-      selectedFiltersDiv.appendChild(createFilterTag('shotType', `Tipo de Tiro: ${displayName}`, type));
+      selectedFiltersDiv.appendChild(createFilterTag('shotType', `Tipo: ${display}`, type));
     });
   }
-  
-  // Add score difference filters
+  // Diferencia marcador
   const selectedScoreDiffs = getSelectedTeamValues('scoreDiff');
   if (selectedScoreDiffs.length > 0) {
     selectedScoreDiffs.forEach(diff => {
-      let displayName;
+      let display;
       switch(diff) {
-        case 'tied': displayName = 'Empate'; break;
-        case 'ahead_1_5': displayName = 'Ganando por 1-5'; break;
-        case 'ahead_6_10': displayName = 'Ganando por 6-10'; break;
-        case 'ahead_10_plus': displayName = 'Ganando por +10'; break;
-        case 'behind_1_5': displayName = 'Perdiendo por 1-5'; break;
-        case 'behind_6_10': displayName = 'Perdiendo por 6-10'; break;
-        case 'behind_10_plus': displayName = 'Perdiendo por +10'; break;
-        default: displayName = diff;
+        case 'tied': display = 'Empate'; break;
+        case 'ahead_1_5': display = 'Ganando por 1-5'; break;
+        case 'ahead_6_10': display = 'Ganando por 6-10'; break;
+        case 'ahead_10_plus': display = 'Ganando por +10'; break;
+        case 'behind_1_5': display = 'Perdiendo por 1-5'; break;
+        case 'behind_6_10': display = 'Perdiendo por 6-10'; break;
+        case 'behind_10_plus': display = 'Perdiendo por +10'; break;
+        default: display = diff;
       }
-      selectedFiltersDiv.appendChild(createFilterTag('scoreDiff', `Diferencia: ${displayName}`, diff));
+      selectedFiltersDiv.appendChild(createFilterTag('scoreDiff', `Diferencia: ${display}`, diff));
     });
   }
-  
-  // Add court side filters
+  // Lado de la cancha
   const selectedCourtSides = getSelectedTeamValues('courtSide');
   if (selectedCourtSides.length > 0) {
     selectedCourtSides.forEach(side => {
-      const displayValue = side === 'left' ? 'Izquierda' : 'Derecha';
-      selectedFiltersDiv.appendChild(createFilterTag('courtSide', `Lado: ${displayValue}`, side));
+      const display = side === 'left' ? 'Izquierda' : 'Derecha';
+      selectedFiltersDiv.appendChild(createFilterTag('courtSide', `Lado: ${display}`, side));
     });
   }
-  
-  // Add time filter
+  // Tiempo de cuarto
   const quarterTime = document.getElementById('teamQuarterTime')?.value;
   if (quarterTime) {
-    selectedFiltersDiv.appendChild(createFilterTag('time', `Tiempo: ${quarterTime} min`, quarterTime));
+    selectedFiltersDiv.appendChild(createFilterTag('quarterTime', `Hasta min: ${quarterTime}`, quarterTime));
   }
-  
-  // Add distance filters
+  // Distancia
   const minDistance = document.getElementById('teamMinDistance')?.value;
+  if (minDistance) {
+    selectedFiltersDiv.appendChild(createFilterTag('minDistance', `Distancia mín: ${minDistance}m`, minDistance));
+  }
   const maxDistance = document.getElementById('teamMaxDistance')?.value;
-  if (minDistance || maxDistance) {
-    let distanceText = 'Distancia: ';
-    if (minDistance && maxDistance) {
-      distanceText += `${minDistance}-${maxDistance} m`;
-    } else if (minDistance) {
-      distanceText += `>${minDistance} m`;
-    } else {
-      distanceText += `<${maxDistance} m`;
-    }
-    selectedFiltersDiv.appendChild(createFilterTag('distance', distanceText, `${minDistance || ''}-${maxDistance || ''}`));
+  if (maxDistance) {
+    selectedFiltersDiv.appendChild(createFilterTag('maxDistance', `Distancia máx: ${maxDistance}m`, maxDistance));
   }
 }
 

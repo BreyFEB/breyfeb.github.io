@@ -159,9 +159,10 @@ header {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  gap: 30px;
   align-items: center;
   justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 .player-photo-box {
   flex-shrink: 0;
@@ -241,7 +242,7 @@ header {
   margin-left: auto;
 }
 .summary-card-pts, .summary-card-reb, .summary-card-ast, .summary-card-val {
-  background: #2C3967;
+  background: #181D37;
   width: 110px;
   height: 120px;
   border-radius: 8px;
@@ -252,8 +253,10 @@ header {
   justify-content: center;
   align-items: center;
   position: relative;
-  border: 1px solid #D7DAE3;
+  border: 1px solid white;
 }
+
+
 .summary-value {
   font-size: 1.5em;
   font-weight: bold;
@@ -264,6 +267,7 @@ header {
   text-transform: uppercase;
   margin-top: 5px;
   color: white;
+  font-weight: bold;
 }
 .summary-rank-pill {
   position: absolute;
@@ -402,7 +406,7 @@ header {
 .player-section {
   width: 1200px;
   margin: 20px auto;
-  background-color: #fff;
+  background-color: #f5f5f5;
   color: #111C4E;
   border-radius: 8px;
   padding: 20px;
@@ -412,6 +416,7 @@ header {
   color: #1D296F;
   margin-top: 10px;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 /* ESTADÍSTICAS DETALLADAS */
@@ -571,7 +576,7 @@ header {
   margin: 0 auto;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
   gap: 40px;
   flex-wrap: wrap;
@@ -581,13 +586,6 @@ header {
   width: 100%;
 }
 
-.footer-left {
-  flex: 1 1 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 18px;
-}
 
 .footer-logo {
   height: 52px;
@@ -618,7 +616,7 @@ header {
 .footer-right {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 18px;
 }
 
@@ -1068,7 +1066,7 @@ header {
   display: flex;
   flex-direction: row;
   gap: 20px;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   height: auto;
   max-width: 1600px;
@@ -1427,12 +1425,12 @@ header {
 .filter-tag {
   display: inline-flex;
   align-items: center;
-  background: #f0f0f0;
+  background: #181D37;
   padding: 6px 12px;
-  border-radius: 16px;
+  border-radius: 4px;
   margin: 4px;
   font-size: 0.9em;
-  color: #333;
+  color: #D7DAE3;
 }
 
 .filter-tag .filter-name {
@@ -1449,7 +1447,7 @@ header {
 }
 
 .filter-tag .delete-filter:hover {
-  color: #c62828;
+  color: #FF9E1B;
   background: rgba(198, 40, 40, 0.1);
 }
 
@@ -1884,7 +1882,39 @@ label.option span {
   position: relative;
 }
 
-<<<<<<< HEAD
+/* === MOVED FROM INLINE STYLES IN HTML === */
+.shots-section-hidden,
+.section-hidden {
+  display: none;
+}
+.centered-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 12px 0;
+}
+.reset-filters-btn {
+  padding: 6px 18px;
+  background: #FF9E1B;
+  color: #1D296F;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.selected-filters {
+  margin: 10px 0 18px 0;
+}
+.mb-10 {
+  margin-bottom: 10px;
+}
+.mb-16 {
+  margin-bottom: 16px;
+}
+.badge-card-hidden {
+  display: none;
+}
+
 .player-search-bar {
   width: 100%;
   max-width: 400px;
@@ -2046,6 +2076,7 @@ label.option span {
   .player-photo-box {
     flex-shrink: 0;
     margin-bottom: 0;
+    display: inline-block;
   }
   .player-photo {
     width: 80px;
@@ -2274,6 +2305,8 @@ label.option span {
   margin-bottom: 20px;
   padding: 8px 18px;
   color: #D7DAE3;
+  margin-left: 134px;
+  margin-top: 20px;
   font-weight: bold;
   text-decoration: none;
   font-size: 1em;
@@ -2290,17 +2323,10 @@ label.option span {
     font-size: 0.95em;
     padding: 7px 12px;
     margin-bottom: 12px;
+    margin-left: 0;
   }
 }
 
-.back-to-players-btn {
-  max-width: 1200px;
-  margin: 20px auto  ;
-  display: flex;
-  gap: 30px;
-  align-items: center;
-  justify-content: flex-start;
-=======
 /* Team Comparison Grid Styles */
 .team-comparison-grid {
   display: grid;
@@ -2461,5 +2487,4 @@ label.option span {
   .team-stat-value {
     font-size: 1.2em;
   }
->>>>>>> 144f0be4d3ab852e7b06cfc5871f1dee635bcee9
 }

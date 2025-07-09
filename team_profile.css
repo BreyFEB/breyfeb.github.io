@@ -213,6 +213,7 @@
 
   .team-basic-info {
     color: #fff;
+    display: inline-block;
   }
   .team-basic-info .player-name {
     color: #fff;
@@ -319,7 +320,6 @@
     color: #FF9E1B;
     font-size: 1.5em;
     font-weight: 600;
-    margin-bottom: 10px;
   }
 
   /* Lineups Section Styles */
@@ -1175,6 +1175,7 @@
     white-space: nowrap;
     text-align: left;
   }
+ 
 
   /* Desktop layout adjustments */
   @media (min-width: 1024px) {
@@ -1202,3 +1203,115 @@
       font-size: 0.75em;
       }
     }
+
+    .team-header{
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+/* Botón volver a equipos */
+.back-to-players-btn {
+  max-width: 1200px;
+  width:1200px;
+  display: block;
+  color: #D7DAE3;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1em;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+  transition: background 0.2s, color 0.2s;
+  letter-spacing: 1px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  z-index: 10;
+  margin: 18px 0 18px 18px;
+}
+@media (max-width: 767px) {
+  .back-to-players-btn {
+    margin: 12px 0 12px 8px;
+    font-size: 0.95em;
+  }
+}
+.back-to-players-btn:hover {
+  color: #FF7D07;
+}
+
+/* Filtros activos del mapa de tiros (idéntico a player_profile) */
+.filter-tag {
+  display: inline-flex;
+  align-items: center;
+  background: #181D37;
+  padding: 6px 12px;
+  border-radius: 4px;
+  margin: 4px;
+  font-size: 0.9em;
+  color: #D7DAE3;
+}
+
+.filter-tag .filter-name {
+  margin-right: 8px;
+}
+
+.filter-tag .delete-filter {
+  cursor: pointer;
+  color: #666;
+  font-size: 1.1em;
+  padding: 0 4px;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.filter-tag .delete-filter:hover {
+  color: #FF9E1B;
+  background: rgba(198, 40, 40, 0.1);
+}
+
+@media (max-width: 900px) {
+  .filter-tag {
+    font-size: 0.85em;
+    padding: 4px 8px;
+    margin: 3px;
+  }
+  .filter-tag .delete-filter {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-tag {
+    font-size: 0.8em;
+    padding: 2px 4px;
+    margin: 2px;
+  }
+  .filter-tag .delete-filter {
+    font-size: 0.95em;
+  }
+}
+
+/* Contenedor de botones de filtros en el mapa de tiros */
+.shots-filters-btns {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* Botones de filtros y reset */
+#toggleTeamFiltersBtn,
+#resetTeamFiltersBtn {
+  margin-right: 0;
+}
+
+.selected-filters {
+  /* Ya tiene estilos en player_profile.css, pero asegúrate de que tenga margen adecuado */
+  margin: 10px 0 18px 0;
+}
+
+/* Asegura que el contenedor de filtros pueda ocultarse correctamente */
+#teamFilterControls {
+  display: none;
+}
