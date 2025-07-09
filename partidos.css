@@ -623,11 +623,11 @@ html, body {
   }
   .match-indicator {
     display: inline-block;
-    width: 6px;
-    height: 6px;
+    width: 8px;
+    height: 8px;
     background-color: #FF9E1B;
     border-radius: 50%;
-    margin-top: 4px;
+    margin-top: 6px;
   }
   .date-item:hover .match-indicator {
     background-color: #1D296F;

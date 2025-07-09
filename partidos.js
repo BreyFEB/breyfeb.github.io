@@ -88,13 +88,6 @@ async function loadMatchesFromRepo() {
     return;
   }
 
-  // Obtener la fecha actual en formato DD-MM-YYYY
-  const today = new Date();
-  const currentDay = today.getDate().toString().padStart(2, '0');
-  const currentMonth = (today.getMonth() + 1).toString().padStart(2, '0');
-  const currentYear = today.getFullYear().toString();
-  selectedDate = `${currentDay}-${currentMonth}-${currentYear}`;
-
   for (const url of urls) {
     try {
       const resp = await fetch(url, {
@@ -375,20 +368,22 @@ function createMatchCard(match) {
 }
 
 /*********************************
- * 5) GENERAR CALENDARIO DE FECHAS PARA 2025
+ * 5) GENERAR CALENDARIO DE FECHAS
  *********************************/
-function generateDays2025() {
+function generateCalendarDays() {
   const datesList = document.getElementById("datesList");
   datesList.innerHTML = "";
-  const start = new Date("2025-01-01");
-  const end = new Date("2026-01-01");
+  const currentYear = new Date().getFullYear();
+  const start = new Date(currentYear, 0, 1); // Jan 1st of current year
+  const end = new Date(currentYear + 1, 0, 1); // Jan 1st of next year
+
   let current = new Date(start);
   while (current < end) {
     const li = document.createElement("li");
     li.className = "date-item";
-    
-    const day = current.getDate().toString().padStart(2, '0');
-    const month = (current.getMonth() + 1).toString().padStart(2, '0');
+
+    const day = current.getDate().toString().padStart(2, "0");
+    const month = (current.getMonth() + 1).toString().padStart(2, "0");
     const year = current.getFullYear();
     const fullDate = `${day}-${month}-${year}`;
     li.dataset.date = fullDate;
@@ -397,7 +392,8 @@ function generateDays2025() {
     const dayNumber = current.getDate();
     const dayOfWeekSpan = document.createElement("span");
     dayOfWeekSpan.className = "dayOfWeek";
-    dayOfWeekSpan.textContent = dayOfWeek.charAt(0).toUpperCase() + dayOfWeek.slice(1);
+    dayOfWeekSpan.textContent =
+      dayOfWeek.charAt(0).toUpperCase() + dayOfWeek.slice(1);
 
     const dayNumberSpan = document.createElement("span");
     dayNumberSpan.className = "dayNumber";
@@ -410,7 +406,7 @@ function generateDays2025() {
     current.setDate(current.getDate() + 1);
   }
 }
-generateDays2025();
+generateCalendarDays();
 
 // Añadir funcionalidad de drag scroll después de generar los días
 addDragScrollFunctionality();
@@ -435,25 +431,31 @@ function updateMonthTitle() {
  *********************************/
 function setDefaultActiveDate() {
   const today = new Date();
-  if (today.getFullYear() !== 2025) {
-    // Si hoy no es 2025, usar primer día
+  const day = today.getDate().toString().padStart(2, "0");
+  const month = (today.getMonth() + 1).toString().padStart(2, "0");
+  const year = today.getFullYear();
+  const todayStr = `${day}-${month}-${year}`;
+
+  // Establecer la fecha global seleccionada
+  selectedDate = todayStr;
+
+  const targetItem = document.querySelector(
+    `.date-item[data-date="${todayStr}"]`
+  );
+
+  if (targetItem) {
+    targetItem.classList.add("active");
+    updateMonthTitle();
+    // Centrar la vista en el elemento activo sin animación al cargar
+    targetItem.scrollIntoView({ behavior: "auto", inline: "center" });
+  } else {
+    // Fallback por si hoy no está en la lista (ej. año nuevo)
     const first = document.querySelector(".dates-list .date-item");
     if (first) {
       first.classList.add("active");
       updateMonthTitle();
-      //first.scrollIntoView({ behavior: "smooth", inline: "center" });
+      selectedDate = first.dataset.date;
     }
-    return;
-  }
-  const day = today.getDate().toString().padStart(2, '0');
-  const month = (today.getMonth() + 1).toString().padStart(2, '0');
-  const year = today.getFullYear();
-  const todayStr = `${day}-${month}-${year}`;
-  const targetItem = document.querySelector(`.date-item[data-date="${todayStr}"]`);
-  if (targetItem) {
-    targetItem.classList.add("active");
-    updateMonthTitle();
-    //targetItem.scrollIntoView({ behavior: "smooth", inline: "center" });
   }
 }
 setDefaultActiveDate();
@@ -463,49 +465,62 @@ setDefaultActiveDate();
  *********************************/
 const arrowLeft = document.getElementById("arrowLeft");
 const arrowRight = document.getElementById("arrowRight");
+const datesListScroll = document.getElementById("datesList");
+
 arrowLeft.addEventListener("click", () => {
-  document.getElementById("datesList").scrollBy({ left: -100, behavior: "smooth" });
+  datesListScroll.scrollBy({ left: -datesListScroll.clientWidth / 2, behavior: "smooth" });
 });
 arrowRight.addEventListener("click", () => {
-  document.getElementById("datesList").scrollBy({ left: 100, behavior: "smooth" });
+  datesListScroll.scrollBy({ left: datesListScroll.clientWidth / 2, behavior: "smooth" });
+});
+
+// Actualizar título del mes al hacer scroll
+let scrollTimeout;
+datesListScroll.addEventListener('scroll', () => {
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+        const containerRect = datesListScroll.getBoundingClientRect();
+        const containerCenter = containerRect.left + containerRect.width / 2;
+        let closestItem = null;
+        let minDistance = Infinity;
+
+        const dateItems = datesListScroll.querySelectorAll('.date-item');
+        dateItems.forEach(item => {
+            const itemRect = item.getBoundingClientRect();
+            const itemCenter = itemRect.left + itemRect.width / 2;
+            const distance = Math.abs(containerCenter - itemCenter);
+            if (distance < minDistance) {
+                minDistance = distance;
+                closestItem = item;
+            }
+        });
+
+        if (closestItem) {
+            const fullDate = closestItem.dataset.date;
+            const [day, month, year] = fullDate.split("-");
+            const dateObj = new Date(year, parseInt(month) - 1, day);
+            const monthName = dateObj.toLocaleString("es-ES", { month: "long" });
+            document.getElementById("monthTitle").textContent =
+                monthName.charAt(0).toUpperCase() + monthName.slice(1) + " " + year;
+        }
+    }, 150);
 });
 
 /*********************************
  * 9) SELECCIÓN DE DÍA Y FILTRADO (combinado)
  *********************************/
-let dragDistance = 0; // Variable para detectar si se hizo drag
-
-document.getElementById("datesList").addEventListener("mousedown", (e) => {
-  dragDistance = 0; // Resetear distancia de drag
-});
-
-document.getElementById("datesList").addEventListener("mousemove", (e) => {
-  if (e.buttons === 1) { // Si el botón izquierdo está presionado
-    dragDistance += Math.abs(e.movementX || 0) + Math.abs(e.movementY || 0);
-  }
-});
-
-document.getElementById("datesList").addEventListener("click", (e) => {
-  const clickedItem = e.target.closest(".date-item");
+function handleDateClick(clickedItem) {
   if (!clickedItem) return;
-  
-  // Solo procesar click si no hubo drag significativo (menos de 5px)
-  if (dragDistance > 5) {
-    dragDistance = 0;
-    return;
-  }
-  
+
+  // Ejecutar lógica de clic
   [...document.querySelectorAll(".date-item")].forEach(item => item.classList.remove("active"));
   clickedItem.classList.add("active");
   updateMonthTitle();
 
-  // Guardamos la fecha seleccionada
   selectedDate = clickedItem.dataset.date;
-  // Aplicamos todos los filtros (fecha, competición, género)
   applyAllFilters();
-  
-  dragDistance = 0; // Resetear después del click
-});
+}
+
 
 /*********************************
  * 10) FLATPICKR EN UN MODAL
@@ -982,51 +997,62 @@ function addDragScrollFunctionality() {
   let isDown = false;
   let startX;
   let scrollLeft;
+  let isDragging = false;
+  let targetElement = null;
 
-  // Función para obtener posición X unificada (mouse/touch)
   function getClientX(e) {
     return e.touches ? e.touches[0].clientX : e.clientX;
   }
 
-  // Función para iniciar drag (mouse/touch)
-  function startDrag(e) {
+  function startInteraction(e) {
     isDown = true;
+    isDragging = false;
+    targetElement = e.target;
     datesList.style.cursor = 'grabbing';
     startX = getClientX(e) - datesList.offsetLeft;
     scrollLeft = datesList.scrollLeft;
-    e.preventDefault(); // Prevenir selección de texto y scroll nativo
   }
 
-  // Función para terminar drag
-  function endDrag() {
+  function endInteraction() {
     isDown = false;
     datesList.style.cursor = 'grab';
+
+    if (!isDragging) {
+      const clickedItem = targetElement.closest(".date-item");
+      handleDateClick(clickedItem);
+    }
+    isDragging = false;
   }
 
-  // Función para mover durante drag
-  function moveDrag(e) {
+  function moveInteraction(e) {
     if (!isDown) return;
-    e.preventDefault();
+
     const x = getClientX(e) - datesList.offsetLeft;
-    const walk = (x - startX) * 2; // Multiplicar por 2 para más sensibilidad
-    datesList.scrollLeft = scrollLeft - walk;
+    const walk = x - startX;
+
+    if (Math.abs(walk) > 10) { // Umbral para considerar drag
+      isDragging = true;
+    }
+
+    if (isDragging) {
+      e.preventDefault(); // Prevenir scroll nativo SOLO si es drag
+      const newScrollLeft = scrollLeft - walk;
+      datesList.scrollLeft = newScrollLeft;
+    }
   }
 
   // Eventos de mouse
-  datesList.addEventListener('mousedown', startDrag);
-  datesList.addEventListener('mouseleave', endDrag);
-  datesList.addEventListener('mouseup', endDrag);
-  datesList.addEventListener('mousemove', moveDrag);
+  datesList.addEventListener('mousedown', startInteraction);
+  datesList.addEventListener('mouseleave', endInteraction);
+  datesList.addEventListener('mouseup', endInteraction);
+  datesList.addEventListener('mousemove', moveInteraction);
 
-  // Eventos de touch para tablets/móviles
-  datesList.addEventListener('touchstart', startDrag, { passive: false });
-  datesList.addEventListener('touchend', endDrag);
-  datesList.addEventListener('touchmove', moveDrag, { passive: false });
+  // Eventos de touch
+  datesList.addEventListener('touchstart', startInteraction, { passive: false });
+  datesList.addEventListener('touchend', endInteraction);
+  datesList.addEventListener('touchmove', moveInteraction, { passive: false });
 
-  // Añadir cursor grab por defecto
   datesList.style.cursor = 'grab';
-  
-  // Añadir clase para indicar que es draggable
   datesList.classList.add('draggable-scroll');
 }
 
