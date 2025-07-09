@@ -444,9 +444,9 @@ header {
 .team-logo {
   width: 80px;
   height: 80px;
-  border-radius: 50%;
+  border-radius: 8px;
   object-fit: cover;
-  border: 3px solid #FF9E1B;
+  border: 1.5px solid #FF9E1B;
   background: #fff;
   margin-bottom: 12px;
 }
