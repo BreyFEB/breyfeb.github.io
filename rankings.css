@@ -105,8 +105,8 @@ header {
 
 /* CONTENEDOR PRINCIPAL */
 .container {
-  width: 98%;
-  margin: 20px auto;
+  width: 100%;
+  margin-top: 10px;
   padding: 0 20px;
 }
 .section-title {
@@ -276,7 +276,7 @@ input:checked + .slider:before {
   margin-top: 5px;
   max-height: 300px;
   overflow-y: auto;
-  z-index: 1000;
+  z-index: 5000;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
@@ -463,9 +463,6 @@ input:checked + .slider:before {
 }
 
 .stats-table thead th {
-  position: sticky !important;
-  top: 0 !important;
-  z-index: 4000 !important;
   background: #fff !important;
   box-shadow: 0 2px 4px -2px #0001;
   padding: 12px 4px;
@@ -636,24 +633,6 @@ input:checked + .slider:before {
   width: 120px !important;
 }
 
-.stats-table td.player-name::after {
-  content: attr(title);
-  position: absolute;
-  bottom: 100%;
-  left: 0;
-  background-color: #111C4E;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 4px;
-  font-size: 0.8em;
-  white-space: nowrap;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.2s, visibility 0.2s;
-  z-index: 1000;
-  pointer-events: none;
-}
-
 .stats-table td.player-name:hover::after {
   opacity: 1;
   visibility: visible;
@@ -686,7 +665,7 @@ input:checked + .slider:before {
 /* Scroll arrows */
 .table-scroll-arrows {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   gap: 8px;
   margin-bottom: 10px;
@@ -1174,16 +1153,6 @@ input:checked + .slider:before {
   }
 
   /* Eliminar todos los z-index de las celdas del cuerpo */
-  .stats-table tbody td,
-  .stats-table td:first-child,
-  .stats-table td:nth-child(2),
-  .stats-table td:nth-child(3),
-  .stats-table td:nth-child(4),
-  .stats-table td:nth-child(5) {
-    position: static;
-    z-index: auto;
-    background-color: #fff;
-  }
 
   /* Asegurar que los tooltips de equipo estén por debajo del header */
   .team-name::after {
@@ -1214,21 +1183,6 @@ input:checked + .slider:before {
   }
 
   /* Eliminar reglas duplicadas */
-  .stats-table th:first-child,
-  .stats-table th:nth-child(2),
-  .stats-table th:nth-child(3),
-  .stats-table th:nth-child(4),
-  .stats-table th:nth-child(5),
-  .stats-table thead th:first-child,
-  .stats-table thead th:nth-child(2),
-  .stats-table thead th:nth-child(3),
-  .stats-table thead th:nth-child(4),
-  .stats-table thead th:nth-child(5) {
-    position: sticky;
-    top: 0;
-    z-index: 200;
-    background-color: #f2f2f2;
-  }
 
   /* Mobile adjustments for custom select */
   .custom-select {
@@ -1246,49 +1200,8 @@ input:checked + .slider:before {
   }
 
   /* Columnas sticky para foto y nombre de jugador */
-  .stats-table th[data-col="playerPhoto"],
-  .stats-table td:nth-child(3) {
-    position: sticky !important;
-    left: 0 !important;
-    background: #fff !important;
-    z-index: 2000 !important;
-    box-shadow: 2px 0 4px -2px #0001;
-    min-width: 56px !important;
-    max-width: 56px !important;
-    width: 56px !important;
-  }
-  .stats-table th[data-col="playerName"],
-  .stats-table td[data-col="playerName"],
-  .stats-table td.player-name {
-    position: sticky !important;
-    left: 56px !important;
-    background: #fff !important;
-    z-index: 1999 !important;
-    box-shadow: 2px 0 4px -2px #0001;
-    min-width: 160px !important;
-    max-width: 200px !important;
-    width: 160px !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-    white-space: nowrap !important;
-    border-right: 1.5px solid #e0e0e0;
-    padding-left: 12px !important;
-  }
 
-  .player-name-mobile-1 {
-    display: block;
-    font-weight: 600;
-    color: #2F4170;
-    font-size: 1em;
-    line-height: 1.1;
-  }
-  .player-name-mobile-2 {
-    display: block;
-    font-weight: 400;
-    color: #2F4170;
-    font-size: 0.95em;
-    line-height: 1.1;
-  }
+
 }
 
 @media screen and (max-width: 480px) {
@@ -1406,7 +1319,6 @@ input:checked + .slider:before {
   .stats-table td[data-col="playerName"] {
     min-width: 120px;
     max-width: 150px;
-    z-index: 9999 !important;
   }
 
   /* Columna de equipo */
@@ -1464,19 +1376,6 @@ input:checked + .slider:before {
 }
 
 /* Columnas sticky para foto y nombre de jugador */
-.stats-table th[data-col="playerPhoto"],
-.stats-table td:nth-child(3) {
-  position: sticky !important;
-  left: 0 !important;
-  top: 0 !important;
-  background: #fff !important;
-  z-index: 2000 !important;
-  box-shadow: 2px 0 4px -2px #0001, 0 2px 4px -2px #0001;
-  min-width: 60px !important;
-  max-width: 60px !important;
-  width: 60px !important;
-  padding: 0 !important;
-}
 .stats-table td:nth-child(3) .player-photo {
   width: 48px !important;
   height: 48px !important;
@@ -1485,36 +1384,7 @@ input:checked + .slider:before {
   display: block;
   margin: 0 auto;
 }
-.stats-table th[data-col="playerName"],
-.stats-table td[data-col="playerName"],
-.stats-table td.player-name {
-  position: sticky !important;
-  left: 60px !important;
-  top: 0 !important;
-  background: #fff !important;
-  z-index: 1999 !important;
-  box-shadow: 2px 0 4px -2px #0001, 0 2px 4px -2px #0001;
-  min-width: 120px !important;
-  max-width: 160px !important;
-  width: 130px !important;
-  overflow: visible !important;
-  white-space: nowrap !important;
-  border-right: 1.5px solid #e0e0e0;
-  padding-left: 16px !important;
-}
-.stats-table tbody tr.active td,
-.stats-table tbody tr.selected td {
-  z-index: 10 !important;
-}
 
-.stats-table th[data-col="playerPhoto"] {
-  left: 0 !important;
-  z-index: 3500 !important;
-}
-.stats-table th[data-col="playerName"] {
-  left: 60px !important;
-  z-index: 3499 !important;
-}
 .stats-table td[data-col="playerName"],
 .stats-table td.player-name {
   overflow: hidden !important;
