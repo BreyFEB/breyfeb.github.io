@@ -461,7 +461,7 @@ scrollbar-width: thin;
 
 .match-section h2 {
   text-align: center;
-  margin-bottom: 20px;
+
 }
 
 .team-heading {
@@ -661,13 +661,13 @@ table tbody td:hover {
 }
 .pbp-event {
   display: grid;
-  grid-template-columns: 60px 1fr 60px;
+  grid-template-columns: 100px 1fr 100px;
   column-gap: 10px;
   align-items: center;
   background-color: #fff;
   color: #111C4E;
   border-radius: 8px;
-  padding: 10px;
+  padding: 20px;
   margin-bottom: 10px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   font-size: 1.2em;
@@ -700,6 +700,9 @@ table tbody td:hover {
   font-size: 0.9em;
   font-weight: bold;
   text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .player-photo.big {
   width: 50px;
@@ -1665,5 +1668,33 @@ body {
   }
   .mini-score-text {
     font-size: 1.5em;
+  }
+}
+
+/* Responsive para la tabla de resumen por cuarto */
+.quarter-table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+#quarterTable {
+  min-width: 400px;
+  width: 100%;
+  max-width: 100%;
+  table-layout: auto;
+}
+
+@media (max-width: 600px) {
+  #quarterTable th, #quarterTable td {
+    padding: 6px 4px;
+    font-size: 0.95em;
+  }
+}
+
+@media (max-width: 600px) {
+  .pbp-score {
+    white-space: normal;
+    font-size: 0.95em;
+    word-break: break-word;
   }
 }

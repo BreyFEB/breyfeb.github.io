@@ -300,6 +300,23 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// === Botón para subir arriba en el Play by Play (scroll global) ===
+document.addEventListener('DOMContentLoaded', function() {
+  const scrollTopBtn = document.getElementById('pbpScrollTopBtn');
+  if (scrollTopBtn) {
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 300) {
+        scrollTopBtn.style.display = 'block';
+      } else {
+        scrollTopBtn.style.display = 'none';
+      }
+    });
+    scrollTopBtn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+});
+
 /***********************************************
  * VARIABLES GLOBALES Y DICCIONARIOS
  ***********************************************/

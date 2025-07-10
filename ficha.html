@@ -307,23 +307,30 @@
     <div id="pbpEvents">
       <!-- Se inyectarán dinámicamente los eventos -->
     </div>
+    <button id="pbpScrollTopBtn" title="Subir arriba" style="display:none; position:fixed; bottom:90px; right:30px; z-index:10001; background:#FF9E1B; color:#111C4E; border:none; border-radius:50%; width:48px; height:48px; font-size:2em; box-shadow:0 2px 8px rgba(0,0,0,0.2); cursor:pointer; transition:background 0.2s;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#111C4E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="display:block;margin:auto;">
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    </button>
   </section>
 
   <!-- Sección: Cuadro Resumen por Cuarto -->
   <section id="quarter-summary" class="match-section">
     <h2>Resumen por Cuarto</h2>
-    <table id="quarterTable">
-      <thead>
-        <tr>
-          <th>Cuarto</th>
-          <th id="quarterTable-header-team-a">Equipo A</th>
-          <th id="quarterTable-header-team-b">Equipo B</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- Se llenará dinámicamente -->
-      </tbody>
-    </table>
+    <div class="quarter-table-container">
+      <table id="quarterTable">
+        <thead>
+          <tr>
+            <th>Cuarto</th>
+            <th id="quarterTable-header-team-a">Equipo A</th>
+            <th id="quarterTable-header-team-b">Equipo B</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Se llenará dinámicamente -->
+        </tbody>
+      </table>
+    </div>
   </section>
 
   <!-- Sección: Comparativas -->

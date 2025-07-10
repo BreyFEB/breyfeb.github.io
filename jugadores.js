@@ -710,5 +710,20 @@ function actualizarFiltrosEquipo() {
   teamFilter.value = state.filtros.equipo || '';
 }
 
+// === Botón para subir arriba en Jugadores ===
+const scrollTopBtn = document.getElementById('playersScrollTopBtn');
+if (scrollTopBtn) {
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) {
+      scrollTopBtn.style.display = 'block';
+    } else {
+      scrollTopBtn.style.display = 'none';
+    }
+  });
+  scrollTopBtn.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
 // Iniciar la aplicación
 document.addEventListener('DOMContentLoaded', init);
