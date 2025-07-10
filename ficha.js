@@ -270,6 +270,34 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  // --- Lógica para mostrar/ocultar y restablecer filtros Play by Play ---
+  const pbpShowFiltersBtn = document.getElementById("pbpShowFiltersBtn");
+  const pbpResetFiltersBtn = document.getElementById("pbpResetFiltersBtn");
+  const pbpFiltersDiv = document.querySelector(".pbp-filters");
+
+  if (pbpShowFiltersBtn && pbpFiltersDiv && pbpResetFiltersBtn) {
+    pbpShowFiltersBtn.addEventListener("click", () => {
+      const visible = !pbpFiltersDiv.classList.contains("pbp-filters-hidden");
+      if (visible) {
+        pbpFiltersDiv.classList.add("pbp-filters-hidden");
+        pbpShowFiltersBtn.textContent = "Mostrar filtros";
+        pbpResetFiltersBtn.style.display = "none";
+      } else {
+        pbpFiltersDiv.classList.remove("pbp-filters-hidden");
+        pbpShowFiltersBtn.textContent = "Ocultar filtros";
+        pbpResetFiltersBtn.style.display = "inline-block";
+      }
+    });
+    pbpResetFiltersBtn.addEventListener("click", () => {
+      pbpFiltersDiv.querySelectorAll("select").forEach(sel => sel.selectedIndex = 0);
+      if (typeof currentQuarter !== 'undefined') currentQuarter = "total";
+      renderPBPEvents && renderPBPEvents();
+      pbpFiltersDiv.classList.add("pbp-filters-hidden");
+      pbpShowFiltersBtn.textContent = "Mostrar filtros";
+      pbpResetFiltersBtn.style.display = "none";
+    });
+  }
 });
 
 /***********************************************
@@ -672,8 +700,9 @@ function createModernPBPEvent(ev) {
   const actionTextDiv = document.createElement("div");
   actionTextDiv.classList.add("pbp-action-text");
   actionTextDiv.textContent = actionText || ev.action;
-  detailsDiv.appendChild(playerNameDiv);
+  // Cambia el orden: primero acción, luego nombre
   detailsDiv.appendChild(actionTextDiv);
+  detailsDiv.appendChild(playerNameDiv);
   contentDiv.appendChild(detailsDiv);
   const scoreDiv = document.createElement("div");
   scoreDiv.classList.add("pbp-score");

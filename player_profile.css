@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 /***********************************************
  * RESET BÁSICO
  ***********************************************/
@@ -13,7 +14,7 @@
 body {
     background-image: linear-gradient(to right, #2F4170, #111C4E);
     color: #fff;
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', Arial, sans-serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -37,6 +38,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
+  font-family: 'Montserrat', Arial, sans-serif;
 }
 
 .header-left {
@@ -80,7 +82,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Manifold', Arial, sans-serif;
+  font-family: 'Montserrat', Arial, sans-serif;
   font-weight: bold;
   font-size: 0.9em;
   cursor: pointer;

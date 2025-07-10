@@ -282,16 +282,27 @@
   <!-- Sección: Play by Play -->
   <section id="playbyplay" class="match-section">
     <h2>Play by Play</h2>
-    <div class="pbp-filters">
-      <label for="pbpActionFilter">Acción:</label>
-      <select id="pbpActionFilter"></select>
-      <label for="pbpPlayerFilter">Jugador:</label>
-      <select id="pbpPlayerFilter"></select>
-      <label for="pbpTeamFilter">Equipo:</label>
-      <select id="pbpTeamFilter"></select>
-      <label for="pbpQuarterFilter">Cuarto:</label>
-      <select id="pbpQuarterFilter"></select>
-      <button id="pbpFilterBtn">Filtrar</button>
+    <div class="pbp-filters-btns">
+      <button id="pbpShowFiltersBtn">Mostrar filtros</button>
+      <button id="pbpResetFiltersBtn">Restablecer filtros</button>
+    </div>
+    <div class="pbp-filters pbp-filters-hidden">
+      <div class="pbp-filter-group">
+        <label for="pbpActionFilter">Acción:</label>
+        <select id="pbpActionFilter"></select>
+      </div>
+      <div class="pbp-filter-group">
+        <label for="pbpPlayerFilter">Jugador:</label>
+        <select id="pbpPlayerFilter"></select>
+      </div>
+      <div class="pbp-filter-group">
+        <label for="pbpTeamFilter">Equipo:</label>
+        <select id="pbpTeamFilter"></select>
+      </div>
+      <div class="pbp-filter-group">
+        <label for="pbpQuarterFilter">Cuarto:</label>
+        <select id="pbpQuarterFilter"></select>
+      </div>
     </div>
     <div id="pbpEvents">
       <!-- Se inyectarán dinámicamente los eventos -->
