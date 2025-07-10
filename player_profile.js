@@ -1554,19 +1554,14 @@ async function loadStats() {
 
     // Function to create team acronym (first three valid letters)
     function createTeamAcronym(teamName) {
-      // Remove special characters and split into words
-      const words = teamName.replace(/[^a-zA-Z0-9\s]/g, '').split(/\s+/);
-      let acronym = '';
-      
-      // Get first letter of each word until we have 3 letters
-      for (const word of words) {
-        if (word.length > 0) {
-          acronym += word[0].toUpperCase();
-          if (acronym.length === 3) break;
+        const words = teamName.split(' ');
+        for (const word of words) {
+          const cleanWord = word.replace(/[^a-zA-Z]/g, '');
+          if (cleanWord.length >= 3) {
+            return cleanWord.slice(0, 3);
+          }
         }
-      }
-      
-      return acronym;
+        return teamName.slice(0, 3);
     }
 
     // Function to determine if player's team won

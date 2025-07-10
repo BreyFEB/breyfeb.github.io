@@ -531,7 +531,19 @@ function renderTable(data, mode = "totales") {
 
     // Abreviar nombre del equipo
     const teamName = player.teamName;
-    const shortTeamName = teamName.length > 3 ? teamName.substring(0, 3) : teamName;
+    // Use a short name for the team, only first three 3 letters for the first word that has
+    // three valid letters (no special characters). Length of short name should be 3
+    function getShortName(name) {
+      const words = name.split(' ');
+      for (const word of words) {
+        const cleanWord = word.replace(/[^a-zA-Z]/g, '');
+        if (cleanWord.length >= 3) {
+          return cleanWord.slice(0, 3);
+        }
+      }
+      return name.slice(0, 3);
+    }
+    const shortTeamName = getShortName(teamName);
 
     // Formato para nombre en móvil: dos filas (abreviatura del nombre + primer apellido | segundo apellido)
     let playerNameHtml = formattedName;

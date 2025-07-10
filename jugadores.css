@@ -518,7 +518,7 @@ button:focus-visible {
 
 .filters-active {
   margin-bottom: 15px;
-  min-height: 28px;
+  min-height: unset;
 }
 .filter-chip {
   display: inline-flex;

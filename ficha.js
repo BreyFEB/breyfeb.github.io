@@ -4,6 +4,57 @@ function getGameIdFromUrl() {
   return params.get('gameId');
 }
 
+// Function to use a short name for the team, only first three 3 letters for the first word that has
+// three valid letters (no special characters). Length of short name should be 3
+function getShortName(name) {
+  const words = name.split(' ');
+  for (const word of words) {
+    const cleanWord = word.replace(/[^a-zA-Z]/g, '');
+    if (cleanWord.length >= 3) {
+      return cleanWord.slice(0, 3);
+    }
+  }
+  return name.slice(0, 3);
+}
+
+function formatCompetitionName(comp) {
+  // Dictionary of competition name mappings
+  const nameMappings = {
+    "LF CHALLENGE": "Liga Femenina Challenge",
+    "C ESP CLUBES JR MASC": "Clubes Junior Masculino",
+    "PRIMERA FEB": "Primera FEB",
+    "Fase Final 1ª División Femenin": "Fase de ascenso a LF2",
+    "C ESP CLUBES CAD MASC": "Clubes Cadete Masculino",
+    "LF ENDESA": "Liga Femenina Endesa",
+    "L.F.-2": "Liga Femenina 2",
+    "C ESP CLUBES CAD FEM": "Clubes Cadete Femenino",
+    "SEGUNDA FEB": "Segunda FEB",
+    "TERCERA FEB": "Tercera FEB",
+    "C ESP CLUBES INF FEM": "Clubes Infantil Femenino",
+    "C ESP CLUBES INF MASC": "Clubes Infantil Masculino",
+    "C ESP CLUBES MINI FEM": "Clubes Mini Femenino",
+    "C ESP CLUBES MINI MASC": "Clubes Mini Masculino"
+  };
+
+  // If we have a mapping for this competition, use it
+  if (nameMappings[comp.trim()]) {
+    return nameMappings[comp.trim()];
+  }
+
+  // For other competitions, apply some general formatting rules
+  let formatted = comp
+    // Replace underscores with spaces
+    .replace(/_/g, ' ')
+    // Replace multiple spaces with a single space
+    .replace(/\s+/g, ' ')
+    // Capitalize first letter of each word
+    .split(' ')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join(' ');
+
+  return formatted;
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const gameId = getGameIdFromUrl();
   if (!gameId) {
@@ -26,12 +77,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Actualizar logos, nombres y marcador en el Hero (si se usa el bloque estático del nuevo hero)
       document.querySelector('.team-box:first-child .team-logo').src = tA.logo;
-      // Use a short name for the team, only the first letter for the first 3 words
-      const shortNameA = tA.name.split(' ').slice(0, 3).map(word => word[0]).join('');
+      // Use a short name for the team, only first three 3 letters for the first word that has
+      // three valid letters (no special characters). Length of short name should be 3
+      const shortNameA = getShortName(tA.name);
       document.querySelector('.team-box:first-child .team-name').textContent = shortNameA;
       document.querySelector('.team-box:first-child .team-name').title = tA.name;
       document.querySelector('.team-box:last-child .team-logo').src = tB.logo;
-      const shortNameB = tB.name.split(' ').slice(0, 3).map(word => word[0]).join('');
+      const shortNameB = getShortName(tB.name);
       document.querySelector('.team-box:last-child .team-name').textContent = shortNameB;
       document.querySelector('.team-box:last-child .team-name').title = tB.name;
 
@@ -100,7 +152,8 @@ document.addEventListener("DOMContentLoaded", () => {
       // Actualizar hero-phase
       const herophaseDiv = document.querySelector('.hero-phase');
       const fase = header.round.trim()
-      const competicion = header.competition
+      // Format competition name as in other pages
+      const competicion = formatCompetitionName(header.competition);
       const pabellon = header.field
       herophaseDiv.textContent =  `${fase} • ${competicion} • ${pabellon}`;
 

@@ -778,15 +778,47 @@ function insertShootingBarChart(allTeamsPlayers, teamPlayers, competition) {
   const canvas=document.createElement('canvas');canvas.id='teamShootingChart';canvas.height=120;chartContainer.appendChild(canvas);
   barFlex.appendChild(chartContainer);
   profileSection.appendChild(barFlex);
-  // compute team totals
-  const tTotals=teamPlayers.reduce((a,p)=>{['t2c','t2i','t3c','t3i','tlc','tli'].forEach(k=>a[k]+=p[k]);return a;},{t2c:0,t2i:0,t3c:0,t3i:0,tlc:0,tli:0});
-  const t2pct=tTotals.t2i>0?(tTotals.t2c/tTotals.t2i)*100:0;
-  const t3pct=tTotals.t3i>0?(tTotals.t3c/tTotals.t3i)*100:0;
-  const tlpct=tTotals.tli>0?(tTotals.tlc/tTotals.tli)*100:0;
-  // league averages
-  const teamMap=new Map();
-  allTeamsPlayers.forEach(p=>{if(p.competition!==competition) return; if(!teamMap.has(p.teamId)) teamMap.set(p.teamId,{t2c:0,t2i:0,t3c:0,t3i:0,tlc:0,tli:0}); const obj=teamMap.get(p.teamId); ['t2c','t2i','t3c','t3i','tlc','tli'].forEach(k=>obj[k]+=p[k]);});
-  let l2=0,l3=0,lft=0; const n=teamMap.size;teamMap.forEach(t=>{l2+=t.t2i? (t.t2c/t.t2i)*100:0; l3+=t.t3i? (t.t3c/t.t3i)*100:0; lft+=t.tli? (t.tlc/t.tli)*100:0;}); if(n){l2/=n;l3/=n;lft/=n;}
+  
+  // Calculate team totals from match data (same as stats table)
+  const totals = {t2c:0,t2i:0,t3c:0,t3i:0,tlc:0,tli:0};
+  teamMatches.forEach(match => {
+    totals.t2c += match.t2c || 0;
+    totals.t2i += match.t2i || 0;
+    totals.t3c += match.t3c || 0;
+    totals.t3i += match.t3i || 0;
+    totals.tlc += match.tlc || 0;
+    totals.tli += match.tli || 0;
+  });
+  
+  const t2pct = totals.t2i > 0 ? (totals.t2c/totals.t2i)*100 : 0;
+  const t3pct = totals.t3i > 0 ? (totals.t3c/totals.t3i)*100 : 0;
+  const tlpct = totals.tli > 0 ? (totals.tlc/totals.tli)*100 : 0;
+  
+  // league averages - calculate from all teams' match data
+  const leagueTotals = {t2c:0,t2i:0,t3c:0,t3i:0,tlc:0,tli:0};
+  let leagueMatchCount = 0;
+  
+  // Get all matches for the same competition
+  allTeamsPlayers.forEach(player => {
+    if (player.competition !== competition) return;
+    
+    // Find matches for this player's team
+    const teamMatches = player.matches || [];
+    teamMatches.forEach(match => {
+      leagueTotals.t2c += match.t2c || 0;
+      leagueTotals.t2i += match.t2i || 0;
+      leagueTotals.t3c += match.t3c || 0;
+      leagueTotals.t3i += match.t3i || 0;
+      leagueTotals.tlc += match.tlc || 0;
+      leagueTotals.tli += match.tli || 0;
+      leagueMatchCount++;
+    });
+  });
+  
+  const l2 = leagueTotals.t2i > 0 ? (leagueTotals.t2c/leagueTotals.t2i)*100 : 0;
+  const l3 = leagueTotals.t3i > 0 ? (leagueTotals.t3c/leagueTotals.t3i)*100 : 0;
+  const lft = leagueTotals.tli > 0 ? (leagueTotals.tlc/leagueTotals.tli)*100 : 0;
+  
   const ctx=canvas.getContext('2d');
   new Chart(ctx,{type:'bar',data:{labels:['2P%','3P%','TL%'],datasets:[{label:'Equipo',data:[t2pct,t3pct,tlpct],backgroundColor:['rgba(25,118,210,0.7)','rgba(255,158,27,0.7)','rgba(200,16,46,0.7)'],borderColor:['#1976d2','#FF9E1B','#C8102E'],borderWidth:2,borderRadius:8,maxBarThickness:60},{label:'Media liga',data:[l2,l3,lft],backgroundColor:['rgba(25,118,210,0.2)','rgba(255,158,27,0.2)','rgba(200,16,46,0.2)'],borderColor:['#1976d2','#FF9E1B','#C8102E'],borderWidth:2,borderRadius:8,maxBarThickness:60}]},options:{responsive:true,plugins:{legend:{display:true,position:'top'},tooltip:{callbacks:{label:ctx=>`${ctx.dataset.label}: ${ctx.parsed.y.toFixed(1)}%`}},title:{display:true,text:'Porcentajes de tiro',font:{size:16,weight:'bold'}}},scales:{x:{grid:{display:false}},y:{beginAtZero:true,max:100,ticks:{callback:v=>v+'%',stepSize:20},grid:{color:'rgba(0,0,0,0.07)'}}}}});
 }
@@ -1002,7 +1034,7 @@ function updateTeamComparisonChart(statKey, statType) {
   legend.style.border = '1px solid #e9ecef';
   legend.style.fontSize = '0.9em';
   legend.style.color = '#666';
-  
+    
   // Find current team name
   const currentTeam = chartData.find(d => d.isCurrent);
   const currentTeamName = currentTeam ? toTitleCase(currentTeam.name) : 'Este equipo';
@@ -1469,14 +1501,14 @@ function buildTeamShotFiltersUI(shots) {
   // Reset button
   const resetBtn = document.getElementById('resetTeamFiltersBtn');
   if (resetBtn) {
-    resetBtn.onclick = resetTeamFilters;
-    // Create a container to center the button
-    const resetContainer = document.createElement('div');
-    resetContainer.style.display = 'flex';
-    resetContainer.style.justifyContent = 'center';
-    resetContainer.style.alignItems = 'center';
-    resetContainer.appendChild(resetBtn);
-    container.appendChild(resetContainer);
+  resetBtn.onclick = resetTeamFilters;
+  // Create a container to center the button
+  const resetContainer = document.createElement('div');
+  resetContainer.style.display = 'flex';
+  resetContainer.style.justifyContent = 'center';
+  resetContainer.style.alignItems = 'center';
+  resetContainer.appendChild(resetBtn);
+  container.appendChild(resetContainer);
   }
 
   // Los tags de filtro se renderizan fuera del contenedor de filtros
@@ -2139,43 +2171,43 @@ function updateTeamShotStats(filteredShots) {
   
   if (hasFilters) {
     // Apply filters to league shots
-    allLeagueShots.forEach(shot => {
-      // Apply all filters for league, EXCEPT selectedMatches
-      if (selectedQuarters.length > 0 && !selectedQuarters.includes(shot.cuarto)) return;
-      if (selectedResults.length > 0) {
-        if (!selectedResults.includes(shot.made ? 'made' : 'missed')) return;
-      }
-      if (selectedShotTypes.length > 0) {
-        const isThree = isThreePointer(shot);
-        const isTwo = isTwoPointer(shot);
-        const isRim = shot.dist_al_aro <= 1;
-        const isMidrange = shot.dist_al_aro > 1 && shot.dist_al_aro < 6.75;
-        const matchesSelectedType = selectedShotTypes.some(type => {
-          switch(type) {
-            case 'rim': return isRim;
-            case 'midrange': return isMidrange;
-            case '2': return isTwo;
-            case '3': return isThree;
-            default: return false;
-          }
-        });
-        if (!matchesSelectedType) return;
-      }
-      if (selectedScoreDiffs.length > 0) {
-        const scoreDiffCategory = getScoreDiffCategory(shot.dif_marcador);
-        if (!selectedScoreDiffs.includes(scoreDiffCategory)) return;
-      }
-      if (selectedCourtSides.length > 0) {
-        const isLeftSide = shot.coord_y > 50;
-        if (!selectedCourtSides.includes(isLeftSide ? 'left' : 'right')) return;
-      }
-      const shotTimeInSeconds = timeToSeconds(shot.tiempo);
-      if (quarterTime && shotTimeInSeconds > parseFloat(quarterTime) * 60) return;
-      if (minDistance && shot.dist_al_aro < parseFloat(minDistance)) return;
-      if (maxDistance && shot.dist_al_aro > parseFloat(maxDistance)) return;
-      // Add to league shots
-      leagueShots.push(shot);
-    });
+  allLeagueShots.forEach(shot => {
+    // Apply all filters for league, EXCEPT selectedMatches
+    if (selectedQuarters.length > 0 && !selectedQuarters.includes(shot.cuarto)) return;
+    if (selectedResults.length > 0) {
+      if (!selectedResults.includes(shot.made ? 'made' : 'missed')) return;
+    }
+    if (selectedShotTypes.length > 0) {
+      const isThree = isThreePointer(shot);
+      const isTwo = isTwoPointer(shot);
+      const isRim = shot.dist_al_aro <= 1;
+      const isMidrange = shot.dist_al_aro > 1 && shot.dist_al_aro < 6.75;
+      const matchesSelectedType = selectedShotTypes.some(type => {
+        switch(type) {
+          case 'rim': return isRim;
+          case 'midrange': return isMidrange;
+          case '2': return isTwo;
+          case '3': return isThree;
+          default: return false;
+        }
+      });
+      if (!matchesSelectedType) return;
+    }
+    if (selectedScoreDiffs.length > 0) {
+      const scoreDiffCategory = getScoreDiffCategory(shot.dif_marcador);
+      if (!selectedScoreDiffs.includes(scoreDiffCategory)) return;
+    }
+    if (selectedCourtSides.length > 0) {
+      const isLeftSide = shot.coord_y > 50;
+      if (!selectedCourtSides.includes(isLeftSide ? 'left' : 'right')) return;
+    }
+    const shotTimeInSeconds = timeToSeconds(shot.tiempo);
+    if (quarterTime && shotTimeInSeconds > parseFloat(quarterTime) * 60) return;
+    if (minDistance && shot.dist_al_aro < parseFloat(minDistance)) return;
+    if (maxDistance && shot.dist_al_aro > parseFloat(maxDistance)) return;
+    // Add to league shots
+    leagueShots.push(shot);
+  });
   } else {
     // No filters applied, use all league shots
     leagueShots = allLeagueShots;
@@ -2285,7 +2317,7 @@ function updateTeamShotStats(filteredShots) {
               <span class="fg-stat-value">${fgPercentage}%</span>
               <span class="fg-stat-detail">(${madeShots}/${totalShots})</span>
             </div>
-          ` : `
+      ` : `
             <div class="fg-stat-row">
               <span class="fg-stat-value fg-stat-na">Sin tiros de este tipo</span>
             </div>
