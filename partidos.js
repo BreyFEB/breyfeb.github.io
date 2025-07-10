@@ -556,7 +556,7 @@ flatpickr("#modalDatePicker", {
 
     const targetItem = document.querySelector(`.date-item[data-date="${dateStr}"]`);
     if (targetItem) {
-     // targetItem.scrollIntoView({ behavior: "smooth", inline: "center" });
+      targetItem.scrollIntoView({ behavior: "smooth", inline: "center" });
       [...document.querySelectorAll(".date-item")].forEach(item => item.classList.remove("active"));
       targetItem.classList.add("active");
       updateMonthTitle();
