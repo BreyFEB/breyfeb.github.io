@@ -602,8 +602,8 @@ header {
 .search-result-logo-container {
   width: 40px;
   height: 40px;
-  border-radius: 50%;
-  border: 2px solid #FFD700; /* Gold */
+  border-radius: 8px;
+  border: 1.5px solid #FF9E1B; /* Gold */
   overflow: hidden;
   flex-shrink: 0;
   display: flex;

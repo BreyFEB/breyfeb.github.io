@@ -1,22 +1,3 @@
-// Datos de ejemplo para jugadores
-const jugadores = [
-  { id: 1, nombre: "Juan Pérez", equipo: "Real Madrid", genero: "masculino", competicion: "Liga Cadete", foto: "https://randomuser.me/api/portraits/men/1.jpg", estadisticas: { puntos: 15.5, rebotes: 8.2, asistencias: 4.1 } },
-  { id: 2, nombre: "Carlos Gómez", equipo: "FC Barcelona", genero: "masculino", competicion: "Liga Cadete", foto: "https://randomuser.me/api/portraits/men/2.jpg", estadisticas: { puntos: 12.3, rebotes: 7.1, asistencias: 5.2 } },
-  { id: 3, nombre: "Miguel Torres", equipo: "Valencia Basket", genero: "masculino", competicion: "Liga Cadete", foto: "https://randomuser.me/api/portraits/men/3.jpg", estadisticas: { puntos: 18.7, rebotes: 6.5, asistencias: 3.9 } },
-  { id: 4, nombre: "Pedro Sánchez", equipo: "Unicaja", genero: "masculino", competicion: "Liga Cadete", foto: "https://randomuser.me/api/portraits/men/4.jpg", estadisticas: { puntos: 10.2, rebotes: 9.1, asistencias: 2.7 } },
-  { id: 5, nombre: "Luis Martínez", equipo: "Estudiantes", genero: "masculino", competicion: "Liga Cadete", foto: "https://randomuser.me/api/portraits/men/5.jpg", estadisticas: { puntos: 14.8, rebotes: 5.9, asistencias: 6.1 } },
-  { id: 6, nombre: "Ana López", equipo: "Real Madrid", genero: "femenino", competicion: "Liga Cadete Femenina", foto: "https://randomuser.me/api/portraits/women/6.jpg", estadisticas: { puntos: 17.2, rebotes: 8.8, asistencias: 4.5 } },
-  { id: 7, nombre: "María García", equipo: "FC Barcelona", genero: "femenino", competicion: "Liga Cadete Femenina", foto: "https://randomuser.me/api/portraits/women/7.jpg", estadisticas: { puntos: 13.9, rebotes: 7.4, asistencias: 5.0 } },
-  { id: 8, nombre: "Lucía Fernández", equipo: "Valencia Basket", genero: "femenino", competicion: "Liga Cadete Femenina", foto: "https://randomuser.me/api/portraits/women/8.jpg", estadisticas: { puntos: 16.1, rebotes: 6.7, asistencias: 3.8 } },
-  { id: 9, nombre: "Carmen Ruiz", equipo: "Unicaja", genero: "femenino", competicion: "Liga Cadete Femenina", foto: "https://randomuser.me/api/portraits/women/9.jpg", estadisticas: { puntos: 11.5, rebotes: 9.3, asistencias: 2.9 } },
-  { id: 10, nombre: "Sara Díaz", equipo: "Estudiantes", genero: "femenino", competicion: "Liga Cadete Femenina", foto: "https://randomuser.me/api/portraits/women/10.jpg", estadisticas: { puntos: 15.0, rebotes: 5.7, asistencias: 6.3 } },
-  { id: 11, nombre: "David Romero", equipo: "Gran Canaria", genero: "masculino", competicion: "Liga Cadete", foto: "https://randomuser.me/api/portraits/men/11.jpg", estadisticas: { puntos: 13.4, rebotes: 7.8, asistencias: 4.0 } },
-  { id: 12, nombre: "Javier Navarro", equipo: "Joventut", genero: "masculino", competicion: "Liga Cadete", foto: "https://randomuser.me/api/portraits/men/12.jpg", estadisticas: { puntos: 16.9, rebotes: 8.0, asistencias: 3.5 } },
-  { id: 13, nombre: "Paula Sanz", equipo: "Gran Canaria", genero: "femenino", competicion: "Liga Cadete Femenina", foto: "https://randomuser.me/api/portraits/women/13.jpg", estadisticas: { puntos: 14.2, rebotes: 6.9, asistencias: 5.7 } },
-  { id: 14, nombre: "Elena Castro", equipo: "Joventut", genero: "femenino", competicion: "Liga Cadete Femenina", foto: "https://randomuser.me/api/portraits/women/14.jpg", estadisticas: { puntos: 12.8, rebotes: 7.2, asistencias: 4.9 } },
-  { id: 15, nombre: "Marta Moreno", equipo: "Estudiantes", genero: "femenino", competicion: "Liga Cadete Femenina", foto: "https://randomuser.me/api/portraits/women/15.jpg", estadisticas: { puntos: 15.7, rebotes: 8.1, asistencias: 3.6 } }
-];
-
 // Conjuntos para almacenar valores únicos
 const competitionSet = new Set();
 const teamSet = new Set();
@@ -177,15 +158,12 @@ function setupEventListeners() {
     }
   });
 
-  // Filtrar equipos mientras se escribe
+  // Filtrar equipos mientras se escribe (sin debounce para respuesta inmediata)
   teamFilter.addEventListener('input', (e) => {
-    console.log('Input en el filtro de equipo:', e.target.value);
-    clearTimeout(searchTimeout);
     const busqueda = e.target.value.trim();
-    
-    searchTimeout = setTimeout(() => {
-      filtrarEquipos(busqueda);
-    }, 300);
+    // Asegurarse de que el dropdown esté visible mientras se escribe
+    teamFilterDropdown.classList.add('show');
+    filtrarEquipos(busqueda);
   });
 
   // Manejar la selección de equipo
@@ -426,6 +404,44 @@ function truncarNombreJugador(nombre, maxLength = 18) {
   if (nombre.length <= maxLength) return nombre;
   return nombre.substring(0, maxLength) + '...';
 }
+// Function to format competition names consistently
+function formatCompetitionName(comp) {
+  // Dictionary of competition name mappings
+  const nameMappings = {
+    "LF CHALLENGE": "Liga Femenina Challenge",
+    "C ESP CLUBES JR MASC": "Clubes Junior Masculino",
+    "PRIMERA FEB": "Primera FEB",
+    "Fase Final 1ª División Femenin": "Fase de ascenso a LF2",
+    "C ESP CLUBES CAD MASC": "Clubes Cadete Masculino",
+    "LF ENDESA": "Liga Femenina Endesa",
+    "L.F.-2": "Liga Femenina 2",
+    "C ESP CLUBES CAD FEM": "Clubes Cadete Femenino",
+    "SEGUNDA FEB": "Segunda FEB",
+    "TERCERA FEB": "Tercera FEB",
+    "C ESP CLUBES INF FEM": "Clubes Infantil Femenino",
+    "C ESP CLUBES INF MASC": "Clubes Infantil Masculino",
+    "C ESP CLUBES MINI FEM": "Clubes Mini Femenino",
+    "C ESP CLUBES MINI MASC": "Clubes Mini Masculino"
+  };
+
+  // If we have a mapping for this competition, use it
+  if (nameMappings[comp.trim()]) {
+    return nameMappings[comp.trim()];
+  }
+
+  // For other competitions, apply some general formatting rules
+  let formatted = comp
+    // Replace underscores with spaces
+    .replace(/_/g, ' ')
+    // Replace multiple spaces with a single space
+    .replace(/\s+/g, ' ')
+    // Capitalize first letter of each word
+    .split(' ')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join(' ');
+
+  return formatted;
+}
 
 // Renderizar jugadores en el grid
 function renderizarJugadores(jugadores) {
@@ -447,7 +463,7 @@ function renderizarJugadores(jugadores) {
         <div class="player-info">
           <h3 class="player-name" title="${jugador.nombre}">${truncarNombreJugador(jugador.nombre)}</h3>
           <p class="player-team" title="${jugador.equipo}">${truncarNombreEquipo(jugador.equipo)}</p>
-          <p class="player-competition" title="${jugador.competicion}">${jugador.competicion}</p>
+          <p class="player-competition" title="${jugador.competicion}">${formatCompetitionName(jugador.competicion)}</p>
           <div class="player-stats">
             <div class="stat-item">
               <div class="stat-value">${jugador.estadisticas.puntos}</div>
@@ -528,7 +544,7 @@ function actualizarFiltrosActivos() {
     filtrosActivos.push({
       tipo: 'competicion',
       valor: state.filtros.competicion,
-      label: `Competición: ${state.filtros.competicion}`
+      label: `Competición: ${formatCompetitionName(state.filtros.competicion)}`
     });
   }
 
@@ -542,7 +558,7 @@ function actualizarFiltrosActivos() {
 
   // Renderizar chips de filtros activos
   elementos.filtrosActivos.innerHTML = filtrosActivos.map(filtro => `
-    <div class="filter-chip" data-tipo="${filtro.tipo}" data-valor="${filtro.valor}">
+    <div class="filter-chip" data-tipo="${filtro.tipo}" data-valor="${formatCompetitionName(filtro.valor)}">
       ${filtro.label}
       <button class="remove-filter">&times;</button>
     </div>
@@ -592,6 +608,9 @@ function filtrarEquipos(busqueda = '') {
 
   const dropdown = document.getElementById('teamFilterDropdown');
   
+  // Reiniciar el scroll para que empiece arriba con los nuevos resultados
+  dropdown.scrollTop = 0;
+
   if (equiposFiltrados.length === 0) {
     dropdown.innerHTML = `
       <div class="team-filter-option no-results">No se encontraron equipos</div>
@@ -674,7 +693,7 @@ function actualizarFiltrosCompeticion() {
   elementos.competicionFiltros.innerHTML = `
     <button class="competition-btn active" data-competition="todas">Todas</button>
     ${competiciones.map(comp => `
-      <button class="competition-btn" data-competition="${comp}">${comp}</button>
+      <button class="competition-btn" data-competition="${comp}">${formatCompetitionName(comp)}</button>
     `).join('')}
   `;
 
