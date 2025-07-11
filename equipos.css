@@ -702,14 +702,11 @@ header {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
-  background-color: #4859AA;
-  padding: 10px;
   border-radius: 4px;
-  border-bottom: 3px solid #FF9E1B;
 }
 
 .filters-header h3 { 
-  color: white; 
+  color: #FF9E1B; 
   font-size: 1.8em; 
 }
 

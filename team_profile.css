@@ -1301,8 +1301,16 @@ body {
 .shots-filters-btns {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 10px;
   margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+  .shots-filters-btns {
+    flex-direction: column;
+    gap: 8px;
+  }
 }
 
 /* Botones de filtros y reset */
