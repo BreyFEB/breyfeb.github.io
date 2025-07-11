@@ -185,6 +185,42 @@ document.addEventListener("DOMContentLoaded", () => {
       setupMiniHeader(data);
       fillBoxScore(data);
 
+      // === NUEVO: Lógica para los tabs de selección de box score ===
+      const teamStatsButtons = document.querySelectorAll('.team-stats-button');
+      const teamABox = document.querySelector('.team-box-score:nth-of-type(1)');
+      const teamBBox = document.querySelector('.team-box-score:nth-of-type(2)');
+      // Rellenar los textos de los botones de equipo
+      const teamAName = data.SCOREBOARD.TEAM[0].name || "Equipo A";
+      const teamBName = data.SCOREBOARD.TEAM[1].name || "Equipo B";
+      const btnA = document.querySelector('button[data-team="a"]');
+      const btnB = document.querySelector('button[data-team="b"]');
+      if (btnA) btnA.textContent = teamAName;
+      if (btnB) btnB.textContent = teamBName;
+      // Evento para los tabs
+      teamStatsButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          teamStatsButtons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const val = btn.getAttribute('data-team');
+          if (val === 'a') {
+            teamABox.style.display = '';
+            teamBBox.style.display = 'none';
+          } else if (val === 'b') {
+            teamABox.style.display = 'none';
+            teamBBox.style.display = '';
+          } else {
+            teamABox.style.display = '';
+            teamBBox.style.display = '';
+          }
+        });
+      });
+      // Mostrar ambos por defecto
+      if (teamABox && teamBBox) {
+        teamABox.style.display = '';
+        teamBBox.style.display = '';
+      }
+      // === FIN NUEVO ===
+
       // Llenar el dropdown para filtrar por Cuarto
       fillQuarterFilter(data);
 
@@ -306,23 +342,23 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Filtro para mostrar box score de un equipo u otro
-  const teamStatsFilter = document.getElementById("teamStatsFilter");
-  const teamABox = document.querySelector('.team-box-score:nth-of-type(1)');
-  const teamBBox = document.querySelector('.team-box-score:nth-of-type(2)');
-  if (teamStatsFilter && teamABox && teamBBox) {
-    teamStatsFilter.addEventListener('change', () => {
-      if (teamStatsFilter.value === 'a') {
-        teamABox.style.display = '';
-        teamBBox.style.display = 'none';
-      } else if (teamStatsFilter.value === 'b') {
-        teamABox.style.display = 'none';
-        teamBBox.style.display = '';
-      } else {
-        teamABox.style.display = '';
-        teamBBox.style.display = '';
-      }
-    });
-  }
+  // const teamStatsFilter = document.getElementById("teamStatsFilter");
+  // const teamABox = document.querySelector('.team-box-score:nth-of-type(1)');
+  // const teamBBox = document.querySelector('.team-box-score:nth-of-type(2)');
+  // if (teamStatsFilter && teamABox && teamBBox) {
+  //   teamStatsFilter.addEventListener('change', () => {
+  //     if (teamStatsFilter.value === 'a') {
+  //       teamABox.style.display = '';
+  //       teamBBox.style.display = 'none';
+  //     } else if (teamStatsFilter.value === 'b') {
+  //       teamABox.style.display = 'none';
+  //       teamBBox.style.display = '';
+  //     } else {
+  //       teamABox.style.display = '';
+  //       teamBBox.style.display = '';
+  //     }
+  //   });
+  // }
 
   // --- Lógica para mostrar/ocultar y restablecer filtros Play by Play ---
   const pbpShowFiltersBtn = document.getElementById("pbpShowFiltersBtn");

@@ -194,14 +194,11 @@
 
   <!-- Sección: Estadísticas (Box Score) -->
   <section id="stats" class="match-section">
-    <h2>Estadísticas</h2>
-    <div style="text-align:center; margin-bottom: 16px;">
-      <label for="teamStatsFilter" style="font-weight:bold; margin-right:8px;">Ver estadísticas de:</label>
-      <select id="teamStatsFilter" style="padding:6px 12px; border-radius:5px; font-size:1em;">
-        <option value="both">Ambos equipos</option>
-        <option value="a">Equipo A</option>
-        <option value="b">Equipo B</option>
-      </select>
+    <div class="team-selection" style="text-align:center; margin-bottom: 16px;">
+      <!-- Boton para equipo local -->
+      <button data-team="a" class="team-stats-button active"></button>
+      <!-- Boton para equipo visitante -->
+      <button data-team="b" class="team-stats-button"></button>
     </div>
     <div class="box-score-container">
       <!-- BOX SCORE EQUIPO A -->
