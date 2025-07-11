@@ -18,11 +18,7 @@
         alt="Logo FEB" 
         class="footer-logo"
       >
-      <button class="menu-toggle" id="menuToggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      
       <nav class="main-nav">
         <ul>
           <li class="nav-item">
@@ -96,19 +92,6 @@
       <!-- Aquí se insertarán las pestañas de competiciones -->
     </div>
 
-<!-- BREADCRUMB DE FILTROS ACTIVOS -->
-<div class="filters-breadcrumb" id="filtersBreadcrumb" style="display: none;">
-  <div class="breadcrumb-content">
-    <span class="breadcrumb-label">Filtros aplicados:</span>
-    <div class="breadcrumb-chips" id="breadcrumbChips">
-      <!-- Los chips de filtros se insertarán aquí dinámicamente -->
-    </div>
-    <button class="clear-all-filters" id="clearAllFilters" title="Limpiar todos los filtros">
-      <img src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/close-outline.svg" alt="Limpiar filtros">
-    </button>
-  </div>
-</div>
-
 
     <!-- BARRA SUPERIOR -->
     <div class="top-bar">
@@ -152,27 +135,39 @@
       <!-- Aquí se mostrarán los filtros activos como chips -->
     </div>
     <div class="filters-content">
-      <div class="filter-section">
-        <h4>Género</h4>
-        <div id="genderFilters" class="gender-btn-group">
-          <button type="button" class="gender-btn" data-gender="todos">Todos</button>
-          <button type="button" class="gender-btn" data-gender="masculino">Masculino</button>
-          <button type="button" class="gender-btn" data-gender="femenino">Femenino</button>
+      <div class="filter-section accordion-section closed" id="accordion-gender">
+        <h4 class="accordion-header">Género
+          <svg class="chevron-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF9E1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </h4>
+        <div class="accordion-content">
+          <div id="genderFilters" class="gender-btn-group">
+            <button type="button" class="gender-btn" data-gender="todos">Todos</button>
+            <button type="button" class="gender-btn" data-gender="masculino">Masculino</button>
+            <button type="button" class="gender-btn" data-gender="femenino">Femenino</button>
+          </div>
         </div>
       </div>
-      <div class="filter-section">
-        <h4>Competición</h4>
-        <div id="competitionFilters" class="competition-btn-group">
-          <!-- Los botones de competición se generarán dinámicamente con JS -->
+      <div class="filter-section accordion-section closed" id="accordion-competition">
+        <h4 class="accordion-header">Competición
+          <svg class="chevron-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF9E1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </h4>
+        <div class="accordion-content">
+          <div id="competitionFilters" class="competition-btn-group">
+            <!-- Los botones de competición se generarán dinámicamente con JS -->
+          </div>
         </div>
       </div>
-      <div class="filter-section">
-        <h4>Pabellón</h4>
-        <input type="text" id="venueSearch" class="venue-search" placeholder="Buscar pabellón...">
-        <select id="venueFilter" class="venue-filter">
-          <option value="">Todos</option>
-          <!-- Opciones se rellenarán con JS -->
-        </select>
+      <div class="filter-section accordion-section closed" id="accordion-venue">
+        <h4 class="accordion-header">Pabellón
+          <svg class="chevron-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF9E1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </h4>
+        <div class="accordion-content">
+          <input type="text" id="venueSearch" class="venue-search" placeholder="Buscar pabellón...">
+          <select id="venueFilter" class="venue-filter">
+            <option value="">Todos</option>
+            <!-- Opciones se rellenarán con JS -->
+          </select>
+        </div>
       </div>
     </div>
     <div class="filters-footer">

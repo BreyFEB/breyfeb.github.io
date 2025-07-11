@@ -178,7 +178,6 @@ button:focus-visible {
    =========================== */
 .container {
   max-width: var(--container-max-width);
-  margin: var(--spacing-md) auto;
   padding: 0 var(--spacing-md);
 }
 
@@ -490,6 +489,8 @@ button:focus-visible {
   transform: translateX(100%);
   transition: transform 0.3s;
   overflow-y: scroll;
+  max-height: 100vh;
+  overflow-y: auto;
 }
 .filters-overlay.open { transform: translateX(0); }
 
@@ -721,10 +722,11 @@ button:focus-visible {
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 10px;
-  overflow: hidden;
+  overflow-y: auto; /* Permite scroll vertical si hay muchos filtros */
+  max-height: 220px; /* Ajusta este valor según lo que necesites */
   transition: max-height 0.3s ease, opacity 0.3s ease;
-  max-height: 400px;
   opacity: 1;
+  padding-right: 4px; /* Espacio para el scrollbar */
 }
 
 .competition-btn-group.collapsed {
@@ -983,6 +985,9 @@ button:focus-visible {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .competition-btn-group {
+    max-height: 300px;
+  }
 
   .filters-overlay {
     width: 100%;
@@ -1456,4 +1461,22 @@ button:focus-visible {
 
 .page-header h1{
   margin: 0 auto;
+}
+
+.competition-btn-group::-webkit-scrollbar {
+  width: 6px;
+  background: transparent;
+}
+.competition-btn-group::-webkit-scrollbar-thumb {
+  background: #FF9E1B;
+  border-radius: 4px;
+  min-height: 24px;
+}
+.competition-btn-group::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.competition-btn-group {
+  scrollbar-width: thin;
+  scrollbar-color: #FF9E1B transparent;
 }

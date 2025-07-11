@@ -555,18 +555,37 @@ html, body {
   }
   
   .filters-active {
-    margin-bottom: 15px;
-    min-height: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+    margin-bottom: 0;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
   }
   .filter-chip {
-    display: inline-block;
-    background: #FF9E1B;
-    color: #111C4E;
-    border-radius: 16px;
-    padding: 4px 12px;
-    margin-right: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #3D4B76;
+    color: #D7DAE3;
+    border-radius: 4px;
+    padding: 4px 8px 4px 12px;
     font-size: 0.95em;
     font-weight: bold;
+    white-space: nowrap;
+    border: 1px solid #D7DAE3;
+  }
+  @media (max-width: 600px) {
+    .filters-active {
+      gap: 6px;
+      margin-top: 10px;
+    }
+    .filter-chip {
+      font-size: 0.9em;
+      padding: 3px 8px;
+    }
   }
   
   .filter-section { margin-bottom: 18px; }
@@ -778,6 +797,22 @@ html, body {
     flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 10px;
+    max-height: 220px;
+    overflow-y: auto;
+    padding-right: 4px;
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #FF9E1B transparent; /* Firefox */
+  }
+  .competition-btn-group::-webkit-scrollbar {
+    width: 6px;
+    background: transparent;
+  }
+  .competition-btn-group::-webkit-scrollbar-thumb {
+    background: #FF9E1B;
+    border-radius: 4px;
+  }
+  .competition-btn-group::-webkit-scrollbar-track {
+    background: transparent;
   }
   .competition-btn {
     background-color: #1D296F;
@@ -801,7 +836,7 @@ html, body {
   }
   
   .filter-section { margin-bottom: 18px; }
-  .filter-section h4 { color: white; margin-bottom: 8px; font-size: 1em; }
+  .filter-section h4 { color: white; margin-bottom: 8px; font-size: 1.1em; }
   .filter-section ul { list-style: none; padding: 0; }
   .filter-section li { margin-bottom: 6px; }
   .filter-section label { color: #fff; cursor: pointer; }
@@ -1104,3 +1139,57 @@ html, body {
   .page-header h1{
     margin: 0 auto;
   }
+
+/* ===========================
+   ACORDEÓN PARA FILTROS OVERLAY
+   =========================== */
+.accordion-section {
+  border-bottom: 1px solid #FF9E1B;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.accordion-header {
+  cursor: pointer;
+  color: #FF9E1B;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.2s;
+  user-select: none;
+}
+.accordion-header .chevron-icon {
+  margin-left: 8px;
+  transition: transform 0.2s;
+}
+.accordion-section.open .accordion-header .chevron-icon {
+  transform: rotate(180deg);
+}
+/* Eliminar pseudo-elemento de flecha si existe */
+.accordion-header::after {
+  display: none !important;
+  content: none !important;
+}
+.accordion-header h4{
+  font-size: 1.1em;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.4,0,0.2,1);
+  padding: 0 0;
+  opacity: 0;
+  pointer-events: none;
+}
+.accordion-section.open .accordion-content {
+  max-height: 400px;
+  opacity: 1;
+  padding: 0 0 18px 0;
+  pointer-events: auto;
+}
+.accordion-section.closed .accordion-header {
+  border-bottom: none;
+}

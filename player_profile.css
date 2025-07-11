@@ -221,19 +221,18 @@ header {
 
 .player-main-info #competitionSelector {
   padding: 4px 8px;
-  border: 1px solid #FF9E1B;
   border-radius: 4px;
-  background: #fff;
-  color: #111C4E;
+  color: #fff;
   font-size: 0.9em;
   font-family: inherit;
   outline: none;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  background: #1D296F;
+  margin-left: 4px; 
 }
 
 .player-main-info #competitionSelector:focus,
 .player-main-info #competitionSelector:hover {
-  border-color: #e68900;
+  border-color: #FF9E1B;
   box-shadow: 0 0 0 2px rgba(255, 158, 27, 0.2);
 }
 
@@ -2491,4 +2490,265 @@ label.option span {
   .team-stat-value {
     font-size: 1.2em;
   }
+}
+
+/*
+ * Estilos movidos desde el JS y el HTML (antes en <style> o en createElement)
+ */
+
+/* Selectores de estadísticas y contenedores de gráficos */
+#statSelector, #scatterStatSelector, #valueTypeSelector {
+  padding: 6px 12px;
+  border: 1.5px solid #1976d2;
+  border-radius: 6px;
+  background: #f5faff;
+  color: #1976d2;
+  font-size: 1rem;
+  font-family: inherit;
+  margin-bottom: 16px;
+  margin-top: 8px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+#statSelector:focus, #statSelector:hover,
+#scatterStatSelector:focus, #scatterStatSelector:hover,
+#valueTypeSelector:focus, #valueTypeSelector:hover {
+  border-color: #125ea7;
+  box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.15);
+  background: #e3f0ff;
+}
+#evolutionChartContainer, #scatterChartContainer {
+  flex: 0 0 80%;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+#barChartContainer {
+  flex: 0 0 80%;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+@media (max-width: 1024px) {
+  #evolutionChartContainer, #scatterChartContainer {
+    flex: 0 0 75%;
+    width: 75%;
+    min-height: 250px;
+  }
+  #barChartContainer {
+    flex: 0 0 75%;
+    width: 75%;
+    min-height: 180px;
+  }
+}
+@media (max-width: 768px) {
+  #evolutionChartContainer, #scatterChartContainer {
+    flex: 0 0 100%;
+    width: 100%;
+    min-height: 200px;
+    margin-top: 15px;
+  }
+  #barChartContainer {
+    flex: 0 0 100%;
+    width: 100%;
+    min-height: 150px;
+    margin-top: 15px;
+  }
+  .chart-with-card {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .chart-info-card {
+    flex: 0 0 auto;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 480px) {
+  #evolutionChartContainer, #scatterChartContainer {
+    min-height: 180px;
+  }
+  #barChartContainer {
+    min-height: 120px;
+  }
+  .chart-info-card {
+    padding: 15px;
+  }
+  .card-explanation {
+    font-size: 0.9em;
+  }
+}
+.card-icon {
+  margin-bottom: 10px;
+}
+.card-explanation {
+  font-size: 0.98em;
+  color: #111C4E;
+  text-align: center;
+  margin-top: 8px;
+}
+/* Responsive styling for selectors */
+@media (max-width: 768px) {
+  #statSelector, #scatterStatSelector, #valueTypeSelector {
+    width: 100% !important;
+    max-width: 250px;
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+  .statSelectorRow, .selectorContainer {
+    margin-bottom: 15px;
+  }
+  .statLabel, .scatterStatLabel, .valueTypeLabel {
+    font-size: 0.8em !important;
+    margin-bottom: 6px !important;
+  }
+}
+@media (max-width: 480px) {
+  #statSelector, #scatterStatSelector, #valueTypeSelector {
+    max-width: 200px;
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+}
+/* Styling for percentile pills in table */
+.percentile-pill {
+  display: inline-block;
+  background: #1976d2;
+  color: white;
+  font-size: 0.7em;
+  padding: 2px 6px;
+  border-radius: 10px;
+  margin-top: 2px;
+  font-weight: bold;
+  text-align: center;
+  min-width: 30px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+/* Table styling for totals and averages rows */
+.total-row, .prom-row, .per40-row {
+  background-color: #f8f9fa !important;
+  font-weight: bold;
+}
+.total-row td, .prom-row td, .per40-row td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 8px 4px;
+}
+.total-row td:first-child, .prom-row td:first-child, .per40-row td:first-child {
+  text-align: center;
+  font-weight: bold;
+  background-color: #e9ecef;
+}
+/* Hover effects for game rows based on win/loss */
+tr[style*="rgba(0, 255, 0, 0.1)"]:hover {
+  background-color: rgba(0, 255, 0, 0.25) !important;
+}
+tr[style*="rgba(255, 0, 0, 0.1)"]:hover {
+  background-color: rgba(255, 0, 0, 0.25) !important;
+}
+/* Individual cell hover effects */
+tr[style*="rgba(0, 255, 0, 0.1)"] td:hover {
+  background-color: rgba(0, 255, 0, 0.6) !important;
+}
+tr[style*="rgba(255, 0, 0, 0.1)"] td:hover {
+  background-color: rgba(255, 0, 0, 0.6) !important;
+}
+/* Responsive table styling */
+@media (max-width: 768px) {
+  .percentile-pill {
+    font-size: 0.6em;
+    padding: 1px 4px;
+    min-width: 25px;
+  }
+  .total-row td, .prom-row td, .per40-row td {
+    padding: 6px 2px;
+    font-size: 0.9em;
+  }
+}
+/* Sort arrow for table headers */
+th { cursor: pointer; }
+.sort-arrow { font-size: 0.9em; vertical-align: middle; }
+tr:hover { background-color: rgba(0, 0, 0, 0.05) !important; }
+
+/* ==== CLASES PARA REEMPLAZAR ESTILOS INLINE DESDE JS ==== */
+
+.flex-col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.mb-10 { margin-bottom: 10px; }
+.mb-16 { margin-bottom: 16px; }
+.mt-32 { margin-top: 32px; }
+.mb-20 { margin-bottom: 20px; }
+.mt-8 { margin-top: 8px; }
+
+.text-center { text-align: center; }
+.text-uppercase { text-transform: uppercase; }
+.text-bold { font-weight: bold; }
+.text-gray { color: #888; }
+.text-small { font-size: 0.85em; }
+.text-xsmall { font-size: 0.8em; }
+.text-gold { color: #FF9E1B; }
+.text-green { color: #008000; }
+.text-red { color: #ff0000; }
+
+.font-09em { font-size: 0.9em; }
+.font-1rem { font-size: 1rem; }
+.font-600 { font-weight: 600; }
+.letter-spacing-05 { letter-spacing: 0.05em; }
+
+.card-icon-lg {
+  font-size: 2.2em;
+  text-align: center;
+}
+
+.card-explanation {
+  font-size: 0.98em;
+  color: #111C4E;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.border-none { border: none; }
+.border-top-light { border-top: 1px solid #e0e0e0; }
+.m-32-0 { margin: 32px 0 32px 0; }
+
+/* Para celdas de tabla generadas dinámicamente */
+.td-center {
+  text-align: center;
+  vertical-align: top;
+}
+
+.td-bold {
+  font-weight: bold;
+}
+
+.colspan-3 {
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Para ocultar elementos dinámicamente */
+.visibility-hidden { visibility: hidden; }
+
+/* Para pill de performance y progress bar (colores dinámicos se mantienen inline) */
+.fg-stat-value-bold { font-weight: bold; }
+
+/* Para celdas de tabla con links sin subrayado */
+.link-no-underline { text-decoration: none; }
+
+/* Para mensajes de feedback */
+.feedback-center {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  font-style: italic;
 }

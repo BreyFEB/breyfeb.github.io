@@ -228,8 +228,8 @@ async function loadStats() {
     if (availablePlayerCompetitions.length > 1) {
       competitionSelector = `
         <div style="margin-bottom: 8px;">
-          <label for="competitionSelector" style="font-size: 0.9em; color: #ccc; margin-right: 8px;">Competición:</label>
-          <select id="competitionSelector" style="padding: 4px 8px; border: 1px solid #FF9E1B; border-radius: 4px; background: #fff; color: #111C4E; font-size: 0.9em;">
+          <label for="competitionSelector">Competición:</label>
+          <select id="competitionSelector">
             ${availablePlayerCompetitions.map(comp => 
               `<option value="${comp}" ${comp === player_totals.competition ? 'selected' : ''}>${formatCompetitionName(comp)}</option>`
             ).join('')}
@@ -251,8 +251,8 @@ async function loadStats() {
         <span class="team-name">${team}</span>
       </a>
       <div class="player-meta">
+        Género: ${gender}<br>
         ${competitionSelector}
-        Género: ${gender}
       </div>
     `;
     

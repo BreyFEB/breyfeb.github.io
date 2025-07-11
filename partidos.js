@@ -805,6 +805,7 @@ function applyAllFilters() {
   } else {
     noMatchesMsg.style.display = 'none';
   }
+  updateOverlayFilterChips();
 }
 
 /*********************************
@@ -1084,8 +1085,28 @@ genderFilters.addEventListener("click", (e) => {
 const openFiltersBtn = document.getElementById("openFiltersBtn");
 const closeFiltersBtn = document.getElementById("closeFiltersBtn");
 const filtersOverlay = document.getElementById("filtersOverlay");
+// ACORDEÓN PARA FILTROS OVERLAY
+function setupAccordionFilters() {
+  const sections = document.querySelectorAll('.accordion-section');
+  sections.forEach(section => {
+    const header = section.querySelector('.accordion-header');
+    if (header) {
+      header.addEventListener('click', () => {
+        if (section.classList.contains('open')) {
+          section.classList.remove('open');
+          section.classList.add('closed');
+        } else {
+          section.classList.add('open');
+          section.classList.remove('closed');
+        }
+      });
+    }
+  });
+}
+// Ejecutar al abrir el overlay de filtros
 openFiltersBtn.addEventListener("click", () => {
   filtersOverlay.classList.add("open");
+  setupAccordionFilters();
 });
 closeFiltersBtn.addEventListener("click", () => {
   filtersOverlay.classList.remove("open");
@@ -1198,4 +1219,47 @@ function updateVenueFilterOptions() {
     if (venueFilter) venueFilter.value = "";
     if (venueSearch) venueSearch.value = "";
   }
+}
+
+// Mostrar filtros aplicados como chips en el overlay de filtros
+function updateOverlayFilterChips() {
+  const filtersActive = document.getElementById('filtersActive');
+  if (!filtersActive) return;
+  filtersActive.innerHTML = '';
+  const activeFilters = [];
+  if (selectedGender && selectedGender !== 'todos') {
+    activeFilters.push({
+      type: 'gender',
+      label: selectedGender === 'masculino' ? 'Masculino' : 'Femenino',
+      value: selectedGender
+    });
+  }
+  if (selectedCompetition && selectedCompetition !== '') {
+    activeFilters.push({
+      type: 'competition',
+      label: formatCompetitionName(selectedCompetition),
+      value: selectedCompetition
+    });
+  }
+  if (selectedVenue && selectedVenue !== '') {
+    activeFilters.push({
+      type: 'venue',
+      label: toTitleCase(selectedVenue),
+      value: selectedVenue
+    });
+  }
+  if (activeFilters.length === 0) {
+    filtersActive.style.display = 'none';
+    return;
+  }
+  filtersActive.style.display = 'flex';
+  activeFilters.forEach(filter => {
+    const chip = document.createElement('div');
+    chip.className = 'filter-chip';
+    chip.innerHTML = `
+      ${filter.label}
+      <button class="breadcrumb-chip-remove" data-filter-type="${filter.type}" data-filter-value="${filter.value}">×</button>
+    `;
+    filtersActive.appendChild(chip);
+  });
 }
