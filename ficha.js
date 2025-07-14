@@ -1299,61 +1299,213 @@ function fillBubbleValChart(data) {
 }
 
 function fillEvolutionChart(data) {
-  // Suponemos que data.HEADER.QUARTERS.QUARTER contiene los datos de cada periodo con propiedades "scoreA" y "scoreB"
-  if (!data.HEADER || !data.HEADER.QUARTERS || !data.HEADER.QUARTERS.QUARTER) {
-    console.warn("No se encontraron datos de cuartos en el JSON.");
+  if (!data.PLAYBYPLAY || !data.PLAYBYPLAY.LINES) {
+    console.warn("No se encontraron eventos de play by play en el JSON.");
     return;
   }
-  
-  const quarters = data.HEADER.QUARTERS.QUARTER;
-  const labels = [];
-  const acumuladoA = [];
-  const acumuladoB = [];
-  
-  let totalA = 0;
-  let totalB = 0;
-  
-  quarters.forEach(q => {
-    const num = parseInt(q.n, 10);
-    const label = (num <= 4) ? `Periodo ${q.n}` : `TE ${num - 4}`;
-    labels.push(label);
-    
-    totalA += parseInt(q.scoreA, 10) || 0;
-    totalB += parseInt(q.scoreB, 10) || 0;
-    
-    acumuladoA.push(totalA);
-    acumuladoB.push(totalB);
+
+  // === Ajustar tamaño del contenedor y canvas ===
+  const evolutionCanvas = document.getElementById("evolutionChart");
+  if (!evolutionCanvas) return;
+  const evolutionContainer = evolutionCanvas.parentElement;
+  const CANVAS_W = 800;
+  const CANVAS_H = 400;
+  evolutionCanvas.width = CANVAS_W;
+  evolutionCanvas.height = CANVAS_H;
+  evolutionCanvas.style.width = CANVAS_W + "px";
+  evolutionCanvas.style.height = CANVAS_H + "px";
+  if (evolutionContainer) {
+    evolutionContainer.style.width = CANVAS_W + "px";
+    evolutionContainer.style.height = CANVAS_H + "px";
+  }
+
+  // === Preparar datos usando segundo transcurrido desde el inicio ===
+  const competitionName = (data.HEADER.competition || '').toUpperCase();
+  const isMini = competitionName.includes('MINI');
+
+  const REG_Q_COUNT = isMini ? 6 : 4;              // Nº de cuartos "normales"
+  const REG_Q_LEN   = isMini ? 480 : 600;          // Duración de cuarto normal (s)
+
+  const allEvents = data.PLAYBYPLAY.LINES.slice().sort((a, b) => (a.num || 0) - (b.num || 0));
+
+  const pointsA = [];
+  const pointsB = [];
+  const tooltipLabels = [];
+
+  const quarterStartSeconds = [];
+  const quarterLabelBySeconds = {};
+  const seenQuarters = new Set();
+
+  let currentScoreA = 0;
+  let currentScoreB = 0;
+  let lastQuarter = 1;
+
+  function getQuarterBaseSec(q) {
+    q = parseInt(q, 10);
+    if (q <= REG_Q_COUNT) return (q - 1) * REG_Q_LEN;
+    return REG_Q_COUNT * REG_Q_LEN + (q - (REG_Q_COUNT + 1)) * 300; // OT de 5 min
+  }
+  function getQuarterLengthSec(q) {
+    return q <= REG_Q_COUNT ? REG_Q_LEN : 300;
+  }
+
+  // Punto inicial (0-0 en segundo 0)
+  pointsA.push({ x: 0, y: 0 });
+  pointsB.push({ x: 0, y: 0 });
+  const firstQuarterLenSec = getQuarterLengthSec(1); // 600 o 480
+  const firstQuarterStartTime = firstQuarterLenSec / 60; // 10 o 8 (en minutos)
+  tooltipLabels.push(`C1 ${firstQuarterStartTime}:00`);
+  quarterStartSeconds.push(0);
+  quarterLabelBySeconds[0] = "C1";
+  seenQuarters.add(1);
+
+  allEvents.forEach(ev => {
+    const q = parseInt(ev.quarter, 10);
+    lastQuarter = q;
+    const [mm, ss] = (ev.time || "0:0").split(":" ).map(Number);
+    const timeRemaining = (mm || 0) * 60 + (ss || 0);
+    const quarterLen = getQuarterLengthSec(q);
+    const elapsedInQuarter = quarterLen - timeRemaining; // 0-600 or 0-300
+    const xSec = getQuarterBaseSec(q) + elapsedInQuarter;
+
+    // Detectar inicio de nuevo cuarto (primera vez que vemos este quarter)
+    if (!seenQuarters.has(q)) {
+      const qsSec = getQuarterBaseSec(q);
+      const qLabel = (q <= REG_Q_COUNT) ? `C${q}` : `TE${q - REG_Q_COUNT}`;
+      quarterStartSeconds.push(qsSec);
+      quarterLabelBySeconds[qsSec] = qLabel;
+      seenQuarters.add(q);
+    }
+
+    // Actualizar marcadores si hay info
+    if (ev.scoreA !== null && ev.scoreA !== undefined) currentScoreA = parseInt(ev.scoreA, 10);
+    if (ev.scoreB !== null && ev.scoreB !== undefined) currentScoreB = parseInt(ev.scoreB, 10);
+
+    pointsA.push({ x: xSec, y: currentScoreA });
+    pointsB.push({ x: xSec, y: currentScoreB });
+    tooltipLabels.push(`C${q} ${ev.time}`);
   });
-  
-  // Dibujar la gráfica en el canvas con id "evolutionChart"
-  const ctx = document.getElementById("evolutionChart").getContext("2d");
-  
+
+  // === Añadir punto final (FIN DEL PARTIDO) ===
+  const finalSec = getQuarterBaseSec(lastQuarter) + getQuarterLengthSec(lastQuarter);
+  if (pointsA[pointsA.length - 1].x < finalSec) {
+    pointsA.push({ x: finalSec, y: currentScoreA });
+    pointsB.push({ x: finalSec, y: currentScoreB });
+    tooltipLabels.push('FINAL');
+  }
+  quarterLabelBySeconds[finalSec] = 'FINAL';
+
+  const finalScoreA = currentScoreA;
+  const finalScoreB = currentScoreB;
+
+  const ctx = evolutionCanvas.getContext("2d");
+  const finalMarkersPlugin = {
+    id: 'finalMarkers',
+    afterDraw(chart) {
+      const xScale = chart.scales.x;
+      const yScale = chart.scales.y;
+      const xFinal = xScale.getPixelForValue(finalSec);
+      const ctxP = chart.ctx;
+      ctxP.save();
+      ctxP.font = 'bold 12px Montserrat, Arial';
+      ctxP.textAlign = 'left';
+      ctxP.textBaseline = 'middle';
+      // Score A
+      ctxP.fillStyle = '#EFE34C';
+      const yA = yScale.getPixelForValue(finalScoreA);
+      ctxP.fillText(finalScoreA.toString(), xFinal + 6, yA);
+      // Score B
+      ctxP.fillStyle = '#B62929';
+      const yB = yScale.getPixelForValue(finalScoreB);
+      ctxP.fillText(finalScoreB.toString(), xFinal + 6, yB);
+    }
+  };
+
   new Chart(ctx, {
     type: 'line',
     data: {
-      labels: labels,
-      datasets: [{
-        label: data.HEADER.TEAM[0].name || "Equipo A",
-        data: acumuladoA,
-        borderColor: '#EFE34C',
-        backgroundColor: 'rgba(239, 227, 76, 0.2)',
-        fill: false,
-        tension: 0.1
-      }, {
-        label: data.HEADER.TEAM[1].name || "Equipo B",
-        data: acumuladoB,
-        borderColor: '#B62929',
-        backgroundColor: 'rgba(182, 41, 41, 0.2)',
-        fill: false,
-        tension: 0.1
-      }]
+      datasets: [
+        {
+          label: data.HEADER.TEAM[0].name || "Equipo A",
+          data: pointsA,
+          borderColor: '#EFE34C',
+          backgroundColor: 'rgba(239,227,76,0.15)',
+          fill: false,
+          tension: 0.1,
+          pointRadius: 0,
+        },
+        {
+          label: data.HEADER.TEAM[1].name || "Equipo B",
+          data: pointsB,
+          borderColor: '#B62929',
+          backgroundColor: 'rgba(182,41,41,0.15)',
+          fill: false,
+          tension: 0.1,
+          pointRadius: 0,
+        }
+      ]
     },
     options: {
-      responsive: true,
+      maintainAspectRatio: false,
+      layout: {
+        padding: { right: 60 }
+      },
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        tooltip: {
+          mode: 'index',
+          intersect: false,
+          callbacks: {
+            title: context => tooltipLabels[context[0].dataIndex],
+            label: ctx => `${ctx.dataset.label}: ${ctx.formattedValue}`
+          },
+          // No external drawing here; handled by hoverLinePlugin
+        },
+        legend: { display: true }
+      },
       scales: {
-        y: { beginAtZero: true }
+        x: {
+          type: 'linear',
+          title: { display: true, text: 'Tiempo transcurrido' },
+          min: 0,
+          ticks: {
+            stepSize: 300, // 5-minute granularity so FINAL tick always appears
+            callback: value => {
+              if (quarterLabelBySeconds[value]) return quarterLabelBySeconds[value];
+              if (value === finalSec) return 'FINAL';
+              return '';
+            }
+          },
+          grid: {
+            color: context => quarterLabelBySeconds[context.tick.value] ? '#bbb' : 'rgba(0,0,0,0)',
+            lineWidth: context => quarterLabelBySeconds[context.tick.value] ? 1 : 0
+          }
+        },
+        y: {
+          beginAtZero: true,
+          title: { display: true, text: 'Puntos anotados' }
+        }
       }
-    }
+    },
+    plugins: [finalMarkersPlugin, {
+      id: 'hoverLinePlugin',
+      afterDraw(chart) {
+        const tooltip = chart.tooltip;
+        if (!tooltip || !tooltip._active || !tooltip._active.length) return;
+        const ctx = chart.ctx;
+        const active = tooltip._active[0];
+        ctx.save();
+        ctx.beginPath();
+        ctx.moveTo(active.element.x, chart.chartArea.top);
+        ctx.lineTo(active.element.x, chart.chartArea.bottom);
+        ctx.lineWidth = 2;
+        // Light gray
+        ctx.strokeStyle = '#bbb';
+        ctx.setLineDash([]);
+        ctx.stroke();
+        ctx.restore();
+      }
+    }]
   });
 }
 
@@ -1402,3 +1554,9 @@ function fillQuarterSummary(data) {
   totalRow.innerHTML = `<td>TOTAL</td><td>${totalA}</td><td>${totalB}</td>`;
   tbody.appendChild(totalRow);
 }
+
+// Calculate each team's biggest lead
+let biggestLeadLocal = 0;
+let biggestLeadVisit = 0;
+
+forEach()
