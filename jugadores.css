@@ -153,13 +153,8 @@ button:focus-visible {
     filter: brightness(0) invert(1);
     transition: filter 0.2s ease-in-out;
   }
-  .nav-item:hover img {
-    filter: brightness(1.2) invert(1);
-  }
   /* Icono activo en naranja #FF9E1B */
-  .nav-item.active img {
-    filter: brightness(0) saturate(20%) invert(49%) sepia(100%) saturate(1200%) hue-rotate(358deg) brightness(102%) contrast(101%);
-  }
+
   .nav-item.active span {
     color: #FF9E1B;
   }
@@ -168,9 +163,7 @@ button:focus-visible {
     height: 36px;
     filter: brightness(0) invert(1);
   }
-  .icon:hover {
-    filter: brightness(1.2) invert(1);
-  }
+
   
 
 /* ===========================
