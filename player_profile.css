@@ -1137,7 +1137,20 @@ header {
   border-radius: 8px;
   padding: 20px;
   text-align: center;
-  height: 548px;
+  min-height: 200px;
+  max-height: none;
+  overflow: auto;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.stats-card table,
+.stats-card .chart-container {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  display: block;
+  box-sizing: border-box;
 }
 
 .fg-percentage {
