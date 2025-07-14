@@ -200,6 +200,20 @@ function setupEventListeners() {
     }
   });
 
+  // === Filtros de estadísticas (puntos, rebotes, asistencias) ===
+  document.querySelectorAll('.stats-filters input[type="number"]').forEach((input, idx) => {
+    input.addEventListener('input', (e) => {
+      const value = e.target.value !== '' ? e.target.value : null;
+      // Orden: 0=puntos min, 1=puntos max, 2=rebotes min, 3=rebotes max, 4=asistencias min, 5=asistencias max
+      if (idx === 0) state.filtros.estadisticas.puntos.min = value;
+      if (idx === 1) state.filtros.estadisticas.puntos.max = value;
+      if (idx === 2) state.filtros.estadisticas.rebotes.min = value;
+      if (idx === 3) state.filtros.estadisticas.rebotes.max = value;
+      if (idx === 4) state.filtros.estadisticas.asistencias.min = value;
+      if (idx === 5) state.filtros.estadisticas.asistencias.max = value;
+      updateFiltersIndicator();
+    });
+  });
 }
 
 // Configurar botones de toggle para filtros desplegables
@@ -506,26 +520,11 @@ function limpiarFiltros() {
 
 // Aplicar filtros
 function aplicarFiltros() {
-  // Obtener los valores de los inputs de estadísticas
-  const statsInputs = document.querySelectorAll('.stat-filter input');
-  statsInputs.forEach(input => {
-    const statType = input.closest('.stat-filter').querySelector('label').textContent.toLowerCase();
-    const isMin = input.placeholder.toLowerCase() === 'mín';
-    const value = input.value ? parseFloat(input.value) : null;
-    
-    if (value !== null) {
-      state.filtros.estadisticas[statType][isMin ? 'min' : 'max'] = value;
-    } else {
-      state.filtros.estadisticas[statType][isMin ? 'min' : 'max'] = null;
-    }
-  });
-
-  // Asegurarse de que el equipo seleccionado se mantiene
-  state.filtros.equipo = elementos.equipoFiltro.value;
-
+  // Solo actualizar la vista y cerrar el overlay, los valores ya están en el estado
   state.paginaActual = 1;
   actualizarVista();
   elementos.filtrosOverlay.classList.remove('open');
+  updateFiltersIndicator();
 }
 
 // Actualizar chips de filtros activos
@@ -728,6 +727,53 @@ function actualizarFiltrosEquipo() {
   const teamFilter = elementos.teamFilter;
   teamFilter.value = state.filtros.equipo || '';
 }
+
+// Función para mostrar/ocultar el puntito en el botón de filtros
+function updateFiltersIndicator() {
+  const btn = elementos.btnFiltros;
+  const filtros = state.filtros;
+  // Hay filtro activo si alguno de estos no es el valor por defecto
+  const hasActiveFilters = (filtros.genero && filtros.genero !== 'todos') ||
+    (filtros.competicion && filtros.competicion !== 'todas') ||
+    (filtros.equipo && filtros.equipo !== '') ||
+    (filtros.estadisticas && (
+      (filtros.estadisticas.puntos.min !== null && filtros.estadisticas.puntos.min !== '') ||
+      (filtros.estadisticas.puntos.max !== null && filtros.estadisticas.puntos.max !== '') ||
+      (filtros.estadisticas.rebotes.min !== null && filtros.estadisticas.rebotes.min !== '') ||
+      (filtros.estadisticas.rebotes.max !== null && filtros.estadisticas.rebotes.max !== '') ||
+      (filtros.estadisticas.asistencias.min !== null && filtros.estadisticas.asistencias.min !== '') ||
+      (filtros.estadisticas.asistencias.max !== null && filtros.estadisticas.asistencias.max !== '')
+    ));
+  if (hasActiveFilters) {
+    btn.classList.add('has-active-filters');
+  } else {
+    btn.classList.remove('has-active-filters');
+  }
+}
+
+// Llama a updateFiltersIndicator después de aplicar filtros
+const originalAplicarFiltros = aplicarFiltros;
+aplicarFiltros = function() {
+  originalAplicarFiltros.apply(this, arguments);
+  updateFiltersIndicator();
+};
+
+// Llama a updateFiltersIndicator después de limpiar filtros
+const originalLimpiarFiltros = limpiarFiltros;
+limpiarFiltros = function() {
+  originalLimpiarFiltros.apply(this, arguments);
+  updateFiltersIndicator();
+};
+
+// Llama a updateFiltersIndicator después de eliminar un filtro individual
+const originalEliminarFiltro = eliminarFiltro;
+eliminarFiltro = function(tipo, valor) {
+  originalEliminarFiltro.apply(this, arguments);
+  updateFiltersIndicator();
+};
+
+// También llama a updateFiltersIndicator al iniciar y tras cambios de filtros
+setTimeout(updateFiltersIndicator, 200);
 
 // === Botón para subir arriba en Jugadores ===
 const scrollTopBtn = document.getElementById('playersScrollTopBtn');

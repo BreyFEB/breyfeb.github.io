@@ -266,6 +266,28 @@ function initializeGenderFilters() {
   if (todosBtn) todosBtn.classList.add('active');
 }
 
+// === Indicador de filtros activos (puntito) ===
+function updateFiltersIndicator() {
+  const btn = document.getElementById('openFiltersBtn');
+  const f = filters;
+  const hasActive = (f.gender && f.gender !== 'todos') ||
+    (f.competition && f.competition !== 'todas') ||
+    (f.stats && (
+      (f.stats.pts.min !== null && f.stats.pts.min !== '') ||
+      (f.stats.pts.max !== null && f.stats.pts.max !== '') ||
+      (f.stats.ptsc.min !== null && f.stats.ptsc.min !== '') ||
+      (f.stats.ptsc.max !== null && f.stats.ptsc.max !== '') ||
+      (f.stats.pm.min !== null && f.stats.pm.min !== '') ||
+      (f.stats.pm.max !== null && f.stats.pm.max !== '')
+    ));
+  if (hasActive) {
+    btn.classList.add('has-active-filters');
+  } else {
+    btn.classList.remove('has-active-filters');
+  }
+}
+
+// === Actualizar puntito al cambiar filtros ===
 function setupFilterEventListeners() {
   const openFiltersBtn = document.getElementById('openFiltersBtn');
   const closeFiltersBtn = document.getElementById('closeFiltersBtn');
@@ -290,6 +312,7 @@ function setupFilterEventListeners() {
       e.target.classList.add('active');
       filters.gender = e.target.dataset.gender;
       updateActiveFilters();
+      updateFiltersIndicator();
     }
   });
 
@@ -301,18 +324,36 @@ function setupFilterEventListeners() {
       e.target.classList.add('active');
       filters.competition = e.target.dataset.competition;
       updateActiveFilters();
+      updateFiltersIndicator();
     }
+  });
+
+  // Filtros de estadísticas (puntito en tiempo real)
+  document.querySelectorAll('.stat-filter input[type="number"]').forEach((input, idx) => {
+    input.addEventListener('input', (e) => {
+      const value = e.target.value !== '' ? parseFloat(e.target.value) : null;
+      // Orden: 0=PTS min, 1=PTS max, 2=PTSC min, 3=PTSC max, 4=+/- min, 5=+/- max
+      if (idx === 0) filters.stats.pts.min = value;
+      if (idx === 1) filters.stats.pts.max = value;
+      if (idx === 2) filters.stats.ptsc.min = value;
+      if (idx === 3) filters.stats.ptsc.max = value;
+      if (idx === 4) filters.stats.pm.min = value;
+      if (idx === 5) filters.stats.pm.max = value;
+      updateFiltersIndicator();
+    });
   });
 
   // Limpiar filtros
   clearFiltersBtn?.addEventListener('click', () => {
     clearAllFilters();
+    updateFiltersIndicator();
   });
 
   // Aplicar filtros
   applyFiltersBtn?.addEventListener('click', () => {
     applyFilters();
     filtersOverlay.classList.remove('open');
+    updateFiltersIndicator();
   });
 }
 
@@ -394,6 +435,7 @@ function applyFilters() {
   renderTeamsGrid();
   renderPagination();
   updateActiveFilters();
+  updateFiltersIndicator();
 }
 
 function clearAllFilters() {
@@ -429,6 +471,7 @@ function clearAllFilters() {
   renderTeamsGrid();
   renderPagination();
   updateActiveFilters();
+  updateFiltersIndicator();
 }
 
 function updateActiveFilters() {
@@ -548,6 +591,7 @@ function eliminarFiltro(tipo, valor) {
   // Aplicar filtros y actualizar vista
   currentPage = 1;
   applyFilters();
+  updateFiltersIndicator();
 }
 
 // Helper copied (simplified) from team_profile.js
@@ -642,3 +686,5 @@ function setupStatsToggle() {
 }
 
 document.addEventListener('DOMContentLoaded', loadTeams); 
+// Llamar al iniciar
+setTimeout(updateFiltersIndicator, 200); 

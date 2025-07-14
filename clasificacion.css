@@ -275,7 +275,7 @@ header {
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 20px;
 }
@@ -1086,7 +1086,7 @@ header {
 
 .header-inner .footer-logo {
   grid-column: 1;
-  justify-self: start;
+  justify-self: center;
 }
 
 .footer-text {
@@ -1300,7 +1300,7 @@ header {
 @media screen and (max-width: 768px) {
   .header-inner {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
   }
   
   .main-nav {

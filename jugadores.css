@@ -96,7 +96,7 @@ button:focus-visible {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 10px 20px;
   }
   .header-left {
@@ -319,6 +319,7 @@ button:focus-visible {
 }
 
 .btn-filters {
+  position: relative;
   float: right;
   display: flex;
   align-items: center;
@@ -340,6 +341,25 @@ button:focus-visible {
 .btn-filters:hover {
   background: #FF7D07;
   color: white;
+}
+
+.filters-indicator {
+  display: none;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 10px;
+  height: 10px;
+  background: #1D296F;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  z-index: 2;
+  pointer-events: none;
+  box-shadow: 0 0 2px #888;
+}
+
+.btn-filters.has-active-filters .filters-indicator {
+  display: block;
 }
 
 /* ===========================

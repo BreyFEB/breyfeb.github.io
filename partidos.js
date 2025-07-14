@@ -1263,3 +1263,48 @@ function updateOverlayFilterChips() {
     filtersActive.appendChild(chip);
   });
 }
+
+// Función para mostrar/ocultar el circulito en el botón de filtros
+function updateFiltersIndicator() {
+  const btn = document.getElementById('openFiltersBtn');
+  // Hay filtro activo si alguno de estos no es el valor por defecto
+  const hasActiveFilters = (selectedGender && selectedGender !== 'todos') ||
+                          (selectedCompetition && selectedCompetition !== null && selectedCompetition !== '') ||
+                          (selectedVenue && selectedVenue !== '');
+  if (hasActiveFilters) {
+    btn.classList.add('has-active-filters');
+  } else {
+    btn.classList.remove('has-active-filters');
+  }
+}
+
+// Llama a updateFiltersIndicator después de aplicar filtros
+const originalApplyAllFilters = applyAllFilters;
+applyAllFilters = function() {
+  originalApplyAllFilters.apply(this, arguments);
+  updateFiltersIndicator();
+};
+
+// Llama a updateFiltersIndicator después de limpiar filtros
+const originalClearAllFilters = clearAllFilters;
+clearAllFilters = function() {
+  originalClearAllFilters.apply(this, arguments);
+  updateFiltersIndicator();
+};
+
+// Llama a updateFiltersIndicator después de remover un filtro individual
+const originalRemoveFilter = removeFilter;
+removeFilter = function(filterType, filterValue) {
+  originalRemoveFilter.apply(this, arguments);
+  updateFiltersIndicator();
+};
+
+document.addEventListener('DOMContentLoaded', function() {
+  const footerLogos = document.querySelectorAll('.footer-logo');
+  footerLogos.forEach(function(logo) {
+    logo.style.cursor = 'pointer';
+    logo.addEventListener('click', function() {
+      window.location.href = 'index.html';
+    });
+  });
+});
