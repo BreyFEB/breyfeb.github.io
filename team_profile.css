@@ -1328,3 +1328,62 @@ body {
 #teamFilterControls {
   display: none;
 }
+
+/* Navegador principal - quitar negrita del texto */
+.main-nav ul,
+.nav-item,
+.nav-item a {
+  font-weight: normal !important;
+}
+
+.nav-item.active span {
+  font-weight: normal !important;
+}
+
+.login-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding: 0.5em 1em;
+  border-radius: 30px;
+  background: #181D37;
+  transition: background 0.2s;
+  color: #fff;
+  border: 1px solid #D7DAE3;
+  margin-left: auto;
+}
+
+@media (max-width: 900px) {
+  .login-btn span {
+    display: none;
+  }
+  .login-btn img {
+    margin: 0;
+  }
+  .login-btn {
+    padding: 0.5em;
+    min-width: 0;
+    justify-content: flex-end;
+  }
+  .header-right {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .bottom-nav-item img,
+  .bottom-nav-item svg {
+    width: 28px;
+    height: 28px;
+  }
+  .bottom-nav-item {
+    min-height: 55px;
+    padding: 10px 1px;
+  }
+}

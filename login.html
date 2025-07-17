@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="content">
+        <div class="login-container">
+            <button class="back-btn" type="button" onclick="window.history.back()" aria-label="Volver atrás">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14 18L8 12L14 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <div class="logo-container">
+                <img src="https://raw.githubusercontent.com/emebullon/cadete2025/refs/heads/main/febcadete.svg" lt="Logo FEB" class="footer-logo">
+            </div>
+            <h2>¿Listo para ver tu <span class="gradient">feed personalizado</span>?</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <input type="text" id="username" name="username" required placeholder="Usuario o Email">
+                </div>
+                <div class="form-group password-group">
+                    <input type="password" id="password" name="password" required placeholder="Contraseña">
+                    <button type="button" id="toggle-password" class="toggle-password" tabindex="-1" aria-label="Mostrar u ocultar contraseña">
+                        <svg id="eye-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D7DAE3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg>
+                    </button>
+                </div>
+                <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+                <button type="submit" class="login-btn">Entrar</button>
+            </form>
+            <a href="#" class="register-link">¿No tienes cuenta? <span class="register-orange">Regístrate</span></a>
+            <div id="message" class="message"></div>
+        </div>
+    </div>
+    <script>
+        // Usuario y contraseña de ejemplo
+        const USER = "admin";
+        const PASS = "1234";
+
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const messageDiv = document.getElementById('message');
+
+            if (username === USER && password === PASS) {
+                messageDiv.textContent = "¡Login exitoso!";
+                messageDiv.className = "message success";
+                // Aquí puedes redirigir o guardar sesión, etc.
+            } else {
+                messageDiv.textContent = "Usuario o contraseña incorrectos.";
+                messageDiv.className = "message";
+            }
+        });
+
+        const passwordInput = document.getElementById('password');
+        const togglePassword = document.getElementById('toggle-password');
+        const eyeIcon = document.getElementById('eye-icon');
+        let passwordVisible = false;
+        togglePassword.addEventListener('click', function() {
+            passwordVisible = !passwordVisible;
+            passwordInput.type = passwordVisible ? 'text' : 'password';
+            eyeIcon.innerHTML = passwordVisible
+                ? '<path d="M17.94 17.94A10.06 10.06 0 0 1 12 20c-7 0-11-8-11-8a21.81 21.81 0 0 1 5.06-6.06M1 1l22 22"/><path d="M9.53 9.53A3 3 0 0 0 12 15a3 3 0 0 0 2.47-5.47"/>'
+                : '<path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/>';
+        });
+    </script>
+</body>
+</html>

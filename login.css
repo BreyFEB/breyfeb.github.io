@@ -1,0 +1,223 @@
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: url('fondo-login.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.content{
+    width: 1200px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.login-container {
+    background: rgba(24, 29, 55, 0.65); /* #181D37 semitransparente */
+    color: #fff;
+    padding: 2rem 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px 0 rgba(0,0,0,0.15);
+    width: 100%;
+    max-width: 350px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1.5px solid rgba(255,255,255,0.18);
+}
+
+.logo-container{
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.gradient {
+    color: #FF9E1B;
+ }
+
+.form-group {
+    margin-bottom: 1rem;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+.form-group input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #2C3967;
+    color: #D7DAE3;
+}
+.form-group input:focus {
+    outline: none;
+    border: 2px solid #FF9E1B;
+}
+.login-btn {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    width: 100%;
+    padding: 0.7rem;
+    background: #FF9E1B;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 700;
+    transition: color 0.2s;
+}
+
+.login-btn::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 0;
+    z-index: -1;
+    background: linear-gradient(45deg, #FF9E1B, #C8102E);
+    transition: width 0.4s cubic-bezier(0.4,0,0.2,1);
+    border-radius: 4px;
+}
+
+.login-btn:hover {
+    color: #fff;
+}
+
+.login-btn:hover::before {
+    width: 100%;
+}
+.message {
+    margin-top: 1rem;
+    text-align: center;
+    color: red;
+}
+.message.success {
+    color: green;
+}
+
+.forgot-password {
+    display: block;
+    text-align: right;
+    margin-bottom: 0.7rem;
+    font-size: 0.75em;
+    color: #D7DAE3;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.forgot-password:hover {
+    color: #FF9E1B;
+}
+
+.register-link {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1em;
+    color: #D7DAE3;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+
+.register-orange {
+    color: #FF9E1B;
+    font-weight: 700;
+}
+
+.register-link .register-orange {
+    color: #FF9E1B;
+    font-weight: 700;
+    transition: color 0.2s;
+}
+.register-link .register-orange:hover {
+    color: #FF7D07;
+}
+
+.show-password-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 0.5rem;
+    font-size: 0.95em;
+    color: #D7DAE3;
+}
+.show-password-container input[type="checkbox"] {
+    accent-color: #FF9E1B;
+}
+
+.password-group {
+    position: relative;
+}
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    z-index: 2;
+}
+.toggle-password svg {
+    display: block;
+    pointer-events: none;
+    transition: stroke 0.2s;
+}
+.toggle-password:focus svg,
+.toggle-password:hover svg {
+    stroke: #FF9E1B;
+}
+.password-group input[type="password"],
+.password-group input[type="text"] {
+    padding-right: 38px;
+}
+
+.back-btn {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    background: rgba(44, 57, 103, 0.7);
+    border: none;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.2s;
+    padding: 0;
+}
+.back-btn svg {
+    width: 22px;
+    height: 22px;
+    display: block;
+    margin: auto;
+    stroke: #fff;
+    transition: stroke 0.2s;
+}
+.back-btn:hover, .back-btn:focus {
+    background: #FF9E1B;
+}
+.back-btn:hover svg, .back-btn:focus svg {
+    stroke: #181D37;
+}
