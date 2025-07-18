@@ -8,10 +8,68 @@ body {
     height: 100vh;
 }
 
-.content{
+.content {
     width: 1200px;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+    gap: 200px;
+}
+
+.benefits-card {
+    background: rgba(24, 29, 55, 0.85); 
+    color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px 0 rgba(0,0,0,0.10);
+    padding: 2rem 2.5rem;
+    max-width: 340px;
+    min-width: 260px;
+    width: 100%;
+    margin-left: -80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1.5px solid rgba(24,29,55,0.10);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+.benefits-card h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    color: #fff;
+    font-weight: 700;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.benefits-card ul {
+    padding-left: 1.2em;
+    margin: 0;
+    font-size: 1.05em;
+}
+.benefits-card li {
+    margin-bottom: 0.7em;
+    line-height: 1.5;
+}
+.benefits-card b {
+    color: #FF9E1B;
+}
+@media (max-width: 900px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        width: 100%;
+    }
+    .benefits-card {
+        margin-left: 0;
+        display: none;
+    }
+    .login-container {
+        max-width: 95vw;
+        width: 100%;
+    }
 }
 
 .login-container {
