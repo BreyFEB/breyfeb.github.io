@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="registro.css">
+</head>
+<body>
+  <div class="content">
+    <div class="benefits-card">
+      <h3>Beneficios de registrarse</h3>
+      <ul>
+        <li>Acceso a <b>estadísticas personalizadas</b></li>
+        <li>Guarda tus <b>equipos y jugadores favoritos</b></li>
+        <li>Recibe <b>notificaciones</b> de partidos importantes</li>
+        <li>Participa en <b>rankings y foros</b> exclusivos</li>
+        <li>¡Y mucho más!</li>
+      </ul>
+    </div>
+    <div class="registro-container">
+      <button class="back-btn" type="button" onclick="window.history.back()" aria-label="Volver atrás">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14 18L8 12L14 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div class="logo-container">
+        <img src="https://raw.githubusercontent.com/emebullon/cadete2025/refs/heads/main/febcadete.svg" alt="Logo FEB" class="footer-logo">
+      </div>
+      <div class="registro-subtitle">Únete a la comunidad <span class="register-orange">FEB</span> y vive el <span class="register-orange">baloncesto</span> como nunca antes.</div>
+      <form id="registro-form">
+        <input type="email" id="email" name="email" required placeholder="Correo electrónico">
+        <input type="password" id="password" name="password" required placeholder="Contraseña">
+        <input type="password" id="confirm-password" name="confirm-password" required placeholder="Confirmar contraseña">
+        <button type="submit">Registrarse</button>
+        <a href="login.html" class="register-link">¿Ya tienes una cuenta? <span class="register-orange">Inicia sesión</span></a>
+      </form>
+    </div>
+  </div>
+
+  <script type="module">
+    import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
+
+    // Reemplaza estos valores con los de tu proyecto Supabase
+    const SUPABASE_URL = 'https://ovadhyvmvinklxjvnbgi.supabase.co';
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im92YWRoeXZtdmlua2x4anZuYmdpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTMwOTA0NTcsImV4cCI6MjA2ODY2NjQ1N30.bU0MqDZcf-MbSsC4vfMVuUk_5r2vHozBTf-V5LIZT1s';
+
+    const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+    const form = document.getElementById('registro-form');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      try {
+        // Validar que las contraseñas coincidan antes de enviar
+        const confirmPassword = document.getElementById('confirm-password').value;
+        if (password !== confirmPassword) {
+          alert('Las contraseñas no coinciden.');
+          return;
+        }
+        const { data, error } = await supabase.auth.signUp({
+          email,
+          password
+        });
+        if (error) {
+          alert('Error: ' + error.message);
+        } else {
+          alert('¡Registro completado! Ya puedes acceder a tu cuenta y personalizar tu experiencia FEB.');
+          form.reset();
+          window.location.href = 'login.html';
+        }
+      } catch (err) {
+        alert('Error inesperado: ' + err.message);
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1360,6 +1360,19 @@ input:checked + .slider:before {
   opacity: 0.9;
 }
 
+.welcome-subtitle {
+  font-size: 1.2rem;
+  color: #D7DAE3;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+h1.welcome-text {
+  font-size: 2.8rem;
+  line-height: 1.1;
+}
+
 /* Features Grid */
 .features-grid {
   display: grid;
@@ -1977,4 +1990,9 @@ html {
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
+}
+
+.user-name {
+  color: orange;
+  font-weight: bold;
 }

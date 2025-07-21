@@ -56,9 +56,9 @@
           </li>
         </ul>
       </nav>
-      <a href="login.html" class="login-btn">
+      <a href="Login/login.html" class="login-btn">
         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 8-4 8-4s8 0 8 4"/></svg>
-        <span>Login</span>
+        <span id="login-btn-text">Login</span>
       </a>
 
     </div>
@@ -287,5 +287,22 @@
     </svg>
 </button>
   <script src="jugadores.js"></script>
+  <script type="module">
+    import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+
+    const supabase = createClient(
+      'https://ovadhyvmvinklxjvnbgi.supabase.co',
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im92YWRoeXZtdmlua2x4anZuYmdpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTMwOTA0NTcsImV4cCI6MjA2ODY2NjQ1N30.bU0MqDZcf-MbSsC4vfMVuUk_5r2vHozBTf-V5LIZT1s'
+    );
+
+    const { data, error } = await supabase.auth.getUser();
+
+    const loginBtnText = document.getElementById("login-btn-text");
+
+    if (data.user) {
+      const nombre = data.user.email.split('@')[0];
+      if (loginBtnText) loginBtnText.innerHTML = `<span class="user-name">${nombre}</span>`;
+    }
+  </script>
 </body>
 </html>
