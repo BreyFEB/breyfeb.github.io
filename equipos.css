@@ -1335,3 +1335,11 @@ a.login-btn {
     justify-content: flex-end;
   }
 }
+
+/* Ensure collapsed filter sections do not block clicks */
+.stats-filters.collapsed,
+.gender-btn-group.collapsed,
+.competition-btn-group.collapsed {
+  pointer-events: none;
+  overflow: hidden;
+}

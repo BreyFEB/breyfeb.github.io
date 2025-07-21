@@ -55,7 +55,7 @@ async function loadTeams() {
       // Only consider matches for this team
       const matches = player.matches.filter(m => m.playerTeamId === tid);
       if (!matches.length) return;
-      const comp = matches[0].competition;
+      const comp = matches[0].competition.trim();
       const key = `${tid}__${comp}`;
       if (!teamMap.has(key)) {
         teamMap.set(key, {
@@ -319,7 +319,7 @@ function setupFilterEventListeners() {
     if (e.target.classList.contains('competition-btn')) {
       document.querySelectorAll('.competition-btn').forEach(btn => btn.classList.remove('active'));
       e.target.classList.add('active');
-      filters.competition = e.target.dataset.competition;
+      filters.competition = (e.target.dataset.competition || '').trim();
       updateActiveFilters();
       updateFiltersIndicator();
     }
@@ -404,7 +404,7 @@ function applyFilters() {
     }
 
     // Filtro de competición
-    if (filters.competition !== 'todas' && team.competition !== filters.competition) {
+    if (filters.competition !== 'todas' && team.competition.trim() !== filters.competition.trim()) {
       return false;
     }
 
