@@ -1520,6 +1520,124 @@ function initCharts(data) {
   // El Radar Chart se actualizará mediante la interacción del usuario
 }
 
+// === Comparative Table for POSTPARTIDO data ===
+async function renderComparativeTable(gameId, teamAName, teamBName) {
+  // Fetch the local JSON file
+  const localJsonUrl = `JSONs fichas/FullMatch_${gameId}.json`;
+  let data;
+  try {
+    const resp = await fetch(localJsonUrl);
+    if (!resp.ok) throw new Error("No disponible");
+    data = await resp.json();
+  } catch (e) {
+    const container = document.getElementById('comparativeTableContainer');
+    if (container) container.innerHTML = "<p>No hay datos comparativos disponibles.</p>";
+    return;
+  }
+
+  const post = data.POSTPARTIDO || {};
+  const local = post.local || {};
+  const visitante = post.visitante || {};
+
+  function formatSeconds(minutos) {
+    if (typeof minutos !== 'number' || isNaN(minutos)) return '-';
+    const m = Math.trunc(minutos);
+    const s = Math.ceil((minutos - m) * 60);
+    return `${m}:${s.toString().padStart(2, '0')}`;
+  }
+
+  // Helper to compare and highlight the highest value
+  function highlightCells(valA, valB, formatter = v => v) {
+    const numA = typeof valA === 'number' ? valA : parseFloat(valA) || 0;
+    const numB = typeof valB === 'number' ? valB : parseFloat(valB) || 0;
+    let aContent = formatter(valA), bContent = formatter(valB);
+    if (numA > numB) {
+      aContent = `<span class="highlight-number">→ ${formatter(valA)}</span>`;
+    } else if (numB > numA) {
+      bContent = `<span class="highlight-number">→ ${formatter(valB)}</span>`;
+    }
+    return [
+      `<td>${aContent}</td>`,
+      `<td>${bContent}</td>`
+    ];
+  }
+
+  const rows = [
+    {
+      label: 'Mayor ventaja',
+      a: local.mayor_ventaja?.ventaja ?? '-',
+      b: visitante.mayor_ventaja?.ventaja ?? '-',
+      formatter: v => v
+    },
+    {
+      label: 'Mayor racha',
+      a: local.mayor_racha?.racha ?? '-',
+      b: visitante.mayor_racha?.racha ?? '-',
+      formatter: v => v
+    },
+    {
+      label: 'Tiempo total liderando',
+      a: (local.tiempo_liderando?.['1-5'] ?? 0) + (local.tiempo_liderando?.['6-10'] ?? 0) + (local.tiempo_liderando?.['+10'] ?? 0),
+      b: (visitante.tiempo_liderando?.['1-5'] ?? 0) + (visitante.tiempo_liderando?.['6-10'] ?? 0) + (visitante.tiempo_liderando?.['+10'] ?? 0),
+      formatter: formatSeconds
+    },
+    {
+      label: 'Tiempo liderando por 1-5 pts',
+      a: local.tiempo_liderando?.['1-5'] ?? 0,
+      b: visitante.tiempo_liderando?.['1-5'] ?? 0,
+      formatter: formatSeconds
+    },
+    {
+      label: 'Tiempo liderando por 6-10 pts',
+      a: local.tiempo_liderando?.['6-10'] ?? 0,
+      b: visitante.tiempo_liderando?.['6-10'] ?? 0,
+      formatter: formatSeconds
+    },
+    {
+      label: 'Tiempo liderando por +10 pts',
+      a: local.tiempo_liderando?.['+10'] ?? 0,
+      b: visitante.tiempo_liderando?.['+10'] ?? 0,
+      formatter: formatSeconds
+    }
+  ];
+
+  const html = `
+    <table class="comparative-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>${teamAName}</th>
+          <th>${teamBName}</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${rows.map(row => {
+          const [aCell, bCell] = highlightCells(row.a, row.b, row.formatter);
+          return `<tr><td><b>${row.label}</b></td>${aCell}${bCell}</tr>`;
+        }).join('')}
+      </tbody>
+    </table>
+  `;
+
+  const container = document.getElementById('comparativeTableContainer');
+  if (container) container.innerHTML = html;
+}
+
+// Patch: After rendering the evolution chart, also render the comparative table
+function patchComparativeTableAfterCharts(data) {
+  const gameId = getGameIdFromUrl();
+  const teamAName = data.HEADER.TEAM[0].name;
+  const teamBName = data.HEADER.TEAM[1].name;
+  renderComparativeTable(gameId, teamAName, teamBName);
+}
+
+// Patch the initCharts function to call the comparative table renderer
+const originalInitCharts = window.initCharts;
+window.initCharts = function(data) {
+  if (originalInitCharts) originalInitCharts(data);
+  patchComparativeTableAfterCharts(data);
+};
+
 /***********************************************
  * NUEVA FUNCIÓN: Cuadro Resumen por Cuarto
  ***********************************************/
@@ -1558,5 +1676,3 @@ function fillQuarterSummary(data) {
 // Calculate each team's biggest lead
 let biggestLeadLocal = 0;
 let biggestLeadVisit = 0;
-
-forEach()

@@ -221,7 +221,7 @@ async function loadTeamInfo() {
   // 2. Calculate final per-game stats for each team
   teamsInCompetition.forEach((teamMatchMap, tid) => {
     const uniqueMatches = Array.from(teamMatchMap.values());
-    const playerForTeam = data.players.find(p => p.teamId === tid || p.teamId_2 === tid || p.teamId_3 === tid);
+    const playerForTeam = data.players.find(p => p.teamId === tid);
     const teamName = playerForTeam ? playerForTeam.teamName : "Unknown Team";
 
     if (uniqueMatches.length > 0) {
@@ -971,7 +971,7 @@ function updateTeamComparisonChart(statKey, statType) {
 
   // Get current team ID
   const currentId = getTeamParams().teamId;
-
+  console.log(allTeamsStats);
   // Calculate data based on selected stat
   const chartData = allTeamsStats.map(t => {
     let value;
@@ -2927,10 +2927,6 @@ function getTeamLogo(teamId) {
   if (!window.allPlayersData) return 'team_icon.png';
   const player = window.allPlayersData.find(p => {
     if (p.teamId === teamId) return true;
-    for (let i = 1; i < 10; i++) {
-      if (p[`teamId_${i}`] === teamId) return true;
-    }
-    return false;
   });
   if (!player) return 'team_icon.png';
   return (player.teamLogo && player.teamLogo.trim() !== '') ? player.teamLogo : 'team_icon.png';

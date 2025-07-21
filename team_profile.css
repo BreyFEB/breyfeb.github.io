@@ -1387,3 +1387,98 @@ body {
     padding: 10px 1px;
   }
 }
+
+/* Stats table styling for team profile */
+#teamStatsContainer {
+  height: 80vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+#teamStatsContainer .stats-table {
+  width: 100%;
+  border-collapse: collapse;
+  position: relative;
+}
+
+#teamStatsContainer .stats-table thead {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 10;
+}
+
+#teamStatsContainer .stats-table thead th {
+  background: #f8f9fa;
+  padding: 12px 8px;
+  text-align: center;
+  font-weight: 600;
+  border-bottom: 2px solid #dee2e6;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+#teamStatsContainer .stats-table tbody td {
+  padding: 8px;
+  text-align: center;
+  border-bottom: 1px solid #dee2e6;
+}
+
+#teamStatsContainer .stats-table tbody tr:hover {
+  border-top: 2px solid lightgray;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+/* Sticky bottom rows for TOTAL and PROMEDIO */
+#teamStatsContainer .stats-table tbody tr.total-row,
+#teamStatsContainer .stats-table tbody tr.prom-row {
+  position: sticky;
+  bottom: 0;
+  background: #fff;
+  z-index: 10;
+  border-top: 2px solid #dee2e6;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+#teamStatsContainer .stats-table tbody tr.total-row {
+  bottom: 45px; /* Position above PROMEDIO row */
+  /* Add shadow at the top of the row */
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+#teamStatsContainer .stats-table tbody tr.total-row:hover {
+  border-top: 3px solid lightgray;
+  box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#teamStatsContainer .stats-table tbody tr.prom-row {
+  bottom: 0;
+  transition: all 0.2s ease;
+}
+
+#teamStatsContainer .stats-table tbody tr.prom-row:hover {
+  border-top: 3px solid lightgray;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Ensure proper spacing for sticky rows */
+#teamStatsContainer .stats-table tbody {
+  padding-bottom: 80px; /* Space for two sticky rows */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  #teamStatsContainer {
+    height: 70vh;
+  }
+  
+  #teamStatsContainer .stats-table thead th,
+  #teamStatsContainer .stats-table tbody td {
+    padding: 6px 4px;
+    font-size: 12px;
+  }
+}

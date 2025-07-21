@@ -137,7 +137,7 @@ for league in all_leagues:
     league_cleaned = league.translate(translation_table).lower().replace(' ', '_')
     
     filename = f"players_shots_{league_cleaned}.json"
-    with open(f'C:\\Users\\bsanchez\\Downloads\\Cadete2025\\cadete2025\\Tiros por liga\\{filename}', 'w', encoding='utf-8') as f:
+    with open(f'C:\\Users\\bsanchez\\Documents\\cadete2025\\Tiros por liga\\{filename}', 'w', encoding='utf-8') as f:
         json.dump(player_shots, f, ensure_ascii=False, indent=4)    
             
             

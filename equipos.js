@@ -51,9 +51,6 @@ async function loadTeams() {
   data.players.forEach(player => {
     // For each teamId the player has
     const teamIds = [player.teamId];
-    for (let i = 2; i < 10; i++) {
-      if (player[`teamId_${i}`]) teamIds.push(player[`teamId_${i}`]);
-    }
     teamIds.forEach(tid => {
       // Only consider matches for this team
       const matches = player.matches.filter(m => m.playerTeamId === tid);

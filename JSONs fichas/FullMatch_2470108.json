@@ -209,5 +209,65 @@
                 "clubCode": null
             }
         ]
+    },
+    "POSTPARTIDO": {
+        "local": {
+            "mayor_ventaja": {
+                "ventaja": 0,
+                "tramos": []
+            },
+            "mayor_racha": {
+                "racha": 0,
+                "inicio": "",
+                "final": ""
+            },
+            "tiempo_liderando": {},
+            "ptscontraataque": {
+                "tras_robo": 0,
+                "tras_rebote_def": 0,
+                "tras_tapon": 0
+            },
+            "ptssegunda": 0,
+            "ptspintura": 0,
+            "ptsbanquillo": {
+                "1": 0,
+                "2": 0,
+                "3": 0
+            },
+            "ptstrasperdida": 0
+        },
+        "visitante": {
+            "mayor_ventaja": {
+                "ventaja": 0,
+                "tramos": []
+            },
+            "mayor_racha": {
+                "racha": 0,
+                "inicio": "",
+                "final": ""
+            },
+            "tiempo_liderando": {},
+            "ptscontraataque": {
+                "tras_robo": 0,
+                "tras_rebote_def": 0,
+                "tras_tapon": 0
+            },
+            "ptssegunda": 0,
+            "ptspintura": 0,
+            "ptsbanquillo": {
+                "1": 0,
+                "2": 0,
+                "3": 0
+            },
+            "ptstrasperdida": 0
+        },
+        "veces_empatado": {
+            "veces": 0,
+            "tramos": []
+        },
+        "cambios_de_liderato": {
+            "cambios": 0,
+            "momentos": []
+        }
     }
 }

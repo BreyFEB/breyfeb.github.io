@@ -36,7 +36,9 @@ for f in json_files:
         data = json.load(file)
         
     competition = data["HEADER"]["competition"]
-    leagues.add(competition)
+    
+    if competition in competition_mappings.keys():
+        leagues.add(competition)
 
 for league in list(leagues):
     # Get unique values of team-competition
@@ -47,7 +49,7 @@ for league in list(leagues):
         with open(match_json, 'r', encoding='utf-8') as file:
             data = json.load(file)
             
-        if data['HEADER']['competition'] != league:
+        if league not in data['HEADER']['competition']:
             continue
             
         eq1 = data["HEADER"]["TEAM"][0]["id"]
@@ -425,55 +427,6 @@ for league in list(leagues):
     # Convert each Quinteto to a list of players
     grouped['Players'] = grouped['lineup'].apply(lambda x: [p.strip() for p in x.split(' - ')])
     
-    # List of stats we want to aggregate for each 2-man pair
-    stats_to_aggregate = [*grouped.columns[2:-1]]
-    
-    # Initialize aggregation dictionary
-    pair_stats = defaultdict(lambda: {stat: 0.0 for stat in stats_to_aggregate})
-    
-    # Store all sub-lineup stats across teams for this group size
-    all_team_lineup_stats = []
-    
-    for group_size in [4, 3, 2]:
-        
-        # This will store stats per team_id and sub-lineup
-        lineup_stats = defaultdict(lambda: defaultdict(lambda: {stat: 0 for stat in stats_to_aggregate}))
-    
-        for _, row in grouped.iterrows():
-            players = row['Players']
-            team_id = row['team_id']
-            stats = {stat: row[stat] for stat in stats_to_aggregate}
-    
-            for group in combinations(players, group_size):
-                key = tuple(sorted(group))
-                for stat in stats_to_aggregate:
-                    lineup_stats[team_id][key][stat] += stats[stat]
-    
-        # Convert to DataFrame
-        lineup_stats_rows = []
-        for team_id, group_dict in lineup_stats.items():
-            for group, stats in group_dict.items():
-                row = {
-                    "team_id": team_id,
-                    **{f"Player {i+1}": player for i, player in enumerate(group)},
-                    **stats
-                }
-                lineup_stats_rows.append(row)
-    
-        lineup_stats_df = pd.DataFrame(lineup_stats_rows)
-    
-        # Create "lineup" string
-        player_columns = [col for col in lineup_stats_df.columns if col.startswith("Player")]
-        lineup_stats_df["lineup"] = lineup_stats_df[player_columns].apply(lambda row: ' - '.join(row.astype(str)), axis=1)
-    
-        # Reorder columns
-        lineup_stats_df = lineup_stats_df[["team_id", "lineup"] + [col for col in lineup_stats_df.columns if col not in ["team_id", "lineup"] + player_columns]]
-        
-        lineup_stats_df['Players'] = lineup_stats_df['lineup'].apply(lambda x: [p.strip() for p in x.split(' - ')])
-        
-        # Append to grouped
-        grouped = pd.concat([grouped, lineup_stats_df], ignore_index=True)
-    
     # Añadir columna de tipo de quinteto
     grouped['n_jug'] = grouped['Players'].apply(lambda x: len(x))
     
@@ -539,16 +492,6 @@ def calculate_time_remaining_in_match(quarter, time):
     time_remaining_in_match = quarter_seconds + time_remaining_in_quarter
     
     return time_remaining_in_match / 60
-
-for lineup, actions in lineups_stints_actions_local.items():
-    tiempos = {}
-    actions_list = []
-    for action in actions:
-        actions_list.append(int(action[0]["num"]))
-        # Guardar cuarto y tiempo restante de cada acción
-        tiempos[int(action[0]["num"])] = [action[0]["quarter"], action[0]["time"]]
-        
-    print(tiempos)
     
     
     
