@@ -67,10 +67,34 @@
           </li>
         </ul>
       </nav>
-      <a href="Login/login.html" class="login-btn">
-        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 8-4 8-4s8 0 8 4"/></svg>
-        <span id="login-btn-text">Login</span>
-      </a>
+                <div class="login-container">
+            <a href="Login/login.html" class="login-btn" id="login-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 8-4 8-4s8 0 8 4"/></svg>
+              <span id="login-btn-text">Login</span>
+            </a>
+            <div class="user-dropdown" id="user-dropdown" style="display: none;">
+              <div class="dropdown-header">
+                <span id="dropdown-username">Usuario</span>
+              </div>
+                           <div class="dropdown-content">
+                            <a href="Login/personal-profile.html" class="dropdown-item">
+               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                 <circle cx="12" cy="7" r="4"></circle>
+               </svg>
+               Perfil
+             </a>
+               <button class="dropdown-item" id="logout-btn">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                   <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                   <polyline points="16,17 21,12 16,7"></polyline>
+                   <line x1="21" y1="12" x2="9" y2="12"></line>
+                 </svg>
+                 Cerrar sesión
+               </button>
+             </div>
+            </div>
+          </div>
     </div>
   </header>
 
@@ -337,11 +361,88 @@
     const { data, error } = await supabase.auth.getUser();
 
     const loginBtnText = document.getElementById("login-btn-text");
+    const loginBtn = document.getElementById("login-btn");
+    const userDropdown = document.getElementById("user-dropdown");
+    const dropdownUsername = document.getElementById("dropdown-username");
+    const logoutBtn = document.getElementById("logout-btn");
 
-    if (data.user) {
+    let isUserLoggedIn = false;
+
+    if (error || !data.user) {
+      // No logueado
+      if (loginBtnText) loginBtnText.innerText = "Login";
+      if (loginBtn) {
+        loginBtn.href = "Login/login.html";
+        loginBtn.style.cursor = "pointer";
+      }
+    } else {
+      // Usuario válido
+      isUserLoggedIn = true;
       const nombre = data.user.email.split('@')[0];
+      
       if (loginBtnText) loginBtnText.innerHTML = `<span class="user-name">${nombre}</span>`;
+      if (dropdownUsername) dropdownUsername.innerHTML = nombre;
+      
+      // Cambiar comportamiento del botón de login cuando está logueado
+      if (loginBtn) {
+        loginBtn.removeAttribute('href');
+        loginBtn.style.cursor = "pointer";
+        loginBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          toggleUserDropdown();
+        });
+      }
     }
+
+    // Función para mostrar/ocultar el dropdown
+    function toggleUserDropdown() {
+      if (!userDropdown) return;
+      
+      if (userDropdown.style.display === "none" || userDropdown.style.display === "") {
+        userDropdown.style.display = "block";
+      } else {
+        userDropdown.style.display = "none";
+      }
+    }
+
+         // Manejar logout
+     if (logoutBtn) {
+       logoutBtn.addEventListener('click', async function() {
+         // Mostrar mensaje de confirmación
+         const confirmar = confirm('¿De verdad quieres cerrar sesión?');
+         
+         if (!confirmar) {
+           return; // Si el usuario cancela, no hacer nada
+         }
+         
+         try {
+           const { error } = await supabase.auth.signOut();
+           if (error) {
+             console.error('Error al cerrar sesión:', error);
+             alert('Error al cerrar sesión. Por favor, inténtalo de nuevo.');
+           } else {
+             // Redirigir a la página de inicio y recargar
+             window.location.href = 'index.html';
+             window.location.reload();
+           }
+         } catch (err) {
+           console.error('Error inesperado:', err);
+           alert('Error inesperado al cerrar sesión.');
+         }
+       });
+     }
+
+    // Cerrar dropdown al hacer clic fuera de él
+    document.addEventListener('click', function(event) {
+      if (!isUserLoggedIn) return;
+      
+      const loginContainer = document.querySelector('.login-container');
+      if (loginContainer && !loginContainer.contains(event.target)) {
+        if (userDropdown) {
+          userDropdown.style.display = "none";
+        }
+      }
+    });
   </script>
 </body>
 </html>
