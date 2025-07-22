@@ -26,6 +26,7 @@ def process_match_data(data, filename):
     game_id = filename.replace('FullMatch_', '').replace('.json', '')
     
     comp = data['HEADER'].get('competition', '')
+    comp = "PRIMERA FEB" if "PRIMERA FEB" in comp else comp
     match_round = data['HEADER'].get('round', '')
     match_date = data['HEADER'].get('starttime', '')
     competition_set.add(comp)
@@ -41,6 +42,7 @@ def process_match_data(data, filename):
         "C ESP CLUBES CAD FEM",
         "C ESP CLUBES INF FEM",
         "C ESP CLUBES MINI FEM",
+        "C ESP CLUBES JR FEM",
         "Fase Final 1ª División Femenin"
     ]
     genero = "M" if any(f.lower() == comp.strip().lower() for f in female_competitions) else "H"

@@ -1336,6 +1336,7 @@ a.login-btn {
   }
 }
 
+<<<<<<< HEAD
 /* Estilos del dropdown de usuario */
 .login-container {
   position: relative;
@@ -1432,4 +1433,12 @@ a.login-btn {
     padding: 10px 14px;
     font-size: 0.8rem;
   }
+=======
+/* Ensure collapsed filter sections do not block clicks */
+.stats-filters.collapsed,
+.gender-btn-group.collapsed,
+.competition-btn-group.collapsed {
+  pointer-events: none;
+  overflow: hidden;
+>>>>>>> c4e965e377c7bbedba3cfe2e4b412e878e26a383
 }
