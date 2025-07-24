@@ -82,10 +82,17 @@ document.addEventListener("DOMContentLoaded", () => {
       const shortNameA = getShortName(tA.name);
       document.querySelector('.team-box:first-child .team-name').textContent = shortNameA;
       document.querySelector('.team-box:first-child .team-name').title = tA.name;
+      // Add link to team page
+      const teamLinkA = document.querySelector('.team-box:first-child');
+      teamLinkA.href = `team_profile.html?team_id=${tA.id}`;
+      
       document.querySelector('.team-box:last-child .team-logo').src = tB.logo;
       const shortNameB = getShortName(tB.name);
       document.querySelector('.team-box:last-child .team-name').textContent = shortNameB;
       document.querySelector('.team-box:last-child .team-name').title = tB.name;
+      // Add link to team page
+      const teamLinkB = document.querySelector('.team-box:last-child');
+      teamLinkB.href = `team_profile.html?team_id=${tB.id}`;
 
       // Actualizar el marcador
       const scoreValueEl = document.querySelector('.score-value');
@@ -180,10 +187,32 @@ document.addEventListener("DOMContentLoaded", () => {
       buildPlayerPhotoDictionary(data);
       buildPlayerNamesDictionary(data);
 
+      // === EXTRAER TITULARES (STARTERS) ===
+      const teamAId = data.HEADER.TEAM[0].id;
+      const teamBId = data.HEADER.TEAM[1].id;
+      let startersA = [];
+      let startersB = [];
+      if (data.PLAYBYPLAY && data.PLAYBYPLAY.LINES) {
+        // Get the first 5 subst events for each team
+        const pbpLines = data.PLAYBYPLAY.LINES[0].num === "1" ? data.PLAYBYPLAY.LINES : data.PLAYBYPLAY.LINES.reverse();
+        for (const ev of pbpLines) {
+          if (
+            ev.action === "subst" &&
+            ev.quarter === "1" &&
+            ev.text && ev.text.includes("Entra a pista") &&
+            ev.idPlayer && ev.idTeam 
+          ) {
+            // Only add if not already present (max 10)
+            if (ev.idTeam === teamAId && startersA.length < 5) startersA.push(ev.idPlayer);
+            else if (ev.idTeam === teamBId && startersB.length < 5) startersB.push(ev.idPlayer);
+          }
+        }
+      }
+
       // Inicializar las secciones principales
       // updateHeroFromJSON(data);
       setupMiniHeader(data);
-      fillBoxScore(data);
+      fillBoxScore(data, startersA, startersB);
 
       // === NUEVO: Lógica para los tabs de selección de box score ===
       const teamStatsButtons = document.querySelectorAll('.team-stats-button');
@@ -214,10 +243,13 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         });
       });
-      // Mostrar ambos por defecto
+      // Mostrar solo el box score del equipo A por defecto
       if (teamABox && teamBBox) {
         teamABox.style.display = '';
-        teamBBox.style.display = '';
+        teamBBox.style.display = 'none';
+        // Asegurar que el botón de equipo A está activo
+        if (btnA) btnA.classList.add('active');
+        if (btnB) btnB.classList.remove('active');
       }
       // === FIN NUEVO ===
 
@@ -522,12 +554,12 @@ function setupMiniHeader(data) {
   });
 }
 
-function fillBoxScore(data) {
+function fillBoxScore(data, startersA = [], startersB = []) {
   if (!data.SCOREBOARD || !data.SCOREBOARD.TEAM) return;
   const teamAPlayers = data.SCOREBOARD.TEAM[0].PLAYER || [];
   const teamBPlayers = data.SCOREBOARD.TEAM[1].PLAYER || [];
-  const teamAData = mapPlayersToRows(teamAPlayers);
-  const teamBData = mapPlayersToRows(teamBPlayers);
+  const teamAData = mapPlayersToRows(teamAPlayers, startersA);
+  const teamBData = mapPlayersToRows(teamBPlayers, startersB);
   window.boxScoreData = {
     "team-a-table": teamAData,
     "team-b-table": teamBData
@@ -538,6 +570,24 @@ function fillBoxScore(data) {
   // Llamada para agregar la fila de totales en cada tabla
   addBoxScoreTotals("team-a-table", teamAData);
   addBoxScoreTotals("team-b-table", teamBData);
+
+  // Add star explanation below each table
+  const addStarExplanation = (tableId) => {
+    const table = document.getElementById(tableId);
+    if (table) {
+      let expl = table.parentNode.querySelector('.star-explanation');
+      if (!expl) {
+        expl = document.createElement('div');
+        expl.className = 'star-explanation';
+        expl.style.fontSize = '0.95em';
+        expl.style.margin = '6px 0 12px 0';
+        expl.innerHTML = '★ = Titular (Jugador/a que comenzó el partido)';
+        table.parentNode.appendChild(expl);
+      }
+    }
+  };
+  addStarExplanation('team-a-table');
+  addStarExplanation('team-b-table');
 
   attachTableSortHandlers("team-a-table");
   attachTableSortHandlers("team-b-table");
@@ -550,8 +600,19 @@ function fillBoxScore(data) {
   if (teamBName) teamBName.textContent = data.SCOREBOARD.TEAM[1].name || "Equipo B";
 }
 
-function mapPlayersToRows(players) {
-  return players.map(p => {
+function mapPlayersToRows(players, starters = []) {
+  // Sort: starters first (by minutes played desc), then bench (by minutes played desc)
+  const getMinutes = p => {
+    if (!p.minFormatted) return 0;
+    const [min, sec] = p.minFormatted.split(":").map(Number);
+    return (min || 0) + (sec || 0) / 60;
+  };
+  const startersList = players.filter(p => starters.includes(p.id));
+  const benchList = players.filter(p => !starters.includes(p.id));
+  startersList.sort((a, b) => getMinutes(b) - getMinutes(a));
+  benchList.sort((a, b) => getMinutes(b) - getMinutes(a));
+  const sortedPlayers = [...startersList, ...benchList];
+  return sortedPlayers.map(p => {
     const p2a = parseInt(p.p2a, 10) || 0;
     const p2m = parseInt(p.p2m, 10) || 0;
     const p2pValue = p2a > 0 ? (p2m / p2a) * 100 : 0;
@@ -564,10 +625,13 @@ function mapPlayersToRows(players) {
     
     // Use player_placeholder.png as fallback
     const playerPhoto = p.logo || "player_placeholder.png";
+    // Add star if starter for this team
+    const isStarter = starters.includes(p.id);
+    const star = isStarter ? '<span title="Titular" style="color:#FF9E1B;font-size:1.2em;vertical-align:middle;">★</span> ' : '';
     const playerNameCell = `
       <div class="player-cell">
         <a href="player_profile.html?player_id=${p.id}" style="text-decoration: none; color: inherit;"> <img src="${playerPhoto}" alt="${p.name}" class="player-photo" onerror="this.onerror=null; this.src='player_placeholder.png';"> </a>
-        <a href="player_profile.html?player_id=${p.id}" style="text-decoration: none; color: inherit;">${p.name}</a>
+        <a href="player_profile.html?player_id=${p.id}" style="text-decoration: none; color: inherit;">${star}${p.name}</a>
       </div>
     `;
     return [
@@ -1118,48 +1182,6 @@ function fillComparativeCharts(data) {
 /***********************************************
  * GRÁFICOS ADICIONALES
  ***********************************************/
-function fillTeamComparisonChart(data) {
-  const teamAobj = data.SCOREBOARD.TEAM[0];
-  const teamBobj = data.SCOREBOARD.TEAM[1];
-  const teamAName = teamAobj.name || "Equipo A";
-  const teamBName = teamBobj.name || "Equipo B";
-  const teamAPlayers = teamAobj.PLAYER || [];
-  const teamBPlayers = teamBobj.PLAYER || [];
-  const totalsA = getTeamTotalsForShots(teamAPlayers);
-  const totalsB = getTeamTotalsForShots(teamBPlayers);
-  const teamA_T2 = totalsA.t2i > 0 ? ((totalsA.t2c / totalsA.t2i) * 100).toFixed(1) : 0;
-  const teamA_T3 = totalsA.t3i > 0 ? ((totalsA.t3c / totalsA.t3i) * 100).toFixed(1) : 0;
-  const teamA_TL = totalsA.tlc > 0 ? ((totalsA.tli / totalsA.tlc) * 100).toFixed(1) : 0;
-  const teamB_T2 = totalsB.t2i > 0 ? ((totalsB.t2c / totalsB.t2i) * 100).toFixed(1) : 0;
-  const teamB_T3 = totalsB.t3i > 0 ? ((totalsB.t3c / totalsB.t3i) * 100).toFixed(1) : 0;
-  const teamB_TL = totalsB.tlc > 0 ? ((totalsB.tli / totalsB.tlc) * 100).toFixed(1) : 0;
-  const labels = ['%TL', '%T2', '%T3'];
-  const dataA = [teamA_TL, teamA_T2, teamA_T3];
-  const dataB = [teamB_TL, teamB_T2, teamB_T3];
-  const ctx = document.getElementById("teamComparisonChart").getContext("2d");
-  new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: labels,
-      datasets: [{
-        label: teamAName,
-        data: dataA,
-        backgroundColor: '#EFE34C'
-      }, {
-        label: teamBName,
-        data: dataB,
-        backgroundColor: '#B62929'
-      }]
-    },
-    options: {
-      indexAxis: 'y',
-      responsive: true,
-      scales: {
-        x: { beginAtZero: true }
-      }
-    }
-  });
-}
 
 function fillScoreEvolutionChart(data) {
   const quarters = data.HEADER.QUARTERS.QUARTER;
@@ -1399,28 +1421,6 @@ function fillEvolutionChart(data) {
   const finalScoreB = currentScoreB;
 
   const ctx = evolutionCanvas.getContext("2d");
-  const finalMarkersPlugin = {
-    id: 'finalMarkers',
-    afterDraw(chart) {
-      const xScale = chart.scales.x;
-      const yScale = chart.scales.y;
-      const xFinal = xScale.getPixelForValue(finalSec);
-      const ctxP = chart.ctx;
-      ctxP.save();
-      ctxP.font = 'bold 12px Montserrat, Arial';
-      ctxP.textAlign = 'left';
-      ctxP.textBaseline = 'middle';
-      // Score A
-      ctxP.fillStyle = '#EFE34C';
-      const yA = yScale.getPixelForValue(finalScoreA);
-      ctxP.fillText(finalScoreA.toString(), xFinal + 6, yA);
-      // Score B
-      ctxP.fillStyle = '#B62929';
-      const yB = yScale.getPixelForValue(finalScoreB);
-      ctxP.fillText(finalScoreB.toString(), xFinal + 6, yB);
-    }
-  };
-
   new Chart(ctx, {
     type: 'line',
     data: {
@@ -1428,8 +1428,8 @@ function fillEvolutionChart(data) {
         {
           label: data.HEADER.TEAM[0].name || "Equipo A",
           data: pointsA,
-          borderColor: '#EFE34C',
-          backgroundColor: 'rgba(239,227,76,0.15)',
+          borderColor: '#a31621',
+          backgroundColor: 'rgba(163, 22, 33, 0.15)',
           fill: false,
           tension: 0.1,
           pointRadius: 0,
@@ -1437,8 +1437,8 @@ function fillEvolutionChart(data) {
         {
           label: data.HEADER.TEAM[1].name || "Equipo B",
           data: pointsB,
-          borderColor: '#B62929',
-          backgroundColor: 'rgba(182,41,41,0.15)',
+          borderColor: '#005bbb',
+          backgroundColor: 'rgba(0, 91, 187, 0.15)',
           fill: false,
           tension: 0.1,
           pointRadius: 0,
@@ -1459,7 +1459,6 @@ function fillEvolutionChart(data) {
             title: context => tooltipLabels[context[0].dataIndex],
             label: ctx => `${ctx.dataset.label}: ${ctx.formattedValue}`
           },
-          // No external drawing here; handled by hoverLinePlugin
         },
         legend: { display: true }
       },
@@ -1487,7 +1486,7 @@ function fillEvolutionChart(data) {
         }
       }
     },
-    plugins: [finalMarkersPlugin, {
+    plugins: [{
       id: 'hoverLinePlugin',
       afterDraw(chart) {
         const tooltip = chart.tooltip;
@@ -1499,7 +1498,6 @@ function fillEvolutionChart(data) {
         ctx.moveTo(active.element.x, chart.chartArea.top);
         ctx.lineTo(active.element.x, chart.chartArea.bottom);
         ctx.lineWidth = 2;
-        // Light gray
         ctx.strokeStyle = '#bbb';
         ctx.setLineDash([]);
         ctx.stroke();
@@ -1509,11 +1507,75 @@ function fillEvolutionChart(data) {
   });
 }
 
+function renderTopPlayersComparison(data) {
+  const container = document.getElementById('top-players-comparison');
+  if (!container) return;
+
+  const teamA = data.SCOREBOARD.TEAM[0];
+  const teamB = data.SCOREBOARD.TEAM[1];
+
+  const findLeader = (players, statKey, secondaryKey = null) => {
+    if (!players || players.length === 0) {
+      return { name: '-', photo: 'player_placeholder.png', value: 0 };
+    }
+    return players.reduce((leader, player) => {
+      let currentValue = parseInt(player[statKey], 10) || 0;
+      if (secondaryKey) {
+        currentValue += parseInt(player[secondaryKey], 10) || 0;
+      }
+      let leaderValue = parseInt(leader[statKey], 10) || 0;
+      if (secondaryKey) {
+        leaderValue += parseInt(leader[secondaryKey], 10) || 0;
+      }
+      return currentValue > leaderValue ? player : leader;
+    });
+  };
+
+  const stats = [
+    { key: 'pts', label: 'Puntos' },
+    { key: 'rt', label: 'Rebotes'},
+    { key: 'assist', label: 'Asistencias' },
+    { key: 'val', label: 'Valoración' }
+  ];
+
+  let html = '';
+  stats.forEach(stat => {
+    const leaderA = findLeader(teamA.PLAYER, stat.key);
+    const leaderB = findLeader(teamB.PLAYER, stat.key);
+    
+    let valueA = parseInt(leaderA[stat.key], 10) || 0;
+    let valueB = parseInt(leaderB[stat.key], 10) || 0;
+
+    const highlightA = valueA > valueB ? 'leader-highlight' : '';
+    const highlightB = valueB > valueA ? 'leader-highlight' : '';
+    
+    html += `
+      <div class="player-comparison-row">
+        <div class="player-stat-block home ${highlightA}">
+          <div class="player-info home">
+            <div class="player-stat-value">${valueA}</div>
+            <div class="player-name">${leaderA.name}</div>
+          </div>
+          <img src="${leaderA.logo || 'player_placeholder.png'}" class="player-photo">
+        </div>
+        <div class="player-stat-label">${stat.label}</div>
+        <div class="player-stat-block away ${highlightB}">
+          <img src="${leaderB.logo || 'player_placeholder.png'}" class="player-photo">
+          <div class="player-info away">
+            <div class="player-stat-value">${valueB}</div>
+            <div class="player-name">${leaderB.name}</div>
+          </div>
+        </div>
+      </div>
+    `;
+  });
+
+  container.innerHTML = html;
+}
 
 function initCharts(data) {
-  fillTeamComparisonChart(data);
   fillScoreEvolutionChart(data);
-  fillTopPlayersChart(data);
+  renderTopPlayersComparison(data);
   fillBubblePointsChart(data);
   fillBubbleValChart(data);
   fillEvolutionChart(data);
@@ -1538,85 +1600,73 @@ async function renderComparativeTable(gameId, teamAName, teamBName) {
   const post = data.POSTPARTIDO || {};
   const local = post.local || {};
   const visitante = post.visitante || {};
+  const homeInfo = data.HEADER.TEAM[0];
+  const awayInfo = data.HEADER.TEAM[1];
 
-  function formatSeconds(minutos) {
-    if (typeof minutos !== 'number' || isNaN(minutos)) return '-';
-    const m = Math.trunc(minutos);
-    const s = Math.ceil((minutos - m) * 60);
+  function formatTime(minutes) {
+    if (typeof minutes !== 'number' || isNaN(minutes)) return '0:00';
+    const m = Math.floor(minutes);
+    const s = Math.round((minutes - m) * 60);
     return `${m}:${s.toString().padStart(2, '0')}`;
   }
 
-  // Helper to compare and highlight the highest value
-  function highlightCells(valA, valB, formatter = v => v) {
-    const numA = typeof valA === 'number' ? valA : parseFloat(valA) || 0;
-    const numB = typeof valB === 'number' ? valB : parseFloat(valB) || 0;
-    let aContent = formatter(valA), bContent = formatter(valB);
-    if (numA > numB) {
-      aContent = `<span class="highlight-number">→ ${formatter(valA)}</span>`;
-    } else if (numB > numA) {
-      bContent = `<span class="highlight-number">→ ${formatter(valB)}</span>`;
-    }
-    return [
-      `<td>${aContent}</td>`,
-      `<td>${bContent}</td>`
-    ];
-  }
+  const createRow = (label, valA, valB, isIndented = false, formatter = v => v) => {
+    const numA = parseFloat(valA) || 0;
+    const numB = parseFloat(valB) || 0;
+    const classA = numA > numB ? 'winner' : '';
+    const classB = numB > numA ? 'winner' : '';
+    return `
+      <div class="comparison-row">
+        <span class="comparison-value ${classA}">${formatter(valA)}</span>
+        <span class="comparison-label">${label}</span>
+        <span class="comparison-value ${classB}">${formatter(valB)}</span>
+      </div>
+    `;
+  };
 
+  const createSingleStatRow = (label, value) => {
+    return `
+      <div class="single-stat-row">
+        <span class="comparison-label">${label}</span>
+        <span class="comparison-value">${value}</span>
+      </div>
+    `;
+  }
+  
+  const tiempoLiderandoA = (local.tiempo_liderando?.['1-5'] || 0) + (local.tiempo_liderando?.['6-10'] || 0) + (local.tiempo_liderando?.['+10'] || 0);
+  const tiempoLiderandoB = (visitante.tiempo_liderando?.['1-5'] || 0) + (visitante.tiempo_liderando?.['6-10'] || 0) + (visitante.tiempo_liderando?.['+10'] || 0);
+ 
+  const vecesEmpatado = post.veces_empatado.veces;
+  const cambiosLiderato = post.cambios_de_liderato.cambios;
   const rows = [
-    {
-      label: 'Mayor ventaja',
-      a: local.mayor_ventaja?.ventaja ?? '-',
-      b: visitante.mayor_ventaja?.ventaja ?? '-',
-      formatter: v => v
-    },
-    {
-      label: 'Mayor racha',
-      a: local.mayor_racha?.racha ?? '-',
-      b: visitante.mayor_racha?.racha ?? '-',
-      formatter: v => v
-    },
-    {
-      label: 'Tiempo total liderando',
-      a: (local.tiempo_liderando?.['1-5'] ?? 0) + (local.tiempo_liderando?.['6-10'] ?? 0) + (local.tiempo_liderando?.['+10'] ?? 0),
-      b: (visitante.tiempo_liderando?.['1-5'] ?? 0) + (visitante.tiempo_liderando?.['6-10'] ?? 0) + (visitante.tiempo_liderando?.['+10'] ?? 0),
-      formatter: formatSeconds
-    },
-    {
-      label: 'Tiempo liderando por 1-5 pts',
-      a: local.tiempo_liderando?.['1-5'] ?? 0,
-      b: visitante.tiempo_liderando?.['1-5'] ?? 0,
-      formatter: formatSeconds
-    },
-    {
-      label: 'Tiempo liderando por 6-10 pts',
-      a: local.tiempo_liderando?.['6-10'] ?? 0,
-      b: visitante.tiempo_liderando?.['6-10'] ?? 0,
-      formatter: formatSeconds
-    },
-    {
-      label: 'Tiempo liderando por +10 pts',
-      a: local.tiempo_liderando?.['+10'] ?? 0,
-      b: visitante.tiempo_liderando?.['+10'] ?? 0,
-      formatter: formatSeconds
-    }
+    createRow('Mayor Ventaja', local.mayor_ventaja?.ventaja, visitante.mayor_ventaja?.ventaja),
+    createRow('Mayor Racha', local.mayor_racha?.racha, visitante.mayor_racha?.racha),
+    createRow('Tiempo Liderando', tiempoLiderandoA, tiempoLiderandoB, false, formatTime),
+    createRow('Liderando por<br> 1-5 pts', local.tiempo_liderando?.['1-5'], visitante.tiempo_liderando?.['1-5'], true, formatTime),
+    createRow('Liderando por<br> 6-10 pts', local.tiempo_liderando?.['6-10'], visitante.tiempo_liderando?.['6-10'], true, formatTime),
+    createRow('Liderando por<br> +10 pts', local.tiempo_liderando?.['+10'], visitante.tiempo_liderando?.['+10'], true, formatTime),
+    createSingleStatRow('Veces Empatado', vecesEmpatado),
+    createSingleStatRow('Cambios de Liderato', cambiosLiderato)
   ];
 
+  const headerHtml = `
+    <div class="comparison-header">
+      <div class="comparison-team">
+        <img src="${homeInfo.logo}" alt="${homeInfo.name}" class="team-logo-comparison">
+        <span class="team-name-comparison" title="${homeInfo.name}">${getShortName(homeInfo.name)}</span>
+      </div>
+      <div class="comparison-team">
+        <span class="team-name-comparison" title="${awayInfo.name}">${getShortName(awayInfo.name)}</span>
+        <img src="${awayInfo.logo}" alt="${awayInfo.name}" class="team-logo-comparison">
+      </div>
+    </div>
+  `;
+
   const html = `
-    <table class="comparative-table">
-      <thead>
-        <tr>
-          <th></th>
-          <th>${teamAName}</th>
-          <th>${teamBName}</th>
-        </tr>
-      </thead>
-      <tbody>
-        ${rows.map(row => {
-          const [aCell, bCell] = highlightCells(row.a, row.b, row.formatter);
-          return `<tr><td><b>${row.label}</b></td>${aCell}${bCell}</tr>`;
-        }).join('')}
-      </tbody>
-    </table>
+    <div class="minimal-comparison">
+      ${headerHtml}
+      ${rows.join('')}
+    </div>
   `;
 
   const container = document.getElementById('comparativeTableContainer');
@@ -1636,43 +1686,360 @@ const originalInitCharts = window.initCharts;
 window.initCharts = function(data) {
   if (originalInitCharts) originalInitCharts(data);
   patchComparativeTableAfterCharts(data);
+  renderTeamStatComparison(data); // Render the new comparison bars
+  renderFourFactorsComparison(data); // Render the Four Factors chart
 };
+
+/***********************************************
+ * FOUR FACTORS COMPARISON
+ ***********************************************/
+function renderFourFactorsComparison(data) {
+  if (!data.TEAMSTATS || !data.TEAMSTATS.TEAM || data.TEAMSTATS.TEAM.length < 2) {
+    console.warn("TEAMSTATS data for Four Factors is not available.");
+    return;
+  }
+  const home = data.TEAMSTATS.TEAM[0];
+  const away = data.TEAMSTATS.TEAM[1];
+  const homeInfo = data.HEADER.TEAM[0];
+  const awayInfo = data.HEADER.TEAM[1];
+
+  // Calculate the values for each stat
+  const efgPercHome = (Number(home.fgm) + (0.5 * Number(home.p3m))) / Number(home.fga) * 100;
+  const efgPercAway = (Number(away.fgm) + (0.5 * Number(away.p3m))) / Number(away.fga) * 100;
+  const tovPercHome = (Number(home.to) / (Number(home.fga) + (0.44 * Number(home.p1a)) + Number(home.to))) * 100;
+  const tovPercAway = (Number(away.to) / (Number(away.fga) + (0.44 * Number(away.p1a)) + Number(away.to))) * 100;
+  const orebPercHome = (Number(home.ro) / (Number(home.ro) + Number(away.rd))) * 100;
+  const orebPercAway = (Number(away.ro) / (Number(away.ro) + Number(home.rd))) * 100;
+  const ftPercHome = (Number(home.p1a) / Number(home.fga)) * 100;
+  const ftPercAway = (Number(away.p1a) / Number(away.fga)) * 100 ;
+
+  const fourFactors = [
+    { label: '%TCE', homeVal: efgPercHome, awayVal: efgPercAway, tooltip: 'Porcentaje de Tiro Efectivo (tiros de 2 y 3 puntos).' },
+    { label: '%PER', homeVal: tovPercHome, awayVal: tovPercAway, tooltip: 'Porcentaje de Pérdidas (balones perdidos sobre total de posesiones).' },
+    { label: '%REBO', homeVal: orebPercHome, awayVal: orebPercAway, tooltip: 'Porcentaje de Rebote Ofensivo (rebotes ofensivos capturados sobre toal de rebotes ofensivos disponibles).' },
+    { label: 'TL/TC', homeVal: ftPercHome, awayVal: ftPercAway, tooltip: 'Ratio de tiros libres intentados sobre tiros de campo intentados.' }
+  ];
+
+  let comparisonHtml = `
+    <div class="stat-comparison-container">
+        <div class="comparison-header">
+            <div class="comparison-team">
+                <img src="${homeInfo.logo}" alt="${homeInfo.name}" class="team-logo-comparison">
+                <span class="team-name-comparison" title="${homeInfo.name}">${getShortName(homeInfo.name)}</span>
+            </div>
+            <div class="comparison-team">
+                <span class="team-name-comparison" title="${awayInfo.name}">${getShortName(awayInfo.name)}</span>
+                <img src="${awayInfo.logo}" alt="${awayInfo.name}" class="team-logo-comparison">
+            </div>
+        </div>
+    `;
+
+  fourFactors.forEach(factor => {
+    const maxStat = Math.max(factor.homeVal, factor.awayVal, 0.01);
+    const homeWidth = (factor.homeVal / maxStat) * 100;
+    const awayWidth = (factor.awayVal / maxStat) * 100;
+
+    let homeFaded, awayFaded, homeWinner, awayWinner;
+
+    if (factor.label === '%PER') { // Lower is better for turnovers
+      homeFaded = factor.homeVal > factor.awayVal ? 'faded' : '';
+      awayFaded = factor.awayVal > factor.homeVal ? 'faded' : '';
+      homeWinner = factor.homeVal < factor.awayVal ? 'visible' : '';
+      awayWinner = factor.awayVal < factor.homeVal ? 'visible' : '';
+    } else { // Higher is better for the rest
+      homeFaded = factor.homeVal < factor.awayVal ? 'faded' : '';
+      awayFaded = factor.awayVal < factor.homeVal ? 'faded' : '';
+      homeWinner = factor.homeVal > factor.awayVal ? 'visible' : '';
+      awayWinner = factor.awayVal > factor.homeVal ? 'visible' : '';
+    }
+
+    comparisonHtml += `
+      <div class="stat-block">
+          <div class="bar-container home ${homeFaded}">
+              <div class="bar home-bar" style="width: ${homeWidth}%;">${(factor.homeVal).toFixed(1)}%</div>
+          </div>
+          <div class="stat-label-wrapper">
+              <span class="winner-arrow ${homeWinner}">&#9664;</span>
+              <div class="stat-label" title="${factor.tooltip}">${factor.label}</div>
+              <span class="winner-arrow ${awayWinner}">&#9654;</span>
+          </div>
+          <div class="bar-container away ${awayFaded}">
+              <div class="bar away-bar" style="width: ${awayWidth}%;">${(factor.awayVal).toFixed(1)}%</div>
+          </div>
+      </div>
+    `;
+  });
+
+  comparisonHtml += '</div>';
+
+  const container = document.getElementById('fourFactorsComparisonBars');
+  if (container) {
+    container.innerHTML = comparisonHtml;
+  }
+}
+
+/***********************************************
+ * TEAM STAT COMPARISON BARS
+ ***********************************************/
+function renderTeamStatComparison(data) {
+    if (!data.TEAMSTATS || !data.TEAMSTATS.TEAM || data.TEAMSTATS.TEAM.length < 2) {
+        console.warn("TEAMSTATS data is not available.");
+        return;
+    }
+
+    const home = data.TEAMSTATS.TEAM[0];
+    const away = data.TEAMSTATS.TEAM[1];
+    
+    const homeInfo = data.HEADER.TEAM[0];
+    const awayInfo = data.HEADER.TEAM[1];
+
+    const statsToCompare = [
+        { key: 'pts', label: 'PTS', tooltipLabel: 'Puntos'},
+        { key: 'rd', label: 'REBD', tooltipLabel: 'Rebotes defensivos' },
+        { key: 'ro', label: 'REBO', tooltipLabel: 'Rebotes ofensivos' },
+        { key: 'rt', label: 'REBT', tooltipLabel: 'Rebotes totales' },
+        { key: 'assist', label: 'AS', tooltipLabel: 'Asistencias' },
+        { key: 'st', label: 'ROB', tooltipLabel: 'Robos' },
+        { key: 'to', label: 'PER', tooltipLabel: 'Pérdidas' },
+        { key: 'bs', label: 'TAP', tooltipLabel: 'Tapones a favor' },
+        { key: 'pf', label: 'FC', tooltipLabel: 'Faltas cometidas' },
+        { key: 'fgp', label: '%TC', tooltipLabel: '% de tiros de campo' },
+        { key: 'p2p', label: '%T2', tooltipLabel: '% de tiros de 2' },
+        { key: 'p3p', label: '%T3', tooltipLabel: '% de tiros de 3' },
+        { key: 'p1p', label: '%TL', tooltipLabel: '% de tiros libres' }
+    ];
+
+    let comparisonHtml = `
+      <div class="stat-comparison-container">
+        <div class="comparison-header">
+            <div class="comparison-team">
+                <img src="${homeInfo.logo}" alt="${homeInfo.name}" class="team-logo-comparison">
+                <span class="team-name-comparison" title="${homeInfo.name}">${getShortName(homeInfo.name)}</span>
+            </div>
+            <div class="comparison-team">
+                <span class="team-name-comparison" title="${awayInfo.name}">${getShortName(awayInfo.name)}</span>
+                <img src="${awayInfo.logo}" alt="${awayInfo.name}" class="team-logo-comparison">
+            </div>
+        </div>
+    `;
+
+    statsToCompare.forEach(stat => {
+        const homeValue = parseFloat(home[stat.key]) || 0;
+        const awayValue = parseFloat(away[stat.key]) || 0;
+        const maxStat = Math.max(homeValue, awayValue, 1);
+
+        const homeWidth = (homeValue / maxStat) * 100; // Use 95% to leave a bit of space
+        const awayWidth = (awayValue / maxStat) * 100;
+
+        let homeFaded, awayFaded, homeWinner, awayWinner;
+
+        // For turnovers and fouls, lower is better. For all others, higher is better.
+        if (stat.key === 'to' || stat.key === 'pf') {
+            homeFaded = homeValue > awayValue ? 'faded' : '';
+            awayFaded = awayValue > homeValue ? 'faded' : '';
+            homeWinner = homeValue < awayValue ? 'visible' : '';
+            awayWinner = awayValue < homeValue ? 'visible' : '';
+        } else {
+            homeFaded = homeValue < awayValue ? 'faded' : '';
+            awayFaded = awayValue < homeValue ? 'faded' : '';
+            homeWinner = homeValue > awayValue ? 'visible' : '';
+            awayWinner = awayValue > homeValue ? 'visible' : '';
+        }
+        
+        const percentKeys = ['fgp', 'p2p', 'p3p', 'p1p'];
+        const displayHomeValue = percentKeys.includes(stat.key) ? homeValue.toFixed(0) + '%' : homeValue;
+        const displayAwayValue = percentKeys.includes(stat.key) ? awayValue.toFixed(0) + '%' : awayValue;
+
+        comparisonHtml += `
+            <div class="stat-block">
+                <div class="bar-container home ${homeFaded}">
+                    <div class="bar home-bar" style="width: ${homeWidth}%;">${displayHomeValue}</div>
+                </div>
+                <div class="stat-label-wrapper">
+                    <span class="winner-arrow ${homeWinner}">&#9664;</span>
+                    <div class="stat-label" title="${stat.tooltipLabel}">${stat.label}</div>
+                    <span class="winner-arrow ${awayWinner}">&#9654;</span>
+                </div>
+                <div class="bar-container away ${awayFaded}">
+                    <div class="bar away-bar" style="width: ${awayWidth}%;">${displayAwayValue}</div>
+                </div>
+            </div>
+        `;
+    });
+
+    comparisonHtml += '</div>';
+
+    const container = document.getElementById('teamStatComparisonBars');
+    if (container) {
+        container.innerHTML = comparisonHtml;
+    }
+}
+
 
 /***********************************************
  * NUEVA FUNCIÓN: Cuadro Resumen por Cuarto
  ***********************************************/
 function fillQuarterSummary(data) {
   if (!data.HEADER || !data.HEADER.QUARTERS || !data.HEADER.QUARTERS.QUARTER) return;
-  // Rellenar cabeceras de tabla (th tags)
-  const header_team_a = document.getElementById("quarterTable-header-team-a");
-  header_team_a.textContent = data.HEADER.TEAM[0].name;
-  
-  const header_team_b = document.getElementById("quarterTable-header-team-b");
-  header_team_b.textContent = data.HEADER.TEAM[1].name;
-  
-  const tbody = document.querySelector("#quarterTable tbody");
-  tbody.innerHTML = "";
+  const quarters = data.HEADER.QUARTERS.QUARTER;
+  const teamA = data.HEADER.TEAM[0];
+  const teamB = data.HEADER.TEAM[1];
+  // Helper for short name (first 3 valid letters)
+  const getShortName = name => {
+    const words = name.split(' ');
+    for (const word of words) {
+      const cleanWord = word.replace(/[^a-zA-Z]/g, '');
+      if (cleanWord.length >= 3) {
+        return cleanWord.slice(0, 3).toUpperCase();
+      }
+    }
+    return name.slice(0, 3).toUpperCase();
+  };
+  // Build header: first cell empty, then teamA, teamB
+  const thead = document.querySelector('#quarterTable thead tr');
+  thead.innerHTML = `<th>Cuarto</th>
+                     <th><img src="${teamA.logo}" alt="${teamA.name}" style="width: 20px; height: 20px; vertical-align: middle;"> <b title="${teamA.name}">${getShortName(teamA.name)}</b></th><th><img src="${teamB.logo}" alt="${teamB.name}" style="width: 20px; height: 20px; vertical-align: middle;"> <b title="${teamB.name}">${getShortName(teamB.name)}</b></th>
+                     <th>Global</th>`;
+  // Build rows: one per quarter
+  let rows = '';
   let totalA = 0, totalB = 0;
-  
-  data.HEADER.QUARTERS.QUARTER.forEach(q => {
-    const quarterNum = parseInt(q.n, 10);
-    const label = quarterNum <= 4 ? `Periodo ${q.n}` : `Tiempo Extra ${quarterNum - 4}`;
+  quarters.forEach((q, i) => {
+    const label = `C${i+1}`;
     const scoreA = parseInt(q.scoreA, 10) || 0;
     const scoreB = parseInt(q.scoreB, 10) || 0;
     totalA += scoreA;
     totalB += scoreB;
-    const row = document.createElement("tr");
-    row.innerHTML = `<td>${label}</td><td>${scoreA}</td><td>${scoreB}</td>`;
-    tbody.appendChild(row);
+    let cellA = '';
+    let cellB = '';
+    if (scoreA > scoreB) {
+      const diff = scoreA - scoreB;
+      cellA = `<b>${scoreA} (+${diff})</b>`;
+      cellB = `${scoreB}`;
+    } else if (scoreB > scoreA) {
+      const diff = scoreB - scoreA;
+      cellA = `${scoreA}`;
+      cellB = `<b>${scoreB} (+${diff})</b>`;
+    } else {
+      cellA = `${scoreA}`;
+      cellB = `${scoreB}`;
+    }
+    let globalCell = '';
+    if (totalA > totalB) {
+      globalCell = `<b>${totalA}</b> - ${totalB}`;
+    } else if (totalB > totalA) {
+      globalCell = `${totalA} - <b>${totalB}</b>`;
+    } else {
+      globalCell = `${totalA} - ${totalB}`;
+    }
+    rows += `<tr>
+                <td>${label}</td>
+                <td>${cellA}</td>
+                <td>${cellB}</td>
+                <td>${globalCell}</td>
+    </tr>`;
   });
-  
-  // Fila final con totales
-  const totalRow = document.createElement("tr");
-  totalRow.style.fontWeight = "bold";
-  totalRow.innerHTML = `<td>TOTAL</td><td>${totalA}</td><td>${totalB}</td>`;
-  tbody.appendChild(totalRow);
+  // Add TOTAL row
+  const tbody = document.querySelector('#quarterTable tbody');
+  tbody.innerHTML = rows;
 }
 
-// Calculate each team's biggest lead
-let biggestLeadLocal = 0;
-let biggestLeadVisit = 0;
+function renderAdvancedTeamComparison(data) {
+  if (!data.TEAMSTATS || !data.TEAMSTATS.TEAM || data.TEAMSTATS.TEAM.length < 2) {
+    console.warn("TEAMSTATS data is not available for advanced stats.");
+    return;
+  }
+  const home = data.POSTPARTIDO.local;
+  const away = data.POSTPARTIDO.visitante;
+  const homeInfo = data.HEADER.TEAM[0];
+  const awayInfo = data.HEADER.TEAM[1];
+
+  //
+  const ptsContraataqueHome = Object.values(home.ptscontraataque).reduce((acc, curr) => acc + curr, 0);
+  const ptsContraataqueAway = Object.values(away.ptscontraataque).reduce((acc, curr) => acc + curr, 0);
+  let ptsBanquilloHome = 0;
+  for (const key in home.ptsbanquillo) {
+    const tipoTiro = Number(key);
+    const anotados = Number(home.ptsbanquillo[key]);
+    ptsBanquilloHome += tipoTiro * anotados;
+  }
+  let ptsBanquilloAway = 0;
+  for (const key in away.ptsbanquillo) { 
+    const tipoTiro = Number(key);
+    const anotados = Number(away.ptsbanquillo[key]);
+    ptsBanquilloAway += tipoTiro * anotados;
+  }
+  
+  // Advanced stats keys and labels
+  const statsHome = [
+    { key: 'ptscontraataque', label: 'Puntos al contraataque', value: ptsContraataqueHome },
+    { key: 'ptssegunda', label: 'Puntos de segunda oportunidad', value: home.ptssegunda },
+    { key: 'ptspintura', label: 'Puntos en la pintura', value: home.ptspintura },
+    { key: 'ptsbanquillo', label: 'Puntos desde el banquillo', value: ptsBanquilloHome }
+  ];
+  const statsAway = [
+    { key: 'ptscontraataque', label: 'Puntos al contraataque', value: ptsContraataqueAway },
+    { key: 'ptssegunda', label: 'Puntos de segunda oportunidad', value: away.ptssegunda },
+    { key: 'ptspintura', label: 'Puntos en la pintura', value: away.ptspintura },
+    { key: 'ptsbanquillo', label: 'Puntos desde el banquillo', value: ptsBanquilloAway }
+  ];
+  let comparisonHtml = `
+    <div class="stat-comparison-container">
+      <div class="comparison-header">
+        <div class="comparison-team">
+          <img src="${homeInfo.logo}" alt="${homeInfo.name}" class="team-logo-comparison">
+          <span class="team-name-comparison" title="${homeInfo.name}">${getShortName(homeInfo.name)}</span>
+        </div>
+        <div class="comparison-team">
+          <span class="team-name-comparison" title="${awayInfo.name}">${getShortName(awayInfo.name)}</span>
+          <img src="${awayInfo.logo}" alt="${awayInfo.name}" class="team-logo-comparison">
+        </div>
+      </div>
+  `;
+  for (let i = 0; i < statsHome.length; i++) {
+    // Cast value to int and multiply by 1 (as per user request, but this is a no-op)
+    const homeValue = parseInt(statsHome[i].value, 10) * 1 || 0;
+    const awayValue = parseInt(statsAway[i].value, 10) * 1 || 0;
+    const maxStat = Math.max(homeValue, awayValue, 1);
+    const homeWidth = (homeValue / maxStat) * 100;
+    const awayWidth = (awayValue / maxStat) * 100;
+    let homeFaded, awayFaded, homeWinner, awayWinner;
+    if (homeValue < awayValue) {
+      homeFaded = 'faded';
+      awayFaded = '';
+      homeWinner = '';
+      awayWinner = 'visible';
+    } else if (homeValue > awayValue) {
+      homeFaded = '';
+      awayFaded = 'faded';
+      homeWinner = 'visible';
+      awayWinner = '';
+    } else {
+      homeFaded = '';
+      awayFaded = '';
+      homeWinner = '';
+      awayWinner = '';
+    }
+    comparisonHtml += `
+      <div class="stat-label">${statsHome[i].label}</div>
+      <div class="stat-block-avanzadas">
+        <div class="bar-container home ${homeFaded}">
+          <div class="bar home-bar" style="width: ${homeWidth}%">${homeValue}</div>
+        </div>
+        <div class="bar-container away ${awayFaded}">
+          <div class="bar away-bar" style="width: ${awayWidth}%">${awayValue}</div>
+        </div>
+      </div>
+    `;
+  };
+  comparisonHtml += '</div>';
+  const container = document.getElementById('advancedTeamComparisonBars');
+  if (container) {
+    container.innerHTML = comparisonHtml;
+  }
+}
+// Patch: Call renderAdvancedTeamComparison after rendering four factors
+const originalRenderFourFactorsComparison = window.renderFourFactorsComparison;
+window.renderFourFactorsComparison = function(data) {
+  if (originalRenderFourFactorsComparison) originalRenderFourFactorsComparison(data);
+  renderAdvancedTeamComparison(data);
+};

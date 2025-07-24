@@ -96,9 +96,6 @@ function toTitleCase(str) {
       return cleanWord; // Leave as is if it contains a period
     }
     // If single letter, keep uppercase
-    if (cleanWord.length === 1 || cleanWord.length === 2) {
-      return cleanWord.toUpperCase();
-    }
     return cleanWord.charAt(0).toUpperCase() + cleanWord.slice(1).toLowerCase();
   }).join(' ');
 }
