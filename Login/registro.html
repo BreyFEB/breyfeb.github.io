@@ -30,50 +30,224 @@
       <div class="registro-subtitle">Únete a la comunidad <span class="register-orange">FEB</span> y vive el <span class="register-orange">baloncesto</span> como nunca antes.</div>
       <form id="registro-form">
         <input type="email" id="email" name="email" required placeholder="Correo electrónico">
-        <input type="password" id="password" name="password" required placeholder="Contraseña">
-        <input type="password" id="confirm-password" name="confirm-password" required placeholder="Confirmar contraseña">
-        <button type="submit">Registrarse</button>
+        
+        <div class="password-group">
+          <input type="password" id="password" name="password" required placeholder="Contraseña (mín. 8 caracteres)">
+          <button type="button" id="toggle-password" class="toggle-password" tabindex="-1" aria-label="Mostrar u ocultar contraseña">
+            <svg id="eye-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D7DAE3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+          </button>
+        </div>
+        
+        <div class="password-group">
+          <input type="password" id="confirm-password" name="confirm-password" required placeholder="Confirmar contraseña">
+          <button type="button" id="toggle-confirm-password" class="toggle-password" tabindex="-1" aria-label="Mostrar u ocultar contraseña">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D7DAE3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+          </button>
+        </div>
+        
+        <button type="submit" id="register-btn">
+          <span id="btn-text">Registrarse</span>
+          <span id="loading-spinner" style="display: none;">⏳</span>
+        </button>
+        
+        <div id="message" class="message"></div>
+        
         <a href="login.html" class="register-link">¿Ya tienes una cuenta? <span class="register-orange">Inicia sesión</span></a>
       </form>
     </div>
   </div>
 
-  <script type="module">
-    import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
-
-    // Reemplaza estos valores con los de tu proyecto Supabase
-    const SUPABASE_URL = 'https://ovadhyvmvinklxjvnbgi.supabase.co';
-    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im92YWRoeXZtdmlua2x4anZuYmdpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTMwOTA0NTcsImV4cCI6MjA2ODY2NjQ1N30.bU0MqDZcf-MbSsC4vfMVuUk_5r2vHozBTf-V5LIZT1s';
-
-    const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-
+  <script>
     const form = document.getElementById('registro-form');
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const email = document.getElementById('email').value;
-      const password = document.getElementById('password').value;
-      try {
-        // Validar que las contraseñas coincidan antes de enviar
-        const confirmPassword = document.getElementById('confirm-password').value;
-        if (password !== confirmPassword) {
-          alert('Las contraseñas no coinciden.');
-          return;
-        }
-        const { data, error } = await supabase.auth.signUp({
-          email,
-          password
-        });
-        if (error) {
-          alert('Error: ' + error.message);
-        } else {
-          alert('¡Registro completado! Ya puedes acceder a tu cuenta y personalizar tu experiencia FEB.');
-          form.reset();
-          window.location.href = 'login.html';
-        }
-      } catch (err) {
-        alert('Error inesperado: ' + err.message);
+    const emailInput = document.getElementById('email');
+    const passwordInput = document.getElementById('password');
+    const confirmPasswordInput = document.getElementById('confirm-password');
+    const togglePasswordBtn = document.getElementById('toggle-password');
+    const toggleConfirmPasswordBtn = document.getElementById('toggle-confirm-password');
+    const registerBtn = document.getElementById('register-btn');
+    const btnText = document.getElementById('btn-text');
+    const loadingSpinner = document.getElementById('loading-spinner');
+    const messageDiv = document.getElementById('message');
+
+    // Funcionalidad para mostrar/ocultar contraseñas
+    togglePasswordBtn.addEventListener('click', () => {
+      const type = passwordInput.type === 'password' ? 'text' : 'password';
+      passwordInput.type = type;
+      
+      const svg = togglePasswordBtn.querySelector('svg');
+      if (type === 'text') {
+        svg.innerHTML = '<path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/>';
+      } else {
+        svg.innerHTML = '<path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/>';
       }
     });
+
+    toggleConfirmPasswordBtn.addEventListener('click', () => {
+      const type = confirmPasswordInput.type === 'password' ? 'text' : 'password';
+      confirmPasswordInput.type = type;
+      
+      const svg = toggleConfirmPasswordBtn.querySelector('svg');
+      if (type === 'text') {
+        svg.innerHTML = '<path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/>';
+      } else {
+        svg.innerHTML = '<path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/>';
+      }
+    });
+
+    // Función para mostrar mensajes
+    function showMessage(message, type = 'error') {
+      messageDiv.textContent = message;
+      messageDiv.className = `message ${type}`;
+      messageDiv.style.display = 'block';
+    }
+
+    // Función para limpiar mensajes
+    function clearMessage() {
+      messageDiv.style.display = 'none';
+      messageDiv.textContent = '';
+    }
+
+    // Validaciones
+    function validateEmail(email) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(email);
+    }
+
+    function validatePassword(password) {
+      if (password.length < 8) {
+        return 'La contraseña debe tener al menos 8 caracteres';
+      }
+      if (!/(?=.*[a-z])/.test(password)) {
+        return 'La contraseña debe tener al menos una letra minúscula';
+      }
+      if (!/(?=.*[A-Z])/.test(password)) {
+        return 'La contraseña debe tener al menos una letra mayúscula';
+      }
+      if (!/(?=.*\d)/.test(password)) {
+        return 'La contraseña debe tener al menos un número';
+      }
+      return null;
+    }
+
+    // Indicador de carga
+    function setLoading(loading) {
+      registerBtn.disabled = loading;
+      if (loading) {
+        btnText.style.display = 'none';
+        loadingSpinner.style.display = 'inline';
+      } else {
+        btnText.style.display = 'inline';
+        loadingSpinner.style.display = 'none';
+      }
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      clearMessage();
+
+      const email = emailInput.value.trim();
+      const password = passwordInput.value;
+      const confirmPassword = confirmPasswordInput.value;
+
+      // Validaciones
+      if (!validateEmail(email)) {
+        showMessage('❌ Por favor, introduce un email válido.');
+        return;
+      }
+
+      const passwordError = validatePassword(password);
+      if (passwordError) {
+        showMessage(`❌ ${passwordError}`);
+        return;
+      }
+
+      if (password !== confirmPassword) {
+        showMessage('❌ Las contraseñas no coinciden.');
+        return;
+      }
+
+      setLoading(true);
+
+      try {
+        console.log('🔄 Intentando registrar usuario...');
+        
+        const response = await fetch("http://localhost:1337/api/auth/local/register", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            username: email.split('@')[0],
+            email: email,
+            password: password
+          })
+        });
+
+        const data = await response.json();
+        console.log('📥 Respuesta del servidor:', data);
+
+        if (response.ok) {
+          const user = data.user;
+          const jwt = data.jwt;
+
+          try {
+            // Guardar el perfil en la colección `usuarios`
+            const crearPerfil = await fetch("http://localhost:1337/api/usuarios", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${jwt}`
+              },
+              body: JSON.stringify({
+                data: {
+                  user: user.id, // Relación
+                  email: user.email
+                  // Puedes añadir más campos predeterminados si quieres
+                }
+              })
+            });
+
+            if (!crearPerfil.ok) {
+              console.warn("⚠️ El usuario fue creado, pero no se creó el perfil personalizado");
+            }
+          } catch (profileError) {
+            console.warn("⚠️ Error al crear el perfil:", profileError);
+          }
+
+          showMessage('✅ ¡Registro completado! Redirigiendo al login...', 'success');
+          form.reset();
+          setTimeout(() => {
+            window.location.href = "login.html";
+          }, 2000);
+        } else {
+          let errorMessage = 'Error desconocido';
+          
+          if (data.error) {
+            if (data.error.message) {
+              errorMessage = data.error.message;
+            } else if (data.error.details && data.error.details.errors) {
+              errorMessage = data.error.details.errors.map(err => err.message).join(', ');
+            }
+          }
+          
+          showMessage(`❌ ${errorMessage}`);
+        }
+      } catch (err) {
+        console.error('❌ Error de conexión:', err);
+        showMessage('❌ Error de conexión. Verifica que el servidor esté funcionando.');
+      } finally {
+        setLoading(false);
+      }
+    });
+
   </script>
+  
+
 </body>
 </html>

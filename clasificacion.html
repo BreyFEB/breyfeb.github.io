@@ -104,41 +104,159 @@
         </div>
     </div>-->
 
-        <!-- COMPETITION SELECTOR -->
-        <div class="competition-selector">
-          <div class="competition-selector-inner">
-            <h3 class="selector-title">Seleccionar Competición</h3>
-            <div class="competition-dropdown">
-              <button class="competition-dropdown-btn" id="competitionDropdownBtn">
-                <img src="Clasificacion/cadetelogo.svg" alt="Cadete Masculino" class="competition-selector-logo" id="selectedCompetitionLogo">
-                <span id="selectedCompetitionText">Clubes Cadete Masculino</span>
-                <span class="dropdown-arrow">&#9662;</span>
-              </button>
-              <div class="competition-dropdown-menu" id="competitionDropdownMenu">
-                <button class="competition-dropdown-option active" data-competition="C ESP CLUBES CAD MASC" data-logo="Clasificacion/cadetelogo.svg">
-                  <img src="Clasificacion/cadetelogo.svg" alt="Cadete Masculino" class="competition-selector-logo">
-                  <span>Clubes Cadete Masculino</span>
+        <!-- TÍTULO DINÁMICO DE LA COMPETICIÓN -->
+        <div class="competition-title-section">
+          <h1 id="dynamicCompetitionTitle">Clubes Cadete Masculino</h1>
+          <p id="dynamicCompetitionSubtitle">Fase de Grupos - Grupo A</p>
+        </div>
+
+        <!-- BARRA DE FILTROS HORIZONTAL -->
+        <div class="horizontal-filters">
+          <div class="horizontal-filters-inner">
+            <div class="filter-item">
+              <label class="filter-label">Competición</label>
+              <div class="competition-dropdown">
+                <button class="competition-dropdown-btn filter-dropdown-btn" id="competitionDropdownBtn">
+                  <img src="Clasificacion/cadetelogo.svg" alt="Cadete Masculino" class="competition-mini-logo" id="selectedCompetitionLogo">
+                  <span id="selectedCompetitionText">Clubes Cadete Masculino</span>
+                  <span class="dropdown-arrow">&#9662;</span>
                 </button>
-                <button class="competition-dropdown-option" data-competition="C ESP CLUBES CAD FEM" data-logo="Clasificacion/logo-cadete-fem.svg">
-                  <img src="Clasificacion/logo-cadete-fem.svg" alt="Cadete Femenino" class="competition-selector-logo">
-                  <span>Clubes Cadete Femenino</span>
-                </button>
+                <div class="competition-dropdown-menu" id="competitionDropdownMenu">
+                  <div class="competition-search-container">
+                    <input type="text" id="competitionSearchInput" class="competition-search-input" placeholder="Buscar competición...">
+                    <div class="search-icon">🔍</div>
+                  </div>
+                  <div class="competition-options-container" id="competitionOptionsContainer">
+                    <!-- Primera FEB -->
+                    <button class="competition-dropdown-option" data-competition="PRIMERA FEB" data-logo="Clasificacion/primera-feb-logo.svg" data-category="Primera FEB" data-gender="Masculino">
+                      <img src="Clasificacion/primera-feb-logo.svg" alt="Primera FEB" class="competition-selector-logo">
+                      <div class="competition-option-text">
+                        <span class="competition-name">PRIMERA FEB</span>
+                        <span class="competition-details">Liga Regular • 18 Equipos • Playoffs</span>
+                      </div>
+                    </button>
+                    
+                    <!-- Liga Femenina Endesa -->
+                    <button class="competition-dropdown-option" data-competition="LF ENDESA" data-logo="Clasificacion/lf-endesa-logo.svg" data-category="Liga Femenina" data-gender="Femenino">
+                      <img src="Clasificacion/lf-endesa-logo.svg" alt="LF Endesa" class="competition-selector-logo">
+                      <div class="competition-option-text">
+                        <span class="competition-name">LF ENDESA</span>
+                        <span class="competition-details">Liga Regular • 14 Equipos • Playoffs</span>
+                      </div>
+                    </button>
+                    
+                    <!-- Competiciones de Clubes -->
+                    <button class="competition-dropdown-option" data-competition="C ESP CLUBES CAD FEM" data-logo="Clasificacion/logo-cadete-fem.svg" data-category="Cadete" data-gender="Femenino">
+                      <img src="Clasificacion/logo-cadete-fem.svg" alt="Cadete Femenino" class="competition-selector-logo">
+                      <div class="competition-option-text">
+                        <span class="competition-name">Clubes Cadete Femenino</span>
+                        <span class="competition-details">Cadete • Femenino • 8 Grupos + Playoffs</span>
+                      </div>
+                    </button>
+                    
+                    <button class="competition-dropdown-option active" data-competition="C ESP CLUBES CAD MASC" data-logo="Clasificacion/cadetelogo.svg" data-category="Cadete" data-gender="Masculino">
+                      <img src="Clasificacion/cadetelogo.svg" alt="Cadete Masculino" class="competition-selector-logo">
+                      <div class="competition-option-text">
+                        <span class="competition-name">Clubes Cadete Masculino</span>
+                        <span class="competition-details">Cadete • Masculino • 8 Grupos + Playoffs</span>
+                      </div>
+                    </button>
+                    
+                    <button class="competition-dropdown-option" data-competition="C ESP CLUBES INF FEM" data-logo="Clasificacion/logo-cadete-fem.svg" data-category="Infantil" data-gender="Femenino">
+                      <img src="Clasificacion/logo-cadete-fem.svg" alt="Infantil Femenino" class="competition-selector-logo">
+                      <div class="competition-option-text">
+                        <span class="competition-name">Clubes Infantil Femenino</span>
+                        <span class="competition-details">Infantil • Femenino • 8 Grupos + Playoffs</span>
+                      </div>
+                    </button>
+                    
+                    <button class="competition-dropdown-option" data-competition="C ESP CLUBES INF MASC" data-logo="Clasificacion/cadetelogo.svg" data-category="Infantil" data-gender="Masculino">
+                      <img src="Clasificacion/cadetelogo.svg" alt="Infantil Masculino" class="competition-selector-logo">
+                      <div class="competition-option-text">
+                        <span class="competition-name">Clubes Infantil Masculino</span>
+                        <span class="competition-details">Infantil • Masculino • 8 Grupos + Playoffs</span>
+                      </div>
+                    </button>
+                    
+                    <button class="competition-dropdown-option" data-competition="C ESP CLUBES MINI MASC" data-logo="Clasificacion/cadetelogo.svg" data-category="Mini" data-gender="Masculino">
+                      <img src="Clasificacion/cadetelogo.svg" alt="Mini Masculino" class="competition-selector-logo">
+                      <div class="competition-option-text">
+                        <span class="competition-name">Clubes Mini Masculino</span>
+                        <span class="competition-details">Mini • Masculino • 8 Grupos + Playoffs</span>
+                      </div>
+                    </button>
+                    
+                    <button class="competition-dropdown-option" data-competition="C ESP CLUBES MINI FEM" data-logo="Clasificacion/logo-cadete-fem.svg" data-category="Mini" data-gender="Femenino">
+                      <img src="Clasificacion/logo-cadete-fem.svg" alt="Mini Femenino" class="competition-selector-logo">
+                      <div class="competition-option-text">
+                        <span class="competition-name">Clubes Mini Femenino</span>
+                        <span class="competition-details">Mini • Femenino • 8 Grupos + Playoffs</span>
+                      </div>
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
+            
+            <div class="filter-item">
+              <label class="filter-label">Temporada</label>
+              <select class="filter-dropdown" id="temporadaSelect">
+                <option value="2024-25" selected>Temporada 2024-25</option>
+              </select>
+            </div>
+            
+            <div class="filter-item">
+              <label class="filter-label">Fase</label>
+              <select class="filter-dropdown" id="faseSelect">
+                <!-- Opciones para competiciones de clubes juveniles -->
+                <option value="fase-grupos" selected class="club-competition">Fase de Grupos</option>
+                <option value="playoff" class="club-competition">Playoff 1-8</option>
+                <option value="clasificacion-final" class="club-competition">Clasificación Final</option>
+                
+                <!-- Opciones para competiciones profesionales -->
+                <option value="liga-regular" class="professional-competition" style="display:none;">Liga Regular</option>
+                <option value="playoffs" class="professional-competition" style="display:none;">Playoffs</option>
+                <option value="clasificacion-final-pro" class="professional-competition" style="display:none;">Clasificación Final</option>
+              </select>
+            </div>
+            
+            <div class="filter-item club-competition-only" id="grupoFilterItem">
+              <label class="filter-label">Grupo</label>
+              <select class="filter-dropdown" id="grupoSelectFilter">
+                <option value="A" selected>Grupo A</option>
+                <option value="B">Grupo B</option>
+                <option value="C">Grupo C</option>
+                <option value="D">Grupo D</option>
+                <option value="E">Grupo E</option>
+                <option value="F">Grupo F</option>
+                <option value="G">Grupo G</option>
+                <option value="H">Grupo H</option>
+              </select>
+            </div>
+            
+            <div class="filter-item club-competition-only" id="jornadaFilterItem">
+              <label class="filter-label">Jornada</label>
+              <select class="filter-dropdown" id="jornadaSelectFilter">
+                <option value="todas" selected>Todas las jornadas</option>
+                <option value="1">Jornada 1</option>
+                <option value="2">Jornada 2</option>
+                <option value="3">Jornada 3</option>
+              </select>
+            </div>
+            
+            <div class="filter-item professional-competition-only" id="jornadaFilterProItem">
+              <label class="filter-label">Jornada</label>
+              <select class="filter-dropdown" id="jornadaFilterPro">
+                <option value="todas" selected>Todas las jornadas</option>
+              </select>
+            </div>
           </div>
-      </div>
+        </div>
 
     <main>
         <section class="clasificacion-container">
-            <!-- Navegación principal de clasificación -->
-            <nav class="clasificacion-nav">
-                <button class="clasificacion-tab active" data-section="fase-grupos">Fase de Grupos</button>
-                <button class="clasificacion-tab" data-section="playoff">Playoff 1-8</button>
-                <button class="clasificacion-tab" data-section="clasificacion-final">Clasificación Final</button>
-            </nav>
-
-            <!-- Navegación de grupos (se muestra solo cuando "Fase de Grupos" está activa) -->
-            <nav class="grupos-nav active" id="gruposNav">
+            <!-- Navegación de grupos (solo para competiciones de clubes) -->
+            <nav class="grupos-nav active club-competition-only" id="gruposNav">
               <div class="grupos-dropdown-inner">
                 <button class="grupo-dropdown-btn" id="grupoDropdownBtn">
                   <span id="grupoDropdownText">A</span>
@@ -161,24 +279,6 @@
             <div class="clasificacion-content">
                 
                 <div id="content-fase-grupos" class="content-section active">
-                    <h2 id="grupoTitle">Fase de Grupos - Grupo A</h2>
-                    
-                    <!-- Filtros para Fase de Grupos -->
-                    <div class="clasificacion-filters">
-                        <div class="filter-group">
-                            <label for="jornadaFilter">Jornada:</label>
-                            <select id="jornadaFilter" class="filter-select">
-                                <option value="todas">Todas las jornadas</option>
-                                <option value="1" selected>Jornada 1</option>
-                                <option value="2">Jornada 2</option>
-                                <option value="3">Jornada 3</option>
-                            </select>
-                        </div>
-                        
-                    </div>
-
-                    <!-- Tabla de Resultados de la Jornada -->
-                    <h2 class="resultados-jornada-h2">Resultados - Jornada</h2>
                     <div class="clasificacion-table-container" id="resultadosContainer">
                         
                         <table class="clasificacion-table" id="resultadosTable">
@@ -250,6 +350,100 @@
                                     <th title="Diferencia de puntos (PF - PC)" data-sort="pt">DF</th>
                                     <th title="Racha actual (últimos resultados)" data-sort="racha">R</th>
                                     <th title="Últimos partidos (Verde=Victoria, Rojo=Derrota)" data-sort="ultimos">Últimos partidos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Contenido para competiciones profesionales -->
+                
+                <!-- Liga Regular (Primera FEB / LF Endesa) -->
+                <div id="content-liga-regular" class="content-section" style="display:none;">
+                    <!-- Tabla de Resultados de la Jornada -->
+                    <h3 class="resultados-jornada-h3">Resultados - Jornada Actual</h3>
+                    <div class="clasificacion-table-container" id="resultadosProContainer">
+                        <table class="clasificacion-table" id="resultadosProTable">
+                            <thead>
+                                <tr>
+                                    <th title="Equipos que juegan y resultado">Partido</th>
+                                    <th title="Fecha del partido">Fecha</th>
+                                    <th title="Hora del partido">Hora</th>
+                                    <th title="Estado del partido">Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Clasificación Liga Regular -->
+                    <h3>Clasificación Liga Regular</h3>
+                    <div class="clasificacion-table-container" id="ligaRegularContainer">
+                        <table class="clasificacion-table" id="ligaRegularTable">
+                            <thead>
+                                <tr>
+                                    <th title="Posición en la clasificación" data-sort="pos">Pos</th>
+                                    <th title="Nombre del equipo" data-sort="equipo">Equipo</th>
+                                    <th title="Partidos jugados" data-sort="pj">PJ</th>
+                                    <th title="Partidos ganados" data-sort="pg">PG</th>
+                                    <th title="Partidos perdidos" data-sort="pp">PP</th>
+                                    <th title="Puntos totales (PG x 2 + PP x 1)" data-sort="pts">Pts</th>
+                                    <th title="Puntos a favor" data-sort="pf">PF</th>
+                                    <th title="Puntos en contra" data-sort="pc">PC</th>
+                                    <th title="Diferencia de puntos (PF - PC)" data-sort="dif">Dif</th>
+                                    <th title="Racha actual" data-sort="racha">Racha</th>
+                                    <th title="Últimos partidos" data-sort="ultimos">Últimos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <!-- Leyenda para competiciones profesionales -->
+                    <div class="clasificacion-legend">
+                        <div class="legend-item">
+                            <div class="legend-color playoffs-pro"></div>
+                            <span>Clasifican a Playoffs</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color elimination-pro"></div>
+                            <span>No clasifican</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Playoffs Profesionales -->
+                <div id="content-playoffs" class="content-section" style="display:none;">
+                    <h2>Playoffs</h2>
+                    <div class="playoff-bracket-container">
+                        <div class="playoff-bracket-pro" id="playoffBracketPro">
+                            <!-- Aquí se generará dinámicamente el bracket según la competición -->
+                            <p>Cuadro de eliminatorias - Se generará según los resultados de la liga regular</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Clasificación Final Profesional -->
+                <div id="content-clasificacion-final-pro" class="content-section" style="display:none;">
+                    <h2>Clasificación Final</h2>
+                    <div class="clasificacion-table-container" id="finalProTableContainer">
+                        <table class="clasificacion-table" id="finalProTable">
+                            <thead>
+                                <tr>
+                                    <th title="Posición final en la competición" data-sort="pos">Pos</th>
+                                    <th title="Nombre del equipo" data-sort="equipo">Equipo</th>
+                                    <th title="Partidos jugados totales" data-sort="pj">PJ</th>
+                                    <th title="Partidos ganados totales" data-sort="pg">PG</th>
+                                    <th title="Partidos perdidos totales" data-sort="pp">PP</th>
+                                    <th title="Puntos totales" data-sort="pts">Pts</th>
+                                    <th title="Puntos a favor totales" data-sort="pf">PF</th>
+                                    <th title="Puntos en contra totales" data-sort="pc">PC</th>
+                                    <th title="Diferencia total" data-sort="dif">Dif</th>
+                                    <th title="Títulos/Logros" data-sort="logros">Logros</th>
                                 </tr>
                             </thead>
                             <tbody>

@@ -682,6 +682,35 @@ function setupStatsToggle() {
   // La mantengo vacía para evitar errores
 }
 
-document.addEventListener('DOMContentLoaded', loadTeams); 
-// Llamar al iniciar
-setTimeout(updateFiltersIndicator, 200); 
+// Menu toggle para móvil
+document.addEventListener('DOMContentLoaded', function() {
+  const menuToggle = document.getElementById('menuToggle');
+  const mainNav = document.querySelector('.main-nav');
+  const body = document.body;
+
+  const overlay = document.createElement('div');
+  overlay.className = 'overlay';
+  body.appendChild(overlay);
+
+  if (menuToggle && mainNav) {
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      mainNav.classList.toggle('active');
+      overlay.classList.toggle('active');
+      body.style.overflow = mainNav.classList.contains('active') ? 'hidden' : '';
+    });
+
+    overlay.addEventListener('click', () => {
+      menuToggle.classList.remove('active');
+      mainNav.classList.remove('active');
+      overlay.classList.remove('active');
+      body.style.overflow = '';
+    });
+  }
+
+  // Cargar equipos
+  loadTeams();
+  
+  // Llamar al iniciar
+  setTimeout(updateFiltersIndicator, 200);
+}); 

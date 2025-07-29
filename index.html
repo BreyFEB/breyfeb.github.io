@@ -343,116 +343,78 @@
   </script>
 
 <script type="module">
-  import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+  const token = localStorage.getItem("jwt");
+  const user = JSON.parse(localStorage.getItem("user"));
 
-const supabase = createClient(
-  'https://ovadhyvmvinklxjvnbgi.supabase.co',
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im92YWRoeXZtdmlua2x4anZuYmdpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTMwOTA0NTcsImV4cCI6MjA2ODY2NjQ1N30.bU0MqDZcf-MbSsC4vfMVuUk_5r2vHozBTf-V5LIZT1s'
-);
+  const loginBtn = document.getElementById("login-btn");
+  const loginBtnText = document.getElementById("login-btn-text");
+  const userDropdown = document.getElementById("user-dropdown");
+  const dropdownUsername = document.getElementById("dropdown-username");
+  const logoutBtn = document.getElementById("logout-btn");
+  const welcomeMessage = document.getElementById("welcome-message");
+  const welcomeSubtitle = document.getElementById("welcome-subtitle");
+  const heroTitle = document.getElementById("hero-title");
+  const heroSubtitle = document.getElementById("hero-subtitle");
 
-const { data, error } = await supabase.auth.getUser();
+  if (token && user) {
+    const nombre = user.username || user.email.split('@')[0];
+    const saludo = `🏀 Bienvenido de nuevo, <span class="user-name">${nombre}</span>!`;
 
-const heroTitle = document.getElementById("hero-title");
-const heroSubtitle = document.getElementById("hero-subtitle");
-const welcomeMessage = document.getElementById("welcome-message");
-const welcomeSubtitle = document.getElementById("welcome-subtitle");
-const loginBtnText = document.getElementById("login-btn-text");
-const loginBtn = document.getElementById("login-btn");
-const userDropdown = document.getElementById("user-dropdown");
-const dropdownUsername = document.getElementById("dropdown-username");
-const logoutBtn = document.getElementById("logout-btn");
+    if (welcomeMessage) {
+      welcomeMessage.innerHTML = saludo;
+      welcomeMessage.style.display = "";
+    }
+    if (welcomeSubtitle) {
+      welcomeSubtitle.innerText = "Explora tus equipos, estadísticas y novedades de la FEB.";
+      welcomeSubtitle.style.display = "";
+    }
+    if (loginBtnText) {
+      loginBtnText.innerHTML = `<span class="user-name">${nombre}</span>`;
+    }
+    if (dropdownUsername) {
+      dropdownUsername.innerHTML = nombre;
+    }
+    if (heroTitle) heroTitle.style.display = "none";
+    if (heroSubtitle) heroSubtitle.style.display = "none";
 
-let isUserLoggedIn = false;
-
-if (error || !data.user) {
-  // No logueado
-  if (heroTitle) heroTitle.style.display = "";
-  if (heroSubtitle) heroSubtitle.style.display = "";
-  if (welcomeMessage) welcomeMessage.style.display = "none";
-  if (welcomeSubtitle) welcomeSubtitle.style.display = "none";
-  if (loginBtnText) loginBtnText.innerText = "Login";
-  if (loginBtn) {
-    loginBtn.href = "Login/login.html";
-    loginBtn.style.cursor = "pointer";
-  }
-} else {
-  // Usuario válido
-  isUserLoggedIn = true;
-  const nombre = data.user.email.split('@')[0];
-  const saludo = `🏀 Bienvenido de nuevo, <span class=\"user-name\">${nombre}</span>!`;
-  const subtitulo = "Explora tus equipos, estadísticas y novedades de la FEB.";
-  
-  if (welcomeMessage && welcomeSubtitle) {
-    welcomeMessage.innerHTML = saludo;
-    welcomeMessage.style.display = "";
-    welcomeSubtitle.innerText = subtitulo;
-    welcomeSubtitle.style.display = "";
-  }
-  if (loginBtnText) loginBtnText.innerHTML = `<span class=\"user-name\">${nombre}</span>`;
-  if (dropdownUsername) dropdownUsername.innerHTML = nombre;
-  if (heroTitle) heroTitle.style.display = "none";
-  if (heroSubtitle) heroSubtitle.style.display = "none";
-  
-  // Cambiar comportamiento del botón de login cuando está logueado
-  if (loginBtn) {
+    // Mostrar dropdown al hacer clic
     loginBtn.removeAttribute('href');
     loginBtn.style.cursor = "pointer";
-    loginBtn.addEventListener('click', function(e) {
+    loginBtn.addEventListener('click', (e) => {
       e.preventDefault();
-      toggleUserDropdown();
+      userDropdown.style.display = userDropdown.style.display === "block" ? "none" : "block";
     });
-  }
-}
 
-// Función para mostrar/ocultar el dropdown
-function toggleUserDropdown() {
-  if (!userDropdown) return;
-  
-  if (userDropdown.style.display === "none" || userDropdown.style.display === "") {
-    userDropdown.style.display = "block";
-  } else {
-    userDropdown.style.display = "none";
-  }
-}
-
-    // Manejar logout
+    // Logout
     if (logoutBtn) {
-      logoutBtn.addEventListener('click', async function() {
-        // Mostrar mensaje de confirmación
-        const confirmar = confirm('¿De verdad quieres cerrar sesión?');
-        
-        if (!confirmar) {
-          return; // Si el usuario cancela, no hacer nada
-        }
-        
-        try {
-          const { error } = await supabase.auth.signOut();
-          if (error) {
-            console.error('Error al cerrar sesión:', error);
-            alert('Error al cerrar sesión. Por favor, inténtalo de nuevo.');
-          } else {
-            // Redirigir a la página de inicio y recargar
-            window.location.href = 'index.html';
-            window.location.reload();
-          }
-        } catch (err) {
-          console.error('Error inesperado:', err);
-          alert('Error inesperado al cerrar sesión.');
-        }
+      logoutBtn.addEventListener("click", () => {
+        const confirmar = confirm("¿De verdad quieres cerrar sesión?");
+        if (!confirmar) return;
+        localStorage.removeItem("jwt");
+        localStorage.removeItem("user");
+        location.reload();
       });
     }
 
-// Cerrar dropdown al hacer clic fuera de él
-document.addEventListener('click', function(event) {
-  if (!isUserLoggedIn) return;
-  
-  const loginContainer = document.querySelector('.login-container');
-  if (loginContainer && !loginContainer.contains(event.target)) {
-    if (userDropdown) {
-      userDropdown.style.display = "none";
+    // Cerrar el dropdown si haces clic fuera
+    document.addEventListener("click", function (e) {
+      const loginContainer = document.querySelector(".login-container");
+      if (!loginContainer.contains(e.target)) {
+        userDropdown.style.display = "none";
+      }
+    });
+  } else {
+    // No logueado
+    if (heroTitle) heroTitle.style.display = "";
+    if (heroSubtitle) heroSubtitle.style.display = "";
+    if (welcomeMessage) welcomeMessage.style.display = "none";
+    if (welcomeSubtitle) welcomeSubtitle.style.display = "none";
+    if (loginBtnText) loginBtnText.innerText = "Login";
+    if (loginBtn) {
+      loginBtn.href = "Login/login.html";
+      loginBtn.style.cursor = "pointer";
     }
   }
-});
 </script>
 
 

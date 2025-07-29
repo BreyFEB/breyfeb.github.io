@@ -237,6 +237,98 @@ button[type="submit"]:hover::before {
     color: green;
 }
 
+/* Mensajes mejorados */
+.message {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: none;
+    transition: all 0.3s ease;
+}
+
+.message.error {
+    background: rgba(200, 16, 46, 0.15);
+    border: 1px solid rgba(200, 16, 46, 0.3);
+    color: #ff6b6b;
+}
+
+.message.success {
+    background: rgba(46, 204, 113, 0.15);
+    border: 1px solid rgba(46, 204, 113, 0.3);
+    color: #2ecc71;
+}
+
+/* Grupos de contraseña con botones */
+.password-group {
+    position: relative;
+    width: 100%;
+}
+
+.password-group input[type="password"],
+.password-group input[type="text"] {
+    padding-right: 45px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.toggle-password:hover {
+    background-color: rgba(255, 158, 27, 0.1);
+}
+
+.toggle-password svg {
+    width: 20px;
+    height: 20px;
+    stroke: #D7DAE3;
+    transition: stroke 0.2s;
+}
+
+.toggle-password:hover svg {
+    stroke: #FF9E1B;
+}
+
+/* Estados del botón de registro */
+button[type="submit"]:disabled {
+    background: #6c7293;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+button[type="submit"]:disabled::before {
+    display: none;
+}
+
+button[type="submit"]:disabled:hover {
+    color: #fff;
+}
+
+/* Indicador de carga */
+#loading-spinner {
+    display: inline-block;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
 .register-link {
     display: block;
     text-align: center;

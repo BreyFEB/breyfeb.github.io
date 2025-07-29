@@ -26,7 +26,7 @@
                 </svg>
             </button>
             <div class="logo-container">
-                <img src="https://raw.githubusercontent.com/emebullon/cadete2025/refs/heads/main/febcadete.svg" lt="Logo FEB" class="footer-logo">
+                <img src="https://raw.githubusercontent.com/emebullon/cadete2025/refs/heads/main/febcadete.svg" alt="Logo FEB" class="footer-logo">
             </div>
             <h2>¿Listo para ver tu <span class="gradient">feed personalizado</span>?</h2>
             <form id="loginForm">
@@ -47,49 +47,41 @@
         </div>
     </div>
 
-<script type="module">
-  import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
-
-  const supabase = createClient(
-    'https://ovadhyvmvinklxjvnbgi.supabase.co',
-    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im92YWRoeXZtdmlua2x4anZuYmdpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTMwOTA0NTcsImV4cCI6MjA2ODY2NjQ1N30.bU0MqDZcf-MbSsC4vfMVuUk_5r2vHozBTf-V5LIZT1s'
-  );
-
-  // Login con Supabase
-  document.getElementById("loginForm").addEventListener("submit", async function (e) {
-    e.preventDefault();
-
-    const email = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
-
-    console.log("Email:", email);
-    console.log("Password:", password);
-
-    const { data, error } = await supabase.auth.signInWithPassword({
-      email,
-      password,
-    });
-
-    if (error) {
-      alert("❌ Usuario o contraseña incorrectos.");
-    } else {
-      window.location.href = "/index.html"; // Redirige a index.html después de iniciar sesión
-    }
-  });
-
-  // Mostrar / ocultar contraseña
-  const passwordInput = document.getElementById('password');
-  const togglePassword = document.getElementById('toggle-password');
-  const eyeIcon = document.getElementById('eye-icon');
-  let passwordVisible = false;
-
-  togglePassword.addEventListener('click', function () {
-    passwordVisible = !passwordVisible;
-    passwordInput.type = passwordVisible ? 'text' : 'password';
-    eyeIcon.innerHTML = passwordVisible
-      ? '<path d="M17.94 17.94A10.06 10.06 0 0 1 12 20c-7 0-11-8-11-8a21.81 21.81 0 0 1 5.06-6.06M1 1l22 22"/><path d="M9.53 9.53A3 3 0 0 0 12 15a3 3 0 0 0 2.47-5.47"/>'
-      : '<path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/>';
-  });
+    <script>
+      document.getElementById("loginForm").addEventListener("submit", async function (e) {
+        e.preventDefault();
+    
+        const email = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+    
+        try {
+          const response = await fetch("http://localhost:1337/api/auth/local", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ identifier: email, password })
+          });
+    
+          const data = await response.json();
+    
+          if (response.ok) {
+            // Guardar el token JWT y el usuario
+            localStorage.setItem("jwt", data.jwt);
+            localStorage.setItem("user", JSON.stringify(data.user));
+    
+            // Redirigir a la home
+            window.location.href = "/index.html";
+          } else {
+            alert("❌ " + data.error.message);
+          }
+        } catch (error) {
+          alert("Error al intentar iniciar sesión.");
+          console.error(error);
+        }
+      });
     </script>
+    
+
 </body>
 </html>

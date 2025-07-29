@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test de Conexión Strapi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .result {
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .error { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+        .info { background: #cce7ff; color: #004085; border: 1px solid #b8daff; }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 5px;
+        }
+        button:hover { background: #0056b3; }
+        .code { background: #f8f9fa; padding: 10px; border-radius: 3px; font-family: monospace; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 Diagnóstico de Conexión Strapi</h1>
+        <p>Este archivo te ayudará a diagnosticar problemas con el servidor Strapi.</p>
+        
+        <div id="results"></div>
+        
+        <button onclick="testConnection()">🔍 Probar Conexión al Servidor</button>
+        <button onclick="testRegistration()">📝 Probar Registro</button>
+        <button onclick="showInstructions()">📋 Ver Instrucciones</button>
+        
+        <div id="instructions" style="display: none; margin-top: 30px;">
+            <h2>📋 Instrucciones para configurar Strapi</h2>
+            
+            <h3>1. Instalar y ejecutar Strapi</h3>
+            <div class="code">
+# Si no tienes Strapi instalado:
+npx create-strapi-app@latest my-project --quickstart
+
+# Si ya lo tienes instalado:
+cd tu-proyecto-strapi
+npm run develop
+            </div>
+            
+            <h3>2. Verificar que Strapi esté corriendo</h3>
+            <ul>
+                <li>Strapi debería estar ejecutándose en <strong>http://localhost:1337</strong></li>
+                <li>Deberías poder acceder al panel de administración en <strong>http://localhost:1337/admin</strong></li>
+            </ul>
+            
+            <h3>3. Configurar permisos</h3>
+            <ul>
+                <li>Ve a <strong>Settings → Users & Permissions → Roles</strong></li>
+                <li>En <strong>Public</strong>: Habilita <code>auth/local/register</code> y <code>auth/local</code></li>
+                <li>En <strong>Authenticated</strong>: Habilita los permisos necesarios</li>
+            </ul>
+            
+            <h3>4. Solucionar problemas de CORS</h3>
+            <div class="code">
+// En config/middlewares.js
+module.exports = [
+  // ...
+  {
+    name: 'strapi::cors',
+    config: {
+      enabled: true,
+      headers: '*',
+      origin: ['http://localhost:3000', 'http://127.0.0.1:3000', 'file://']
+    }
+  },
+  // ...
+];
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const resultsDiv = document.getElementById('results');
+        
+        function addResult(message, type = 'info') {
+            const div = document.createElement('div');
+            div.className = `result ${type}`;
+            div.textContent = message;
+            resultsDiv.appendChild(div);
+        }
+        
+        function clearResults() {
+            resultsDiv.innerHTML = '';
+        }
+        
+        async function testConnection() {
+            clearResults();
+            addResult('🔄 Probando conexión al servidor Strapi...', 'info');
+            
+            try {
+                const response = await fetch('http://localhost:1337', {
+                    method: 'GET',
+                });
+                
+                if (response.ok) {
+                    addResult('✅ ¡Servidor Strapi encontrado y respondiendo!', 'success');
+                    addResult(`📊 Status: ${response.status} - ${response.statusText}`, 'info');
+                } else {
+                    addResult(`⚠️ Servidor responde pero con error: ${response.status}`, 'error');
+                }
+            } catch (error) {
+                addResult('❌ No se puede conectar al servidor Strapi', 'error');
+                addResult(`Error: ${error.message}`, 'error');
+                addResult('💡 Asegúrate de que Strapi esté ejecutándose en http://localhost:1337', 'info');
+            }
+        }
+        
+        async function testRegistration() {
+            clearResults();
+            addResult('🔄 Probando endpoint de registro...', 'info');
+            
+            const testUser = {
+                username: 'test_user_' + Date.now(),
+                email: `test${Date.now()}@example.com`,
+                password: 'TestPassword123'
+            };
+            
+            try {
+                const response = await fetch('http://localhost:1337/api/auth/local/register', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(testUser)
+                });
+                
+                const data = await response.json();
+                
+                if (response.ok) {
+                    addResult('✅ ¡Endpoint de registro funcionando correctamente!', 'success');
+                    addResult(`👤 Usuario creado: ${data.user.username}`, 'info');
+                } else {
+                    addResult('❌ Error en el endpoint de registro', 'error');
+                    addResult(`Error: ${JSON.stringify(data, null, 2)}`, 'error');
+                    
+                    if (response.status === 403) {
+                        addResult('💡 Error 403: Verifica los permisos de registro en Strapi Admin', 'info');
+                    }
+                }
+            } catch (error) {
+                addResult('❌ Error de conexión al probar registro', 'error');
+                addResult(`Error: ${error.message}`, 'error');
+            }
+        }
+        
+        function showInstructions() {
+            const instructions = document.getElementById('instructions');
+            instructions.style.display = instructions.style.display === 'none' ? 'block' : 'none';
+        }
+        
+        // Probar conexión automáticamente al cargar la página
+        window.addEventListener('load', () => {
+            setTimeout(testConnection, 1000);
+        });
+    </script>
+</body>
+</html> 
