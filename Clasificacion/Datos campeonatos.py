@@ -7,9 +7,7 @@ Created on Tue Jul  1 10:07:41 2025
 
 # Datos de campeonatos de clubes
 import json
-import pandas as pd
 import os
-from collections import defaultdict
 
 # Generalize for all teams
 os.chdir('C:\\Users\\bsanchez\\Documents\\cadete2025\\JSONs fichas')
@@ -23,7 +21,9 @@ competitions = [
   "C ESP CLUBES INF FEM",
   "C ESP CLUBES INF MASC",
   "C ESP CLUBES MINI MASC",
-  "C ESP CLUBES MINI FEM"
+  "C ESP CLUBES MINI FEM",
+  "PRIMERA FEB",
+  "LF ENDESA"
 ]
 
 competition_info = dict()
@@ -69,7 +69,9 @@ for match_json in json_files:
     
     competition_info[comp].append(match_dict)
     
-    
+# Save to json
+with open('C:\\Users\\bsanchez\\Documents\\cadete2025\\Clasificacion\\all_competition_info.json', 'w', encoding='utf-8') as file:
+    json.dump(competition_info, file, ensure_ascii=False, indent=4)
     
     
     

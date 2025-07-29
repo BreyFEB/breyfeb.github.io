@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Filtro de Quintetos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6fa;
+      padding: 20px;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .jugadores-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+    }
+
+    .jugador-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      background: #fff;
+      border-radius: 12px;
+      padding: 12px;
+      width: 140px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s;
+      border: 2px solid transparent;
+    }
+
+    .jugador-card.en-pista {
+      border-color: rgba(0, 255, 0, 0.5);
+      box-shadow: 0 0 10px 0 rgba(0, 255, 0, 0.5);
+    }
+
+    .jugador-card.fuera-pista {
+      border-color: rgba(255, 0, 0, 0.5);
+      box-shadow: 0 0 10px 0 rgba(255, 0, 0, 0.5);
+    }
+
+    .jugador-foto {
+      width: 70px;
+      height: 70px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 8px;
+      border: 2px solid #ccc;
+      align-self: center;
+    }
+
+    .jugador-nombre {
+      font-weight: bold;
+      font-size: 14px;
+      margin-bottom: 8px;
+      text-wrap: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      max-width: 100%;
+    }
+
+    .checkboxes label {
+      display: block;
+      font-size: 14px;
+      margin: 2px 0;
+      text-align: left;
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 10px 20px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Filtrar Jugadores</h1>
+
+  <div class="jugadores-container" id="jugadoresContainer">
+    <!-- Las tarjetas se insertan con JavaScript -->
+  </div>
+
+  <button onclick="mostrarResultados()">Mostrar Resultados</button>
+
+  <script>
+    const jugadores = [
+      { id: 1, nombre: "P. ALMAZAN SIERRA  asdasdas dasdasd", foto: "player_placeholder.png" },
+      { id: 2, nombre: "D. DIEZ DE LA FAYA", foto: "player_placeholder.png" },
+      { id: 3, nombre: "A. BARRERA PASAN", foto: "https://via.placeholder.com/70" },
+      { id: 4, nombre: "M. LAPORNIK", foto: "https://via.placeholder.com/70" },
+      { id: 5, nombre: "G. CORBALAN", foto: "https://via.placeholder.com/70" },
+      { id: 6, nombre: "J. CREMO", foto: "https://via.placeholder.com/70" },
+      { id: 7, nombre: "M. BELLA CABAÑAS", foto: "https://via.placeholder.com/70" },
+      { id: 8, nombre: "D. CUEVAS SIMARRO", foto: "https://via.placeholder.com/70" },
+      { id: 9, nombre: "G. GOLOMAN", foto: "https://via.placeholder.com/70" },
+      { id: 10, nombre: "J. GUDMUNDSSON", foto: "https://via.placeholder.com/70" },
+      { id: 11, nombre: "L. FISCHER", foto: "https://via.placeholder.com/70" },
+      { id: 12, nombre: "R. RODRIGUEZ", foto: "https://via.placeholder.com/70" },
+      { id: 13, nombre: "E. WEMBI", foto: "https://via.placeholder.com/70" },
+      { id: 14, nombre: "R. STUMBRIS", foto: "https://via.placeholder.com/70" }
+    ];
+
+    const container = document.getElementById('jugadoresContainer');
+
+    jugadores.forEach(jugador => {
+      const card = document.createElement('div');
+      card.classList.add('jugador-card');
+
+      card.innerHTML = `
+        <img src="${jugador.foto}" alt="${jugador.nombre}" class="jugador-foto" />
+        <span class="jugador-nombre">${jugador.nombre}</span>
+        <div class="checkboxes">
+          <label>
+            <input type="checkbox" class="en-pista" data-player="${jugador.id}" />
+            En pista
+          </label>
+          <label>
+            <input type="checkbox" class="fuera-pista" data-player="${jugador.id}" />
+            Fuera de pista
+          </label>
+        </div>
+      `;
+
+      const enPistaCheckbox = card.querySelector('.en-pista');
+      const fueraPistaCheckbox = card.querySelector('.fuera-pista');
+
+      enPistaCheckbox.addEventListener('change', () => {
+        if (enPistaCheckbox.checked) {
+          fueraPistaCheckbox.checked = false;
+          card.classList.add('en-pista');
+          card.classList.remove('fuera-pista');
+        } else {
+          card.classList.remove('en-pista');
+        }
+      });
+
+      fueraPistaCheckbox.addEventListener('change', () => {
+        if (fueraPistaCheckbox.checked) {
+          enPistaCheckbox.checked = false;
+          card.classList.add('fuera-pista');
+          card.classList.remove('en-pista');
+        } else {
+          card.classList.remove('fuera-pista');
+        }
+      });
+
+      container.appendChild(card);
+    });
+
+    function mostrarResultados() {
+      const enPista = [];
+      const fueraPista = [];
+
+      document.querySelectorAll('.jugador-card').forEach(card => {
+        const en = card.querySelector('.en-pista');
+        const fuera = card.querySelector('.fuera-pista');
+        const id = parseInt(en.dataset.player);
+
+        if (en.checked) enPista.push(id);
+        if (fuera.checked) fueraPista.push(id);
+      });
+
+      console.log("Jugadores EN PISTA:", enPista);
+      console.log("Jugadores FUERA DE PISTA:", fueraPista);
+      alert(
+        `Jugadores en pista: ${enPista.join(', ')}\nJugadores fuera de pista: ${fueraPista.join(', ')}`
+      );
+    }
+  </script>
+</body>
+</html>
