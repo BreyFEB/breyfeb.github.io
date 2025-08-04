@@ -6,6 +6,8 @@
     <title>Clasificación - FEB</title>
     <link rel="stylesheet" href="clasificacion.css">
     <script src="clasificacion.js"></script>
+    <!-- Supabase CDN -->
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
 </head>
 <body>
     <!-- HEADER -->
@@ -128,8 +130,8 @@
                   </div>
                   <div class="competition-options-container" id="competitionOptionsContainer">
                     <!-- Primera FEB -->
-                    <button class="competition-dropdown-option" data-competition="PRIMERA FEB" data-logo="Clasificacion/primera-feb-logo.svg" data-category="Primera FEB" data-gender="Masculino">
-                      <img src="Clasificacion/primera-feb-logo.svg" alt="Primera FEB" class="competition-selector-logo">
+                    <button class="competition-dropdown-option" data-competition="PRIMERA FEB" data-logo="Primera_FEB.png" data-category="Primera FEB" data-gender="Masculino">
+                      <img src="Primera_FEB.png" alt="Primera FEB" class="competition-selector-logo">
                       <div class="competition-option-text">
                         <span class="competition-name">PRIMERA FEB</span>
                         <span class="competition-details">Liga Regular • 18 Equipos • Playoffs</span>
@@ -137,8 +139,8 @@
                     </button>
                     
                     <!-- Liga Femenina Endesa -->
-                    <button class="competition-dropdown-option" data-competition="LF ENDESA" data-logo="Clasificacion/lf-endesa-logo.svg" data-category="Liga Femenina" data-gender="Femenino">
-                      <img src="Clasificacion/lf-endesa-logo.svg" alt="LF Endesa" class="competition-selector-logo">
+                    <button class="competition-dropdown-option" data-competition="LF ENDESA" data-logo="lf-endesa.png" data-category="Liga Femenina" data-gender="Femenino">
+                      <img src="lf-endesa.png" alt="LF Endesa" class="competition-selector-logo">
                       <div class="competition-option-text">
                         <span class="competition-name">LF ENDESA</span>
                         <span class="competition-details">Liga Regular • 14 Equipos • Playoffs</span>
@@ -636,5 +638,11 @@
         }
       });
     </script>
+    
+    <!-- Configuración de Supabase -->
+    <script src="Login/supabase-config.js"></script>
+    
+    <!-- Sistema de Autenticación Global -->
+    <script src="auth-global.js"></script>
 </body>
 </html>

@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="login.css">
+    <title>Iniciar Sesión</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+    <!-- Supabase CDN -->
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
 </head>
 <body>
     <div class="content">
@@ -19,69 +21,229 @@
                 <li>¡Y mucho más!</li>
             </ul>
         </div>
+        
         <div class="login-container">
             <button class="back-btn" type="button" onclick="window.history.back()" aria-label="Volver atrás">
                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M14 18L8 12L14 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </button>
+            
             <div class="logo-container">
                 <img src="https://raw.githubusercontent.com/emebullon/cadete2025/refs/heads/main/febcadete.svg" alt="Logo FEB" class="footer-logo">
             </div>
+            
             <h2>¿Listo para ver tu <span class="gradient">feed personalizado</span>?</h2>
+            
             <form id="loginForm">
                 <div class="form-group">
                     <input type="email" id="username" name="username" required placeholder="Correo electrónico">
                 </div>
+                
                 <div class="form-group password-group">
                     <input type="password" id="password" name="password" required placeholder="Contraseña">
                     <button type="button" id="toggle-password" class="toggle-password" tabindex="-1" aria-label="Mostrar u ocultar contraseña">
-                        <svg id="eye-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D7DAE3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg>
+                        <svg id="eye-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D7DAE3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/>
+                            <circle cx="12" cy="12" r="3"/>
+                        </svg>
                     </button>
                 </div>
+                
                 <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
-                <button type="submit" class="login-btn">Entrar</button>
+                
+                <button type="submit" class="login-btn" id="login-btn">
+                    <span id="btn-text">Entrar</span>
+                    <span id="loading-spinner" style="display: none;">⏳</span>
+                </button>
             </form>
+            
             <a href="registro.html" class="register-link">¿No tienes cuenta? <span class="register-orange">Regístrate</span></a>
+            
             <div id="message" class="message"></div>
         </div>
     </div>
 
-    <script>
-      document.getElementById("loginForm").addEventListener("submit", async function (e) {
-        e.preventDefault();
+    <!-- Configuración de Supabase -->
+    <script src="supabase-config.js"></script>
     
-        const email = document.getElementById("username").value;
-        const password = document.getElementById("password").value;
+    <script>
+      const form = document.getElementById("loginForm");
+      const emailInput = document.getElementById("username");
+      const passwordInput = document.getElementById("password");
+      const togglePasswordBtn = document.getElementById("toggle-password");
+      const loginBtn = document.getElementById("login-btn");
+      const btnText = document.getElementById("btn-text");
+      const loadingSpinner = document.getElementById("loading-spinner");
+      const messageDiv = document.getElementById("message");
+
+      // Funcionalidad para mostrar/ocultar contraseña
+      if (togglePasswordBtn) {
+        togglePasswordBtn.addEventListener('click', () => {
+          const type = passwordInput.type === 'password' ? 'text' : 'password';
+          passwordInput.type = type;
+          
+          const svg = togglePasswordBtn.querySelector('svg');
+          if (type === 'text') {
+            svg.innerHTML = '<path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/>';
+          } else {
+            svg.innerHTML = '<path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/>';
+          }
+        });
+      }
+
+      // Función para mostrar mensajes
+      function showMessage(message, type = 'error') {
+        messageDiv.textContent = message;
+        messageDiv.className = `message ${type}`;
+        messageDiv.style.display = 'block';
+      }
+
+      // Función para limpiar mensajes
+      function clearMessage() {
+        messageDiv.style.display = 'none';
+        messageDiv.textContent = '';
+      }
+
+      // Indicador de carga
+      function setLoading(loading) {
+        loginBtn.disabled = loading;
+        if (loading) {
+          btnText.style.display = 'none';
+          loadingSpinner.style.display = 'inline';
+        } else {
+          btnText.style.display = 'inline';
+          loadingSpinner.style.display = 'none';
+        }
+      }
+
+      // Función para obtener mensaje de error amigable
+      function getErrorMessage(error) {
+        const errorMessages = {
+          'Invalid login credentials': 'Email o contraseña incorrectos',
+          'Email not confirmed': 'Debes confirmar tu email antes de iniciar sesión',
+          'Too many requests': 'Demasiados intentos. Espera un momento antes de intentar de nuevo',
+          'Invalid email': 'El formato del email no es válido',
+          'signup_disabled': 'El acceso está temporalmente deshabilitado',
+          'email_not_confirmed': 'Confirma tu email antes de continuar',
+          'invalid_credentials': 'Credenciales inválidas'
+        };
+
+        const message = error.message || error;
+        return errorMessages[message] || `Error: ${message}`;
+      }
+
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+        clearMessage();
+    
+        const email = emailInput.value.trim();
+        const password = passwordInput.value;
+
+        // Validaciones básicas
+        if (!email || !password) {
+          showMessage('❌ Por favor, completa todos los campos.');
+          return;
+        }
+
+        // Verificar que Supabase esté configurado
+        if (!window.supabaseAuth) {
+          showMessage('❌ Error de configuración. Verifica la configuración de Supabase.');
+          console.error('🚨 supabaseAuth no está disponible. Verifica supabase-config.js');
+          return;
+        }
+
+        setLoading(true);
     
         try {
-          const response = await fetch("http://localhost:1337/api/auth/local", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ identifier: email, password })
-          });
-    
-          const data = await response.json();
-    
-          if (response.ok) {
-            // Guardar el token JWT y el usuario
-            localStorage.setItem("jwt", data.jwt);
-            localStorage.setItem("user", JSON.stringify(data.user));
-    
-            // Redirigir a la home
-            window.location.href = "/index.html";
+          console.log('🔄 Intentando iniciar sesión con Supabase...');
+          
+          // Iniciar sesión con Supabase
+          const { user, session } = await window.supabaseAuth.signIn(email, password);
+          
+          if (user && session) {
+            console.log('✅ Sesión iniciada exitosamente:', user.email);
+            showMessage('✅ ¡Bienvenido! Redirigiendo...', 'success');
+            
+            // Guardar info básica en localStorage para compatibilidad
+            localStorage.setItem("user_email", user.email);
+            localStorage.setItem("user_id", user.id);
+            localStorage.setItem("session_token", session.access_token);
+            
+            // Redirigir después de un breve delay
+            setTimeout(() => {
+              window.location.href = "/index.html";
+            }, 1500);
           } else {
-            alert("❌ " + data.error.message);
+            showMessage('❌ Error en el inicio de sesión. Verifica tus credenciales.');
           }
+          
         } catch (error) {
-          alert("Error al intentar iniciar sesión.");
-          console.error(error);
+          console.error('❌ Error en login:', error);
+          const friendlyMessage = getErrorMessage(error);
+          showMessage(`❌ ${friendlyMessage}`);
+          
+          // Si el error es de email no confirmado, dar opción de reenvío
+          if (error.message?.includes('Email not confirmed') || error.message?.includes('email_not_confirmed')) {
+            setTimeout(() => {
+              const resend = confirm('¿Quieres que te reenviemos el email de confirmación?');
+              if (resend) {
+                resendConfirmationEmail(email);
+              }
+            }, 2000);
+          }
+        } finally {
+          setLoading(false);
         }
       });
+
+      // Función para reenviar email de confirmación
+      async function resendConfirmationEmail(email) {
+        try {
+          showMessage('📧 Reenviando email de confirmación...', 'info');
+          
+          const { error } = await window.supabaseAuth.client.auth.resend({
+            type: 'signup',
+            email: email
+          });
+
+          if (error) {
+            throw error;
+          }
+
+          showMessage('✅ Email de confirmación reenviado. Revisa tu bandeja de entrada.', 'success');
+        } catch (error) {
+          console.error('❌ Error reenviando email:', error);
+          showMessage('❌ Error al reenviar el email. Inténtalo más tarde.', 'error');
+        }
+      }
+
+      // Verificar si el usuario ya está autenticado al cargar la página
+      document.addEventListener('DOMContentLoaded', async () => {
+        if (!window.supabaseAuth) {
+          console.error('🚨 Supabase no está configurado correctamente');
+          showMessage('⚠️ Error de configuración. Contacta al administrador.', 'error');
+          return;
+        }
+
+        try {
+          // Verificar si ya hay una sesión activa
+          const session = await window.supabaseAuth.getCurrentSession();
+          if (session?.user) {
+            console.log('✅ Usuario ya autenticado, redirigiendo...');
+            showMessage('✅ Ya tienes sesión activa. Redirigiendo...', 'success');
+            setTimeout(() => {
+              window.location.href = "/index.html";
+            }, 1000);
+          } else {
+            console.log('📝 No hay sesión activa, listo para login');
+          }
+        } catch (error) {
+          console.error('❌ Error verificando sesión:', error);
+        }
+      });
+
     </script>
-    
 
 </body>
 </html>

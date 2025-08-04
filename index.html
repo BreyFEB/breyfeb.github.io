@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>FEB - Inicio</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- Supabase CDN -->
+  <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
 </head>
 <body>
   <!-- HEADER PRINCIPAL (top-nav) -->
@@ -102,6 +104,68 @@
       </div>
     </section>
 
+    <!-- SECCIÓN DE ÚLTIMOS RESULTADOS -->
+    <section class="latest-results-section" id="latest-results-section" style="display: none;">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Últimos Resultados</h2>
+          <a href="partidos.html" class="view-all-link">Ver todos los resultados →</a>
+        </div>
+        
+        <div class="latest-results-container" id="latest-results-container">
+          <div class="loading-message">
+            <div class="loader"></div>
+            <p>Cargando últimos resultados...</p>
+          </div>
+        </div>
+
+        <div class="no-favorites-message" id="no-favorites-message" style="display: none;">
+          <div class="empty-state">
+            <img src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/heart-outline.svg" alt="Favoritos" class="empty-icon">
+            <h3>¡Agrega equipos favoritos!</h3>
+            <p>Para ver los últimos resultados, primero debes seleccionar tus equipos favoritos en tu perfil.</p>
+            <a href="Login/personal-profile.html" class="btn-add-favorites">Gestionar Favoritos</a>
+          </div>
+        </div>
+
+        <div class="no-results-message" id="no-results-message" style="display: none;">
+          <div class="empty-state">
+            <img src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/basketball-outline.svg" alt="Sin resultados" class="empty-icon">
+            <h3>Sin resultados recientes</h3>
+            <p>Tus equipos favoritos aún no tienen partidos recientes disponibles.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE JUGADORES FAVORITOS -->
+    <section class="favorite-players-section" id="favorite-players-section" style="display: none;">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Jugadores Favoritos</h2>
+          <a href="jugadores.html" class="view-all-link">Ver todos los jugadores →</a>
+        </div>
+        
+        <div class="favorite-players-container" id="favorite-players-container">
+          <div class="loading-message">
+            <div class="loader"></div>
+            <p>Cargando jugadores favoritos...</p>
+          </div>
+        </div>
+
+        <div class="no-favorite-players-message" id="no-favorite-players-message" style="display: none;">
+          <div class="empty-state">
+            <img src="https://raw.githubusercontent.com/emebullon/games/refs/heads/main/person-outline.svg" alt="Jugadores" class="empty-icon">
+            <h3>¡Agrega jugadores favoritos!</h3>
+            <p>Para ver tus jugadores favoritos, primero debes seleccionarlos en tu perfil.</p>
+            <a href="Login/personal-profile.html" class="btn-add-favorites">Gestionar Favoritos</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <h2 class="section-title">Acceso Rápido</h2>
+    
     <section class="features-grid">
         <a href="partidos.html">
             <div class="feature-card">
@@ -146,7 +210,7 @@
         </a>
     </section>
     <!-- SECCIÓN 1: ¿Aún no te has registrado? -->
-    <section class="benefits-section benefits-section-free">
+    <section class="benefits-section benefits-section-free" id="benefits-section-free">
       <div class="benefits-content">
         <div class="benefits-titles">
           <h2 class="benefits-main-title">¿Aún no te has registrado?</h2>
@@ -198,7 +262,7 @@
       </div>
     </section>
     <!-- SECCIÓN 2: ¿Te sabe a poco y quieres más? -->
-    <section class="benefits-section benefits-section-premium">
+    <section class="benefits-section benefits-section-premium" id="benefits-section-premium">
       <div class="benefits-content">
         <div class="benefits-titles">
           <h2 class="benefits-main-title">¿Te sabe a poco y quieres más?</h2>
@@ -342,80 +406,443 @@
     });
   </script>
 
-<script type="module">
-  const token = localStorage.getItem("jwt");
-  const user = JSON.parse(localStorage.getItem("user"));
+  <!-- Configuración de Supabase -->
+  <script src="Login/supabase-config.js"></script>
+  
+  <!-- Sistema de Autenticación Global -->
+  <script src="auth-global.js"></script>
 
-  const loginBtn = document.getElementById("login-btn");
-  const loginBtnText = document.getElementById("login-btn-text");
-  const userDropdown = document.getElementById("user-dropdown");
-  const dropdownUsername = document.getElementById("dropdown-username");
-  const logoutBtn = document.getElementById("logout-btn");
-  const welcomeMessage = document.getElementById("welcome-message");
-  const welcomeSubtitle = document.getElementById("welcome-subtitle");
-  const heroTitle = document.getElementById("hero-title");
-  const heroSubtitle = document.getElementById("hero-subtitle");
+  <!-- JavaScript para Últimos Resultados -->
+  <script>
+    // ===== ÚLTIMOS RESULTADOS DE EQUIPOS FAVORITOS =====
+    
+    // Variables globales
+    let favoriteTeamsData = [];
+    let allMatchesData = [];
 
-  if (token && user) {
-    const nombre = user.username || user.email.split('@')[0];
-    const saludo = `🏀 Bienvenido de nuevo, <span class="user-name">${nombre}</span>!`;
+    // Función para inicializar la sección de últimos resultados
+    async function initializeLatestResults() {
+      console.log('🚀 [LATEST RESULTS] Inicializando últimos resultados...');
+      
+      // Manejar secciones según estado de autenticación
+      if (!window.globalAuth.isLoggedIn()) {
+        // Usuario no logueado: ocultar últimos resultados, mostrar secciones de beneficios
+        document.getElementById('latest-results-section').style.display = 'none';
+        document.getElementById('benefits-section-free').style.display = 'block';
+        document.getElementById('benefits-section-premium').style.display = 'block';
+        return;
+      }
 
-    if (welcomeMessage) {
-      welcomeMessage.innerHTML = saludo;
-      welcomeMessage.style.display = "";
-    }
-    if (welcomeSubtitle) {
-      welcomeSubtitle.innerText = "Explora tus equipos, estadísticas y novedades de la FEB.";
-      welcomeSubtitle.style.display = "";
-    }
-    if (loginBtnText) {
-      loginBtnText.innerHTML = `<span class="user-name">${nombre}</span>`;
-    }
-    if (dropdownUsername) {
-      dropdownUsername.innerHTML = nombre;
-    }
-    if (heroTitle) heroTitle.style.display = "none";
-    if (heroSubtitle) heroSubtitle.style.display = "none";
+      // Usuario logueado: mostrar últimos resultados, ocultar secciones de beneficios
+      document.getElementById('latest-results-section').style.display = 'block';
+      document.getElementById('benefits-section-free').style.display = 'none';
+      document.getElementById('benefits-section-premium').style.display = 'none';
+      
+      try {
+        // Obtener equipos favoritos del usuario
+        const currentUser = window.globalAuth.getCurrentUser();
+        if (!currentUser) return;
 
-    // Mostrar dropdown al hacer clic
-    loginBtn.removeAttribute('href');
-    loginBtn.style.cursor = "pointer";
-    loginBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      userDropdown.style.display = userDropdown.style.display === "block" ? "none" : "block";
+        favoriteTeamsData = await window.supabaseAuth.getFavoriteTeams(currentUser.id);
+        console.log(`📋 [LATEST RESULTS] ${favoriteTeamsData.length} equipos favoritos encontrados`);
+
+        if (favoriteTeamsData.length === 0) {
+          showNoFavoritesMessage();
+          return;
+        }
+
+        // Cargar datos de partidos
+        await loadMatchesData();
+        
+        // Filtrar y mostrar últimos resultados
+        await displayLatestResults();
+
+      } catch (error) {
+        console.error('❌ [LATEST RESULTS] Error cargando últimos resultados:', error);
+        showErrorMessage();
+      }
+    }
+
+    // Función para cargar datos de partidos usando la misma lógica que partidos.js
+    async function loadMatchesData() {
+      console.log('📥 [LATEST RESULTS] Cargando datos de partidos...');
+      
+      try {
+        // Primero intentar cargar desde clasificaciones (datos más estructurados)
+        const classificationResponse = await fetch('Clasificacion/all_competitions_info.json');
+        if (classificationResponse.ok) {
+          const classificationData = await classificationResponse.json();
+          const allMatches = [];
+          
+          for (const [competition, matches] of Object.entries(classificationData)) {
+            matches.forEach(match => {
+              allMatches.push({
+                ...match,
+                competition: competition,
+                date: match.datetime ? new Date(match.datetime.split(' - ')[0]) : null,
+                team_a_name: match.team_a.name,
+                team_b_name: match.team_b.name,
+                team_a_logo: match.team_a.logo,
+                team_b_logo: match.team_b.logo,
+                score_a: match.team_a.score,
+                score_b: match.team_b.score
+              });
+            });
+          }
+          
+          allMatchesData = allMatches;
+          console.log(`✅ [LATEST RESULTS] ${allMatches.length} partidos cargados desde clasificaciones`);
+          return;
+        }
+      } catch (error) {
+        console.log('⚠️ [LATEST RESULTS] No se pudo cargar desde clasificaciones, intentando con partidos...');
+      }
+
+      // Fallback: usar la misma lógica que partidos.js
+      try {
+        const apiUrl = "https://api.github.com/repos/BreyFEB/breyfeb.github.io/contents/Partidos%20calendario";
+        const response = await fetch(apiUrl, {
+          headers: {
+            'Accept': 'application/vnd.github.v3+json',
+            'User-Agent': 'Cadete2025-WebApp'
+          }
+        });
+        
+        if (!response.ok) {
+          throw new Error('Error cargando desde GitHub API');
+        }
+        
+        const files = await response.json();
+        const jsonFiles = files.filter(file => file.name.endsWith(".json"));
+        const allMatches = [];
+
+        for (const file of jsonFiles.slice(0, 5)) { // Limitar a 5 archivos más recientes
+          try {
+            const matchResponse = await fetch(file.download_url);
+            const matchData = await matchResponse.json();
+            // Aquí necesitaríamos parsear los datos según el formato específico
+            // Por simplicidad, usaremos los datos de clasificación
+          } catch (error) {
+            console.error('Error cargando archivo:', file.name);
+          }
+        }
+        
+        allMatchesData = allMatches;
+      } catch (error) {
+        console.error('❌ [LATEST RESULTS] Error cargando datos de partidos:', error);
+        throw error;
+      }
+    }
+
+    // Función para filtrar y mostrar los últimos resultados
+    async function displayLatestResults() {
+      console.log('🔍 [LATEST RESULTS] Filtrando últimos resultados...');
+      
+      if (!allMatchesData.length) {
+        showNoResultsMessage();
+        return;
+      }
+
+      // Obtener nombres de equipos favoritos
+      const favoriteTeamNames = favoriteTeamsData.map(team => team.team_name.toLowerCase());
+      
+      // Filtrar partidos de equipos favoritos que ya terminaron (con resultado)
+      const favoriteMatches = allMatchesData.filter(match => {
+        const teamAMatch = favoriteTeamNames.includes(match.team_a_name?.toLowerCase());
+        const teamBMatch = favoriteTeamNames.includes(match.team_b_name?.toLowerCase());
+        const hasResult = match.score_a !== undefined && match.score_b !== undefined && 
+                         match.score_a !== null && match.score_b !== null &&
+                         match.score_a !== '' && match.score_b !== '';
+        
+        return (teamAMatch || teamBMatch) && hasResult;
+      });
+
+      // Ordenar por fecha más reciente
+      favoriteMatches.sort((a, b) => {
+        const dateA = a.date ? new Date(a.date) : new Date(0);
+        const dateB = b.date ? new Date(b.date) : new Date(0);
+        return dateB - dateA;
+      });
+
+      // Tomar solo los 6 más recientes
+      const latestMatches = favoriteMatches.slice(0, 6);
+
+      if (latestMatches.length === 0) {
+        showNoResultsMessage();
+        return;
+      }
+
+      // Generar HTML de los resultados
+      const resultsHTML = latestMatches.map(match => createMatchCard(match)).join('');
+      
+      document.getElementById('latest-results-container').innerHTML = `
+        <div class="results-grid">
+          ${resultsHTML}
+        </div>
+      `;
+    }
+
+    // Función para crear una tarjeta de partido
+    function createMatchCard(match) {
+      const favoriteTeamNames = favoriteTeamsData.map(team => team.team_name.toLowerCase());
+      const teamAIsFavorite = favoriteTeamNames.includes(match.team_a_name?.toLowerCase());
+      const teamBIsFavorite = favoriteTeamNames.includes(match.team_b_name?.toLowerCase());
+      
+      const winner = parseInt(match.score_a) > parseInt(match.score_b) ? 'A' : 
+                    parseInt(match.score_b) > parseInt(match.score_a) ? 'B' : 'tie';
+      
+      const formatTimeAgo = (dateString) => {
+        if (!dateString) return 'Finalizado';
+        try {
+          const matchDate = new Date(dateString.split(' - ')[0]);
+          const now = new Date();
+          const diffTime = Math.abs(now - matchDate);
+          const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+          
+          if (diffDays === 0) return 'Hoy';
+          if (diffDays === 1) return 'Ayer';
+          if (diffDays <= 7) return `Hace ${diffDays} días`;
+          return 'Finalizado';
+        } catch {
+          return 'Finalizado';
+        }
+      };
+
+      return `
+        <a href="ficha.html?gameId=${match.match_id}" class="result-card-link">
+          <div class="result-card-new">
+            <div class="match-status">
+              <span class="status-badge">Finalizado</span>
+              <span class="time-ago">${formatTimeAgo(match.datetime)}</span>
+            </div>
+            
+                        <div class="match-teams">
+              <div class="team-info ${teamAIsFavorite ? 'favorite' : ''}">
+                <img src="${match.team_a_logo || 'https://via.placeholder.com/32'}" alt="${match.team_a_name}" class="team-logo-new">
+                <span class="team-name-new">${match.team_a_name}</span>
+                <span class="score ${winner === 'A' ? 'winner-score' : ''}">${match.score_a}</span>
+              </div>
+              
+              <div class="match-scores">
+                <span class="score ${winner === 'A' ? 'winner-score' : ''}">${match.score_a}</span>
+                <span class="score-separator">-</span>
+                <span class="score ${winner === 'B' ? 'winner-score' : ''}">${match.score_b}</span>
+              </div>
+              
+              <span class="score-separator">-</span>
+              
+              <div class="team-info ${teamBIsFavorite ? 'favorite' : ''}">
+                <img src="${match.team_b_logo || 'https://via.placeholder.com/32'}" alt="${match.team_b_name}" class="team-logo-new">
+                <span class="team-name-new">${match.team_b_name}</span>
+                <span class="score ${winner === 'B' ? 'winner-score' : ''}">${match.score_b}</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      `;
+    }
+
+    // Funciones para mostrar diferentes estados
+    function showNoFavoritesMessage() {
+      document.getElementById('latest-results-container').style.display = 'none';
+      document.getElementById('no-favorites-message').style.display = 'block';
+      document.getElementById('no-results-message').style.display = 'none';
+    }
+
+    function showNoResultsMessage() {
+      document.getElementById('latest-results-container').style.display = 'none';
+      document.getElementById('no-favorites-message').style.display = 'none';
+      document.getElementById('no-results-message').style.display = 'block';
+    }
+
+    function showErrorMessage() {
+      document.getElementById('latest-results-container').innerHTML = `
+        <div class="error-message">
+          <p>❌ Error cargando los últimos resultados</p>
+          <button onclick="initializeLatestResults()" class="retry-btn">Reintentar</button>
+        </div>
+      `;
+    }
+
+    // Inicializar cuando el DOM esté listo y el usuario autenticado
+    document.addEventListener('DOMContentLoaded', function() {
+      // Esperar un poco para que se cargue el sistema de autenticación
+      setTimeout(() => {
+        initializeLatestResults();
+      }, 1000);
     });
 
-    // Logout
-    if (logoutBtn) {
-      logoutBtn.addEventListener("click", () => {
-        const confirmar = confirm("¿De verdad quieres cerrar sesión?");
-        if (!confirmar) return;
-        localStorage.removeItem("jwt");
-        localStorage.removeItem("user");
-        location.reload();
+    // Escuchar cambios en el estado de autenticación
+    if (window.supabaseAuth && window.supabaseAuth.client) {
+      window.supabaseAuth.client.auth.onAuthStateChange((event, session) => {
+        if (event === 'SIGNED_IN') {
+          setTimeout(() => {
+            initializeLatestResults();
+          }, 500);
+        } else if (event === 'SIGNED_OUT') {
+          // Usuario se desconectó: ocultar últimos resultados, mostrar secciones de beneficios
+          document.getElementById('latest-results-section').style.display = 'none';
+          document.getElementById('benefits-section-free').style.display = 'block';
+          document.getElementById('benefits-section-premium').style.display = 'block';
+        }
       });
     }
+  </script>
 
-    // Cerrar el dropdown si haces clic fuera
-    document.addEventListener("click", function (e) {
-      const loginContainer = document.querySelector(".login-container");
-      if (!loginContainer.contains(e.target)) {
-        userDropdown.style.display = "none";
+  <!-- JavaScript para Jugadores Favoritos -->
+  <script>
+    // ===== JUGADORES FAVORITOS =====
+    
+    // Variables globales para jugadores favoritos
+    let favoritePlayersData = [];
+
+    // Función para inicializar la sección de jugadores favoritos
+    async function initializeFavoritePlayers() {
+      console.log('🚀 [FAVORITE PLAYERS] Inicializando jugadores favoritos...');
+      
+      // Manejar secciones según estado de autenticación
+      if (!window.globalAuth.isLoggedIn()) {
+        // Usuario no logueado: ocultar jugadores favoritos
+        document.getElementById('favorite-players-section').style.display = 'none';
+        return;
       }
-    });
-  } else {
-    // No logueado
-    if (heroTitle) heroTitle.style.display = "";
-    if (heroSubtitle) heroSubtitle.style.display = "";
-    if (welcomeMessage) welcomeMessage.style.display = "none";
-    if (welcomeSubtitle) welcomeSubtitle.style.display = "none";
-    if (loginBtnText) loginBtnText.innerText = "Login";
-    if (loginBtn) {
-      loginBtn.href = "Login/login.html";
-      loginBtn.style.cursor = "pointer";
+
+      // Usuario logueado: mostrar jugadores favoritos
+      document.getElementById('favorite-players-section').style.display = 'block';
+      
+      try {
+        // Obtener jugadores favoritos del usuario
+        const currentUser = window.globalAuth.getCurrentUser();
+        if (!currentUser) return;
+
+        favoritePlayersData = await window.supabaseAuth.getFavoritePlayers(currentUser.id);
+        console.log(`📋 [FAVORITE PLAYERS] ${favoritePlayersData.length} jugadores favoritos encontrados`);
+
+        if (favoritePlayersData.length === 0) {
+          showNoFavoritePlayersMessage();
+          return;
+        }
+
+        // Mostrar jugadores favoritos
+        await displayFavoritePlayers();
+
+      } catch (error) {
+        console.error('❌ [FAVORITE PLAYERS] Error cargando jugadores favoritos:', error);
+        showFavoritePlayersError();
+      }
     }
-  }
-</script>
+
+    // Función para mostrar los jugadores favoritos
+    async function displayFavoritePlayers() {
+      console.log('🔍 [FAVORITE PLAYERS] Mostrando jugadores favoritos...');
+      
+      if (!favoritePlayersData.length) {
+        showNoFavoritePlayersMessage();
+        return;
+      }
+
+      // Tomar solo los 6 más recientes
+      const playersToShow = favoritePlayersData.slice(0, 6);
+
+      // Generar HTML de los jugadores
+      const playersHTML = playersToShow.map(player => createPlayerCard(player)).join('');
+      
+      document.getElementById('favorite-players-container').innerHTML = `
+        <div class="players-grid">
+          ${playersHTML}
+        </div>
+      `;
+    }
+
+    // Función para crear una tarjeta de jugador
+    function createPlayerCard(player) {
+      const stats = player.stats || {};
+      const points = stats.puntos || stats.points || '0';
+      const rebounds = stats.rebotes || stats.rebounds || '0';
+      const assists = stats.asistencias || stats.assists || '0';
+      
+      return `
+        <div class="player-card-favorite">
+          <div class="player-header">
+            <img src="${player.player_photo || 'https://via.placeholder.com/60'}" 
+                 alt="${player.player_name}" 
+                 class="player-avatar"
+                 onerror="this.src='https://via.placeholder.com/60'">
+            <div class="player-info">
+              <h4 class="player-name">
+                <a href="player_profile.html?player_id=${player.player_id}" class="player-profile-link">
+                  ${player.player_name}
+                </a>
+              </h4>
+              <div class="player-team">
+                <img src="${player.team_logo || 'https://via.placeholder.com/20'}" 
+                     alt="${player.team_name}" 
+                     class="team-logo-small"
+                     onerror="this.src='https://via.placeholder.com/20'">
+                <span class="team-name">${player.team_name}</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="player-stats">
+            <div class="stat-item">
+              <span class="stat-value">${points}</span>
+              <span class="stat-label">PTS</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">${rebounds}</span>
+              <span class="stat-label">REB</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">${assists}</span>
+              <span class="stat-label">AST</span>
+            </div>
+          </div>
+          
+          <div class="player-meta">
+            <span class="competition-badge">${player.competition || 'FEB'}</span>
+          </div>
+        </div>
+      `;
+    }
+
+    // Funciones para mostrar diferentes estados
+    function showNoFavoritePlayersMessage() {
+      document.getElementById('favorite-players-container').style.display = 'none';
+      document.getElementById('no-favorite-players-message').style.display = 'block';
+    }
+
+    function showFavoritePlayersError() {
+      document.getElementById('favorite-players-container').innerHTML = `
+        <div class="error-message">
+          <p>❌ Error cargando los jugadores favoritos</p>
+          <button onclick="initializeFavoritePlayers()" class="retry-btn">Reintentar</button>
+        </div>
+      `;
+    }
+
+    // Integrar con el sistema de autenticación existente
+    document.addEventListener('DOMContentLoaded', function() {
+      // Esperar un poco para que se cargue el sistema de autenticación
+      setTimeout(() => {
+        initializeFavoritePlayers();
+      }, 1200); // Ligeramente después de los últimos resultados
+    });
+
+    // Escuchar cambios en el estado de autenticación para jugadores favoritos
+    if (window.supabaseAuth && window.supabaseAuth.client) {
+      window.supabaseAuth.client.auth.onAuthStateChange((event, session) => {
+        if (event === 'SIGNED_IN') {
+          setTimeout(() => {
+            initializeFavoritePlayers();
+          }, 600);
+        } else if (event === 'SIGNED_OUT') {
+          // Usuario se desconectó: ocultar jugadores favoritos
+          document.getElementById('favorite-players-section').style.display = 'none';
+        }
+      });
+    }
+  </script>
 
 
 </body>

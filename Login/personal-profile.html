@@ -6,7 +6,9 @@
     <title>Mi Cuenta FEB</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="personal-profile.css">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Supabase CDN -->
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
 </head>
 <body>
     <!-- HEADER PRINCIPAL -->
@@ -129,17 +131,17 @@
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="email">Correo electrónico</label>
-                                <input type="email" id="email" name="email" value="dortiz@feb.es" readonly>
+                                <input type="email" id="email" name="email"  readonly>
                             </div>
 
                             <div class="form-group">
                                 <label for="firstName">Nombre</label>
-                                <input type="text" id="firstName" name="firstName" value="Daniel" readonly>
+                                <input type="text" id="firstName" name="firstName" readonly>
                             </div>
 
                             <div class="form-group">
                                 <label for="lastName">Apellido</label>
-                                <input type="text" id="lastName" name="lastName" value="Ortiz Mesa" readonly>
+                                <input type="text" id="lastName" name="lastName"  readonly>
                             </div>
 
                             <div class="form-group">
@@ -224,14 +226,6 @@
                     </div>
                 </div>
 
-                <!-- Mis equipos favoritos -->
-                <div class="favorites-section">
-                    <h3 class="subsection-title">Mis Equipos Favoritos</h3>
-                    <div id="favorite-teams-list" class="favorite-teams">
-                        <p class="no-favorites">No has agregado equipos favoritos aún</p>
-                    </div>
-                </div>
-
                 <!-- Resultados de búsqueda -->
                 <div class="search-results-section">
                     <h3 class="subsection-title">
@@ -242,11 +236,144 @@
                         <p class="search-prompt">Usa la barra de búsqueda para encontrar equipos</p>
                     </div>
                 </div>
+
+                <!-- Mis equipos favoritos -->
+                <div class="favorites-section">
+                    <h3 class="subsection-title">Mis Equipos Favoritos</h3>
+                    <div id="favorite-teams-list" class="favorite-teams">
+                        <p class="no-favorites">No has agregado equipos favoritos aún</p>
+                    </div>
+                </div>
             </div>
 
             <div class="tab-content" id="jugadores-content" style="display: none;">
                 <h2 class="section-title">Jugadores Favoritos</h2>
-                <p style="color: #D7DAE3; text-align: center; margin-top: 50px;">Esta sección estará disponible próximamente.</p>
+                
+                <!-- Barra de búsqueda -->
+                <div class="search-section">
+                    <div class="search-bar">
+                        <input 
+                            type="text" 
+                            id="player-search-input" 
+                            placeholder="Buscar jugadores..."
+                            class="search-input"
+                        >
+                        <div class="search-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <!-- Filtros -->
+                    <div class="filters-section">
+                        <select id="player-competition-filter" class="filter-select">
+                            <option value="">Todas las competiciones</option>
+                        </select>
+
+                        <select id="player-team-filter" class="filter-select">
+                            <option value="">Todos los equipos</option>
+                        </select>
+                        <select id="player-sort-filter" class="filter-select">
+                            <option value="name">Ordenar por nombre</option>
+                            <option value="points-desc">Más puntos primero</option>
+                            <option value="points-asc">Menos puntos primero</option>
+                            <option value="rebounds-desc">Más rebotes primero</option>
+                            <option value="assists-desc">Más asistencias primero</option>
+                            <option value="team">Por equipo (A-Z)</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Filtros avanzados -->
+                    <div class="advanced-filters-section">
+                        <button class="toggle-advanced-btn" id="toggle-advanced-filters">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="22,3 2,3 10,12.46 10,19 14,21 14,12.46"></polygon>
+                            </svg>
+                            Filtros Avanzados
+                            <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6,9 12,15 18,9"></polyline>
+                            </svg>
+                        </button>
+                        
+                        <div class="advanced-filters-content" id="advanced-filters-content" style="display: none;">
+                            <div class="filters-row">
+                                <div class="stat-filter-group">
+                                    <label>Puntos:</label>
+                                    <div class="range-inputs">
+                                        <input type="number" id="points-min" placeholder="Mín" min="0" step="0.1" class="stat-input">
+                                        <span>-</span>
+                                        <input type="number" id="points-max" placeholder="Máx" min="0" step="0.1" class="stat-input">
+                                    </div>
+                                </div>
+                                
+                                <div class="stat-filter-group">
+                                    <label>Rebotes:</label>
+                                    <div class="range-inputs">
+                                        <input type="number" id="rebounds-min" placeholder="Mín" min="0" step="0.1" class="stat-input">
+                                        <span>-</span>
+                                        <input type="number" id="rebounds-max" placeholder="Máx" min="0" step="0.1" class="stat-input">
+                                    </div>
+                                </div>
+                                
+                                <div class="stat-filter-group">
+                                    <label>Asistencias:</label>
+                                    <div class="range-inputs">
+                                        <input type="number" id="assists-min" placeholder="Mín" min="0" step="0.1" class="stat-input">
+                                        <span>-</span>
+                                        <input type="number" id="assists-max" placeholder="Máx" min="0" step="0.1" class="stat-input">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="filters-row">
+                                <div class="checkbox-filter-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="active-players-only" class="filter-checkbox">
+                                        <span class="checkmark"></span>
+                                        Solo jugadores activos (con estadísticas)
+                                    </label>
+                                </div>
+                                
+                                <div class="checkbox-filter-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="top-performers-only" class="filter-checkbox">
+                                        <span class="checkmark"></span>
+                                        Solo top performers (>10 puntos)
+                                    </label>
+                                </div>
+                                
+                                <button class="clear-filters-btn" id="clear-all-filters">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                                    </svg>
+                                    Limpiar Filtros
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resultados de búsqueda -->
+                <div class="search-results-section">
+                    <h3 class="subsection-title">
+                        Buscar Jugadores
+                        <span id="players-count" style="font-size: 0.8em; color: #8B9DC3; margin-left: 10px;"></span>
+                    </h3>
+                    <div id="players-search-results" class="players-grid">
+                        <p class="search-prompt">Usa la barra de búsqueda para encontrar jugadores</p>
+                    </div>
+                </div>
+
+                <!-- Mis jugadores favoritos -->
+                <div class="favorites-section">
+                    <h3 class="subsection-title">Mis Jugadores Favoritos</h3>
+                    <div id="favorite-players-list" class="favorite-players">
+                        <p class="no-favorites">No has agregado jugadores favoritos aún</p>
+                    </div>
+                </div>
             </div>
 
             <div class="tab-content" id="ajustes-content" style="display: none;">
@@ -289,6 +416,9 @@
         </a>
     </nav>
 
+    <!-- Configuración de Supabase -->
+    <script src="supabase-config.js"></script>
+    
     <!-- JavaScript Module -->
     <script type="module" src="personal-profile.js"></script>
 </body>
